@@ -2,11 +2,16 @@
 title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 06f8ebf948372dfb6c3c22d26d4f672c99cd4e0d
 ---
 
 > [!WARNING]
-> 文字列から JavaScript を実行することは、非常に大きなセキュリティリスクを伴います。`eval()` を使用すると、悪意のある者が任意のコードを実行することがあまりにも簡単になります。下記の [eval() を使わないでください!](#eval_を使わないでください!)を参照してください。
+> この関数に渡された引数は動的に構文解析され、JavaScript として実行されます。
+> この API は[インジェクションシンク](/ja/docs/Web/API/Trusted_Types_API#concepts_and_usage)と呼ばれ、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS) 攻撃の攻撃経路となる可能性があります。
+>
+> このリスクを軽減するには、文字列の代わりに常に {{domxref("TrustedScript")}} オブジェクトを渡すとともに、[信頼型の強制](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)を行うようにしてください。
+>
+> 情報については、[セキュリティの注意事項](#セキュリティの注意事項)をご覧ください。
 
 **`eval()`** 関数は、文字列として表現された JavaScript コードを評価します。ソースはスクリプトとして解釈されます。
 
@@ -35,22 +40,26 @@ eval(script)
 ### 引数
 
 - `script`
-  - : JavaScript の式、文、または一連の文を表す文字列です。式には、既存オブジェクトの変数およびプロパティを含められます。これはスクリプトとして解釈されますので、 [`import`](/ja/docs/Web/JavaScript/Reference/Statements/import) 宣言（モジュールの中に存在しうる）は許可されていません。
+  - : JavaScript の式、文、または一連の文を表す {{domxref("TrustedScript")}} または文字列です。式には、既存オブジェクトの変数およびプロパティを含められます。これはスクリプトとして解釈されますので、 [`import`](/ja/docs/Web/JavaScript/Reference/Statements/import) 宣言（モジュールの中に存在しうる）は許可されていません。
 
 ### 返値
 
-与えられたコードの評価結果の値を返します。評価結果が空の場合は、{{jsxref("undefined")}} を返します。もし `script` が文字列プリミティブでなければ、 `eval()` は引数を変更せずに返します。
+与えられたコードの評価結果の値を返します。評価結果が空の場合は、{{jsxref("undefined")}} を返します。もし `script` が {{domxref("TrustedScript")}} または文字列プリミティブでなければ、 `eval()` は引数を変更せずに返します。
 
 ### 例外
 
-コードを評価している間に発生するあらゆる例外が発生します。もし `script` がスクリプトとして解釈できなかった場合は {{jsxref("SyntaxError")}} になります。
+- {{jsxref("SyntaxError")}}
+  - : `script` 引数がスクリプトとして構文解析できません。
+- {{jsxref("TypeError")}}
+  - : [信頼型](/ja/docs/Web/API/Trusted_Types_API) が [CSP によって強制適用](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制) されており、かつデフォルトのポリシーが定義されていない場合に、`script` が文字列であった場合。
+
+また、このメソッドは、コードの評価中に発生した例外を発生させることもあります。
 
 ## 解説
 
 `eval()` はグローバルオブジェクトの関数プロパティです。
 
-`eval()` 関数の引数は文字列です。
-ソース文字列をスクリプト本体として評価します。つまり、文と式の両方が使用可能です。コードの完了値を返します。式の場合は、式が評価された値です。多くの文や宣言も同様に完了値を持ちますが、その結果は意外なものになることがあります（例えば、代入の完了値は代入された値ですが、 [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) の完了値は undefined です）。そのため、文の完了値には頼らないことをお勧めします。
+`eval()` 関数の引数は文字列です。ソース文字列をスクリプト本体として評価します。つまり、文と式の両方が使用可能です。コードの完了値を返します。式の場合は、式が評価された値です。多くの文や宣言も同様に完了値を持ちますが、その結果は意外なものになることがあります（例えば、代入の完了値は代入された値ですが、 [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) の完了値は undefined です）。そのため、文の完了値には頼らないことをお勧めします。
 
 厳格モードでは、 `eval` という名前の変数を宣言したり、 `eval` に代入したりすることは {{jsxref("SyntaxError")}} になります。
 
@@ -60,7 +69,7 @@ eval(script)
 const eval = 1; // SyntaxError: Unexpected eval or arguments in strict mode
 ```
 
-`eval()` の引数が文字列でない場合、`eval()` は引数を変更せずに返します。次の例では、プリミティブの代わりに `String` オブジェクトを渡すと、 `eval()` は文字列を評価するのではなく、 `String` オブジェクトを返します。
+`eval()` の引数が {{domxref("TrustedScript")}} または文字列でない場合、`eval()` は引数を変更せずに返します。次の例では、プリミティブの代わりに `String` オブジェクトを渡すと、 `eval()` は文字列を評価するのではなく、 `String` オブジェクトを返します。
 
 ```js
 eval(new String("2 + 2")); // "2 + 2" を含む String オブジェクトを返す
@@ -74,9 +83,9 @@ const expression = new String("2 + 2");
 eval(String(expression)); // 4 を返します
 ```
 
-### 直接または間接 eval
+### 直接的または間接的な eval
 
-`eval()` の呼び出しには、直接 eval と間接 eval の 2 つのモードがあります。直接 eval は、その名前が示すとおり、グローバルな `eval` 関数を `eval(...)` で直接呼び出すことを指します。それ以外のすべては、エイリアス変数経由、メンバーアクセスやその他の式経由、またはオプショナルチェーン [`?.`](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining) 演算子を使用して呼び出すことも含めて、間接的なものです。
+`eval()` の呼び出しには、直接的な eval と間接的な eval の 2 つのモードがあります。直接的な eval とは、その名の通り、`eval(...)` を使ってグローバル関数 `eval` を_直接_呼び出すことを指します。それ以外のすべてのものは、別名の変数経由、メンバーアクセスやその他の式経由、またはオプショナルチェーン [`?.`](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining) 演算子を使用して呼び出すことも含めて、間接的なものです。
 
 ```js
 // 直接呼び出し
@@ -112,7 +121,7 @@ obj.eval("x + y");
   }
   ```
 
-- 間接的な `eval` は周囲のコンテキストの厳格さを継承せず、ソース文字列自体に `"use strict"` ディレクティブがある場合にのみ [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) になります。
+- 間接的な `eval` は周囲のコンテキストの厳格さを継承せず、ソース文字列自体に `"use strict"` ディレクティブがある場合にのみ[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)になります。
 
   ```js
   function nonStrictContext() {
@@ -126,12 +135,12 @@ obj.eval("x + y");
     "use strict";
     eval?.(`"use strict"; with (Math) console.log(PI);`);
   }
-  nonStrictContext(); // Logs 3.141592653589793
-  strictContext(); // Logs 3.141592653589793
+  nonStrictContext(); // 3.141592653589793 と出力
+  strictContext(); // 3.141592653589793 と出力
   strictContextStrictEval(); // Uncaught SyntaxError: Strict mode code may not include a with statement
   ```
 
-  一方、直接 eval は、呼び出すコンテキストの厳格さを継承します。
+  一方、直接的な eval は、呼び出すコンテキストの厳格さを継承します。
 
   ```js
   function nonStrictContext() {
@@ -145,7 +154,7 @@ obj.eval("x + y");
     "use strict";
     eval(`"use strict"; with (Math) console.log(PI);`);
   }
-  nonStrictContext(); // Logs 3.141592653589793
+  nonStrictContext(); // 3.141592653589793 と出力
   strictContext(); // Uncaught SyntaxError: Strict mode code may not include a with statement
   strictContextStrictEval(); // Uncaught SyntaxError: Strict mode code may not include a with statement
   ```
@@ -183,18 +192,18 @@ obj.eval("x + y");
   new Ctor(); // [Function: Ctor]
   ```
 
-## 直接 eval() を使わないでください!
+## 直接的な eval() を使わないでください!
 
-直接 `eval()` はいくつもの問題を引き起こします。
+直接的な `eval()` はいくつもの問題を引き起こします。
 
-- `eval()` は呼び出し元の権限で渡されたコードを実行します。悪意のある第三者に影響を受ける可能性のある文字列で `eval()` を実行すると、そのウェブページや拡張機能の権限において、ユーザーのマシン上で悪意のあるコードを実行してしまう可能性があります。さらに重要なことに、サードパーティのコードが `eval()` が（直接 eval であれば）呼び出されたスコープを見ることができるため、攻撃者がローカル変数を読み取ったり変更したりすることができてしまいます。
+- `eval()` は呼び出し元の権限で渡されたコードを実行します。悪意のある第三者に影響を受ける可能性のある文字列で `eval()` を実行すると、そのウェブページや拡張機能の権限において、ユーザーのマシン上で悪意のあるコードを実行してしまう可能性があります。さらに重要なことに、サードパーティのコードが `eval()` が（直接的な eval であれば）呼び出されたスコープを見ることができるため、攻撃者がローカル変数を読み取ったり変更したりすることができてしまいます。これらのリスクを軽減するための手法については、[セキュリティの注意事項](#セキュリティの注意事項)を参照してください。
 - 現代の JavaScript では多くの構造が JS エンジンによって最適化されているため、`eval()` は他の方法よりも低速です。
 - 現代の JavaScript インタープリターは JavaScript を機械語に変換します。これは、変数の名前の概念がすべて消滅することを意味します。したがって、`eval()` を使用すると、ブラウザーは長い高価な変数名検索を実行して、変数が機械語のどこに存在しているかを把握し、その値を設定します。さらに、`eval()` が変数の型の変更など、その変数に新しい変数をもたらす可能性もあり、生成されたすべての機械語を再評価して補正させられる可能性があります。
 - スコープが `eval()` によって推移的に依存されている場合、ミニファイヤーはミニ化をあきらめます。そうしないと `eval()` は実行時に正しい変数を読み込むことができないからです。
 
 `eval()` や関連のメソッドを使用することで、最適化したり、完全に避けることができる用途はたくさんあります。
 
-#### 間接 eval() の使用
+#### 間接的な eval() の使用
 
 このコードを考えてみてください。
 
@@ -205,7 +214,7 @@ function looseJsonParse(obj) {
 console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Map() }"));
 ```
 
-間接 eval を使用して厳格モードを強制するだけで、コードはずっと良くなります。
+間接的な eval を使用して厳格モードを強制するだけで、コードはずっと良くなります。
 
 ```js
 function looseJsonParse(obj) {
@@ -214,9 +223,9 @@ function looseJsonParse(obj) {
 console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Map() }"));
 ```
 
-上記の 2 つのコードスニペットは同じように動作するように見えるかもしれませんが、そうではありません。前者は直接的 eval を使用しているので、複数の問題が発生します。
+上記の 2 つのコードスニペットは同じように動作するように見えるかもしれませんが、そうではありません。前者は直接的な eval を使用しているので、複数の問題が発生します。
 
-- より多くの範囲を検査するため、非常に時間がかかります。評価される文字列中の `c: new Map()` に注目してください。間接的 eval のバージョンでは、オブジェクトはグローバルスコープで評価されるので、インタープリターは `Map` が `Map` という名前のローカル変数ではなく、グローバルな `Map()` コンストラクターを参照しているとみなされます。しかし、直接的 eval を使用するコードでは、インタープリターはこれを想定することができません。例えば、次の例では、評価された文字列の `Map` は `window.Map()` を参照しません。
+- より多くの範囲を検査するため、非常に時間がかかります。評価される文字列中の `c: new Map()` に注目してください。間接的な eval のバージョンでは、オブジェクトはグローバルスコープで評価されるので、インタープリターは `Map` が `Map` という名前のローカル変数ではなく、グローバルな `Map()` コンストラクターを参照しているとみなされます。しかし、直接的 eval を使用するコードでは、インタープリターはこれを想定することができません。例えば、次の例では、評価された文字列の `Map` は `window.Map()` を参照しません。
 
   ```js
   function looseJsonParse(obj) {
@@ -321,7 +330,7 @@ const result = setDescendantProp(obj, propPath, 1); // obj.a.b.c は 1 になる
 JavaScript [第一級関数](/ja/docs/Glossary/First-class_Function)を備えており、関数を他の API の引数としたり、変数やオブジェクトのプロパティに保存したりすることができます。多くの DOM API はこれを考慮して作られているので、次のように書くことができます（また、書くべきです）。
 
 ```js
-// setTimeout(" ... ", 1000) を使う代わりに
+// setTimeout("…", 1000) を使う代わりに
 setTimeout(() => {
   // …
 }, 1000);
@@ -332,7 +341,7 @@ elt.addEventListener("click", () => {
 });
 ```
 
-文字列を連結せずにパラメーター化した関数を作成する方法としては、[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)を使う方法も便利です。
+文字列を連結せずに引数化した関数を作成する方法としては、[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)を使う方法も便利です。
 
 ### JSON の使用
 
@@ -342,7 +351,72 @@ JSON の構文は JavaScript の構文に比べて制限があり、多くの有
 
 任意のコードではなく、注意深く制約されたデータを渡すことは、一般的によい考えです。例えば、ウェブページの内容を取得できるよう設計された拡張であれば、JavaScript コードの代わりに [XPath](/ja/docs/Web/XML/XPath) を使って取得ルールを定義できます。
 
+### セキュリティの注意事項
+
+このメソッドは、呼び出し側の権限で任意の入力を実行するために使用できます。入力がユーザーから指定された、潜在的に安全でない文字列である場合、これは[クロスサイトスクリプティング（XSS）](/ja/docs/Web/Security/Attacks/XSS)攻撃の攻撃経路となり得ます。
+
+例えば、次のコードは、`eval()` がユーザーから指定された `untrustedCode` を実行してしまうことがあることを示しています。
+
+```js example-bad
+const untrustedCode = "alert('Potentially evil code!');";
+const adder = eval(untrustedCode);
+```
+
+[コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/Guides/CSP) が [`script-src`](/ja/docs/Web/HTTP/Guides/CSP) または [`default-src`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) に設定されているウェブサイトでは、デフォルトでそのようなコードの実行が阻止されます。やむを得ず `eval()` を通じてスクリプトを実行しなければならない場合は、文字列の代わりに常に {{domxref("TrustedScript")}} インスタンスを代入することでリスクを軽減し、[信頼型の強制](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)を [`require-trusted-types-for`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) ディレクティブで行うことで、リスクを軽減できます。これにより、入力が確実に変換関数を通過するようになります。
+
+`eval()` を実行することができるようにするには、CSP の `script-src` ディレクティブで [`trusted-types-eval` キーワード](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval)を追加で指定する必要があります。[`unsafe-eval`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) キーワードも `eval()` を許可しますが、信頼型をサポートしていないブラウザーでも実行をすることができるため、`trusted-types-eval` よりもはるかに安全性が低くなります。
+
+例えば、サイトに必要な CSP は同様に次のようなものになるかもしれません。
+
+```http
+Content-Security-Policy: require-trusted-types-for 'script'; script-src '<your_allowlist>' 'trusted-types-eval'
+```
+
+信頼型ポリシーに実装された変換関数の動作は、ユーザーが提供するスクリプトが要求される実際の用途に依存します。可能であれば、実行を許可するスクリプトを、実行を信頼できるコードに厳密に限定すべきです。それが不可能な場合は、指定された入力内の特定の関数の使用を許可またはブロックすることも考えられます。
+
 ## 例
+
+最初の例では、信頼型を使用してこのメソッドを使用する方法を示しています。それ以外 の例では、簡潔にするためにこの手順を省略して います。
+
+### TrustedScript の使用
+
+XSS のリスクを軽減するためには、常に `TrustedScript` のインスタンスを `script` 引数に代入する必要があります。また、他の理由で信頼型を強制している場合でも、（`CSP: script-src`によって）許可されたスクリプトソースを一部許可したい場合は、同時にこの処理を行う必要があります。
+
+信頼型はまだ対応していないブラウザーもあるため、まず[信頼型 tinyfill](/ja/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill) を定義します。これは、信頼型 JavaScript API の透過的な代替として機能します。
+
+```js
+if (typeof trustedTypes === "undefined")
+  trustedTypes = { createPolicy: (n, rules) => rules };
+```
+
+次に、{{domxref("TrustedTypePolicy")}} を作成します。これは {{domxref("TrustedTypePolicy/createScript", "createScript()")}} メソッドを定義して、入力文字列を {{domxref("TrustedScript")}} インスタンスに変換するためのものです。
+
+この例では、変換・フィルタリングのロジックを定義する関数 `transformedScript()` が指定されていると仮定します。
+
+```js
+const policy = trustedTypes.createPolicy("script-policy", {
+  createScript(input) {
+    const transformed = transformedScript(input); // フィルターメソッド
+    return transformed;
+  },
+});
+```
+
+次に、`policy` オブジェクトを使用して、安全性が保証されていない可能性のある入力文字列から `TrustedScript` オブジェクトを作成します。
+
+```js
+// The potentially malicious string
+const untrustedScript = "alert('Potentially evil code!');";
+
+// ポリシーを使用して TrustedScriptURL インスタンスを作成する
+const trustedScript = policy.createScript(untrustedScript);
+```
+
+`TrustedScript` オブジェクトを `eval()` に渡せるようになりました。
+
+```js
+eval(trustedScript);
+```
 
 ### eval() の使用
 

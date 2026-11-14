@@ -3,7 +3,7 @@ title: TypedArray.prototype.some()
 short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 l10n:
-  sourceCommit: 4bfeb5a89c1528da7cb7847a9ccb93f9b00290f0
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`some()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、配列内の要素のうち、指定されたテスト関数を満たす要素が 1 つでも見つかった場合に `true` を返します。それ以外の場合は `false` を返します。このメソッドは {{jsxref("Array.prototype.some()")}} と同じアルゴリズムです。
@@ -56,7 +56,7 @@ some(callbackFn, thisArg)
 
 ## 例
 
-### 型付き配列のすべての要素の大きさをテストする
+### 型付き配列の要素の大きさをテストする
 
 次の例では、型付き配列の中に 10 よりも大きい要素があるかどうかをテストします。
 
@@ -78,7 +78,7 @@ new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
 
 ## 関連情報
 
-- [`TypedArray.prototype.some` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.some` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.every()")}}

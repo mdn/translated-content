@@ -3,7 +3,7 @@ title: Array.prototype.reduceRight()
 short-title: reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`reduceRight()`** は {{jsxref("Array")}} インスタンスのメソッドで、アキュームレーターと配列のそれぞれの値に対して（右から左へ）関数を適用して、単一の値にします。
@@ -248,7 +248,7 @@ console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
 
 ## 関連情報
 
-- [`Array.prototype.reduceRight` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.reduceRight` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.reduceRight` のポリフィル](https://www.npmjs.com/package/array.prototype.reduceright)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}

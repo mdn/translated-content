@@ -19,7 +19,7 @@ var ctx = canvas.getContext(contextType, contextAttributes);
 ### 파라미터
 
 - `contextType`
-  - : 캔버스에 연관된 드로잉 컨텍스트를 정의하는 컨텍스트 식별자를 갖는 {{domxref("DOMString")}}입니다. 가능한 값은 다음과 같습니다.\* `"2d"`, 2차원 렌더링 컨텍스트를 나타내는 {{domxref("CanvasRenderingContext2D")}} 객체를 생성하게 합니다.
+  - : 캔버스에 연관된 드로잉 컨텍스트를 정의하는 컨텍스트 식별자를 갖는 {{jsxref("String")}}입니다. 가능한 값은 다음과 같습니다.\* `"2d"`, 2차원 렌더링 컨텍스트를 나타내는 {{domxref("CanvasRenderingContext2D")}} 객체를 생성하게 합니다.
     - `"webgl"` (또는 `"experimental-webgl"`), 3차원 렌더링 컨텍스트를 나타내는 {{domxref("WebGLRenderingContext")}} 객체를 생성합니다. 이 컨텍스트는 [WebGL](/ko/docs/Web/API/WebGL_API) 버전 1 (OpenGL ES 2.0)을 구현하는 브라우저에서만 사용가능합니다.
     - `"webgl2"`, 3차원 렌더링 컨텍스트를 나타내는 {{domxref("WebGL2RenderingContext")}} 객체를 생성합니다. 이 컨텍스트는 [WebGL](/ko/docs/Web/API/WebGL_API) 버전 2 (OpenGL ES 3.0)를 구현하는 브라우저에서만 사용가능합니다. {{experimental_inline}}
     - `"bitmaprenderer"`, 캔버스의 컨텐츠를 주어진 {{domxref("ImageBitmap")}}으로 대체하기위한 기능만을 제공하는 {{domxref("ImageBitmapRenderingContext")}}를 생성합니다.

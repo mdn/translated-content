@@ -1,8 +1,9 @@
 ---
-title: "<picture>: 画像要素"
+title: "`<picture>` 画像要素"
+short-title: <picture>
 slug: Web/HTML/Reference/Elements/picture
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
 **`<picture>`** は [HTML](/ja/docs/Web/HTML) の要素で、0 個以上の {{HTMLElement("source")}} 要素と 1 つの {{HTMLElement("img")}} 要素を含み、様々な画面や端末の条件に応じた画像を提供します。
@@ -22,35 +23,35 @@ l10n:
 </picture>
 ```
 
-どの URL を読み込むかを選択するには、{{Glossary("user agent","ユーザーエージェント")}}はそれぞれの `<source>` 要素の [`srcset`](/ja/docs/Web/HTML/Reference/Elements/source#srcset), [`media`](/ja/docs/Web/HTML/Reference/Elements/source#media), [`type`](/ja/docs/Web/HTML/Reference/Elements/source#type) 属性を調べて、現在のページのレイアウトや表示装置の能力に最も合う画像を検討します。
-
-`<img>` 要素は 2 つの役割を担います。
-
-1. 画像の寸法やその他の属性と、表示方法を記述します。
-2. `<source>` 要素で利用可能な画像を提供できなかった場合の代替策を提供します。
-
-`<picture>` をよく使う場面は以下の通りです。
-
-- **アートディレクション**。様々な `media` の条件に合わせて画像を切り抜いたり変更したりする (例えば、小さな画面では、詳細すぎない、より簡単な版の画像を読み込むなど)。
-- 特定の形式に対応していないブラウザーに対して、**代替画像形式を提供する**。
-
-  > [!NOTE]
-  > 例えば、[AVIF](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_画像) や [WEBP](/ja/docs/Web/Media/Guides/Formats/Image_types#webp_画像) と言った新しい形式には多くの利点がありますが、ブラウザーが対応していない可能性があります。対応している画像形式のリストは、[画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Guides/Formats/Image_types)にあります。
-
-- 見る人の画面に最も適合する画像を読み込むことで、**通信帯域を節約しページの読み込みをより速くする**。
-
-DPI の高い（高解像度の）ディスプレイのために高解像度版の画像を提供する場合は、代わりに [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) 属性を `<img>` に使用してください。これによってブラウザーはデータ節約モードでは低解像度版を選択することができ、 `media` 条件を明示的に書かなくてもよくなります。
-
 ## 属性
 
 この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみを持ちます。
 
 ## 使用上のメモ
 
-{{cssxref("object-position")}} プロパティを使用して、要素の枠内で画像の位置を調整したり、 {{cssxref("object-fit")}} プロパティを使用して、枠内に合わせるための画像の寸法を変更する方法を制御したりすることができます。
+どの URL を読み込むかを決めるため、{{Glossary("user agent", "ユーザーエージェント")}}はそれぞれの `<source>` 要素の [`srcset`](/ja/docs/Web/HTML/Reference/Elements/source#srcset)、[`media`](/ja/docs/Web/HTML/Reference/Elements/source#media)、[`type`](/ja/docs/Web/HTML/Reference/Elements/source#type) 属性を調べ、現在のレイアウトや表示装置の機能に最も合う、対応可能な画像を選択します。
+
+`<img>` 要素は 2 つの役割を担います。
+
+1. 画像の寸法やその他の属性と、その表示方法を記述します。
+2. どの `<source>` 要素からも使用可能な画像を取得できない場合の代替を提供します。
+
+`<picture>` は、次のような場合によく使用されます。
+
+- **アートディレクション**。`media` 条件に応じて画像を切り抜いたり変更したりします（例えば、小さな画面では、細部が多すぎない簡略版の画像を読み込みます）。
+- 一部のブラウザーが対応していない形式について、**代替の画像形式を提供する**。
+
+  > [!NOTE]
+  > 例えば、[AVIF](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_画像) や [WebP](/ja/docs/Web/Media/Guides/Formats/Image_types#webp_画像) などの新しい形式には多くの利点がありますが、ブラウザーが対応していない場合があります。対応している画像形式の一覧は、[画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Guides/Formats/Image_types)を参照してください。
+
+- 閲覧者の画面に最も適した画像を読み込むことで、**通信量を抑え、ページの読み込みを速くする**。
+
+高 DPI (Retina) ディスプレイ向けに高密度版の画像を提供する場合は、代わりに `<img>` 要素で [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) を使用してください。これにより、ブラウザーはデータ節約モードで低密度版を選択でき、明示的な `media` 条件を書く必要もありません。
+
+{{cssxref("object-position")}} プロパティを使用して要素の枠内で画像の位置を調整し、{{cssxref("object-fit")}} プロパティを使用して枠に合わせて画像を拡大縮小する方法を制御できます。
 
 > [!NOTE]
-> これらのプロパティは `<picture>` 要素**ではなく**、子の `<img>` 要素に用いてください。
+> これらのプロパティは `<picture>` 要素**ではなく**、子の `<img>` 要素に使用してください。
 
 ## 例
 

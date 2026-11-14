@@ -1,13 +1,16 @@
 ---
 title: CSS プロパティの記事の作成方法
+short-title: CSS プロパティの文書化
 slug: MDN/Writing_guidelines/Howto/Document_a_CSS_property
 l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
 
-{{MDNSidebar}}
-
 [CSS](/ja/docs/Web/CSS) 標準が進化するにつれて、新しいプロパティが常に追加されています。MDN の [CSS リファレンス](/ja/docs/Web/CSS/Reference)は、これらの開発に合わせて最新の状態に維持する必要があります。この文書では、CSS プロパティのリファレンスページを作成するためのステップごとの手順を説明します。
+
+> [!CALLOUT]
+> 訳注:
+> この記事は英語版のページを作成する方法を示しています。翻訳記事を作成する場合は、 [MDN Web Docs のローカライズ](/ja/docs/MDN/Community/Translated_content)を参照してください。
 
 それぞれの CSS プロパティのリファレンスページは、同じ構造になっています。そのため、特に読者が標準的なリファレンスページの書式に慣れていれば、情報を見つけやすくなります。
 

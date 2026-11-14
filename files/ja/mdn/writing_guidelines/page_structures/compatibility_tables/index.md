@@ -3,13 +3,13 @@ title: 互換性一覧表とブラウザー互換性データリポジトリー 
 short-title: 互換性一覧表と BCD
 slug: MDN/Writing_guidelines/Page_structures/Compatibility_tables
 l10n:
-  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
+  sourceCommit: 2e427c5c185433c5a6612c63bf877753a5fedc99
 ---
 
 MDN には、DOM, HTML, CSS, JavaScript, SVG などの、あらゆるブラウザーで共有される技術についての互換性を表す一覧表の標準フォーマットがあります。
 このデータを複数のプロジェクトで機械的に利用できるようにするため、Node.js パッケージが [browser-compat-data リポジトリー](https://github.com/mdn/browser-compat-data)からビルドされ、npm に公開されています。
 
-これらの互換性一覧表のデータを変更するには、このリポジトリーの[協力者ガイド](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md)や[データガイドラインのガイド](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md)中にある包括的なドキュメント（データを表現するために使用される慣習と JSON スキーマの最新の詳細を含みます）をご覧ください。
+これらの互換性一覧表のデータを変更するには、このリポジトリーの[協力者ガイド](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md)や[データガイドラインのガイド](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines)中にある包括的なドキュメント（データを表現するために使用される慣習と JSON スキーマの最新の詳細を含みます）をご覧ください。
 質問や問題が見つかった場合は、[助けを求める](/ja/docs/MDN/Community/Communication_channels)をご利用ください。
 
 ## MDN ページで BCD データを使う

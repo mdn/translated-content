@@ -3,6 +3,8 @@ title: 书本实例列表页面
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 ---
 
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
+
 接下来，我们将实现图书馆中所有书本实例（`BookInstance`）的列表页面。这个页面需要包含与每个 `BookInstance`（链接到其详细信息页面）关联的书本 `Book` 标题，以及 `BookInstance` 模型中的其他信息，包含每个副本的状态、下属品牌和唯一 ID。唯一 ID 的文本应该链接到 `BookInstance` 详细信息页面。
 
 ## 控制器
@@ -65,7 +67,4 @@ block content
 
 ![书本实例列表页面 - Express 教程：本地图书馆网站](locallibary_express_bookinstance_list.png)
 
-## 下一步
-
-- 回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
-- 继续教程 5 下个部分：[日期格式化与使用 moment](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}

@@ -169,6 +169,6 @@ DNS 데이터베이스는 전 세계 모든 DNS 서버에 저장되며, 이 모�
 좋습니다. 프로세스와 아키텍처에 대해 많이 이야기했네요. 이제 다음으로 넘어갈 시간입니다.
 
 - 실제로 해보고 싶다면, 디자인을 파고들고 [웹페이지의 구조](/ko/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts)를 탐색하기에 좋은 시점입니다.
-- 웹사이트 구축의 일부 측면은 비용이 든다는 점도 주목할 가치가 있습니다. [웹사이트 구축 비용이 얼마나 드는지](/ko/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)를 참조하세요.
+- 웹사이트 구축의 일부 측면은 비용이 든다는 점도 주목할 가치가 있습니다. [웹사이트 구축 비용이 얼마나 드는지](/ko/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)를 참조하세요.
 - 또는 Wikipedia에서 [Domain Names](https://en.wikipedia.org/wiki/Domain_name)에 대해 더 읽어보세요.
 - [How DNS works](https://howdns.works/) 튜토리얼은 재미있고 다채로운 설명을 제공합니다.

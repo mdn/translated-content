@@ -3,7 +3,7 @@ title: Directrices para escribir ejemplos de código
 short-title: Estilo de código
 slug: MDN/Writing_guidelines/Code_style_guide
 l10n:
-  sourceCommit: 7ff752fba26e0bb950998bb5476157ff96c7d314
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
 
 Este artículo describe las directrices de estilo y formato para los ejemplos de código en MDN Web Docs, independientemente del lenguaje de programación.
@@ -20,7 +20,11 @@ Para obtener directrices específicas de tecnología, consulta los siguientes ar
 
 Existe una consideración general que debes tener en cuenta: **Los lectores copiarán y pegarán ejemplos en su propio código y es posible que lo utilicen en producción.**
 Por lo tanto, debes asegurarte de que los ejemplos de código sean utilizables, sigan las mejores prácticas generalmente aceptadas y no hagan nada que pueda hacer que una aplicación sea insegura, ineficiente, abultada o inaccesible.
-Si el ejemplo de código no es ejecutable o no es apto para producción, incluye una advertencia en un comentario de código y en el texto explicativo; por ejemplo, si es solo un fragmento y no un ejemplo completo, deja esto claro. Esto también significa que debes proporcionar toda la información necesaria para ejecutar el ejemplo, incluidas las dependencias y la información de configuración.
+
+Ejecuta y prueba cada ejemplo de código antes de enviarlo, independientemente de las herramientas que hayas utilizado para crearlo.
+No pegues código que no hayas verificado.
+
+Si un ejemplo de código es un fragmento incompleto, deja claro que no es un ejemplo completo. Proporciona toda la información necesaria para ejecutar el ejemplo, incluidas las dependencias y la información de configuración. Si el ejemplo no es apto para producción, incluye una advertencia en un comentario de código y en el texto explicativo.
 
 Los ejemplos de código deben ser lo suficientemente sencillos para ser comprensibles, pero lo suficientemente complejos para hacer algo interesante y, preferiblemente, útiles.
 El objetivo no es necesariamente producir código eficiente e ingenioso que impresione a expertos y tenga una gran funcionalidad, sino más bien compartir ejemplos de trabajo reducidos que se puedan entender y aprender lo más rápido posible.
@@ -37,8 +41,65 @@ Algunas directrices más generales incluyen:
 
 ### Compatibilidad con navegadores
 
-Al crear ejemplos de código para una tecnología que aún no está disponible en todos los navegadores principales, considera usar la [detección de características](/es/docs/Learn_web_development/Extensions/Testing/Feature_detection) para recurrir a un comportamiento más simple o informar al usuario que su navegador aún no es compatible.
 No especifiques los navegadores compatibles y sus versiones en comentarios de código o prosa, ya que esta información queda obsoleta rápidamente.
+
+Al crear ejemplos de código para una tecnología que aún no está disponible en todos los navegadores principales, considera usar la [detección de características](/es/docs/Learn_web_development/Extensions/Testing/Feature_detection) para ofrecer un comportamiento alternativo o mostrar un mensaje que indique que el navegador del lector no admite la característica que se demuestra.
+
+Mantén visible el resultado renderizado de los ejemplos de código incluso cuando el navegador del lector no admita la característica que se demuestra. Esto permite a los lectores comparar el código con su resultado y ver cómo se comporta el ejemplo sin la característica. Muestra un mensaje de compatibilidad del navegador junto al resultado renderizado en lugar de ocultarlo o eliminarlo, para explicar por qué el resultado puede parecer distinto de la demostración prevista.
+
+Por ejemplo, en los ejemplos de código CSS, usa la [regla `@supports` con el operador `not`](/es/docs/Web/CSS/Reference/At-rules/@supports#el_operador_not) para mostrar un mensaje de compatibilidad del navegador cuando el navegador del lector no admita la característica que se demuestra.
+
+#### HTML
+
+```html live-sample___corner-shape-support
+<div>Nice scooped corners</div>
+```
+
+#### CSS
+
+```css live-sample___corner-shape-support
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  width: 240px;
+  margin: 20px auto;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  background-color: cyan;
+  border-radius: 30px;
+  box-shadow: 1px 1px 3px gray;
+}
+
+@supports not (corner-shape: scoop) {
+  body::before {
+    content: "Your browser does not support the 'corner-shape' property.";
+    color: black;
+    background-color: wheat;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+```
+
+```css live-sample___corner-shape-support
+div {
+  corner-shape: scoop;
+}
+```
+
+#### Resultado
+
+{{EmbedLiveSample("corner-shape-support", "100%", "240")}}
+
+Compara el resultado renderizado en distintos navegadores para ver cómo se comporta el ejemplo cuando se admite `corner-shape` y cuando no.
+
+En tus propios ejemplos, puedes marcar el bloque CSS de compatibilidad del navegador como [`hidden`](/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples#ocultar_código) para que sus estilos se apliquen al ejemplo en vivo sin mostrar el bloque de código en el artículo.
 
 ## Estilo y formato de código de MDN
 

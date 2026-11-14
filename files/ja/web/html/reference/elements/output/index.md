@@ -3,7 +3,7 @@ title: "`<output>` 出力要素"
 short-title: <output>
 slug: Web/HTML/Reference/Elements/output
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 **`<output>`** は [HTML](/ja/docs/Web/HTML) の要素で、サイトやアプリが計算結果やユーザー操作の結果を挿入することができるコンテナー要素です。
@@ -28,23 +28,22 @@ l10n:
 
 多くのブラウザーでは、この要素を [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions) 領域として実装しています。これにより、支援技術は、その中に出力された UI 操作の結果を読み上げますが、その結果を生成するコントロールからフォーカスを外す必要はありません。
 
+ライブ領域の更新は通常、プレーンテキストとして読み上げられるため、`<output>` 内にあるリンク、ボタン、その他の要素のセマンティクスは、読み上げで伝わらないことがあります。
+
 ## 例
 
-以下の例では、フォームに `0` から `100` までの範囲の値を取るスライダーと、第 2 の値を入力できる {{HTMLElement("input")}} 要素があります。どちらかのコントロールの値が変更されるたびに、2 つの値が合計された結果が `<output>` 要素の中に表示されます。
+以下の例では、`0` から `100` までの範囲の値を取るスライダーと、第 2 の値を入力できる {{HTMLElement("input")}} 要素を用意します。2 つの値を加算し、どちらかのコントロールの値が変更されるたびに、その結果を `<output>` 要素に表示します。
 
 ```html
-<form id="example-form">
-  <input type="range" id="b" name="b" value="50" /> +
-  <input type="number" id="a" name="a" value="10" /> =
-  <output name="result" for="a b">60</output>
-</form>
+<input type="range" id="b" name="b" value="50" /> +
+<input type="number" id="a" name="a" value="10" /> =
+<output id="result" for="a b">60</output>
 ```
 
 ```js
-const form = document.getElementById("example-form");
-const a = form.elements["a"];
-const b = form.elements["b"];
-const result = form.elements["result"];
+const a = document.getElementById("a");
+const b = document.getElementById("b");
+const result = document.getElementById("result");
 
 function updateResult() {
   const aValue = a.valueAsNumber;
@@ -52,7 +51,8 @@ function updateResult() {
   result.value = aValue + bValue;
 }
 
-form.addEventListener("input", updateResult);
+a.addEventListener("input", updateResult);
+b.addEventListener("input", updateResult);
 
 updateResult();
 ```

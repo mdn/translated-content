@@ -3,7 +3,7 @@ title: Array.prototype.copyWithin()
 short-title: copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`copyWithin()`** は {{jsxref("Array")}} インスタンスのメソッドで、この配列の一部を配列内の他の場所にシャローコピーし、この配列を長さを変更せずに返します。
@@ -119,7 +119,7 @@ console.log(Array.prototype.copyWithin.call(arrayLike, 3, 1));
 
 ## 関連情報
 
-- [`Array.prototype.copyWithin` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.copyWithin` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.copyWithin` のポリフィル](https://www.npmjs.com/package/array.prototype.copywithin)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}

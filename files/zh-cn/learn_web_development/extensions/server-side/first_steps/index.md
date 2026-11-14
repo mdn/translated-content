@@ -11,9 +11,9 @@ slug: Learn_web_development/Extensions/Server-side/First_steps
 
 你需要先知道“Web 如何工作”，我们推荐你首先阅读下面几个话题：
 
-- [什么是一个 Web 服务器？](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
-- [建立一个网站需要什么软件？](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- [如何向 Web 服务器上传文件？](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [安装基础软件](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
+- [万维网是如何工作的](/zh-CN/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)
+- [发布你的网站](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 
 有了这些基础知识，你已经准备好开始这些模块的学习了。
 

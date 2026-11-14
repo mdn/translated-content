@@ -197,7 +197,7 @@ Order 还会更改项目的绘制顺序; 对于`order`较低的项目将首先�
 
 使用 order 属性对于无障碍具有与使用`flex-direction`更改方向完全相同的含义。使用`order`可以更改项目的绘制顺序和外观。它不会更改项目的顺序导航顺序。因此，如果用户在项目之间切换，他们可能会发现自己以非常混乱的方式在布局中跳跃。
 
-通过浏览此页面上的任何实时示例，你可以了解订单如何给不使用某种指点设备的任何人带来奇怪的体验。要了解有关视觉顺序和逻辑顺序的这种分离以及它为无障碍带来的一些潜在问题的更多信息，请参见以下资源。
+通过浏览此页面上的任何实时示例，你可以了解 `order` 如何给不使用某种指点设备的任何人带来奇怪的体验。要了解有关视觉顺序和逻辑顺序的这种分离以及它为无障碍带来的一些潜在问题的更多信息，请参见以下资源。
 
 - [Flexbox and the keyboard navigation disconnect](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
 - [HTML Source Order vs CSS Display Order](https://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html)

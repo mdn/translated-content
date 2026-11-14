@@ -2,7 +2,7 @@
 title: Pautas de redacción
 slug: MDN/Writing_guidelines
 l10n:
-  sourceCommit: ca0b474bb2e153ce72718cb304306e540065a888
+  sourceCommit: f99d00a1c3697e26a679925954e26564e7e79b98
 ---
 
 MDN Web Docs es un proyecto de código abierto. Las secciones descritas a continuación detallan nuestras pautas sobre _qué_ documentamos y _cómo_ lo hacemos en MDN Web Docs. Para saber _cómo contribuir_, consulta nuestras [guías de contribución](/es/docs/MDN/Community).

@@ -260,7 +260,7 @@ function setUserName() {
 
 ## 関連情報
 
-- [Scrimba: Learn JavaScript](https://scrimba.com/learn-javascript-c0v?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Scrimba: Learn JavaScript](https://scrimba.com/learn-javascript-c0v?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
   - : [Scrimba](https://scrimba.com?via=mdn) の _Learn JavaScript_ コースでは、140 以上の対話的なコーディング課題に取り組み、ゲームやブラウザー拡張機能、さらにはモバイルアプリなどのプロジェクトを構築しながら、JavaScript を学べます。Scrimba では、知識豊富な講師陣による楽しい対話的なレッスンが提供されています。
 - [Learn JavaScript](https://learnjavascript.online/)
   - : ウェブ開発者を目指す方に最適な教材です! 対話的な環境で、短いレッスンと対話的なテスト、自動評価によるガイドで、 JavaScript を学ぶことができます。最初の 40 レッスンは無料です。全コースは少額の一括払いでご利用いただけます。

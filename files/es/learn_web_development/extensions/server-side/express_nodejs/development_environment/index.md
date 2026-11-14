@@ -40,7 +40,7 @@ _npm_ también se puede usar para instalar (de forma global) el _generador de ap
 > [!NOTE]
 > A diferencia de otros frameworks web, el entorno de desarrollo no incluye un servidor web de desarrollo independiente. ¡En _Node_/_Express_, una aplicación web crea y ejecuta su propio servidor web!
 
-Existen otras herramientas periféricas que forman parte de un entorno de desarrollo típico, entre ellas los [editores de texto](/es/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors) o los IDE para editar código, y las herramientas de gestión de control de versiones como [Git](https://git-scm.com/) para gestionar de forma segura las distintas versiones de tu código. Damos por hecho que ya tienes instaladas este tipo de herramientas (en particular, un editor de texto).
+Existen otras herramientas periféricas que forman parte de un entorno de desarrollo típico, entre ellas los [editores de texto](/es/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors) o los IDE para editar código, y las herramientas de gestión de control de versiones como [Git](https://git-scm.com/) para gestionar de forma segura las distintas versiones de tu código. Damos por hecho que ya tienes instaladas este tipo de herramientas (en particular, un editor de texto).
 
 ### ¿Qué sistemas operativos son compatibles?
 

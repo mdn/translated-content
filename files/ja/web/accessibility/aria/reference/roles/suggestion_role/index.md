@@ -1,8 +1,9 @@
 ---
 title: "ARIA: suggestion ロール"
+short-title: suggestion
 slug: Web/Accessibility/ARIA/Reference/Roles/suggestion_role
 l10n:
-  sourceCommit: 50f209459d9e1db35bf0d973d7878ea4600acb8c
+  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
 `suggestion` ロールは、編集可能なドキュメントに対する単一の変更提案をセマンティックに表します。これは、`insertion` ロールを持つ要素と `deletion` ロールを持つ要素をラップする要素に使用してください。

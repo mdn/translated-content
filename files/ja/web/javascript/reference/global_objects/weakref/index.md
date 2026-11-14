@@ -2,10 +2,8 @@
 title: WeakRef
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef
 l10n:
-  sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`WeakRef`** オブジェクトは、ガベージコレクションを受けることを妨げない他のオブジェクトへの弱い参照を保持します。
 
@@ -21,7 +19,7 @@ l10n:
 
 ここでは、 `WeakRef` 導入の[提案](https://github.com/tc39/proposal-weakrefs)の著者が盛り込んだ具体的なポイントをいくつか紹介します。
 
-> [ガベージコレクション](https://ja.wikipedia.org/wiki/%E3%82%AC%E3%83%99%E3%83%BC%E3%82%B8%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3)は複雑です。アプリケーションもしくはライブラリーが WeakRef のガベージコレクションの解放処理か、即時にファイナライザー（解放処理のコールバック）の呼び出し処理に依存している場合は、予想した動作とは異なる動作を行うかもしれません。解放処理は予想よりもかなり後に行われるか、もしくは行われないからです。以下に挙げた様々な原因が考えられます。
+> [ガベージコレクション](https://ja.wikipedia.org/wiki/%E3%82%AC%E3%83%99%E3%83%BC%E3%82%B8%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3)は複雑です。アプリケーションもしくはライブラリーが WeakRef のガベージコレクションの解放処理か、即時にファイナライザー（解放処理のコールバック）の呼び出し処理に依存している場合は、予想した動作とは異なる動作を行うかもしれません。解放処理は予想よりもかなり後に行われるか、もしくは行われないからです。以下に挙げる様々な原因が考えられます。
 >
 > - あるオブジェクトは、別のオブジェクトよりずっと早くガベージコレクションされるかもしれません。たとえ、世代集合などによって同じ時点で到達できなくなったとしてもです。
 > - ガベージコレクションの作業は、インクリメンタル技術やコンカレント技術を使用して、時間をかけて分割させることがあります。
@@ -30,7 +28,7 @@ l10n:
 > - JavaScript エンジンが異なれば、これらのことは異なる形で行われるかもしれませんし、同じエンジンでもバージョンによってアルゴリズムが変わるかもしれません。
 > - 複雑な要因によって、特定の API を使用している場合など、オブジェクトが予期せぬ時点まで保持されることがあります。
 
-## WeakRef における注意
+### WeakRef における注意
 
 - コードがターゲットオブジェクトの `WeakRef` を作成した直後、または `WeakRef` の `deref` メソッドからターゲットオブジェクトを取得した場合、そのターゲットオブジェクトは現在の JavaScript の[ジョブ](https://tc39.es/ecma262/multipage/executable-code-and-execution-contexts.html#job)（スクリプトジョブの終わりに実行するプロミスリアクションジョブを含む）が終わるまで取り戻されません。すなわち、イベントループのターンの間だけ、オブジェクトが再取得されるのを「見る」ことができます。これは主に、指定された JavaScript エンジンのガベージコレクタの挙動をコードで明らかにすることを避けるためです。（ガベージコレクションは難しい問題です。JavaScriptエンジンの実装者は常に、これはうまくいく方法を洗練し、改善しています。）
 - 複数の `WeakRef` が同じターゲットを持つ場合、互いに一致します。そのうちの一つで `deref` を呼び出した結果は、そのうちのもう一つで `deref` を呼び出した結果と一致します（同じジョブで）。
@@ -47,14 +45,14 @@ l10n:
 
 これらのプロパティは `WeakRef.prototype` で定義されており、すべての `WeakRef` インスタンスで共有されます。
 
-- {{jsxref("Object/constructor", "WeakRef.prototype.constructor")}} {{Optional_Inline}}
+- {{jsxref("Object/constructor", "WeakRef.prototype.constructor")}} {{optional_inline}}
   - : インスタンスオブジェクトを作成したコンストラクター関数です。 `WeakRef` インスタンスの場合、初期値は {{jsxref("WeakRef/WeakRef", "WeakRef")}} コンストラクターです。
 
     > [!NOTE]
     > このプロパティは仕様上 "normative optional" とされており、適合性のある実装では `constructor` プロパティを公開しないことを意味しています。これにより、任意のコードが `WeakRef` コンストラクターを取得し、ガベージコレクションを監視することができなくなります。しかし、主要なエンジンはすべて既定では公開しています。
 
 - `WeakRef.prototype[Symbol.toStringTag]`
-  - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"WeakRef"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
+  - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"WeakRef"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
 ## インスタンスメソッド
 

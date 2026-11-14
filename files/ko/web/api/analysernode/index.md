@@ -49,13 +49,13 @@ _부모인 {{domxref("AudioNode")}}로부터 속성을 상속받습니다_.
 _부모인 {{domxref("AudioNode")}}로부터 메서드를 상속받습니다_.
 
 - {{domxref("AnalyserNode.getFloatFrequencyData()")}}
-  - : 전달된 {{domxref("Float32Array")}} 배열 내로 현재 주파수 데이터를 복사합니다.
+  - : 전달된 {{jsxref("Float32Array")}} 배열 내로 현재 주파수 데이터를 복사합니다.
 - {{domxref("AnalyserNode.getByteFrequencyData()")}}
-  - : 전달된 {{domxref("Uint8Array")}} (unsiged byte array) 내로 현재 주파수 데이터를 복사합니다.
+  - : 전달된 {{jsxref("Uint8Array")}} (unsiged byte array) 내로 현재 주파수 데이터를 복사합니다.
 - {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
-  - : 전달된 {{domxref("Float32Array")}} 배열 내로 현재 파형, 즉 시간 영역 데이터를 복사합니다.
+  - : 전달된 {{jsxref("Float32Array")}} 배열 내로 현재 파형, 즉 시간 영역 데이터를 복사합니다.
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
-  - : 전달된 {{domxref("Uint8Array")}} (unsigned byte array) 내로 현재 파형, 즉 시간 영역 데이터를 복사합니다.
+  - : 전달된 {{jsxref("Uint8Array")}} (unsigned byte array) 내로 현재 파형, 즉 시간 영역 데이터를 복사합니다.
 
 ## 예제
 

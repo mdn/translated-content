@@ -3,7 +3,7 @@ title: Math.atan()
 short-title: atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
 **`Math.atan()`** は静的メソッドで、数値の逆正接（アークタンジェント）をラジアン単位で返します。
@@ -81,3 +81,4 @@ const theta = (x, y) => Math.atan(y / x);
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("atan()")}} 関数

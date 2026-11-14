@@ -12,7 +12,7 @@ l10n:
 
 ## 値
 
-{{jsxref("Boolean")}} は最上位のウィンドウが {{domxref("window.open")}} によって {{domxref("window.open", "request a popup window", "popup_feature", 1)}} で開かれた場合に真になります。
+{{jsxref("Boolean")}} は最上位のウィンドウが {{domxref("window.open")}} によって {{domxref("window.open", "request a popup window", "#popup_feature", 1)}} で開かれた場合に真になります。
 
 > [!NOTE]
 > 過去には、これは使用するインターフェイス要素が表示されているかどうかを表していました。しかし、プライバシーの観点から、これは各インターフェイス要素の実際の可視性を表すことはできなくなりました。

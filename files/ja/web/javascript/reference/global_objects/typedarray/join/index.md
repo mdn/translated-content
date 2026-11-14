@@ -3,10 +3,10 @@ title: TypedArray.prototype.join()
 short-title: join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-**`join()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、この型付き配列のすべての要素を、カンマまたは指定する区切り文字で連結して新しい文字列を作成して返します。型付き配列に 1 つの項目しかない場合、その項目は区切り文字を使用せずに返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.join()")}} と同じです。
+**`join()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、この型付き配列のすべての要素を、カンマまたは指定する区切り文字で連結した新しい文字列を返します。型付き配列に 1 つの要素しかない場合、その要素を文字列化した結果が、区切り文字を使わずに返されます。このメソッドのアルゴリズムは {{jsxref("Array.prototype.join()")}} と同じです。
 
 {{InteractiveExample("JavaScript デモ: TypedArray.prototype.join()")}}
 
@@ -64,7 +64,7 @@ uint8.join(""); // '123'
 
 ## 関連情報
 
-- [`TypedArray.prototype.join` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.join` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.toString()")}}

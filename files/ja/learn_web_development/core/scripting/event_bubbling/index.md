@@ -369,7 +369,7 @@ container.addEventListener("click", (event) => {
 
 ## `target` および `currentTarget`
 
-このページで紹介した例をよく見ていくと、クリックされた要素にアクセスするためにイベントオブジェクトの 2 つの異なるプロパティを使用していることがわかります。[親要素へのリスナーの設定](#親要素へのリスナーの設定)では、{{domxref("Event.currentTarget", "event.currentTarget")}}を使用しています。しかし、[イベント移譲](#イベント移譲)では、{{domxref("Event.target", "event.target")}} を使用しています。
+このページで紹介した例をよく見ていくと、クリックされた要素にアクセスするためにイベントオブジェクトの 2 つの異なるプロパティを使用していることがわかります。[親要素へのリスナーの設定](#親要素へのリスナーの設定)では、{{domxref("Event.currentTarget", "event.currentTarget")}}を使用しています。しかし、[イベント移譲](#イベントの委譲)では、{{domxref("Event.target", "event.target")}} を使用しています。
 
 `target` は最初にイベントが発生した要素を参照し、`currentTarget` はこのイベントハンドラーが接続されている要素を参照するという違いがあります。
 
@@ -408,7 +408,7 @@ button.addEventListener("click", handleClick);
 
 {{embedlivesample("target and currentTarget")}}
 
-`target` プロパティは、上記の[イベント移譲](#イベント移譲)の例にあるように、イベント移譲でよく使用します。
+`target` プロパティは、上記の[イベント移譲](#イベントの委譲)の例にあるように、イベント移譲でよく使用します。
 
 ## まとめ
 

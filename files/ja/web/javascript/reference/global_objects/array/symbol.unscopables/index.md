@@ -3,7 +3,7 @@ title: Array.prototype[Symbol.unscopables]
 short-title: "[Symbol.unscopables]"
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`[Symbol.unscopables]`** は `Array.prototype` のデータプロパティで、すべての {{jsxref("Array")}} インスタンスで共有されます。 ES2015 以前の ECMAScript 標準には含まれておらず、 [`with`](/ja/docs/Web/JavaScript/Reference/Statements/with) 文のバインドの目的では無視されるプロパティ名を含んでいます。
@@ -65,7 +65,7 @@ ECMAScript 2015 が {{jsxref("Array.prototype.values()")}} メソッドを導入
 
 ## 関連情報
 
-- [`Array.prototype[Symbol.unscopables]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype[Symbol.unscopables]` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}
 - {{jsxref("Statements/with", "with")}}

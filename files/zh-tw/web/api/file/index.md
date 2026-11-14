@@ -9,7 +9,7 @@ slug: Web/API/File
 
 `File` 物件通常是從使用者於 {{HTMLElement("input")}} 元素選擇之檔案所回傳的 {{domxref("FileList")}} 物件當中取得，也可以來自[拖放操作](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API)所產生的 {{domxref("DataTransfer")}} 物件之中，或是由 {{domxref("HTMLCanvasElement")}} 物件（元素物件）執行 `mozGetAsFile()` 方法後回傳。在 Gecko 引擎中，有專屬的程式碼能不需使用者操作即建立 `File` 物件來表示本地端的任一檔案（請參考 [Implementation notes](#implementation_notes) 以閱讀更多資訊）。
 
-`File` 物件是一種特殊的 {{domxref("Blob")}}，且可被用在任何接受 Blob 物件的地方。特別是 {{domxref("FileReader")}}、{{domxref("URL.createObjectURL()")}}、{{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}} 和 {{domxref("XMLHttpRequest", "", "send()")}} 都能夠同樣接受 `Blob` 以及 `File`。
+`File` 物件是一種特殊的 {{domxref("Blob")}}，且可被用在任何接受 Blob 物件的地方。特別是 {{domxref("FileReader")}}、{{domxref("URL.createObjectURL()")}}、{{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}} 和 {{domxref("XMLHttpRequest", "", "#send()")}} 都能夠同樣接受 `Blob` 以及 `File`。
 
 請參考[在網頁應用程式中使用本地檔案](/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications)的更多細節與範例。
 

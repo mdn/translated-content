@@ -61,7 +61,140 @@ function ballHitBrick(ball, brick) {
 
 이번 강좌에서 배운 득점 시스템이 어떻게 작동하는지 이해하고자 한다면, 다음 아래를 이용해 시연해보세요.
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/n8o6rhrf/","","400")}}
+> [!NOTE]
+> 라이브 샘플이 자동으로 실행되지 않도록 "게임 시작" 버튼을 추가했습니다. 게임이 자동으로 시작되면서 알림 등의 이벤트가 과도하게 발생하는 것을 방지하기 위해서입니다.
+
+```html hidden
+<script src="https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/js/phaser.2.4.2.min.js"></script>
+<button id="runButton">게임 시작</button>
+```
+
+```css hidden
+* {
+  padding: 0;
+  margin: 0;
+}
+```
+
+```js hidden
+var game;
+
+function preload() {
+  handleRemoteImagesOnJSFiddle();
+  game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+  game.scale.pageAlignHorizontally = true;
+  game.scale.pageAlignVertically = true;
+  game.stage.backgroundColor = "#eee";
+  game.load.image("ball", "img/ball.png");
+  game.load.image("paddle", "img/paddle.png");
+  game.load.image("brick", "img/brick.png");
+}
+function create() {
+  game.physics.startSystem(Phaser.Physics.ARCADE);
+  game.physics.arcade.checkCollision.down = false;
+  ball = game.add.sprite(
+    game.world.width * 0.5,
+    game.world.height - 25,
+    "ball",
+  );
+  ball.anchor.set(0.5);
+  game.physics.enable(ball, Phaser.Physics.ARCADE);
+  ball.body.velocity.set(150, -150);
+  ball.body.collideWorldBounds = true;
+  ball.body.bounce.set(1);
+  ball.checkWorldBounds = true;
+  ball.events.onOutOfBounds.add(function () {
+    alert("Game over!");
+    location.reload();
+  }, this);
+
+  paddle = game.add.sprite(
+    game.world.width * 0.5,
+    game.world.height - 5,
+    "paddle",
+  );
+  paddle.anchor.set(0.5, 1);
+  game.physics.enable(paddle, Phaser.Physics.ARCADE);
+  paddle.body.immovable = true;
+
+  initBricks();
+
+  scoreText = game.add.text(5, 5, "Points: 0", {
+    font: "18px Arial",
+    fill: "#0095DD",
+  });
+}
+function update() {
+  game.physics.arcade.collide(ball, paddle);
+  game.physics.arcade.collide(ball, bricks, ballHitBrick);
+  paddle.x = game.input.x || game.world.width * 0.5;
+}
+function initBricks() {
+  brickInfo = {
+    width: 50,
+    height: 20,
+    count: {
+      row: 7,
+      col: 3,
+    },
+    offset: {
+      top: 50,
+      left: 60,
+    },
+    padding: 10,
+  };
+  bricks = game.add.group();
+  for (c = 0; c < brickInfo.count.col; c++) {
+    for (r = 0; r < brickInfo.count.row; r++) {
+      var brickX =
+        r * (brickInfo.width + brickInfo.padding) + brickInfo.offset.left;
+      var brickY =
+        c * (brickInfo.height + brickInfo.padding) + brickInfo.offset.top;
+      newBrick = game.add.sprite(brickX, brickY, "brick");
+      game.physics.enable(newBrick, Phaser.Physics.ARCADE);
+      newBrick.body.immovable = true;
+      newBrick.anchor.set(0.5);
+      bricks.add(newBrick);
+    }
+  }
+}
+function ballHitBrick(ball, brick) {
+  brick.kill();
+  score += 10;
+  scoreText.setText(`Points: ${score}`);
+}
+
+// JSFiddle에서 원격 서버의 이미지를 불러오기 위한 함수입니다.
+function handleRemoteImagesOnJSFiddle() {
+  game.load.baseURL =
+    "https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/";
+  game.load.crossOrigin = "anonymous";
+}
+
+var ball;
+var paddle;
+var bricks;
+var newBrick;
+var brickInfo;
+var scoreText;
+var score = 0;
+
+function startGame() {
+  game = new Phaser.Game(480, 320, Phaser.AUTO, null, {
+    preload: preload,
+    create: create,
+    update: update,
+  });
+}
+
+const runButton = document.getElementById("runButton");
+runButton.addEventListener("click", () => {
+  startGame();
+  runButton.disabled = true;
+});
+```
+
+{{EmbedLiveSample("코드를 비교해보세요", 600, 360)}}
 
 ## 다음 단계
 

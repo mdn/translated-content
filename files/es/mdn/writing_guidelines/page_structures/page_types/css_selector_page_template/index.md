@@ -2,7 +2,7 @@
 title: Plantilla de página de selector CSS
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template
 l10n:
-  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
+  sourceCommit: c44003c788a907ef19e0d766e98f29ffca5b6798
 ---
 
 > [!NOTE]
@@ -57,7 +57,6 @@ l10n:
 >
 > - `\{{SeeCompatTable}}` — genera un banner de **Esta es una tecnología experimental** que indica que la tecnología es experimental.
 >   Si es experimental y la tecnología está oculta detrás de una preferencia en Firefox, también debes completar una entrada para ella en la página de funcionalidades experimentales de Firefox.
-> - `\{{Deprecated_Header}}` — genera un banner de **Obsoleto** que indica que el uso de la tecnología está desaconsejado.
 > - `\{{Non-standard_Header}}` — genera un banner de **No estándar** que indica que la funcionalidad no forma parte de ninguna especificación.
 >
 > Debes actualizar o eliminar las siguientes macros de acuerdo con las recomendaciones a continuación:

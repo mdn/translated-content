@@ -3,7 +3,7 @@ title: Cómo agregar una entrada al glosario
 short-title: Agregar una entrada al glosario
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 l10n:
-  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
 
 Este artículo explica cómo agregar y vincular entradas en el [glosario de MDN Web Docs](/es/docs/Glossary).
@@ -22,7 +22,7 @@ Las entradas del glosario están pensadas para ser sencillas y breves.
 Primero, elige el término para el que quieres crear una entrada en el glosario.
 Si buscas términos sin entrada, consulta la lista en la barra lateral de la [página de inicio del glosario](/es/docs/Glossary).
 
-Si tienes una idea para una nueva entrada del glosario, [crea una nueva página](/es/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#creating_pages) dentro de la [página de inicio del glosario](https://github.com/mdn/content/tree/main/files/en-us/glossary).
+Si tienes una idea para una nueva entrada del glosario, [crea una nueva página](/es/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#crear_páginas) dentro de la [página de inicio del glosario](https://github.com/mdn/content/tree/main/files/en-us/glossary).
 
 ### Escribir un resumen
 
@@ -31,8 +31,10 @@ Preferiblemente, no debe tener más de dos oraciones.
 Asegúrate de que quien lea la descripción entienda el término de inmediato.
 
 > [!NOTE]
-> Por favor, no copies y pegues de otras definiciones o contenido en Internet.
-> (Y especialmente no de Wikipedia, ya que su rango de versiones de licencia es más reducido e incompatible con MDN.) Tu entrada en el glosario debe ser contenido original.
+> No copies y pegues de otras definiciones o contenido en Internet.
+> (Y especialmente no de Wikipedia, ya que su rango de versiones de licencia es más reducido e incompatible con MDN.)
+> Tampoco uses texto generado.
+> Tu entrada en el glosario debe ser contenido original, escrito con tus propias palabras.
 
 #### Escribir una buena entrada de glosario
 

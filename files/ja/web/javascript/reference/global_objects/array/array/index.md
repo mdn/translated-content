@@ -3,7 +3,7 @@ title: Array() コンストラクター
 short-title: Array()
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 06f8ebf948372dfb6c3c22d26d4f672c99cd4e0d
 ---
 
 **`Array()`** コンストラクターは {{jsxref("Array")}} オブジェクトを生成します。
@@ -40,7 +40,7 @@ Array(arrayLength)
 ### 例外
 
 - {{jsxref("RangeError")}}
-  - : 引数が数値 1 つ (`arrayLength`) だけであるものの、その値が整数でないか、 0 ～ 2<sup>32</sup> - 1 （両端を含む）の範囲内になかった場合に発生します。
+  - : 引数が数値 1 つ (`arrayLength`) だけであるものの、その値が整数でないか、 0 以上 2<sup>32</sup> - 1 以下でなかった場合に発生します。
 
 ## 例
 

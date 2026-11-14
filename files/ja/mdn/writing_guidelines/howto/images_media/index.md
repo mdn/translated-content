@@ -3,7 +3,7 @@ title: 画像、メディア、資産の追加方法
 short-title: メディアの追加
 slug: MDN/Writing_guidelines/Howto/Images_media
 l10n:
-  sourceCommit: 0ff7ba5177bf2e66214bd90b58590c6bf3acb758
+  sourceCommit: 15e1155ab8a0587405601cc4753bb789cd6ac47c
 ---
 
 このページでは、 MDN で文書内のページに画像やメディアを追加する方法について記述しています。
@@ -31,7 +31,7 @@ MDN ページで shared-assets リポジトリー内の何かを使用するに�
 ## コンテンツリポジトリーへの画像のコミット
 
 shared-assets リポジトリーが用途に適していない場合は、画像を content （en-USの場合、または translated-content）リポジトリーに追加することができます。
-文書に画像を追加するには、文書のフォルダーに画像ファイルを追加し、文書の `index.md` ファイルで [Markdown の画像構文（英語）](https://github.github.com/gfm/#images) または HTML の `<img>` 要素を使用して画像を参照してください。
+文書に画像を追加するには、文書のフォルダーに画像ファイルを追加し、文書の `index.md` ファイルで [Markdown の画像構文](https://github.github.com/gfm/#images)<sup>(英語)</sup>または HTML の `<img>` 要素を使用して画像を参照してください。
 
 例を通して説明しましょう。
 
@@ -75,7 +75,7 @@ shared-assets リポジトリーが用途に適していない場合は、画像
    git push -u origin my-images
    ```
 
-6. これで[プルリクエスト](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)を作成する準備ができました。
+6. これで[プルリクエスト](https://docs.github.com/ja/pull-requests/how-tos/create-pull-requests/creating-a-pull-request)を作成する準備ができました。
 
 ## 画像に代替テキストを追加
 
@@ -211,10 +211,6 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
 5. 録画したい動作をする。
 6. _停止_ ボタンを押す。
 7. メインメニューから*File* > _Export As..._ > _1080p_ を選択し、 Hi Definition として保存します。
-
-### その他のリソース
-
-- [How to Add Custom Callouts to Screencast Videos in ScreenFlow](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
 
 ### 動画を作成するためのワークフロー
 

@@ -1,11 +1,10 @@
 ---
 title: Date.prototype.setUTCDate()
+short-title: setUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`setUTCDate()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日時の月内の「日」を協定世界時に基づいて変更します。
 

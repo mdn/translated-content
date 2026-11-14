@@ -9,7 +9,7 @@ slug: Web/API/Window/localStorage
 
 `localStorage`에 저장한 자료는 **페이지 프로토콜별로 구분**합니다. 특히 HTTP(<http://example.com>)로 방문한 페이지에서 저장한 데이터는 같은 페이지의 HTTPS(<https://example.com>)와는 다른 `localStorage`에 저장됩니다.
 
-키와 값은 **항상** 각 문자에 2바이트를 할당하는 UTF-16 {{domxref("DOMString")}}의 형태로 저장합니다. 객체와 마찬가지로 정수 키는 자동으로 문자열로 변환합니다.
+키와 값은 **항상** 각 문자에 2바이트를 할당하는 UTF-16 {{jsxref("String")}}의 형태로 저장합니다. 객체와 마찬가지로 정수 키는 자동으로 문자열로 변환합니다.
 
 ## 구문
 

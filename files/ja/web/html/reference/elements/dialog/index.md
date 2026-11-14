@@ -3,7 +3,7 @@ title: "`<dialog>` ダイアログ要素"
 short-title: <dialog>
 slug: Web/HTML/Reference/Elements/dialog
 l10n:
-  sourceCommit: 4280928da7b326df9e358204a23df21b4668a29b
+  sourceCommit: 31e1fcaa50ff25bb27d7093758fa7a7088fff1e0
 ---
 
 **`<dialog>`** は [HTML](/ja/docs/Web/HTML) の要素で、モーダルまたは非モーダルダイアログボックスや、それ以外の消すことができるアラート、インスペクター、サブウィンドウなどのような対話的コンポーネントを表します。
@@ -77,7 +77,7 @@ JavaScript で `<dialog>` 要素を表示させたり閉じたりすることが
 その後、ボタンや入力フィールドに `popovertarget` 属性を使用してターゲットとなるポップオーバーを示し、`popovertargetaction` 属性を使用して、ボタンがクリックされた際にポップオーバーで実行されるアクションを指定できます。
 なお、ダイアログはポップオーバーであるため、非モーダルとなり、ダイアログの外側をクリックすることで閉じることができます。
 
-次の HTML は、`<button>` 要素に属性を適用し、クリックすることで `<dialog>` 要素の `id` が "my-dialog" であるモーダルダイアログを表示したり非表示にしたりする方法を示しています。
+次の HTML は、`<button>` 要素に属性を適用し、クリックすることで `<dialog>` 要素の `id` が "my-dialog" である非モーダルダイアログを表示したり非表示にしたりする方法を示しています。
 
 ```html
 <button popovertarget="my-dialog">ダイアログを開く</button>
@@ -269,11 +269,9 @@ closeButton.addEventListener("click", () => {
 
 ### ダイアログからの返値を処理
 
-この例では、`<dialog>` 要素の [`returnValue`](/ja/docs/Web/API/HTMLDialogElement/returnValue) と、フォームを使用してモーダルダイアログを閉じる方法を示しています。 デフォルトでは、`returnValue` は空文字列、または `<dialog>` 要素内にフォームを送信するボタンがある場合はその値となります。
+この例では、`<dialog>` 要素の [`returnValue`](/ja/docs/Web/API/HTMLDialogElement/returnValue) と、フォームを使ってモーダルダイアログを閉じる方法を示します。デフォルトでは、`returnValue` は空文字列、または `<dialog>` 要素内でフォームを送信するボタンがある場合はそのボタンの値です。
 
-この例では、［ダイアログを表示］ボタンが押されるとモーダルダイアログが開きます。ダイアログには、{{HTMLElement("select")}} と 2 つの {{HTMLElement("button")}} 要素という形でフォームが含まれており、デフォルトでは `type="submit"` となっています。イベントリスナーは、選択オプションが変更された際に［確認］ボタンの値を更新します。［確認］ボタンがダイアログを閉じるために有効化された場合、ボタンの現在の値が返値となります。［キャンセル］ボタンが押されてダイアログが閉じられた場合、 `returnValue` は `cancel` となります。
-
-ダイアログが閉じられると、返値が［ダイアログを表示］ボタンの下に表示されます。 <kbd>Esc</kbd> キーを押してダイアログが閉じられた場合、 `returnValue` は更新されず、 `close` イベントも発生しないため、{{HTMLElement("output")}} 内のテキストは更新されません。
+［ダイアログを表示］ボタンを有効にするとモーダルダイアログが開きます。ダイアログには {{HTMLElement("select")}} 要素と 3 つの {{HTMLElement("button")}} 要素を含むフォームがあり、各ボタンのデフォルトの型は `type="submit"` です。明示的な `value` 属性があるのは［キャンセル］ボタンだけで、その値がダイアログの `returnValue` に自動的に設定されます。
 
 #### HTML
 
@@ -285,7 +283,7 @@ closeButton.addEventListener("click", () => {
       <label>
         好きな動物は？
         <select>
-          <option value="default">選択してください…</option>
+          <option value="nothing">選択してください…</option>
           <option>ブラインシュリンプ</option>
           <option>レッサーパンダ</option>
           <option>クモザル</option>
@@ -294,7 +292,8 @@ closeButton.addEventListener("click", () => {
     </p>
     <div>
       <button value="cancel" formmethod="dialog">キャンセル</button>
-      <button id="confirmBtn" value="default">確認</button>
+      <button id="requestCloseBtn">requestClose でキャンセル</button>
+      <button id="confirmBtn">確認</button>
     </div>
   </form>
 </dialog>
@@ -311,13 +310,18 @@ closeButton.addEventListener("click", () => {
 ［キャンセル］ボタンがクリックされるとダイアログが閉じられます。これは、`<button>` に [`formmethod="dialog"`](/ja/docs/Web/HTML/Reference/Elements/input/submit#formmethod) 属性が指定されているためです。
 フォームのメソッドが [`dialog`](#追加メモ) の場合、フォームの状態は保存されますが送信はされず、ダイアログが閉じられます（この属性は {{HTMLElement("form")}} のデフォルトである {{HTTPMethod("GET")}} メソッドを上書きします）。
 `action` がない場合、デフォルトの {{HTTPMethod("GET")}} メソッドでフォームを送信すると、ページの再読み込みが発生します。
-JavaScript を使用して、送信を阻止し、ダイアログを閉じるために、それぞれ {{domxref("event.preventDefault()")}} と {{domxref("HTMLDialogElement.close()")}} メソッドを使用しています。
+他の 2 つのボタンでは、{{domxref("event.preventDefault()")}} でフォーム送信を阻止し、{{domxref("HTMLDialogElement.close()")}} または {{domxref("HTMLDialogElement.requestClose()")}} でダイアログを閉じます。
+
+<kbd>Esc</kbd> キーを押すか、`requestClose()` ボタンを押してダイアログを閉じると、まず `cancel` イベントが発生します。これにより、場合によってはコードから閉じるのを阻止できます。この例の `cancel` イベントリスナーはイベントをキャンセルせず、`returnValue` を `"cancelEvent"` に設定するだけです。この値が確認できるのは <kbd>Esc</kbd> キーを押した場合だけです。`requestClose()` に渡された `"requestClose"` が、`close` イベントリスナーの呼び出し直前に `returnValue` を上書きするためです。
+
+ダイアログをどの方法で閉じても、`close` イベントリスナーが {{HTMLElement("output")}} 内のテキストを最終的な `returnValue` で更新します。
 
 ```js
 const showButton = document.getElementById("showDialog");
 const favDialog = document.getElementById("favDialog");
 const outputBox = document.querySelector("output");
 const selectEl = favDialog.querySelector("select");
+const requestCloseBtn = favDialog.querySelector("#requestCloseBtn");
 const confirmBtn = favDialog.querySelector("#confirmBtn");
 
 // ［ダイアログを表示］ボタンで <dialog> をモーダルに開く
@@ -325,18 +329,25 @@ showButton.addEventListener("click", () => {
   favDialog.showModal();
 });
 
-// ［キャンセル］ボタンで [formmethod="dialog"] による送信を行わずにダイアログを閉じ、close イベントを発行する
-favDialog.addEventListener("close", (e) => {
-  outputBox.value =
-    favDialog.returnValue === "default"
-      ? "返値がありません。"
-      : `ReturnValue: ${favDialog.returnValue}`; // 空文字列ではなく、デフォルト値かどうかを調べる必要がある
+requestCloseBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  favDialog.requestClose("requestClose");
 });
 
-// ［確認］ボタンがデフォルトでフォームを送信しないようにし、`close()` メソッドでダイアログを閉じ、"close" イベントを発生させる
+// 選択された動物でダイアログを閉じる
 confirmBtn.addEventListener("click", (event) => {
-  event.preventDefault(); // この偽フォームを送信しない
-  favDialog.close(selectEl.value); // ここで選択ボックスの値を送る必要がある
+  event.preventDefault();
+  favDialog.close(selectEl.value);
+});
+
+// Escape キーまたは requestClose() から
+favDialog.addEventListener("cancel", () => {
+  favDialog.returnValue = "cancelEvent";
+});
+
+// ダイアログを閉じるたびに返値を表示する
+favDialog.addEventListener("close", () => {
+  outputBox.value = `ReturnValue: ${favDialog.returnValue}.`;
 });
 ```
 

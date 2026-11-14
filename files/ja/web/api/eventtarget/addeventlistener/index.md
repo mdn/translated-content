@@ -251,7 +251,7 @@ myButton.addEventListener("click", () => {
 console.log(someString); // 期待される値: 'Data' （'Data Again' とはならない）
 ```
 
-関数スコープに関する詳細情報は、[関数ガイド](/ja/docs/Web/JavaScript/Guide/Functions#関数のスコープ)をお読みください。
+関数スコープに関する詳細情報は、[関数ガイド](/ja/docs/Web/JavaScript/Guide/Functions#関数スコープとクロージャ)をお読みください。
 
 ### メモリーの問題
 

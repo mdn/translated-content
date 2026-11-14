@@ -3,7 +3,7 @@ title: Math.SQRT1_2
 short-title: SQRT1_2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: f336c5b6795a562c64fe859aa9ee2becf223ad8a
 ---
 
 **`Math.SQRT1_2`** は静的データプロパティで、1/2 の平方根、約 0.707 を表します。
@@ -39,14 +39,12 @@ console.log(getRoot1Over2());
 
 ### Math.SQRT1_2 の使用
 
-以下の関数は 1 を 2 の平方根で割った値を返します。
+以下の関数は、対角線の長さから正方形の辺の長さを求めます。
 
 ```js
-function getRoot1_2() {
-  return Math.SQRT1_2;
+function getSquareSideLength(diagonalLength) {
+  return diagonalLength * Math.SQRT1_2;
 }
-
-getRoot1_2(); // 0.7071067811865476
 ```
 
 ## 仕様書

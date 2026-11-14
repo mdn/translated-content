@@ -2,7 +2,7 @@
 title: リンクマクロ
 slug: MDN/Writing_guidelines/Page_structures/Links
 l10n:
-  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
+  sourceCommit: abc914f085fb9913c41c4cd4453da432e9d4e761
 ---
 
 MDN には MDN コンテンツへの常に最新のリンクを作成するためのマクロが数多く指定されています。このガイドでは、別のページへの単一のリンクや、文書のサブページすべてへのリンクのリストを含めるために使用することができる MDN 相互参照マクロについて学びます。
@@ -15,22 +15,16 @@ MDN はリンクのリストを作成するマクロを提供しています。
   - : 現在のページのサブページの定義リスト ({{HTMLElement("dl")}}) を挿入し、各ページのタイトルを {{HTMLElement("dt")}} の項、最初の段落を {{HTMLElement("dd")}} の項に入れます。
 
 - [`\{{ListSubpagesForSidebar()}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/list_subpages_for_sidebar.rs)
-  - : 引数なしで記載された場合、現在のページのサブページへのリンクの順序付きリストを挿入します。このマクロは[サイドバー](/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars)（マクロの名前の由来）内で使用することが多く、箇条書きは表示されません。最初の引数はリンクツリーの親ページのスラッグです。リンクテキストはコードとして表示されます。 2 つ目の引数に `true` または `1` を設定するには、リンクをプレーンテキストに変換します。 3 つ目の引数に `true` または `1` を設定すると、リストの一番上にあるスラッグ（親）ページへのリンクを "Overview" というリンクテキストで追加します。
+  - : 引数なしで記載された場合、現在のページのサブページへのリンクの順序付きリストを挿入します。最初の引数はリンクツリーの親ページのスラッグです。リンクテキストはコードとして表示されます。2 つ目の引数に `true` または `1` を設定すると、リンクをプレーンテキストに変換します。3 つ目の引数に `true` または `1` を設定すると、リストの一番上にスラッグ（親）ページへのリンクを追加し、リンクテキストを "Overview" にします。
 
 - [`\{{QuickLinksWithSubpages()}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/quick_links_with_subpages.rs)
   - : 現在のページ （または指定したページ） の子を出力先として使用するクイックリンクのセットを作成します。これは 2 階層までの階層リストを作成します。ページのタイトルはリンクテキストとして、概要はツールチップとして使用します。
 
-### リンクリストの例
-
-このページとその兄弟ページを含むリンクの順序リストを記載するには、以下のように書いてください。
+例えば、このページとその兄弟ページを含むリンクの順序付きリストを挿入するには、以下のように記述します。
 
 ```md
 \{{ListSubpagesForSidebar("/ja/docs/MDN/Writing_guidelines/Page_structures/Macros", 1)}}
 ```
-
-これは次のように表示されます。
-
-{{ListSubpagesForSidebar("/ja/docs/MDN/Writing_guidelines/Page_structures/Macros", 1)}}
 
 ## 相互参照リンク
 
@@ -48,24 +42,84 @@ MDN はリンクのリストを作成するマクロを提供しています。
 - [`\{{HTTPMethod("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs)
 - [`\{{HTTPStatus("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs)
 
-これらのマクロの最初の引数には、参照する文書のスラッグの最後の部分を指定します。例えば、 HTML 要素の場合は `\{{HTMLElement("")}}` を記載し、スラッグの `Web/HTML/Element/` の後に来る部分を最初の引数にします。 `\{{CSSxRef("")}}` では、スラッグの `Web/CSS/` の後に来る部分を追加します。リンク先はこのページになります。
+### 基本的な使い方
 
-既定では、 `\{{HTMLElement()}}` の場合、表示されるテキストは最初の引数に書かれたリンク先のリソースになります。これは望み通りではないかもしれません。例えば、範囲入力型のスラッグは `Web/HTML/Element/input/range` です。 `\{{HTMLElement("input/range")}}` と記載すると、 "{{HTMLElement("input/range")}}" が生成されます。これは望み通りではありませんね。マクロはすべて追加の引数を受け入れるので、表示したいテキストを提供することができます。
+最初の必須引数には、リンク先文書のスラッグの末尾部分から機能名を取り出して指定します。
+例えば、スラッグが `Web/HTML/Reference/Elements/select` の `<select>` 要素のページへリンクするには、マクロを `\{{HTMLElement("select")}}` と記述します。
+これにより、コード書式と山括弧が付いたリンク "{{HTMLElement("select")}}" が生成されます。
+これは、マクロが機能の種類に応じた書式をリンクテキストに追加するためです。
+そのため、マクロを使うときに指定するのは機能名だけで済みます。
+これが、マクロを使ったリンクの追加が簡単な理由です。
 
-2 つ目の引数が存在する場合は、リンクテキストを提供します。範囲入力型の場合、 `\{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}` と書くと、 "{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}" となります。この具体的なマクロは、 2 つ目の引数に空白が含まれている場合、 {{htmlelement("code")}}と山括弧が除去されるので、山括弧とコードタグを追加しました。
+### 表示テキストのカスタマイズ
 
-マクロによって異なります。
+デフォルトでは、リンクの表示テキストにマクロの最初の引数が使われます。別のテキストを表示するには、2 つ目の引数を使います。例えば、`\{{JSxRef("Array")}}` は {{JSxRef("Array")}} を生成します。このテキストを変えるには、`\{{JSxRef("Array", "JavaScript arrays")}}` と記述し、{{JSxRef("Array", "JavaScript arrays")}} を生成します。マクロのデフォルトの動作により、生成されたリンクにはコード書式が適用されていることがわかります。コード書式を無効にする方法については、[コード書式の無効化](#コード書式の無効化)を参照してください。
 
-HTML コードの意味づけと CSS コードをコーディングスタイルにしないために、一部の相互参照マクロは `"nocode"` という引数を記載して、このスタイル設定を無効にしています。
+### 入れ子になったページへのリンク
 
-例えば、`\{{CSSxRef("background-color")}}` はコードリンク "{{CSSxRef("background-color")}}" を作成し、 `\{{domxref("CSS.supports_static", "check support", "", "nocode")}}` はプレーンテキストリンク "{{domxref("CSS.supports_static", "check support", "", "nocode")}}" を作成します。
+参照対象の機能によっては、関連機能のページが入れ子になっています。例えば、HTML の `<input>` 要素には、入力型ごとに複数の入れ子ページがあり、範囲入力型のページのスラッグは `Web/HTML/Reference/Elements/input/range` です。
 
-使用するマクロがどのように動作するのか、また様々な引数を理解するために、必ずソースコードを見てください。引数は一般的に文書化されていますが、 `\{{HTMLElement("")}}` マクロで見た「2 つ目の引数に空白が含まれる場合はコードとしてレンダリングしない」というような例外は、コード内にはありますが、それ以外で文書化されていません。
+`\{{HTMLElement("input/range")}}` のように最初の引数にパス情報を渡すと、リンク "{{HTMLElement("input/range")}}" が生成されますが、これは望ましい表示ではありません。2 つ目の引数を使って別のリンクテキストを指定します。範囲入力型へのリンクには、`\{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}` と記述し、"{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}" を生成します。（2 つ目の引数に `input` と `type` の間のような空白が含まれていると、このマクロはコード書式を除去します。そのため、ここでは {{HTMLElement("code")}} タグを明示的に追加しています。）
 
-各マクロがどの引数に対応しているか、また各マクロの引数の順序を知るには、上にリンクしたマクロのソースファイルにドキュメントがあります。[よく使用するマクロのリスト](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)があり、それぞれページの本文コンテンツ領域にリンクが出力されています。
+### CSS リファレンスでの `CSSxRef` の使用
+
+マクロごとに動作は少しずつ異なります。
+
+`CSSxRef` マクロは、最初の引数に指定した機能名から適切なパスを自動的に判断します。機能がプロパティ、セレクター、アットルール、関数、データ型のどれに該当するかを検出し、`Web/CSS/Reference/` 以下の適切な文書にリンクします。
+
+例えば、次のようになります。
+
+- `\{{CSSxRef("cursor")}}` は、`Web/CSS/Reference/Properties/cursor` のプロパティページにリンクします。
+- `\{{CSSxRef(":hover")}}` は、`Web/CSS/Reference/Selectors/:hover` の擬似クラスページにリンクします。
+- `\{{CSSxRef("@media")}}` は、`Web/CSS/Reference/At-rules/@media` のアットルールページにリンクします。
+- `\{{CSSxRef("pow")}}` は、`Web/CSS/Reference/Values/pow` の関数ページにリンクします。
+- `\{{CSSxRef("<color>")}}` は、`Web/CSS/Reference/Values/color_value` のデータ型ページにリンクします。
+
+`HTMLElement` マクロと同様に、`CSSxRef` マクロは機能の種類に応じてリンクテキストに適切な書式を追加します。例えば、`\{{CSSxRef("acos")}}` は {{CSSxRef("acos")}} のように、生成されるリンクテキストに括弧を追加します。
+
+`CSSxRef` マクロには、ほかにも次のような動作があります。
+
+- 入れ子になったページは自動的に処理されます。例えば、次のとおりです。
+  - `\{{CSSxRef("basic-shape/circle")}}` は、`Web/CSS/Reference/Values/basic-shape/circle` の文書にリンクし、リンクテキストは {{CSSxRef("basic-shape/circle")}} になります。
+  - `\{{CSSxRef("animation-timeline/scroll")}}` は、`Web/CSS/Reference/Properties/animation-timeline/scroll` の文書にリンクし、リンクテキストは {{CSSxRef("animation-timeline/scroll")}} になります。
+- CSS 機能には同じ名前のものがあります。ディレクトリーの場所に加えて、スラッグには種類を示す接尾辞が含まれます。例えば、`position` プロパティのスラッグは `Web/CSS/Reference/Properties/position` である一方、`<position>` データ型のスラッグは `Web/CSS/Reference/Values/position_value` です。
+
+  `CSSxRef` マクロは、このような同名の機能を自動的に処理します。`\{{CSSxRef("position")}}` は {{CSSxRef("position")}} のようにプロパティページにリンクし、`\{{CSSxRef("<position>")}}` は {{CSSxRef("&lt;position&gt;")}} のようにデータ型ページにリンクします。
+
+  同じ名前を持つほかの機能には、次のものがあります。
+  - `color` プロパティ (`Web/CSS/Reference/Properties/color`) と `<color>` データ型 (`Web/CSS/Reference/Values/color_value`)
+
+    **マクロ**: `\{{CSSxRef("color")}}` と `\{{CSSxRef("<color>")}}`
+
+  - `fit-content()` 関数 (`Web/CSS/Reference/Values/fit-content_function`) と `fit-content` キーワード (`Web/CSS/Reference/Values/fit-content`)
+
+    **マクロ**: `\{{CSSxRef("fit-content()")}}` と `\{{CSSxRef("fit-content")}}`
+
+  - `flex` プロパティ (`Web/CSS/Reference/Properties/flex`) と `<flex>` データ型 (`Web/CSS/Reference/Values/flex_value`)
+
+    **マクロ**: `\{{CSSxRef("flex")}}` と `\{{CSSxRef("<flex>")}}`
+
+  - `:host` 擬似クラス (`Web/CSS/Reference/Selectors/:host`) と `:host()` 擬似クラス関数 (`Web/CSS/Reference/Values/:host_function`)
+
+    **マクロ**: `\{{CSSxRef(":host")}}` と `\{{CSSxRef(":host()")}}`
+
+  - `overflow` プロパティ (`Web/CSS/Reference/Properties/overflow`) と `<overflow>` データ型 (`Web/CSS/Reference/Values/overflow_value`)
+
+    **マクロ**: `\{{CSSxRef("overflow")}}` と `\{{CSSxRef("<overflow>")}}`
+
+  - `url()` 関数 (`Web/CSS/Reference/Values/url_function`) と `<url>` データ型 (`Web/CSS/Reference/Values/url_value`)
+
+    **マクロ**: `\{{CSSxRef("url()")}}` と `\{{CSSxRef("<url>")}}`
+
+### コード書式の無効化
+
+相互参照マクロは、デフォルトでリンクテキストにコード書式を適用します。
+マクロによって適用される HTML コードの意味づけや CSS コードのスタイルを避けるには、`"nocode"` 引数を使います。
+
+例えば、`\{{CSSxRef("background-color")}}` はコード書式のリンク "{{CSSxRef("background-color")}}" を生成し、一方 `\{{domxref("CSS.supports_static", "check support", "", "nocode")}}` はプレーンテキストのリンク "{{domxref("CSS.supports_static", "check support", "", "nocode")}}" を生成します。同様に、JavaScript の配列へのリンクにコード書式を適用しない場合は、`\{{JSxRef("Array", "JavaScript arrays", "", "nocode")}}` と記述して "{{JSxRef("Array", "JavaScript arrays", "", "nocode")}}" を生成します。
 
 ## 関連情報
 
 - [マクロの使用](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros)
-- [よく使われるマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)、 BCD マクロ (`\{{Compat}}`, `\{{Compat(&lt;feature>)}}`, `\{{Compat(&lt;feature>, &lt;depth>)}}`) や仕様書マクロ (`\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`)
-- [バナーと通知のガイド](/ja/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)、`\{{SeeCompatTable}}`, `\{{Deprecated_Header}}`, `\{{SecureContext_Header}}` などのマクロ。
+- [よく使われるマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)。BCD マクロ (`\{{Compat}}`) や仕様書マクロ (`\{{Specifications}}`) などがあります。
+- [バナーと通知のガイド](/ja/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)。`\{{SeeCompatTable}}` や `\{{SecureContext_Header}}` などのマクロがあります。

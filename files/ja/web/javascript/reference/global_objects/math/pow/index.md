@@ -3,10 +3,10 @@ title: Math.pow()
 short-title: pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-**`Math.pow()`** は静的メソッドで、基数をべき乗した値を返します。
+**`Math.pow()`** は静的メソッドで、底を指定された指数で累乗した値を返します。
 
 <!-- prettier-ignore-start -->
 <math display="block">
@@ -77,22 +77,22 @@ Math.pow(8, 1 / 3); // 2 (8 の立方根)
 Math.pow(2, 0.5); // 1.4142135623730951 (2 の平方根)
 Math.pow(2, 1 / 3); // 1.2599210498948732 (2 の立方根)
 
-// 負の数のべき乗
+// 指数の符号
 Math.pow(7, -2); // 0.02040816326530612 (1/49)
 Math.pow(8, -1 / 3); // 0.5
 
-// 負の数の底
+// 底の符号
 Math.pow(-7, 2); // 49 (2 乗は正の数)
 Math.pow(-7, 3); // -343 (3 乗は負の数)
 Math.pow(-7, 0.5); // NaN (負の数には実数の平方根がない)
-// Due to "even" and "odd" roots laying close to each other,
-// and limits in the floating number precision,
-// negative bases with fractional exponents always return NaN,
-// even when the mathematical result is real
+// "偶数" 乗根と "奇数" 乗根が互いに近く、
+// 浮動小数点数の精度にも限界があるため、
+// 負の底と小数の指数の組み合わせは、
+// 数学的な結果が実数であっても常に NaN を返す
 Math.pow(-7, 1 / 3); // NaN
 
-// Zero and infinity
-Math.pow(0, 0); // 1 (任意の数 ** ±0 is 1)
+// ゼロと無限大
+Math.pow(0, 0); // 1 (任意の数を ±0 乗すると 1)
 Math.pow(Infinity, 0.1); // Infinity (正の指数)
 Math.pow(Infinity, -1); // 0 (負の指数)
 Math.pow(-Infinity, 1); // -Infinity (正の奇数の整数の指数)
@@ -112,7 +112,7 @@ Math.pow(0.9, -Infinity); // Infinity
 Math.pow(1, -Infinity); // NaN
 Math.pow(1.1, -Infinity); // 0
 
-// NaN: only Math.pow(NaN, 0) does not result in NaN
+// NaN: Math.pow(NaN, 0) だけは NaN にならない
 Math.pow(NaN, 0); // 1
 Math.pow(NaN, 1); // NaN
 Math.pow(1, NaN); // NaN

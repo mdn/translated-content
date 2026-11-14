@@ -3,10 +3,10 @@ title: Math.sinh()
 short-title: sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-**`Math.sinh()`** 静的メソッドは、数値の双曲線正弦 (ハイパーボリックサイン) を返します。
+**`Math.sinh()`** は静的メソッドで、数値の双曲線正弦（ハイパーボリックサイン）を返します。
 
 <!-- prettier-ignore-start -->
 <math display="block">
@@ -51,7 +51,7 @@ Math.sinh(x)
 
 ## 例
 
-### Using Math.sinh() の使用
+### Math.sinh() の使用
 
 ```js
 Math.sinh(-Infinity); // -Infinity
@@ -71,7 +71,7 @@ Math.sinh(Infinity); // Infinity
 
 ## 関連情報
 
-- [`Math.sinh` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.sinh` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}

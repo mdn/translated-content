@@ -3,7 +3,7 @@ title: Math.cbrt()
 short-title: cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`Math.cbrt()`** は静的メソッドで、引数として与えた数の立方根を返します。
@@ -73,7 +73,7 @@ Math.cbrt(Infinity); // Infinity
 
 ## 関連情報
 
-- [`Math.cbrt` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.cbrt` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - [es-shims による `Math.cbrt` のポリフィル](https://www.npmjs.com/package/math.cbrt)
 - {{jsxref("Math.pow()")}}
 - {{jsxref("Math.sqrt()")}}

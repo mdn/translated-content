@@ -20,7 +20,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_w
 
 許多專業的網站是用這個方法發佈的。
 
-除此之外，你還會需要一個 {{Glossary("FTP", "File Transfer Protocol (FTP)")}} 程式（點選 [How much does it cost: software](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#software) 來取得更多資訊），這樣才能真正的把你建置的網頁檔案傳達給伺服器。FTP 程式很廣泛，但一般來說，你可以用你公司提供的資訊，像是使用者名稱、密碼以及 host name 來登入你的網頁伺服器，它就會以兩個視窗的形式分別顯示你電腦裡的檔案和你網頁伺服器上的檔案，然後你就可以移動你的檔案。
+除此之外，你還會需要一個 {{Glossary("FTP", "File Transfer Protocol (FTP)")}} 程式（點選 [How much does it cost: software](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#software) 來取得更多資訊），這樣才能真正的把你建置的網頁檔案傳達給伺服器。FTP 程式很廣泛，但一般來說，你可以用你公司提供的資訊，像是使用者名稱、密碼以及 host name 來登入你的網頁伺服器，它就會以兩個視窗的形式分別顯示你電腦裡的檔案和你網頁伺服器上的檔案，然後你就可以移動你的檔案。
 
 ![](ftp.jpg)
 
@@ -77,7 +77,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_w
 
 - [何謂網路伺服器](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [Understanding domain names](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
-- [How much does it cost to do something on the web?](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
+- [How much does it cost to do something on the web?](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 - [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website): A nice tutorial from Codecademy that goes a bit further and shows some additional techniques.
 - [Cheap or Free Static Website Hosting](http://alignedleft.com/resources/cheap-web-hosting) by Scott Murray has some useful ideas on available services.
 

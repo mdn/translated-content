@@ -3,10 +3,10 @@ title: Array.prototype.every()
 short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-**`every()`** は {{jsxref("Array")}} インスタンスのメソッドは、列内のすべての要素が指定された関数で実装されたテストに合格するかどうかをテストします。これは論理値を返します。
+**`every()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列内で指定された判定関数の条件を満たさない要素を見つけた場合、`false` を返します。それ以外の場合は、`true` を返します。
 
 {{InteractiveExample("JavaScript デモ: Array.prototype.every()", "shorter")}}
 
@@ -132,7 +132,7 @@ console.log(
 
 ## 関連情報
 
-- [`Array.prototype.every` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.every` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims polyfill of `Array.prototype.every`](https://www.npmjs.com/package/array.prototype.every)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}

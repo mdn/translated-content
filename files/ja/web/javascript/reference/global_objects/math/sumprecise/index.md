@@ -3,7 +3,7 @@ title: Math.sumPrecise()
 short-title: sumPrecise()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sumPrecise
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`Math.sumPrecise()`** は静的メソッドで、数値の反復可能オブジェクトを受け取り、それらの和を返します。ループで合計するよりも精度が高く、中間結果における浮動小数点精度の損失を回避します。
@@ -82,6 +82,6 @@ console.log(Math.sumPrecise([1e20, 0.1, -1e20])); // 0.1
 
 ## 関連情報
 
-- [`Math.sumPrecise` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#mathsumprecise)
+- [`Math.sumPrecise` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - [es-shims による `Math.sumPrecise` のポリフィル](https://www.npmjs.com/package/math.sumprecise)
 - {{jsxref("Array.prototype.reduce()")}}

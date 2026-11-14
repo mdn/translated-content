@@ -2,10 +2,8 @@
 title: Block (ブロック) (CSS)
 slug: Glossary/Block/CSS
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{GlossarySidebar}}
 
 ウェブページにおいて **ブロック** (block) は、新しい行、つまり、横書きでは前の要素の下、次の要素の上に現れる {{glossary("HTML")}} の{{glossary("element", "要素")}}です（よく「ブロックレベル要素」として知られています）。例えば、 {{htmlelement("p")}} は既定ではブロックレベル要素であり、それに対して {{htmlelement("a")}} は「インライン要素」です。 — HTML ソース内で複数のリンクを互いに隣に置くことができ、出力時には互いに同じ行に表示されます。
 

@@ -3,7 +3,7 @@ title: Set.prototype.isSubsetOf()
 short-title: isSubsetOf()
 slug: Web/JavaScript/Reference/Global_Objects/Set/isSubsetOf
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`isSubsetOf()`** は {{jsxref("Set")}} インスタンスのメソッドで、集合を取り、この Set のすべての要素が与えられた集合にあることを示す論理値を返します。
@@ -84,7 +84,7 @@ console.log(set2.isSubsetOf(set1)); // true
 
 ## 関連情報
 
-- [`Set.prototype.isSubsetOf` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#new-set-methods)
+- [`Set.prototype.isSubsetOf` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/collections#h-set)
 - [es-shims による `Set.prototype.isSubsetOf` のポリフィル](https://www.npmjs.com/package/set.prototype.issubsetof)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.intersection()")}}

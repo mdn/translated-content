@@ -3,7 +3,7 @@ title: Array.prototype.includes()
 short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`includes()`** は {{jsxref("Array")}} インスタンスのメソッドで、特定の要素が配列に含まれているかどうかを `true` または `false` で返します。
@@ -48,7 +48,7 @@ includes(searchElement, fromIndex)
 
 ## 解説
 
-`includes()` は `searchElement` を [SameValueZero](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムを使用して比較します。ゼロの値は符号に関わらず、すべて等しい（すなわち、`-0` は `0` と等しい）とみなされますが、`false` は `0` と同じとはみなされ*ません*。 [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) は正しく検索することができます。
+`includes()` は `searchElement` を [SameValueZero アルゴリズム](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#同値ゼロ等価性)を使用して比較します。このアルゴリズムでは、厳密な等価性 `===` と同様に動作しますが（`-0` と `+0` は等しいとみなされる）、{{jsxref("NaN")}} 同士は等しいとみなされる点が異なります。
 
 [疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)で使用する場合、 `includes()` メソッドは空のスロットを `undefined` という値があるかのように反復処理します。
 
@@ -131,7 +131,7 @@ console.log(Array.prototype.includes.call(arrayLike, 1));
 
 ## 関連情報
 
-- [`Array.prototype.includes` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.includes` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.includes` のポリフィル](https://www.npmjs.com/package/array-includes)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}

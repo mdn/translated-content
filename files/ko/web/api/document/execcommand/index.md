@@ -20,11 +20,11 @@ bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument);
 ### 매개 변수
 
 - `aCommandName`
-  - : 실행해야할 명령어 이름 {{domxref("DOMString")}}을 나타냅니다. 사용 가능한 명령어 목록은 [Commands](#commands)를 참고하세요.
+  - : 실행해야할 명령어 이름 {{jsxref("String")}}을 나타냅니다. 사용 가능한 명령어 목록은 [Commands](#commands)를 참고하세요.
 - `aShowDefaultUI`
   - : 기본 사용자 UI가 나타나야하는지를 보여주는 {{jsxref("Boolean")}} 값입니다. Mozilla에서는 구현되어 있지 않습니다.
 - `aValueArgument`
-  - : 입력 변수가 필요한 명령어(`insertImage`와 같이 삽입할 이미지의 URL이 필요한)의 경우 이 {{domxref("DOMString")}}으로 정보를 전달합니다. 변수가 필요하지 않으면 `null`을 표기합니다.
+  - : 입력 변수가 필요한 명령어(`insertImage`와 같이 삽입할 이미지의 URL이 필요한)의 경우 이 {{jsxref("String")}}으로 정보를 전달합니다. 변수가 필요하지 않으면 `null`을 표기합니다.
 
 ### 명령어
 

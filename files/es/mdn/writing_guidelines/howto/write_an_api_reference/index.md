@@ -3,7 +3,7 @@ title: Cómo escribir una referencia de API
 short-title: Escribir una referencia de API
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
 l10n:
-  sourceCommit: bdb97b3e01499ce52f02caa3f51d6dd245a48782
+  sourceCommit: 7eefecdba3b25dde52437ebff7d60ed2dbbd82db
 ---
 
 Esta guía te explica todo lo que necesitas saber para escribir una referencia de API en MDN.
@@ -240,7 +240,7 @@ Ahora ya estás listo para empezar a escribir las páginas de tus interfaces. Ca
    - _Esta interfaz también hereda métodos de \\{{domxref("XYZ")}} y \\{{domxref("XYZ2")}}._
 
    > [!NOTE]
-   > Las propiedades de solo lectura deben incluir la macro \\{{ReadOnlyInline}}, la cual genera una pequeña y práctica etiqueta de "Solo lectura", en la misma línea que sus enlaces \\{{domxref}} (después del uso de las macros \\{{experimental_inline}}, \\{{non-standard_Inline}} y \\{{deprecated_inline}}, si alguna de ellas es necesaria).
+   > Las propiedades de solo lectura deben incluir la macro \\{{ReadOnlyInline}}, la cual genera una pequeña y práctica etiqueta de "Solo lectura", en la misma línea que sus enlaces \\{{domxref}} (antes del uso de las macros \\{{experimental_inline}}, \\{{non-standard_Inline}} y \\{{deprecated_inline}}, si alguna de ellas es necesaria).
 
 6. **Ejemplos**: incluye un fragmento de código que muestre el uso típico de una característica principal de la API. En lugar de mostrar todo el código, selecciona un fragmento interesante. Para un fragmento de código completo, debes hacer referencia a un repositorio de [GitHub](https://github.com/) que contenga el ejemplo completo, y también puedes enlazar a un ejemplo en vivo creado con la funcionalidad [GitHub gh-pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) (siempre que use solo código del lado del cliente). Si el ejemplo es visual, también puedes usar la funcionalidad [Live Sample](/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples) de MDN para hacerlo interactivo en la página.
 7. **Tabla de especificaciones**: en este punto debes incluir una tabla de especificaciones; consulta la sección "Crear una tabla de referencia de especificaciones" para más detalles.

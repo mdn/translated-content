@@ -1,8 +1,9 @@
 ---
 title: "CSSStyleSheet: ownerRule プロパティ"
+short-title: ownerRule
 slug: Web/API/CSSStyleSheet/ownerRule
 l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+  sourceCommit: bc464c855fc2a3d967f1684b72e78b39c6d1ab50
 ---
 
 {{APIRef("CSSOM")}}

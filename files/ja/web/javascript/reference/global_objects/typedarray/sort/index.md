@@ -3,10 +3,10 @@ title: TypedArray.prototype.sort()
 short-title: sort()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
 ---
 
-**`sort()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の要素を[その場 (in-place)](https://en.wikipedia.org/wiki/In-place_algorithm) でソートし、その型付き配列を返します。このメソッドは {{jsxref("Array.prototype.sort()")}} と同じアルゴリズムですが、既定で文字列としてではなく数値として値をソートする点が異なります。
+**`sort()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の要素を[その場 (in-place)](https://en.wikipedia.org/wiki/In-place_algorithm) でソートし、その型付き配列を返します。このメソッドは {{jsxref("Array.prototype.sort()")}} と同じアルゴリズムですが、デフォルトで文字列としてではなく数値として値をソートする点が異なります。
 
 {{InteractiveExample("JavaScript デモ: TypedArray.prototype.sort()", "shorter")}}
 
@@ -45,7 +45,7 @@ sort(compareFn)
 
 ### 返値
 
-ソートされた型付き配列の元配列への参照です。型付き配列は[その場 (in-place)](https://en.wikipedia.org/wiki/In-place_algorithm) でソートされ，コピーは行われないことに注意してください。
+ソートされた型付き配列の元配列への参照です。型付き配列は[その場 (in-place)](https://en.wikipedia.org/wiki/In-place_algorithm) でソートされ、コピーは行われないことに注意してください。
 
 ## 解説
 
@@ -55,13 +55,13 @@ sort(compareFn)
 
 ### sort() の使用
 
-他の例は、 {{jsxref("Array.prototype.sort()")}} メソッドです。
+その他の例については、{{jsxref("Array.prototype.sort()")}} メソッドもご覧ください。
 
 ```js
 let numbers = new Uint8Array([40, 1, 5, 200]);
 numbers.sort();
 // Uint8Array [ 1, 5, 40, 200 ]
-// ふつうの配列とは異なり、数値的に数値を並べ替えるためには
+// ふつうの配列とは異なり、数値を数値順に並べ替えるための
 // 比較関数は必要ありません。
 
 // ふつうの配列は数値で並べ替えるために比較関数を必要とします。
@@ -83,7 +83,7 @@ numbers.sort((a, b) => a - b); // 数値を比較
 
 ## 関連情報
 
-- [`TypedArray.prototype.sort` の現代の動作の安定したソートのポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.sort` の現代の動作の安定したソートのポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.reverse()")}}

@@ -86,4 +86,4 @@ Content-Type: text/plain
 - {{HTTPHeader("Accept")}}과 {{HTTPHeader("Accept-Charset")}}
 - {{HTTPHeader("Content-Disposition")}}
 - {{HTTPStatus("206")}} Partial Content
-- {{HTTPStatus("X-Content-Type-Options")}}
+- {{HTTPHeader("X-Content-Type-Options")}}

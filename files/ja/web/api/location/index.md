@@ -124,7 +124,7 @@ document.body.addEventListener("click", (event) => {
 - {{domxref("Location.pathname")}}
   - : URL のパス部分で、先頭の `'/'` に続いて URL のパス部分が入ったもので、クエリー文字列やフラグメントを含めない文字列です。
 - {{domxref("Location.search")}}
-  - : URL のうち、 `'?'` とそれに続く引数や「クエリー文字列」を収めた文字列です。最近のブラウザーは、クエリー文字列から引数を容易に解析するための [URLSearchParams](/ja/docs/Web/API/URLSearchParams/get#example) や [URL.searchParams](/ja/docs/Web/API/URL/searchParams#example) を提供しています。
+  - : URL のうち、 `'?'` とそれに続く引数や「クエリー文字列」を収めた文字列です。最近のブラウザーは、クエリー文字列から引数を容易に解析するための [URLSearchParams](/ja/docs/Web/API/URLSearchParams/get#例) や [URL.searchParams](/ja/docs/Web/API/URL/searchParams#例) を提供しています。
 - {{domxref("Location.hash")}}
   - : URL のうち、 `'#'` とそれに続くフラグメント識別子を収めた文字列です。
 - {{domxref("Location.origin")}} {{readOnlyInline}}

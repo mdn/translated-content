@@ -80,7 +80,7 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 
 当变量处于暂时性死区之中时，其尚未被初始化，并且任何访问其的尝试都将导致抛出 {{jsxref("ReferenceError")}}。当代码执行到变量被声明的位置时，变量会被初始化为一个值。如果变量声明中未指定初始值，则变量将被初始化为 `undefined`。
 
-这与 {{jsxref("Statements/var", "var", "变量提升")}} 声明的变量不同，如果在声明位置前访问 `var` 声明的变量会返回 `undefined`。以下代码演示了在声明位置前访问 `let` 和 `var` 声明的变量的不同结果。
+这与 {{jsxref("Statements/var", "var", "#提升")}} 声明的变量不同，如果在声明位置前访问 `var` 声明的变量会返回 `undefined`。以下代码演示了在声明位置前访问 `let` 和 `var` 声明的变量的不同结果。
 
 ```js example-bad
 {

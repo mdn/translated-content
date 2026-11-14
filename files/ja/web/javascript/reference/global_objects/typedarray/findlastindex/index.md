@@ -3,7 +3,7 @@ title: TypedArray.prototype.findLastIndex()
 short-title: findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findLastIndex
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`findLastIndex()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列を逆順で反復処理し、指定したテスト関数を満たす最初の要素のインデックスを返します。テスト関数を満たす値がなかった場合は、-1 を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.findLastIndex()")}} と同じです。
@@ -43,8 +43,7 @@ findLastIndex(callbackFn, thisArg)
 
 ### 返値
 
-テストに合格した要素のうち、配列の最後（最も大きなインデックス）の要素のインデックス。
-一致する要素が見つからなかった場合に -1 を返します。
+テストに合格した型付き配列の末尾（最も大きなインデックス）にある要素のインデックスです。一致する要素が見つからなかった場合は `-1` を返します。
 
 ## 解説
 
@@ -52,9 +51,9 @@ findLastIndex(callbackFn, thisArg)
 
 ## 例
 
-### 型付き配列から素数のインデックスを探す
+### 型付き配列内の最後の素数のインデックスを探す
 
-以下の例では、配列の中で素数である最後の要素のインデックスを探します。素数がない場合は `-1` を返します。
+以下の例では、型付き配列内で最後に見つかった素数のインデックスを返し、素数が見つからなかった場合は `-1` を返します。
 
 ```js
 function isPrime(n) {
@@ -81,7 +80,7 @@ console.log(uint8.findLastIndex(isPrime));
 ```
 
 > [!NOTE]
-> この `isPrime()` の実装はデモンストレーション用です。実際のアプリケーションでは、繰り返し計算を避けることができますので、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)のような高度な記憶化アルゴリズムを使用することをお勧めします。
+> この `isPrime()` の実装はデモ用です。実際のアプリケーションでは、計算の繰り返しを避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)のような{{Glossary("Memoization", "メモ化")}}を多用するアルゴリズムを使用するとよいでしょう。
 
 ## 仕様書
 
@@ -93,7 +92,7 @@ console.log(uint8.findLastIndex(isPrime));
 
 ## 関連情報
 
-- [`TypedArray.prototype.findLastIndex` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#array-find-from-last)
+- [`TypedArray.prototype.findLastIndex` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.find()")}}

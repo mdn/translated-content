@@ -3,6 +3,8 @@ title: 本地图书馆基础模板
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
 ---
 
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
+
 现在我们了解如何使用 Pug 拓展模板，让我们开始项目，创建一个基础模板。这个模板会有一个侧边栏，连结到本教程中将要创建的各个页面（例如，呈现并创建书本、种类、作者等等），以及一个主要内容区域，我们将在每个页面中进行覆写。
 
 开启 **/views/layout.pug** ，并以下列代码置换其内容。
@@ -65,7 +67,4 @@ html(lang='en')
 
 当我们开始运行网站时，我们应该看到侧边栏出现！在本教程的下个部分，我们将使用以上的布局，来定义各个页面。
 
-## 下一步
-
-- 回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
-- 继续教程 5 的下個部分：[主页](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page)
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}

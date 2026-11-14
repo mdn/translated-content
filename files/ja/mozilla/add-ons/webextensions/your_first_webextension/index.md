@@ -24,7 +24,7 @@ cd borderify
 
 ### manifest.json
 
-適切な[エディター](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors)を使用して、"borderify" ディレクトリー内に "manifest.json" という名前のファイルを作成してください。そのファイルには、以下の内容を記述してください。
+適切な[エディター](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors)を使用して、"borderify" ディレクトリー内に "manifest.json" という名前のファイルを作成してください。そのファイルには、以下の内容を記述してください。
 
 ```json
 {

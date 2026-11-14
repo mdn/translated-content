@@ -16,7 +16,7 @@ storage.removeItem(keyName);
 ### 파라미터
 
 - _**keyName**_
-  - : 삭제하고자 하는 키 이름({{domxref("DOMString")}}).
+  - : 삭제하고자 하는 키 이름({{jsxref("String")}}).
 
 ### 반환값
 

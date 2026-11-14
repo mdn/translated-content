@@ -3,7 +3,7 @@ title: HTML のサンプルコードの作成ガイドライン
 short-title: HTML の例
 slug: MDN/Writing_guidelines/Code_style_guide/HTML
 l10n:
-  sourceCommit: 0e7eafea05cd771c86e77947639f3396e7a59b2b
+  sourceCommit: c7a8b2584452bcd5d2c135b637f4ec659ff74b99
 ---
 
 以下のガイドラインでは、MDN Web Docs のコードの例で HTML をどのように記述するのかを扱います。
@@ -49,7 +49,7 @@ HTML5 の {{Glossary("Doctype", "doctype")}} を使ってください。
 <meta charset="utf-8" />
 ```
 
-特別な理由がない限り、 UTF-8 を使用してください。文書内のどの言語を使用しているかに関係なく、すべての文字ニーズに応じた対応が可能です。
+特別な理由がない限り、UTF-8 を使用してください。文書内のどの言語を使用しているかに関係なく、すべての文字ニーズに応じた対応が可能です。
 
 ### ビューポートメタタグ
 
@@ -59,7 +59,7 @@ HTML5 の {{Glossary("Doctype", "doctype")}} を使ってください。
 <meta name="viewport" content="width=device-width" />
 ```
 
-詳しくは [viewport メタタグを使用してモバイルブラウザーでのレイアウトを制御する](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport)をご覧ください。
+詳しくは [`<meta name="viewport">`](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport) をご覧ください。
 
 ## 属性
 
@@ -115,7 +115,7 @@ HTML5 の {{Glossary("Doctype", "doctype")}} を使ってください。
 <p class="bigRedBox">Blah blah blah</p>
 ```
 
-## 実体参照
+## 文字参照
 
 {{glossary("character reference", "文字参照")}}を必要以上に使わないでください。可能であれば、リテラル文字を使いましょう（角括弧や引用符のような記号は、エスケープが必要です）。
 

@@ -3,10 +3,11 @@ title: Markdown の書き方
 short-title: Markdown の書き方
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
 l10n:
-  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
+  sourceCommit: 49f3eb321cf6a491c3bcef1c3590f9bf6f90c9b8
 ---
 
-このページでは、 Markdown を使用してどのように MDN Web Docs のドキュメントを書くかを説明します。ベースラインとして GitHub-Flavored Markdown (GFM) を選択し、 GFM では容易にサポートされていない MDN で行う必要のあるいくつかのことに対応するために、いくつかの拡張機能を追加しました。
+このページでは、MDN Web Docs のドキュメントを Markdown で書く方法を説明します。
+ベースラインとして GitHub-Flavored Markdown (GFM) を選択し、MDN で必要な機能を実現するために拡張機能を追加しています。
 
 ## ベースライン: GitHub-Flavored Markdown
 
@@ -19,37 +20,30 @@ GFM 仕様書では、基本的に 2 種類のリンクを定義しています�
 - [インラインリンク](https://github.github.com/gfm/#inline-link)は、リンク先をリンクテキストの直後に指定します。
 - [リファレンスリンク](https://github.github.com/gfm/#reference-link)は、リンク先を文書内の他の場所で定義します。
 
-MDN では、インラインリンクのみが利用できます。
+MDN では、インラインリンクのほうが文脈を失わず読みやすく、保守しやすいため、こちらを推奨しています。MDN でリンクを書く際は、次の形式を使用してください。
 
-MDN で GFM リンクを書くには、これが正しい方法です。
-
-```md example-good
-[Macarons](https://en.wikipedia.org/wiki/Macaron) are delicious but tricky to make.
+```md
+[マカロン](https://en.wikipedia.org/wiki/Macaron) はおいしいものの、作るのは難しいお菓子です。
 ```
 
-これは MDN でリンクを書くのに間違った方法です。
+ただし、場合によっては、簡潔に書けるリファレンスリンクのほうが適しています。
+例えば、横幅の広い表は、リファレンスリンクを使うと確認や編集がしやすくなります。
 
-```md example-bad
-[Macarons][macaron] are delicious but tricky to make.
+```md
+| 名前                     | 特徴                                                           |
+| ------------------------ | -------------------------------------------------------------- |
+| [マカロン][macarons]     | おいしいものの、作るのは難しい。お茶会に華を添えるお菓子です。 |
+| [ビスコッティ][biscotti] | 歯ごたえがあり、作るのも簡単です。                             |
 
-[macaron]: https://en.wikipedia.org/wiki/Macaron
+[macarons]: https://en.wikipedia.org/wiki/Macaron
+[biscotti]: https://en.wikipedia.org/wiki/Biscotti
 ```
+
+リファレンスリンクを使う必要がある場合は、使用箇所のすぐ後にリンク先を定義してください。
 
 ## コードブロックの例
 
-GFM や CommonMark では、「コードフェンス」を使用して `<pre>` ブロックを区切ることができます。冒頭のコードフェンスの後には、「情報文字列」と呼ばれるテキストが続くことがあります。仕様書には次のように書かれています。
-
-> 情報文字列の最初の単語は、通常、コードサンプルの言語を指定するために使用され、コードタグの class 属性に表示されます。
-
-情報文字列には、次のように複数の単語を含めることができます。
-
-````md
-```fee fi fo fum
-// some example code
-```
-````
-
-MDN では、書き手はコードブロックのサンプルにコードフェンスを使用します。書き手は情報文字列の最初の単語を使用してコードサンプルの言語を指定する必要があり、これはブロックの構文強調表示を提供するために使用されます。以下の単語に対応しています。
+GFM や CommonMark では、「コードフェンス」を使用して `<pre>` ブロックを区切ることができます。冒頭のコードフェンスの後には、「情報文字列」と呼ばれるテキストが続くことがあります。コードサンプルの言語は情報文字列の最初の単語で指定する必要があり、ブロックの構文強調表示に使用されます。次の単語に対応しています。
 
 - プログラミング言語
   - JavaScript
@@ -68,7 +62,7 @@ MDN では、書き手はコードブロックのサンプルにコードフェ�
     - `rust` - Rust
     - `glsl` - GLSL (OpenGL シェーダー)
     - `sql` - SeQueL コマンド
-    - `wasm` - WebAssembly
+    - `wat` - WebAssembly
     - `webidl` - Web Interface Definition Language
 - スタイル設定
   - `css` - CSS
@@ -97,7 +91,7 @@ MDN では、書き手はコードブロックのサンプルにコードフェ�
 - テンプレート
   - `django` - Django テンプレート
   - `svelte` - Svelte テンプレート
-  - `handlebars` - Handlebars テンプレート
+  - `hbs` - Handlebars テンプレート
   - `pug` - [Pug テンプレート](https://pugjs.org/api/getting-started.html) （[Express](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer) で使用される可能性がある）
 - その他
   - `plain` - プレーンテキスト
@@ -115,7 +109,10 @@ const greeting = "I will get JavaScript syntax highlighting";
 ````
 
 使用したいハイライトが上記に掲載されていない場合は、コードブロックを `plain` としてマークアップしてください。
-[GitHub での議論](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366)の過程で、追加の言語がリクエストされるかもしれません。
+[GitHub での議論](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366)の過程で、追加の言語がリクエストされることがあります。
+
+> [!NOTE]
+> 言語識別子は、上記の一覧にあるものを正確に使用してください。例えば、`javascript` は使用できないため、`js` と記述してください。
 
 ### リンターの抑制
 
@@ -129,7 +126,7 @@ I will not be linted.
 ```
 ````
 
-このようなコードブロックは適切な構文強調表示が行われ、ライブサンプルシステムで認識されますが、リンターや Prettier のような自動フォーマッターでは無視されます。下記てはこの接尾辞を、リンターや書式化ツールが修正すべきでない不正なコードや代替書式を表示するために使用してください。
+このようなコードブロックは適切な構文強調表示が行われ、ライブサンプルシステムで認識されますが、リンターや Prettier のような自動フォーマッターでは無視されます。この接尾辞は、リンターや書式化ツールに修正させたくない不正なコードや代替書式を表示するために使用してください。
 
 ### 追加クラス（情報文字列）
 
@@ -293,7 +290,7 @@ const greeting = "I'm a bad example";
 
 ```html
 <div class="notecard note">
-  <p><strong>Note:</strong> これがメモの書き方です。</p>
+  <p><strong>メモ:</strong> これがメモの書き方です。</p>
   <p>コードブロックを含むことができます。</p>
   <pre class="brush: js">const s = "コードブロックの中です";</pre>
   <p>こんな感じです。</p>
@@ -335,7 +332,6 @@ const greeting = "I'm a bad example";
 ````md
 - term1
   - : My description of term1
-
 - `term2`
   - : My description of term2
 
@@ -361,7 +357,7 @@ GFM/CommonMark では、これは次の HTML を生成します。
     <ul>
       <li>
         <p>: My description of term2</p>
-        <p>It can have multiple paragraphs, and code blocks too:</p>
+        <p>複数の段落やコードブロックを含めることもできます。</p>
         <pre>
           <code class="brush: js">const thing = 1;</code>
         </pre>
@@ -384,7 +380,7 @@ MDN では、これは次の HTML を生成します。
   </dt>
   <dd>
     <p>My description of term2</p>
-    <p>It can have multiple paragraphs, and code blocks too:</p>
+    <p>複数の段落やコードブロックを含めることもできます。</p>
     <pre>
        <code class="brush: js">const thing = 1;</code>
     </pre>
@@ -448,14 +444,14 @@ GFM の表構文では、行の先頭と末尾のパイプを省略できます�
 cell 4 | cell 5 | cell 6
 ```
 
-幸いなことに、表の書式は Prettier によって自動修正されるので、書き手は Prettier に頼って表を適切に整形することができます。
+表は Prettier によって整形されるため、書き手はツールを使って適切に整形できます。
 
 ### HTML 表を使用する場合
 
 書き手が GFM 構文ではなく HTML 表を使用すべき主な状況は 3 つあります。
 
 1. 表は GFM では対応していない機能（下記参照）を使用する場合。
-2. GFM お表の幅が広すぎて読みにくい場合。
+2. GFM の表の幅が広すぎて読みにくい場合。
 3. 書き手が「プロパティテーブル」と呼ばれる特殊な表を使いたい場合。
 
 #### GFM が対応していない表機能
@@ -479,26 +475,30 @@ GFM では、表を「{{Glossary("ASCII")}} アート」で表現しているた
 
 ```html-nolint
 <table>
-  <tr>
-    <th>見出し 1</th>
-    <th>見出し 2</th>
-    <th>見出し 3</th>
-    <th>見出し 4</th>
-    <th>見出し 5</th>
-    <th>見出し 6</th>
-  </tr>
-  <tr>
-    <td>短めのもの</td>
-    <td>
-      GFM の書式では表組みが崩れてしまうほど、何かについて本当に詳しく書かれている長いもの。
-    </td>
-    <td>短めのもの</td>
-    <td>
-      また、何かについて実に詳しく書かれている、大量のテキストを含むセルは、 GFM の書式では表の書式が崩れ始めてしまいます。
-    </td>
-    <td>短めのもの</td>
-    <td>短めのもの</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>見出し 1</th>
+      <th>見出し 2</th>
+      <th>見出し 3</th>
+      <th>見出し 4</th>
+      <th>見出し 5</th>
+      <th>見出し 6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>短めのもの</td>
+      <td>
+        GFM の書式では表組みが崩れてしまうほど、何かについて本当に詳しく書かれている長いもの。
+      </td>
+      <td>短めのもの</td>
+      <td>
+        また、何かについて実に詳しく書かれている、大量のテキストを含むセルは、GFM の書式では表の書式が崩れ始めてしまいます。
+      </td>
+      <td>短めのもの</td>
+      <td>短めのもの</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -577,17 +577,14 @@ HTML の {{HTMLElement("sup")}} および {{HTMLElement("sub")}} 要素を必要
 
 この課題は <https://github.com/mdn/content/issues/3923> で解決しました。
 
-## KumaScript
+## マクロ
 
-文章のコンテンツに、 KumaScript のマクロ呼び出しを含めることができます。
+文章には、共通のリンクパターンをテンプレート化したり、特定のコードやテキストのブロックを含めたりするために、マクロを使用します。
 
 ```md
-**`margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の全 4 辺のマージン領域を設定します。
-これは \{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}}, \{{cssxref("margin-left")}} の一括指定です。
-
-\{{EmbedInteractiveExample("pages/css/margin.html")}}
-
-上下のマージンは置換インライン要素、例えば \{{HTMLElement("span")}} や \{{HTMLElement("code")}} では効果がありません。
+**`margin`** [CSS](/ja/docs/Web/CSS) プロパティは、要素の 4 辺すべてのマージン領域を設定します。
+これは \{{cssxref("margin-top")}}、\{{cssxref("margin-right")}}、\{{cssxref("margin-bottom")}}、\{{cssxref("margin-left")}} の一括指定です。
+…
 ```
 
-マクロについてのより詳しい情報は、[マクロの使用](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros)を参照してください。
+詳しくは[マクロの使用](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros)を参照してください。

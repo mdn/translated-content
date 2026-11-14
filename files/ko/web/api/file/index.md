@@ -9,7 +9,7 @@ slug: Web/API/File
 
 `File` 객체는 보통 {{domxref("FileList")}} 객체가 포함한 것을 사용하게 됩니다. `FileList` 객체는 사용자가 {{htmlelement("input")}} 요소로 파일을 선택한 결과 값으로, 또는 드래그 앤 드롭 작업의 {{domxref("DataTransfer")}} 객체에서 가져올 수 있습니다.
 
-`File` 객체는 {{domxref("Blob")}}의 한 종류로, `Blob`을 사용할 수 있는 모든 맥락에서 사용할 수 있습니다. 특히 {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("createImageBitmap()")}}, {{domxref("XMLHttpRequest", "", "send()")}}는 `Blob`과 `File`을 모두 허용합니다.
+`File` 객체는 {{domxref("Blob")}}의 한 종류로, `Blob`을 사용할 수 있는 모든 맥락에서 사용할 수 있습니다. 특히 {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("createImageBitmap()")}}, {{domxref("XMLHttpRequest", "", "#send()")}}는 `Blob`과 `File`을 모두 허용합니다.
 
 자세한 정보 및 예제는 [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications)를 참고하세요.
 

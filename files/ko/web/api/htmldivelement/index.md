@@ -14,7 +14,7 @@ slug: Web/API/HTMLDivElement
 _부모인 {{domxref("HTMLElement")}}로부터 상속합니다._
 
 - {{domxref("HTMLDivElement.align")}} {{deprecated_inline}}
-  - : 주변 맥락에 대해 요소 콘텐츠의 정렬 위치를 나타내는 {{domxref("DOMString")}}입니다. 가능한 값은 `"left"`, `"right"`, `"justify"`, `"center"`입니다.
+  - : 주변 맥락에 대해 요소 콘텐츠의 정렬 위치를 나타내는 {{jsxref("String")}}입니다. 가능한 값은 `"left"`, `"right"`, `"justify"`, `"center"`입니다.
 
 ## 메서드
 

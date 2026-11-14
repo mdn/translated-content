@@ -100,8 +100,8 @@ MDN 学习区的文章不需要你创建自己的图像，但其中一些可能�
 
 完成网站或应用（在本地计算机或开发服务器上）的开发后，你可能想将其上传到远程 Web 服务器，这样用户就可以输入与之关联的网址，在 Web 上查看它了！
 
-有各种方法可以做到这一点，比如购买托管服务并使用 [SFTP 应用](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server#sftp)、使用 [GitHub Pages](https://pages.github.com/) 或 [Netlify](https://www.netlify.com/) 等服务，甚至使用 [Glitch](https://glitch.com/) 或 [CodePen](https://codepen.io/) 等工具构建一个快速演示与他人分享。
+有各种方法可以做到这一点，比如购买托管服务并使用 [SFTP 客户端](/zh-CN/docs/Glossary/FTP)、使用 [GitHub Pages](https://pages.github.com/) 或 [Netlify](https://www.netlify.com/) 等服务，甚至使用 [Glitch](https://glitch.com/) 或 [CodePen](https://codepen.io/) 等工具构建一个快速演示与他人分享。
 
-这样的选项列表可能看起来令人眼花缭乱，但别担心——你暂时不需要了解任何关于发布网站的知识。我们会在课程中多次探讨这个主题，你很快就会在我们的[你的第一个网站](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website)模块中获得实际经验。
+这样的选项列表可能看起来令人眼花缭乱，但别担心——你暂时不需要了解任何关于发布网站的知识。我们会在课程中多次探讨这个主题，你很快就会在我们的[你的第一个网站](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website)模块（更具体地，[发布你的网站](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)）中获得实际经验。
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}

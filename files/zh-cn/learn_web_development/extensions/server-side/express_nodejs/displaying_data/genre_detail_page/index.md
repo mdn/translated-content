@@ -3,7 +3,9 @@ title: 种类细节页面
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
 ---
 
-种类细节页面，需要利用`_id` 字段值 (自动生成) ，以呈现特定种类实例的信息。此页面应该呈现种类名称，各个种类的所有书本列表 (每本书都连结到书本的细节页面)。
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
+
+种类细节页面，需要利用 `_id` 字段值（自动生成），以呈现特定种类实例的信息。此页面应该呈现种类名称，各个种类的所有书本列表（每本书都连结到书本的细节页面）。
 
 ## 控制器
 
@@ -124,7 +126,4 @@ block content
 >     ...
 > ```
 
-## 下一步
-
-- 回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
-- 继续教程 5 下一个部分：[书本细节页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}

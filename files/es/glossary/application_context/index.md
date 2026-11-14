@@ -1,12 +1,29 @@
 ---
 title: Contexto de aplicación
 slug: Glossary/Application_context
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+El **contexto de aplicación** se refiere al {{glossary("browsing context", "contexto de navegación")}} de nivel superior de una [aplicación web](/es/docs/Web/Progressive_web_apps).
+Determina cómo se presenta y se comporta el contexto de navegación de una aplicación, como una pestaña o una ventana.
 
-Un contexto de aplicación es un [contexto de navegación](/es/docs/Glossary/Browsing_context) de nivel superior que tiene aplicado un [manifiesto](/es/docs/Web/Progressive_web_apps/Manifest).
+Los desarrolladores web definen el contexto de aplicación en el [archivo de manifiesto de la aplicación web](/es/docs/Web/Progressive_web_apps/Manifest).
+Para ello, usan el miembro [`scope`](/es/docs/Web/Progressive_web_apps/Manifest/Reference/scope) del manifiesto, que especifica el conjunto de URL que se consideran parte del contexto de aplicación y a las que se aplica el manifiesto.
 
-Si un contexto de aplicación es creado como resultado de una petición al agente usuario para que navegue a un enlace profundo, el agente usuario debe navegar inmediatamente hacia al enlace profundo con sustitución habilitada. De otra manera, cuando se crea el contexto de aplicación, el agente usuario debe navegar inmediatamente a la URL de inicio con sustitución habilitada.
+El manifiesto se aplica una vez creado el contexto de aplicación, pero antes de que comience la navegación hacia una URL de inicio o un enlace profundo.
+Una **URL de inicio** es la página inicial de la aplicación web.
+Un **enlace profundo** es una URL que dirige a los usuarios a una página específica dentro de la aplicación web, sin pasar por la página principal.
+El contexto de aplicación garantiza que el comportamiento y la presentación definidos de la aplicación se mantengan dentro de su ámbito.
 
-Téngase en cuenta que la URL de inicio no es necesariamente el valor del miembro start_url: el usuario o agente usuario podría haberlo cambiado cuando la aplicación fue añadida a la pantalla de inicio o añadida a favoritos.
+Cuando se crea un contexto de aplicación, los navegadores deben navegar inmediatamente a una URL de inicio o a un enlace profundo.
+Esta navegación reemplaza la entrada actual en el historial de navegación.
+Si el contexto de aplicación se crea para navegar a un enlace profundo, el navegador va directamente a ese enlace; de lo contrario, navega a la URL de inicio.
+
+Ten en cuenta que la URL de inicio no es necesariamente el valor del miembro [`start_url`](/es/docs/Web/Progressive_web_apps/Manifest/Reference/start_url) del manifiesto. Los navegadores pueden ignorar el `start_url` especificado o permitir que los usuarios cambien su valor al añadir la aplicación web a la pantalla de inicio del dispositivo o al guardarla como marcador.
+
+## Véase también
+
+- [`scope`](/es/docs/Web/Progressive_web_apps/Manifest/Reference/scope)
+- [Manifiestos de aplicaciones web](/es/docs/Web/Progressive_web_apps/Manifest)
+- [Aplicaciones web progresivas (PWA)](/es/docs/Web/Progressive_web_apps)

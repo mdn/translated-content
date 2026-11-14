@@ -3,10 +3,10 @@ title: Math.log10()
 short-title: log10()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log10
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-**`Math.log10()`** 静的メソッドは、数値の 10 を底とした対数を返します。すなわち次の値です。
+**`Math.log10()`** は静的メソッドで、数値の 10 を底とした対数を返します。つまり、次のようになります。
 
 <!-- prettier-ignore-start -->
 <math display="block">
@@ -75,7 +75,7 @@ Math.log10(Infinity); // Infinity
 
 ## 関連情報
 
-- [`Math.log10` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.log10` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - [es-shims による `Math.log10` のポリフィル](https://www.npmjs.com/package/math.log10)
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}

@@ -1,20 +1,22 @@
 ---
 title: ウェブのエラー記事の作成方法
+short-title: エラーの文書化
 slug: MDN/Writing_guidelines/Howto/Document_web_errors
 l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{MDNSidebar}}
-
 MDN の [JavaScript エラーリファレンス](/ja/docs/Web/JavaScript/Reference/Errors) は [開発者コンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)で発生するエラーについて、ウェブ開発者を手助けすることを目的としたプロジェクトです。このプロジェクトでは、メッセージが発生するツールへのリンクを追加できるように、 MDN Web Docs でより多くのエラー文書を書く必要があります。この記事ではウェブエラーの文書化について説明します。
+
+> [!CALLOUT]
+> 訳注:
+> この記事は英語版のページを作成する方法を示しています。翻訳記事を作成する場合は、 [MDN Web Docs のローカライズ](/ja/docs/MDN/Community/Translated_content)を参照してください。
 
 JavaScript のエラーには "Learn more" リンクがあり、問題を修正するための追加アドバイスを含む JavaScript のエラーリファレンスに導いてくれます。ウェブのエラーを文書化するためには、 [JavaScript](/ja/docs/Web/JavaScript) を知っているか、掘り下げることができる必要があります。
 
 ## 手順 1 – 文書化するエラーを探す
 
 - Firefox/Gecko のエラーメッセージ: <https://github.com/mozilla/gecko-dev/blob/master/js/src/jsshell.msg>
-- Edge/Chakra のエラーメッセージ: <https://github.com/Microsoft/ChakraCore/blob/master/lib/Parser/rterrors.h>
 - Chrome/v8 のエラーメッセージ: <https://chromium.googlesource.com/v8/v8.git/+/refs/heads/main/src/execution/messages.h>
 
 ## 手順 2 – 既存のエラー記事を探す

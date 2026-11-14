@@ -16,7 +16,7 @@ eventSource = new EventSource(url, configuration);
 ### 파라미터
 
 - `url`
-  - : 이벤트/메시지를 제공하는 원격 자원의 위치를 나타내는 {{domxref("USVString")}} 입니다.
+  - : 이벤트/메시지를 제공하는 원격 자원의 위치를 나타내는 {{jsxref("String")}} 입니다.
 - `configuration` {{optional_inline}}
   - : 새 연결 구성을 위한 옵션을 제공합니다. 가능한 항목은 다음과 같습니다.\* `withCredentials`. 기본값은 `false` 이며, CORS 가 자격을 `포함`하도록 설정되어야하는지를 나타냅니다.
 

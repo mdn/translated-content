@@ -15,7 +15,7 @@ JSON을 뛰어넘는 structured clone알고리즘의 여러가지 핵심 이득�
 
 - Structured clones은 [`RegExp`](/en-US/JavaScript/Reference/Global_Objects/RegExp) 객체들도 복사할 수 있습니다..
 - Structured clones은 {{ domxref("Blob") }}, {{ domxref("File") }}와 {{ domxref("FileList") }} 객체들도 복사할 수 있습니다..
-- Structured clones은 {{ domxref("ImageData") }} 객체들도 복사할 수 있습니다. 클론된{{ domxref("CanvasPixelArray") }}크기(dimensions)는 원본과 match될 것이고 같은 픽셀 데이터의 복제를 가집니다.
+- Structured clones은 {{ domxref("ImageData") }} 객체들도 복사할 수 있습니다. 클론된{{jsxref("Uint8ClampedArray")}}크기(dimensions)는 원본과 match될 것이고 같은 픽셀 데이터의 복제를 가집니다.
 - Structured clones은 참조들의 순환 그래프들을 포함한 객체들을 올바르게 복제할 수 있습니다.
 
 ## structured clones과 함께 동작하지 않는 것들

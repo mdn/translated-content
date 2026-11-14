@@ -3,10 +3,10 @@ title: Math.cos()
 short-title: cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
-**`Math.cos()`** は静的メソッドで、ラジアンの数値の余弦（コサイン）を返します。
+**`Math.cos()`** は静的メソッドで、ラジアン単位で表した角度の余弦（コサイン）を返します。
 
 {{InteractiveExample("JavaScript デモ: Math.cos()")}}
 
@@ -34,11 +34,11 @@ Math.cos(x)
 ### 引数
 
 - `x`
-  - : 余弦を返すラジアンの角度。
+  - : 角度をラジアンで表した数値です。
 
 ### 返値
 
-`x` の余弦で、-1 から 1 まで（両端を含む）です。 `x` が{{jsxref("Infinity")}}、`-Infinity`、または {{jsxref("NaN")}} の場合、 {{jsxref("NaN")}} を返します。
+`x` の余弦で、-1 以上 1 以下です。 `x` が{{jsxref("Infinity")}}、`-Infinity`、または {{jsxref("NaN")}} の場合、 {{jsxref("NaN")}} を返します。
 
 ## 解説
 
@@ -74,3 +74,4 @@ Math.cos(Infinity); // NaN
 - {{jsxref("Math.atan2()")}}
 - {{jsxref("Math.sin()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("cos()")}} 関数

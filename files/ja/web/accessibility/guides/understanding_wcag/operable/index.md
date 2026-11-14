@@ -275,7 +275,7 @@ l10n:
           href="/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#検索フィールド"
           >検索フィールド</a
         >、<a
-          href="/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#アクティブラーニング_ナビゲーションメニューの作成"
+          href="/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#ナビゲーションメニューの作成"
           >ナビゲーションメニューの作成</a
         >、<a
           href="/ja/docs/Learn_web_development/Core/Text_styling/Styling_links#リンクをボタンとしてスタイル設定"

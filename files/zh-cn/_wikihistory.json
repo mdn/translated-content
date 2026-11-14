@@ -4658,12 +4658,6 @@
       "edgar-chen"
     ]
   },
-  "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment": {
-    "modified": "2020-07-16T22:38:37.610Z",
-    "contributors": [
-      "edgar-chen"
-    ]
-  },
   "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page": {
     "modified": "2020-07-16T22:38:38.748Z",
     "contributors": [
@@ -5309,54 +5303,6 @@
       "yuyx91"
     ]
   },
-  "Learn_web_development/Howto/Tools_and_setup/Available_text_editors": {
-    "modified": "2020-07-16T22:35:49.753Z",
-    "contributors": [
-      "A-rise"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly": {
-    "modified": "2020-10-06T06:46:00.886Z",
-    "contributors": [
-      "kuailekai",
-      "Chor"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost": {
-    "modified": "2020-11-12T06:17:33.350Z",
-    "contributors": [
-      "咸鱼快去读书",
-      "kidonng",
-      "SirnoChan",
-      "Yang_Hanlin",
-      "Geno1024",
-      "bingxl",
-      "xiwusheng",
-      "JohnJiangLA",
-      "sher",
-      "ArcherGrey"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server": {
-    "modified": "2020-07-16T22:35:42.078Z",
-    "contributors": [
-      "bingxl",
-      "xiwusheng",
-      "PokimLee",
-      "summerstarlee",
-      "ArcherGrey"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages": {
-    "modified": "2020-07-16T22:35:52.151Z",
-    "contributors": [
-      "WoodCube",
-      "TeabugCC",
-      "zhangtianle",
-      "zhuangyin",
-      "Bernie_Lai"
-    ]
-  },
   "Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools": {
     "modified": "2020-08-09T19:35:32.533Z",
     "contributors": [
@@ -5367,13 +5313,6 @@
       "wth",
       "ziyunfei",
       "zhaoy875"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need": {
-    "modified": "2020-07-16T22:35:33.819Z",
-    "contributors": [
-      "What-username-will-make-you-feel-cute",
-      "GHLgh"
     ]
   },
   "Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server": {

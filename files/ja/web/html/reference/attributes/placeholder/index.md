@@ -3,7 +3,7 @@ title: "`placeholder` 属性"
 short-title: placeholder
 slug: Web/HTML/Reference/Attributes/placeholder
 l10n:
-  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 **`placeholder`** 属性は、フォームコントロールに値が無いときにコントロールに表示するテキストを定義します。プレースホルダーテキストは、ユーザーにコントロールに入力するべきデータの種類に関する短いヒントを提供するべきです。
@@ -28,11 +28,8 @@ l10n:
 ### HTML
 
 ```html
-<form action="/ja/docs/Web/HTML/Reference/Attributes/placeholder">
-  <label for="name">名前を入力:</label>
-  <input type="text" id="name" name="name" placeholder="e.g. Mike Shinoda" />
-  <button type="submit">送信</button>
-</form>
+<label for="name">名前を入力:</label>
+<input type="text" id="name" name="name" placeholder="e.g. Mike Shinoda" />
 ```
 
 ### 結果

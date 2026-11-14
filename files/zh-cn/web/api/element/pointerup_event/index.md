@@ -3,7 +3,7 @@ title: Element：pointerup 事件
 short-title: pointerup
 slug: Web/API/Element/pointerup_event
 l10n:
-  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
+  sourceCommit: e1b44d1e4197102da109a563f343cf41ef06ca7c
 ---
 
 {{APIRef("Pointer Events")}}
@@ -14,11 +14,15 @@ l10n:
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 中使用此事件名称：
 
 ```js-nolint
 addEventListener("pointerup", (event) => { })
+```
 
+或者，对接口的[事件处理器属性](/zh-CN/docs/Web/API/Document_Object_Model/Events#使用_onevent_属性)赋值：
+
+```js-nolint
 onpointerup = (event) => { }
 ```
 
@@ -40,7 +44,7 @@ para.addEventListener("pointerup", (event) => {
 });
 ```
 
-使用 `onpointerup` 事件处理器属性：
+使用 `onpointerup` 事件处理器属性（但请注意，这会替换掉之前使用 `onpointerup` 添加的其他事件监听器，如存在的话）：
 
 ```js
 const para = document.querySelector("p");

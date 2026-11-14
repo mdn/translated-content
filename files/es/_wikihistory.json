@@ -3288,20 +3288,6 @@
       "FelipeAndrade"
     ]
   },
-  "Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost": {
-    "modified": "2020-07-16T22:35:45.385Z",
-    "contributors": [
-      "Beatriz_Ortega_Valdes"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages": {
-    "modified": "2020-07-16T22:35:51.571Z",
-    "contributors": [
-      "DaniNz",
-      "LuyisiMiger",
-      "TAXIS"
-    ]
-  },
   "Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools": {
     "modified": "2020-09-13T07:49:07.373Z",
     "contributors": [
@@ -3310,12 +3296,6 @@
       "Nachec",
       "John19D",
       "DaniNz"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need": {
-    "modified": "2020-07-16T22:35:32.855Z",
-    "contributors": [
-      "Beatriz_Ortega_Valdes"
     ]
   },
   "Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server": {
@@ -19252,12 +19232,26 @@
       "DennisM"
     ]
   },
+  "conflicting/Learn_web_development/Core/Version_control": {
+    "modified": "2020-07-16T22:35:51.571Z",
+    "contributors": [
+      "DaniNz",
+      "LuyisiMiger",
+      "TAXIS"
+    ]
+  },
   "conflicting/Learn_web_development/Extensions/Testing": {
     "modified": "2020-07-16T22:38:54.378Z",
     "contributors": [
       "WilsonIsAliveClone",
       "carlosgocereceda",
       "mikelmg"
+    ]
+  },
+  "conflicting/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website": {
+    "modified": "2020-07-16T22:35:45.385Z",
+    "contributors": [
+      "Beatriz_Ortega_Valdes"
     ]
   },
   "conflicting/MDN/Community": {

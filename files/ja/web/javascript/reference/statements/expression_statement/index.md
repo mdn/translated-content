@@ -2,7 +2,7 @@
 title: 式文
 slug: Web/JavaScript/Reference/Statements/Expression_statement
 l10n:
-  sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
 {{jsSidebar("Statements")}}
@@ -41,7 +41,7 @@ expression;
 - `function`: [`function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)または [`function*` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function*)となり、[`function` 式](/ja/docs/Web/JavaScript/Reference/Operators/function)または [`function*` 式](/ja/docs/Web/JavaScript/Reference/Operators/function*)とはならない。
 - `async function`: [`async function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function)または [`async function*` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function*)となり、[`async function` 式](/ja/docs/Web/JavaScript/Reference/Operators/async_function)または [`async function*` 式](/ja/docs/Web/JavaScript/Reference/Operators/async_function*)とはならない。
 - `class`: [`class` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/class)となり、[`class` 式](/ja/docs/Web/JavaScript/Reference/Operators/class)にはならない。
-- `let[`: [`let` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/let) の[配列の構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)となり、`let` 上の[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)にはならない（`let` は[厳格モード以外](/ja/docs/Web/JavaScript/Reference/Strict_mode#extra_reserved_words)でのみ識別子になる）
+- `let[`: [`let` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/let) の[配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)となり、`let` 上の[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)にはならない（`let` は[厳格モードでない場合](/ja/docs/Web/JavaScript/Reference/Strict_mode#extra_reserved_words)にのみ識別子になる）
 - `{`: [ブロック文](/ja/docs/Web/JavaScript/Reference/Statements/block)となり、[オブジェクトリテラル](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)にはなりません。
 
 従って、以下のものは全て不正です。

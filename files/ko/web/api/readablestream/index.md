@@ -32,7 +32,7 @@ slug: Web/API/ReadableStream
 
 ## Examples
 
-아래 예시에서, 다른 리소스에서 fetch된 HTML 조각들을 스트림 하기위해 가공의 {{domxref("Response")}}를 만듭니다. 이것은{{domxref("Uint8Array")}}로 구성된 {{domxref("ReadableStream")}} 의 사용법을 보여줍니다.
+아래 예시에서, 다른 리소스에서 fetch된 HTML 조각들을 스트림 하기위해 가공의 {{domxref("Response")}}를 만듭니다. 이것은{{jsxref("Uint8Array")}}로 구성된 {{domxref("ReadableStream")}} 의 사용법을 보여줍니다.
 
 ```js
 fetch("https://www.example.org/").then((response) => {

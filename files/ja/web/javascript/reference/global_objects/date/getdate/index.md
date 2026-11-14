@@ -1,21 +1,20 @@
 ---
 title: Date.prototype.getDate()
+short-title: getDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
-
-**`getDate()`** は {{jsxref("Date")}} インスタンスのメソッドで、地方時に基づき、この日付の「日」を返します。
+**`getDate()`** は {{jsxref("Date")}} インスタンスのメソッドで、現地時間に基づき、この日付の「日」を返します。
 
 {{InteractiveExample("JavaScript デモ: Date.prototype.getDate()", "shorter")}}
 
 ```js interactive-example
 const birthday = new Date("August 19, 1975 23:15:30");
-const date1 = birthday.getDate();
+const date = birthday.getDate();
 
-console.log(date1);
+console.log(date);
 // 予想される結果: 19
 ```
 
@@ -31,7 +30,7 @@ getDate()
 
 ### 返値
 
-1 から 31 までの間の整数値。地方時に基づき、指定された日時の「日」を表します。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
+1 から 31 までの間の整数値。現地時間に基づき、指定された日時の「日」を表します。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
 
 ## 例
 

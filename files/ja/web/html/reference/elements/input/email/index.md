@@ -3,10 +3,12 @@ title: '`<input type="email">` 属性値'
 short-title: <input type="email">
 slug: Web/HTML/Reference/Elements/input/email
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 {{HTMLElement("input")}} 要素の **`email`** 型は、ユーザーに一つのメールアドレス、または、 [`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple) 属性が設定されていた場合は、メールアドレスのリストを入力および編集させるために使用します。
+
+入力値はフォームの送信前に自動的に検証され、空欄または正しい形式のメールアドレス（またはメールアドレスのリスト）であることが確認されます。{{cssxref(":valid")}} および {{cssxref(":invalid")}} CSS 擬似クラスが適切に自動適用され、入力欄の現在の値が有効なメールアドレスかどうかが視覚的に示されます。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
 
@@ -29,8 +31,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-入力値はフォームの送信前に自動的に検証され、空欄または正しい形式のメールアドレス (またはメールアドレスのリスト) のどちらかであることが確認されます。 CSS の {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラスが自動的に適用され、フィールド上の現在の値が妥当なメールアドレスであるかどうかを視覚的に示します。
 
 ## 値
 
@@ -304,6 +304,12 @@ label::after {
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 {{EmbedLiveSample("Pattern_validation", 700, 300)}}
 
 このフォーム ({{HTMLElement("form")}}) には、ユーザーのメールアドレスを入力する `email` 型の {{HTMLElement("input")}} が 1 つあり、 IT 部門へのメッセージを入力する {{HTMLElement("textarea")}}、そしてフォームの送信ボタンを生成する [`"submit"`](/ja/docs/Web/HTML/Reference/Elements/input/submit) 型の `<input>` があります。それぞれのテキスト入力ボックスには、ユーザーに入力すべきことを伝える {{HTMLElement("label")}} があります。
@@ -396,12 +402,6 @@ label::after {
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>

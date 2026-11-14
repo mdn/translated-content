@@ -15,7 +15,7 @@ l10n:
 
 ## 例
 
-例は、メインの [`GPUDevice.lost` のページ](/ja/docs/Web/API/GPUDevice/lost#例)を参照してください。
+例は、メインの [`GPUDevice.lost` のページ](/ja/docs/Web/API/GPUDevice/lost#examples)を参照してください。
 
 ## 仕様書
 

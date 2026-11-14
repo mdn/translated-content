@@ -1,11 +1,10 @@
 ---
 title: よくある JavaScript の問題の解決
+short-title: よくある JavaScript の問題
 slug: Learn_web_development/Howto/Solve_JavaScript_problems
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 3143a6094e7b87cf1a96b61f9551fb4d95049777
 ---
-
-{{LearnSidebar}}
 
 JavaScript のコードが正しく動作しないので修正したい、というような場合にみられる、よくある問題の解決方法へのリンクを以下に示します。
 
@@ -68,7 +67,7 @@ JavaScript で普通に何かを代入するときは、単一の等号を使用
 const myNumber = 0;
 ```
 
-ただし、[オブジェクト](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects) では、正しい構文を使用するように注意する必要があります。オブジェクトは中括弧で囲み、メンバー名とその値はコロンで区切り、メンバーはカンマで使用しなければなりません。例えば、次のようになります。
+ただし、[オブジェクト](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects) では、正しい構文を使用するように注意する必要があります。オブジェクトは中括弧で囲み、メンバー名とその値はコロンで区切り、メンバー同士はカンマで区切らなければなりません。例えば、次のようになります。
 
 ```js
 const myObject = {
@@ -102,7 +101,7 @@ const myObject = {
 
 - [変数を宣言するには](/ja/docs/Learn_web_development/Core/Scripting/Variables#変数の宣言)
 - [変数を値で初期化するには](/ja/docs/Learn_web_development/Core/Scripting/Variables#変数の初期化)
-- [変数の値を変更するには](/ja/docs/Learn_web_development/Core/Scripting/Variables#変数の更新)（[代入演算子](/ja/docs/Learn_web_development/Core/Scripting/Math#比較演算子)についても参照してください）
+- [変数の値を変更するには](/ja/docs/Learn_web_development/Core/Scripting/Variables#変数の更新)（[代入演算子](/ja/docs/Learn_web_development/Core/Scripting/Math#代入演算子)についても参照してください）
 - [JavaScript のデータ型とは](/ja/docs/Learn_web_development/Core/Scripting/Variables#変数のデータ型)
 - [「弱い型付け」とは](/ja/docs/Learn_web_development/Core/Scripting/Variables#動的型付け)
 
@@ -117,9 +116,8 @@ const myObject = {
 ### 文字列
 
 - [JavaScript で文字列を作成するには](/ja/docs/Learn_web_development/Core/Scripting/Strings#文字列の宣言)
-- [単一引用符と二重引用符のどちらを使うべきか](/ja/docs/Learn_web_development/Core/Scripting/Strings#単一引用符、二重引用符、逆引用符)
-- [文字列をエスケープするには](/ja/docs/Learn_web_development/Core/Scripting/Strings#文字列に引用符を含めるには)
-- [文字列を連結するには](/ja/docs/Learn_web_development/Core/Scripting/Strings#_を用いた連結)
+- [単一引用符と二重引用符のどちらを使うべきか](/ja/docs/Learn_web_development/Core/Scripting/Strings#単一引用符_二重引用符_逆引用符)
+- [文字列を連結するには](/ja/docs/Learn_web_development/Core/Scripting/Strings#コンテキストでの連結)
 - [文字列と数値を連結できるかどうか](/ja/docs/Learn_web_development/Core/Scripting/Strings#数値と文字列)
 - [文字列の長さを調べるには](/ja/docs/Learn_web_development/Core/Scripting/Useful_string_methods#文字列の長さを調べる)
 - [文字列内の特定位置の文字を調べるには](/ja/docs/Learn_web_development/Core/Scripting/Useful_string_methods#文字列の特定の文字を受け取る)
@@ -143,7 +141,7 @@ const myObject = {
 - [JavaScript コンソールに値を出力するには](/ja/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#コンソール_api)
 - [ブレイクポイント等の JavaScript のデバッグ機能を使うには](/ja/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#javascript_デバッガーの使用)
 
-JavaScript のデバッグに関する詳細については、[JavaScript のよくある問題を扱う](/ja/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript)を参照してください。よくあるエラーの説明については[その他のよくあるエラー](/ja/docs/Learn_web_development/Core/Scripting/What_went_wrong#その他のよくあるエラー)を参照してください。
+JavaScript のデバッグに関する詳細については、[JavaScript のデバッグとエラー処理](/ja/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript)を参照してください。よくあるエラーの説明については[その他のよくあるエラー](/ja/docs/Learn_web_development/Core/Scripting/What_went_wrong#その他のよくあるエラー)を参照してください。
 
 ### コード内での決定
 
@@ -170,7 +168,7 @@ JavaScript のデバッグに関する詳細については、[JavaScript のよ
 - [独自の関数を作成するには](/ja/docs/Learn_web_development/Core/Scripting/Build_your_own_function)
 - [関数を呼び出すには](/ja/docs/Learn_web_development/Core/Scripting/Functions#関数の呼び出し)
 - [無名関数とは](/ja/docs/Learn_web_development/Core/Scripting/Functions#無名関数とアロー関数)
-- [関数を実行するときに引数を指定するには](/ja/docs/Learn_web_development/Core/Scripting/Functions#関数の引数)
+- [関数を実行するときに引数を指定するには](/ja/docs/Learn_web_development/Core/Scripting/Functions#関数の実引数と仮引数)
 - [関数のスコープとは](/ja/docs/Learn_web_development/Core/Scripting/Functions#関数のスコープと競合)
 - [返値とは何か、どのように返値を返すか](/ja/docs/Learn_web_development/Core/Scripting/Return_values)
 
@@ -181,22 +179,19 @@ JavaScript のデバッグに関する詳細については、[JavaScript のよ
 - [角括弧を用いた記法とは](/ja/docs/Learn_web_development/Core/Scripting/Object_basics#ブラケット記法)
 - [オブジェクトのメソッドやプロパティを取得、設定するには](/ja/docs/Learn_web_development/Core/Scripting/Object_basics#オブジェクトメンバーの設定)
 - [オブジェクトのコンテキストにおける `this` とは何か](/ja/docs/Learn_web_development/Core/Scripting/Object_basics#this_とは何か)
-- [オブジェクト指向プログラミングとは](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters)
-- [コンストラクターやインスタンスとは何か、それらをどのように作成するか](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#constructors_and_object_instances)
-- [JavaScript でオブジェクトを作成する方法にはどのようなものがあるか](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#other_ways_to_create_object_instances)
+- [オブジェクト指向プログラミングとは](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming)
+- [コンストラクターやインスタンスとは何か、それらをどのように作成するか](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming#クラスとインスタンス)
 
 ### JSON
 
 - [JSON の構造とは、JavaScript から JSON を読み取るには](/ja/docs/Learn_web_development/Core/Scripting/JSON#json_の構造)
-- [JSON ファイルをページに読み込むには](/ja/docs/Learn_web_development/Core/Scripting/JSON#loading_our_json)
 - [JSON からテキストに変換するには、テキストから JSON に変換するには](/ja/docs/Learn_web_development/Core/Scripting/JSON#オブジェクトとテキスト間の変換)
 
 ### イベント
 
 - [イベントハンドラーとは何か、どのように使うのか](/ja/docs/Learn_web_development/Core/Scripting/Events#event_handler_properties)
-- [インラインイベントハンドラーとは](/ja/docs/Learn_web_development/Core/Scripting/Events#Inline_event_handlers_%E2%80%94_don%27t_use_these)
+- [インラインイベントハンドラーとは](/ja/docs/Learn_web_development/Core/Scripting/Events#インラインイベントハンドラー_—_使用しないでください)
 - [`addEventListener()` 関数は何をするものか、どのように使うのか](/ja/docs/Learn_web_development/Core/Scripting/Events#using_addeventlistener)
-- [自分のページにイベントのコードを追加するのに、どの方法を使用すべきか](/ja/docs/Learn_web_development/Core/Scripting/Events#what_mechanism_should_i_use)
 - [イベントオブジェクトとは何か、どのように使うのか](/ja/docs/Learn_web_development/Core/Scripting/Events#event_objects)
 - [既定のイベントの挙動を抑制するには](/ja/docs/Learn_web_development/Core/Scripting/Events#preventing_default_behaviour)
 - [ネストされた要素でどのようにイベントが発生するか（イベントの伝播、関連して、キャプチャ、バブリング）](/ja/docs/Learn_web_development/Core/Scripting/Event_bubbling)
@@ -205,11 +200,10 @@ JavaScript のデバッグに関する詳細については、[JavaScript のよ
 ### オブジェクト指向 JavaScript
 
 - [オブジェクトのプロトタイプとは何か](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)
-- [コンストラクタープロパティとは何か、どのように使用するか](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes#コンストラクターの使用)
 - [どのようにコンストラクターにメソッドを追加するか](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes#プロトタイプの設定)
 - [継承元からメンバーを引き継いで新しいコンストラクターを作成するには](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
-- [JavaScript で継承を使用すべきときはいつか](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#object_member_summary)
+- [JavaScript で継承を使用すべきときはいつか](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming#継承)
 
 ### Web API
 
-- [JavaScript を使用して DOM を操作（要素の追加や削除）するには](/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting#アクティブラーニング_基本的な_dom_操作)
+- [JavaScript を使用して DOM を操作（要素の追加や削除）するには](/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting#基本的な_dom_操作をいくつか実行)

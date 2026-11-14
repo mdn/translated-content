@@ -1,45 +1,55 @@
 ---
-title: String.prototype.italics()
+title: "String : méthode italics()"
+short-title: italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
+l10n:
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-La méthode **`italics()`** permet de créer un élément HTML {{HTMLElement("i")}} qui permet de représenter la chaîne courante en italique.
+La méthode **`italics()`** des valeurs {{JSxRef("String")}} crée une chaîne de caractères qui intègre cette chaîne de caractères dans un élément HTML {{HTMLElement("i")}} (`<i>str</i>`), ce qui provoque l'affichage de cette chaîne de caractères en italique.
+
+> [!NOTE]
+> Toutes les [méthodes d'encapsulation HTML](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#méthodes_dencapsulation_html) sont obsolètes et ne sont standardisées que pour des raisons de compatibilité. Utilisez les [API DOM](/fr/docs/Web/API/Document_Object_Model) telles que [`document.createElement()`](/fr/docs/Web/API/Document/createElement) à la place.
 
 ## Syntaxe
 
-```js
-str.italics();
+```js-nolint
+italics()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-Une chaîne de caractères représentant un élément HTML {{HTMLElement("i")}}.
-
-## Description
-
-La méthode `italics` encadre la chaîne de caractères dans une balise `<i>` :
-`"<i>str</i>`"
+Une chaîne de caractères commençant par une balise de début `<i>`, suivie du texte `str`, et se terminant par une balise de fin `</i>`.
 
 ## Exemples
 
-Les méthodes des chaînes de caractères peuvent être utilisées pour changer le formatage d'une chaîne de caractères :
+### Utiliser la méthode `italics()`
+
+Le code ci-dessous crée une chaîne de caractères HTML et remplace ensuite le corps du document par celle-ci&nbsp;:
 
 ```js
-var worldString = "Coucou monde";
+const contenuChaineCaracteres = "Bonjour, le monde";
 
-console.log(worldString.blink());
-console.log(worldString.bold());
-console.log(worldString.italics());
-console.log(worldString.strike());
+document.body.innerHTML = contenuChaineCaracteres.italics();
 ```
 
-Cet exemple permet de produire le fragment HTML suivant dans la console :
+Cela crée le HTML suivant&nbsp;:
 
 ```html
-<blink>Coucou monde</blink>
-<b>Coucou monde</b>
-<i>Coucou monde</i>
-<strike>Coucou monde</strike>
+<i>Bonjour, le monde</i>
+```
+
+Au lieu d'utiliser `italics()` et de créer directement du texte HTML, vous devez utiliser les API DOM telles que [`document.createElement()`](/fr/docs/Web/API/Document/createElement). Par exemple&nbsp;:
+
+```js
+const contenuChaineCaracteres = "Bonjour, le monde";
+const elem = document.createElement("i");
+elem.innerText = contenuChaineCaracteres;
+document.body.appendChild(elem);
 ```
 
 ## Spécifications
@@ -52,6 +62,7 @@ Cet exemple permet de produire le fragment HTML suivant dans la console :
 
 ## Voir aussi
 
-- {{jsxref("String.prototype.blink()")}}
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.strike()")}}
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `String.prototype.italics` dans `core-js` <sup>(ang.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `String.prototype.italics` <sup>(ang.)</sup>](https://www.npmjs.com/package/es-string-html-methods)
+- [Les méthodes d'encapsulation HTML](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#méthodes_dencapsulation_html)
+- L'élément HTML {{HTMLElement("i")}}

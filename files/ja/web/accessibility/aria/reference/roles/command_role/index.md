@@ -1,8 +1,9 @@
 ---
 title: "ARIA: command ロール"
+short-title: command
 slug: Web/Accessibility/ARIA/Reference/Roles/command_role
 l10n:
-  sourceCommit: 22cf84fc5704222a2e2e5ac67b95b02dcfea08ff
+  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
 `command` ロールは、アクションを実行するが入力データを受け取らないウィジェットを定義します。
@@ -10,7 +11,7 @@ l10n:
 > [!NOTE]
 > `command` ロールは抽象ロールです。ここでは文書化の完全性のために含まれています。ウェブ作成者が使用すべきではありません。
 
-## 説明
+## 解説
 
 command はアクションを実行するが入力データを受け取らないウィジェットの形式です。これは [`button`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)、[`link`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/link_role)、[`menuitem`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role) ウィジェットロールの親クラスです。
 

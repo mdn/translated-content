@@ -3,12 +3,10 @@ title: "`<optgroup>` 選択肢グループ要素"
 short-title: <optgroup>
 slug: Web/HTML/Reference/Elements/optgroup
 l10n:
-  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
 **`<optgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("select")}} 要素内の選択肢のグループを作成します。
-
-[カスタマイズ可能な `<select>` 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select) では、{{htmlelement("legend")}} 要素を `<optgroup>` の子要素として使用できるため、対象とスタイル設定がしやすいラベルを提供できます。これは `<optgroup>` 要素の `label` 属性で設定されたテキストを置き換え、そして同じ意味づけを持ちます。
 
 {{InteractiveExample("HTML デモ: &lt;optgroup&gt;", "tabbed-standard")}}
 
@@ -35,9 +33,6 @@ label {
 }
 ```
 
-> [!NOTE]
-> optgroup 要素を入れ子にすることはできません。
-
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
@@ -46,6 +41,12 @@ label {
   - : この論理属性が指定された場合、この選択肢グループ内の選択肢のすべてが選択不能となります。多くの場合、ブラウザーはそのコントロールを灰色で表示し、マウスクリックやフォーカスなど、いかなるイベントも受け付けなくなります。
 - `label`
   - : 選択肢のグループ名。ブラウザーがユーザーインターフェイスで選択肢にラベル付けを行う際に使用できます。この要素を使用する場合、この属性は必須です。
+
+## 使用上の注意
+
+`optgroup` 要素を入れ子にすることはできません。
+
+[カスタマイズ可能な `<select>` 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)では、{{htmlelement("legend")}} 要素を `<optgroup>` の子要素として使用して、対象にしやすくスタイルを設定しやすいラベルを提供できます。このラベルは `<optgroup>` 要素の `label` 属性に設定されたテキストに置き換わり、同じ意味を持ちます。
 
 ## 例
 

@@ -3,7 +3,7 @@ title: "`title` グローバル属性"
 short-title: title
 slug: Web/HTML/Reference/Global_attributes/title
 l10n:
-  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
 **`title`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、要素に関する注意事項の情報を表すテキストを含みます。
@@ -31,9 +31,11 @@ iframe {
 }
 ```
 
-`title` 属性の主な用途は、 {{HTMLElement("iframe")}} 要素の支援技術のためのラベル付けです。
+## 解説
 
-`title` 属性は、[データ表](/ja/docs/Web/HTML/Reference/Elements/table)内のコントロールのラベル付けに使用することもできます。
+`title` 属性の主な用途は、支援技術のために {{HTMLElement("iframe")}} 要素にラベルを付けることです。
+
+`title` 属性は、[データ表](/ja/docs/Web/HTML/Reference/Elements/table)内のコントロールにラベルを付けるために使用することもできます。
 
 `title` 属性は、[`<link rel="stylesheet">`](/ja/docs/Web/HTML/Reference/Elements/link) に追加すると、代替のスタイルシートを作成することができます。代替スタイルシートを `<link rel="alternate">` で定義する場合、この属性は必須であり、空でない文字列を設定する必要があります。
 

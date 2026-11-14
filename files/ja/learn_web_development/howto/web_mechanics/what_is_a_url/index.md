@@ -2,10 +2,10 @@
 title: URL とは何か
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_URL
 l10n:
-  sourceCommit: 9f935510a1add5dd4c1d8696e770ea7e6ef2f597
+  sourceCommit: 0b9a7f55285ab727f5e14f6d983f2812c70d62d1
 ---
 
-この記事では URL (Uniform Resource Locator) について説明し、その内容と構造を説明します。
+この記事では、URL (Uniform Resource Locator) とは何か、その構造について説明します。
 
 <table>
   <tbody>
@@ -123,7 +123,7 @@ HTML ページなどの文書内で URL が使用される場合、状況は少�
 - スキーム相対 URL: `//developer.mozilla.org/ja/docs/Learn_web_development` — プロトコルのみがありません。ブラウザーは、その URL をホスティングする文書を読み込む際に使用したプロトコルと同じプロトコルを使用します。
 - ドメイン相対 URL: `/ja/docs/Learn_web_development` — プロトコルとドメイン名の両方がありません。ブラウザーは、その URL をホスティングする文書を読み込むために使用されているものと同じプロトコルおよびドメイン名を使用します。
 - サブリソース: `Howto/Web_mechanics/What_is_a_URL` — プロトコルとドメイン名がなく、パスが `/` で始まっていません。ブラウザーは、現在のリソースを含むサブディレクトリ内で文書を探します。この場合、実際に到達したい URL は `https://developer.mozilla.org/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL` です。
-- ディレクトリーツリーを戻る: `../CSS/display` — プロトコルとドメイン名がなく、パスは `..` で始まっています。これは UNIX ファイルシステムの世界から継承されたもので、1 レベル上に移動することをブラウザーに指示します。ここでは、 `https://developer.mozilla.org/ja/docs/Learn_web_development/../Web/CSS/display`　の URL に到達したいとしますが、これは `https://developer.mozilla.org/ja/docs/Web/CSS/display` のように簡略化できます。
+- ディレクトリーツリーを戻る: `../Web/CSS/Reference` — プロトコルとドメイン名がなく、パスは `..` で始まっています。これは UNIX ファイルシステムの世界から継承されたもので、1 レベル上に移動することをブラウザーに指示します。ここでは、`https://developer.mozilla.org/ja/docs/Learn_web_development/../Web/CSS/Reference` に到達したいとしますが、これは `https://developer.mozilla.org/ja/docs/Web/CSS/Reference` のように簡略化できます。
 - アンカーのみ: `#semantic_urls` - アンカー以外の部分がすべてありません。ブラウザーは、現在の文書の URL を使用し、アンカー部分を置き換えたり追加したりします。これは、現在の文書の特定の部分にリンクしたい場合に便利です。
 
 ## URL のユーザー名とパスワード
@@ -136,7 +136,7 @@ HTML ページなどの文書内で URL が使用される場合、状況は少�
 https://username:password@www.example.com:80/
 ```
 
-含める場合、ユーザー名とパスワードは `://` 文字で囲み、その間に権限を記載し、その間にコロン、最後にアットマーク (`@`) を付けます。
+URL にユーザー名とパスワードを含める場合は、`://` の直後、オーソリティの前に記述します。ユーザー名とパスワードの間はコロンで区切り、最後にアットマーク (`@`) を付けます。
 
 [HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication)セキュリティ機構を使用しているウェブサイトにアクセスする際に、ユーザー名とパスワードを URL に含めることができます。これにより、ウェブサイトに即座にログインし、資格情報を入力するためのユーザー名/パスワードダイアログボックスをバイパスすることができます。
 
@@ -154,4 +154,4 @@ URL はとても技術的な香りがするにもかかわらず、人間が読�
 
 ## 関連情報
 
-[data URL](/ja/docs/Web/URI/Reference/Schemes/data) — data URL とは、 URL の前に`data:`スキームを付けたもので、コンテンツ制作者が小さなファイルを文書内にインラインで埋め込むことを可能にします。
+[data URL](/ja/docs/Web/URI/Reference/Schemes/data) — `data:` スキームを先頭に付ける URL で、コンテンツ制作者は小さなファイルを文書内にインラインで埋め込めます。

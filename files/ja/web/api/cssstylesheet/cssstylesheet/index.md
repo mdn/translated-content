@@ -1,8 +1,9 @@
 ---
 title: "CSSStyleSheet: CSSStyleSheet() コンストラクター"
+short-title: CSSStyleSheet()
 slug: Web/API/CSSStyleSheet/CSSStyleSheet
 l10n:
-  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
+  sourceCommit: 147396deabb666d5eb44589a6824433d64f2b703
 ---
 
 {{APIRef("CSSOM")}}
@@ -30,7 +31,7 @@ new CSSStyleSheet(options)
     - `media` {{optional_inline}}
       - : メディアルールのリストを含む {{domxref("MediaList")}}、または単一のルールを含む文字列。
     - `disabled` {{optional_inline}}
-      - : 論理値で、スタイルシートが無効かどうかを示します。既定で false になります。
+      - : 論理値で、スタイルシートが無効かどうかを示します。デフォルトは `false` です。
 
 ## 例
 
@@ -85,6 +86,7 @@ sheet.insertRule("* { background-color: blue; }");
 
 ## 関連情報
 
-- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
+- {{domxref("Document.adoptedStyleSheets")}}
+- [Constructable Stylesheets](https://web.dev/articles/constructable-stylesheets) (web.dev)
 - [シャドウ DOM の使用](/ja/docs/Web/API/Web_components/Using_shadow_DOM)
 - [construct-style-sheets-polyfill](https://www.npmjs.com/package/construct-style-sheets-polyfill)

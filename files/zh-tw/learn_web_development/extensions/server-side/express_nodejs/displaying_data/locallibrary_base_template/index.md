@@ -3,6 +3,8 @@ title: 本地圖書館基礎模板
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
 ---
 
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
+
 現在我們了解如何使用 Pug 拓展模板，讓我們開始項目，創建一個基礎模板。這個模板會有一個側邊欄，連結到本教程中將要創建的各個頁面（例如，呈現並創建書本、種類、作者等等），以及一個主要內容區域，我們將在每個頁面中進行覆寫。
 
 開啟 **/views/layout.pug** ，並以下列代碼，置換其內容。
@@ -65,7 +67,4 @@ html(lang='en')
 
 當我們開始運行網站時，我們應該看到側邊欄出現！在本教程的下個部分，我們將使用以上的佈局，來定義各個頁面。
 
-## 下一步
-
-- 回到 [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
-- 繼續教學 5 下個章節: [Home page](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page).
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}

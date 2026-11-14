@@ -3,7 +3,7 @@ title: "`font-width` アットルール記述子"
 short-title: font-width
 slug: Web/CSS/Reference/At-rules/@font-face/font-width
 l10n:
-  sourceCommit: a9dc3374034d357cbfea717fd5d641605359e3c7
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 {{SeeCompatTable}}
@@ -11,9 +11,9 @@ l10n:
 > [!NOTE]
 > `font-width` 記述子は、古い別名である {{cssxref("@font-face/font-stretch")}} 記述子の現行の置き換えです。仕様上は `font-width` が推奨される名称ですが、現時点では `font-stretch` の方が幅広いブラウザーで対応しています。詳細については、[代替の例](#font-stretch_による代替の提供)および[ブラウザーの互換性](#ブラウザーの互換性)表を調べてください。
 
-**`font-width`** は [CSS](/ja/docs/Web/CSS) の記述子で、ウェブページ作成者が {{cssxref("@font-face")}} アットルールで定義されているフォントが通常か、幅狭か、幅広かを指定できるようにします。
+**`font-width`** は [CSS](/ja/docs/Web/CSS) の記述子で、ウェブページ作成者が {{cssxref("@font-face")}} アットルールで指定されたフォントのフェイスを、通常、幅狭、幅広のいずれかに指定できるようにします。
 
-特定のフォントファミリーについて、作成者はそのフォントファミリー内の異なるスタイルに対応するさまざまなフォントフェイスをダウンロードし、`font-width` 記述子を用いてフォントフェイスの幅を明示的に指定しすることができます。`font-width` 記述子で利用できる値は、対応する {{cssxref("font-width")}} プロパティの値と同じです。
+特定のフォントファミリーについて、作成者はそのフォントファミリー内の異なるスタイルに対応するさまざまなフォントフェイスをダウンロードし、`font-width` 記述子を用いてフォントフェイスの幅を明示的に指定できます。`font-width` 記述子で利用できる値は、対応する {{cssxref("font-width")}} プロパティの値と同じです。
 
 ## 構文
 
@@ -37,12 +37,12 @@ font-width: 75% 125%;
 font-width: condensed ultra-condensed;
 ```
 
-`font-width` プロパティは以下にリストとして示されている値のいずれかを使用して記述されます。
+`font-width` 記述子には、以下に示す値のいずれかを単独で指定できます。
 
 ### 値
 
 - `normal`
-  - : 普通の文字幅。
+  - : 通常の幅のフォントフェイスを指定します。
 - `semi-condensed`, `condensed`, `extra-condensed`, `ultra-condensed`
   - : 通常より狭幅のフォントフェイスを指定します。ultra-condensed が最も狭くなります。
 - `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
@@ -50,13 +50,13 @@ font-width: condensed ultra-condensed;
 - `<percentage>`
   - : {{cssxref("&lt;percentage&gt;")}} 値で、50% 以上 200% 以下です。この記述子に負の値は許可されていません。
 
-`font-width` の古いバージョンでは、プロパティは 9 つのキーワード値のみを許可していましたが、CSS Fonts Level 4 における構文の拡張により `<percentage>` も使用できるようになりました。これにより、可変フォントで連続した文字幅のようなものを提供できます。TrueType または OpenType 可変フォント（後述）の場合、`wdth` バリエーションを使用してさまざまな幅を実装できます。
+`font-width` の仕様の古いバージョンでは、記述子は 9 つのキーワード値のみを受け付けていましたが、CSS Fonts Level 4 における構文の拡張により `<percentage>` も使用できるようになりました。これにより、可変フォントで連続的に変化する文字幅を提供できます。TrueType または OpenType 可変フォントの場合、`wdth` バリエーションを使用してさまざまな幅を実装します。
 
 フォントに指定された値と完全に一致する書体が存在しない場合、`100%` 未満の値は縮小された書体に、`100%` 以上の値は伸長された書体に割り当てられます。
 
 ### キーワードとパーセント値の対応表
 
-以下の表は、キーワード指定時と `<percentage>` 指定時の字幅の違いを示しています。
+以下の表は、キーワード値とパーセント値の対応を示しています。
 
 <table class="fullwidth-table standard-table">
   <thead>
@@ -107,13 +107,13 @@ font-width: condensed ultra-condensed;
 
 ### 可変フォント
 
-ほとんどのフォントはキーワードの 1 つに対応する特定の幅を持ちます。しかしながら、可変フォント（バリアブルフォント）と呼ばれる一部のフォントはきめ細かい精度で一連の伸縮が可能になっています。これにより、デザイナーは選択した太さをより厳密に制御できます。 これにはパーセント値の範囲が役立ちます。
+ほとんどのフォントはキーワードの 1 つに対応する特定の幅を持ちます。しかし、可変フォントはきめ細かく変化する幅の範囲に対応できるため、デザイナーは選択した太さをより厳密に制御できます。これにはパーセント値の範囲が役立ちます。
 
 TrueType または OpenType 可変フォントの場合、`wdth` バリエーションを使用して、さまざまな字幅を実装します。
 
 ## アクセシビリティ
 
-特にフォントの[コントラストカラー比が低い](/ja/docs/Web/CSS/Reference/Properties/color#アクセシビリティ)場合、識字障害をはじめとする認知症状のある人は凝縮しすぎたフォントを読むのが困難になる場合があります。詳細は以下をご覧ください。
+特にフォントの[色のコントラスト比が低い](/ja/docs/Web/CSS/Reference/Properties/color#アクセシビリティ)場合、識字障害をはじめとする認知症状のある人は、幅が狭すぎるフォントを読むのが困難になる場合があります。
 
 - [MDN WCAG を理解する、ガイドライン 1.4 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)<sup>(英語)</sup>
@@ -130,7 +130,7 @@ TrueType または OpenType 可変フォントの場合、`wdth` バリエーシ
 
 ### font-width のパーセント値の範囲を指定
 
-次の例では、[League Mono](https://www.theleagueofmoveabletype.com/league-mono) フォントを使用しています。この例では、`font-width` 記述子に様々なキーワードやパーセント値を指定することで、同じフォントファイルから異なるフォントファミリーを生成しています。
+次の例では、[League Mono](https://www.theleagueofmoveabletype.com/league-mono)<sup>(英語)</sup> フォントを使用しています。この例では、`font-width` 記述子にさまざまなキーワードやパーセント値を指定することで、同じフォントファイルから異なるフォントファミリーを生成しています。
 
 ```html
 <p>League Mono</p>
@@ -170,11 +170,11 @@ p:nth-child(3) {
 }
 ```
 
-{{EmbedLiveSample("Setting font width percentages", "100%", 200)}}
+{{EmbedLiveSample("font-width のパーセント値の範囲を指定", "100%", 200)}}
 
 ### font-stretch による代替の提供
 
-`font-width` はまだブラウザーの対応が十分ではないため、代替として古い {{cssxref("@font-face/font-stretch")}} 記述子を記載することをお勧めします。対応しているブラウザーが現行の記述子を使用するように、`font-stretch` を `font-width` の前に配置してください。
+`font-width` はまだブラウザーの対応が十分ではないため、代替として古い {{cssxref("@font-face/font-stretch")}} 記述子を記載することもできます。対応しているブラウザーが現行の記述子を使用するように、`font-stretch` を `font-width` の前に配置してください。
 
 ```css
 @font-face {
@@ -186,7 +186,7 @@ p:nth-child(3) {
 ```
 
 > [!NOTE]
-> この代替パターンについては、PostCSS 用の [postcss-preset-env](https://preset-env.cssdb.org/) プラグインを使用することで自動化できます。このプラグインには、[postcss-font-width-property](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-font-width-property) 変換が含まれています。これは、`font-width` の宣言を自動的に `font-stretch` に変換するものです。
+> この代替パターンについては、PostCSS 用の [postcss-preset-env](https://preset-env.cssdb.org/)<sup>(英語)</sup> プラグインを使用することで自動化できます。このプラグインには、[postcss-font-width-property](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-font-width-property)<sup>(英語)</sup> 変換が含まれています。これは、`font-width` の宣言を自動的に `font-stretch` に変換するものです。
 
 ## 仕様書
 
@@ -198,12 +198,12 @@ p:nth-child(3) {
 
 ## 関連情報
 
-- 古い別名の {{cssxref("@font-face/font-stretch")}} 記述子、よりブラウザーの対応の広いもの
-- {{cssxref("@font-face/font-display")}} 記述子
-- {{cssxref("@font-face/font-family")}} 記述子
-- {{cssxref("@font-face/font-weight")}} 記述子
-- {{cssxref("@font-face/font-style")}} 記述子
-- {{cssxref("font-feature-settings")}} プロパティ
-- {{cssxref("@font-face/font-variation-settings")}} 記述子
-- {{cssxref("@font-face/src")}} 記述子
+- より幅広いブラウザーで対応している古い別名の {{cssxref("@font-face/font-stretch")}} 記述子
+- {{cssxref("@font-face/font-display", "font-display")}} 記述子
+- {{cssxref("@font-face/font-family", "font-family")}} 記述子
+- {{cssxref("@font-face/font-weight", "font-weight")}} 記述子
+- {{cssxref("@font-face/font-style", "font-style")}} 記述子
+- {{cssxref("font-feature-settings", "font-feature-settings")}} プロパティ
+- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} 記述子
+- {{cssxref("@font-face/src", "src")}} 記述子
 - {{cssxref("@font-face/unicode-range", "unicode-range")}} 記述子

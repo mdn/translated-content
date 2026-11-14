@@ -2,7 +2,7 @@
 title: Secciones de sintaxis
 slug: MDN/Writing_guidelines/Page_structures/Syntax_sections
 l10n:
-  sourceCommit: 14acf1aa7885157debdf1b6111f4bd10c064ec60
+  sourceCommit: de1ffe9d19ce381ed182255fcc8fe0517029cfa2
 ---
 
 La sección de sintaxis de una página de referencia de MDN contiene un bloque de sintaxis que define la sintaxis exacta que tiene una característica (por ejemplo, ¿qué parámetros puede aceptar?, ¿cuáles son opcionales?). Este artículo explica cómo escribir bloques de sintaxis para los artículos de referencia.
@@ -231,20 +231,24 @@ Las páginas de referencia de objetos incorporados de JavaScript siguen las mism
 
 ### Propiedades
 
-Las páginas de referencia de las propiedades CSS incluyen una sección "Sintaxis", que solía encontrarse en la parte superior de la página, pero cada vez es más común encontrarla debajo de una sección que contiene un bloque de código mostrando el uso típico de la característica, más un ejemplo en vivo para ilustrar lo que hace (consulta {{CSSxRef("animation")}} como ejemplo).
+Las páginas de referencia de las propiedades CSS incluyen una sección "Sintaxis". Va después de un ejemplo en vivo que ilustra lo que hace la propiedad. En el caso de las propiedades abreviadas (shorthand), va después de la sección "Propiedades constituyentes".
+
+La sección "Sintaxis" en sí comienza con un bloque de código que ilustra las declaraciones típicas de la propiedad (consulta {{CSSxRef("animation")}} como ejemplo).
 
 > [!NOTE]
 > Se hace esto porque la sintaxis formal de CSS es compleja, no la utilizan muchos de los lectores de MDN, y resulta intimidante para los principiantes. La sintaxis real y los ejemplos son más útiles para la mayoría de las personas.
 
-Dentro de la sección de sintaxis encontrarás los siguientes contenidos.
-
-#### Texto de explicación opcional
-
-Algunas propiedades CSS se explican por sí mismas y realmente no necesitan una explicación adicional (por ejemplo {{CSSxRef("color")}}). Otras, por otro lado, son más complejas y necesitan una explicación sobre el orden de la sintaxis, la inclusión de múltiples valores, etc. (consulta {{CSSxRef("animation")}}). En tales casos, puedes incluir una explicación adicional antes de cualquiera de las subsecciones.
+Dentro de la sección "Sintaxis", encontrarás las siguientes subsecciones.
 
 #### Sección de Valores
 
-A continuación, debes incluir una sección "Valores" — esta contiene una lista de descripciones explicando los tipos de valor CSS que componen el valor de la propiedad. Cada tipo de valor debe estar envuelto en corchetes angulares y enlazado a la página de referencia de MDN que cubre ese tipo de valor si existe una página para él. Por ejemplo, consulta la referencia de la propiedad {{CSSxRef("border")}} — esta hace referencia a tres tipos de valores, de los cuales solo uno está enlazado ({{CSSxRef("&lt;color&gt;")}}).
+Debes incluir una sección "Valores".
+
+Esta sección comienza con una frase introductoria que explica cómo se construye el valor de la propiedad —un único valor, uno o dos valores, o una lista separada por espacios o comas—, junto con cualquier restricción sobre el orden o la combinación. Empieza esta frase con "Esta propiedad se especifica como" y termínala con dos puntos, para que enlace con la lista de definiciones de los tipos de valor y las palabras clave de CSS que componen el valor de la propiedad. Por ejemplo, la sección [Valores](/es/docs/Web/CSS/Reference/Properties/font-style#valores) de la propiedad `font-style` introduce su lista de definiciones con esta frase:
+
+> Esta propiedad se especifica como uno de los siguientes valores de palabra clave. La palabra clave `oblique` puede ir seguida opcionalmente por un `<angle>`:
+
+En la lista de definiciones, envuelve cada tipo de valor en corchetes angulares y enlázalo a la página de referencia de MDN que cubre ese tipo de valor si existe una página para él. Para ver un ejemplo, consulta la sección "Valores" de {{CSSxRef("list-style-image")}}.
 
 #### Sintaxis formal
 

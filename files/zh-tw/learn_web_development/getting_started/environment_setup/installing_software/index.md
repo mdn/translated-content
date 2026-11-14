@@ -100,7 +100,7 @@ MDN 的學習文章均不要求你自行建立圖形，但部分文章可能要�
 
 當你完成在本機或開發伺服器上的網站或應用程式開發後，你會希望將它部署到遠端 Web 伺服器上，讓用戶可以輸入與它相關的網址，並在網路上檢視它！
 
-你可以透過多種方式進行部署，從購買虛擬主機並使用 [SFTP 應用程式](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server#sftp)、使用 [GitHub Pages](https://pages.github.com/) 或 [Netlify](https://www.netlify.com/) 等服務，甚至使用 [Glitch](https://glitch.com/) 或 [CodePen](https://codepen.io/) 等方式快速建立展示版與他人分享。
+你可以透過多種方式進行部署，從購買虛擬主機並使用 [SFTP 應用程式](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#sftp)、使用 [GitHub Pages](https://pages.github.com/) 或 [Netlify](https://www.netlify.com/) 等服務，甚至使用 [Glitch](https://glitch.com/) 或 [CodePen](https://codepen.io/) 等方式快速建立展示版與他人分享。
 
 這樣的選項清單可能看起來令人眼花繚亂，但請放心——目前你無需了解任何有關網站發布的知識。我們在後續課程中會多次探討這個主題。你將在[你的第一個網站](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website)模組中獲得實際經驗。
 

@@ -3,7 +3,7 @@ title: CSS 隙間
 short-title: 隙間
 slug: Web/CSS/Guides/Gaps
 l10n:
-  sourceCommit: 8a13259a44523cd17b4fe347088b62c6d7a35265
+  sourceCommit: f641d1e7c63d8300c9ff1c6a24158a80e1f24ab0
 ---
 
 **CSS 隙間**モジュールを使用すると、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)レイアウトにおいて、アイテム間の間隔（または「隙間」）を指定できます。[CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)モジュールでは、もともと段組みコンテナー内で段間を制御する間隔や段間罫が定義されていました。本モジュールは、隙間装飾と呼ばれるこれらの視覚的な区切り要素を拡張し、グリッドとフレックスボックスにも適用できるようにしています。
@@ -452,6 +452,10 @@ blockquote p::after {
 
 ## ガイド
 
+- [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+  - : グリッド、フレックスボックス、段組みレイアウトにおける隙間の理解と定義に関するガイド。パーセント値の処理方法についても記載します。
+- [CSS 隙間の罫線の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_rules)
+  - : CSS 隙間の罫線を理解し定義するためのガイド。`repeat()` 関数を使用することで、罫線の色、幅、スタイルを定義する方法についても記載します。
 - [段のスタイル設定](/ja/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)
   - : 段のスタイル設定と、段間の空間の制御のガイドです。
 - [段組みにおけるコンテンツの分割の処理](/ja/docs/Web/CSS/Guides/Multicol_layout/Handling_content_breaks)

@@ -5,7 +5,7 @@ slug: Web/API/URL/toJSON
 
 {{APIRef("URL API")}}
 
-{{domxref("URL")}} 인터페이스의 **`toJSON()`** 메서드는 URL을 직렬화한 {{domxref("USVString")}}을 반환합니다. 그러나, 사실상 {{domxref("URL.toString", "toString()")}}과 같습니다..
+{{domxref("URL")}} 인터페이스의 **`toJSON()`** 메서드는 URL을 직렬화한 {{jsxref("String")}}을 반환합니다. 그러나, 사실상 {{domxref("URL.toString", "toString()")}}과 같습니다..
 
 {{AvailableInWorkers}}
 
@@ -17,7 +17,7 @@ const href = url.toJSON();
 
 ### 반환 값
 
-{{domxref("USVString")}}.
+{{jsxref("String")}}.
 
 ## 예제
 

@@ -3,13 +3,13 @@ title: Array.prototype.findLastIndex()
 short-title: findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-**`findLastIndex()`** は {{jsxref("Array")}} のメソッドで、この配列を逆順に反復処理し、指定されたテスト関数を満たす配列の最後の要素のインデックスを返します。
-テスト関数を満たす要素がなかった場合は、 -1 を返します。
+**`findLastIndex()`** は {{jsxref("Array")}} のメソッドで、この配列を逆順に反復処理し、指定された判定関数を満たす配列の最後の要素のインデックスを返します。
+判定関数を満たす要素がなかった場合は、 -1 を返します。
 
-{{jsxref("Array/findLast", "findLast()")}} メソッドも参照してください。こちらはテスト関数を満たす最後の要素の（位置ではなく）値を返します。
+{{jsxref("Array/findLast", "findLast()")}} メソッドも参照してください。こちらは判定関数を満たす最後の要素の（位置ではなく）値を返します。
 
 {{InteractiveExample("JavaScript デモ: Array.prototype.findLastIndex()", "shorter")}}
 
@@ -83,7 +83,7 @@ console.log([4, 5, 7, 8, 9, 11, 12].findLastIndex(isPrime)); // 5
 ```
 
 > [!NOTE]
-> `isPrime()` の実装は、説明のみを目的としています。実際のアプリケーションでは、繰り返し計算を避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)などの、高度に最適化されたアルゴリズムを使用することをお勧めします。
+> `isPrime()` の実装は、説明のみを目的としています。実際のアプリケーションでは、繰り返し計算を避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)などの、{{Glossary("Memoization", "メモ化")}}を多用したアルゴリズムを使用することをお勧めします。
 
 ### callbackFn の第 3 引数の使用
 
@@ -138,7 +138,7 @@ console.log(
 
 ## 関連情報
 
-- [`Array.prototype.findLastIndex` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#array-find-from-last)
+- [`Array.prototype.findLastIndex` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.findLastIndex` のポリフィル](https://www.npmjs.com/package/array.prototype.findlastindex)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}

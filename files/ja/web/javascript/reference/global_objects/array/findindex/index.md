@@ -3,11 +3,11 @@ title: Array.prototype.findIndex()
 short-title: findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-**`findIndex()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列内の指定されたテスト関数に合格する最初の要素のインデックスを返します。
-テスト関数に合格する要素がなかった場合は `-1` を返します。
+**`findIndex()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列内の指定された判定関数に合格する最初の要素のインデックスを返します。
+判定関数に合格する要素がなかった場合は `-1` を返します。
 
 {{jsxref("Array/find", "find()")}} メソッドも参照してください。こちらのメソッドは、配列内で見つかった要素の位置ではなく、値を返します。
 
@@ -81,7 +81,7 @@ console.log([4, 6, 7, 9, 12].findIndex(isPrime)); // 2 (array[2] is 7)
 ```
 
 > [!NOTE]
-> `isPrime()` の実装は、説明のみを目的としています。実際のアプリケーションでは、繰り返し計算を避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)などの、高度に最適化されたアルゴリズムを使用することをお勧めします。
+> `isPrime()` の実装は、説明のみを目的としています。実際のアプリケーションでは、繰り返し計算を避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)などの、{{Glossary("Memoization", "メモ化")}}を多用したアルゴリズムを使用することをお勧めします。
 
 ### callbackFn の第 3 引数の使用
 
@@ -136,7 +136,7 @@ console.log(
 
 ## 関連情報
 
-- [`Array.prototype.findIndex` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.findIndex` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.findIndex` のポリフィル](https://www.npmjs.com/package/array.prototype.findindex)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}

@@ -1,13 +1,12 @@
 ---
 title: Date.prototype.getDay()
+short-title: getDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`getDay()`** は {{jsxref("Date")}} インスタンスのメソッドで、地方時に基づき、この日付の曜日を返します。 0 は日曜日を表します。「日」を取得する方法は {{jsxref("Date.prototype.getDate()")}} をご覧ください。
+**`getDay()`** は {{jsxref("Date")}} インスタンスのメソッドで、現地時間に基づき、この日付の曜日を返します。 0 は日曜日を表します。「日」を取得する方法は {{jsxref("Date.prototype.getDate()")}} をご覧ください。
 
 {{InteractiveExample("JavaScript デモ: Date.prototype.getDay()", "shorter")}}
 
@@ -32,7 +31,7 @@ getDay()
 
 ### 返値
 
-整数値で、 0 から 6 までの値を取り、地方時に基づいて指定された日時の曜日に対応し、 0 は日曜日、 1 は月曜日、 2 は火曜日のようになります。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
+整数値で、 0 から 6 までの値を取り、現地時間に基づいて指定された日時の曜日に対応し、 0 は日曜日、 1 は月曜日、 2 は火曜日のようになります。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
 
 ## 解説
 

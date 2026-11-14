@@ -3,7 +3,7 @@ title: Directrices para escribir ejemplos de código JavaScript
 short-title: Ejemplos de JavaScript
 slug: MDN/Writing_guidelines/Code_style_guide/JavaScript
 l10n:
-  sourceCommit: 359d3c9cea9b2caa691c63ed3b01714ad4416372
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Las siguientes directrices cubren la escritura de código de ejemplo JavaScript para MDN Web Docs. Este artículo es una lista de reglas para escribir ejemplos concisos que sean comprensibles para la mayor cantidad de personas posible.

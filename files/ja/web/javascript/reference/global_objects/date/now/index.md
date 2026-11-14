@@ -1,11 +1,10 @@
 ---
 title: Date.now()
+short-title: now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
 l10n:
-  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
+  sourceCommit: 91b5a448a517239876a4bc92640bbbf29e30b106
 ---
-
-{{JSRef}}
 
 **`Date.now()`** は静的メソッドで、 UTC (協定世界時) で 1970 年 1 月 1 日の夜半と定義されている[元期](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)からの経過時間を、ミリ秒単位で返します。
 
@@ -44,26 +43,29 @@ Date.now()
 
 ## 時間の精度の低下
 
-タイミング攻撃や[フィンガープリンティング](/ja/docs/Glossary/Fingerprinting)に対する保護機能を提供するために、 `someFile.lastModified` の精度がブラウザーの設定に応じて丸められることがあります。
-Firefox では、`privacy.reduceTimerPrecision` 設定は既定で有効になっており、既定で 2 ミリ秒になります。この場合、精度は 100ms または `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` の値のどちらか大きい方になります。
+タイミング攻撃や[フィンガープリンティング](/ja/docs/Glossary/Fingerprinting)に対する保護機能を提供するために、`Date.now()` の精度がブラウザーの設定に応じて下げられることがあります。
 
-例えば、時刻の精度を下げた場合、 `Date.now()` の結果は常に 2 の倍数になり、`privacy.resistFingerprinting` を有効にした場合は 100 の倍数（または `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`）になります。
+タイムスタンプは常にミリ秒単位の整数であるため、その分解能はすべてのコンテキストにおいて 1 ミリ秒に制限されます。これにより、基本的なセキュリティおよびプライバシーの要件はすでに満たされています。
+
+Firefox では、`privacy.reduceTimerPrecision` 設定はデフォルトで有効になっています。デフォルト設定では、タイムスタンプの分解能は 1 ms です。`privacy.resistFingerprinting` が有効になっている場合、丸め間隔は 16.667 ms または `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` で設定された間隔のうち、いずれか大きい方となります。最終的な出力は整数に丸められます。
+
+例えば、Firefox では次のような値が考えられます。
 
 ```js
-// Firefox 60 での時間の制度の低下 (2ms)
+// デフォルト設定での時間の精度の低下 (1 ms)
 Date.now();
 // 取りうる値:
 // 1519211809934
-// 1519211810362
-// 1519211811670
+// 1519211810363
+// 1519211811671
 // …
 
-// `privacy.resistFingerprinting` が有効な場合の時間の制度の低下
+// `privacy.resistFingerprinting` が有効な場合の時間の精度の低下
 Date.now();
 // 取りうる値:
-// 1519129853500
-// 1519129858900
-// 1519129864400
+// 1519129853489
+// 1519129853506
+// 1519129853522
 // …
 ```
 

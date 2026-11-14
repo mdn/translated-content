@@ -22,7 +22,7 @@ The **동적 웹사이트 서버-사이드 프로그래밍** 에 대한 주제�
 
 - [What is a web server(웹서버는 무엇인가)](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [What software do I need to build a website?(웹사이트를 만들기 위해 필요한 소프트웨어는 무엇인가)](/ko/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
-- [How do you upload files to a web server?(웹 서버에 파일을 업로드하는 방법은 무엇인가)](/ko/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
+- [How do you upload files to a web server?(웹 서버에 파일을 업로드하는 방법은 무엇인가)](/ko/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 
 이런 기본적인 이해를 통해, 이 섹션의 과목들을 공부할 준비가 될 것이다.
 

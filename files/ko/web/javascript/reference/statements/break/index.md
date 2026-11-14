@@ -44,7 +44,7 @@ console.log(i);
 function testBreak(x) {
   var i = 0;
 
-  while (i &#x3C; 6) {
+  while (i < 6) {
     if (i == 3) {
       break;
     }

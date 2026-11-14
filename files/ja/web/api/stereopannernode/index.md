@@ -56,7 +56,7 @@ _固有のメソッドはありません。親である {{domxref("AudioNode")}}
 
 ## 例
 
-コード例については [`BaseAudioContext.createStereoPanner()`](/ja/docs/Web/API/BaseAudioContext/createStereoPanner#example) を参照してください。
+コード例については [`BaseAudioContext.createStereoPanner()`](/ja/docs/Web/API/BaseAudioContext/createStereoPanner#例) を参照してください。
 
 ## 仕様書
 

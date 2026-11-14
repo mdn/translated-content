@@ -12,7 +12,7 @@ slug: Web/API/AbortSignal
 _AbortSignal 인터페이스는 또한 부모 인터페이스 {{domxref("EventTarget")}}으로부터 프로퍼티를 상속받습니다._
 
 - {{domxref("AbortSignal.aborted")}} {{readonlyInline}}
-  - : 신호가 통신하는 요청이 취소되었는지(`true`) 그렇지 않은지(`false`)를 나타내는 {{domxref("Boolean")}}입니다.
+  - : 신호가 통신하는 요청이 취소되었는지(`true`) 그렇지 않은지(`false`)를 나타내는 {{jsxref("Boolean")}}입니다.
 
 ## 이벤트
 

@@ -1,11 +1,10 @@
 ---
-title: 用語集の項目を執筆する方法
+title: 用語集の項目を追加する方法
+short-title: 用語集の項目の追加
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
-
-{{MDNSidebar}}
 
 > [!CALLOUT]
 > 訳注:
@@ -37,7 +36,9 @@ l10n:
 
 > [!NOTE]
 > インターネット上にある他の定義やコンテンツをコピー＆ペーストしないでください。
-> （特にウィキペディアは、ライセンスの版の幅が小さいため、 MDN とは互換性がありません。）用語集の項目は独自の内容にしてください。
+> （特にウィキペディアは、ライセンスの版の幅が小さいため、 MDN とは互換性がありません。）
+> 生成された文章も使用しないでください。
+> 用語集の項目は、自分の言葉で書いたオリジナルコンテンツであるべきです。
 
 #### 良い用語集の項目を書く
 
@@ -71,11 +72,11 @@ l10n:
 
 言葉によっては、文脈によって複数の意味を持つことがあります。曖昧さを解決するために、以下のガイドラインに従ってください。
 
-- 用語の主ページは、 [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) マクロを含む曖昧さを表すページでなければなりません。
+- 用語の主ページは、 [`GlossaryDisambiguation`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/glossarydisambiguation.rs) マクロを含む曖昧さを表すページでなければなりません。
 - それぞれの文脈に応じた用語を定義する副ページを設置してください。
 
-例を用いて説明します。 _signature_ という用語は、セキュリティ、関数、メールなど 3 種類以上の文脈で異なる意味持ちます。
+例を用いて説明します。 _signature_ という用語は、セキュリティと関数という少なくとも 2 つの文脈で異なる意味を持ちます。
 
-1. [Glossary/Signature](/ja/docs/Glossary/Signature) のページは [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) マクロを含む曖昧さを表すページです。
+1. [Glossary/Signature](/ja/docs/Glossary/Signature) のページは [`GlossaryDisambiguation`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/glossarydisambiguation.rs) マクロを含む曖昧さを表すページです。
 2. [Glossary/Signature/Security](/ja/docs/Glossary/Signature/Security) ページはセキュリティの文脈における署名を定義しているページです。
 3. [Glossary/Signature/Function](/ja/docs/Glossary/Signature/Function) ページは関数シグネチャを定義しているページです。

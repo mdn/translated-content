@@ -3,25 +3,25 @@ title: '`<input type="url">` 属性値'
 short-title: <input type="url">
 slug: Web/HTML/Reference/Elements/input/url
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 {{HTMLElement("input")}} 要素の **`url`** 型は、ユーザーに URL を入力および編集させるために使用します。
 
+入力値はフォームの送信前に自動的に検証され、空欄または正しい形式の URL のどちらかであることが確認されます。 CSS の {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラスが適切に自動適用され、フィールドの現在の値が妥当な URL かどうかを視覚的に示します。
+
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;url&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<form>
-  <label for="url">https:// の URL を入力してください:</label>
-  <input
-    type="url"
-    name="url"
-    id="url"
-    placeholder="https://example.com"
-    pattern="https://.*"
-    size="30"
-    required />
-</form>
+<label for="url">https:// の URL を入力してください:</label>
+<input
+  type="url"
+  name="url"
+  id="url"
+  placeholder="https://example.com"
+  pattern="https://.*"
+  size="30"
+  required />
 ```
 
 ```css interactive-example
@@ -38,8 +38,6 @@ label {
 }
 ```
 
-入力値はフォームの送信前に自動的に検証され、空欄または正しい形式の URL のどちらかであることが確認されます。 CSS の {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラスが自動的に適用され、フィールド上の現在の値が妥当な URL であるかどうかを視覚的に示します。
-
 ## 値
 
 {{HTMLElement("input")}} 要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性には、自動的に URL の構文として検証される文字列が入ります。より具体的に言うと、検証を通る値の書式は下記の 2 通りがあります。
@@ -47,7 +45,7 @@ label {
 1. 空文字列 ("")。ユーザーが値を入力しないか、または値が削除されたことを示します。
 2. 単一の整形式の絶対 URL。これがあるからといって、その URL アドレスが存在するということには必ずしもなりません。しかし、少なくとも整形式で書式化されています。 `urlscheme://rest-of-url` に一致する項目は、入力された `urlscheme` が存在しなくても有効である可能性があります。
 
-[検証](#検証)の節で、どのようなメールアドレスが正しい形式であると検証されるかの詳細を参照してください。
+[検証](#検証)の節で、どのような URL が正しい形式であると検証されるかの詳細を参照してください。
 
 ## 追加の属性
 
@@ -76,7 +74,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 `pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) が[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは {{Glossary("ASCII")}} ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
-指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
+指定されたパターンがないか、無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
 > [!NOTE]
 > [`title`](/ja/docs/Web/HTML/Reference/Elements/input#title) 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
@@ -196,7 +194,7 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 
 ### デフォルトのオプションの提供
 
-#### value 属性を言使用した単一のデフォルト値の提供
+#### value 属性を使用した単一のデフォルト値の提供
 
 他と同様に、 `url` 入力欄に [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性を設定することでデフォルト値を指定することができます。
 
@@ -296,9 +294,17 @@ URL の構文はかなり入り組んでいます。 WHATWG の [URL Living Stan
 </form>
 ```
 
+```js hidden live-sample___url-validation
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
+```
+
 #### CSS
 
-CSS では、コンテンツが {{cssxref(":valid")}} であるかか {{cssxref(":invalid")}} であるかを適切な {{cssxref("content")}} プロパティを追加することでユーザーに視覚的に示し、 [代替テキスト](/ja/docs/Web/CSS/Reference/Properties/content#代替テキストにカウンターを含める)を含みます。
+CSS では、コンテンツが {{cssxref(":valid")}} であるか {{cssxref(":invalid")}} であるかを、適切な {{cssxref("content")}} プロパティを追加してユーザーに視覚的に示します。また、支援技術を利用するユーザーのための[代替テキスト](/ja/docs/Web/CSS/Reference/Properties/content#代替テキストにカウンターを含める)も含めます。
 
 ```css live-sample___url-validation
 input:focus:invalid {
@@ -371,14 +377,6 @@ input:valid + span::after {
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>

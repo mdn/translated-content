@@ -73,7 +73,7 @@ ws --https
 
 为了获得 PWA 的额外特性，包括单击安装、独立 UI 和应用商店许可，它需要成为一个 PWA，这意味着它需要一个 service worker（这意味这我们需要安全连接）。为了分发你的应用程序，使别人能够查看、使用和安装你的 PWA，你最好在安全的*远程*服务器上托管你的内容并使其可访问。
 
-正式发布 PWA 时，你可能希望投资[域名和 Web 托管](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#托管)。对于开源项目，开发人员可以从代码库中学习，甚至为项目做出贡献，你可以在 [GitHub Pages](https://pages.github.com/) 上托管你的进度。
+正式发布 PWA 时，你可能希望投资 [Web 托管和域名](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#获取托管服务和域名)。对于开源项目，开发人员可以从代码库中学习，甚至为项目做出贡献，你可以在 [GitHub Pages](https://pages.github.com/) 上托管你的进度。
 
 ## GitHub pages
 

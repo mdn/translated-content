@@ -3,10 +3,10 @@ title: Array.prototype.some()
 short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-**`some()`** は {{jsxref("Array")}} インスタンスのメソッドで、指定された関数で実装されているテストに、配列の中の少なくとも 1 つの要素が合格するかどうかを判定します。配列の中で指定された関数が true を返す要素を見つけた場合は true を返し、そうでない場合は false を返します。配列は変更しません。
+**`some()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列内に指定された判定関数を満たす要素を見つけた場合、`true` を返します。そうでない場合は、`false` を返します。
 
 {{InteractiveExample("JavaScript デモ: Array.prototype.some()")}}
 
@@ -175,7 +175,7 @@ console.log(Array.prototype.some.call(arrayLike, (x) => typeof x === "number"));
 
 ## 関連情報
 
-- [`Array.prototype.some` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.some` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.some` のポリフィル](https://www.npmjs.com/package/array.prototype.some)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
