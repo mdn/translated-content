@@ -12,7 +12,7 @@ Dans cet article, nous présentons les éléments principaux à connaître pour 
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez déjà connaître
-        <a href="/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need"
+        <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >les différents logiciels nécessaires pour construire un site web</a
         >.
       </td>

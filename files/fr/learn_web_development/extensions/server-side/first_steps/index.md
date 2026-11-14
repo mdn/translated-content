@@ -13,8 +13,8 @@ Pour suivre ce module, aucune connaissance en programmation web côté serveur o
 Vous aurez besoin de comprendre "comment fonctionne le web". Nous vous recommandons de lire d'abord les sujets suivants :
 
 - [Qu'est-ce qu'un serveur web](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
-- [De quel logiciel ai-je besoin pour créer un site web ?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- [Comment transférer des fichiers sur un serveur web ?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [De quel logiciel ai-je besoin pour créer un site web ?](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
+- [Comment transférer des fichiers sur un serveur web ?](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 
 Avec cette compréhension de base, vous serez prêts à parcourir les modules de cette section.
 
