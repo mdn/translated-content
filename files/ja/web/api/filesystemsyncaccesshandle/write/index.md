@@ -1,43 +1,51 @@
 ---
-title: FileSystemSyncAccessHandle.write()
+title: "FileSystemSyncAccessHandle: write() メソッド"
+short-title: write()
 slug: Web/API/FileSystemSyncAccessHandle/write
 l10n:
-  sourceCommit: 4a170c27cd0407a7cfabad8ebd9c821468f22c76
+  sourceCommit: 7cac5cc51350b7688903656bb36d79152f82d01f
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers("dedicated")}}
 
-{{domxref("FileSystemSyncAccessHandle")}} インターフェイスの **`write()`** メソッドは、指定のバッファーの内容をハンドルに対応するファイルに書き込みます。オフセットを指定することもできます。`ArrayBuffer` の内容を直接操作することはできないことに注意してください。かわりに、バッファーを指定の形式で表す {{jsxref("Int8Array")}} などの型付き配列オブジェクトの一つ、または {{jsxref("DataView")}} オブジェクトを作成し、それを用いてバッファーの内容を読み書きします。
+**`write()`** は {{domxref("FileSystemSyncAccessHandle")}} インターフェイスのメソッドで、指定したバッファーの内容をハンドルに対応するファイルに書き込みます。オフセットを指定することもできます。
 
-{{domxref('FileSystemSyncAccessHandle.write()')}} により行われる書き込みは in-place です。すなわち、変更は writer に書き込まれるのと同時に実際のファイルに書き込まれます。これは ({{domxref('FileSystemFileHandle.createWritable()')}} などの) {{domxref("File System Access API", "File System Access API", "", "nocode")}} で利用可能な他の書き込みの仕組みでは成り立たず、変更は書き込みストリームが閉じられるまでディスクに書き込まれません。
+エンドユーザーには見えない[オリジンプライベートファイルシステム](/ja/docs/Web/API/File_System_API/Origin_private_file_system)内のファイルは、ユーザーに見えるファイルシステム内のファイルに対する操作と同じセキュリティチェックの対象になりません。そのため、`FileSystemSyncAccessHandle.write()` による書き込みはパフォーマンスが大幅に向上します。このような特性により、[SQLite](https://sqlite.org/wasm)<sup>(英語)</sup> データベースの変更など、大規模なファイル更新に適しています。
 
 ## 構文
 
 ```js-nolint
-write(buffer, FileSystemReadWriteOptions)
+write(buffer, options)
 ```
 
 ### 引数
 
 - `buffer`
-  - : ファイルに書き込むバッファーを表す {{jsxref("ArrayBuffer")}} または ({{jsxref("DataView")}} などの) `ArrayBufferView` です。
-- `FileSystemReadWriteOptions` {{optional_inline}}
+  - : ファイルに書き込むバッファーを表す {{jsxref("ArrayBuffer")}} または（{{jsxref("DataView")}} などの）`ArrayBufferView` です。
+- `options` {{optional_inline}}
   - : 以下のプロパティを含むオプションオブジェクトです。
     - `at`
       - : バッファーを書き込むファイルの先頭からのバイト単位のオフセットを表す数値です。
 
+> [!NOTE]
+> `ArrayBuffer` の内容を直接操作することはできません。代わりに、バッファーを特定の形式で表す {{jsxref("Int8Array")}} などの型付き配列オブジェクト、または {{jsxref("DataView")}} オブジェクトを作成し、それを用いてバッファーの内容を読み書きします。
+
 ### 返値
 
-ファイルに書き込まれたバイト数を表す数値で解決する {{jsxref('Promise')}} を返します。
+ファイルに書き込まれたバイト数を表す数値です。
 
 ### 例外
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : 対応するアクセスハンドルが既に閉じられているとき投げられます。
+  - : 対応するアクセスハンドルがすでに閉じられている場合、またはファイルのバイナリーデータの変更が完全に失敗した場合に発生します。
+- {{domxref("QuotaExceededError")}}
+  - : 書き込みによるデータ容量の増加がブラウザーの[ストレージ制限](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)を超える場合に発生します。
+- {{jsxref("TypeError")}}
+  - : 基盤となるファイルシステムが、指定されたファイルオフセットからの書き込みに対応していない場合に発生します。
 
 ## 例
 
-以下の非同期のイベントハンドラー関数は、Web Worker の中にあります。メインスレッドからメッセージを受信すると、以下の動作をします。
+以下の非同期のイベントハンドラー関数は、ウェブワーカーの中にあります。メインスレッドからメッセージを受信すると、以下の動作をします。
 
 - 同期式ファイルアクセスハンドルを作成します。
 - ファイルのサイズを取得し、格納用の {{jsxref("ArrayBuffer")}} を作成します。
@@ -50,7 +58,7 @@ onmessage = async (e) => {
   // メインスクリプトからの処理対象のメッセージを取得する
   const message = e.data;
 
-  // draft ファイルのハンドルを取得する
+  // 下書きファイルのハンドルを取得する
   const root = await navigator.storage.getDirectory();
   const draftHandle = await root.getFileHandle("draft.txt", { create: true });
   // 同期式のアクセスハンドルを取得する
@@ -76,7 +84,7 @@ onmessage = async (e) => {
 ```
 
 > [!NOTE]
-> 仕様書の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}・{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}・{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}・{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は誤って非同期のメソッドとされていました。これは現在は[変更されています](https://github.com/whatwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
+> 仕様書の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}、{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は誤って非同期メソッドとして規定されていました。一部のブラウザーの古いバージョンでは、これらのメソッドがそのように実装されています。しかし、これらのメソッドに対応する現行のブラウザーでは、すべて同期メソッドとして実装されています。
 
 ## 仕様書
 
@@ -88,5 +96,5 @@ onmessage = async (e) => {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [ファイルシステム API](/ja/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access) <sup>(英語)</sup>
