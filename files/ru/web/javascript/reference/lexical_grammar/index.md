@@ -255,7 +255,7 @@ false;
 0777; // распознается, как восьмеричное число, 511 - как десятичное число
 ```
 
-Имейте в виду, что литералы десятичных чисел могут начинаться с нуля (0), за которым следует другое десятичное число, но в случае, если число начинается с нуля и за ним идёт цифра меньше 8, то число будет распознано как восьмеричное. This won't throw in JavaScript, see [Firefox bug 957513](https://bugzil.la/957513). See also the page about `{{jsxref('parseInt','parseInt()','Octal_interpretations_with_no_radix')}}`.
+Имейте в виду, что литералы десятичных чисел могут начинаться с нуля (0), за которым следует другое десятичное число, но в случае, если число начинается с нуля и за ним идёт цифра меньше 8, то число будет распознано как восьмеричное. This won't throw in JavaScript, see [Firefox bug 957513](https://bugzil.la/957513). See also the page about `{{jsxref('parseInt','parseInt()','#Octal_interpretations_with_no_radix')}}`.
 
 #### Binary (двоичные числа)
 
@@ -400,7 +400,7 @@ tag`string text ${expression} string text`;
 
 2\. Точка с запятой ставится в конце, когда обнаружен конец вводимой строки токенов и парсер is unable to parse the single input stream as a complete program.
 
-Here `++` is not treated as a {{jsxref('Operators','postfix operator','Increment')}} applying to variable `b`, because a line terminator occurs between `b` and `++`.
+Here `++` is not treated as a {{jsxref('Operators','postfix operator','#Increment')}} applying to variable `b`, because a line terminator occurs between `b` and `++`.
 
 ```js-nolint
 a = b
