@@ -1,8 +1,9 @@
 ---
-title: content-visibility
+title: "`content-visibility` プロパティ"
+short-title: content-visibility
 slug: Web/CSS/Reference/Properties/content-visibility
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: c4e64810ce10fb5cb1eebfcd8b6f526866fd0982
 ---
 
 **`content-visibility`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がそのコンテンツをレンダリングするかどうかを制御するとともに、強力な抑制のセットを強制することで、必要になるまでユーザーエージェントが大量のレイアウトとレンダリングの作業を省略できるようにします。基本的に、ユーザーエージェントは、レイアウトやペイントなどの要素のレンダリング作業を必要になるまでスキップできるため、最初のページの読み込みがはるかに高速になります。
@@ -71,6 +72,8 @@ content-visibility: unset;
 
 ### 値
 
+このプロパティは、以下のキーワード値のいずれかとして指定します。
+
 - `visible`
   - : 効果なし。要素のコンテンツは通常通りにレイアウトおよび描画されます。これがデフォルト値です。
 - `hidden`
@@ -96,6 +99,13 @@ content-visibility: unset;
 > [!NOTE]
 > 要素の `content-visibility` 値をトランジションさせるとき、 [`display`](/ja/docs/Web/CSS/Reference/Properties/display#display_のアニメーション) をトランジションさせるときのように、{{cssxref("@starting-style")}} ブロックを使用して、トランジションするプロパティの開始値の集合を提供する必要はありません。これは `content-visibility` が `display` のように要素を DOM から隠すのではなく、要素のコンテンツのレンダリングをスキップするだけだからです。
 
+## アクセシビリティ
+
+`content-visibility: auto` プロパティ内にあるオフスクリーンコンテンツは、ドキュメントオブジェクトモデルとアクセシビリティツリー内に残ります。これにより、アクセシビリティに悪影響を与えることなく、 `content-visibility: auto` でページのパフォーマンスを改善することができます。
+
+オフスクリーンコンテンツのスタイルはレンダリングされないので、 `display: none` や `visibility: hidden` で意図的に非表示にした要素はアクセシビリティツリーに現れます。
+要素をアクセシビリティツリーに現れたくない場合は、 `aria-hidden="true"` を使用してください。
+
 ## 公式定義
 
 {{cssinfo}}
@@ -103,13 +113,6 @@ content-visibility: unset;
 ## 形式文法
 
 {{CSSSyntax}}
-
-## アクセシビリティ
-
-`content-visibility: auto` プロパティ内にあるオフスクリーンコンテンツは、ドキュメントオブジェクトモデルとアクセシビリティツリー内に残ります。これにより、アクセシビリティに悪影響を与えることなく、 `content-visibility: auto` でページのパフォーマンスを改善することができます。
-
-オフスクリーンコンテンツのスタイルはレンダリングされないので、 `display: none` や `visibility: hidden` で意図的に非表示にした要素はアクセシビリティツリーに現れます。
-要素をアクセシビリティツリーに現れたくない場合は、 `aria-hidden="true"` を使用してください。
 
 ## 例
 
@@ -205,7 +208,7 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 
 #### 結果
 
-{{ EmbedLiveSample('Using hidden to manually manage visibility') }}
+{{ EmbedLiveSample('using_hidden_to_manage_visibility') }}
 
 ### content-visibility のアニメーション
 
