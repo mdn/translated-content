@@ -1,9 +1,9 @@
 ---
 title: PHP
 slug: Glossary/PHP
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 PHP (再帰的な頭文字語で PHP: Hypertext Preprocessor) はオープンソースのサーバー側スクリプト言語で、 HTML に組み込んで、ウェブアプリや動的なウェブサイトを構築することができます。
 
@@ -12,18 +12,18 @@ PHP (再帰的な頭文字語で PHP: Hypertext Preprocessor) はオープンソ
 ### 基本的な文法
 
 ```php
-  // start of PHP code
+// PHP コードの開始
 <?php
-     // PHP code goes here
- ?>
-// end of PHP code
+  // PHP コードをここに記述
+?>
+// PHP コードの終了
 ```
 
 ### 画面にデータを出力する
 
 ```php
 <?php
-   echo "Hello World!";
+  echo "Hello World!";
 ?>
 ```
 
@@ -31,25 +31,27 @@ PHP (再帰的な頭文字語で PHP: Hypertext Preprocessor) はオープンソ
 
 ```php
 <?php
- // variables
- $nome='Danilo';
- $sobrenome='Santos';
- $pais='Brasil';
- $email='danilocarsan@gmailcom';
+  // 変数
+  $name='Danilo';
+  $surname='Santos';
+  $country='Brasil';
+  $email='danilocarsan@gmail.com';
 
- // printing the variables
- echo $nome;
- echo $sobrenome;
- echo $pais;
- echo $email;
+  // 変数を出力
+  echo $name;
+  echo $surname;
+  echo $country;
+  echo $email;
 ?>
 ```
 
-1. [公式ウェブサイト](http://php.net/)
-2. Wikipedia 上の [PHP](https://ja.wikipedia.org/wiki/PHP)
-3. Wikibooks 上の [PHP](https://ja.wikibooks.org/wiki/PHP)
-4. 関連用語:
-   1. {{Glossary("Java")}}
-   2. {{Glossary("JavaScript")}}
-   3. {{Glossary("Python")}}
-   4. {{Glossary("Ruby")}}
+## 関連情報
+
+- [公式ウェブサイト](https://www.php.net/)
+- [PHP](https://ja.wikipedia.org/wiki/PHP) - ウィキペディア
+- [PHP](https://ja.wikibooks.org/wiki/PHP_Programming) - ウィキブックス
+- 関連する用語集項目:
+  - {{Glossary("Java")}}
+  - {{Glossary("JavaScript")}}
+  - {{Glossary("Python")}}
+  - {{Glossary("Ruby")}}

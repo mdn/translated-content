@@ -1,18 +1,12 @@
 ---
-title: Privileged
+title: Privileged (特権)
 slug: Glossary/Privileged
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+システムに対する追加の権限を与えられているユーザーや、通常のユーザーよりも高い優先度レベルにあるコンテンツへの完全なアクセス権を与えられているユーザーは、**特権**ユーザーと呼ばれます。
 
-ユーザーは、システムに対する追加の権限が付与されている場合、または通常のユーザーと比較してより高い優先度レベルのコンテンツへの最終的なアクセス権が付与されている場合に、**特権がある**と言われます。
+## 関連情報
 
-## 関連項目
-
-### 一般知識
-
-- Wikipedia 上の [Privilege (computing)](<https://en.wikipedia.org/wiki/Privilege_(computing)>) (英語)
-
-### これについて学ぶ
-
-- [Information Security Tutorial](/ja/docs/Learn/tutorial/Information_Security_Basics)
+- [Privilege (computing)](<https://en.wikipedia.org/wiki/Privilege_(computing)>)<sup>(英語)</sup> - Wikipedia

@@ -1,12 +1,12 @@
 ---
 title: Presto
 slug: Glossary/Presto
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Presto は、バージョン 15 までの {{Glossary("Opera browser")}} を支えていた独自のブラウザーレイアウトエンジンでした。それ以降の Opera ブラウザーは、{{Glossary("Blink")}} レイアウトエンジンを使用する Chromium をベースにしています。
 
-Presto は、バージョン 15 までの {{Glossary("Opera browser")}} を強化する為に使用された独自のブラウザーレイアウトエンジンでした。それ以降の Opera browser は、 {{Glossary('Blink')}} レイアウトエンジンを使用する Chromium をベースにしています。
+## 関連情報
 
-## 関連項目
-
-- Wikipedia 上の [Presto layout engine](http://en.wikipedia.org/wiki/Presto_%28layout_engine%29)
+- [Presto](https://ja.wikipedia.org/wiki/Presto) - ウィキペディア

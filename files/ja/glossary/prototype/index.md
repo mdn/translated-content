@@ -1,16 +1,14 @@
 ---
-title: Prototype
+title: Prototype (プロトタイプ)
 slug: Glossary/Prototype
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-プロトタイプは、開発ライフサイクルの早い段階でアプリケーションや製品の外観と動作を表現する型です。
+プロトタイプは、開発ライフサイクルの初期段階で、アプリケーションや製品の外観や動作を示すモデルです。
 
 [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) をご覧ください。
 
-## 理解を深める
+## 関連情報
 
-### 基礎知識
-
-- ウィキペディアの [ソフトウェアプロトタイピング](https://ja.wikipedia.org/wiki/ソフトウェアプロトタイピング) の記事
+- [ソフトウェアプロトタイピング](https://ja.wikipedia.org/wiki/ソフトウェアプロトタイピング) - ウィキペディア
