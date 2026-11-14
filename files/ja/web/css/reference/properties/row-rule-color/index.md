@@ -1,14 +1,14 @@
 ---
-title: "`row-rule-color` プロパティ (CSS)"
+title: "`row-rule-color` プロパティ"
 short-title: row-rule-color
 slug: Web/CSS/Reference/Properties/row-rule-color
 l10n:
-  sourceCommit: b6de98eb9cd52ce7e37f22a340352f0af4c9d597
+  sourceCommit: 5fd3b03e9ad1ee4e8bc64d4f6888570690a7fbc8
 ---
 
 {{SeeCompatTable}}
 
-**`row-rule-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、複数行のグリッド、フレックス、段組みレイアウトで行間に引かれる罫線の色を設定します。
+**`row-rule-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、複数行を持つグリッド、フレックスボックス、段組みレイアウトにおいて、行間に引かれる罫線の色を設定します。
 
 {{InteractiveExample("CSS デモ: row-rule-color")}}
 
@@ -95,7 +95,7 @@ row-rule-color: unset;
 
 ## 解説
 
-`row-rule-color` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)のコンテナーに複数の行がある場合に、行間のギャップに描画される罫線の色を定義します。
+`row-rule-color` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)の各コンテナーに複数の行がある場合に、行間の隙間に描画される罫線の色を定義します。
 
 この値は、カンマで区切られた一連の成分からなり、`<line-color>`、`<repeat-line-color>`、`<auto-repeat-line-color>` といった型を含めることができます。
 
@@ -136,13 +136,13 @@ row-rule-color:
   );
 ```
 
-これにより、5 色の色リストが作成されます。`row-rule-color` の値に含まれる色リストの色数が、行・段間の数を超えた場合、余分な色値は無視されます。コンテナーが 3 列の場合、1 番目の行・段間に適用される罫線は青、2 番目の行・段間に適用される罫線は黄色になります。
+これにより、5 色の色リストが作成されます。`row-rule-color` の値に含まれる色の数が行間の隙間の数を超えた場合、余分な色値は無視されます。コンテナーに 3 行ある場合、最初の行間罫は青、2 番目の行間罫は黄色になります。
 
-溝の数が色の数より多い場合、すべての行・段間罫線に色が割り当てられるまで、色のリストが繰り返されます。コンテナーの行数が 6、11、16、21 行の場合、この色の順序はそれぞれ 1 回、2 回、3 回、4 回繰り返され、最後は赤になります。
+行間の隙間の数が色の数より多い場合、すべての行間罫に色が割り当てられるまで、色のリストが繰り返されます。コンテナーの行数が 6、11、16、21 の場合、色の並びはそれぞれ 1 回、2 回、3 回、4 回繰り返され、最後の色は赤になります。
 
 ### 自動反復される罫線の色
 
-`repeat()` 関数は、正の整数の代わりに、第一引数として `auto` を受け取ることもできます。第一引数に `auto` を指定すると、その後の引数として渡された `<color>` の値は、プロパティ値の他の要素によって明示的に指定されていない行・段間罫線に対して、値を埋めるのに必要な回数だけ繰り返されます。
+`repeat()` 関数は、正の整数の代わりに、第一引数として `auto` を受け取ることもできます。第一引数に `auto` を指定すると、その後の引数として渡された `<color>` の値は、プロパティ値の他の要素によって明示的に指定されていない行間罫に値を補うために、必要な回数だけ繰り返されます。
 
 ```css
 row-rule-color: blue, repeat(auto, yellow), red;
@@ -202,7 +202,9 @@ ul {
 
 ### 複数の値
 
-この例では、色のリスト内にある値の数が、行間の溝の数よりも少ない場合、値が繰り返し使用される様子を示しています。
+この例では、色のリスト内にある値の数が、行間の隙間の数よりも少ない場合に、値が繰り返し使用される様子を示しています。
+
+#### CSS
 
 前回の例と同じ HTML と CSS を使用し、`row-rule-color` の値として、カンマで区切られた 3 つの色を指定します。
 
@@ -212,11 +214,15 @@ ul {
 }
 ```
 
+#### 結果
+
 {{EmbedLiveSample("Repeat", "", "180")}}
 
 ### `repeat()` 関数の使用
 
 この例では、`repeat()` 関数を `row-rule-color` プロパティの値内で使用する方法と、この関数が複雑な値を扱いにくさを軽減することを示しています。
+
+#### CSS
 
 前回の例と同じ HTML と CSS を使用します。値がどのように複雑になり得るか、および `repeat()` 関数の有用性を示すために、2 つのカスタムプロパティを宣言し、それらを 3 つの {{cssxref("color-mix()")}} 色関数の宣言で使用して、前回の例と同じ青、赤、黄の色を生成します。2 つ目は `repeat()` 関数内にあり、3 回繰り返すように設定されています。
 
@@ -231,21 +237,27 @@ ul {
 }
 ```
 
+#### 結果
+
 {{EmbedLiveSample("func", "", "180")}}
 
-フレックスコンテナーには 6 つの行があるため、溝は 5 つあります。`repeat()` 関数は 2 つ目の色を 3 回繰り返すため、5 色の色リストが作成されます。行間の溝の数は色の総数と同じであるため、色が繰り返されることはありません。
+フレックスコンテナーには 6 つの行があるため、行間の隙間は 5 つあります。`repeat()` 関数は 2 つ目の色を 3 回繰り返すため、5 色の色リストが作成されます。行間の隙間の数は色の総数と同じであるため、色が繰り返されることはありません。
 
 ### `auto` を `repeat()` で使用
 
 この例では、`repeat()` 関数内で整数の代わりに `auto` を使用する方法を示しています。
 
-`repeat(auto, <color>)` を使用することで、最初と最後の罫線を除き、すべての罫線をほぼ透明な黒 (`#0003`) に設定し、最初と最後の罫線は不透明な `black` に設定します。
+#### CSS
+
+`repeat(auto, <color>)` を使用することで、最初と最後の罫線を除き、すべての罫線をほぼ透明な黒 (`#00000033`) に設定し、最初と最後の罫線は不透明な `black` に設定します。
 
 ```css live-sample___auto
 ul {
-  row-rule-color: black, repeat(auto, #0003), black;
+  row-rule-color: black, repeat(auto, #00000033), black;
 }
 ```
+
+#### 結果
 
 {{EmbedLiveSample("auto", "", "180")}}
 
@@ -279,4 +291,5 @@ ul {
 - {{cssxref("row-rule")}} 一括指定
 - {{cssxref("rule-color")}} 一括指定
 - {{cssxref("rule")}} 一括指定
+- [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)モジュール

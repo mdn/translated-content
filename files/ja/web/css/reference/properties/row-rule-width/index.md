@@ -1,14 +1,14 @@
 ---
-title: "`row-rule-width` プロパティ (CSS)"
+title: "`row-rule-width` プロパティ"
 short-title: row-rule-width
 slug: Web/CSS/Reference/Properties/row-rule-width
 l10n:
-  sourceCommit: a9dc3374034d357cbfea717fd5d641605359e3c7
+  sourceCommit: 5fd3b03e9ad1ee4e8bc64d4f6888570690a7fbc8
 ---
 
 {{SeeCompatTable}}
 
-**`row-rule-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、複数行のグリッド、フレックス、段組みレイアウトで行の間に引かれる罫線の太さを設定します。
+**`row-rule-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、複数の行を持つグリッド、フレックスボックス、段組みレイアウトにおいて、行間に引かれる罫線の太さを設定します。
 
 {{InteractiveExample("CSS デモ: row-rule-width")}}
 
@@ -95,7 +95,7 @@ row-rule-width: unset;
 
 ## 解説
 
-`row-rule-width` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)のコンテナーで隣り合う行の間の溝に描画される罫線の太さを定義します。
+`row-rule-width` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)の各コンテナーで、隣り合う行の間の隙間に描画される罫線の太さを定義します。
 
 この値は、カンマ区切りの一連の成分からなり、`<line-width>`、`<repeat-line-width>`、`<auto-repeat-line-width>` といった型を含めることができます。
 
@@ -137,9 +137,9 @@ row-rule-width:
   thin;
 ```
 
-これにより、6 つの太さのリストが作成されます。`row-rule-width` の値に含まれる太さのリストにある太さの数が、行間の数を超えた場合、余分な太さの値は無視されます。コンテナーが 3 行の場合、1 つ目の溝に適用される罫線は `1rem` の太さ、2 つ目の溝に適用される罫線は {{cssxref("min()")}} 関数で判断されます。
+これにより、6 つの太さのリストが作成されます。`row-rule-width` の値に含まれる太さの数が行間罫の数を超えた場合、余分な太さの値は無視されます。コンテナーが 3 行の場合、最初の行間罫は `1rem` の太さになり、2 番目の行間罫の太さは {{cssxref("min()")}} 関数で決まります。
 
-溝の数の方が太さの数より多い場合、太さのリストが繰り返されます。コンテナーの列・段数が 7、13、19、25 の場合、この太さの並びははそれぞれ 1 回、2 回、3 回、4 回繰り返され、最後の罫線は `thin` となります。
+行間の隙間の数が太さの数より多い場合、太さのリストが繰り返されます。コンテナーの行数が 7、13、19、25 の場合、この太さの並びはそれぞれ 1 回、2 回、3 回、4 回繰り返され、最後の罫線は `thin` になります。
 
 ### 自動反復される罫線の太さ
 
@@ -149,7 +149,7 @@ row-rule-width:
 row-rule-width: thin, repeat(auto, medium), thin;
 ```
 
-この場合、コンテナーの行数が 3、6、11、16、21 のいずれであっても、最初と最後の行は常に `thin` となり、それ以外のすべての行間罫線は `medium` になります。行数が 2 行または 3 行しかない場合は、`medium` サイズの行間罫線は現れません。
+この場合、コンテナーの行数が 3、6、11、16、21 のいずれであっても、最初と最後の行間罫は常に `thin` となり、それ以外のすべての行間罫は `medium` になります。行が 2 つまたは 3 つしかない場合、`medium` の行間罫はありません。
 
 `auto` キーワードを`repeat()` 関数内で使用すると、リストの他の部分から値を受け取らない行罫線の幅の値を設定する自動リピーターを作成し、リストが繰り返されるのを防ぎます。`row-rule-width` の値内では、`repeat(auto, <width>)` を 1 つだけ指定することができます。
 
@@ -205,6 +205,8 @@ ul {
 
 この例では、太さのリスト内にある値の数が、行間罫よりも少ない場合、値が繰り返される様子を示しています。
 
+#### CSS
+
 前の例と同じ HTML と CSS を使用し、`row-rule-width` の値として、カンマで区切られた 3 つの太さを指定します。
 
 ```css live-sample___repeat
@@ -213,11 +215,15 @@ ul {
 }
 ```
 
+#### 結果
+
 {{EmbedLiveSample("Repeat", "", "180")}}
 
 ### `repeat()` 関数の使用
 
-この例では、`repeat()` 関数を `row-rule-width` プロパティの値内で使用する方法と、この関数が値の宣言を縮小するのに役立つことを示しています。
+この例では、`repeat()` 関数を `row-rule-width` プロパティの値内で使用する方法と、この関数によって値の宣言を簡潔にできることを示しています。
+
+#### CSS
 
 前回の例と同じ HTML と CSS を使用します。値が冗長になり得ることや、`repeat()` 関数の有用性を示すために、2 つのカスタムプロパティを宣言し、それらを `repeat()` 関数の宣言で使用します。`repeat()` 関数は、2 つの `<line-width>` 値のリストを 3 回繰り返すように設定します。
 
@@ -236,6 +242,8 @@ ul {
 }
 ```
 
+#### 結果
+
 {{EmbedLiveSample("func", "", "180")}}
 
 このフレックスコンテナーには 6 つの行があるため、溝は 5 つあります。`repeat()` 関数は 2 つの太さを 3 回繰り返すため、8 つの太さからなるリストが生成されます。行の溝の数が太さの数より少ないため、リストの最後の 3 つの値は破棄されます。
@@ -243,6 +251,8 @@ ul {
 ### `auto` を `repeat()` で使用
 
 この例では、`repeat()` 関数内で整数の代わりに `auto` を使用する方法を示しています。
+
+#### CSS
 
 `repeat(auto, <line-width>)` を使用することで、最初と最後の罫線を除き、すべての罫線を `1px` に設定し、最初と最後の罫線は不透明な `5px` に設定します。
 
@@ -252,13 +262,15 @@ ul {
 }
 ```
 
+#### 結果
+
 {{EmbedLiveSample("auto", "", "180")}}
 
 ```css hidden live-sample___basic live-sample___repeat live-sample___func live-sample___auto
 @layer no-support {
   @supports not (row-rule-width: thin, thick) {
     body::before {
-      content: "このブラウザーは row-rule-width プロパティに対応していません";
+      content: "このブラウザーは row-rule-width プロパティでの複数の値の使用に対応していません。";
       background-color: wheat;
       display: block;
       text-align: center;
@@ -284,4 +296,5 @@ ul {
 - {{cssxref("row-rule")}} 一括指定
 - {{cssxref("rule-width")}} 一括指定
 - {{cssxref("rule")}} 一括指定
+- [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)モジュール

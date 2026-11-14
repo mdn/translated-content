@@ -1,14 +1,14 @@
 ---
-title: "`row-rule-style` プロパティ (CSS)"
+title: "`row-rule-style` プロパティ"
 short-title: row-rule-style
 slug: Web/CSS/Reference/Properties/row-rule-style
 l10n:
-  sourceCommit: a9dc3374034d357cbfea717fd5d641605359e3c7
+  sourceCommit: 5fd3b03e9ad1ee4e8bc64d4f6888570690a7fbc8
 ---
 
 {{SeeCompatTable}}
 
-**`row-rule-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、複数行のグリッド、フレックス、段組みレイアウトで行の間に引かれる罫線のスタイルを設定します。
+**`row-rule-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、複数の行を持つグリッド、フレックスボックス、段組みレイアウトにおいて、行間に引かれる罫線のスタイルを設定します。
 
 {{InteractiveExample("CSS デモ: row-rule-style")}}
 
@@ -90,7 +90,7 @@ row-rule-style: unset;
 
 ## 解説
 
-`row-rule-style` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)のコンテナーに複数の行がある場合に、行間のギャップに描画される罫線のスタイルを定義します。
+`row-rule-style` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)の各コンテナーに複数の行がある場合に、行間の隙間に描画される罫線のスタイルを定義します。
 
 この値は、カンマ区切りの一連の成分からなり、`<line-style>`、`<repeat-line-style>`、`<auto-repeat-line-style>` といった型を含めることができます。
 
@@ -117,7 +117,7 @@ row-rule-style: solid, outset, inset, outset, inset;
 row-rule-style: solid, repeat(2, outset, inset);
 ```
 
-これにより、5 つのスタイルのリストが作成されます。`row-rule-style` の値に含まれるスタイルリストのスタイル数が、行間の数を超えた場合、余分なスタイル値は無視されます。コンテナーが 3 列の場合、1 番目の行間に適用される罫線は `solid`、2 番目の列間に適用される罫線は `outset` になります。
+これにより、5 つのスタイルのリストが作成されます。`row-rule-style` の値に含まれるスタイルの数が行間罫の数を超えた場合、余分なスタイル値は無視されます。コンテナーに 3 行ある場合、最初の行間罫は `solid`、2 番目の行間罫は `outset` になります。
 
 溝の数の方がスタイルの数より多い場合、スタイルのリストが繰り返されます。コンテナーの行数が 6、11、16、21 の場合、このスタイルの順序はそれぞれ 1 回、2 回、3 回、4 回繰り返され、最後の罫線は `inset` となります。
 
@@ -129,7 +129,7 @@ row-rule-style: solid, repeat(2, outset, inset);
 row-rule-style: solid, repeat(auto, dotted), solid;
 ```
 
-この場合、コンテナーの行数が 3、6、11、16、21 のどれであっても、最初と最後の行間罫は常に `solid` となり、それ以外のすべての行間罫は `dotted` となります。列・段が 2 つまたは 3 つしかない場合は、点線の行間罫は存在しません。
+この場合、コンテナーの行数が 3、6、11、16、21 のどれであっても、最初と最後の行間罫は常に `solid` となり、それ以外のすべての行間罫は `dotted` となります。行が 2 つまたは 3 つしかない場合は、点線の行間罫はありません。
 
 `auto` キーワードを`repeat()` 関数内で使用すると、リストの他の部分から値を受け取らない罫線の値を設定する自動リピーターを作成し、リストが繰り返されるのを防ぎます。`row-rule-style` の値内では、`repeat(auto, <line-style>)` を 1 つだけ指定することができます。
 
@@ -186,6 +186,8 @@ ul {
 
 この例では、スタイルのリスト内にある値の数が、行間の罫線の数よりも少ない場合、値が繰り返し使用される様子を示しています。
 
+#### CSS
+
 前回の例と同じ HTML と CSS を使用し、`row-rule-style` の値として、カンマで区切られた 3 つのスタイルを記載します。
 
 ```css live-sample___repeat
@@ -194,17 +196,25 @@ ul {
 }
 ```
 
+#### 結果
+
 {{EmbedLiveSample("Repeat", "", "180")}}
 
 ### `repeat()` 関数の使用
 
-この例では、`repeat()` 関数を `row-rule-style` プロパティの値内で使用する方法について説明します。HTML と CSS は前回の例と同じものを使用します。`repeat()` 関数を記載し、2 つの `<line-style>` 値のリストを 3 回繰り返すように設定しています。
+この例では、`repeat()` 関数を `row-rule-style` プロパティの値内で使用する方法を示します。
+
+#### CSS
+
+前回の例と同じ HTML と CSS を使用します。`repeat()` 関数を記載し、2 つの `<line-style>` 値のリストを 3 回繰り返すように設定しています。
 
 ```css live-sample___func live-sample___auto
 ul {
   row-rule-style: double, repeat(3, inset, dashed), double;
 }
 ```
+
+#### 結果
 
 {{EmbedLiveSample("func", "", "180")}}
 
@@ -214,6 +224,8 @@ ul {
 
 この例では、`repeat()` 関数内で整数の代わりに `auto` を使用する方法を示しています。
 
+#### CSS
+
 `repeat(auto, <line-style>)` を使用することで、最初と最後の罫線を除き、すべての罫線を `dotted` に設定し、最初と最後の罫線は不透明な `solid` に設定します。
 
 ```css live-sample___auto
@@ -221,6 +233,8 @@ ul {
   row-rule-style: solid, repeat(auto, dotted), solid;
 }
 ```
+
+#### 結果
 
 {{EmbedLiveSample("auto", "", "180")}}
 
@@ -254,4 +268,5 @@ ul {
 - {{cssxref("row-rule")}} 一括指定
 - {{cssxref("rule-style")}} 一括指定
 - {{cssxref("rule")}} 一括指定
+- [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)モジュール
