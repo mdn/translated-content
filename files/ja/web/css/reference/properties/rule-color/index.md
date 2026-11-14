@@ -1,14 +1,14 @@
 ---
-title: "`rule-color` プロパティ (CSS)"
+title: "`rule-color` プロパティ"
 short-title: rule-color
 slug: Web/CSS/Reference/Properties/rule-color
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 04dfe418f2942ae739d41592c22fafa3679fc03c
 ---
 
 {{SeeCompatTable}}
 
-**`rule-color`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、複数列のグリッド、フレックス、段組みレイアウトにおいて、列や行の間に描画される線の色を定義し、列間罫と行間罫の色を同じ値に設定します。
+**`rule-color`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、複数列のグリッド、フレックスボックス、段組みレイアウトにおいて、列や行の間に描画される線の色を定義し、列間罫と行間罫の色を同じ値に設定します。
 
 {{InteractiveExample("CSS デモ: rule-color")}}
 
@@ -119,7 +119,7 @@ rule-color: unset;
 
 ## 解説
 
-`rule-color` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)コンテナーの列や行の隙間が複数ある場合に、その間に描画される線の色を定義します。これは、{{cssxref("row-rule-color")}} プロパティと {{cssxref("column-rule-color")}} プロパティの両方を同じ値に設定する一括指定プロパティです。
+`rule-color` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)コンテナーで、列または行が 2 つ以上ある場合に、それらの間の隙間に描画される線の色を定義します。これは、{{cssxref("row-rule-color")}} プロパティと {{cssxref("column-rule-color")}} プロパティの両方を同じ値に設定する一括指定プロパティです。
 
 この値は、カンマ区切りの一連の成分からなり、`<line-color>`、`<repeat-line-color>`、`<auto-repeat-line-color>` といった型を指定することができます。
 `rule-color` プロパティは、{{cssxref("rule-width")}} および {{cssxref("rule-style")}} プロパティとともに、{{cssxref("rule")}} 一括指定を使用して設定できます。
@@ -132,7 +132,7 @@ rule-color: unset;
 rule-color: blue;
 ```
 
-複数の `<line-color>` 値が宣言された場合、それらは列と行の溝に描画される線に、指定された順序で適用されます。罫線の数が `<line-color>` 値の数より多い場合は、すべての列罫線に色が割り当てられるまで、色のリストが繰り返し適用されます。例えば、次のように宣言すると、奇数番目の罫線はすべて赤になり、偶数番目の罫線はすべて黄色になります。
+複数の `<line-color>` 値が宣言された場合、それらは列と行の隙間に描画される線に、指定された順序で適用されます。罫線の数が `<line-color>` 値の数より多い場合は、すべての列間罫に色が割り当てられるまで、色のリストが繰り返し適用されます。例えば、次のように宣言すると、奇数番目の罫線はすべて赤になり、偶数番目の罫線はすべて黄色になります。
 
 ```css
 rule-color: red, yellow;
@@ -147,7 +147,7 @@ rule-color: blue, yellow, red, yellow, red, yellow, red;
 rule-color: blue, repeat(3, yellow, red);
 ```
 
-これにより、7 色の色リストが作成されます。`rule-color` の値に含まれる色リストの色数が、列や行の間の隙間の数を超える場合、超過分の色値は無視されます。色が溝の数より少ない場合は、すべての線に色が関連付けられるまで、値のリストが繰り返し適用されます。例えば、コンテナーが 3 列 18 行の場合、最初の列間の溝にある罫線は青、2 本目は黄色になります。行の罫線についても同様の順序が繰り返され、1 本目、8 本目、15 本目の罫線が青になります。
+これにより、7 色の色リストが作成されます。`rule-color` の値に含まれる色リストの色数が、列や行の間の隙間の数を超える場合、超過分の色値は無視されます。色が隙間の数より少ない場合は、すべての線に色が関連付けられるまで、値のリストが繰り返し適用されます。例えば、コンテナーが 3 列 18 行の場合、最初の列の隙間にある罫線は青、2 つ目の列の隙間にある罫線は黄色になります。行間罫についても同様の順序が繰り返され、1 本目、8 本目、15 本目の罫線が青になります。
 
 ### 線の色の自動繰り返し
 
@@ -296,7 +296,7 @@ li {
 @layer no-support {
   @supports not (rule-color: red) {
     body::before {
-      content: "Your browser doesn't support the rule-color property";
+      content: "このブラウザーは rule-color プロパティに対応していません";
       background-color: wheat;
       text-align: center;
       padding: 1rem 0;
@@ -312,11 +312,11 @@ li {
 
 #### 結果
 
-{{EmbedLiveSample("Basic", "", "600")}}
+{{EmbedLiveSample("Basic", "", "440")}}
 
 ### 複数の色値
 
-この例では、複数の色を宣言する方法と、色のリストに含まれる値の数が、列と行の間にあるガターの数よりも少ない場合に、値がどのように繰り返されるかを示しています。
+この例では、複数の色を宣言する方法と、色のリストに含まれる値の数が列や行の間の隙間の数より少ない場合に、値がどのように繰り返されるかを示しています。
 
 前回の例と同じ HTML と CSS を使用し、`rule-color` の値として、カンマで区切られた 3 つの色を記載します。
 
@@ -324,7 +324,7 @@ li {
 @layer no-support {
   @supports not (rule-color: red, blue) {
     body::before {
-      content: "このブラウザーでは、rule-color プロパティに対する複数の値に対応していません";
+      content: "このブラウザーは rule-color プロパティでの複数の値の使用に対応していません";
       background-color: wheat;
       text-align: center;
       padding: 1rem 0;
@@ -346,9 +346,9 @@ ul {
 
 #### 結果
 
-{{EmbedLiveSample("Multiple", "", "600")}}
+{{EmbedLiveSample("Multiple", "", "440")}}
 
-列の溝は 9 本、行の溝は 6 本ありますが、色リストには 3 色しかないので、リストが繰り返し表示され、1 行目、4 行目、7 行目が青になります。
+列の隙間は 9 つ、行の隙間は 6 つありますが、色のリストには 3 色しかないため、リストが繰り返され、1 本目、4 本目、7 本目の行間罫が青になります。
 
 ### `repeat()` 関数の使用
 
@@ -356,8 +356,8 @@ ul {
 
 #### CSS
 
-値がいかに複雑になり得るか、そして `repeat()` 関数の有用性を示すために、2つの独自のプロパティを宣言し、それらを4つの {{cssxref(「color-mix()」)}} カラー関数の宣言で使用して、青、赤みがかった色、青緑がかった色、黄色の色を作成します。赤みがかった色と青緑がかった色の `color-mix()` は `repeat()` 関数内にあり、3回繰り返されるように設定されています。
-同時に、それぞれのグリッドアイテムの周囲に境界線を追加しました。これにより、列と行の間のガターの中央に線がどのように描かれるかを確認できます。
+値がいかに複雑になり得るか、そして `repeat()` 関数の有用性を示すために、2 つのカスタムプロパティを宣言し、それらを 4 つの {{cssxref("color-mix()")}} 関数で使用して、青、赤みがかった色、青緑がかった色、黄色を作成します。赤みがかった色と青緑がかった色を作成する `color-mix()` 関数は `repeat()` 関数内にあり、3 回繰り返されるように設定されています。
+同時に、それぞれのグリッドアイテムの周囲に境界線を追加しました。これにより、列や行の間の隙間の中央に線がどのように描かれるかを確認できます。
 
 ```css live-sample___repeat
 ul {
@@ -377,9 +377,9 @@ ul {
 
 #### 結果
 
-{{EmbedLiveSample("repeat", "", "600")}}
+{{EmbedLiveSample("Repeat", "", "440")}}
 
-このグリッドは 10 列 7 行で構成されており、列間の溝が 9 本、行間の溝が 6 本生成されます。`repeat()` 関数は、その中の含まれる 2 つの混合色を 3 回繰り返すことで、合計 8 色の色リストを作成します。4 色を生成するために多数の CSS コードが必要ですが、少なくとも 8 つの `color-mix()` 関数をすべて記述する必要はなくなりました。列間の溝がリストの色数よりも多いため、列間の溝には色が繰り返し使用されます。一方、行間の溝は色数よりも少ないため、リストの最後の2色は行間の溝には使用されません。
+このグリッドは 10 列 7 行で構成されており、列間の隙間が 9 つ、行間の隙間が 6 つあります。`repeat()` 関数は、その中に指定された 2 つの混合色を 3 回繰り返し、合計 8 色のリストを作成します。4 色を作成するために多くの CSS を記述していますが、8 つの `color-mix()` 関数をすべて書く必要はありません。列間の隙間は色のリストより多いため、列間罫には色が繰り返し使用されます。一方、行間の隙間は色のリストより少ないため、リストの最後の 2 色は行間罫には使用されません。
 
 ### `repeat()` の中での `auto` の使用
 
@@ -395,7 +395,7 @@ ul {
 
 #### 結果
 
-{{EmbedLiveSample("auto", "", "600")}}
+{{EmbedLiveSample("auto", "", "440")}}
 
 列間罫が行間罫よりも多いにもかかわらず、`<auto-repeat-line-color>` の値を設定することで、この対称的な効果を生み出すことができます。
 
@@ -433,4 +433,5 @@ ul {
 - {{cssxref("row-rule-color")}}
 - {{cssxref("column-rule-color")}}
 - {{cssxref("rule")}} 一括指定
+- [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)モジュール
