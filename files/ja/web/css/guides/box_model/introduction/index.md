@@ -3,7 +3,7 @@ title: CSS 基本ボックスモデル入門
 short-title: 入門
 slug: Web/CSS/Guides/Box_model/Introduction
 l10n:
-  sourceCommit: ca5d9f9e63b460fc0c9e15ac57d9739e10e4ea0d
+  sourceCommit: 298079b550c76f20de6611c4ecdde4c30dc68b2b
 ---
 
 ブラウザーのレンダリングエンジンは文書をレイアウトする際に、それぞれの要素を標準的な **CSS 基本ボックスモデル**に基づいた長方形のボックスとして表現します。 CSS はこれらのボックスの寸法、位置、プロパティ（色、背景、境界の幅など）を決定します。

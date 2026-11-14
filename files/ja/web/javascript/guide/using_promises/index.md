@@ -2,7 +2,7 @@
 title: プロミスの使用
 slug: Web/JavaScript/Guide/Using_promises
 l10n:
-  sourceCommit: d8a5165fd3c3b35ea9d07a914459e8d468f62276
+  sourceCommit: 298079b550c76f20de6611c4ecdde4c30dc68b2b
 ---
 
 {{PreviousNext("Web/JavaScript/Guide/Using_classes", "Web/JavaScript/Guide/Typed_arrays")}}
@@ -231,7 +231,7 @@ try {
 }
 ```
 
-これに対応するものを `async`/`await` の構文で非同期コードに集約したものです。
+同じ処理は、`async`/`await` と `try`/`catch` を使って非同期コードで実現できます。
 
 ```js
 async function foo() {
@@ -346,7 +346,7 @@ async function main() {
 
 いずれの場合でも、この（[`PromiseRejectionEvent`](/ja/docs/Web/API/PromiseRejectionEvent) 型の）イベントは、拒否されたプロミスを示す [`promise`](/ja/docs/Web/API/PromiseRejectionEvent/promise) プロパティと、そのプロミスが失敗した理由を表す [`reason`](/ja/docs/Web/API/PromiseRejectionEvent/reason) プロパティを持ちます。
 
-これらのイベントを使えば、プロミスのエラー処理のフォールバックを指定することができ、またプロミスを管理する際の問題をデバッグするのにも役立ちます。これらのハンドラーはコンテキストごとにグローバルであり、発生元に関わらず、すべてのエラーが同じイベントハンドラーによって処理されます。
+これらのイベントを使えば、プロミスのエラー処理の代替策を指定することができ、またプロミスを管理する際の問題をデバッグするのにも役立ちます。これらのハンドラーはコンテキストごとにグローバルであり、発生元に関わらず、すべてのエラーが同じイベントハンドラーによって処理されます。
 
 [Node.js](/ja/docs/Glossary/Node.js) では、プロミスの拒否の扱いは多少異なります。次のようにして Node.js に `unhandledRejection` イベント（名前の大文字小文字の違いに注意）のハンドラーを追加することで、未処理の拒否を捕捉することができます。
 
@@ -356,7 +356,7 @@ process.on("unhandledRejection", (reason, promise) => {
 });
 ```
 
-Node.js では、エラーがコンソールに記録されること (そうしないと発生する既定のアクション) を防ぐには、 `process.on()` リスナーを追加するだけで十分です。ブラウザーの実行環境の [`preventDefault()`](/ja/docs/Web/API/Event/preventDefault) のようなことを行う必要はありません。
+Node.js では、エラーがコンソールに記録されるというデフォルトの動作を防ぐには、 `process.on()` リスナーを追加するだけで十分です。ブラウザーの実行環境の [`preventDefault()`](/ja/docs/Web/API/Event/preventDefault) のようなことを行う必要はありません。
 
 しかし、 `process.on` リスナーを追加しても、その中に拒否されたプロミスを処理するコードがなければ、プロミスは床に落ちて暗黙に無視されてしまいます。そのため、できればリスナー内にコードを追加して、拒否されたプロミスをそれぞれ検証し、実際のコードのバグが原因ではないことを確認してください。
 
@@ -384,7 +384,7 @@ Promise.all([func1(), func2(), func3()]).then(([result1, result2, result3]) => {
   });
 ```
 
-この例では、非同期関数の配列をプロミス連鎖に[縮小](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)しています。上のコードは次のコードと同じです。
+この例では、非同期関数の配列をプロミス連鎖に[縮小化](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)しています。上のコードは次のコードと同じです。
 
 ```js
 Promise.resolve()
@@ -431,7 +431,7 @@ for (const f of [func1, func2, func3]) {
 
 ## 古いコールバック API をラップする Promise の作成
 
-{{jsxref("Promise")}} は[コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)を使って 1 から生成すこともできます。これが必要になるのは古い API をラップする場合のみでしょう。
+{{jsxref("Promise")}} は[コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)を使って 1 から生成することもできます。これが必要になるのは古い API をラップする場合のみでしょう。
 
 理想的には、すべての非同期関数はプロミスを返すはずですが、残念ながら API の中にはいまだに古いやり方で成功/失敗用のコールバックを渡しているものがあります。顕著な例としては {{domxref("Window.setTimeout", "setTimeout()")}} 関数があります。
 
@@ -451,7 +451,7 @@ wait(10 * 1000)
   .catch(failureCallback);
 ```
 
-プロミスのコンストラクターは、プロミスを手動で解決したり拒否したりするための実行関数を受け取ります。 `setTimeout()` は実に失敗しないので、今回は拒否を省きました。これがどのように動作するのかについては、 [`Promise()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) を参照してください。
+プロミスのコンストラクターは、プロミスを手動で解決したり拒否したりするための実行関数を受け取ります。`setTimeout()` 自体は通常失敗しないため、今回は拒否の処理を省きました。これがどのように動作するのかについては、 [`Promise()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) を参照してください。
 
 ## タイミング
 
@@ -471,7 +471,7 @@ function doSomething(callback) {
 }
 ```
 
-上記の設計は、いわゆる「ザルゴの状態」という状態になるため、強く避けるべきです。非同期 API の設計の文脈では、これはコールバックがある場合には同期的に呼び出されますが、他の場合には非同期的に呼び出され、呼び出し側に曖昧さを作成することを意味しています。さらに詳しい背景については、この用語が最初に正式に表示された記事 [Designing APIs for Asynchrony](https://blog.izs.me/2013/08/designing-apis-for-asynchrony/) を参照してください。この API 設計により、副作用を分析することが難しくなります。
+上記の設計は、いわゆる「ザルゴの状態」という状態になるため、強く避けるべきです。非同期 API の設計の文脈では、これはコールバックがある場合には同期的に呼び出されますが、他の場合には非同期的に呼び出され、呼び出し側に曖昧さを作成することを意味しています。さらに詳しい背景については、この用語が初めて正式に登場した記事 [Designing APIs for Asynchrony](https://blog.izs.me/2013/08/designing-apis-for-asynchrony/) を参照してください。この API 設計により、副作用を分析することが難しくなります。
 
 ```js
 let value = 1;
@@ -481,7 +481,7 @@ doSomething(() => {
 console.log(value); // 1 or 2?
 ```
 
-一方で、プロミスは[制御の反転](https://ja.wikipedia.org/wiki/制御の反転)という形です。コールバックが呼び出されるタイミングを API 実装者が制御することはありません。その代わりに、コールバックキューを維持し、いつコールバックを呼び出すかを決定する仕事はプロミスの実装に委ねられ、 API ユーザーと API 開発者の両方は、自動的に以下のような強力な意味づけ保証を得ることができます。
+一方で、プロミスは[制御の反転](https://ja.wikipedia.org/wiki/制御の反転)という形です。コールバックが呼び出されるタイミングを API 実装者が制御することはありません。その代わりに、コールバックキューを維持し、いつコールバックを呼び出すかを決定する仕事はプロミスの実装に委ねられ、API を利用する側と開発する側の双方が、以下のような強力な意味論的保証を自動的に得られます。
 
 - [`then()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) で追加されたコールバックは、 JavaScript のイベントループの[現在の実行の完了](/ja/docs/Web/JavaScript/Reference/Execution_model#run-to-completion)より前に呼び出されることはありません。
 - これらのコールバックは、プロミスが表す非同期処理の成功や失敗の後に追加されても呼び出されます。
@@ -492,7 +492,7 @@ console.log(value); // 1 or 2?
 ```js
 Promise.resolve().then(() => console.log(2));
 console.log(1);
-// Logs: 1, 2
+// 出力結果: 1, 2
 ```
 
 渡された関数はすぐに実行されるのではなく、マイクロタスクのキューに入れられます。後で（生成した関数が終了し、 JavaScript の実行スタックが空になってから）、イベントループに制御が戻される直前、つまりかなり早い段階で実行されます。
@@ -509,7 +509,7 @@ console.log(1); // 1, 2, 3, 4
 
 ### タスクキューとマイクロタスク
 
-プロミスのコールバックは[マイクロタスク](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide)として処理され、 {{domxref("Window.setTimeout", "setTimeout()")}} コールバックはタスクキューとして扱われます。
+プロミスのコールバックは[マイクロタスク](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide)として処理され、 {{domxref("Window.setTimeout", "setTimeout()")}} のコールバックはタスクとして扱われます。
 
 ```js
 const promise = new Promise((resolve, reject) => {
