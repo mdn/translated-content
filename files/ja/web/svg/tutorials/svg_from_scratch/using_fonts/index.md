@@ -2,7 +2,7 @@
 title: SVG フォント
 slug: Web/SVG/Tutorials/SVG_from_scratch/Using_fonts
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Filter_effects", "Web/SVG/Tutorials/SVG_from_scratch/Image_element") }}
@@ -20,7 +20,7 @@ SVG は、 {{SVGElement("text")}} 要素のフォントを指定する複数の�
   <style>
     text {
       /* 使用するシステムフォントまたは独自のフォントを指定 */
-      font-family: "Courier New", sans-serif;
+      font-family: "Courier New", monospace;
 
       /* その他のスタイル設定を追加 */
       font-size: 24px;
@@ -28,13 +28,13 @@ SVG は、 {{SVGElement("text")}} 要素のフォントを指定する複数の�
       font-style: italic;
     }
   </style>
-  <text x="10" y="20">Text テキスト</text>
+  <text x="10" y="20">サンプルのテキスト</text>
 </svg>
 ```
 
 これは、下記のように表示されます。
 
-{{EmbedLiveSample("How to apply a font", "100", "30px")}}
+{{EmbedLiveSample("apply_and_style_a_font_using_css", "100", "30px")}}
 
 ## `@font-face` によるウェブフォントの使用
 
@@ -70,7 +70,7 @@ SVG は、 {{SVGElement("text")}} 要素のフォントを指定する複数の�
       font-style: italic;
     }
   </style>
-  <text x="10" y="20">Text styled with custom font</text>
+  <text x="10" y="20">カスタムフォントを使ってスタイル設定したテキスト</text>
 </svg>
 ```
 
