@@ -57,7 +57,7 @@ Picture-in-Picture 창을 닫을수도 있습니다. (브라우저에서 제공�
 ## CSS 추가 사항
 
 - {{cssxref("@media/display-mode", "display-mode")}}, `picture-in-picture` 값
-  - : 개발자가 Picture-in-Picture 모드로 표시되는지 여부에 따라 문서에 CSS를 적용할 수 있도록 하는 [CSS](/ko/docs/Web/CSS) [media 기능](/ko/docs/Web/CSS/@media#media_features) 값.
+  - : 개발자가 Picture-in-Picture 모드로 표시되는지 여부에 따라 문서에 CSS를 적용할 수 있도록 하는 [CSS](/ko/docs/Web/CSS) [media 기능](/ko/docs/Web/CSS/Reference/At-rules/@media#media_features) 값.
 
 ## 예시
 

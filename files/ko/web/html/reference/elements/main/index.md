@@ -133,7 +133,7 @@ header {
 
 ### 랜드마크
 
-`<main>` 요소는 [`main` 랜드마크](/ko/docs/Web/Accessibility/ARIA/Roles/Main_role) 역할과 동일하게 행동합니다. [랜드마크](/ko/docs/Web/Accessibility/ARIA/ARIA_Techniques)는 접근성 보조기술이 문서의 큰 구획을 찾고 이동할 때 쓰입니다. 구형 브라우저를 지원할 필요가 없다면, `role="main"`보다 `<main>` 요소를 사용하세요.
+`<main>` 요소는 [`main` 랜드마크](/ko/docs/Web/Accessibility/ARIA/Roles/Main_role) 역할과 동일하게 행동합니다. [랜드마크](/ko/docs/Web/Accessibility/ARIA/Guides/Techniques)는 접근성 보조기술이 문서의 큰 구획을 찾고 이동할 때 쓰입니다. 구형 브라우저를 지원할 필요가 없다면, `role="main"`보다 `<main>` 요소를 사용하세요.
 
 ### 건너뛰기 링크
 
