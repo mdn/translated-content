@@ -2,7 +2,7 @@
 title: HTML DOM API
 slug: Web/API/HTML_DOM_API
 l10n:
-  sourceCommit: 722311032dbf520bf6aeba3d1f432aca38779ffd
+  sourceCommit: f81527232ae480626f8cec10a7d2775a698be30a
 ---
 
 {{DefaultAPISidebar("HTML DOM")}}
@@ -43,7 +43,7 @@ HTML 標準によって `Document` に追加されたものには、次のよう
 - 文書の {{HTMLElement("head")}} ブロックや{{DOMxRef("Document/body", "本文", "", "1")}}に含まれている要素リストへのアクセス、また文書に含まれている{{DOMxRef("Document/images", "画像", "", "1")}}や{{DOMxRef("Document/links", "リンク", "", "1")}}のリストへのアクセス。
 - [編集可能なコンテンツ](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable)の {{DOMxRef("Document/hasFocus", "focus", "", "1")}} 検査やコマンドの実行によるユーザーとの対話への対応。
 - HTML 標準で定義されている文書のイベントハンドラーで、{{DOMxRef("MouseEvent", "マウス", "", "1")}}や{{DOMxRef("KeyboardEvent", "キーボード", "", "1")}}イベント、{{DOMxRef("HTML_Drag_and_Drop_API", "ドラッグ＆ドロップ", "", "1")}}や{{DOMxRef("HTMLMediaElement", "メディア制御", "", "1")}}などのイベントにアクセスできるようにすること。
-- 要素と文書の両方に配信できるイベントのイベントハンドラー。現在のところ、{{DOMxRef("HTMLElement/copy_event", "コピー", "", "1")}}、{{DOMxRef("HTMLElement/cut_event", "切り取り", "", "1")}}、{{DOMxRef("HTMLElement/paste_event", "貼り付け", "", "1")}}操作のみが含まれています。
+- 要素と文書の両方に配信できるイベントのイベントハンドラー。現在のところ、{{DOMxRef("Element/copy_event", "コピー", "", "nocode")}}、{{DOMxRef("Element/cut_event", "切り取り", "", "nocode")}}、{{DOMxRef("Element/paste_event", "貼り付け", "", "nocode")}}操作のみが含まれています。
 
 ### HTML 要素インターフェイス
 
@@ -65,7 +65,7 @@ HTML の要素クラスの全体的な継承は次のようになります。
 
 共通点を持つ要素があり、そのために追加の中間型を持つことがあります。例えば、 {{HTMLElement("audio")}} と {{HTMLElement("video")}} 要素は共にオーディオビジュアルメディアを提示します。対応する型である {{domxref("HTMLAudioElement")}} と {{domxref("HTMLVideoElement")}} は共に共通の型 {{domxref("HTMLMediaElement")}} に基づいており、それが {{domxref("HTMLElement")}} などに基づいています。 `HTMLMediaElement` は、 audio 要素と video 要素の間で共通に保持されるメソッドとプロパティを定義しています。
 
-これらの要素固有のインターフェイスは HTML DOM API の大部分を構成しており、この記事の焦点となっています。 {{DOMxRef("Document_Object_Model", "DOM", "", "1")}} の実際の構造については {{DOMxRef("Document_Object_Model/Introduction", "DOM の紹介", "", "1")}}を参照してください。
+これらの要素固有のインターフェイスは HTML DOM API の大部分を構成しており、この記事の焦点となっています。[DOM](/ja/docs/Web/API/Document_Object_Model) の記事では、DOM とその概念について一般的に紹介しています。
 
 ## HTML DOM の対象読者
 
@@ -155,8 +155,6 @@ HTML DOM API を構成するインターフェイスの大部分は、個々の 
 - {{DOMxRef("HTMLFontElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameSetElement")}} {{deprecated_inline}}
-- {{DOMxRef("HTMLIsIndexElement")}} {{deprecated_inline}}
-- {{DOMxRef("HTMLMenuItemElement")}} {{deprecated_inline}}
 
 ### ウェブアプリやブラウザーとの連携インターフェイス
 
@@ -166,13 +164,8 @@ HTML DOM API を構成するインターフェイスの大部分は、個々の 
 - {{DOMxRef("Navigator")}}
 - {{DOMxRef("Window")}}
 
-#### 非推奨のウェブアプリやブラウザーとの連携インターフェイス
-
-- {{DOMxRef("External")}} {{deprecated_inline}}
-
 #### 廃止されたウェブアプリやブラウザーとの連携インターフェイス
 
-- {{DOMxRef("ApplicationCache")}} {{deprecated_inline}}
 - {{DOMxRef("Plugin")}} {{deprecated_inline}}
 - {{DOMxRef("PluginArray")}} {{deprecated_inline}}
 
@@ -203,7 +196,7 @@ HTML DOM API を構成するインターフェイスの大部分は、個々の 
 
 ### メディアインターフェイス
 
-メディアインターフェイスは、メディア要素 {{HTMLElement("audio")}} および {{HTMLElement("video")}} のコンテンツに
+メディアインターフェイスは、メディア要素である {{HTMLElement("audio")}} および {{HTMLElement("video")}} のコンテンツへの HTML からのアクセスを提供します。
 
 - {{DOMxRef("AudioTrack")}}
 - {{DOMxRef("AudioTrackList")}}
@@ -299,7 +292,24 @@ HTML DOM API を構成するインターフェイスの大部分は、個々の 
 
 ## 例
 
-この例では、 {{HTMLElement("input")}} 要素の {{domxref("Element/input_event", "input")}} イベントを監視し、与えられたフィールドに現在値があるかどうかによって、フォームの「送信」ボタンの状態を更新しています。
+この例では、{{HTMLElement("input")}} 要素の {{domxref("Element/input_event", "input")}} イベントを監視し、フィールドに現在値があるかどうかに応じて「送信」ボタンの状態を更新します。
+
+### HTML
+
+HTML は次のようになります。
+
+```html
+<p>以下の情報を入力してください。 "*" の付いた項目は必須です。</p>
+<p>
+  <label for="userName" required>名前:</label>
+  <input type="text" id="userName" /> (*)
+</p>
+<p>
+  <label for="userEmail">メールアドレス:</label>
+  <input type="email" id="userEmail" />
+</p>
+<input type="button" value="送信" id="sendButton" />
+```
 
 ### JavaScript
 
@@ -309,7 +319,7 @@ const sendButton = document.getElementById("sendButton");
 
 sendButton.disabled = true;
 // [注：このサンプルにフォーカスし、スクロールして表示した状態でこの記事を常に読み込むことになるため、無効にしています。]
-//nameField.focus();
+// nameField.focus();
 
 nameField.addEventListener("input", (event) => {
   const elem = event.target;
@@ -331,25 +341,6 @@ nameField.addEventListener("input", (event) => {
 
 このコードにより、ユーザー名の入力フィールドに値があるときは常に「送信」ボタンが有効になり、空のときは無効になります。
 
-### HTML
-
-このフォームの HTML は次のようになります。
-
-```html
-<p>以下の情報を教えてください。 * の付いた項目は必須です。</p>
-<form action="" method="get">
-  <p>
-    <label for="userName" required>あなたの名前:</label>
-    <input type="text" id="userName" /> (*)
-  </p>
-  <p>
-    <label for="userEmail">メールアドレス:</label>
-    <input type="email" id="userEmail" />
-  </p>
-  <input type="submit" value="送信" id="sendButton" />
-</form>
-```
-
 ### 結果
 
 {{EmbedLiveSample("Examples", 640, 300)}}
@@ -364,12 +355,7 @@ nameField.addEventListener("input", (event) => {
 
 ## 関連情報
 
-### リファレンス
-
 - [HTML 要素リファレンス](/ja/docs/Web/HTML/Reference/Elements)
 - [HTML 属性リファレンス](/ja/docs/Web/HTML/Reference/Attributes)
 - {{DOMxRef("Document_Object_Model", "ドキュメントオブジェクトモデル (DOM)", "", "1")}} リファレンス
-
-### ガイド
-
-- [文書の操作](/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting): DOM を操作するための初心者向けガイド。
+- [DOM スクリプティング入門](/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting)
