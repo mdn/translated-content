@@ -2,12 +2,12 @@
 title: 塗りつぶしとストローク
 slug: Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 8d0c8728f49f2a0577ca17910f2149d6dd36b37e
 ---
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Paths", "Web/SVG/Tutorials/SVG_from_scratch/Gradients") }}
 
-図形に色を付ける方法としては (オブジェクトに属性を指定することを含む)、インライン [CSS](/ja/docs/Glossary/CSS)、埋め込み CSS セクション、外部 CSS ファイルなどいくつかの方法があります。ほとんどに [SVG](/ja/docs/Glossary/SVG) ではインライン CSS を使用していますが、どの方法にも利点と欠点があります。
+図形に色を付ける方法としては（オブジェクトに属性を指定する方法を含め）、インライン [CSS](/ja/docs/Glossary/CSS)、埋め込み CSS セクション、外部 CSS ファイルなどがあります。ウェブ上のほとんどの [SVG](/ja/docs/Glossary/SVG) ではインライン CSS が使用されていますが、どの方法にも利点と欠点があります。
 
 ## fill および stroke 属性
 
@@ -16,8 +16,7 @@ l10n:
 基本的な色付けは、ノードに `fill` と `stroke` という 2 つの属性を設定することで行うことができます。 `fill` を使用するとオブジェクトの内部の色を設定し、 `stroke` はオブジェクトを囲む線の色を設定します。色名 (例えば `red`)、RGB 値 (例えば `rgb(255 0 0)`)、16 進数値など、HTML で用いる CSS の色名と同じ仕組みを用いることができます。
 
 ```html
-<?xml version="1.0" standalone="no"?>
-<svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="160" height="140" xmlns="http://www.w3.org/2000/svg">
   <rect
     x="10"
     y="10"
@@ -39,11 +38,10 @@ l10n:
 
 この色のプロパティに加えて、線上にストロークを描画する方法を操作するための属性がいくつかあります。
 
-![stroke-linecap 属性は、これらのストロークの終わりの見てくれを変えます。 square は四角いキャップを追加し、 round は指定された丸いキャップを提供し、 butt はキャップを除去します。](svg_stroke_linecap_example.png)
+![stroke-linecap 属性は、これらのストロークの端の見た目を変えます。square は四角いキャップを追加し、round は丸いキャップを付け、butt はキャップを付けません。](svg_stroke_linecap_example.png)
 
 ```xml
-<?xml version="1.0" standalone="no"?>
-<svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="160" height="140" xmlns="http://www.w3.org/2000/svg">
   <line x1="40" x2="120" y1="20" y2="20" stroke="black" stroke-width="20" stroke-linecap="butt"/>
   <line x1="40" x2="120" y1="60" y2="60" stroke="black" stroke-width="20" stroke-linecap="square"/>
   <line x1="40" x2="120" y1="100" y2="100" stroke="black" stroke-width="20" stroke-linecap="round"/>
@@ -62,11 +60,10 @@ l10n:
 
 また `stroke-linejoin` プロパティは、 2 本の線分の接続部をどのように描画するかを制御します。
 
-![stroke-linejoin 属性は、 2 つの行が結合する点の見てくれを変更します。 miter は角度のある結合を作成し、 round は角を丸め、 bevel は面取りされたエッジを作成し、角を平らにします。](svg_stroke_linejoin_example.png)
+![stroke-linejoin 属性は、2 本の線分が接続する箇所の見た目を変えます。miter は角度のある接合部を作り、round は角を丸め、bevel は角を平らにした面取りのエッジを作ります。](svg_stroke_linejoin_example.png)
 
 ```xml
-<?xml version="1.0" standalone="no"?>
-<svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="160" height="280" xmlns="http://www.w3.org/2000/svg">
   <polyline points="40 60 80 20 120 60" stroke="black" stroke-width="20"
       stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
 
@@ -86,8 +83,7 @@ l10n:
 ![2 種類のカスタム破線、 1 つは等間隔ダッシュ、他にも stroke-dasharray 属性値を使用して長短ダッシュを使用しています。](svg_stroke_dasharray_example.png)
 
 ```xml
-<?xml version="1.0" standalone="no"?>
-<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg">
   <path d="M 10 75 Q 50 10 100 75 T 190 75" stroke="black"
     stroke-linecap="round" stroke-dasharray="5,10,5" fill="none"/>
   <path d="M 10 75 L 190 75" stroke="red"
@@ -106,8 +102,7 @@ l10n:
 塗りつぶしとストロークの描画順序は、 [`paint-order`](/ja/docs/Web/SVG/Reference/Attribute/paint-order) 属性を使用して制御できます。
 
 ```html
-<?xml version="1.0" standalone="no"?>
-<svg width="400" height="180" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="400" height="180" xmlns="http://www.w3.org/2000/svg">
   <polyline
     points="40 80 80 40 120 80"
     stroke-width="15"
@@ -134,7 +129,7 @@ l10n:
 オブジェクトに属性を設定するだけでなく、 CSS を使って塗りつぶしやストロークのスタイルを設定することもできます。すべての属性を CSS で設定できるわけではありません。ふつうは描画や塗りつぶしを行う属性が利用できます。 `fill`, `stroke`, `stroke-dasharray` などは、グラデーションや後述するパターン版に追加することで、すべてこの方法で設定できます。 `width`, `height`, {{SVGElement("path")}} コマンドなどの属性は、 CSS では設定できません。何が使えて、何が使えないのかは、テストしてみるのが一番簡単です。
 
 > [!NOTE]
-> [SVG 仕様書](https://svgwg.org/svg2-draft/propidx.html) ではプロパティとその他の属性を厳密に区別しています。前者は CSS で変更できますが、後者はできません。
+> [SVG 仕様書](https://w3c.github.io/svgwg/svg2-draft/propidx.html)<sup>(英語)</sup> ではプロパティとその他の属性を厳密に区別しています。前者は CSS で変更できますが、後者はできません。
 
 CSS は要素に `style` 属性を用いることで、インラインで挿入することができます。
 
@@ -147,8 +142,7 @@ CSS は要素に `style` 属性を用いることで、インラインで挿入�
 {{SVGElement("defs")}} は定義を意味し、ここで作成された要素は SVG の中で直接は現れませんが、他の要素から使用されます。
 
 ```xml
-<?xml version="1.0" standalone="no"?>
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style><![CDATA[
        #MyRect {
@@ -174,10 +168,9 @@ CSS は要素に `style` 属性を用いることで、インラインで挿入�
 CSS ルールを外部スタイルシートで指定するのに、[ふつうの XML スタイルシート構文](https://www.w3.org/TR/xml-stylesheet/)を使用することもできます。
 
 ```xml
-<?xml version="1.0" standalone="no"?>
 <?xml-stylesheet type="text/css" href="style.css"?>
 
-<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg">
   <rect height="10" width="10" id="MyRect"/>
 </svg>
 ```

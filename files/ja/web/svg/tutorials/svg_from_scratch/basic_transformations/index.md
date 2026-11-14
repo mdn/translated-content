@@ -2,7 +2,7 @@
 title: 基本的な座標変換
 slug: Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 8d0c8728f49f2a0577ca17910f2149d6dd36b37e
 ---
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Texts", "Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking") }}
@@ -89,7 +89,7 @@ svg {
 
 ## 変倍
 
-`scale()` は、要素のサイズを変更します。これは 2 つの数値を受け取って、変倍の比率として用います。_0.5 は 50% への縮小を表します。2 番目の数値を省略した場合は、1 番目の値と同じであるとみなします。_
+`scale()` は要素のサイズを変更します。2 つの数値を受け取り、1 つ目を x 方向、2 つ目を y 方向の拡大縮小率として使います。各率は、変換後の寸法を変換前の寸法で割った比率です。たとえば `0.5` は寸法を 50% に縮小することを表します。2 つ目の数値を省略すると、1 つ目と同じ値とみなされます。
 
 ## `matrix()` を用いた複雑な座標変換
 
@@ -125,7 +125,7 @@ svg {
 HTML とは対照的に、SVG では他の `svg` 要素をシームレスに埋め込むことができます。この方法を用い、内部の `svg` 要素で `viewBox`、`width`、`height` 属性を活用して新たな座標系を作成することもできます。
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
   <svg width="100" height="100" viewBox="0 0 50 50">
     <rect width="50" height="50" />
   </svg>
