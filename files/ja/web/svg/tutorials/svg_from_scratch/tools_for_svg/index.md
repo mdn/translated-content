@@ -2,7 +2,7 @@
 title: SVG のツール
 slug: Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: a9023c101b08304fba10f43175c60413cbe50ab3
 ---
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Image_element", "Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS") }}
@@ -29,13 +29,13 @@ URL: [xmlgraphics.apache.org/batik/](https://xmlgraphics.apache.org/batik/)
 
 Batik は Apache Software Foundation 傘下の、オープンソースツールのセットです。このツールキットは Java で記述され、ほぼ完全な SVG 1.1 の対応を提供します。また、本来は SVG 1.2 で計画されている機能のいくつかにも対応しています。
 
-Batik はビューアー (Squiggle) や PNG 出力のラスタライザーの他に、SVG ファイルを整形するためのプリティプリンターや TrueType フォントから SVG フォントへのコンバーターも提供します。
+Batik はビューアー (Squiggle)、PNG 出力用のラスタライザー、SVG ファイルを整形するためのプリティプリンターを提供します。
 
 Batik は [Apache FOP](https://xmlgraphics.apache.org/fop/) と連携して、SVG を PDF に変換することもできます。
 
 ### 他のレンダラー
 
-SVG からラスター画像を作成するためのプロジェクトがいくつかあります。[ImageMagick](http://ImageMagick.org) は、もっとも有名なコマンドライン画像処理ツールのひとつです。GNOME ライブラリーの [rsvg](https://wiki.gnome.org/Projects/LibRsvg) は、 Wikipedia が SVG をラスター化するために用いています。また、 SlimerJS や PhantomJS などのヘッドレスブラウザーを使用すると、ブラウザー上での SVG の表示に近い画像が得られるため、人気があります。
+SVG からラスター画像を作成するプロジェクトはいくつかあります。[ImageMagick](https://imagemagick.org/) は、もっとも有名なコマンドライン画像処理ツールのひとつです。GNOME ライブラリーの [librsvg](https://gitlab.gnome.org/GNOME/librsvg) は、Wikipedia が SVG グラフィックをラスター化するために使用しています。また、[resvg](https://github.com/linebender/resvg) は高速なスタンドアロンのレンダラーです。[Puppeteer](https://pptr.dev/) や [Playwright](https://playwright.dev/) で操作するヘッドレスブラウザーも、生成画像がブラウザーでの SVG の表示に近いため、この用途でよく使われます。
 
 ## Google Docs
 
@@ -45,9 +45,9 @@ Google Docs の図形描画機能は、SVG でエクスポートすることが�
 
 ## 科学
 
-よく知られているプロッティングツールである xfig や gnuplot は、SVG でのエクスポートを対応しています。ウェブでグラフを描画するための [JSXGraph](https://jsxgraph.uni-bayreuth.de/wp/) は VML、SVG、および canvas を対応し、どの技術を用いるかはブラウザーの能力に応じて自動的に決定します。
+よく知られているプロッティングツールの xfig と gnuplot は、どちらも SVG へのエクスポートに対応しています。ウェブでグラフを描画するための [JSXGraph](https://jsxgraph.uni-bayreuth.de/home/) は SVG と canvas に対応し、ブラウザーの能力に応じて使用する技術を自動的に決定します。
 
-GIS (Geographic Information System) アプリケーションで、SVG は保存および描画の形式としてよく用いられます。詳しくは [carto.net](https://carto.net) をご覧ください。
+地理情報システム (GIS) アプリケーションでは、SVG が保存形式と描画形式の両方としてよく使われます。
 
 ## 他のツール
 
