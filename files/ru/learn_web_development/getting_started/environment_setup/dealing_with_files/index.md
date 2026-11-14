@@ -73,10 +73,4 @@ slug: Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
 > [!NOTE]
 > Файловая система Windows стремится использовать обратный слеш (backslash), а не косую черту (forwardslash), например `C:\windows`. Это не имеет значения, даже если вы разрабатываете веб-сайт на Windows, вы всё равно должны использовать обычные слеши в вашем коде.
 
-## Что должно быть сделано?
-
-К настоящему моменту структура вашей папки должна выглядеть примерно так:
-
-![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png)
-
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
