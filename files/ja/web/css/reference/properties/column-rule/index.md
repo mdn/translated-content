@@ -1,5 +1,5 @@
 ---
-title: "`column-rule` プロパティ (CSS)"
+title: "`column-rule` プロパティ"
 short-title: column-rule
 slug: Web/CSS/Reference/Properties/column-rule
 l10n:
