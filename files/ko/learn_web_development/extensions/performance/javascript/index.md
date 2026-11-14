@@ -49,7 +49,7 @@ l10n:
 - **브라우저 내장 기능을 고려하세요**: JavaScript로 직접 구현하는 대신, 브라우저가 이미 가지고 있는 기능을 사용할 수 있을지도 모릅니다. 다음과 같은 예시가 있습니다.
   - [내장된 클라이언트 사이드 Form 유효성 검사](/ko/docs/Learn_web_development/Extensions/Forms/Form_validation#using_built-in_form_validation)를 사용하세요.
   - 브라우저 자체 {{htmlelement("video")}} 재생 도구를 사용하세요.
-  - JavaScript 애니메이션 라이브러리 대신에 [CSS 애니메이션](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)을 사용하세요. [애니메이션 다루기](#handling_javascript_animations)도 참고하세요.
+  - JavaScript 애니메이션 라이브러리 대신에 [CSS 애니메이션](/ko/docs/Web/CSS/Guides/Animations/Using)을 사용하세요. [애니메이션 다루기](#handling_javascript_animations)도 참고하세요.
 
 JavaScript를 중요하고 중요하지 않은 부분으로 나누어 여러 파일로 분리하는 것이 좋습니다. [JavaScript 모듈](/ko/docs/Web/JavaScript/Guide/Modules)은 단순히 개별 JavaScript 파일을 분리하는 것보다 더 효율적으로 구현하도록 합니다.
 
@@ -86,7 +86,7 @@ JavaScript를 중요하고 중요하지 않은 부분으로 나누어 여러 파
 </head>
 ```
 
-위 예제는 정상적으로 동작하지만 렌더링을 차단합니다. 더 나은 방법은 중요한 JavaScript를 위한 프리로더를 생성하는 [`rel="preload"`](/ko/docs/Web/HTML/Attributes/rel/preload)를 사용하는 것입니다.
+위 예제는 정상적으로 동작하지만 렌더링을 차단합니다. 더 나은 방법은 중요한 JavaScript를 위한 프리로더를 생성하는 [`rel="preload"`](/ko/docs/Web/HTML/Reference/Attributes/rel/preload)를 사용하는 것입니다.
 
 ```html
 <head>
@@ -231,7 +231,7 @@ function yield() {
 
 가장 명확한 애니메이션 조언은 애니메이션을 적게 사용하는 것입니다. 필수적이지 않은 애니메이션을 제거하거나 저전력 기기나 제한된 배터리 전력을 가진 모바일 장치를 사용하는 경우 사용자가 애니메이션을 끌 수 있도록 설정을 제공하는 것을 고려할 수 있습니다.
 
-필수적인 DOM 애니메이션인 경우, 가능한 JavaScript 애니메이션 대신에 [CSS 애니메이션](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)을 사용하는 것을 권장합니다. [웹 애니메이션 API](/ko/docs/Web/API/Web_Animations_API)는 JavaScript를 통해 CSS 애니메이션과 직접적으로 연결하는 방법을 제공합니다. JavaScript로 인라인 스타일을 조작하는 것보다 브라우저가 직접 DOM 애니메이션을 수행하도록 사용하는 것이 훨씬 더 빠르고 효율적입니다. 자세한 내용은 [CSS 성능 최적화 > 애니메이션 다루기](/ko/docs/Learn_web_development/Extensions/Performance/CSS#handling_animations)에서 확인하세요.
+필수적인 DOM 애니메이션인 경우, 가능한 JavaScript 애니메이션 대신에 [CSS 애니메이션](/ko/docs/Web/CSS/Guides/Animations/Using)을 사용하는 것을 권장합니다. [웹 애니메이션 API](/ko/docs/Web/API/Web_Animations_API)는 JavaScript를 통해 CSS 애니메이션과 직접적으로 연결하는 방법을 제공합니다. JavaScript로 인라인 스타일을 조작하는 것보다 브라우저가 직접 DOM 애니메이션을 수행하도록 사용하는 것이 훨씬 더 빠르고 효율적입니다. 자세한 내용은 [CSS 성능 최적화 > 애니메이션 다루기](/ko/docs/Learn_web_development/Extensions/Performance/CSS#handling_animations)에서 확인하세요.
 
 JavaScript에서 처리할 수 없는 애니메이션은, 예를 들어 HTML {{htmlelement("canvas")}} 요소의 애니메이션은 {{domxref("Window.setInterval()")}} 같은 오래된 메서드 대신 {{domxref("Window.requestAnimationFrame()")}} 메서드를 사용하는 것이 좋습니다. `requestAnimationFrame()` 메서드는 매끄러운 사용자 경험을 위해 애니메이션을 효율적이고 끊김없이 처리하도록 특별히 설계되었습니다. 기본적인 패턴은 다음과 같습니다.
 

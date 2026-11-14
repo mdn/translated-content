@@ -46,7 +46,7 @@ SVG는 [World Wide Web Consortium(W3C)](https://www.w3.org/)가 1999년부터 �
 ## 예제
 
 - [SVG 저작 가이드라인](https://jwatt.org/svg/authoring/)
-- [이미지로서의 SVG](/ko/docs/Web/SVG/SVG_as_an_Image)
+- [이미지로서의 SVG](/ko/docs/Web/SVG/Guides/SVG_as_an_image)
 - [SMIL을 사용한 SVG 애니메이션](/ko/docs/Web/SVG/SVG_animation_with_SMIL)
 - [SVG 아트 갤러리](https://plurib.us/1shot/2007/svg_gallery/)
 - [D3](https://d3js.org) (JavaScript를 사용해서 데이터를 HTML, SVG, CSS로 시각화하는 라이브러리)

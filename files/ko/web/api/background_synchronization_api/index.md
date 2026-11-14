@@ -28,7 +28,7 @@ Background Synchronization API를 사용하면 장치가 오프라인인 경우�
 
 ### 타 인터페이스로의 확장
 
-[서비스 워커 API](/ko/docs/Web/API/Service_worker_API)에 추가된 다음 추가 항목은 백그라운드 동기화를 세팅할 수 있는 진입점을 제공합니다.
+[서비스 워커 API](/ko/docs/Web/API/Service_Worker_API)에 추가된 다음 추가 항목은 백그라운드 동기화를 세팅할 수 있는 진입점을 제공합니다.
 
 - {{domxref('ServiceWorkerRegistration.sync')}} {{ReadOnlyInline}}
   - : 디바이스가 네트워크에 연결되면 실행할 작업을 등록하기 위한 {{domxref('SyncManager')}} 참조를 반환합니다.

@@ -14,5 +14,5 @@ l10n:
 ## 같이 보기
 
 - [CSS 성능 최적화](/ko/docs/Learn_web_development/Extensions/Performance/CSS)
-- [JavaScript 성능 최적화](/ko/docs/Learn/Performance/JavaScript)
+- [JavaScript 성능 최적화](/ko/docs/Learn_web_development/Extensions/Performance/JavaScript)
 - Speckyboy의 [렌더링 차단 리소스란 무엇이며, 렌더링 차단 문제를 해결하는 방법](https://speckyboy.com/render-blocking/) Speckyboy (2018)
