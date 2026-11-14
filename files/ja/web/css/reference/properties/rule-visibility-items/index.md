@@ -1,9 +1,9 @@
 ---
-title: "`rule-visibility-items` プロパティ (CSS)"
+title: "`rule-visibility-items` プロパティ"
 short-title: rule-visibility-items
 slug: Web/CSS/Reference/Properties/rule-visibility-items
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 {{SeeCompatTable}}
@@ -64,7 +64,7 @@ cite {
 ## 構文
 
 ```css
-/* キーワード */
+/* キーワード値 */
 rule-visibility-items: all;
 rule-visibility-items: around;
 rule-visibility-items: between;
@@ -172,7 +172,7 @@ li {
 
 #### 結果
 
-{{EmbedLiveSample("Basic", "", "230")}}
+{{EmbedLiveSample("basic_example", "", "380")}}
 
 ## 仕様書
 

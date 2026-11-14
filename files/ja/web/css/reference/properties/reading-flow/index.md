@@ -1,8 +1,9 @@
 ---
-title: reading-flow
+title: "`reading-flow` プロパティ"
+short-title: reading-flow
 slug: Web/CSS/Reference/Properties/reading-flow
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 {{SeeCompatTable}}
@@ -268,7 +269,7 @@ a:first-child {
 
 このデモは次のように表示されます。
 
-{{EmbedLiveSample('Reading flow adjustment on block containers', '', '100px')}}
+{{EmbedLiveSample('reading_order_adjustment_on_block_containers', '', '100px')}}
 
 タブでリンクを移動してみてください。タブ順は「アイテム B」、「アイテム C」、「アイテム D」、「アイテム A」です。DOM 内の要素順序は守られますが、アイテム A は他の要素よりも高い読み順のグループ（デフォルトの `reading-order` 値は `0`）に配置されているため、最後にタブ移動されます。
 

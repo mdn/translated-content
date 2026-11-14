@@ -1,8 +1,9 @@
 ---
-title: offset-position
+title: "`offset-position` プロパティ"
+short-title: offset-position
 slug: Web/CSS/Reference/Properties/offset-position
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 **`offset-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、パスに沿った要素の初期位置を定義します。このプロパティは通常、 {{cssxref("offset-path")}} プロパティと組み合わせて、動きの効果を作成するために使用されます。 `offset-position` の値は、 {{cssxref("basic-shape/path", "path()")}} などの `offset-path` 関数が独自の開始位置を指定していない場合、オフセットパスに沿って移動するための要素の初期配置位置を決定します。
@@ -108,7 +109,7 @@ offset-position: unset;
 
 #### 結果
 
-{{EmbedLiveSample('Setting_initial_offset_position_for_an_offset-path', '100%', 200)}}
+{{EmbedLiveSample('setting_initial_offset-position_for_an_offset-path', '100%', 200)}}
 
 ### 様々なオフセット開始位置の比較
 

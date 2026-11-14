@@ -1,8 +1,9 @@
 ---
-title: justify-content
+title: "`justify-content` プロパティ"
+short-title: justify-content
 slug: Web/CSS/Reference/Properties/justify-content
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 [CSS](/ja/docs/Web/CSS) の **`justify-content`** プロパティは、フレックスコンテナーの{{Glossary("main axis", "主軸")}}、グリッドおよび段組みコンテナーの[インライン軸](/ja/docs/Glossary/Logical_properties#inline_direction)に沿って、中身のアイテムの間や周囲に間隔を配置する方法を定義します。
@@ -93,6 +94,8 @@ justify-content: unset;
 ```
 
 ### 値
+
+このプロパティは、以下のキーワード値のいずれかとして指定します。
 
 - `start`
   - : 各アイテムは、主軸方向で配置コンテナーの先頭側の端に向けて互いに寄せて配置されます。
@@ -241,7 +244,7 @@ div:nth-last-of-type(3) {
 
 {{EmbedLiveSample("Basic grid example", "100%", 220)}}
 
-`justify-contents` は列を整列させ、アイテムやグリッド領域の配置には効果を持たないことに注意してください。グリッドアイテムは、グリッドセルがオーバーフローしても、列に影響を与えません。
+`justify-content` は列を整列させ、アイテムやグリッド領域の配置には効果を持たないことに注意してください。グリッドアイテムは、グリッドセルがオーバーフローしても、列に影響を与えません。
 
 ### safe キーワード
 
@@ -312,7 +315,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("the safe keyword", "100%", 260)}}
+{{EmbedLiveSample("the_safe_keyterm", "100%", 260)}}
 
 アイテムが配置コンテナーからあふれると、 `safe` が含まれている場合、配置モードは `start` として動作し、 `center` は実装されません。アイテムがコンテナーをあふれない場合、 `safe` キーワードは効果がありません。
 

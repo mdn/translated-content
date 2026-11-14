@@ -1,11 +1,12 @@
 ---
-title: object-view-box
+title: "`object-view-box` プロパティ"
+short-title: object-view-box
 slug: Web/CSS/Reference/Properties/object-view-box
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`object-view-box`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{glossary("replaced elements", "置換要素")}}内の表示可能な領域 (viewbox) として矩形を定義し、置換要素のコンテンツを変倍したりパンしたりできるようにします。これは SVG の {{SVGAttr("viewBox")}} 属性と似た動作をします。
 
@@ -291,7 +292,7 @@ update();
 
 #### 結果
 
-{{ EmbedLiveSample("Live zoom in using object-view-box property", "", 480) }}
+{{ EmbedLiveSample("live_zoom-in_using_object-view-box_property", "", 480) }}
 
 スライダーを右に移動するとズームイン効果が強まり、左に移動されると縮小する。スライダーはビューボックスのサイズのみに影響し、ビューボックスの原点となる x 値と y 値は変化しません。`<img>` 要素のサイズも変わりません。
 

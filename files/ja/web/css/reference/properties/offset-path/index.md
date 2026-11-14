@@ -1,8 +1,9 @@
 ---
-title: offset-path
+title: "`offset-path` プロパティ"
+short-title: offset-path
 slug: Web/CSS/Reference/Properties/offset-path
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 **`offset-path`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がたどる経路（パス）を指定し、そのパス内の親コンテナーまたは SVG 座標系における要素の位置を決定します。パスは、要素が位置指定または移動される直線、曲線、または幾何学的形状です。
@@ -366,7 +367,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample('live-sample___offset_path_url', '100%', '250')}}
+{{EmbedLiveSample('offset_path_url', '100%', '250')}}
 
 ### 様々なシェイプ
 

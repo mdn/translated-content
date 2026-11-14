@@ -1,19 +1,17 @@
 ---
-title: position-try-order
+title: "`position-try-order` プロパティ"
+short-title: position-try-order
 slug: Web/CSS/Reference/Properties/position-try-order
 l10n:
-  sourceCommit: 3e0ba995376cace7f08f0771635f86f0fb1753b3
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
-**`position-try-order`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アンカー位置指定要素の位置を、初期の位置設定ではなく利用可能な位置試行代替案を使用して設定するための、さまざまな代替オプションを指定することができます。
-
-> [!NOTE]
-> {{cssxref("position-try")}} 一括指定プロパティを使用すると `position-try-order` と {{cssxref("position-try-fallbacks")}} の値を単一の宣言で指定することができます。
+**`position-try-order`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された方向で要素の周囲に最も広い空間を作るオプションに基づいて、アンカー位置指定要素が最初にレンダリングされるときに適用する {{cssxref("position-try-fallbacks")}} のオプションの優先順位を指定します。
 
 ## 構文
 
 ```css
-/* キーワード */
+/* キーワード値 */
 position-try-order: normal;
 position-try-order: most-height;
 position-try-order: most-width;
@@ -33,27 +31,29 @@ position-try-order: unset;
 `position-try-order` プロパティは、キーワード値 `normal` または `<try-size>` のどちらかで指定します。
 
 - `normal`
-  - : デフォルト。要素が最初に表示される際、位置指定の代替オプションは一切試行されません。
+  - : デフォルト。要素が最初にレンダリングされる際、位置指定の代替オプションは試行されません。
 - `<try-size>`
-  - : 様々な試行サイズ代替オプションを定義します。これらは、アンカー位置指定された要素が最初にレンダリングされる際に適用すべき試行代替案を決定する基準を指定します。利用できる値は以下の通りです。
+  - : アンカー位置指定要素が最初にレンダリングされるとき、どの基準で位置指定の代替オプションを適用するかを定義します。利用できる値は以下の通りです。
     - `most-height`
-      - : 要素の包含ブロックに、最大の高さを与える配置試行代替オプションが適用されます。
+      - : 要素に最も広い垂直方向の空間を与える位置指定の代替オプションを適用します。
     - `most-width`
-      - : 要素の包含ブロックに、最大の幅を与える配置試行代替オプションが適用されます。
+      - : 要素に最も広い水平方向の空間を与える位置指定の代替オプションを適用します。
     - `most-block-size`
-      - : 要素の包含ブロックに、ブロック方向の最大のサイズを与える配置試行代替オプションが適用されます。
+      - : 要素にブロック方向で最も広い空間を与える位置指定の代替オプションを適用します。
     - `most-inline-size`
-      - : 要素の包含ブロックに、インライン方向の最大のサイズを与える配置試行代替オプションが適用されます。
+      - : 要素にインライン方向で最も広い空間を与える位置指定の代替オプションを適用します。
 
 ## 解説
 
-`position-try-order` プロパティは、位置指定要素がスクロールされる時ではなく、最初に表示される時に位置指定試行代替オプションを利用するという点で、他の位置指定試行機能とは焦点が若干異なります。例えば、要素をデフォルトの初期位置よりも高さや幅に余裕のある領域に初期表示したい場合などに有用です。
+`position-try-order` プロパティは、位置指定要素がスクロールされるときではなく、最初に表示されるときに適用する位置指定の代替オプションに影響する点で、他の位置指定の機能とは焦点が少し異なります。例えば、デフォルトの初期位置より高さや幅に余裕のある領域に、要素を最初に表示したい場合に便利です。
 
-ブラウザーは利用できる位置指定試行代替オプションを検査し、指定されたサイズにおいてアンカー位置指定要素に最大の空間を与えるものを探します。その後、そのオプションを適用し、要素の初期スタイル設定を上書きします。
+ブラウザーは利用可能な `position-try-fallbacks` を調べ、指定された方向でアンカー位置指定要素に最も広い空間を与えるオプションを探します。その後、そのオプションを適用して、ページの最初のレンダリング時に要素の初期スタイルを上書きします。
 
-要素に割り当てる初期位置よりも広い幅／高さを提供する試行代替オプションが利用できない場合、位置指定の試行オプションは適用されません。実質的に、`position-try-order` が `normal` に設定された場合と同様の挙動となります。
+要素の初期位置よりも広い幅または高さを与える位置指定の代替オプションがない場合、そのオプションは適用されません。これは、`position-try-order` が `normal` に設定されている場合と同じです。
 
 アンカー機能と位置指定の詳細情報については、[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュールと[オーバーフロー時の代替オプションと条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)ガイドを参照してください。
+
+`position-try-order` プロパティは、{{cssxref("position-try-fallbacks")}} プロパティとともに、{{cssxref("position-try")}} 一括指定を使用して設定することもできます。
 
 ## 公式定義
 
@@ -65,13 +65,13 @@ position-try-order: unset;
 
 ## 例
 
-### 基本的な `position-try-order` の使い方
+### 基本的な使い方
 
-個のデモは `position-try-order` の効果を示します。
+この例では、`position-try-order` の効果を示します。
 
 #### HTML
 
-この HTML には、アンカーと位置指定要素となる 2 つの {{htmlelement("div")}} 要素と、`position-try-order` の様々な値を選択することができるラジオボタンが含まれている `<form>` が含まれています。
+この HTML には、アンカーとアンカー位置指定要素となる 2 つの {{htmlelement("div")}} 要素があります。
 
 ```html
 <div class="anchor">⚓︎</div>
@@ -79,34 +79,19 @@ position-try-order: unset;
 <div class="infobox">
   <p>これは情報ボックスです。</p>
 </div>
-
-<form>
-  <fieldset>
-    <legend>試行順序を選択</legend>
-    <div>
-      <label for="radio-normal">normal</label>
-      <input
-        type="radio"
-        id="radio-normal"
-        name="position-try-order"
-        value="normal"
-        checked />
-    </div>
-    <div>
-      <label for="radio-most-height">most-height</label>
-      <input
-        type="radio"
-        id="radio-most-height"
-        name="position-try-order"
-        value="most-height" />
-    </div>
-  </fieldset>
-</form>
 ```
 
 #### CSS
 
-この CSS では、アンカーに {{cssxref("anchor-name")}} が指定されており、大きな {{cssxref("margin")}} が設定されてビューポートの上部中央に配置されます。
+まず、後で編集する位置指定要素を見つけやすくするため、`position-try-order` に `normal` を設定します。
+
+```css
+.infobox {
+  position-try-order: normal;
+}
+```
+
+アンカーには {{cssxref("anchor-name")}} と大きな {{cssxref("margin")}} を設定し、ビューポートの中央付近に配置します。
 
 ```css hidden
 .anchor {
@@ -138,15 +123,9 @@ position-try-order: unset;
   font-size: 1rem;
   text-align: center;
 }
-
-form {
-  position: fixed;
-  bottom: 2px;
-  right: 2px;
-}
 ```
 
-次に、`--custom-bottom` というカスタム位置指定オプションを指定します。これにより要素はアンカーの下に配置され、適切なマージンが適用されます。
+`--custom-bottom` というカスタム位置オプションを指定します。これにより、アンカー位置指定要素がアンカーの下に配置され、適切なマージンが適用されます。
 
 ```css
 @position-try --custom-bottom {
@@ -156,7 +135,7 @@ form {
 }
 ```
 
-最初に要素をアンカー要素の上に配置し、次に `position-try` 一括指定を使用してカスタム位置オプションを適用します。これにより `position-try-order` プロパティも `normal` に設定されます。
+最初にアンカー位置指定要素をアンカーの上に配置し、次に `position-try-fallbacks` プロパティでカスタム位置オプションを指定します。
 
 ```css
 .infobox {
@@ -167,34 +146,17 @@ form {
   margin-bottom: 10px;
   justify-self: anchor-center;
 
-  position-try: normal --custom-bottom;
-}
-```
-
-#### JavaScript
-
-最後に、いくつかの JavaScript を記述します。これによりラジオボタンに [`change`](/ja/docs/Web/API/HTMLElement/change_event) イベントハンドラーが設定され、新しい値が選択されると、その値が情報ボックスの `position-try-order` プロパティに適用されます。
-
-```js
-const infobox = document.querySelector(".infobox");
-const form = document.forms[0];
-const radios = form.elements["position-try-order"];
-
-for (const radio of radios) {
-  radio.addEventListener("change", setTryOrder);
-}
-
-function setTryOrder(e) {
-  const tryOrder = e.target.value;
-  infobox.style.positionTryOrder = tryOrder;
+  position-try-fallbacks: --custom-bottom;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample("Basic `position-try-order` usage", "100%", "310") }}
+{{ EmbedLiveSample("basic_usage", "100%", "310") }}
 
-順序オプション `most-height` を選択してみてください。これにより、`--custom-bottom` が位置試行代替オプションとして適用され、要素がアンカーの下に配置されます。これは、アンカーの下に上よりももっと縦の空間があるために発生します。
+最初は、アンカー位置指定要素はデフォルトの位置として指定したアンカーの上に配置されます。
+
+例の **Play** ボタンを押して MDN Playground で開き、実行したあと、`position-try-order` を `most-height` または `most-block-size` に変更してみてください。例が再レンダリングされると、アンカー位置指定要素はアンカーの下に配置されます。デフォルトの位置より周囲の高さに余裕があるため、`--custom-bottom` の代替オプションが適用されます。
 
 ## 仕様書
 

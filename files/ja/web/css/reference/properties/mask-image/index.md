@@ -1,9 +1,9 @@
 ---
-title: "`mask-image` プロパティ (CSS)"
+title: "`mask-image` プロパティ"
 short-title: mask-image
 slug: Web/CSS/Reference/Properties/mask-image
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 **`mask-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のマスクレイヤーとして使用する画像を設定し、マスク画像のアルファチャンネルと、 {{cssxref("mask-mode")}} プロパティの値に応じて、マスク画像の色の輝度に基づいて、マスク画像が設定されている要素の領域を非表示にします。
@@ -265,7 +265,7 @@ body:has(:checked) img {
 
 #### 結果
 
-{{EmbedLiveSample("SVG elements as masks", "100%", 540)}}
+{{EmbedLiveSample("masking_with_svg_mask", "100%", 540)}}
 
 チェックボックスをオン/オフして、 `mask-mode` の値を `alpha`（チェックあり）と初期値（`luminance` に解決、チェックなし）の間で切り替えます。 `alpha` を使用する場合、マスクの色は関係ありません。重要なのはアルファ透過率だけです。値が `luminance` に解決すると、 `white` 領域は表示され、 `black` 領域は表示されず、`green` 領域は表示されますが、その不透明度は色 `green` の輝度に一致します。 `mask-mode` が `alpha` に設定されている場合、色はすべて完全に不透明であるため、色は同等になります。
 

@@ -1,8 +1,9 @@
 ---
-title: x
+title: "`x` プロパティ"
+short-title: x
 slug: Web/CSS/Reference/Properties/x
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 **`x`** は [CSS](/ja/docs/Web/CSS) プロパティで、SVG の {{SVGElement("rect")}} 図形、{{SVGElement("image")}} 画像、{{SVGElement("foreignObject")}} ビューポート、または入れ子になった {{SVGElement("svg")}} ビューポートの左上角の X 座標を、最も近い `<svg>` 親要素のユーザー[座標系](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems)に対して定義します。存在する場合、このプロパティは要素の {{SVGAttr("x")}} 属性よりも優先されます。
@@ -96,7 +97,7 @@ rect:nth-of-type(4) {
 
 #### 結果
 
-{{EmbedLiveSample("Defining the x-axis coordinate of SVG shapes", "300", "180")}}
+{{EmbedLiveSample("defining_the_x-axis_coordinates_of_svg_shapes", "300", "180")}}
 
 矩形の左辺は、それぞれ `10`（属性による）、`3em`、`180px`、 `50%` の位置になります。SVG の幅は `300px` ですので、最後の矩形の左辺は `150px` の位置になります。
 
