@@ -2,18 +2,17 @@
 title: 始めましょう
 slug: Web/SVG/Tutorials/SVG_from_scratch/Getting_started
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: fd216f3c4358f24fef043d32b28d6e980a78afc0
 ---
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}
 
-### 基本的な例
+## 基本的な例
 
-基本的な例で正しく始めましょう。下のコードを見てください。
+さっそく例を見てみましょう。次のコードをご覧ください。
 
 ```xml
-<svg version="1.1"
-     width="300" height="200"
+<svg width="300" height="200"
      xmlns="http://www.w3.org/2000/svg">
 
   <rect width="100%" height="100%" fill="red" />
@@ -25,9 +24,9 @@ l10n:
 </svg>
 ```
 
-コードをコピーして、ファイル demo1.svg に貼り付けましょう。そして、ファイルをブラウザーで開いてください。これは、次のスクリーンショットのように表示されます。（または[ライブで表示](https://mdn.dev/archives/media/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml)）
+コードをコピーして、demo1.svg というファイルに貼り付けてください。次にファイルをブラウザーで開くと、次のスクリーンショットのように表示されます（または[ライブで表示](https://mdn.dev/archives/media/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml)）。
 
-![svgdemo1.png](svgdemo1.png)
+![赤い背景に緑の円が中央に描かれ、その円の中に白い文字で SVG と書かれています。](svgdemo1.png)
 
 描画プロセスは次のようになります。
 
@@ -67,18 +66,18 @@ l10n:
 
 SVG ファイルには 2 つの種類があります。普通の SVG ファイルは、 SVG マークアップを含むシンプルなテキストファイルです。このファイルの推奨される拡張子は ".svg" （すべて小文字）です。
 
-SVG ファイルは、一部のアプリケーション (例えば、地理情報アプリケーション) で使用される場合、巨大になる可能性があるため、 SVG 仕様書では、 gzip 圧縮された SVG ファイルを使用することも許可しています。これらのファイルに推奨されるファイル名の拡張子は ".svgz" （すべて小文字）です。残念ながら、 Microsoft IIS サーバーから配信される場合、 gzip 圧縮された SVG ファイルを SVG 対応のすべてのユーザーエージェントで確実に動作させるのはとても問題があり、 Firefox は gzip 圧縮された SVG をローカルコンピューターから読み込むことができません。 gzip 圧縮された SVG は、それが正しく提供されるとわかっているウェブサーバーに公開するとき以外は避けてください（下記参照）。
+SVG ファイルは、一部のアプリケーション（地理情報アプリケーションなど）では非常に大きくなる可能性があるため、SVG 仕様では SVG ファイルを [gzip 圧縮](/ja/docs/Glossary/gzip_compression)することも認めています。この形式のファイルに推奨される拡張子は ".svgz"（すべて小文字）です。gzip 圧縮された SVG が正しく読み込まれるのは、サーバーが正しい `Content-Encoding` ヘッダーを送信する場合に限られます（次の節を参照）。そのため、ウェブサーバーが正しく配信するよう設定されていると確認できる場合にのみ、`.svgz` を使用してください。
 
-### ウェブサーバーについて
+## .svgz ファイルを配信するウェブサーバーについて
 
-さて、基本的な SVG ファイルの作成方法がわかったところで、次の段階はウェブサーバーにアップロードすることです。この段階ではいくつかの問題があります。通常の SVG ファイルの場合、サーバーは次の HTTP ヘッダーを送信しなければなりません。
+基本的な SVG ファイルの作成方法がわかったところで、次はウェブサーバーにアップロードします。この段階には注意点があります。通常の SVG ファイルの場合、サーバーは次の HTTP ヘッダーを送信する必要があります。
 
 ```http
 Content-Type: image/svg+xml
 Vary: Accept-Encoding
 ```
 
-gzip で圧縮された SVG ファイルの場合は、サーバーは、以下の HTTP ヘッダーを送る必要があります。
+gzip 圧縮された SVG ファイルの場合、サーバーは次の HTTP ヘッダーを送信する必要があります。
 
 ```http
 Content-Type: image/svg+xml
@@ -86,8 +85,8 @@ Content-Encoding: gzip
 Vary: Accept-Encoding
 ```
 
-サーバーが SVG ファイルで正しい HTTP ヘッダーを送信しているかどうかは、[ネットワークモニターパネル](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#headers)や [websniffer.com](https://websniffer.com/) などのサイトを使用して確認できます。 SVG ファイルのうちの 1 つの URL を送信し、 HTTP レスポンスヘッダーを確認します。サーバーが上記の値のヘッダーを送信していないことがわかったら、ウェブのホスティング業者に連絡してください。 SVG 用のサーバーを正しく設定するように説得しにくい場合は、自分で設定するのも良いかもしれません。簡単な解決策については、 w3.org の[サーバー設定ページ](https://www.w3.org/services/svg-server/)を参照してください。
+SVG ファイルのレスポンスに正しい HTTP ヘッダーが含まれているかどうかは、ブラウザーの[開発者ツール](/ja/docs/Glossary/Developer_Tools)を開いて確認できます。たとえば Firefox では、[ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#headers)でレスポンスヘッダーを調べます。ヘッダーの値が上記のとおりでない場合は、ウェブホストに連絡してください。自分でサーバーを管理している場合は、SVG をこれらのヘッダーとともに配信するよう設定を変更してください。
 
-サーバーの設定ミスは SVG の読み込みに失敗する理由として非常に一般的です。サーバーが正しいヘッダーを SVG ファイルと一緒に送信するように設定されていない場合、 Firefox はファイルのマークアップをテキストや文字化けしたゴミとして表示したり、ビューアーにアプリケーションを選択して開くように要求したりする可能性が高いです。
+サーバーの設定ミスは、SVG の読み込みに失敗する非常によくある原因です。そのため、自分のサーバー設定も確認してください。サーバーが SVG ファイルとともに正しいヘッダーを送信するよう設定されていない場合、Firefox はファイルのマークアップをテキストや文字化けした内容として表示したり、ファイルを開くアプリケーションを選ぶよう求めたりする可能性があります。
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}
