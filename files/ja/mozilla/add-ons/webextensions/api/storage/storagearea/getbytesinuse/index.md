@@ -1,38 +1,46 @@
 ---
 title: StorageArea.getBytesInUse()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse
+l10n:
+  sourceCommit: 81c80db5f9f98dd2ac197474829fe52cd75acf1b
 ---
 
-{{AddonSidebar}}
+ストレージ領域に格納された 1 つ以上のアイテムが使用しているストレージ容量をバイト単位で取得します。
 
-1 つ以上のストレージ領域内に格納されたアイテムが占めるストレージ空間をバイト単位で取得します。
+> [!NOTE]
+> Firefox では、このメソッドは次のストレージに対応しています。
+>
+> - {{WebExtAPIRef("storage.sync")}}
+> - Firefox 131 以降の {{WebExtAPIRef("storage.session")}}
+> - Firefox 144 以降の {{WebExtAPIRef("storage.local")}} および {{WebExtAPIRef("storage.managed")}}
 
-この関数は [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
+> [!NOTE]
+> 少なくとも Chrome と Firefox では、`storage.managed.getBytesInUse()` は常に 0 を返します。
 
 ## 構文
 
-```js
-var gettingSpace = browser.storage.<storageType>.getBytesInUse(
-  keys                      // null, string, or array of strings
+```js-nolint
+let gettingSpace = browser.storage.<storageType>.getBytesInUse(
+  keys                      // null、文字列、または文字列の配列
 )
 ```
 
-`<storageType>` は {{WebExtAPIRef("storage.sync")}} または {{WebExtAPIRef("storage.local")}} の書き込み可能なストレージタイプです。
+`<storageType>` は次のいずれかのストレージタイプです: {{WebExtAPIRef("storage.sync", "sync")}}、{{WebExtAPIRef("storage.local", "local")}}、{{WebExtAPIRef("storage.session", "session")}}、または {{WebExtAPIRef("storage.managed", "managed")}}。
 
 ### 引数
 
 - `keys`
-  - : ストレージ空間を取得したいアイテムのキー(文字列または文字列の配列)を指定します。 空の文字列か配列を渡すと 0 が返ります。 `null` を指定すると、ストレージ領域全体の使用中ストレージ空間を返します。
+  - : ストレージ容量を取得するアイテムを特定するキー（文字列または文字列の配列）です。空の配列を渡すと、0 が返されます。`null` または `undefined` を渡すと、ストレージ領域全体で使用されている容量が返されます。
 
-### 返り値
+### 返値
 
-成功時は `keys` で指定されたオブジェクトが占めるストレージ空間を持つ整数 `bytesUsed` を引数に持つ [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。失敗した場合 Promise はエラーメッセージと共にリジェクトされます。
+`keys` で指定されたオブジェクトが使用しているストレージ容量を表す整数 `bytesUsed` で履行される [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。操作に失敗した場合、Promise はエラーメッセージとともに拒否されます。
+
+{{WebExtExamples}}
 
 ## ブラウザーの互換性
 
 {{Compat}}
 
-{{WebExtExamples}}
-
 > [!NOTE]
-> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。
+> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage)<sup>(英語)</sup> API に基づいています。このドキュメントは Chromium のコードにある [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) から派生したものです。

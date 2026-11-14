@@ -1,42 +1,43 @@
 ---
 title: StorageArea.set()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
+l10n:
+  sourceCommit: 81c80db5f9f98dd2ac197474829fe52cd75acf1b
 ---
-
-{{AddonSidebar}}
 
 1 つ以上のアイテムをストレージ領域に保存または上書きします。
 
-この API を使用して保存や上書きをする場合、{{WebExtAPIRef("storage.onChanged")}} イベントが発火します。
+この API で値を保存または更新すると、{{WebExtAPIRef("storage.onChanged")}} イベントが発生します。
+
+[`sync`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) ストレージ領域に値を保存する場合、ブラウザーは拡張機能が保存できるデータ量にクォータを適用します。詳しくは[同期データのストレージクォータ](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync#storage_quotas_for_sync_data)を参照してください。
 
 この関数は [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
 ## 構文
 
-```js
+```js-nolint
 let settingItem = browser.storage.<storageType>.set(
   keys             // オブジェクト
 )
 ```
 
-`<storageType>` は [`storage.sync`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) または [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) の書き込み可能なストレージタイプです。
+`<storageType>` は、書き込み可能なストレージ種別であり、{{WebExtAPIRef("storage.local")}}、{{WebExtAPIRef("storage.session")}}、{{WebExtAPIRef("storage.sync")}} のいずれかです。
 
 ### 引数
 
 - `keys`
-  - : 保存したい 1 つ以上のキー/値ペアを持つオブジェクトを指定します。アイテムが既に存在する場合、値は上書きされます。
+  - : 保存するキーと値のペアを 1 つ以上含むオブジェクトです。アイテムがストレージに存在する場合、その値が更新されます。
 
-    値は [primitive 型](/ja/docs/Glossary/Primitive) (整数型・ブール型・文字列) または[`配列`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) を指定でできます。
+    値には、[プリミティブ](/ja/docs/Glossary/Primitive)（数値、論理値、文字列など）、{{jsxref("Array")}}、または {{jsxref("Object")}} 型を指定できます。
 
-    通常は他の型 (`Function`, `Date`, `RegExp`, `Set`, `Map`, `ArrayBuffer` など)は格納できません。これらのサポートされていない型の中には空のオブジェクトとして復元されたり、 `set()` がエラーをスローする場合があります。この場合の挙動はブラウザーに依存します。
+    通常、`Function`、`Date`、`RegExp`、`Set`、`Map`、`ArrayBuffer` などの他の型は保存できません。サポートされていない型のうち、空のオブジェクトとして復元されるものもあれば、`set()` でエラーが発生するものもあります。この動作はブラウザーによって異なります。
 
-### 返り値
+> [!NOTE]
+> ストレージからキーを削除するには、{{WebExtAPIRef("storage.storageArea.remove")}} を使用してください。値を値なしとして上書きするには、`key: null` のように `null` を使用してください。
 
-成功時は引数の無い [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。 失敗した場合 promise はエラーメッセージと共にリジェクトされます。
+### 返値
 
-## ブラウザーの互換性
-
-{{Compat}}
+操作が成功した場合は引数なしで履行される {{jsxref("Promise")}} です。操作に失敗した場合、このプロミスはエラーメッセージとともに拒否されます。
 
 ## 例
 
@@ -57,20 +58,20 @@ function onError(error) {
   console.log(error);
 }
 
-// オブジェクトを2つ定義
-var monster = {
+// 2 つのオブジェクトを定義
+let monster = {
   name: "Kraken",
   tentacles: true,
   eyeCount: 10,
 };
 
-var kitten = {
+let kitten = {
   name: "Moggy",
   tentacles: false,
   eyeCount: 2,
 };
 
-// オブジェクト2つを格納
+// オブジェクトを格納
 browser.storage.local.set({ kitten, monster }).then(setItem, onError);
 
 browser.storage.local.get("kitten").then(gotKitten, onError);
@@ -79,5 +80,9 @@ browser.storage.local.get("monster").then(gotMonster, onError);
 
 {{WebExtExamples}}
 
+## ブラウザーの互換性
+
+{{Compat}}
+
 > [!NOTE]
-> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。
+> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage)<sup>(英語)</sup> API に基づいています。このドキュメントは Chromium のコードにある [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) から派生したものです。
