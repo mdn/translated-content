@@ -2,12 +2,11 @@
 title: API リファレンスサイドバー
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
 l10n:
-  sourceCommit: 188594e189f5e73267faf2626adbb84d26128b15
+  sourceCommit: 6d363614de8a40c33d1afe92e4e846b75beea986
 ---
 
-{{MDNSidebar}}
-
-API リファレンスページにカスタムサイドバーを追加して、関連するインターフェイス、チュートリアル、およびその API に関連する他のリソースへのリンクを表示することができます。この記事ではその方法を説明します。
+API リファレンスページにカスタムサイドバーを追加して、関連するインターフェイス、チュートリアル、およびその API に関連する他のリソースへのリンクを表示することができます。
+この記事ではその方法を説明します。
 
 ## サイドバーの作成
 
@@ -15,9 +14,10 @@ API サイドバーを作成するには、次の 3 つの手順を実行する�
 
 1. API リファレンスページを作成します。
 2. 特定の API の項目を [`GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) ファイルに追加します。
-3. [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) マクロを使用して、表示したい各ページにサイドバーを挿入します。
+3. [`APIRef`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/api_list_specs.rs) マクロを使用して、表示したい各ページにサイドバーを挿入します。
 
-これらのステップを順番に実行しましょう。この記事で参照する例は、[フェッチ API](/ja/docs/Web/API/Fetch_API) です。
+これらのステップを順番に実行しましょう。
+この記事で参照する例は、[フェッチ API](/ja/docs/Web/API/Fetch_API) です。
 
 ### GroupData.json への項目の追加
 
@@ -31,24 +31,31 @@ API サイドバーを作成するには、次の 3 つの手順を実行する�
 3. 作業を開始する前に新しいブランチをチェックアウトし、作業が終わったら変更を押してください。
 4. プルリクエストを作成して、MDN チームがあなたの作業をレビューし、必要に応じて変更を求めることができるようにします。
 
-`GroupData.json` ファイルは `files/jsondata/` ディレクトリー内にあります。それを見ると、巨大な JSON 構造があり、それぞれの API に独自のメンバーがあります。名前は API 名で、値は生成するサイドバーリンクを定義するいくつかのサブメンバーを含むオブジェクトです。
+`GroupData.json` ファイルは `files/jsondata/` ディレクトリー内にあります。
+それを見ると、巨大な JSON 構造があり、それぞれの API に独自のメンバーがあります。
+名前は API 名で、値は生成するサイドバーリンクを定義するいくつかのサブメンバーを含むオブジェクトです。
 
-たとえば、MDN の [フェッチ API](/ja/docs/Web/API/Fetch_API) ページを見てください。 `GroupData.json` の対応する項目は次のようになります。
+たとえば、MDN の [フェッチ API](/ja/docs/Web/API/Fetch_API) ページを見てください。
+`GroupData.json` の対応する項目は次のようになります。
 
 ```json
-"Fetch API": {
-    "overview":   [ "Fetch API"],
-    "interfaces": [ "Headers",
-                    "Request",
-                    "Response",
-                    "FetchController",
-                    "FetchObserver",
-                    "FetchSignal",
-                    "ObserverCallback" ],
-    "methods":    [ "fetch()" ],
+{
+  "Fetch API": {
+    "overview": ["Fetch API"],
+    "interfaces": [
+      "Headers",
+      "Request",
+      "Response",
+      "FetchController",
+      "FetchObserver",
+      "FetchSignal",
+      "ObserverCallback"
+    ],
+    "methods": ["fetch()"],
     "properties": [],
-    "events":     []
-},
+    "events": []
+  }
+}
 ```
 
 ご覧のとおり、名前には "Fetch API" を使用し、オブジェクト値の内側には多数のサブメンバーが含まれています。
@@ -95,24 +102,28 @@ API サイドバーを作成するには、次の 3 つの手順を実行する�
    > [!NOTE]
    > MDN は、辞書を別個に文書化することをやめつつあります。
    > 可能な限り、これらは使用される場所でオブジェクトとして記述するようになりました。
-8. `"types"` — API で定義されている型定義子と列挙型の配列。リストを短くするために、特別に重要なものや複数のページから参照されるものだけをリストアップすることもできます。
+8. `"types"` — API で定義されている型定義子と列挙型の配列。
+   リストを短くするために、特別に重要なものや複数のページから参照されるものだけをリストアップすることもできます。
    > [!NOTE]
    > MDN は型定義子を個別に文書化することをやめつつあります。
    > 可能な限り、これらが使用されている箇所で値として記述されるようになりました。
-9. `"callbacks"` — 値は、その API で定義されているすべてのコールバック型のリストを含む配列です。コールバック型を含む API であっても、このグループを使用する必要はないと思われるかもしれません。
+9. `"callbacks"` — 値は、その API で定義されているすべてのコールバック型のリストを含む配列です。
    コールバック型を含む API でも、このグループを全く使用する必要がないと感じるかもしれません。なぜなら、コールバック型は個別にドキュメント化しても意味がないことが多いからです。
 
 ## サイドバーで使用されるタグ
 
-サブメンバーによっては、ページタグに基づいて子ページから自動的に発見されるものがあります。最上位 API 以下のページはサイドバーがレンダリングされるたびにクロールされ、メソッド ("Method" タグ)、プロパティ ("Property" タグ)、コンストラクター ("Constructor" タグ) の項目が自動的に生成されます。
+サブメンバーによっては、ページタグに基づいて子ページから自動的に発見されるものがあります。
+最上位 API 以下のページはサイドバーがレンダリングされるたびにクロールされ、メソッド ("Method" タグ)、プロパティ ("Property" タグ)、コンストラクター ("Constructor" タグ) の項目が自動的に生成されます。
 
-サブメンバーにも、タグに基づいた警告アイコンが自動的に表示されます。実験的な ("Experimental" タグ)、標準外 ("Non Standard" または "Non-standard" タグ)、非推奨 ("Deprecated" タグ) サブメンバーには装飾が追加されます。
+サブメンバーにも、タグに基づいた警告アイコンが自動的に表示されます。
+実験的な ("Experimental" タグ)、標準外 ("Non Standard" または "Non-standard" タグ)、非推奨 ("Deprecated" タグ) サブメンバーには装飾が追加されます。
 
-タグベースの処理に関する詳細情報は、 [APIRef ソースの中](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs)にあります。
+タグベースの処理に関する詳細情報は、 [APIRef ソースの中](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/api_list_specs.rs)にあります。
 
 ## サイドバーの挿入
 
-`GroupData.json` に API の項目を追加してプルリクエストとして送信し、その変更がメインリポジトリーに受け入れられたら、 [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) マクロを使用して API リファレンスページに設置することができ、 GroupData の API に引数として使用されます。例として、 [WebVR API](/ja/docs/Web/API/WebVR_API) のサイドバーは、各ページに次のように設置されています。
+`GroupData.json` に API の項目を追加してプルリクエストとして送信し、その変更がメインリポジトリーに受け入れられたら、 [`APIRef`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/api_list_specs.rs) マクロを使用して API リファレンスページに設置することができ、 GroupData の API に引数として使用されます。
+例として、 [WebVR API](/ja/docs/Web/API/WebVR_API) のサイドバーは、各ページに次のように設置されています。
 
 ```plain
 \{{APIRef("WebVR API")}}
