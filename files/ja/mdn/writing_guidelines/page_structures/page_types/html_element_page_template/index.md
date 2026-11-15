@@ -2,7 +2,7 @@
 title: HTML 要素ページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 > [!NOTE]
@@ -46,7 +46,6 @@ l10n:
 >
 > - `\{{SeeCompatTable}}` — これは **これは実験的な機能です。** のバナーを生成し、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。
 >   実験的なもので、その技術が Firefox の設定で隠されている場合は、[Firefox での実験的な機能](/ja/docs/Mozilla/Firefox/Experimental_features) ページにもそのためのエントリーを記入する必要があります。
-> - `\{{Deprecated_Header}}` — これは **非推奨** バナーを生成し、この技術の使用を[避けるべき](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)であることを示します。
 > - `\{{Non-standard_Header}}` — これは **標準外** バナーを生成し、この機能がどの仕様書にもないことを示します。
 >
 > 詳しくは「[機能の状態を追加または更新する方法](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#機能の状態を追加または更新する方法)」を参照してください。
