@@ -2,7 +2,7 @@
 title: フロントマターの page-type キー
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key
 l10n:
-  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 > [!CALLOUT]
@@ -23,7 +23,7 @@ sidebar: http
 ---
 ```
 
-JavaScript や CSS など、サイトの主要な領域にはそれぞれドメイン固有の `page-type` の値が設定されています。
+JavaScript や CSS など、サイトの主要な領域には、それぞれドメイン固有の `page-type` の値があります。また、サイトのどの領域でも使用できる汎用的な値もあります。
 
 ## 汎用ページ型
 
@@ -47,7 +47,7 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 - `learn-topic`: トピックの概要、つまり [_CSS_](/ja/docs/Learn_web_development/Core/Styling_basics) のようなモジュールの集合です。
 - `learn-module` [_HTML によるコンテンツの構造化_](/ja/docs/Learn_web_development/Core/Structuring_content)のように、モジュールの概要、つまり、順番に並んだガイドの集合です。
 - `learn-module-chapter` [_モバイルアクセシビリティ_](/ja/docs/Learn_web_development/Core/Accessibility/Mobile)のように、モジュールの一部であるガイド。
-- `learn-module-assessment` [_確認テスト: フォームとボタン_](/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons)のように、モジュールまたはその一部の理解度を評価するためのアクティビティを含む特別なガイドです。
+- `learn-module-assessment` [_確認テスト: フォームとボタン_](/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons)のように、モジュールまたはその一部の理解度を評価できるアクティビティを含む特別なガイドです。
 - `learn-faq`: [_ドメイン名とは何ですか?_](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)のように、ウェブ開発に関する固有の質問に対する答えです。
 
 ### アクセシビリティのページ型
