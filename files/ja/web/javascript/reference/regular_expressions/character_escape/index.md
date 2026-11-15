@@ -2,7 +2,7 @@
 title: "文字エスケープ: \\n, \\u{...}"
 slug: Web/JavaScript/Reference/Regular_expressions/Character_escape
 l10n:
-  sourceCommit: a7acf4c7a38f1df8f5d0dee1f17672968ac979d5
+  sourceCommit: 288e644117c29285df2acf37a2ac97f57546a146
 ---
 
 **文字エスケープ**は、リテラルの形ではうまく表現できない文字を表します。
@@ -28,7 +28,7 @@ l10n:
 ### 引数
 
 - `H…H`
-  - : 文字の Unicode コードポイントを表す 16 進数です。`xHH` 形式の場合は 16 進数 2 桁、`uHHHH` 形式の場合は 4 桁、`\u{H…H}` 形式の場合は 16 進数 1 桁から 6 桁を持つことができます。
+  - : 文字の Unicode コードポイントを表す 16 進数です。`\xHH` 形式では 16 進数が 2 桁、`\uHHHH` 形式では 4 桁でなければなりません。`\u{H…H}` 形式では 16 進数を 1 桁以上使用し、その値は `0x10FFFF` 以下でなければなりません。先頭のゼロは許可されるため、桁数に上限はありません。
 
 ## 解説
 
@@ -37,7 +37,7 @@ l10n:
 - `\f`, `\n`, `\r`, `\t`, `\v`
   - : [文字リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#エスケープシーケンス)のものと同じですが、`\b` は[単語境界](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)となります（[文字クラス](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)でない限り）。
 - `\c` に `A` から `Z` または `a` から `z` が続いたもの
-  - : 32 で割った余りに等しい値の制御文字を表します。例えば、`J` のコードポイントは 74 であり、74 を 32 で割ると改行のコードポイントである 10 であるため、`cJ` は改行 (`\n`) を表します。大文字と小文字の形式は 32 だけ異なるので、`\cJ` と `\cj` は等価です。この形で 1 から 26 までの制御文字を表すことができます。
+  - : その文字のコード値を 32 で割った余りに等しい値の制御文字を表します。例えば、`J` のコードポイントは 74 で、74 を 32 で割った余りは改行のコードポイントと同じ 10 なので、`\cJ` は改行 (`\n`) を表します。大文字と小文字のコード値は 32 だけ異なるので、`\cJ` と `\cj` は等価です。この形で 1 から 26 までの制御文字を表すことができます。
 - `\0`
   - : U+0000 NUL 文字を表します。数字を続けてはいけません（[古い 8 進数エスケープ](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#エスケープシーケンス)シーケンスになります）。
 - `\^`, `\$`, `\\`, `\.`, `\*`, `\+`, `\?`, `\(`, `\)`, `\[`, `\]`, `\\{`, `\\}`, `\|`, `\/`
@@ -47,7 +47,7 @@ l10n:
 - `\uHHHH`
   - : 指定された Unicode コードポイントを持つ文字を表します。16 進数は正確に 4 桁でなければなりません。このようなエスケープシーケンス 2 つで、[Unicode 対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)ではサロゲートペアを表すのに使用することができます。（Unicode 非対応モードでは常に 2 つの別個の文字になります。）
 - `\u{H…H}`
-  - : （[Unicode 対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)のみ）指定された Unicode コードポイントを持つ文字を表します。16 進数は 1 桁から 6 桁までです。
+  - : （[Unicode 対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)のみ）指定された Unicode コードポイントを持つ文字を表します。16 進数は 1 桁以上で、その値は `0x10FFFF` 以下でなければなりません。先頭のゼロは許可されるため、桁数に上限はありません。
 
 [Unicode 非対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)では、上記のいずれでもないエスケープシーケンスは識別エスケープになります。これらはバックスラッシュに続く文字を表します。例えば、`\a` は文字 `a` を表します。この動作は後方互換性の問題を発生させることなく新しいエスケープシーケンスを導入す る能力を制限するため、Unicode 対応モードでは禁止されています。
 
