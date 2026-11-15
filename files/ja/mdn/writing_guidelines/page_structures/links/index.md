@@ -2,7 +2,7 @@
 title: リンクマクロ
 slug: MDN/Writing_guidelines/Page_structures/Links
 l10n:
-  sourceCommit: abc914f085fb9913c41c4cd4453da432e9d4e761
+  sourceCommit: c37d4a5c0a0e464242d54ee7378d8adb2c9c5a4f
 ---
 
 MDN には MDN コンテンツへの常に最新のリンクを作成するためのマクロが数多く指定されています。このガイドでは、別のページへの単一のリンクや、文書のサブページすべてへのリンクのリストを含めるために使用することができる MDN 相互参照マクロについて学びます。
