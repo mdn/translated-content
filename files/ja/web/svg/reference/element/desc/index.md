@@ -2,7 +2,7 @@
 title: <desc>
 slug: Web/SVG/Reference/Element/desc
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
 **`<desc>`** は [SVG](/ja/docs/Web/SVG) の要素で、 SVG の[コンテナー要素](/ja/docs/Web/SVG/Reference/Element#コンテナー要素)または[グラフィック要素](/ja/docs/Web/SVG/Reference/Element#グラフィック要素)のアクセシブルな長文の説明を提供します。
@@ -10,6 +10,18 @@ l10n:
 `<desc>` 要素内のテキストはグラフィックの一部としてレンダリングされません。要素が可視テキストで記述できる場合、 [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 属性でそのテキストを参照することが可能です。 `aria-describedby` を使用する場合、 `<desc>` よりも優先されます。
 
 `<desc>` 要素の隠しテキストは、 `aria-describedby` 値で複数の ID を使用して、他の要素の可視テキストと連結することもできます。その場合、 `<desc>` 要素は参照するための ID を提供しなければなりません。
+
+## 使用コンテキスト
+
+{{svginfo}}
+
+## 属性
+
+この要素にはグローバル属性のみが含まれます。
+
+## DOM インターフェイス
+
+この要素は {{domxref("SVGDescElement")}} インターフェイスを実装しています。
 
 ## 例
 
@@ -32,14 +44,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 150, '100%')}}
-
-## 属性
-
-この要素はグローバル属性のみがあります。
-
-## 使用コンテキスト
-
-{{svginfo}}
 
 ## 仕様書
 
