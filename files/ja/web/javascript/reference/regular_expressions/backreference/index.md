@@ -2,10 +2,10 @@
 title: "後方参照: \\1, \\2"
 slug: Web/JavaScript/Reference/Regular_expressions/Backreference
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 288e644117c29285df2acf37a2ac97f57546a146
 ---
 
-**後方参照**は、前回の[キャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)の部分一致を参照し、そのグループと同じテキストに一致します。[名前付きキャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)の場合は、[名前付き後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)構文を使用する方ができればよいでしょう。
+**後方参照**は、前にある[キャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)の部分一致を参照し、そのグループと同じテキストと照合します。[名前付きキャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)の場合は、[名前付き後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)構文を使用するとよいでしょう。
 
 ## 構文
 
@@ -19,11 +19,11 @@ l10n:
 ### 引数
 
 - `N`
-  - : キャプチャグループの番号を参照する正の値。
+  - : キャプチャグループの番号を参照する正の整数。
 
 ## 解説
 
-後方参照は、前回キャプチャグループによって一致したのと同じテキストに一致する方法です。キャプチャリンググループは 1 から数えるので、最初のキャプチャリンググループの結果は `\1` で参照し、2 つ目は `\2` で参照し、といった具合になります。`\0` は NUL 文字の[文字エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)です。
+後方参照は、キャプチャグループが前に一致したものと同じテキストと照合する方法です。キャプチャグループは 1 から数えるため、最初のグループの結果は `\1`、第二のグループの結果は `\2` で参照し、以降も同様です。`\0` は NUL 文字の[文字エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)です。
 
 [大文字と小文字を区別しない](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase)照合では、後方参照は元のテキストと異なる大文字と小文字を持つテキストと一致することがあります。
 
@@ -37,13 +37,27 @@ l10n:
 /(a)\2/u; // SyntaxError: Invalid regular expression: Invalid escape
 ```
 
-[Unicode 対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)でない場合は、無効な後方参照は[古い 8 進エスケープ](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#エスケープシーケンス)シーケンスになります。これは[ウェブの互換性のために非推奨の構文](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)ですので、頼ってはいけません。
+数字の並び全体がキャプチャグループ番号として解釈されます。例えば、`\12` は 12 番目のキャプチャグループを参照します。最初のキャプチャグループへの後方参照の後にリテラルの `2` が続くものではありません。
+
+[Unicode 非対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)では、該当するキャプチャグループが存在しない場合、エスケープは最初の数字に応じて異なる解釈になります。
+
+- 先頭の数字が `1` から `7` の場合、[古い 8 進数のエスケープシーケンス](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#エスケープシーケンス)となり、最大値を `0o377` として最大 3 桁の 8 進数字を消費します。残りの数字はリテラル文字になります。
+- 先頭の数字が `8` または `9` の場合、[識別エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)となり、その数字自体に一致します。残りの数字はリテラル文字になります。
+
+パーサーは、より短いキャプチャグループ番号として解釈し直しません。
+
+これらは[ウェブの互換性のために非推奨となった構文](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)なので、頼るべきではありません。
 
 ```js
 /(a)\2/.test("a\x02"); // true
+/(a)\12/.test("a\n"); // true。8 進数の 12。グループ 1 への後方参照 + リテラルの 2 ではない
+/\18/.test("\x018"); // true。8 進数の 1 + リテラルの 8
+/\1234/.test("S4"); // true。8 進数の 123 + リテラルの 4
+/\400/.test(" 0"); // true。8 進数の 40 + リテラルの 0
+/\89/.test("89"); // true。識別エスケープの 8 + リテラルの 9
 ```
 
-参照するキャプチャグループが一致しない場合（例えば、それが[論理和の一致しない選択肢](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)に属するため）、または、グループがまだ一致 していない場合（例えば、それが後方参照の正しい位置にあるため）、後方参照は常に成功します（空文字列に一致するかのように）。
+参照するキャプチャグループが一致しない場合（例えば、それが[論理和の一致しない選択肢](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)に属するため）、またはグループがまだ一致していない場合（例えば、後方参照より後に位置するため）、後方参照は常に成功します（空文字列に一致するかのように）。
 
 ```js
 /(?:a|(b))\1c/.test("ac"); // true

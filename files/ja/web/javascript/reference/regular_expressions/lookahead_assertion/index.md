@@ -2,10 +2,10 @@
 title: "先読みアサーション: (?=...), (?!...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 288e644117c29285df2acf37a2ac97f57546a146
 ---
 
-**先読みアサーション**の「先読み」とは、それ以降の入力を指定されたパターンに照合しようとしますが、入力を消費することはありません。照合に成功した場合、入力の現在の位置はそのままです。
+**先読みアサーション**は「先読み」の名のとおり、後続の入力を指定されたパターンに照合しますが、入力は消費しません。一致した場合も、入力内の現在位置は変わりません。
 
 ## 構文
 
@@ -31,7 +31,7 @@ l10n:
 
 ```js
 /(?=(a+))a*b\1/.exec("baabac"); // ['aba', 'a']
-// Not ['aaba', 'a']
+// ['aaba', 'a'] ではない
 ```
 
 上記のパターンの照合は以下のように行われます。
@@ -53,7 +53,7 @@ l10n:
 
 1. `(.*?)` パターンは貪欲ではないので、何も照合しないことから始まります。しかし、次の文字は `a` で、入力中の `"b"` には一致しません。
 2. `(.*?)` パターンは `"b"` に一致するので、パターン中の `a` は `"baaabaac"` の最初の `"a"` に一致します。
-3. もし `(a+)` が `"aa"` に一致するならば、`(a+)b2c` は `"aabaac"` に一致します。このため、アサーションは失敗し、マッチャーは後退します。
+3. もし `(a+)` が `"aa"` に一致するなら、`(a+)b\2c` は `"aabaac"` に一致します。このため、アサーションは失敗し、マッチャーは後退します。
 4. `(.*?)` パターン は`"ba"` に一致するので、パターン中の `a` は `"baaabaac"` の 2 つ目の `"a"` に一致します。
 5. この位置では、先読みは照合に失敗します。 なぜなら、残りの入力は「任意の数の `"a"` と `"b"`, 同じ数の `"a"` と `c`」というパターンに続かないからです。これにより、アサーションは成功します。
 6. しかし、アサーション内では何も一致しなかったので、後方参照 `\2` には値がなく、空文字列に一致します。そのため、入力の残りの部分は最後の `(.*)` によって消費されます。
@@ -61,7 +61,7 @@ l10n:
 通常、アサーションは[量化](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)できません。しかし、[Unicode 非対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)においては、先読みアサーションは量化することができます。これは[ウェブの互換性のための非推奨構文](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)としてのみ認められており、頼ってはいけません。
 
 ```js
-/(?=a)?b/.test("b"); // true; the lookahead is matched 0 time
+/(?=a)?b/.test("b"); // true。先読みの一致回数は 0 回
 ```
 
 ## 例
@@ -98,11 +98,11 @@ isValidIdentifierName("foo"); // true
 isValidIdentifierName("cases"); // true
 ```
 
-次の例は、ASCIIで、かつ識別子部分として使用できる文字列に一致します。
+次の例は、ASCII 文字であり、識別子の一部として使用できる文字列に一致します。
 
 ```js
 function isASCIIIDPart(char) {
-  return /^(?=\p{ASCII}$)\p{ID_Start}$/u.test(char);
+  return /^(?=\p{ASCII}$)[$\p{ID_Continue}]$/u.test(char);
 }
 
 isASCIIIDPart("a"); // true
@@ -110,7 +110,7 @@ isASCIIIDPart("α"); // false
 isASCIIIDPart(":"); // false
 ```
 
-文字数の有限な交差集合や差集合を扱う場合は、`v` フラグを使用して有効にした[文字集合交差](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v_モード文字クラス)構文を使用するとよいでしょう。
+有限個の文字に対する交差集合や差集合を扱う場合は、`v` フラグで有効になる[文字集合交差](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v_モード文字クラス)構文を使用するとよいでしょう。
 
 ## 仕様書
 
