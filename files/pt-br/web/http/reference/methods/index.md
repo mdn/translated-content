@@ -10,6 +10,8 @@ O protocolo HTTP define um conjunto de **métodos de requisição** responsávei
 
 - [`GET`](/pt-BR/docs/Web/HTTP/Reference/Methods/GET)
   - : O método `GET` solicita a representação de um recurso específico. Requisições utilizando o método `GET` devem retornar apenas dados.
+- [`QUERY`](/pt-BR/docs/Web/HTTP/Reference/Methods/QUERY)
+  - : O método `QUERY` inicia uma consulta no lado do servidor. Ele solicita que o recurso de destino processe o conteúdo da requisição de maneira segura e idempotente, retornando o resultado na resposta. É semelhante ao `GET`, mas permite que a requisição tenha conteúdo com semântica definida.
 - [`HEAD`](/pt-BR/docs/Web/HTTP/Reference/Methods/HEAD)
   - : O método `HEAD` solicita uma resposta de forma idêntica ao método `GET`, porém sem conter o corpo da resposta.
 - [`POST`](/pt-BR/docs/Web/HTTP/Reference/Methods/POST)

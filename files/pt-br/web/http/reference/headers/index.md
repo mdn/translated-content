@@ -106,6 +106,8 @@ O recurso HTTP [Client hints](/pt-BR/docs/Web/HTTP/Client_hints) ainda está em 
   - : Informa ao servidor sobre o algoritmo de codificação, geralmente um algoritmo de compressão, isto pode ser usado no recurso enviado de volta.
 - {{HTTPHeader("Accept-Language")}}
   - : Informa ao servidor sobre a linguagem que é esperada que o servidor envie de volta. Esta é uma dica e não está necessariamente sob controle total do usuário: o servidor deve sempre prestar atenção para não sobrepor uma escolha explícita do usuário (como selecionar uma linguagem em uma lista suspensa).
+- {{HTTPHeader("Accept-Query")}}
+  - : Um cabeçalho de resposta de _negociação de conteúdo da requisição_ que anuncia quais [tipos de mídia](/pt-BR/docs/Web/HTTP/Guides/MIME_types) o servidor é capaz de entender em uma requisição {{HTTPMethod("QUERY")}}.
 
 ## Controles
 
