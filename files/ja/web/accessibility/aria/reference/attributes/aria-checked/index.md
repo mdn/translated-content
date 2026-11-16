@@ -1,23 +1,21 @@
 ---
-title: aria-checked
+title: "ARIA: aria-checked 属性"
+short-title: aria-checked
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-checked
-original_slug: Web/Accessibility/ARIA/Attributes/aria-checked
 l10n:
-  sourceCommit: 134f9a1ab341bf9ad30358e5f3a59bd9204078df
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
-
-{{AccessibilitySidebar}}
 
 `aria-checked` 属性は、チェックボックスやラジオボタン、その他のウィジェットの現在の「チェックされている」状態を示します。
 
 > [!NOTE]
-> 可能な場合は、HTML の `type="checkbox"` もしくは `type="radio"` の {{htmlelement("input")}} 要素を使用してください。これらにはセマンティクスが組み込まれており、ARIA 属性が必要ありません。
+> 可能な場合は、HTML の `type="checkbox"` または `type="radio"` の {{htmlelement("input")}} 要素を使用してください。これらには意味的な情報が組み込まれているため、ARIA 属性は必要ありません。
 
 ## 解説
 
-`aria-checked` 属性は、要素がチェックされているか (`true`)、チェックされていないか (`false`)、またはチェック状態が未決定 (`mixed`)（チェックされている状態でもチェックされていない状態でもない）であるかどうかを示します。`mixed` の値は 3 状態入力ロールである [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role) と [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role) によってサポートされています。
+`aria-checked` 属性は、要素がチェックされている (`true`)、チェックされていない (`false`)、またはチェック状態が未決定 (`mixed`)（チェックされている状態でもチェックされていない状態でもない）のいずれであるかを示します。`mixed` の値は、3 状態入力ロールである [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role) と [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role) で対応しています。
 
-`mixed` の値は、[`radio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role) や [`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)、 [`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role) などのロール、およびこれらを継承する要素ではサポートされていません。サポートされていないときに `mixed` が設定されている場合、値は `false` になります。
+`mixed` の値は、[`radio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)、[`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)、[`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role) などのロールや、これらを継承する要素では対応していません。対応していない場合に `mixed` が設定されると、値は `false` になります。
 
 ```html
 <span
@@ -38,7 +36,7 @@ l10n:
 <label for="chk15-label">Subscribe to the newsletter</label>
 ```
 
-`type="checkbox"` の {{htmlelement("input")}} 要素を ARIA の代わりに使用すると、JavaScript は必要ありません。
+ARIA の代わりに `type="checkbox"` の {{htmlelement("input")}} 要素を使用すると、JavaScript は必要ありません。
 
 ## 値
 
@@ -51,17 +49,6 @@ l10n:
 - undefined (デフォルト)
   - : 要素はチェックに対応していません。
 
-## 関連ロール
-
-以下のロールで使用されます:
-
-- [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
-- [`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
-- [`option`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
-- [`radio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
-- [`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
-
 ## 関連インターフェイス
 
 - {{domxref("Element.ariaChecked")}}
@@ -73,6 +60,17 @@ l10n:
 myHTMLElement.ariaChecked = true;
 ```
 
+## 関連ロール
+
+以下のロールで使用されます:
+
+- [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
+- [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
+- [`option`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
+- [`radio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
+- [`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
+
 ## 仕様書
 
 {{Specifications}}
@@ -83,5 +81,5 @@ myHTMLElement.ariaChecked = true;
 - [`<input type="radio">`](/ja/docs/Web/HTML/Reference/Elements/input/radio)
 - [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed)
 - [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
-- [Two state checkbox example](https://www.w3.org/WAI/ARIA/apg/example-index/checkbox/checkbox.html) - w3.org
-- [Mix-state checkbox example](https://www.w3.org/WAI/ARIA/apg/example-index/checkbox/checkbox-mixed.html) - w3.org
+- [2 状態チェックボックスの例](https://www.w3.org/WAI/ARIA/apg/example-index/checkbox/checkbox.html) - w3.org
+- [混合状態チェックボックスの例](https://www.w3.org/WAI/ARIA/apg/example-index/checkbox/checkbox-mixed.html) - w3.org
