@@ -2,11 +2,11 @@
 title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 0c3c464abb1422b0534a5e3f5e81e9bbae13544c
 ---
 
 > [!NOTE]
-> `unescape()` は、ブラウザーによって実装されている標準外の関数であり、エンジン間の互換性のためにのみ標準化されています。すべての JavaScript エンジンで実装されているとは限らず、すべての環境で動作するとは限りません。可能であれば、{{jsxref("decodeURIComponent()")}} または {{jsxref("decodeURI()")}} を使用してください。
+> `unescape()` は、ブラウザーに実装されている古い関数で、エンジン間の互換性のためにのみ標準化されています。すべての JavaScript エンジンで実装されているとは限らず、すべての環境で動作するとは限りません。可能であれば、{{jsxref("decodeURIComponent()")}} または {{jsxref("decodeURI()")}} を使用してください。
 
 **`unescape()`** 関数は、16 進エスケープシーケンスをそれらが表す文字に置き換えた新しい文字列を計算します。エスケープシーケンスは、 {{jsxref("escape()")}} のような関数によって導入される場合があります。
 
@@ -54,7 +54,7 @@ unescape("%u0107"); // "ć"
 
 ## 関連情報
 
-- [`unescape` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [`unescape` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/string-regexp)<sup>(英語)</sup>
 - {{jsxref("decodeURI")}}
 - {{jsxref("decodeURIComponent")}}
 - {{jsxref("escape")}}

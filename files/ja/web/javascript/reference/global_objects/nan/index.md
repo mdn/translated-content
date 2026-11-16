@@ -2,7 +2,7 @@
 title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/NaN
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 0c3c464abb1422b0534a5e3f5e81e9bbae13544c
 ---
 
 **`NaN`** はグローバルプロパティで、非数 (Not-A-Number) を表す値です。
@@ -44,7 +44,7 @@ console.log(sanitize("NotANumber"));
 - オペランドが `NaN` である、または `NaN` を取得するメソッドや式（`7 ** NaN`、`7 * "blabla"` など）。このことは `NaN` が伝染性を持つことを意味します。
 - 不正な値を数値として表す必要があるその他の場合（不正な [Date](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) である `new Date("blabla").getTime()`、`"".charCodeAt(1)` など）
 
-`NaN` とその挙動は JavaScript が発明したものではありません。浮動小数点演算におけるその意味づけ（`NaN !== NaN` を含む）は [IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) によって指定されています。`NaN` の挙動には以下が含まれます。
+`NaN` とその挙動は JavaScript が発明したものではありません。浮動小数点演算におけるその意味づけ（`NaN !== NaN` を含む）は [IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format)<sup>(英語)</sup> によって指定されています。`NaN` の挙動には以下が含まれます。
 
 - 数学演算（ただし[ビット演算](/ja/docs/Web/JavaScript/Reference/Operators#bitwise_shift_operators)を除く）において`NaN`が関与する場合、結果は通常`NaN`となります。（下記の[反例](#silently_escaping_nan)を参照してください。）
 - 関係演算子（`>`、`<`、`>=`、`<=`）のいずれかのオペランドが `NaN` の場合、結果は常に `false` となります。
@@ -102,7 +102,7 @@ arr.findIndex((n) => Number.isNaN(n)); // 2
 
 ### 明確に識別可能な NaN 値
 
-2 つの浮動小数点数が異なる二進表現を持ちながらも両方とも `NaN` となる可能性があります。これは [IEEE 754 エンコード方式](https://ja.wikipedia.org/wiki/NaN#浮動小数点数の_NaN)において、指数が `0x7ff` で仮数部が0でない浮動小数点数はすべて `NaN` となるためです。JavaScript で、[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)を使用してビット単位の操作を行うことができます。
+異なる二進表現を持つ 2 つの浮動小数点数が、どちらも `NaN` となる可能性があります。これは [IEEE 754 エンコード方式](https://ja.wikipedia.org/wiki/NaN#浮動小数点数の_NaN)において、指数が `0x7ff` で仮数部が 0 でない浮動小数点数はすべて `NaN` となるためです。JavaScript では、[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)を使用してビット単位の操作を行うことができます。
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
@@ -130,7 +130,7 @@ console.log(f2b(nan3)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
 
 ### 暗黙に NaN をエスケープ
 
-`NaN` は数学演算を通じて伝播するため、通常は計算の最後に一度 `NaN` を検査するだけでエラー状態を検出できます。`NaN` が黙って無視される唯一の場合は、指数が `0` の[べき乗](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation)を使用する場合であり、この場合基数の値を検査せずに即座に `1` を返します。
+`NaN` は数学演算を通じて伝播するため、通常は計算の最後に一度 `NaN` を検査するだけでエラー状態を検出できます。`NaN` が暗黙に無視される一例は、指数が `0` の[べき乗](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation)を使用する場合です。この場合、基数の値を検査せずに即座に `1` を返します。また、{{jsxref("Math.hypot()")}} のように {{jsxref("Infinity")}} を {{jsxref("NaN")}} より優先する {{jsxref("Math")}} 関数もあります。
 
 ```js
 NaN ** 0 === 1; // true

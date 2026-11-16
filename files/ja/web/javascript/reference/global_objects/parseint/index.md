@@ -2,7 +2,7 @@
 title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 0c3c464abb1422b0534a5e3f5e81e9bbae13544c
 ---
 
 **`parseInt()`** 関数は、文字列の引数を解釈し、指定された[基数](https://ja.wikipedia.org/wiki/%E5%9F%BA%E6%95%B0) （数学的記数法の底）の整数値を返します。
@@ -11,21 +11,21 @@ l10n:
 
 ```js interactive-example
 console.log(parseInt("123"));
-// 123 (default base-10)
+// 123 (デフォルトの 10 進数)
 console.log(parseInt("123", 10));
-// 123 (explicitly specify base-10)
+// 123 (10 進数を明示的に指定)
 console.log(parseInt("   123 "));
-// 123 (whitespace is ignored)
+// 123 (ホワイトスペースは無視)
 console.log(parseInt("077"));
-// 77 (leading zeros are ignored)
+// 77 (先頭のゼロは無視)
 console.log(parseInt("1.9"));
-// 1 (decimal part is truncated)
+// 1 (小数部分を切り捨て)
 console.log(parseInt("ff", 16));
-// 255 (lower-case hexadecimal)
+// 255 (小文字の 16 進数)
 console.log(parseInt("0xFF", 16));
-// 255 (upper-case hexadecimal with "0x" prefix)
+// 255 ("0x" 接頭辞付きの大文字の 16 進数)
 console.log(parseInt("xyz"));
-// NaN (input can't be converted to an integer)
+// NaN (入力を整数に変換できない)
 ```
 
 ## 構文
@@ -46,7 +46,7 @@ parseInt(string, radix)
 
 指定された `string` を解釈した整数値です。また、次の場合は {{jsxref("NaN")}} が返されます。
 
-- `radix` を 32 ビット整数にした値が `2` よりも小さいか `36` よりも大きい、または
+- `radix` を 32 ビット整数に変換した値が `0` でなく、`2` より小さいか `36` より大きい、または
 - ホワイトスペース以外の最初の文字が数値に変換できない。
 
 > [!NOTE]
@@ -54,9 +54,9 @@ parseInt(string, radix)
 
 ## 解説
 
-`parseInt` 関数は[第 1 引数を文字列に変換し](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)、解釈したうえで、整数または `NaN` を返します。
+`parseInt` 関数は[第一引数を文字列に変換し](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)、解釈したうえで、整数または `NaN` を返します。
 
-`NaN` でない場合は、返値は第 1 引数を指定された `radix` で数値として解釈した整数値になります。(例えば、`radix` が `10` であれば 10 進数からの変換で、`8` であれば 8 進数からの変換で、`16` であれば 16 進数からの変換、などです。)
+`NaN` でない場合は、返値は第一引数を指定された `radix` で数値として解釈した整数値になります。(例えば、`radix` が `10` であれば 10 進数からの変換で、`8` であれば 8 進数からの変換で、`16` であれば 16 進数からの変換、などです。)
 
 `radix` 引数は[数値に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)。提供されなかった場合、または値が 0、`NaN`、`Infinity` のいずれかであった場合（`undefined` は `NaN` に強制されます）、 JavaScript は以下のように想定します。
 
@@ -68,7 +68,7 @@ parseInt(string, radix)
 
 基数が `16` の場合、 `parseInt()` では、オプションで符号文字 (`+`/`-`) の後に `0x` または `0X` を接頭辞として文字列を指定することができます。
 
-（必要に応じて数値に変換された）基数の値が \[2, 36] （両端を含む）の範囲になかった場合は、 `parseInt` は `NaN` を返します。
+（必要に応じて数値に変換された）基数の値が `0` でなく、\[2, 36] （両端を含む）の範囲になかった場合は、`parseInt` は `NaN` を返します。
 
 `10` 以上の基数については、`9` より大きい数字はアルファベットで示されます。たとえば、 16 進数（基数 `16`）では `A` から `F` が用いられます。文字の大文字小文字は区別しません。
 
@@ -168,7 +168,7 @@ parseInt(15.99, 10); // 15
 parseInt(-15.1, 10); // -15
 ```
 
-しかし、これはたまたま、この数値の文字列表現が基本的な小数表記 (`"15.99"`, `"-15.1"`) を使用しており、 `parseInt()` が小数点で止まっているためにうまく動作しているだけです。 1e+21 以上または 1e-7 以下の数値は、文字列表現に指数表記 (`"1.5e+22"`, `"1.51e-8"`) を使用するため、 `parseInt()` は常に最初の桁の後に来る `e` の文字または小数点で停止します。つまり、大きな数でも小さな数でも、 `parseInt()` は 1 桁の整数を返すということです。
+しかし、これはたまたま、この数値の文字列表現が基本的な小数表記 (`"15.99"`, `"-15.1"`) を使用しており、`parseInt()` が小数点で止まっているためにうまく動作しているだけです。有限かつ 0 以外で、絶対値が 1e+21 以上または 1e-6 未満の数値は、文字列表現に指数表記 (`"1.5e+22"`, `"1.51e-8"`) を使用するため、`parseInt()` は常に最初の桁の後に来る `e` の文字または小数点で停止します。つまり、大きな数でも小さな数でも、`parseInt()` は 1 桁の整数を返すということです。
 
 ```js example-bad
 parseInt(4.7 * 1e22, 10); // 巨大な数値が 4 になる
