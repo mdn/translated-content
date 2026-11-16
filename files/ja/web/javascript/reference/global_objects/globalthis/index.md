@@ -2,10 +2,10 @@
 title: globalThis
 slug: Web/JavaScript/Reference/Global_Objects/globalThis
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 0c3c464abb1422b0534a5e3f5e81e9bbae13544c
 ---
 
-**`globalThis`** はグローバルプロパティで、[グローバルオブジェクト](/ja/docs/Glossary/Global_object)と同等である[グローバルな `this`](/ja/docs/Web/JavaScript/Reference/Operators/this#グローバルコンテキスト)が格納されています。
+**`globalThis`** はグローバルプロパティで、通常は[グローバルオブジェクト](/ja/docs/Glossary/Global_object)と同等である[グローバルな `this`](/ja/docs/Web/JavaScript/Reference/Operators/this#グローバルコンテキスト)の値を格納しています。
 
 {{InteractiveExample("JavaScript デモ: globalThis", "shorter")}}
 
@@ -15,7 +15,7 @@ function canMakeHTTPRequest() {
 }
 
 console.log(canMakeHTTPRequest());
-// Expected output (in a browser): true
+// 予想される結果（ブラウザーの場合）: true
 ```
 
 ## 値
@@ -39,17 +39,17 @@ console.log(canMakeHTTPRequest());
 
 ### HTML と WindowProxy
 
-多くのエンジンでは `globalThis` は実在のグローバルオブジェクトの参照になりますが、ウェブブラウザーにおいては、iframe およびウィンドウ間のセキュリティ上の配慮から、これは（直接アクセスできない）実在のグローバルオブジェクトに関する {{jsxref("Proxy")}} になります。一般的な利用に関わることは稀ですが、認識しておくことは重要です。
+多くのエンジンでは `globalThis` は実際のグローバルオブジェクトへの参照になりますが、ウェブブラウザーでは iframe やウィンドウ間のセキュリティ上の配慮から、直接アクセスできない実際のグローバルオブジェクトを包む {{glossary("WindowProxy")}} を参照します。一般的な利用ではこの違いが問題になることは稀ですが、認識しておくことが重要です。
 
 ### 命名
 
-`self` や `global` のような他の一般的な名前の選択肢は、既存のコードとの互換性を損なう可能性があるため、候補から除外されました。詳しくは [language proposal's "naming" document](https://github.com/tc39/proposal-global/blob/master/NAMING.md) を参照してください。
+`self` や `global` のような他の一般的な名前の候補は、既存のコードとの互換性を損なう可能性があるため、検討対象から除外されました。詳しくは[言語提案の「命名」に関する文書](https://github.com/tc39/proposal-global/blob/master/NAMING.md)<sup>(英語)</sup>を参照してください。
 
 `globalThis` は、文字通り、グローバルな `this` 値です。これは、オブジェクトを指定せずに呼び出された厳格モードではない関数内の `this` 値と同じ値です。また、スクリプトのグローバルスコープにおける `this` の値でもあります。
 
 ## 例
 
-### 異なる環境間でグローバルの検索
+### 環境間でグローバルオブジェクトを検索
 
 通常、グローバルオブジェクトを明示的に指定する必要はありません。そのプロパティは、グローバル変数として自動的にアクセスできます。
 
@@ -59,7 +59,7 @@ console.log(window.Math === Math); // true
 
 ただし、グローバルオブジェクトに明示的にアクセスする必要がある場合が 1 つあります。それは、通常 [ポリフィル](/ja/docs/Glossary/Polyfill) の目的で、グローバルオブジェクトに書き込みを行う場合です。
 
-`globalThis` の導入前、環境全体のグローバルオブジェクトを取得する唯一の信頼できるクロスプラットフォームな方法は `Function('return this')()` でした。しかし、これは一部の設定で [CSP](/ja/docs/Web/HTTP/Guides/CSP) 違反を発生させるため、作成者は次のような区分定義を使用することになります（[オリジナルの core-js のソース](https://github.com/zloirock/core-js/blob/master/packages/core-js/internals/global-this.js)を若干変更）。
+`globalThis` の導入前、環境全体のグローバルオブジェクトを取得する唯一の信頼できるプラットフォーム非依存な方法は `Function('return this')()` でした。しかし、これは一部の設定で [CSP](/ja/docs/Web/HTTP/Guides/CSP) 違反を発生させるため、作成者は次のような区分定義を使用することになります（[オリジナルの core-js のソース](https://github.com/zloirock/core-js/blob/master/packages/core-js/internals/global-this.js)を若干変更）。
 
 ```js
 function check(it) {
@@ -82,10 +82,10 @@ const globalObject =
 
 ```js
 if (typeof globalObject.Intl === "undefined") {
-  // No Intl in this environment; define our own on the global scope
+  // この環境に Intl がないため、グローバルスコープに独自の実装を定義
   Object.defineProperty(globalObject, "Intl", {
     value: {
-      // Our Intl implementation
+      // 独自の Intl 実装
     },
     enumerable: false,
     configurable: true,
@@ -119,6 +119,6 @@ if (typeof globalThis.Intl === "undefined") {
 
 ## 関連情報
 
-- [`globalThis` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-globalthis)
+- [`globalThis` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/global-this)
 - [es-shims による `globalThis` のポリフィル](https://www.npmjs.com/package/globalthis)
 - {{jsxref("this")}}
