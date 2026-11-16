@@ -38470,43 +38470,5 @@
     "contributors": [
       "SphinxKnight"
     ]
-  },
-  "conflicting/Learn_web_development/Core/Version_control": {
-    "modified": "2020-07-16T22:35:51.735Z",
-    "contributors": [
-      "tonybengue",
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Learn_web_development/Getting_started/Environment_setup/Code_editors": {
-    "modified": "2020-07-16T22:35:48.990Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Learn_web_development/Getting_started/Environment_setup/Installing_software": {
-    "modified": "2020-07-16T22:35:33.023Z",
-    "contributors": [
-      "JNa0",
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website": {
-    "modified": "2020-07-16T22:35:45.519Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website_a72b07b802680cbbafd369645d12ceb358cbc91e3bc41d46d001698dc2deef23": {
-    "modified": "2020-07-16T22:35:41.575Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools": {
-    "modified": "2020-07-16T22:35:50.068Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
   }
 }
