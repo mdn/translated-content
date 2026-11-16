@@ -1,8 +1,9 @@
 ---
-title: aria-setsize
+title: "ARIA: aria-setsize 属性"
+short-title: aria-setsize
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-setsize
 l10n:
-  sourceCommit: a90c5bb64149b34db5a004b479d3195490d1c5f5
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 `aria-setsize` 属性は、セット内の全ての項目が DOM に存在しない場合に、現在のリスト項目またはツリー項目のセット内の項目の数を定義します。
@@ -23,30 +24,14 @@ DOM が完全でない場合、ブラウザーが計算するセット内のア�
 
 [`listbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) では、スクロール時の動的読み込みにより、使用可能なオプションの完全なセットが DOM に存在しない場合、各 [`option`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role) に `aria-setsize` と `aria-posinset` の両方を設定できます。
 
-ツリービューでは、ユーザーがツリー内でフォーカスを移動したりツリーをスクロールしたりするときに動的に読み込まれるため、使用可能なノードの完全なセットが DOM に存在しない場合、各ノードには `aria-level`、`aria-setsize` および `aria-posinset` が設定されます。
+ツリービューでは、ユーザーがツリー内でフォーカスを移動したりツリーをスクロールしたりするときに動的に読み込まれるため、使用可能なノードの完全なセットが DOM に存在しない場合、各ノードには `aria-level`、`aria-setsize`、`aria-posinset` が設定されます。
 
-メニューでは、`aria-setsize` は [`menuitem`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)、[`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role) または [`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role) の全てのロールに設定され、値は区切り線を除いたメニュー内の項目の合計数になります。
-
-## 例
-
-次の例では、16 個のセットのうち 5 番目から 8 番目の項目を示します。
-
-```html
-<h2 id="label_fruit">Available Fruit</h2>
-<ul role="listbox" aria-labelledby="label_fruit">
-  <li role="option" aria-setsize="16" aria-posinset="5">apples</li>
-  <li role="option" aria-setsize="16" aria-posinset="6">bananas</li>
-  <li role="option" aria-setsize="16" aria-posinset="7">cantaloupes</li>
-  <li role="option" aria-setsize="16" aria-posinset="8">dates</li>
-</ul>
-```
-
-ユーザーに指示を与えるために、支援技術では上記のバナナを「16 個中 6 番目」としてリストします。
+メニューでは、`aria-setsize` は [`menuitem`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)、[`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)、[`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role) の全てのロールに設定され、値は区切り線を除いたメニュー内の項目の合計数になります。
 
 ## 値
 
 - `<integer>`
-  - : 全セット内のアイテム数または、`-1` はセットサイズが不明であることを示します。
+  - : セット全体の項目数を示す整数です。`-1` はセットのサイズが不明であることを示します。
 
 ## 関連インターフェイス
 
@@ -76,6 +61,22 @@ DOM が完全でない場合、ブラウザーが計算するセット内のア�
 - [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
 - [`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
 - [`treeitem`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role)
+
+## 例
+
+次の例では、16 個のセットのうち 5 番目から 8 番目の項目を示します。
+
+```html
+<h2 id="label_fruit">選択可能な果物</h2>
+<ul role="listbox" aria-labelledby="label_fruit">
+  <li role="option" aria-setsize="16" aria-posinset="5">りんご</li>
+  <li role="option" aria-setsize="16" aria-posinset="6">バナナ</li>
+  <li role="option" aria-setsize="16" aria-posinset="7">カンタロープ</li>
+  <li role="option" aria-setsize="16" aria-posinset="8">デーツ</li>
+</ul>
+```
+
+ユーザーが位置を把握できるように、支援技術は上記のバナナを「16 個中 6 番目の項目」として読み上げます。
 
 ## 仕様書
 

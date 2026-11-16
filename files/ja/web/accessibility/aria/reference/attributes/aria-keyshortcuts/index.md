@@ -1,8 +1,9 @@
 ---
-title: aria-keyshortcuts
+title: "ARIA: aria-keyshortcuts 属性"
+short-title: aria-keyshortcuts
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts
 l10n:
-  sourceCommit: a3ca206486709d88291ee616182257eac2375143
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 グローバルな `aria-keyshortcuts` 属性は、要素をアクティブにしたり要素にフォーカスを当てたりするために開発者が実装したキーボードショートカットを示します。
@@ -76,7 +77,7 @@ aria-keyshortcuts="V+Control+Shift"
 
 #### 代わりに HTML を使用しないでください
 
-`aria-keyshortcuts` 属性は、現在の要素のキーボードショートカットを生成する [問題のある](https://webaim.org/techniques/keyboard/accesskey#spec) HTML [`accesskey`](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) 属性と非常によく似ています。`accesskey` が要素に対して定義されている場合、ブラウザーは修飾キーを定義し、スクリプトを必要とせずにショートカットの処理を全て行います。全てのブラウザーとオペレーティングシステムの組み合わせには、`accesskey` 属性で設定された非修飾キー用の独自の修飾キーがあります。オペレーティングシステム、支援技術、ブラウザーの 1 つの組み合わせで機能するものが、他の組み合わせでは機能しない可能性があります。`aria-keyshortcuts` では、修飾子キーがキーの組み合わせの属性値リストに含まれており、その機能はスクリプト化する必要があります。
+`aria-keyshortcuts` 属性は、現在の要素のキーボードショートカットを生成する [問題のある](https://webaim.org/techniques/keyboard/accesskey#spec) HTML [`accesskey`](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) 属性と非常によく似ています。`accesskey` が要素に対して定義されている場合、ブラウザーは修飾キーを定義し、スクリプトを必要とせずにショートカットの処理を全て行います。全てのブラウザーとオペレーティングシステムの組み合わせには、`accesskey` 属性で設定された非修飾キー用の独自の修飾キーがあります。オペレーティングシステム、支援技術、ブラウザーの 1 つの組み合わせで機能するものが、他の組み合わせでは機能しない可能性があります。`aria-keyshortcuts` では、修飾キーがキーの組み合わせの属性値リストに含まれており、その機能はスクリプト化する必要があります。
 
 ```html
 <p>
@@ -103,14 +104,6 @@ aria-keyshortcuts="V+Control+Shift"
 - `<string>`
   - : 押すとアクションが実行されるキーの組み合わせをスペースで区切ったリスト。
 
-## 例
-
-この例では、要素の `aria-keyshortcuts` 属性は「Alt+Shift+A」に設定されています。
-
-```html
-<a href="#content" aria-keyshortcuts="Alt+Shift+A">Skip to content</a>
-```
-
 ## 関連インターフェイス
 
 - {{domxref("Element.ariaKeyShortcuts")}}
@@ -121,6 +114,14 @@ aria-keyshortcuts="V+Control+Shift"
 ## 関連付けられたロール
 
 **すべて**のロールで使用されます。
+
+## 例
+
+この例では、要素の `aria-keyshortcuts` 属性は「Alt+Shift+A」に設定されています。
+
+```html
+<a href="#content" aria-keyshortcuts="Alt+Shift+A">コンテンツへスキップ</a>
+```
 
 ## 仕様書
 

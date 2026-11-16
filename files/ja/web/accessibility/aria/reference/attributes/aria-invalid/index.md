@@ -1,8 +1,9 @@
 ---
-title: aria-invalid
+title: "ARIA: aria-invalid 属性"
+short-title: aria-invalid
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-invalid
 l10n:
-  sourceCommit: 914aed57175ede3f47784029e620d51b92b7bce2
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 `aria-invalid` 状態は、入力された値がアプリケーションで想定される形式に従っていないことを示します。
@@ -13,12 +14,12 @@ l10n:
 
 `aria-invalid` 属性は、一般的な HTML フォーム要素で使用でき、ARIA ロールが割り当てられている要素に限定されません。
 
-この属性は、検証プロセスの結果として JavaScript で設定する必要があります。値が無効または範囲外であると判断された場合は、`aria-invalid="true"` を設定して、**さらに**ユーザーにエラーがあることを伝えます。ユーザー体験を向上させるには、エラーを修正する方法を提案します。ユーザーがフォームの送信を試みるまで、`aria-invalid="true"` を空の必須要素に設定しないでください。ユーザーがまだフォームに入力中である可能性があります。
+この属性は、検証プロセスの結果として JavaScript で設定する必要があります。値が無効または範囲外であると判断された場合は、`aria-invalid="true"` を設定して、**さらに**ユーザーにエラーがあることを伝えます。ユーザー体験を向上させるには、エラーを修正する方法を提案します。ユーザーがフォームの送信を試みるまで、値が入力されていない必須フィールドに `aria-invalid="true"` を設定しないでください。ユーザーがまだフォームに入力中である可能性があります。
 
 > [!NOTE]
-> `aria-invalid` を `aria-required` 属性と組み合わせて使用​​する場合、フォームが送信される前に `aria-invalid` を true に設定しないでください。検証の結果としてのみ設定してください。
+> `aria-invalid` を `aria-required` 属性と組み合わせて使用する場合、フォームが送信される前に `aria-invalid` を `true` に設定しないでください。検証の結果としてのみ設定してください。
 
-現在、4 つの値があります。`true` と `false` に加えて、文法エラーが検出された場合に使用できる `grammar` とスペルミスに使用できる `spelling` があります。属性が存在しないか、値が false であるか、値が空の文字列である場合は、既定値の false が適用されます。その他の値は、`true` が設定されているものとして扱われます。
+現在、4 つの値があります。`true` と `false` に加えて、文法エラーが検出された場合に使用できる `grammar` とスペルミスに使用できる `spelling` があります。属性が存在しない場合、値が `false` の場合、または値が空の文字列の場合は、デフォルト値の `false` が適用されます。その他の値は、`true` が設定されているものとして扱われます。
 
 ### ネイティブ HTML 検証
 
@@ -32,13 +33,13 @@ HTML にはネイティブのフォーム検証機能があります。ユーザ
 
 前述の入力例で、ユーザーが最大値を超える値、最小値未満の値、またはステップ値と一致しない値を入力した場合、エラーメッセージが表示されます。例えばユーザーが「3」を入力した場合、ネイティブエラーメッセージは「有効な値を入力してください」のようになります。
 
-独自のフォーム検証スクリプトを作成する場合は、無効なフォームコントロールに `aria-invalid` をスタイル設定（`[aria-invalid="true"]` を使用）およびメッセージ（[`aria-errormessage`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage) を使用）とともに必ず含めて、間違いがどこにあり、どのように修正できるかをユーザーが理解できるようにします。
+独自のフォーム検証スクリプトを作成する場合は、無効なフォームコントロールに `aria-invalid` を設定してください。また、`[aria-invalid="true"]` を使ったスタイルと、[`aria-errormessage`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage) を使ったメッセージを用意し、どこに誤りがあり、どう修正すればよいかをユーザーが理解できるようにします。
 
 ## 値
 
 - `grammar`
   - : 文法エラーが検出されました。
-- `false` (既定値)
+- `false`（デフォルト）
   - : 値にエラーは検出されませんでした。
 - `spelling`
   - : スペルミスが検出されました。
@@ -47,73 +48,12 @@ HTML にはネイティブのフォーム検証機能があります。ユーザ
 
 このリストにない値はすべて `true` として扱われます。
 
-## 例
+## 関連インターフェイス
 
-次のスニペットは、blur イベントに検証関数が設定された 2 つのフォームフィールドの簡略化されたバージョンを示しています。`aria-invalid` のデフォルト値は `false` であるため、input に属性を追加する必要は必ずしもないことに注意してください。
-
-```html
-<ul>
-  <li>
-    <label for="name">Full Name</label>
-    <input
-      type="text"
-      name="name"
-      id="name"
-      aria-required="true"
-      aria-invalid="false"
-      onblur="checkValidity('name', ' ', 'Invalid name entered (requires both first and last name)');" />
-  </li>
-  <li>
-    <label for="email">Email Address</label>
-    <input
-      type="email"
-      name="email"
-      id="email"
-      aria-required="true"
-      aria-invalid="false"
-      onblur="checkValidity('email', '@', 'Invalid email address');" />
-  </li>
-</ul>
-```
-
-blur 時にすぐにフィールドを検証する必要はないことに注意してください。アプリケーションはフォームが送信されるまで待機することもできます（ただし、これは必ずしも推奨されません）。
-
-以下のスニペットは、特定の文字が存在することのみをチェックする検証関数を示しています（現実の世界では、検証はおそらくより複雑になります）:
-
-```js
-function checkValidity(id, searchTerm, msg) {
-  const elem = document.getElementById(id);
-  if (elem.value.includes(searchTerm)) {
-    elem.setAttribute("aria-invalid", "false");
-    updateAlert();
-  } else {
-    elem.setAttribute("aria-invalid", "true");
-    updateAlert(msg);
-  }
-}
-```
-
-以下のスニペットは、エラーメッセージを追加（または削除）するアラート関数を示しています:
-
-```js
-function updateAlert(msg) {
-  const oldAlert = document.getElementById("alert");
-  if (oldAlert) {
-    oldAlert.remove();
-  }
-
-  if (msg) {
-    const newAlert = document.createElement("div");
-    newAlert.setAttribute("role", "alert");
-    newAlert.setAttribute("id", "alert");
-    const content = document.createTextNode(msg);
-    newAlert.appendChild(content);
-    document.body.appendChild(newAlert);
-  }
-}
-```
-
-アラートの ARIA ロール属性が [`alert`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role) に設定されていることに注意してください。
+- {{domxref("Element.ariaInvalid")}}
+  - : [`ariaInvalid`](/ja/docs/Web/API/Element/ariaInvalid) プロパティは {{domxref("Element")}} インターフェイスの一部で、`aria-invalid` 属性の値を反映します。この属性は、要素がアクセシビリティ API に公開されているかどうかを示します。
+- {{domxref("ElementInternals.ariaInvalid")}}
+  - : [`ariaInvalid`](/ja/docs/Web/API/ElementInternals/ariaInvalid) プロパティは {{domxref("ElementInternals")}} インターフェイスの一部で、`aria-invalid` 属性の値を反映します。
 
 ## 関連付けられたロール
 
@@ -137,6 +77,86 @@ function updateAlert(msg) {
 - [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
 - [`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
 - [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
+
+## 例
+
+次のスニペットは、`blur` イベントに検証関数が設定された 2 つのフォームフィールドの簡略版です。`aria-invalid` のデフォルト値は `false` なので、`input` 要素にこの属性を追加する必要は必ずしもありません。
+
+```html
+<ul>
+  <li>
+    <label for="name">氏名</label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      aria-required="true"
+      aria-invalid="false" />
+  </li>
+  <li>
+    <label for="email">メールアドレス</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      aria-required="true"
+      aria-invalid="false" />
+  </li>
+</ul>
+```
+
+```js
+document.getElementById("name").addEventListener("blur", () => {
+  checkValidity(
+    "name",
+    " ",
+    "無効な名前が入力されました（名と姓の両方が必要です）",
+  );
+});
+
+document.getElementById("email").addEventListener("blur", () => {
+  checkValidity("email", "@", "無効なメールアドレスです");
+});
+```
+
+blur 時にすぐにフィールドを検証する必要はありません。アプリケーションはフォームが送信されるまで待つこともできます（ただし、これは必ずしも推奨されません）。
+
+次のスニペットは、特定の文字が存在するかどうかだけを確認する検証関数を示しています（実際の検証は、これより複雑になるでしょう）。
+
+```js
+function checkValidity(id, searchTerm, msg) {
+  const elem = document.getElementById(id);
+  if (elem.value.includes(searchTerm)) {
+    elem.setAttribute("aria-invalid", "false");
+    updateAlert();
+  } else {
+    elem.setAttribute("aria-invalid", "true");
+    updateAlert(msg);
+  }
+}
+```
+
+次のスニペットは、エラーメッセージを追加または削除するアラート関数を示しています。
+
+```js
+function updateAlert(msg) {
+  const oldAlert = document.getElementById("alert");
+  if (oldAlert) {
+    oldAlert.remove();
+  }
+
+  if (msg) {
+    const newAlert = document.createElement("div");
+    newAlert.setAttribute("role", "alert");
+    newAlert.setAttribute("id", "alert");
+    const content = document.createTextNode(msg);
+    newAlert.appendChild(content);
+    document.body.appendChild(newAlert);
+  }
+}
+```
+
+アラートの ARIA ロール属性が [`alert`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role) に設定されていることに注意してください。
 
 ## 仕様書
 
