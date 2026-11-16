@@ -3,7 +3,7 @@ title: Intl.ListFormat() コンストラクター
 short-title: Intl.ListFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
 l10n:
-  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`Intl.ListFormat()`** コンストラクターは {{jsxref("Intl.ListFormat")}} オブジェクトを生成します。
@@ -105,7 +105,7 @@ console.log(new Intl.ListFormat("en-US", { type: "conjunction" }).format(list));
 
 ### 単位の書式化
 
-リストアイテムを複合単位として表示するには、`style: "unit"` を使用してください。実際、{{jsxref("Intl.DurationFormat")}} は、内部で単位形式のリスト書式化を使用して、期間を表示しています。
+リストアイテムを複合単位として表示するには、`type: "unit"` を使用してください。実際、{{jsxref("Intl.DurationFormat")}} は、内部で単位形式のリスト書式化を使用して、期間を表示しています。
 
 ```js
 const marathon = [
@@ -115,7 +115,7 @@ const marathon = [
 
 console.log(
   new Intl.ListFormat("en-US", { type: "unit" }).format(
-    marathon.map((component) =>
+    distance.map((component) =>
       component[0].toLocaleString("en-US", {
         style: "unit",
         unit: component[1],

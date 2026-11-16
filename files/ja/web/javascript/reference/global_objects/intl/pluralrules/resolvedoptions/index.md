@@ -3,7 +3,7 @@ title: Intl.PluralRules.prototype.resolvedOptions()
 short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
 l10n:
-  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`resolvedOptions()`** は {{jsxref("Intl.PluralRules")}} インスタンスのメソッドで、この `PluralRules` オブジェクトの初期化中に計算されたオプションを反映するプロパティを持つ、新しいオブジェクトを返します。
@@ -18,7 +18,7 @@ const pluralRules2 = new Intl.PluralRules("bn");
 const options2 = pluralRules2.resolvedOptions();
 
 console.log(options1.pluralCategories);
-// 予想される結果: Array ["few", "many", "one", "other"]
+// 予想される結果: Array ["one", "few", "many", "other"]
 
 console.log(options2.pluralCategories);
 // 予想される結果: Array ["one", "other"]
@@ -42,10 +42,12 @@ resolvedOptions()
   - : 実際に使用されているロケールの {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}です。これは、[ロケールネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)のプロセスによって決定されます。出力には、Unicode 拡張キーは記載されません。
 - `type`
   - : `options` 引数でこのプロパティに指定された値です。必要に応じてデフォルト値が設定されます。値は `"cardinal"` または `"ordinal"` のどちらかです。デフォルト値は `"cardinal"` です。
-- `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits` {{optional_inline}}
-  - : これらのプロパティには、 `options` 引数で指定された値が入るか、既定値で埋められます。これらのプロパティは `minimumSignificantDigits` と `maximumSignificantDigits` のどちらも `options` 引数で指定されなかった場合のみ存在します。
+- `minimumIntegerDigits`
+  - : `options` 引数で指定された値です。必要に応じてデフォルト値が補われます。
+- `minimumFractionDigits`, `maximumFractionDigits` {{optional_inline}}
+  - : `options` 引数で指定された値です。必要に応じてデフォルト値が補われます。必要な場合にのみ存在します。詳しくは[桁オプション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#桁オプション)を参照してください。
 - `minimumSignificantDigits`, `maximumSignificantDigits` {{optional_inline}}
-  - : これらのプロパティには、 `options` 引数で指定された値が入るか、既定値で埋められます。これらのプロパティは、少なくとも 1 つのプロパティが `options` 引数で提供された場合にのみ表示されます。
+  - : `options` 引数で指定された値です。必要に応じてデフォルト値が補われます。必要な場合にのみ存在します。詳しくは[桁オプション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#桁オプション)を参照してください。
 - `pluralCategories`
   - : 指定されたロケールで使用される複数形カテゴリーの {{jsxref("Array")}} で、 "zero", "one", "two", "few", "many", "other" のリストの中から選択します。
 - `roundingIncrement`

@@ -2,7 +2,7 @@
 title: Intl.NumberFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`Intl.NumberFormat`** オブジェクトで、言語を考慮した数値の書式化ができます。
@@ -58,21 +58,21 @@ console.log(
 ## インスタンスメソッド
 
 - {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format()")}}
-  - : この `NumberFormat` オブジェクトのロケールおよび書式化オプションに従って日時を書式化するゲッター関数です。
+  - : この `NumberFormat` オブジェクトのロケールおよび書式化オプションに従って数値を書式化するゲッター関数です。
 - {{jsxref("Intl/NumberFormat/formatRange", "Intl.NumberFormat.prototype.formatRange()")}}
-  - : メソッドが呼び出された `Intl.NumberFormat` オブジェクトのロケールおよび書式化オプションに従って、数値の範囲を書式化するゲッター関数です。
+  - : メソッドが呼び出された `Intl.NumberFormat` オブジェクトのロケールおよび書式化オプションに従って、数値の範囲を書式化します。
 - {{jsxref("Intl/NumberFormat/formatRangeToParts", "Intl.NumberFormat.prototype.formatRangeToParts()")}}
-  - : ロケールを意識した独自の書式で使用することができる部品内の数値文字列を表すオブジェクトのを配列 ({{jsxref("Array")}}) に収めて返します。
+  - : ロケールを考慮した独自の書式化に利用できる、数値の範囲を表す文字列を部品ごとに表したオブジェクトの配列 ({{jsxref("Array")}}) を返します。
 - {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
   - : ロケールを考慮した書式化に利用できる、数値文字列を部品単位で表すオブジェクトを配列 ({{jsxref("Array")}}) に収めて返します。
 - {{jsxref("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
-  - : オブジェクトの初期化時に計算された照合オプションを反映したプロパティを持つ、新しいオブジェクトを返します。
+  - : オブジェクトの初期化時に計算されたロケールおよび書式化オプションを反映したプロパティを持つ、新しいオブジェクトを返します。
 
 ## 例
 
 ### 基本的な使用
 
-ロケールを指定しない基本的な使い方では、既定のロケールとオプションで書式化された文字列が返されます。
+ロケールを指定しない基本的な使い方では、デフォルトのロケールとオプションで書式化された文字列が返されます。
 
 ```js
 const number = 3500;

@@ -3,7 +3,7 @@ title: Intl.Locale.prototype.getCollations()
 short-title: getCollations()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCollations
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`getCollations()`** は {{jsxref("Intl.Locale")}} インスタンスのメソッドで、このロケールの 1 つ以上の[照合型](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_collation)のリストを返します。
@@ -35,7 +35,7 @@ getCollations()
 
 ```js
 const locale = new Intl.Locale("zh");
-console.log(locale.getCollations()); // ["pinyin", "stroke", "zhuyin", "emoji", "eor"]
+console.log(locale.getCollations()); // ["emoji", "eor", "pinyin", "stroke", "zhuyin"]
 ```
 
 ## 仕様書

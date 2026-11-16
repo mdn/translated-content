@@ -2,12 +2,12 @@
 title: Intl.Locale
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 l10n:
-  sourceCommit: e509776556a47f12843b91ab5c6e9be6585698c6
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`Intl.Locale`** オブジェクトは、 Unicode ロケール識別子を表す Intl オブジェクトの標準組み込みプロパティです。
 
-{{InteractiveExample("JavaScript Demo: Intl.Locale")}}
+{{InteractiveExample("JavaScript デモ: Intl.Locale")}}
 
 ```js interactive-example
 const korean = new Intl.Locale("ko", {
@@ -20,10 +20,10 @@ const korean = new Intl.Locale("ko", {
 const japanese = new Intl.Locale("ja-Jpan-JP-u-ca-japanese-hc-h12");
 
 console.log(korean.baseName, japanese.baseName);
-// Expected output: "ko-Kore-KR" "ja-Jpan-JP"
+// 予想される結果: "ko-Kore-KR" "ja-Jpan-JP"
 
 console.log(korean.hourCycle, japanese.hourCycle);
-// Expected output: "h23" "h12"
+// 予想される結果: "h23" "h12"
 ```
 
 ## 解説
@@ -54,14 +54,18 @@ console.log(korean.hourCycle, japanese.hourCycle);
 
 ## インスタンスプロパティ
 
+これらのプロパティは `Intl.Locale.prototype` で定義されており、すべての `Intl.Locale` インスタンスで共有されます。
+
 - {{jsxref("Intl/Locale/baseName", "Intl.Locale.prototype.baseName")}}
   - : この `Locale` に関する基本的な情報を、完全なデータ文字列の部分文字列の形で返します。
 - {{jsxref("Intl/Locale/calendar", "Intl.Locale.prototype.calendar")}}
-  - : このロケールの暦年を示す `Locale` の部分を返します。
+  - : このロケールの暦の種類を示す `Locale` の部分を返します。
 - {{jsxref("Intl/Locale/caseFirst", "Intl.Locale.prototype.caseFirst")}}
-  - : ロケールの照合規則に大文字・小文字を考慮しているかどうかを返します。
+  - : ロケールの照合規則で、大文字と小文字のどちらが先に並ぶかを返します。
 - {{jsxref("Intl/Locale/collation", "Intl.Locale.prototype.collation")}}
   - : この `Locale` の照合の種類を返します。これは、ロケールの規則に従って文字列を並べ替えるために使用します。
+- {{jsxref("Object/constructor", "Intl.Locale.prototype.constructor")}}
+  - : このインスタンスオブジェクトを作成したコンストラクター関数です。`Intl.Locale` インスタンスの場合、初期値は {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} コンストラクターとなります。
 - {{jsxref("Intl/Locale/hourCycle", "Intl.Locale.prototype.hourCycle")}}
   - : このロケールが使用している時刻保持書式の規則を返します。
 - {{jsxref("Intl/Locale/language", "Intl.Locale.prototype.language")}}
@@ -109,7 +113,7 @@ console.log(korean.hourCycle, japanese.hourCycle);
 {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} のコンストラクターは、もっとも簡単なものでは、ロケール識別子の文字列を引数に取ります。
 
 ```js
-let us = new Intl.Locale("en-US");
+const us = new Intl.Locale("en-US");
 ```
 
 ### Locale コンストラクターの options オブジェクト付きでの使用
@@ -117,8 +121,8 @@ let us = new Intl.Locale("en-US");
 このコンストラクターは、オプションで構成オブジェクトの引数を取ることができます。たとえば、構成オブジェクトの {{jsxref("Intl/Locale/hourCycle", "hourCycle")}} プロパティに任意の時間サイクル種別を設定し、それをコンストラクターに渡します。
 
 ```js
-let us12hour = new Intl.Locale("en-US", { hourCycle: "h12" });
-console.log(us12hour.hourCycle); // Prints "h12"
+const us12hour = new Intl.Locale("en-US", { hourCycle: "h12" });
+console.log(us12hour.hourCycle); // 出力結果: "h12"
 ```
 
 ## 仕様書
@@ -131,6 +135,6 @@ console.log(us12hour.hourCycle); // Prints "h12"
 
 ## 関連情報
 
+- [FormatJS の `Intl.Locale` ポリフィル](https://formatjs.io/docs/polyfills/intl-locale/)
 - {{jsxref("Intl")}}
-- [Intl.Locale のポリフィル](https://formatjs.io/docs/polyfills/intl-locale/)
 - [Unicode ロケール識別子の仕様書](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)

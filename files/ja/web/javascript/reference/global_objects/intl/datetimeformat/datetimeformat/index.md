@@ -3,7 +3,7 @@ title: Intl.DateTimeFormat() コンストラクター
 short-title: Intl.DateTimeFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 l10n:
-  sourceCommit: 5e0388c53dfc75003e83f79181797c3f66455971
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`Intl.DateTimeFormat()`** コンストラクターは {{jsxref("Intl.DateTimeFormat")}} オブジェクトを生成します。
@@ -14,11 +14,11 @@ l10n:
 const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
 // 以下の結果は UTC タイムゾーンを想定しています。結果は変わる可能性があります。
 
-// 言語（ロケール）の既定の日付形式を指定
+// 言語（ロケール）のデフォルトの日付形式を指定
 console.log(new Intl.DateTimeFormat("en-US").format(date));
 // 予想される結果: "12/20/2020"
 
-// 代替言語（この場合はインドネシア語）を持つ言語の既定の形式を指定する
+// 代替言語（この場合はインドネシア語）を持つ言語のデフォルト形式を指定する
 console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
 // 予想される結果: "20/12/2020"
 
@@ -51,7 +51,7 @@ Intl.DateTimeFormat(locales, options)
 ### 引数
 
 - `locales` {{optional_inline}}
-  - : {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}の文字列または {{jsxref("Intl.Locale")}} インスタンス、またはそのようなロケール識別子の配列です。`undefined` が渡された場合、または指定されたロケール識別子がどれも使用できない場合、ランタイムの既定ロケールが使用されています。 `locales` 引数の一般的な形と解釈については、[`Intl` メインページにある引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
+  - : {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}の文字列または {{jsxref("Intl.Locale")}} インスタンス、またはそのようなロケール識別子の配列です。`undefined` が渡された場合、または指定されたロケール識別子がどれも使用できない場合、ランタイムのデフォルトロケールが使用されています。 `locales` 引数の一般的な形と解釈については、[`Intl` メインページにある引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
 
     以下の Unicode 拡張キーが利用できます。
     - `nu`
@@ -69,17 +69,17 @@ Intl.DateTimeFormat(locales, options)
 #### ロケールオプション
 
 - `localeMatcher`
-  - : 使用するロケール照合アルゴリズム。利用可能な値は `"lookup"` と `"best fit"` です。既定値は `"best fit"` です。このオプションについての詳細は、[ロケールの識別とネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)のページを参照してください。
+  - : 使用するロケール照合アルゴリズム。利用可能な値は `"lookup"` と `"best fit"` です。デフォルト値は `"best fit"` です。このオプションについての詳細は、[ロケールの識別とネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)のページを参照してください。
 - `calendar`
-  - : 使用する暦、たとえば `"chinese"`, `"gregory"`, `"persian"` などです。対応している暦の種類の一覧については、[`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している暦) を参照してください。既定値はロケールに依存します。このオプションは `ca` Unicode 拡張キーを通じて同時に設定することも可能です。両方が指定された場合、この `options` プロパティが優先されます。
+  - : 使用する暦、たとえば `"chinese"`, `"gregory"`, `"persian"` などです。対応している暦の種類の一覧については、[`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している暦) を参照してください。デフォルト値はロケールに依存します。このオプションは `ca` Unicode 拡張キーを通じて同時に設定することも可能です。両方が指定された場合、この `options` プロパティが優先されます。
 - `numberingSystem`
-  - : 数値を書式化するのに使用する記数法で、例えば `"arab"`, `"hans"`, `"mathsans"` などです。対応している記数法の種類の一覧については、[`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している記数法) を参照してください。既定値はロケールに依存します。このオプションは `nu` Unicode 拡張キーを通じて同時に設定することも可能です。両方が指定された場合、この `options` プロパティが優先されます。
+  - : 数値を書式化するのに使用する記数法で、例えば `"arab"`, `"hanidec"`, `"mathsans"` などです。対応している記数法の種類の一覧については、[`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している記数法) を参照してください。デフォルト値はロケールに依存します。このオプションは `nu` Unicode 拡張キーを通じて同時に設定することも可能です。両方が指定された場合、この `options` プロパティが優先されます。
 - `hour12`
-  - : （24 時制に対して）12 時制を使用するかどうか。使用可能な値は `true` および `false` で、既定値はロケールに依存します。`true` の場合、このオプションはロケールに応じて `hourCycle` を `"h11"` または `"h12"` に設定します。`false` の場合、`hourCycle` を `"h23"` に設定します。`hour12` は、`hc` ロケール拡張タグおよび `hourCycle` オプションのどちらもが存在するかどうかによって判断され、もしどちらもが存在するならば、それらを両方とも上書きします。
+  - : （24 時制に対して）12 時制を使用するかどうか。使用可能な値は `true` および `false` で、デフォルト値はロケールに依存します。`true` の場合、このオプションはロケールに応じて `hourCycle` を `"h11"` または `"h12"` に設定します。`false` の場合、`hourCycle` を `"h23"` に設定します。`hour12` は、`hc` ロケール拡張タグおよび `hourCycle` オプションのどちらもが存在するかどうかによって判断され、もしどちらもが存在するならば、それらを両方とも上書きします。
 - `hourCycle`
-  - : 使用する時の周期です。利用可能な値は `"h11"`, `"h12"`, `"h23"`, `"h24"` です。既定値は `hour12` とロケールから推測されます。このオプションは `hc` Unicode 拡張キーで設定することもできます。両方のオプションが指定されていた場合は、この `options` プロパティが優先されます。
+  - : 使用する時の周期です。利用可能な値は `"h11"`, `"h12"`, `"h23"`, `"h24"` です。デフォルト値は `hour12` とロケールから推測されます。このオプションは `hc` Unicode 拡張キーで設定することもできます。両方のオプションが指定されていた場合は、この `options` プロパティが優先されます。
 - `timeZone`
-  - : 使用するタイムゾーン。あらゆる [IANA タイムゾーン名](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets)、例えば名前付き識別子である `"UTC"`, `"America/New_York"`, `"Etc/GMT+8"` や、オフセット識別子である `"+01:00"`, `"-2359"`, `"+23"` などを指定することができます。既定値はランタイムのタイムゾーンであり、 {{jsxref("Date.prototype.toString()")}} で使用されるタイムゾーンと同じです。
+  - : 使用するタイムゾーン。あらゆる [IANA タイムゾーン名](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets)、例えば名前付き識別子である `"UTC"`, `"America/New_York"`, `"Etc/GMT+8"` や、オフセット識別子である `"+01:00"`, `"-2359"`, `"+23"` などを指定することができます。デフォルト値はランタイムのタイムゾーンであり、 {{jsxref("Date.prototype.toString()")}} で使用されるタイムゾーンと同じです。
 
 #### 日時成分オプション
 
@@ -147,15 +147,15 @@ Intl.DateTimeFormat(locales, options)
     > [!NOTE]
     > タイムゾーンの表示は、必要な文字列が利用できない場合、別の形式に代替されることがあります。例えば、場所を指定しない形式では、 "Pacific Time" のように特定の国や都市の場所を指定せずにタイムゾーンを表示する必要がありますが、 "Los Angeles Time" のようなタイムゾーンに代替される場合があります。
 
-##### 日時成分の既定値
+##### 日時成分のデフォルト値
 
-日時成分のオプションのいずれかが指定されている場合、`dateStyle` および `timeStyle` は `undefined` でなければなりません。すべての日時成分オプションと `dateStyle`/`timeStyle` が `undefined` の場合、日時成分の既定のオプションが設定されます。これらは、書式化メソッドが呼び出されたオブジェクトに依存します。
+日時成分のオプションのいずれかが指定されている場合、`dateStyle` および `timeStyle` は `undefined` でなければなりません。すべての日時成分オプションと `dateStyle`/`timeStyle` が `undefined` の場合、日時成分のデフォルトオプションが設定されます。これらは、書式化メソッドが呼び出されたオブジェクトに依存します。
 
-- {{jsxref("Temporal.PlainDate")}} と {{jsxref("Date")}} の書式化では、`year`, `month`, `day` の既定値は `"numeric"` です。
-- {{jsxref("Temporal.PlainTime")}} の書式化では、`hour`, `minute`, `second` の既定値は `"numeric"` です。
-- {{jsxref("Temporal.PlainYearMonth")}} の書式化では、`year` と `month` の既定値は `"numeric"` です。
-- {{jsxref("Temporal.PlainMonthDay")}} の書式化では、`month` と `day` の既定値は `"numeric"` です。
-- {{jsxref("Temporal.PlainDateTime")}} と {{jsxref("Temporal.Instant")}} の書式化では、`year`, `month`, `day`, `hour`, `minute`, `second` の既定値は `"numeric"` です。
+- {{jsxref("Temporal.PlainDate")}} と {{jsxref("Date")}} の書式化では、`year`, `month`, `day` のデフォルト値は `"numeric"` です。
+- {{jsxref("Temporal.PlainTime")}} の書式化では、`hour`, `minute`, `second` のデフォルト値は `"numeric"` です。
+- {{jsxref("Temporal.PlainYearMonth")}} の書式化では、`year` と `month` のデフォルト値は `"numeric"` です。
+- {{jsxref("Temporal.PlainMonthDay")}} の書式化では、`month` と `day` のデフォルト値は `"numeric"` です。
+- {{jsxref("Temporal.PlainDateTime")}} と {{jsxref("Temporal.Instant")}} の書式化では、`year`, `month`, `day`, `hour`, `minute`, `second` のデフォルト値は `"numeric"` です。
 
 ##### 書式の照合
 
@@ -172,7 +172,7 @@ Intl.DateTimeFormat(locales, options)
 要求された日時成分のスタイルは、ロケールが対応している有効な書式に直接対応しない場合があります。そのため、書式照合子では、要求されたスタイルを最も近い対応書式にどのように一致させるかを指定できます。
 
 - `formatMatcher`
-  - : 使用する書式照合アルゴリズム。可能な値は `"basic"` と `"best fit"` で、既定は `"best fit"` です。`"best fit"` のアルゴリズムは実装定義であり、`"basic"` は [仕様で定義されています](https://tc39.es/ecma402/#sec-basicformatmatcher)。このオプションは、`dateStyle` と `timeStyle` の両方が `undefined` の場合のみ使用されます（これにより、それぞれの日時成分の書式化が個別にカスタマイズ可能になります）。
+  - : 使用する書式照合アルゴリズム。可能な値は `"basic"` と `"best fit"` で、デフォルトは `"best fit"` です。`"best fit"` のアルゴリズムは実装定義であり、`"basic"` は [仕様で定義されています](https://tc39.es/ecma402/#sec-basicformatmatcher)。このオプションは、`dateStyle` と `timeStyle` の両方が `undefined` の場合のみ使用されます（これにより、それぞれの日時成分の書式化が個別にカスタマイズ可能になります）。
 
 #### スタイルショートカット
 
@@ -229,13 +229,13 @@ console.log(Object.getOwnPropertyDescriptors(formatter));
 
 ### DateTimeFormat の使用
 
-ロケールを指定しない基本的な使用方法では、 `DateTimeFormat` は既定のロケールとオプションを使用します。
+ロケールを指定しない基本的な使用方法では、 `DateTimeFormat` はデフォルトのロケールとオプションを使用します。
 
 ```js
 const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // toLocaleString を引数なしで呼び出すと実装に依存し、
-// 既定のロケール、既定のタイムゾーンになる
+// デフォルトのロケール、デフォルトのタイムゾーンになる
 console.log(new Intl.DateTimeFormat().format(date));
 // "12/19/2012" （ロケール（言語）が en-US でタイムゾーンが America/Los_Angeles (UTC-0800) の場合）
 ```
@@ -283,7 +283,7 @@ console.log(
     timeZone: "UTC",
   }).format(date),
 );
-// 4 at night" （すべての dayPeriod 値で en-GB と同じ書式)
+// "4 at night" （すべての dayPeriod 値で en-GB と同じ書式)
 
 console.log(
   new Intl.DateTimeFormat("fr", {

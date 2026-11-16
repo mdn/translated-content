@@ -3,12 +3,12 @@ title: Intl.ListFormat.prototype.formatToParts()
 short-title: formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`formatToParts()`** は {{jsxref("Intl.ListFormat")}} インスタンスのメソッドで、{{jsxref("Intl/ListFormat/format", "format()")}} によって返される書式化済み文字列のそれぞれの部分を表すオブジェクトの配列を返します。これは、ロケール固有のトークンから独自の文字列を構築する際に役立ちます。
 
-{{InteractiveExample("JavaScript デモ: Intl.listformat.prototype.formatToParts()", "taller")}}
+{{InteractiveExample("JavaScript デモ: Intl.ListFormat.prototype.formatToParts()", "taller")}}
 
 ```js interactive-example
 const vehicles = ["Motorcycle", "Bus", "Car"];
@@ -27,9 +27,9 @@ const partValuesEn = formatterEn.formatToParts(vehicles).map((p) => p.value);
 const partValuesFr = formatterFr.formatToParts(vehicles).map((p) => p.value);
 
 console.log(partValuesEn);
-// 予想される結果: "["Motorcycle", ", ", "Bus", ", and ", "Car"]"
+// 予想される結果: Array ["Motorcycle", ", ", "Bus", ", and ", "Car"]
 console.log(partValuesFr);
-// 予想される結果: "["Motorcycle", ", ", "Bus", " et ", "Car"]"
+// 予想される結果: Array ["Motorcycle", ", ", "Bus", " et ", "Car"]
 ```
 
 ## 構文
@@ -45,7 +45,7 @@ formatToParts(list)
 
 ### 返値
 
-書式化されたのリストを部分ごとに格納したオブジェクトの配列 ({{jsxref("Array")}}) です。各オブジェクトには `type` と `value` の 2 つのプロパティがあり、それぞれに文字列が格納されています。`value` を指定された順序で連結すると、{{jsxref("Intl/ListFormat/format", "format()")}} と同じ文字列になります。`type` は以下のどちらかになります。
+書式化されたリストを部分ごとに格納したオブジェクトの配列 ({{jsxref("Array")}}) です。各オブジェクトには `type` と `value` の 2 つのプロパティがあり、それぞれに文字列が格納されています。`value` を指定された順序で連結すると、{{jsxref("Intl/ListFormat/format", "format()")}} と同じ文字列になります。`type` は以下のどちらかになります。
 
 - `literal`
   - : 書式化パターンの一部である任意の文字列。例えば、`", "`、`", and"` など。
