@@ -3,7 +3,7 @@ title: Intl.DateTimeFormat.prototype.formatRangeToParts()
 short-title: formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`formatRangeToParts()`** は {{jsxref("Intl.DateTimeFormat")}} インスタンスのメソッドで、{{jsxref("Intl/DateTimeFormat/formatRange", "formatRange()")}} によって返される書式化文字列のそれぞれの部分を表すオブジェクトの配列を返します。これは、ロケール特定のトークンから独自の文字列を構築するのに便利です。
@@ -24,11 +24,11 @@ for (const part of parts) {
   console.log(part);
 }
 // 予想される結果（GMT タイムゾーンで）:
-// Object { type: "hour", value: "2", source: "startRange" }
+// Object { type: "hour", value: "10", source: "startRange" }
 // Object { type: "literal", value: ":", source: "startRange" }
 // Object { type: "minute", value: "00", source: "startRange" }
 // Object { type: "literal", value: " – ", source: "shared" }
-// Object { type: "hour", value: "3", source: "endRange" }
+// Object { type: "hour", value: "11", source: "endRange" }
 // Object { type: "literal", value: ":", source: "endRange" }
 // Object { type: "minute", value: "00", source: "endRange" }
 // Object { type: "literal", value: " ", source: "shared" }
@@ -52,7 +52,7 @@ formatRangeToParts(startDate, endDate)
 
 ### 返値
 
-{{jsxref("Array")}} 型のオブジェクト配列で、書式化された日時の範囲をパーツごとに格納します。各オブジェクトは `type`、`value`、`source` の 3 つのプロパティを持ち、それぞれ文字列を保持します。`value` を指定された順序で連結すると、{{jsxref("Intl/DateTimeFormat/formatRange", "formatRange()")}} と同じ文字列が生成されます。`type` の値は {{jsxref("Intl/DateTimeFormat/formatToParts", "formatToParts()")}} と同じ値を持つかの末井があります。`source` は以下のいずれかになります。
+{{jsxref("Array")}} 型のオブジェクト配列で、書式化された日時の範囲をパーツごとに格納します。各オブジェクトは `type`、`value`、`source` の 3 つのプロパティを持ち、それぞれ文字列を保持します。`value` を指定された順序で連結すると、{{jsxref("Intl/DateTimeFormat/formatRange", "formatRange()")}} と同じ文字列が生成されます。`type` の値は {{jsxref("Intl/DateTimeFormat/formatToParts", "formatToParts()")}} と同じ値を持つ可能性があります。`source` は以下のいずれかになります。
 
 - `startRange`
   - : このトークンは開始日時の一部です。

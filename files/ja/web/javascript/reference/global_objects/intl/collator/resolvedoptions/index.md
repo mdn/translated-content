@@ -3,22 +3,22 @@ title: Intl.Collator.prototype.resolvedOptions()
 short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 l10n:
-  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`resolvedOptions()`** は {{jsxref("Intl.Collator")}} インスタンスのメソッドで、この `Collator` オブジェクトの初期化時に計算されたオプションを反映したプロパティを持つ、新しいオブジェクトを返します。
 
-{{InteractiveExample("JavaScript デモ: Intl.Collator.prototype.resolvedOptions")}}
+{{InteractiveExample("JavaScript デモ: Intl.Collator.prototype.resolvedOptions()")}}
 
 ```js interactive-example
-const numberDe = new Intl.NumberFormat("de-DE");
-const numberAr = new Intl.NumberFormat("ar");
+const collator = new Intl.Collator("de-DE", { sensitivity: "base" });
+const options = collator.resolvedOptions();
 
-console.log(numberDe.resolvedOptions().numberingSystem);
-// 予想される結果: "latn"
+console.log(options.sensitivity);
+// 予想される結果: "base"
 
-console.log(numberAr.resolvedOptions().numberingSystem);
-// 予想される結果: "arab"
+console.log(options.usage);
+// 予想される結果: "sort"
 ```
 
 ## 構文
@@ -48,7 +48,7 @@ resolvedOptions()
 - `numeric`
   - : このプロパティには、`options` 引数で指定された値、または Unicode 拡張キー `"kn"` を使用して指定された値が設定されます。必要に応じてデフォルト値が設定されます。これは論理値です。デフォルトは `false` です。実装がこの Unicode 拡張キーに対応していない場合、このプロパティは省略されます。
 - `caseFirst`
-  - : このプロパティには、`options` 引数で指定された値、または Unicode 拡張キー `"kf"` を使用して指定された値が設定されます。必要に応じてデフォルト値が代入されます。値は `"upper"`、`"lower"`、`"false"` のいずれかです。デフォルトは `"false"` です。実装がこの Unicode 拡張キーに対応していない場合、このプロパティは省略されます。s
+  - : このプロパティには、`options` 引数で指定された値、または Unicode 拡張キー `"kf"` を使用して指定された値が設定されます。必要に応じてデフォルト値が設定されます。値は `"upper"`、`"lower"`、`"false"` のいずれかです。デフォルトは `"false"` です。実装がこの Unicode 拡張キーに対応していない場合、このプロパティは省略されます。
 
 ## 例
 

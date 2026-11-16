@@ -2,7 +2,7 @@
 title: Intl.DisplayNames
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`Intl.DisplayNames`** オブジェクトは、言語、地域、文字体系の表示名の一貫した翻訳ができるようにします。
@@ -84,7 +84,7 @@ languageNames.of("de"); // "German"
 languageNames.of("fr-CA"); // "Canadian French"
 languageNames.of("zh-Hant"); // "Traditional Chinese"
 languageNames.of("en-US"); // "American English"
-languageNames.of("zh-TW"); // "Chinese (Taiwan)"]
+languageNames.of("zh-TW"); // "Chinese (Taiwan)"
 
 // 繁体字中国語での言語名を表示
 languageNames = new Intl.DisplayNames(["zh-Hant"], { type: "language" });
@@ -100,7 +100,7 @@ languageNames.of("de"); // "德文"
 ```js
 // 英語の文字体系名を表示
 let scriptNames = new Intl.DisplayNames(["en"], { type: "script" });
-// Get script names
+// 文字体系名を取得
 scriptNames.of("Latn"); // "Latin"
 scriptNames.of("Arab"); // "Arabic"
 scriptNames.of("Kana"); // "Katakana"
@@ -119,7 +119,7 @@ scriptNames.of("Kana"); // "片假名"
 ```js
 // 英語の通貨名を表示
 let currencyNames = new Intl.DisplayNames(["en"], { type: "currency" });
-// Get currency names
+// 通貨名を取得
 currencyNames.of("USD"); // "US Dollar"
 currencyNames.of("EUR"); // "Euro"
 currencyNames.of("TWD"); // "New Taiwan Dollar"

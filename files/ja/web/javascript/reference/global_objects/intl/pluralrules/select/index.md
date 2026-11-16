@@ -3,7 +3,7 @@ title: Intl.PluralRules.prototype.select()
 short-title: select()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`select()`** は {{jsxref("Intl.PluralRules")}} インスタンスのメソッドで、ロケールを考慮した書式設定に使用する複数形ルールを示す文字列を返します。
@@ -57,7 +57,7 @@ const pr = new Intl.PluralRules("ar-EG");
 ```
 
 次に、ルールオブジェクトに対して `select()` を呼び出し、複数形が要求される数値を指定します。
-なお、図に示すように、アラビア語には基数詞に 5 つの形があります。
+なお、図に示すように、アラビア語には基数詞に 6 つの形があります。
 
 ```js
 pr.select(0); // 'zero'
@@ -65,6 +65,7 @@ pr.select(1); // 'one'
 pr.select(2); // 'two'
 pr.select(6); // 'few'
 pr.select(18); // 'many'
+pr.select(100); // 'other'
 ```
 
 ## 仕様書
