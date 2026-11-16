@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 607900f2b3fdd97a1c591b3dc9f6d81c8623d48c
 ---
 
-Les filtres SVG prennent les pixels qu'un élément a peints et les traitent avant qu'ils n'atteignent l'écran&nbsp;: floutage, décalage, recoloration, composition ou génération d'une nouvelle image. Ils peuvent être enchaînés dans des pipelines à plusieurs étapes et s'appliquent à la fois au contenu SVG et HTML.
+Les filtres SVG prennent les pixels qu'un élément a peints et les traitent avant qu'ils n'atteignent l'écran&nbsp;: floutage, décalage, recoloration, composition ou génération d'une nouvelle image. Ils peuvent être enchaînés pour former des chaînes à plusieurs étapes et s'appliquent aussi bien au contenu SVG qu'au contenu HTML.
 
 Un filtre est défini par l'élément {{SVGElement("filter")}}, qui n'est jamais rendu lui-même. Il doit avoir un `id` pour que d'autres éléments puissent y faire référence, et il peut être placé n'importe où dans le document, bien qu'il soit généralement défini à l'intérieur d'un élément {{SVGElement("defs")}}. Les éléments SVG appliquent un filtre avec l'attribut {{SVGAttr("filter")}}, et les éléments SVG et HTML peuvent en appliquer un avec la propriété CSS {{CSSxRef("filter")}}&nbsp;:
 
