@@ -100,12 +100,12 @@ outer_block: {
 
 ```js
 block_1: {
-  console.log('1');
+  console.log("1");
   break block_2; // SyntaxError: label not found
 }
 
 block_2: {
-  console.log('2');
+  console.log("2");
 }
 ```
 
@@ -119,14 +119,14 @@ function testBreak(x) {
 
   while (i < 6) {
     if (i == 3) {
-      (function() {
+      (function () {
         break;
       })();
     }
     i += 1;
   }
 
-return i * x;
+  return i * x;
 }
 
 testBreak(1); // SyntaxError: Illegal break statement
@@ -134,8 +134,8 @@ testBreak(1); // SyntaxError: Illegal break statement
 
 ```js
 block_1: {
-  console.log('1');
-  ( function() {
+  console.log("1");
+  (function () {
     break block_1; // SyntaxError: Undefined label 'block_1'
   })();
 }

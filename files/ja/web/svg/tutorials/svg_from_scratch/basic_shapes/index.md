@@ -2,7 +2,7 @@
 title: 基本図形
 slug: Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 87adaa5384b1015690f3435ce0ba64ac097764eb
 ---
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Positions", "Web/SVG/Tutorials/SVG_from_scratch/Paths") }}
@@ -11,26 +11,25 @@ l10n:
 
 図形を挿入するには、文書内に要素を作成します。さまざまな要素が各々さまざまな図形に対応づけられ、また各属性が図形のサイズや位置を定義します。一部の要素は他の図形で作成できるという点でやや冗長ですが、それらすべては利便性および文書をできるだけ小さくかつ読みやすくするために存在します。すべての基本的な図形を右図に示しています。
 
-![一連の 8 種類の異なる図形と描画。左上、黒い輪郭線の正方形と黒い輪郭線の角丸正方形。左下、赤い輪郭線の円、赤い輪郭線の楕円。左下には黄色の行と黄色のジグザグ。黄色の線の下記には緑の輪郭線の星、画像の最後は青の波線。](shapes.png)
+![8 種類の図形と線画。左上には黒い輪郭の正方形があり、その右に黒い輪郭の角丸正方形があります。その下の左側には赤い輪郭の円、右側には赤い輪郭の楕円があります。さらに下には黄色の斜線とジグザグ線があり、その下に緑の輪郭の星形があります。画像の下端には青い波線があります。](shapes.png)
 
 この画像を生成するコードは、次のようなものです。
 
 ```xml
-<?xml version="1.0" standalone="no"?>
-<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="200" height="250" xmlns="http://www.w3.org/2000/svg">
 
-  <rect x="10" y="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
-  <rect x="60" y="10" rx="10" ry="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
+  <rect x="10" y="10" width="30" height="30" stroke="black" fill="none" stroke-width="5"/>
+  <rect x="60" y="10" rx="10" ry="10" width="30" height="30" stroke="black" fill="none" stroke-width="5"/>
 
-  <circle cx="25" cy="75" r="20" stroke="red" fill="transparent" stroke-width="5"/>
-  <ellipse cx="75" cy="75" rx="20" ry="5" stroke="red" fill="transparent" stroke-width="5"/>
+  <circle cx="25" cy="75" r="20" stroke="red" fill="none" stroke-width="5"/>
+  <ellipse cx="75" cy="75" rx="20" ry="5" stroke="red" fill="none" stroke-width="5"/>
 
   <line x1="10" x2="50" y1="110" y2="150" stroke="orange" stroke-width="5"/>
   <polyline points="60 110 65 120 70 115 75 130 80 125 85 140 90 135 95 150 100 145"
-      stroke="orange" fill="transparent" stroke-width="5"/>
+      stroke="orange" fill="none" stroke-width="5"/>
 
   <polygon points="50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180"
-      stroke="green" fill="transparent" stroke-width="5"/>
+      stroke="green" fill="none" stroke-width="5"/>
 
   <path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/>
 </svg>
@@ -78,7 +77,7 @@ l10n:
 
 ### 楕円
 
-{{SVGElement("ellipse")}} は {{SVGElement("circle")}} のより一般的な形で、円の X 方向および Y 方向の半径（数学者は一般的に長半径および短半径と呼びます）を個別に指定することができます。
+{{SVGElement("ellipse")}} は {{SVGElement("circle")}} のより一般的な形で、x 軸方向と y 軸方向の半径（数学でいう長半径と短半径）を個別に指定できます。
 
 ```xml
 <ellipse cx="75" cy="75" rx="20" ry="5"/>
