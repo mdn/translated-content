@@ -102,9 +102,7 @@ Firefox は <kbd>Ctrl</kbd> (Windows)/<kbd>Cmd</kbd> (macOS) + <kbd>Shift</kbd> 
 
 ```html
 <p dir="ltr" lang="en">This sentence is in English and reads left to right.</p>
-<p dir="rtl" lang="ar">
-  هذه الجملة باللغة العربية وتُقرأ من اليمين إلى اليسار.
-</p>
+<p dir="rtl" lang="ar">هذه الجملة باللغة العربية وتُقرأ من اليمين إلى اليسار.</p>
 ```
 
 ### インラインの双方向テキスト

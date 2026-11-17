@@ -27,21 +27,21 @@ Cette section couvre les mécaniques du Web — les questions en relation avec l
 
 Questions relatives aux outils/logiciels que vous pouvez utiliser pour construire des sites web.
 
-- [Combien ça coûte de créer quelque chose sur le Web?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
+- [Combien ça coûte de créer quelque chose sur le Web?](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
   - : Quand vous démarrez votre site web, vous pouvez ne rien dépenser ou alors complètement dépasser vos estimations. Dans cet article nous aborderons le prix de chaque chose et de ce que vous aurez si vous payez (ou ne payez pas).
-- [Quel logiciel est nécessaire pour construire un site web?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
+- [Quel logiciel est nécessaire pour construire un site web?](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
   - : Dans cet article nous expliquerons quel logiciel est nécessaire pour l'édition, l'upload, ou pour la visualisation d'un site web.
-- [Quels sont les éditeurs disponibles?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors)
+- [Quels sont les éditeurs disponibles?](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors)
   - : Dans cet article nous mettrons en avant quelques points à retenir concernant le choix et l'installation d'un éditeur de texte pour le développement web.
 - [Comment installer un environnement de base pour travailler?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)
   - : Quand vous travaillez sur un projet web, vous souhaiterez le tester en local avant de l'exposer à tout le monde. Certains types de code nécessitent un serveur web pour tester, dans cet article nous allons vous montrer comment le configurer. Nous allons aussi voir une structure à mettre en place afin que les fichiers restent organisés quand le projet grandira.
 - [Que sont les outils de développement du navigateur?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)
   - : Chaque navigateur web possède un ensemble d'outils d'aide au développement du HTML, CSS, et des autres codes. Cet article explique comment utiliser les outils de développement de votre navigateur.
-- [Comment être sûr que votre site fonctionne correctement?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly)
+- [Comment être sûr que votre site fonctionne correctement?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)
   - : Alors vous avez publié votre site web en ligne — très bien ! Mais êtes vous sûr qu'il fonctionne correctement ? Cet article fourni quelques étapes de dépannage basique.
-- [Comment transférer des fichiers vers un serveur web?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [Comment transférer des fichiers vers un serveur web?](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
   - : Cet article montre comment mettre son site en ligne en utilisant un outil [FTP](/fr/docs/Glossary/FTP) — un des moyens les plus fréquents de publier son site afin qu'il soit disponible aux autres depuis leurs ordinateurs.
-- [Comment utiliser GitHub Pages?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages)
+- [Comment utiliser GitHub Pages?](/fr/docs/Learn_web_development/Core/Version_control)
   - : Cet article fourni un guide basique pour publier du contenu en utilisant l'outil gh-pages de GitHub.
 - [Quels outils sont disponibles pour corriger et améliorer les performances du site web?](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
   - : Cette série d'articles vous montre comment utiliser les Outils de Développement de Firefox afin de déboguer et améliorer les performances de votre site web, en utilisant les outils pour vérifier l'utilisation de la mémoire, l'arbre d'appel de JavaScript, la quantité de noeuds DOM affichée, et plus encore.

@@ -3,7 +3,7 @@ title: "`container-type` プロパティ"
 short-title: container-type
 slug: Web/CSS/Reference/Properties/container-type
 l10n:
-  sourceCommit: 892eb917bee599a9d6cae7d33ed783129dbb39b3
+  sourceCommit: c4e64810ce10fb5cb1eebfcd8b6f526866fd0982
 ---
 
 **container-type** は [CSS](/ja/docs/Web/CSS) のプロパティで、コンテナークエリーで使用されるコンテナーコンテキストの種類を指定します。
@@ -48,14 +48,6 @@ container-type: unset;
 - `size`
   - : [インラインおよびブロック](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック軸とインライン軸)の両方の寸法で コンテナーサイズクエリーのためのクエリー コンテナーを確立します。
     コンテナーに[スタイル](/ja/docs/Web/CSS/Reference/Properties/contain#style)抑制と[サイズ](/ja/docs/Web/CSS/Reference/Properties/contain#size)抑制を適用します。サイズ抑制は、インライン方向とブロック方向の両方で要素に適用されます。要素のサイズは、子要素を無視して単独で計算できます。
-
-## 公式定義
-
-{{CSSInfo}}
-
-## 形式文法
-
-{{CSSSyntax}}
 
 ## 解説
 
@@ -105,6 +97,14 @@ container-type: unset;
   container-type: anchored;
 }
 ```
+
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
+
+{{CSSSyntax}}
 
 ## 例
 

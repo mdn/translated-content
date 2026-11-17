@@ -1,14 +1,14 @@
 ---
-title: "`rule-width` プロパティ (CSS)"
+title: "`rule-width` プロパティ"
 short-title: rule-width
 slug: Web/CSS/Reference/Properties/rule-width
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 5fd3b03e9ad1ee4e8bc64d4f6888570690a7fbc8
 ---
 
 {{SeeCompatTable}}
 
-**`rule-width`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、複数行のグリッド、フレックス、段組みレイアウトで、アイテム間の溝に引かれるすべての線の太さを設定し、列間罫と行間罫の太さを同じ値に設定します。
+**`rule-width`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、複数列のグリッド、フレックスボックス、段組みレイアウトで、アイテム間の隙間に引かれる線の太さを設定し、列間罫と行間罫の太さを同じ値に設定します。
 
 {{InteractiveExample("CSS デモ: rule-width")}}
 
@@ -117,20 +117,20 @@ rule-width: unset;
   - : {{cssxref("&lt;line-width&gt;")}}: `thin`、`medium`、`thick` の 3 つのキーワードのいずれか、または正の {{cssxref("length")}} で、線の太さを表します。デフォルト値は `medium` です。
 
 - `<repeat-line-width>`
-  - : {{cssxref("repeat()")}} 関数に、第一引数で {{cssxref("&lt;integer&gt;")}} で `1` 以上の値を指定し、それ以降の引数で 1 つ以上の {{cssxref("&lt;line-width&gt;")}} 値を指定します。この整数値は、`<line-width>` の値が繰り返される回数を指定します。
+  - : {{cssxref("repeat()")}} 関数で、最初の引数に `1` 以上の {{cssxref("&lt;integer&gt;")}} を指定し、その後の引数に 1 つ以上の {{cssxref("&lt;line-width&gt;")}} 値を指定します。この整数値は、`<line-width>` の値が繰り返される回数を指定します。
 
 - `<auto-repeat-line-width>`
   - : {{cssxref("repeat()")}} 関数に、第一引数で `auto` を指定し、それ以降の引数で 1 つ以上の `<line-width>` 値を指定したものです。指定された `<line-width>` の値は、プロパティ値の他の要素によって明示的に指定されていない罫線に対して値を埋めるために必要な回数だけ繰り返されます。
 
 ## 解説
 
-`rule-width` 一括指定プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)のコンテナーで行や列の間に描画される罫線の太さを定義します。
+`rule-width` 一括指定プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)のコンテナーで行や列の間に描画される罫線の太さを定義します。
 
 この値は、カンマ区切りの成分のリストからなり、`<line-width>`、`<repeat-line-width>`、`<auto-repeat-line-width>` といった型を指定することができます。
 
-`rule-width` プロパティは、{{cssxref("rule-color")}} および {{cssxref("rule-style")}} プロパティとともに、一括指定の {{cssxref("rule")}} 一括指定でも設定できます。
+`rule-width` プロパティは、{{cssxref("rule-color")}} および {{cssxref("rule-style")}} プロパティとともに、{{cssxref("rule")}} 一括指定でも設定できます。
 
-プロパティの値が 1 つの `<line-width>` のみで構成されている場合、すべての行間罫や列間罫がその太さになります。次のように宣言すると、すべての罫線が `2px` になります。
+プロパティの値が 1 つの `<line-width>` のみで構成されている場合、すべての行間罫や列間罫がその太さになります。次のように宣言すると、すべての罫線が `3px` になります。
 
 ```css
 rule-width: 3px;
@@ -151,7 +151,7 @@ rule-width: 1rem, thick, thin, thick, thin, thick, thin;
 rule-width: 1rem, repeat(3, thick, thin);
 ```
 
-`<line-width>` として、`<line-width>` に解決されるカスタムプロパティを含む、任意の値を使用することができます。`repeat()` を使用すると、特に複雑な長さの計算を行う場合、値の記述が簡単になります。これにより、列・行・段の数に関係なく、単一の関数だけで繰り返しパターンを記述できるようになります。
+`<line-width>` として、`<line-width>` に解決されるカスタムプロパティを含む、有効な値を使用できます。`repeat()` を使用すると、特に複雑な長さの計算を行う場合、値を簡潔に記述できます。これにより、列数や行数に関係なく、単一の関数で繰り返しパターンを記述できます。
 
 ### 自動反復される罫線の太さ
 
@@ -309,11 +309,13 @@ li {
 
 #### 結果
 
-{{EmbedLiveSample("Basic", "", "600")}}
+{{EmbedLiveSample("Basic", "", "440")}}
 
 ### 反復する値
 
 この例では、太さのリストに含まれる値の数が列間罫・行間罫よりも少ない場合、値が繰り返される様子を示しています。
+
+#### CSS
 
 前の例と同じ HTML と CSS を使用し、`rule-width` としてカンマ区切りの 3 つの太さを指定します。
 
@@ -323,15 +325,19 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("Repeat", "", "600")}}
+#### 結果
 
-このグリッドコンテナーには 8 行 10 列があるため、各方向にそれぞれ 7 つと 9 つの溝があり、3 つの `<line-width>` 値の並びが両方向で繰り返されます。
+{{EmbedLiveSample("Repeat", "", "440")}}
+
+このグリッドコンテナーには 8 行 10 列があるため、行間の隙間は 7 つ、列間の隙間は 9 つあります。そのため、3 つの `<line-width>` 値の並びが両方向で繰り返されます。
 
 ### `repeat()` 関数の使用
 
-この例では、`repeat()` 関数を `rule-width` プロパティの値内で使用する方法、およびこの関数が値の宣言を縮小するのに役立つことを示しています。
+この例では、`repeat()` 関数を `rule-width` プロパティの値内で使用する方法と、この関数で値の宣言を簡潔にできることを示しています。
 
-前回の例と同じ HTML と CSS を使用します。さらに、2 つのカスタムプロパティを宣言し、`rule-width` の値内の `repeat()` 関数で使用します。`repeat()` 関数は、2 つの `<line-width>` 値からなるリストを 3 回繰り返すように設定します。
+#### CSS
+
+前回の例と同じ HTML と CSS を使用します。さらに、2 つのカスタムプロパティを宣言し、`rule-width` の値内の `repeat()` 関数で使用します。`repeat()` 関数は、2 つの `<line-width>` 値からなるリストを 4 回繰り返すように設定します。
 
 ```css live-sample___func live-sample___auto
 ul {
@@ -348,13 +354,17 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("func", "", "600")}}
+#### 結果
 
-`repeat()` 関数は 2 つの太さの値を 4 回繰り返して、10 個の太さの値からなるリストを作成します。列と行の溝の数が太さの合計数より少ないため、リストの最後の 2 つの値は破棄されます。
+{{EmbedLiveSample("func", "", "440")}}
+
+`repeat()` 関数は 2 つの太さの値を 4 回繰り返して、10 個の太さの値からなるリストを作成します。列や行の隙間の数は太さの値の合計数より少ないため、リストの最後の 2 つの値は破棄されます。
 
 ### `auto` を `repeat()` で使用
 
 この例では、`repeat()` 関数内で整数の代わりに `auto` を使用する方法を示しています。
+
+#### CSS
 
 `repeat(auto, <line-width>)` を使用することで、すべての列間罫・行間罫を `1px` に設定し、最初と最後のみを `5px` に設定します。
 
@@ -364,13 +374,15 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("auto", "", "600")}}
+#### 結果
+
+{{EmbedLiveSample("auto", "", "440")}}
 
 ```css hidden live-sample___basic live-sample___repeat live-sample___func live-sample___auto
 @layer no-support {
   @supports not (rule-width: thin, thick) {
     body::before {
-      content: "このプロパティは rule-width プロパティに対応していません";
+      content: "このブラウザーは rule-width プロパティに対応していません";
       background-color: wheat;
       display: block;
       text-align: center;
@@ -395,4 +407,5 @@ ul {
 - {{cssxref("column-rule-width")}}
 - {{cssxref("row-rule-width")}}
 - {{cssxref("rule")}} 一括指定
+- [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)モジュール

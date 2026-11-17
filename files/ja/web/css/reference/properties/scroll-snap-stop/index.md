@@ -1,8 +1,9 @@
 ---
-title: scroll-snap-stop
+title: "`scroll-snap-stop` プロパティ"
+short-title: scroll-snap-stop
 slug: Web/CSS/Reference/Properties/scroll-snap-stop
 l10n:
-  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 **`scroll-snap-stop`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロールコンテナーが可能なスナップ位置を「通り過ぎる」ことを許可するかどうかを定義します。
@@ -95,6 +96,8 @@ scroll-snap-stop: unset;
 ```
 
 ### 値
+
+このプロパティは、以下のキーワード値のいずれかで指定します。
 
 - `normal`
   - : スクロールコンテナーの視覚{{Glossary("viewport", "ビューポート")}}がスクロールされた時、可能なスナップ位置を「通り過ぎる」ことを許可します。
@@ -272,7 +275,7 @@ div > div {
 
 必要に応じて、スクロールコンテナー内で `always` で停止するアイテムを選択することができます。これは、以下の例で、奇数と偶数のアイテムを対象として示されています。要件に応じて、別の戦略を選択することができます。以下の例では、スクロールは、 2 つ目と 3 つ目のボックスの奇数と偶数のアイテムを「通過」しません。
 
-{{EmbedLiveSample("Snapping_in_different_axes", "100%", "1080")}}
+{{EmbedLiveSample("setting_different_snap_stops", "100%", "1080")}}
 
 ## 仕様書
 

@@ -76,12 +76,12 @@ Dans le code qui suit, on utilise également des instructions `break` avec des b
 
 ```js
 bloc_1: {
-  console.log ('1');
-  break bloc_2;  // SyntaxError: label not found
+  console.log("1");
+  break bloc_2; // SyntaxError: label not found
 }
 
 bloc_2: {
-  console.log ('2');
+  console.log("2");
 }
 ```
 
@@ -90,11 +90,11 @@ bloc_2: {
 Dans le cas d'une fonction imbriquée dans une boucle `while` :
 
 ```js
-function testBreak(x){
+function testBreak(x) {
   var i = 0;
   while (i < 6) {
     if (i === 3) {
-      (function() {
+      (function () {
         break;
       })();
     }
@@ -110,8 +110,8 @@ Dans le cas d'une fonction imbriquée dans une instruction `label` :
 
 ```js
 bloc_1: {
-  console.log('1');
-  (function() {
+  console.log("1");
+  (function () {
     break bloc_1; // SyntaxError: Undefined label 'bloc_1'
   })();
 }

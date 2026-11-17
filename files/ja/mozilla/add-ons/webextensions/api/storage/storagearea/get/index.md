@@ -1,9 +1,9 @@
 ---
 title: StorageArea.get()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
+l10n:
+  sourceCommit: 81c80db5f9f98dd2ac197474829fe52cd75acf1b
 ---
-
-{{AddonSidebar}}
 
 ストレージ領域から 1 つ以上のアイテムを取得します。
 
@@ -11,43 +11,43 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 
 ## 構文
 
-```
-let gettingItem = browser.storage.<storageType>.get(
-  keys    // null, string, object or array of strings
+```js-nolint
+let results = browser.storage.<storageType>.get(
+  keys    // null、文字列、オブジェクト、または文字列の配列
 )
 ```
 
-`<storageType>` は [`storage.sync`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) または [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) の書き込み可能なストレージタイプです。
+`<storageType>` は、書き込み可能なストレージ種別であり、{{WebExtAPIRef("storage.local")}}、{{WebExtAPIRef("storage.session")}}、{{WebExtAPIRef("storage.sync")}} のいずれかです。
 
 ### 引数
 
 - `keys`
-  - : 取得したいアイテムのキー(文字列・文字列の配列またはデフォルト値を指定するオブジェクト)を指定します。空文字列・オブジェクト・配列を指定すると空のオブジェクトが取得できます。 `null` か未定義の値を指定するとストレージ全体のアイテムが取得できます。
+  - : ストレージから取得するアイテムを特定するキー（`string`）、キーの配列、またはデフォルト値を指定するオブジェクトです。空のオブジェクトまたは配列を渡すと、空のオブジェクトが返されます。`null` または `undefined` を渡すと、ストレージ内のすべてのアイテムが返されます。
 
-### 返り値
+### 返値
 
-成功時は `keys` で指定されたストレージ領域内のアイテム全てを含む `results` オブジェクトを引数に持つ [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。 失敗した場合 promise はエラーメッセージと共にリジェクトされます。
+`keys` で指定され、ストレージ領域内に存在する各キーと値のペアを含む `results` オブジェクトで履行される [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) です。`keys` がオブジェクトの場合、ストレージ内にないキーには `keys` オブジェクトで指定されたデフォルト値が使用されます。
+
+操作に失敗した場合、Promise はエラーメッセージとともに拒否されます。
+
+managed ストレージが設定されていない場合、`undefined` が返されます。
 
 > [!WARNING]
-> 52 より前の Firefox バージョンのコンテンツスクリプトで使用する場合、 `browser.storage.local.get()` で返される Promise は 1 つのオブジェクトを持つ配列を引数に持ちます。配列内のオブジェクトは上記に記述したようにストレージ領域内の `keys` を持っています。 The Promise is correctly fulfilled with an Object when used in the background context (background scripts, popups, options pages, etc.). When this API is used as `chrome.storage.local.get()`, it correctly passes an Object to the callback function.
-
-## ブラウザーの互換性
-
-{{Compat}}
+> Firefox では、拡張機能の managed ストレージが[ネイティブマニフェスト](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests)または [`3rdparty` エンタープライズポリシー](https://mozilla.github.io/policy-templates/#3rdparty)<sup>(英語)</sup>で設定されていない場合、この関数で managed ストレージにアクセスすると例外が発生します（[Firefox バグ 1868153](https://bugzil.la/1868153)を参照）。エラーを捕捉すれば、この問題を回避できます。この問題は、マニフェストキー [`storage.managed_schema`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/storage) に対応していないことに関連しています（[Firefox バグ 1771731](https://bugzil.la/1771731)を参照）。
 
 ## 例
 
-あらかじめストレージ領域に 2 つのアイテムを格納しておきます。
+ストレージに次の 2 つのアイテムが格納されているとします。
 
 ```js
-// "kitten" と "monster" を格納
+// ストレージに "kitten" と "monster" の 2 つのアイテムが格納されています
 browser.storage.local.set({
   kitten: { name: "Mog", eats: "mice" },
   monster: { name: "Kraken", eats: "people" },
 });
 ```
 
-次に promise で使う成功時と失敗時のハンドラーを定義しておきます。
+プロミスの成功時と失敗時のハンドラーを定義します。
 
 ```js
 function onGot(item) {
@@ -59,7 +59,7 @@ function onError(error) {
 }
 ```
 
-`keys` を指定せずに呼び出すと全て取得します。
+`keys` 引数を指定せずに、すべてのアイテムを取得します。
 
 ```js
 let gettingItem = browser.storage.local.get();
@@ -68,17 +68,17 @@ gettingItem.then(onGot, onError);
 // -> Object { kitten: Object, monster: Object }
 ```
 
-空のキーを指定すると何も返しません。
+空の `keys` 引数を渡すと、何も取得されません。
 
 ```js
-// 空の配列を指定すると何も返らない
+// 空の配列を渡すと、何も取得されません
 let gettingItem = browser.storage.local.get([]);
 gettingItem.then(onGot, onError);
 
 // -> Object { }
 ```
 
-オブジェクト名を指定すると、合致するものを返します。
+オブジェクト名を指定して、一致するアイテムを取得します。
 
 ```js
 let gettingItem = browser.storage.local.get("kitten");
@@ -87,7 +87,7 @@ gettingItem.then(onGot, onError);
 // -> Object { kitten: Object }
 ```
 
-オブジェクト名の配列を指定すると合致するものを全て返します。
+オブジェクト名の配列を指定して、一致するアイテムをすべて取得します。
 
 ```js
 let gettingItem = browser.storage.local.get([
@@ -100,7 +100,7 @@ gettingItem.then(onGot, onError);
 // -> Object { kitten: Object, monster: Object }
 ```
 
-オブジェクト名をキー、デフォルト値を value に指定したオブジェクトを指定する場合
+オブジェクト名をキー、デフォルト値を値とするオブジェクトを指定して取得します。
 
 ```js
 let gettingItem = browser.storage.local.get({
@@ -120,18 +120,23 @@ let gettingItem = browser.storage.local.get({
 ### Chrome での例
 
 ```js
-chrome.storage.local.get("kitten", function (items) {
-  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
-});
-```
-
-Or with an arrow function
-
-```js
 chrome.storage.local.get("kitten", (items) => {
   console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
 });
 ```
 
+Promise を使用する例です。
+
+```js
+let gettingItem = new Promise((resolve) =>
+  chrome.storage.local.get("kitten", resolve),
+);
+gettingItem.then(onGot); // -> Object { kitten: Object }
+```
+
+## ブラウザーの互換性
+
+{{Compat}}
+
 > [!NOTE]
-> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。
+> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage)<sup>(英語)</sup> API に基づいています。このドキュメントは Chromium のコードにある [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) から派生したものです。
