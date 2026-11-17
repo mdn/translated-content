@@ -3,15 +3,14 @@ title: "HTMLElement: inert プロパティ"
 short-title: inert
 slug: Web/API/HTMLElement/inert
 l10n:
-  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
+  sourceCommit: 3ff38e7687b65e43fe821a904ff52778312b8d36
 ---
 
 {{ APIRef("HTML DOM") }}
 
-{{domxref("HTMLElement")}} の **`inert`** プロパティは、この要素の [`inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert) 属性の値を反映します。論理値で、存在する場合は、フォーカスイベントや支援技術からのイベントを含む、要素に対するユーザーの入力イベントをブラウザーが「無視」するようにします。ブラウザーは、要素でのページ検索やテキスト選択も無視することができます。これは、モーダルのような UI を構築する際に、モーダルが表示されているときにフォーカスをモーダル内に「閉じ込める」場合に便利です。
+{{domxref("HTMLElement")}} の **`inert`** プロパティは、この要素の [`inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert) 属性の値を反映します。これは論理値です。属性が存在する場合、ブラウザーはフォーカスイベントや支援技術からのイベントなど、この要素に対するユーザーの入力イベントを「無視」します。ブラウザーは、この要素でのページ検索やテキスト選択も無視することがあります。これは、モーダルのような UI を構築する際、モーダルの表示中にフォーカスをモーダル内に「閉じ込める」場合に便利です。
 
-> [!NOTE]
-> 対話要素や重要なコンテンツを `inert` 属性を持つ要素内に入れ子にしてはいけません。不活性コンテンツとその子孫は、すべてのユーザーにとってフォーカスも知覚もできないからです。
+なお、`inert` 属性が指定されていない場合でも、要素自体は親要素から不活性状態を継承することがあります。ただし、この継承された不活性状態は、このプロパティの値には反映されません。プロパティを明示的に `false` に設定しても、親要素から継承した不活性状態を解除することはできません。
 
 ## 値
 
@@ -42,10 +41,10 @@ l10n:
 
 ### 結果
 
-{{ EmbedLiveSample('Example', 560, 200) }}
+{{ EmbedLiveSample('Examples', 560, 200) }}
 
 > [!NOTE]
-> この属性は、それ自体では、ブラウザーに表示されるコンテンツは視覚的変化を与えません。上の例では、inert 属性を持つ要素の直系の子孫が半透明になるように CSS が適用されています。
+> この属性だけでは、ブラウザーに表示されるコンテンツに視覚的な変化は起こりません。上の例では、`inert` 属性を持つ要素の直系の子孫が半透明で表示されるように CSS が適用されています。
 
 ## 仕様書
 
@@ -58,6 +57,6 @@ l10n:
 ## 関連情報
 
 - [グローバル属性: `inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert)
-- {{HTMLElement("dialog")}}
-- [inert のポリフィル](https://github.com/WICG/inert)
 - {{domxref("HTMLInputElement.disabled", "disabled")}}
+- {{HTMLElement("dialog")}}
+- CSS の {{cssxref("interactivity")}} プロパティ
