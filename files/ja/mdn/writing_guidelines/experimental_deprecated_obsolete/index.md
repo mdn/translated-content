@@ -2,7 +2,7 @@
 title: 実験的、非推奨、廃止
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
 l10n:
-  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
+  sourceCommit: 2e427c5c185433c5a6612c63bf877753a5fedc99
 ---
 
 これらの用語は、技術や仕様と一般的に関連しており、 MDN Web Docs で技術の状態をラベル付けするために使用されます。これらの用語の定義については、 MDN Web Docs は [Browser Compatibility Data (BCD)](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information) リポジトリーと連携しています。
@@ -28,7 +28,7 @@ MDN Web Docs で、ある技術が実験的 (experimental) と記述されてい
 - 単一のブラウザー用レンダリングエンジンで2年以上にわたって既定で対応しており、大きな変更がない。
 - 定義している仕様が、互換性を失わせる形で変化することはないとみられる。
 
-これらの条件の例については、 [experimental flag](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental)（BCD ドキュメント）を参照してください。
+これらの条件の例については、[experimental flag](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines#setting-experimental)（BCD ドキュメント）を参照してください。
 
 通常、ある技術が複数の主要なブラウザーで対応している場合、仕様が安定していることになりますが、常にそうであるとは限りません。
 他にも、仕様が安定していても、ブラウザーのネイティブ対応がされていない技術もあるかもしれません。例えば、 [IMSC](/ja/docs/Related/IMSC) は JavaScript のポリフィルで使用されています。<!-- リンクを見直す必要があります -->
@@ -39,7 +39,7 @@ MDN Web Docs で、ある技術が実験的 (experimental) と記述されてい
 
 MDN Web Docs で非推奨 (**deprecated**) という用語は、推奨されなくなった API や技術を示すために使用されます。非推奨の API や技術は、将来的に削除されるかもしれませんし、互換性のためだけに残されていてまだ動作する可能性があるかもしれません。非推奨ですと表示された機能は使用しないことをお勧めします。
 
-**非推奨**の定義の詳細については、[deprecated flag](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-deprecated)（BCD ドキュメント）を参照してください。
+**非推奨**の定義の詳細については、[deprecated flag](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines#setting-deprecated)（BCD ドキュメント）を参照してください。
 
 ## 廃止
 
