@@ -338,7 +338,7 @@
          x="211"
          y="434.5"
          id="tspan66"><tspan
-           id="tspan64">（おそらく別なオリジンにある）</tspan></tspan></text>
+           id="tspan64">（おそらく別のオリジンにある）</tspan></tspan></text>
   </switch>
   <path
      d="M217.605 321h312.4"
@@ -604,7 +604,7 @@
        font-family="Helvetica"
        font-size="18"
        text-anchor="middle"
-       id="text118">論理回路</text>
+       id="text118">処理</text>
   </switch>
   <path
      d="M557.803 369.38v-53.879h50.3v53.88z"
