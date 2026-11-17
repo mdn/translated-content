@@ -1,119 +1,49 @@
 ---
-title: Elementos en bloque
+title: Contenido a nivel de bloque
 slug: Glossary/Block-level_content
+l10n:
+  sourceCommit: 96a73163513476fe49bfba695acedb7622135354
 ---
 
-{{GlossarySidebar}}
+En CSS, el contenido que participa en el diseño en bloque se denomina **contenido a nivel de bloque**.
 
-Los elementos, en HTML (lenguaje de marcas de hipertexto - **Hypertext Markup Language**) usualmente son elementos "en bloque" o [elementos "en línea"](/es/docs/orphaned/Web/HTML/Inline_elements). Un elemento en bloque ocupa todo el espacio de su elemento padre (contenedor), creando así un "bloque". Este artículo ayuda a explicar lo que esto significa.
+En un diseño en bloque, las cajas se disponen una tras otra, en vertical, empezando por la parte superior de un bloque contenedor. El borde exterior izquierdo de cada caja toca el borde izquierdo del bloque contenedor.\
+Un elemento a nivel de bloque siempre empieza en una línea nueva. En los modos de escritura horizontales, como los del inglés o el árabe, ocupa todo el espacio horizontal de su elemento padre (contenedor) y un espacio vertical igual a la altura de su contenido, con lo que crea un "bloque".
 
-Los navegadores suelen mostrar el elemento a nivel de bloque con un salto de línea antes y después del elemento. El siguiente ejemplo demuestra la influencia elementos en bloque:
+> [!NOTE]
+> El comportamiento anterior del diseño en bloque cambia si la propiedad {{cssxref("writing-mode")}} del bloque contenedor se establece en un valor distinto del [valor predeterminado](/es/docs/Web/CSS/Reference/Properties/writing-mode#definición_formal).
 
-## Ejemplo en bloque
+> [!NOTE]
+> Históricamente, los elementos de HTML (_Lenguaje de marcado de hipertexto_) se clasificaban como elementos "a nivel de bloque" o elementos "en línea". Al tratarse de una característica de presentación, esta clasificación ahora se especifica en CSS.
 
-HTML
+## Ejemplos
+
+En este ejemplo, se colocan dos elementos de párrafo ({{HTMLElement("p")}}) dentro de un {{HTMLElement("div")}}.
 
 ```html
-<p>
-  Este párrafo es un elemento en bloque; este fondo se ha coloreado para mostrar
-  elemento principal (o padre) del párrafo.
-</p>
+<div>
+  <p>
+    Este es el primer párrafo. El color de fondo de estos párrafos se ha
+    cambiado para distinguirlos de su elemento padre.
+  </p>
+  <p>Este es el segundo párrafo.</p>
+</div>
 ```
 
-CSS
+De forma predeterminada, los elementos de párrafo ({{HTMLElement("p")}}) son elementos a nivel de bloque. Por eso se muestran con un diseño en bloque:
 
-```css
+```css hidden
 p {
   background-color: #8abb55;
 }
 ```
 
-{{ EmbedLiveSample('Block-level_Example') }}
+{{EmbedLiveSample("Ejemplos")}}
 
-## Uso
+## Véase también
 
-- Los elementos de bloque sólo deben aparecer dentro del elemento {{ HTMLElement("body") }}.
-
-## Elementos en bloque vs. en línea
-
-Hay un par de diferencias clave entre los elementos en bloque y elementos en línea:
-
-- Formateo
-  - : De forma predeterminada, los elementos de bloque comienzan en una nueva línea, pero los elementos en línea pueden comenzar en cualquier parte de una línea.
-- Modelo de contenido
-  - : En general, los elementos en bloque pueden contener elementos en línea y otros elementos en bloque. Inherente a esta distinción estructural es la idea de que los elementos en bloque crean estructuras "más grandes" que los elementos en línea.
-
-La distinción entre elementos en bloque frente a elementos en línea se utiliza en las especificaciones de HTML hasta la 4.01. En HTML5, esta distinción dual se sustituye por un conjunto más complejo de [categorías de contenido](/es/docs/Web/HTML/Guides/Content_categories). La categoría "en bloque" corresponde aproximadamente a la categoría de [contenido dinámico](/es/docs/Web/HTML/Guides/Content_categories#contenido_dinámico) en HTML 5, mientras que "en línea" se corresponde con [contenido estático](/es/docs/Web/HTML/Guides/Content_categories#Contenido_textual_o_est%C3%A1tico), pero hay categorías adicionales.
-
-## Elementos
-
-La siguiente es una lista completa de todos los elementos en bloque de HTML (aunque "en bloque" no se define técnicamente para los elementos que son nuevos en HTML5).
-
-- {{ HTMLElement("address") }}
-  - : Información de contacto.
-- {{ HTMLElement("article") }}
-  - : Contenido de Articulo.
-- {{ HTMLElement("aside") }}
-  - : Contenido adicional.
-- {{ HTMLElement("audio") }}
-  - : Reproductor de audio
-- {{ HTMLElement("blockquote") }}
-  - : Bloque de "cita".
-- {{ HTMLElement("canvas") }}
-  - : Dibujo canvas.
-- {{ HTMLElement("dd") }}
-  - : Descripción de definición.
-- {{ HTMLElement("div") }}
-  - : División de documento.
-- {{ HTMLElement("dl") }}
-  - : Lista de definición.
-- {{ HTMLElement("fieldset") }}
-  - : Etiqueta de conjunto de campos.
-
-- {{ HTMLElement("figcaption") }}
-  - : Leyenda de figura.
-- {{ HTMLElement("figure") }}
-  - : Grupos contenido multimedia con una leyenda (ver {{ HTMLElement("figcaption") }}).
-- {{ HTMLElement("footer") }}
-  - : Sección o pie de página.
-- {{ HTMLElement("form") }}
-  - : Formulario de entrada.
-- {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}
-  - : Niveles de cabecera 1-6.
-- {{ HTMLElement("header") }}
-  - : Sección o cabecera de página.
-- {{ HTMLElement("hgroup") }}
-  - : Grupos información de encabezado.
-- {{ HTMLElement("hr") }}
-  - : Regla Horizontal (línea divisoria).
-- {{ HTMLElement("li") }}
-  - : Elemento de lista.
-- {{ HTMLElement("main") }}
-  - : Engloba el único contenido central del documento.
-- {{ HTMLElement("nav") }}
-  - : Contiene enlaces de navegación.
-
-- {{ HTMLElement("noscript") }}
-  - : Contenido para ser usado si los scripts no son soportados o permitidos.
-- {{ HTMLElement("ol") }}
-  - : Lista ordenada.
-- {{ HTMLElement("output") }}
-  - : Formulario de salida.
-- {{ HTMLElement("p") }}
-  - : Párrafo.
-- {{ HTMLElement("pre") }}
-  - : Texto preformateado.
-- {{ HTMLElement("section") }}
-  - : Sección de una página web.
-- {{ HTMLElement("table") }}
-  - : Tabla.
-- {{ HTMLElement("tfoot") }}
-  - : Pie de tabla.
-- {{ HTMLElement("ul") }}
-  - : Lista no ordenada.
-- {{ HTMLElement("video") }}
-  - : Reproductor de vídeo.
-
-### Ver también
-
-- [Elementos en línea](/es/docs/orphaned/Web/HTML/Inline_elements)
+- Términos relacionados del glosario:
+  - {{glossary("Inline-level content", "Contenido a nivel de línea")}}
+- [Contexto de formato de bloque](/es/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- {{cssxref("display")}}
+- {{cssxref("writing-mode")}}
