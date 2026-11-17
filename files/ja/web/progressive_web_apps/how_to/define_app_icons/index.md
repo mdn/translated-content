@@ -2,10 +2,8 @@
 title: アプリのアイコンを定義する
 slug: Web/Progressive_web_apps/How_to/Define_app_icons
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 26f9fbee05fb92b584d44fba4359e86796484aa6
 ---
-
-{{PWASidebar}}
 
 [プログレッシブウェブアプリ (PWA)](/ja/docs/Web/Progressive_web_apps) は、他のアプリと同じように端末にインストールできます。PWA をインストールすると、そのアプリアイコンが端末のホーム画面、ドック、タスクバー、またはオペレーティングシステムのネイティブアプリが通常表示される他の場所に表示されます。
 
@@ -13,7 +11,7 @@ l10n:
 
 ![Windows のタスクバーには、通常の Windows アイコンが表示され、その下に Firefox と Word のアイコン（ネイティブアプリ）が表示されます。さらに、 PWA である Spotify と PWAmp のアイコンも表示されています。](./windows-taskbar.png)
 
-PWA を作成する際、端末にアプリがインストールされた際に使用される独自のアイコンのセットを定義できます。この記事では、独自のアプリアイコンを定義する方法、作成するアイコンのサイズ、およびアイコンをマスク機能に対応させる方法について説明します。
+PWA を作成する際に、インストール後に端末で使うアプリアイコンのセットを定義できます。この記事では、独自のアプリアイコンを定義する方法、作成するアイコンのサイズ、およびアイコンをマスクに対応させる方法について説明します。
 
 > [!NOTE]
 > PWA のアプリアイコンは、ブラウザーのアドレスバーなどに表示される{{glossary("favicon", "ファビコン")}}画像とは異なります。 PWA は、ファビコンとアプリアイコンの両方を設定できます。ファビコンについて詳しくは、「[サイトに独自のアイコンを追加](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#サイトに自分の好きなアイコンを追加)」を参照してください。
@@ -82,11 +80,11 @@ PWA 用のアイコンセットを定義するには、ウェブアプリマニ�
 
 ## 必要なサイズのアイコンを作成する
 
-多くのオペレーティングシステムでは、場所や機器の能力が異なると、異なるサイズのアイコンを使用します。アイコンを正しく表示するため、使用されるすべての場所で適切に表示されるように、複数のバージョンを作成することが重要です。
+多くのオペレーティングシステムでは、表示場所や端末の性能に応じて異なるサイズのアイコンを使用します。アイコンを正しく表示するため、使用されるすべての場所で適切に表示されるように、複数のバージョンを作成することが重要です。
 
 例えば、 Windows では、タスクバーにアプリアイコンを 44x44 ピクセルの画像として表示したり、スタートメニューに 150x150 ピクセルの画像として表示したりできます。異なるオペレーティングシステムで利用されるアイコンのサイズに関する詳細情報や、効果的なアイコンの作成に関するヒントについては、以下のリンクを参照してください。
 
-- Windows については、[アイコンとテーマの色を定義する](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps-chromium/how-to/icon-theme-color) (learn.microsoft.com) を参照してください。
+- Windows については、[アイコンとテーマの色を定義する](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps/how-to/icon-theme-color) (learn.microsoft.com) を参照してください。
 - Android の場合、 [Google Play アイコンのデザイン仕様](https://developer.android.com/distribute/google-play/resources/icon-design-specifications) (developer.android.com) を参照してください。
 - iOS や macOS については、 [App icons](https://developer.apple.com/design/human-interface-guidelines/app-icons#App-icon-sizes) (developer.apple.com) を参照してください。
 
@@ -163,5 +161,5 @@ PWA アプリのアイコンは、マスクに対応している必要があり�
 - [`icons` マニフェストメンバー](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/icons)
 - [App design](https://web.dev/learn/pwa/app-design#the_icon) (web.dev)
 - [Adaptive icon support in PWAs with maskable icons](https://web.dev/articles/maskable-icon) (web.dev)
-- [アイコンとテーマの色を定義する](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps-chromium/how-to/icon-theme-color) (microsoft.com)
+- [アイコンとテーマの色を定義する](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps/how-to/icon-theme-color) (microsoft.com)
 - [PWA Image Generator](https://www.pwabuilder.com/imageGenerator) (pwabuilder.com)
