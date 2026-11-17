@@ -3,7 +3,7 @@ title: Guide de style rédactionnel
 short-title: Style rédactionnel
 slug: MDN/Writing_guidelines/Writing_style_guide
 l10n:
-  sourceCommit: f4c221962681b1472cd57da60379ad7825fe5081
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
 
 Ce guide de style rédactionnel décrit comment le contenu doit être rédigé, organisé, orthographié et mis en forme sur MDN Web Docs.
@@ -26,7 +26,9 @@ Les sous-sections suivantes fournissent des recommandations pour y parvenir&nbsp
 - [Incluez des exemples pertinents](#incluez_des_exemples_pertinents)
 - [Fournissez une introduction descriptive](#fournissez_une_introduction_descriptive)
 - [Utilisez un langage inclusif](#utilisez_un_langage_inclusif)
+- [Utilisez un langage accessible](#utilisez_un_langage_accessible)
 - [Rédigez en pensant au référencement](#rédigez_en_pensant_au_référencement)
+- [Assumez vos textes](#assumez_vos_textes)
 
 ### Considérez votre public cible
 
@@ -197,6 +199,12 @@ La liste de contrôle suivante est utile lors de la rédaction et de la relectur
 
 - **Concentrez-vous sur le sujet**&nbsp;: Il est préférable d'écrire autour du sujet de la page plutôt qu'autour d'un mot-clé précis. Il est probable qu'il existe de nombreux mots-clés pour un sujet donné&nbsp;; beaucoup d'expert·e·s SEO compilent une liste de 5 à 100 mots-clés à inclure selon la longueur de l'article. Cela diversifie le vocabulaire et réduit les répétitions.
 
+### Assumez vos textes
+
+Quels que soient les outils que vous utilisez pour vous aider à écrire, vous êtes responsable du résultat.
+Une personne doit examiner tout le texte avant qu'il ne soit envoyé.
+Modifiez le texte pour suivre les [trois C de la rédaction](#considérez_les_trois_c_de_la_rédaction) et vérifiez qu'il est techniquement exact.
+
 ## Style de rédaction
 
 Outre des phrases grammaticalement correctes en français, nous recommandons de suivre ces lignes directrices pour garder la cohérence sur MDN Web Docs.
@@ -325,7 +333,7 @@ Utilisez les pluriels français, pas les formes influencées par le latin ou le 
 
 ### Apostrophes et guillemets
 
-N'utilisez pas de guillemets ou d'apostrophes «&nbsp;courbes&nbsp;». Sur MDN Web Docs, utilisez uniquement des guillemets droits et des apostrophes droites. En effet, nous devons choisir une seule forme pour la cohérence. Si des caractères courbes se glissent dans des extraits de code, même en ligne, des personnes peuvent les copier en pensant qu'ils fonctionnent, ce qui n'est pas le cas.
+N'utilisez pas de guillemets ou d'apostrophes «&nbsp;courbes&nbsp;». Sur MDN Web Docs, utilisez uniquement des guillemets droits et des apostrophes droites. En effet, nous devons choisir une seule forme pour la cohérence. Si des caractères courbes se glissent dans des extraits de code, même en incise, des personnes peuvent les copier en pensant qu'ils fonctionnent, ce qui n'est pas le cas.
 
 - **Correct**&nbsp;: N'utilisez pas les «&nbsp;apostrophes courbes&nbsp;».
 - **Incorrect**&nbsp;: N&rsquo;utilisez pas les &ldquo;apostrophes courbes.&rdquo;
@@ -605,8 +613,8 @@ Pour maintenir la cohérence, gardez à l'esprit les points suivants lors de l'a
 
 #### Texte des liens
 
-- Le texte du lien doit être le même que le titre de la page ou de la section cible. Par exemple, le texte du lien vers la page [ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes) intitulée «&nbsp;ARIA states and properties&nbsp;» est&nbsp;:
-  - **Correct**&nbsp;: [ARIA states and properties](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes)
+- Le texte du lien doit être le même que le titre de la page ou de la section cible. Par exemple, le texte du lien vers la page [ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes) intitulée «&nbsp;États et propriétés ARIA&nbsp;» est&nbsp;:
+  - **Correct**&nbsp;: [États et propriétés ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes)
 - Utilisez la casse phrase même si elle diffère du titre de la page ou de la section liée. Par exemple, le texte du lien vers la page [Mode Quirks](/fr/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode) en casse phrase correcte est&nbsp;:
   - **Correct**&nbsp;: [Mode Quirks](/fr/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
 - Pour les liens externes, utilisez aussi la casse phrase même si la casse de l'article cible diffère. Exception&nbsp;: les titres de livres.
@@ -645,9 +653,9 @@ Vous pouvez automatiser l'insertion des pages dans la liste à l'aide de macros.
 Par exemple, le guide [JavaScript](/fr/docs/Web/JavaScript) est structuré comme suit&nbsp;:
 
 - [JavaScript/Guide](/fr/docs/Web/JavaScript/Guide) - Page principale de table des matières
-- [JavaScript/Guide/JavaScript Overview](/fr/docs/Web/JavaScript/Guide/Introduction)
+- [JavaScript/Guide/JavaScript Aperçu](/fr/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript/Guide/Functions](/fr/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/Guide/Details of the Object Model](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [JavaScript/Guide/Details de Object Model](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
 Évitez de placer votre article au sommet de la hiérarchie, ce qui ralentit le site et nuit à la recherche et à la navigation.
 

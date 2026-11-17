@@ -3,7 +3,7 @@ title: Firefox 155 note de version pour les développeurs
 short-title: Firefox 155
 slug: Mozilla/Firefox/Releases/155
 l10n:
-  sourceCommit: 79f0b295d759e9bb6e3c49197434a1d34c449731
+  sourceCommit: 0d8aa789fef46572ea27b9929625f298aff0416b
 ---
 
 Cet article présente les informations concernant les changements de Firefox 155 qui concernent les développeur·euse·s.
@@ -194,3 +194,9 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 - **Les noms de `timeline-scope` sont désormais globaux par défaut**&nbsp;: `layout.css.scroll-driven-animations.enabled`
 
   Le comportement par défaut de la portée des chronologies nommées a été mis à jour pour être global. Cela peut être limité à des éléments, et à leur sous-arbre, en utilisant la propriété CSS {{CSSxRef("timeline-scope")}} et la valeur de soit {{CSSxRef("scroll-timeline-name")}} soit {{CSSxRef("view-timeline-name")}} ([bogue Firefox 2024012 <sup>(angl.)</sup>](https://bugzil.la/2024012)).
+
+- **`<script type="speculationrules">`**&nbsp;: `dom.speculation_rules.enabled`
+
+  Activé uniquement dans Nightly, [l'API Speculation Rules](/fr/docs/Web/API/Speculation_Rules_API) fournit un mécanisme pour améliorer les performances des navigations futures en définissant quelles ressources doivent être préchargées ou pré-rendues en fonction de facteurs tels que le comportement de l'utilisateur·ice vis-à-vis des liens.
+
+  La prise en charge initiale incluait uniquement [`prefetch`](/fr/docs/Web/HTML/Reference/Elements/script/type/speculationrules#prefetch), avec des ressources identifiées par une liste [`urls`](/fr/docs/Web/HTML/Reference/Elements/script/type/speculationrules#urls) et la priorité [`immediate`](/fr/docs/Web/HTML/Reference/Elements/script/type/speculationrules#immediate). Cela inclut également la prise en charge de la valeur `navigational-prefetch` de la propriété {{DOMxRef("PerformanceResourceTiming.deliveryType")}}. ([bogue Firefox 2041381 <sup>(angl.)</sup>](https://bugzil.la/2041381)).

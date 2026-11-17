@@ -3,7 +3,7 @@ title: "ARIA : rôle navigation"
 short-title: navigation
 slug: Web/Accessibility/ARIA/Reference/Roles/navigation_role
 l10n:
-  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
+  sourceCommit: b126460df717d910e92f311f0603800987ecebee
 ---
 
 Le rôle `navigation` sert à identifier les principaux groupes de liens utilisés pour naviguer dans le contenu d'un site web ou d'une page.
@@ -20,7 +20,7 @@ Il s'agit de la navigation principale d'un site web.
 
 Le rôle `navigation` est un [rôle de repère](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#3._rôles_de_repères). Les rôles de repère permettent d'identifier l'organisation et la structure d'une page web. En classant et en étiquetant les sections d'une page, l'information structurelle transmise visuellement par la mise en page est aussi représentée de façon programmatique. Les lecteurs d'écran utilisent les rôles de repère pour permettre la navigation au clavier vers les sections importantes d'une page. Comme l'élément HTML {{HTMLElement("nav")}}, les repères de navigation permettent d'identifier des groupes (par exemple des listes) de liens destinés à la navigation dans le contenu d'un site ou d'une page. Si une page comporte plusieurs repères de navigation, chacun doit avoir un label unique. Si deux repères de navigation sur une même page contiennent le même ensemble de liens, utilisez le même label pour chacun.
 
-Il est préférable d'utiliser l'élément HTML [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav) pour définir un repère de navigation. Si l'élément nav n'est pas utilisé, ajoutez l'attribut `role="navigation"` pour définir un repère de navigation.
+Il est préférable d'utiliser l'élément HTML {{HTMLElement("nav")}} pour définir un repère de navigation. Si l'élément nav n'est pas utilisé, ajoutez l'attribut `role="navigation"` pour définir un repère de navigation.
 
 > [!NOTE]
 > L'utilisation de l'élément {{HTMLElement("nav")}} indique automatiquement qu'une section a le rôle `navigation`. Il est toujours préférable d'utiliser l'élément HTML sémantique approprié plutôt que d'ajouter ARIA.

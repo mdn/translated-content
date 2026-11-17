@@ -3,7 +3,7 @@ title: Firefox 20 note de version pour les développeurs
 short-title: Firefox 20
 slug: Mozilla/Firefox/Releases/20
 l10n:
-  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
+  sourceCommit: c61fd478259d34aa4fd6ac4cbf9b7d64a78aff43
 ---
 
 Firefox 20 est sorti le 2 avril 2013. Cette page résume les principaux changements dans Firefox 20 qui sont utiles aux développeur·euse·s.

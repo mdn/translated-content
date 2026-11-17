@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-details"
 short-title: aria-details
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-details
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 L'attribut global `aria-details` identifie l'élément (ou les éléments) qui fournissent des informations supplémentaires liées à l'objet.
@@ -16,20 +16,36 @@ D'autres propriétés HTML et WAI-ARIA ont des objectifs similaires. L'élément
 
 L'attribut `aria-details` a un objectif similaire à l'attribut HTML `longdesc` (jamais vraiment pris en charge), qui permettait de fournir une URL vers une longue description du contenu d'un élément remplacé, mais qui a été déprécié faute de support et à cause de mauvais usages.
 
-L'attribut `aria-details` prend comme valeur l'[`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id), ou une liste d'`id` séparés par des espaces, des éléments contenant les informations détaillées. Lorsqu'il est présent, les technologies d'assistance informent l'utilisateur·ice de la disponibilité d'informations étendues et permettent de naviguer vers le contenu référencé.
+L'attribut `aria-details` prend comme valeur un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id), ou une liste des `id` séparés par des espaces, des éléments contenant les informations détaillées. Lorsqu'il est présent, les technologies d'assistance informent l'utilisateur·ice de la disponibilité d'informations étendues et permettent de naviguer vers le contenu référencé.
 
-Les éléments référencés par `aria-details` sont censés contenir plus d'informations que ce qui serait normalement fourni via [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
+Les éléments référencés par `aria-details` sont censés contenir plus d'informations que ce qui est normalement fourni par [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
-Les éléments référencés par `aria-details` doivent être visibles pour tou·te·s les utilisateur·ice·s. `aria-details` informe les personnes qui ne pourraient pas repérer visuellement que du contenu explicatif est disponible.
+Les éléments référencés par `aria-details` doivent être visibles pour tou·te·s les utilisateur·ice·s. `aria-details` informe les personnes qui ne peuvent pas repérer visuellement que du contenu explicatif est disponible.
 
 > [!NOTE]
 > `aria-details` n'a aucun impact sur la description accessible.
 
-Contrairement à `aria-describedby`, les éléments référencés par `aria-details` ne sont pas utilisés dans la description accessible et ne sont pas transformés en simple chaîne de texte pour les technologies d'assistance. Si le contenu associé n'est pas trop long et que le transformer en texte simple ne fait pas perdre d'information, préférez `aria-describedby`. Il est toutefois valide qu'un élément ait à la fois `aria-details` et une description via `aria-describedby` ou `aria-description`.
+Contrairement à `aria-describedby`, les éléments référencés par `aria-details` ne sont pas utilisés dans la description accessible et ne sont pas transformés en simple chaîne de caractères de texte pour les technologies d'assistance. Si le contenu associé n'est pas trop long et que le transformer en texte simple ne fait pas perdre d'information, préférez `aria-describedby`. Il est toutefois valide qu'un élément ait à la fois `aria-details` et une description avec `aria-describedby` ou `aria-description`.
+
+## Valeurs
+
+- Liste de références d'ID
+  - : Un `id` ou une liste des `id` séparés par des espaces des éléments qui fournissent ou lient des informations supplémentaires.
+
+## Interfaces associées
+
+- {{DOMxRef("Element.ariaDetailsElements")}}
+  - : La propriété `ariaDetailsElements` fait partie de l'interface de chaque élément. Sa valeur est un tableau de sous-classes de {{DOMxRef("Element")}} qui reflètent les références d'un `id` dans l'attribut `aria-details` ([avec quelques particularités](/fr/docs/Web/API/Document_Object_Model/Reflected_attributes#références_déléments_reflétés)).
+- {{DOMxRef("ElementInternals.ariaDetailsElements")}}
+  - : La propriété `ariaDetailsElements` fait partie de l'interface de chaque élément personnalisé. Sa valeur est un tableau de sous-classes de {{DOMxRef("Element")}} qui reflètent les références d'un `id` dans l'attribut `aria-details` ([avec quelques particularités](/fr/docs/Web/API/Document_Object_Model/Reflected_attributes#références_déléments_reflétés)).
+
+## Rôles associés
+
+Utilisé dans **TOUS** les rôles.
 
 ## Exemple
 
-Pour les rôles de définition et de terme, `aria-details` serait ajouté sur l'élément [`term`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/term_role) avec l'`id` de l'élément ayant le rôle [`definition`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/definition_role).
+Pour les rôles de définition et de terme, `aria-details` est ajouté sur l'élément [`term`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/term_role) avec un `id` de l'élément ayant le rôle [`definition`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/definition_role).
 
 ```html
 <p>
@@ -58,22 +74,6 @@ Pour les rôles de définition et de terme, `aria-details` serait ajouté sur l'
     src="bezier.gif" />
 </a>
 ```
-
-## Valeurs
-
-- Liste de références d'ID
-  - : Un `id` ou une liste d'`id` séparés par des espaces des éléments qui fournissent ou lient des informations supplémentaires.
-
-## Interfaces associées
-
-- {{domxref("Element.ariaDetailsElements")}}
-  - : La propriété `ariaDetailsElements` fait partie de l'interface de chaque élément. Sa valeur est un tableau de sous-classes de {{domxref("Element")}} qui reflètent les références d'`id` dans l'attribut `aria-details` ([avec quelques particularités](/fr/docs/Web/API/Document_Object_Model/Reflected_attributes#références_déléments_reflétés)).
-- {{domxref("ElementInternals.ariaDetailsElements")}}
-  - : La propriété `ariaDetailsElements` fait partie de l'interface de chaque élément personnalisé. Sa valeur est un tableau de sous-classes de {{domxref("Element")}} qui reflètent les références d'`id` dans l'attribut `aria-details` ([avec quelques particularités](/fr/docs/Web/API/Document_Object_Model/Reflected_attributes#références_déléments_reflétés)).
-
-## Rôles associés
-
-Utilisé dans **TOUS** les rôles.
 
 ## Spécifications
 

@@ -3,22 +3,24 @@ title: Accessibilité et motifs spatiaux
 short-title: Motifs spatiaux
 slug: Web/Accessibility/Guides/Accessibility_and_Spatial_Patterns
 l10n:
-  sourceCommit: 30c9f71e6a6cac4d894688cabf7e4b50af87cfe5
+  sourceCommit: 19533e5be1416cc8f68f61810a74de5f4c665697
 ---
 
 Ce document décrit des motifs visuels pouvant provoquer des symptômes physiques chez les personnes atteintes d'épilepsie photosensible, de troubles vestibulaires ou d'autres troubles perceptifs.
 
 ## Localisation spatiale
 
-La NASA a mené des recherches sur la perception des couleurs et a constaté que le contraste de luminance joue un rôle majeur dans la façon dont les couleurs sont perçues. Les deux images ci-dessous proviennent de ces recherches, en particulier de l'article [«&nbsp;Designing With Blue&nbsp;» <sup>(angl.)</sup>](https://web.archive.org/web/20250216024807/https://colorusage.arc.nasa.gov/blue_2.php).
+La NASA a mené des recherches sur la perception des couleurs et a constaté que le contraste de luminance joue un rôle majeur dans la façon dont les couleurs sont perçues. Les deux images ci-dessous proviennent de ces recherches, en particulier de l'article [«&nbsp;Designing With Blue&nbsp;» <sup>(angl.)</sup>](https://web.archive.org/web/20250216024807/https://colorusage.arc.nasa.gov/blue_2.php). Ces images comparent la stabilité de la localisation spatiale du jaune et du rouge.
 
-![Comparaison de la stabilité de la localisation spatiale du jaune et du rouge. Les deux sont à peu près isoluminants avec leur fond. Le décalage et l'écart entre les barres chromatiques et les barres noires sont physiquement identiques pour le jaune et le rouge, mais beaucoup moins visibles pour le jaune.](yellow_edge_3.gif) ![Comparaison de la stabilité de la localisation spatiale du jaune et du rouge. Les deux sont à peu près isoluminants avec leur fond. Le décalage et l'écart entre les barres chromatiques et les barres noires sont physiquement identiques pour le jaune et le rouge, mais beaucoup moins visibles pour le jaune.](yellow_edge_4.gif)
+![Barres verticales jaunes et noires sur fond blanc.](yellow_edge_3.gif) ![Barres verticales rouges et noires sur fond gris.](yellow_edge_4.gif)
 
-> **Localisation spatiale.** Les symboles ayant la même luminance que leur fond sont perçus comme moins bien localisés dans l'espace et dans le temps que les symboles avec un contraste de luminance élevé. Ils ont tendance à «&nbsp;flotter&nbsp;» visuellement ou à être «&nbsp;capturés&nbsp;» par des symboles adjacents à fort contraste de luminance. Ce phénomène est particulièrement problématique pour les combinaisons symbole/fond qui ne diffèrent que dans le canal bleu.
+Les deux présentent une luminance approximativement égale à celle de leur arrière-plan. Le décalage et l'écart entre les barres chromatiques et les barres noires sont physiquement identiques pour le jaune et le rouge, mais beaucoup moins évidents visuellement pour le jaune. Comme le dit l'article&nbsp;:
+
+> Les symboles ayant la même luminance que leur fond sont perçus comme moins bien localisés dans l'espace et dans le temps que les symboles avec un contraste de luminance élevé. Ils ont tendance à «&nbsp;flotter&nbsp;» visuellement ou à être «&nbsp;capturés&nbsp;» par des symboles adjacents à fort contraste de luminance. Ce phénomène est particulièrement problématique pour les combinaisons symbole/fond qui ne diffèrent que dans le canal bleu.
 
 ## Distance entre les bandes
 
-Les crises photosensibles peuvent être déclenchées par des images statiques aussi bien que par des animations. Le mécanisme est mal compris, mais il serait lié à des «&nbsp;oscillations gamma&nbsp;» dans le cerveau, différentes des autres réponses neurologiques impliquées dans les crises photosensibles.
+Les crises photosensibles peuvent être déclenchées par des images statiques aussi bien que par des animations. Le mécanisme est mal compris, mais il est lié à des «&nbsp;oscillations gamma&nbsp;» dans le cerveau, différentes des autres réponses neurologiques impliquées dans les crises photosensibles.
 
 Les bandes et motifs sont typiques des images problématiques, et les bandes ont été particulièrement étudiées. Il existe un risque si l'image comporte plus de cinq paires clair/foncé, quelle que soit leur orientation (parallèles, radiales, courbes ou droites, ou formées par des éléments répétés).
 

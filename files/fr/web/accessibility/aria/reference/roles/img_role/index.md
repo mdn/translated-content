@@ -3,7 +3,7 @@ title: "ARIA : rôle img"
 short-title: img
 slug: Web/Accessibility/ARIA/Reference/Roles/img_role
 l10n:
-  sourceCommit: 1474534461893381d54c502e655f334b5568e597
+  sourceCommit: 370f1912b54d24bd7da541f8f2dd98c26d377121
 ---
 
 Le rôle `img` est utilisé pour identifier plusieurs éléments à l'intérieur du contenu de la page qui doivent être considérés comme une seule image. Ces éléments sont des images, des extraits de code, du texte, des emojis ou d'autres contenus qui peuvent être combinés pour transmettre des informations de manière visuelle.
@@ -133,3 +133,5 @@ Du point de vue de l'utilisateur·ice de la technologie d'assistance, le titre n
 - [ARIA&nbsp;: rôle `presentation`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role)
 - [Modèle d'Objet d'Accessibilité <sup>(angl.)</sup>](https://wicg.github.io/aom/spec/)
 - [L'ARIA dans le HTML <sup>(angl.)</sup>](https://w3c.github.io/html-aria/)
+- [ARIA&nbsp;: rôle `graphics-document`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-document_role)
+- [ARIA&nbsp;: rôle `graphics-symbol`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-symbol_role)

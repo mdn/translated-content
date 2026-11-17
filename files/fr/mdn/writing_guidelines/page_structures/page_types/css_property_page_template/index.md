@@ -2,7 +2,7 @@
 title: Modèle de page de propriété CSS
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
 l10n:
-  sourceCommit: 5c739c00c318740ed42a431b64867048c4fe449d
+  sourceCommit: 3809980a1bb9fb83d0442dd4bf1600c4f0aa184b
 ---
 
 > [!NOTE]
@@ -151,6 +151,10 @@ Si la propriété fait partie d'une propriété raccourcie, incluez des façons 
 La propriété `property-name`, ainsi que la propriété \{{CSSxRef("sibling-property")}}, peut également être définie en utilisant la propriété raccourcie \{{CSSxRef("shorthand-property")}}.
 ```
 
+## Accessibilité
+
+Cette section est optionnelle. Incluez des directives d'accessibilité, des bonnes pratiques et des préoccupations potentielles dont les développeur·euse·s doivent être conscients lors de l'utilisation de cette propriété. Vous pouvez également inclure des solutions de contournement ou des solutions lorsque c'est applicable.
+
 ## Définition formelle
 
 `\{{CSSInfo}}`
@@ -162,10 +166,6 @@ _Pour utiliser cette macro, supprimez les accents inversés et la barre oblique 
 `\{{CSSSyntax}}`
 
 _Pour utiliser cette macro, supprimez les accents inversés et la barre oblique inversée dans le fichier markdown._
-
-## Accessibilité
-
-Cette section est optionnelle. Incluez des directives d'accessibilité, des bonnes pratiques et des préoccupations potentielles dont les développeur·euse·s doivent être conscients lors de l'utilisation de cette propriété. Vous pouvez également inclure des solutions de contournement ou des solutions lorsque c'est applicable.
 
 ## Exemples
 

@@ -3,7 +3,7 @@ title: "ARIA : rôle region"
 short-title: region
 slug: Web/Accessibility/ARIA/Reference/Roles/region_role
 l10n:
-  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
+  sourceCommit: 05c1aed375bab88f322b15319e45fb326e4a341c
 ---
 
 Le rôle **`region`** sert à identifier les zones d'un document jugées importantes par l'auteur·ice. Il s'agit d'un repère générique permettant d'aider à la navigation lorsqu'aucun autre rôle de repère n'est approprié.
@@ -78,7 +78,7 @@ Dans cet exemple, le label de la région est généré par l'attribut [`aria-lab
 
 ### Zones de contenu défilantes avec texte débordant
 
-Si une zone de contenu possède `tabindex="0"`, ajoutez `role="region"` pour indiquer aux utilisateur·ice·s de lecteur d'écran qu'il s'agit d'une région générique. Cela permet aux utilisateur·ice·s clavier de faire défiler les régions avec du texte débordant.
+Une zone défilante peut nécessiter `tabindex="0"` pour permettre aux utilisateur·ice·s qui utilisent uniquement le clavier de la sélectionner et de la faire défiler. Cela ne transforme pas, à lui seul, la zone en repère. Réservez `role="region"` aux sections suffisamment importantes de la page pour que les utilisateur·ice·s puissent les retrouver à l'aide de la navigation par repères, et donnez à chacune de ces régions un nom accessible descriptif et unique (par exemple, avec `aria-labelledby`). Pour le contenu défilant ordinaire qui ne justifie pas un repère, consultez le [rôle `group`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role#zones_de_contenu_défilables).
 
 ### SVG
 

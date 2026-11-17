@@ -3,7 +3,7 @@ title: Firefox 22 note de version pour les développeurs
 short-title: Firefox 22
 slug: Mozilla/Firefox/Releases/22
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: b25798255cfb773885c94557b74179400ac7153d
 ---
 
 Firefox 22 a été publié le 25 juin 2013. Cet article répertorie les principaux changements qui sont utiles non seulement pour les développeur·euse·s web, mais aussi pour les développeur·euse·s Firefox et Gecko ainsi que pour les développeur·euse·s d'extensions.
@@ -19,7 +19,7 @@ Firefox 22 a été publié le 25 juin 2013. Cet article répertorie les principa
 
 ### JavaScript
 
-- Les optimisations [Asm.js <sup>(angl.)</sup>](https://asmjs.org/spec/latest/) sont activées, rendant possible la compilation d'applications C / C++ vers un sous-ensemble Javascript pour de meilleures performances.
+- Les optimisations [Asm.js <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Asm.js) sont activées, rendant possible la compilation d'applications C / C++ vers un sous-ensemble Javascript pour de meilleures performances.
 - La syntaxe ES6 [fonction fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) a été implémentée ([bogue Firefox 846406 <sup>(angl.)</sup>](https://bugzil.la/846406)).
 - La nouvelle fonction {{JSxRef("Object.is()")}} a été ajoutée ([bogue Firefox 839979 <sup>(angl.)</sup>](https://bugzil.la/839979)).
 - [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments) dans les expressions génératrices est maintenant hérité de la portée lexicale englobante ([bogue Firefox 848051 <sup>(angl.)</sup>](https://bugzil.la/848051)).

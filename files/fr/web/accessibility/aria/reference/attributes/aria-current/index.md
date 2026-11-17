@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-current"
 short-title: aria-current
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-current
 l10n:
-  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 L'attribut d'état `aria-current` non nul sur un élément indique que cet élément représente l'élément courant au sein d'un conteneur ou d'un ensemble d'éléments liés.
@@ -16,40 +16,12 @@ Dans une liste de fil d'Ariane, lorsqu'un lien parmi un ensemble de liens de pag
 
 L'attribut `aria-current` indique que l'élément sur lequel il est défini, avec une valeur différente de `false`, représente l'élément courant au sein d'un conteneur ou d'un ensemble d'éléments liés. Il ne faut marquer qu'un seul élément comme courant avec `aria-current` dans un même ensemble.
 
-L'attribut `aria-current` accepte une liste limitée de [valeurs](#valeurs) : `page`, `step`, `location`, `date`, `time`, `true` et `false`. Toute valeur de chaîne non nulle qui ne figure pas dans cette liste est traitée comme si `aria-current="true"` était défini, et non comme la valeur par défaut `false`. Si l'attribut n'est pas présent, est une chaîne vide, est présent sans valeur ou est défini sur `aria-current="false"`, il n'est pas exposé à l'utilisateur·ice.
+L'attribut `aria-current` accepte une liste limitée de [valeurs](#valeurs) : `page`, `step`, `location`, `date`, `time`, `true` et `false`. Toute valeur de chaîne de caractères non nulle qui ne figure pas dans cette liste est traitée comme si `aria-current="true"` était défini, et non comme la valeur par défaut `false`. Si l'attribut n'est pas présent, est une chaîne de caractères vide, est présent sans valeur ou est défini sur `aria-current="false"`, il n'est pas exposé à l'utilisateur·ice.
 
 Lorsque quelque chose est sélectionné plutôt que courant, comme un [`onglet`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) dans une [`liste d'onglets`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role), utilisez [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) pour indiquer le panneau d'onglet actuellement affiché.
 
 > [!NOTE]
 > N'utilisez pas `aria-current` à la place de [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) dans [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), [`option`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/option_role), [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) ou [`tab`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role).
-
-## Exemple
-
-Le fil d'Ariane pour la «&nbsp;page courante&nbsp;» doit avoir `aria-current="page"` défini dessus.
-
-```html
-<nav aria-label="Fil d'Ariane" class="breadcrumb">
-  <ol>
-    <li>
-      <a href="../../../../../">Technologies web pour les développeur·euse·s</a>
-    </li>
-    <li>
-      <a href="../../../../">Accessibilité</a>
-    </li>
-    <li>
-      <a href="../../../">ARIA</a>
-    </li>
-    <li>
-      <a href="../../">États et propriétés ARIA</a>
-    </li>
-    <li>
-      <a href="./" aria-current="page">ARIA&nbsp;: attribut `aria-current`</a>
-    </li>
-  </ol>
-</nav>
-```
-
-Si l'élément représentant la page courante dans le fil d'Ariane n'est pas un lien, l'attribut `aria-current` est optionnel.
 
 ## Valeurs
 
@@ -78,6 +50,34 @@ Si l'élément représentant la page courante dans le fil d'Ariane n'est pas un 
 ## Rôles associés
 
 Utilisable dans tous les rôles, sauf pour les éléments ayant le rôle [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), [`option`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/option_role), [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) ou [`tab`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role), où il faut utiliser [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected).
+
+## Exemple
+
+Le fil d'Ariane pour la «&nbsp;page courante&nbsp;» doit avoir `aria-current="page"` défini dessus.
+
+```html
+<nav aria-label="Fil d'Ariane" class="breadcrumb">
+  <ol>
+    <li>
+      <a href="../../../../../">Technologies web pour les développeur·euse·s</a>
+    </li>
+    <li>
+      <a href="../../../../">Accessibilité</a>
+    </li>
+    <li>
+      <a href="../../../">ARIA</a>
+    </li>
+    <li>
+      <a href="../../">États et propriétés ARIA</a>
+    </li>
+    <li>
+      <a href="./" aria-current="page">ARIA&nbsp;: attribut `aria-current`</a>
+    </li>
+  </ol>
+</nav>
+```
+
+Si l'élément représentant la page courante dans le fil d'Ariane n'est pas un lien, l'attribut `aria-current` est optionnel.
 
 ## Spécifications
 

@@ -3,7 +3,7 @@ title: Firefox 159 note de version pour les développeurs
 short-title: Firefox 159
 slug: Mozilla/Firefox/Releases/159
 l10n:
-  sourceCommit: 521fe7795f4dbfa723d800a94884d7608fa0e17e
+  sourceCommit: 4bf4746470a4d0bd53e4ae7d320849d0c912bb10
 ---
 
 Cet article présente les informations concernant les changements de Firefox 159 qui concernent les développeur·euse·s.
@@ -34,6 +34,8 @@ Pas de changements notables.
 - L'extension [WebGL](/fr/docs/Web/API/WebGL_API) {{DOMxRef("EXT_clip_control")}} est désormais disponible sur les appareils dont le pilote graphique la prend en charge. Sa méthode {{DOMxRef("EXT_clip_control.clipControlEXT()", "clipControlEXT()")}} modifie la manière dont les coordonnées de l'espace de découpe sont mappées aux coordonnées de la fenêtre&nbsp;: elle peut déplacer l'origine de découpe dans le coin supérieur gauche et définir la plage de profondeur dans les coordonnées normalisées de l'appareil de 0 à 1 au lieu de la plage par défaut de -1 à 1, conformément aux conventions de Direct3D et WebGPU. La plage de profondeur de 0 à 1 rend également efficace la technique du Z inversé, ce qui améliore la précision de la profondeur avec un tampon de profondeur en virgule flottante. ([bogue Firefox 1885031 <sup>(angl.)</sup>](https://bugzil.la/1885031)).
 - L'extension [WebGL](/fr/docs/Web/API/WebGL_API) {{DOMxRef("EXT_texture_mirror_clamp_to_edge")}} est désormais disponible sur les appareils dont le pilote graphique la prend en charge. Elle ajoute le mode d'enveloppement de texture `MIRROR_CLAMP_TO_EDGE_EXT`&nbsp;: les coordonnées de texture de -1 à 0 échantillonnent une image miroir de la texture, et les coordonnées inférieures à -1 ou supérieures à 1 se fixent à son bord. Cela permet de stocker une image symétrique, telle qu'une lueur, comme une texture ne contenant que la moitié de celle-ci. ([bogue Firefox 1908749 <sup>(angl.)</sup>](https://bugzil.la/1908749)).
 - L'extension [WebGL 2](/fr/docs/Web/API/WebGL2RenderingContext) {{DOMxRef("EXT_texture_norm16")}} est désormais activée par défaut sur les appareils dont le pilote graphique prend en charge les formats normalisés sur 16 bits. Elle ajoute des formats de texture et de tampon de rendu normalisés sur 16 bits, qui stockent des données telles que des cartes d'élévation et des images médicales avec plus de précision que les formats sur 8 bits. ([bogue Firefox 1735401 <sup>(angl.)</sup>](https://bugzil.la/1735401)).
+- {{DOMxRef("GPUDevice.limits")}} rapporte désormais les valeurs ajustées des limites `maxStorageBuffersInFragmentStage`, `maxStorageBuffersInVertexStage`, `maxStorageTexturesInFragmentStage` et `maxStorageTexturesInVertexStage`. Lors de la création d'un appareil, ces limites sont définies sur les valeurs des limites `maxStorageBuffersPerShaderStage` et `maxStorageTexturesPerShaderStage`, mais auparavant `GPUDevice.limits` rapportait les valeurs demandées.
+  ([bogue Firefox 2006720 <sup>(angl.)</sup>](https://bugzil.la/2006720)).
 
 #### DOM
 
