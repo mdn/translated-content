@@ -113,7 +113,7 @@ Même si ces outils sont essentiels en équipe, vous n'avez pas à vous en préo
 
 Une fois votre site ou application terminé·e (en local ou sur un serveur de développement), vous voulez le/la mettre en ligne sur un serveur web distant pour que vos utilisateur·ice·s puissent y accéder avec une adresse web&nbsp;!
 
-Il existe plusieurs façons de faire cela&nbsp;: acheter un hébergement et utiliser une [application SFTP](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server#sftp), utiliser un service comme [GitHub Pages](https://pages.github.com/) ou [Netlify](https://www.netlify.com/), ou encore partager rapidement une démonstration avec [CodePen](https://codepen.io/) ou [JSFiddle](https://jsfiddle.net/).
+Il existe plusieurs façons de faire cela&nbsp;: acheter un hébergement et utiliser une [application SFTP](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#sftp), utiliser un service comme [GitHub Pages](https://pages.github.com/) ou [Netlify](https://www.netlify.com/), ou encore partager rapidement une démonstration avec [CodePen](https://codepen.io/) ou [JSFiddle](https://jsfiddle.net/).
 
 Cette liste peut sembler impressionnante, mais ne vous inquiétez pas — vous n'avez pas besoin de tout savoir sur la publication de sites pour l'instant. Nous abordons ce sujet à plusieurs reprises dans le cours. Vous avez bientôt l'occasion de le pratiquer dans notre module [Votre premier site web](/fr/docs/Learn_web_development/Getting_started/Your_first_website).
 
