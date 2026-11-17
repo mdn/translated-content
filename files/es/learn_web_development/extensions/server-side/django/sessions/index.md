@@ -3,7 +3,7 @@ title: "Django Tutorial Parte 7: Framework de sesiones"
 short-title: "7: Framework de sesiones"
 slug: Learn_web_development/Extensions/Server-side/Django/Sessions
 l10n:
-  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
+  sourceCommit: d0d002817fbb057e80a4f7b8670b09cc80250516
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django/Authentication", "Learn_web_development/Extensions/Server-side/Django")}}
@@ -47,7 +47,7 @@ Django usa una cookie que contiene un _id de sesión_ especial para identificar 
 
 Las sesiones se habilitaron automáticamente cuando [creamos el sitio web esqueleto](/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) (en el tutorial 2).
 
-La configuración se establece en las secciones `INSTALLED_APPS` y `MIDDLEWARE` del archivo del proyecto (**django-locallibrary-tutorial/locallibrary/settings.py**), como se muestra a continuación:
+La configuración se establece en las secciones `INSTALLED_APPS` y `MIDDLEWARE` del archivo del proyecto (**/locallibrary/settings.py**), como se muestra a continuación:
 
 ```python
 INSTALLED_APPS = [
@@ -87,7 +87,7 @@ request.session['my_car'] = 'mini'
 del request.session['my_car']
 ```
 
-La API también ofrece otros métodos que se usan principalmente para gestionar la cookie de sesión asociada. Por ejemplo, hay métodos para comprobar que las cookies son compatibles en el navegador del cliente, para establecer y comprobar las fechas de expiración de las cookies, y para eliminar sesiones expiradas del almacén de datos. Puedes conocer la API completa en [How to use sessions](https://docs.djangoproject.com/en/5.0/topics/http/sessions/) (documentación de Django).
+La API también ofrece otros métodos que se usan principalmente para gestionar la cookie de sesión asociada. Por ejemplo, hay métodos para comprobar que las cookies son compatibles en el navegador del cliente, para establecer y comprobar las fechas de expiración de las cookies, y para eliminar sesiones expiradas del almacén de datos. Puedes conocer la API completa en [How to use sessions](https://docs.djangoproject.com/en/6.1/topics/http/sessions/) (documentación de Django).
 
 ## Guardar datos de sesión
 
@@ -109,13 +109,13 @@ request.session.modified = True
 ```
 
 > [!NOTE]
-> Puedes cambiar este comportamiento para que el sitio actualice la base de datos/envíe la cookie en cada solicitud, agregando `SESSION_SAVE_EVERY_REQUEST = True` en la configuración de tu proyecto (**django-locallibrary-tutorial/locallibrary/settings.py**).
+> Puedes cambiar este comportamiento para que el sitio actualice la base de datos/envíe la cookie en cada solicitud, agregando `SESSION_SAVE_EVERY_REQUEST = True` en la configuración de tu proyecto (**/locallibrary/settings.py**).
 
 ## Ejemplo simple: obtener el conteo de visitas
 
 Como ejemplo simple del mundo real, actualizaremos nuestra biblioteca para indicarle al usuario actual cuántas veces ha visitado la página de inicio de _LocalLibrary_.
 
-Abre **/django-locallibrary-tutorial/catalog/views.py**, y agrega las líneas que contienen `num_visits` en `index()` (como se muestra a continuación).
+Abre **/catalog/views.py**, y agrega las líneas que contienen `num_visits` en `index()` (como se muestra a continuación).
 
 ```python
 def index(request):
@@ -143,9 +143,9 @@ def index(request):
 Aquí primero obtenemos el valor de la clave de sesión `'num_visits'`, estableciendo el valor en 0 si no se ha establecido previamente. Cada vez que se recibe una solicitud, incrementamos el valor y lo guardamos de nuevo en la sesión (para la próxima vez que el usuario visite la página). Luego, la variable `num_visits` se pasa a la plantilla en nuestra variable de contexto.
 
 > [!NOTE]
-> Aquí también podríamos comprobar si el navegador admite cookies (consulta [How to use sessions](https://docs.djangoproject.com/en/5.0/topics/http/sessions/) para ver ejemplos), o diseñar nuestra interfaz de modo que no importe si las cookies son compatibles o no.
+> Aquí también podríamos comprobar si el navegador admite cookies (consulta [How to use sessions](https://docs.djangoproject.com/en/6.1/topics/http/sessions/) para ver ejemplos), o diseñar nuestra interfaz de modo que no importe si las cookies son compatibles o no.
 
-Agrega la línea que se muestra al final del siguiente bloque a tu plantilla HTML principal (**/django-locallibrary-tutorial/catalog/templates/index.html**), al final de la sección "Contenido dinámico", para mostrar la variable de contexto `num_visits`.
+Agrega la línea que se muestra al final del siguiente bloque a tu plantilla HTML principal (**/catalog/templates/index.html**), al final de la sección "Contenido dinámico", para mostrar la variable de contexto `num_visits`.
 
 ```django
 <h2>Contenido dinámico</h2>
@@ -163,9 +163,9 @@ Agrega la línea que se muestra al final del siguiente bloque a tu plantilla HTM
 </p>
 ```
 
-Ten en cuenta que usamos la etiqueta de plantilla integrada de Django [pluralize](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#pluralize) para elegir entre «ve**z**» y «ve**ces**» según el número de visitas. A diferencia del inglés, donde basta con agregar una "s", en español hay que indicarle las dos formas: `pluralize:"z,ces"`.
+Ten en cuenta que usamos la etiqueta de plantilla integrada de Django [pluralize](https://docs.djangoproject.com/en/6.1/ref/templates/builtins/#pluralize) para elegir entre «ve**z**» y «ve**ces**» según el número de visitas. A diferencia del inglés, donde basta con agregar una "s", en español hay que indicarle las dos formas: `pluralize:"z,ces"`.
 
-Guarda tus cambios y reinicia el servidor de pruebas. Cada vez que recargues la página, el número debería actualizarse.
+Guarda tus cambios y recarga la página de inicio. El número debería aumentar cada vez.
 
 ## Resumen
 
@@ -175,6 +175,6 @@ En nuestros próximos artículos explicaremos el framework de autenticación y a
 
 ## Véase también
 
-- [How to use sessions](https://docs.djangoproject.com/en/5.0/topics/http/sessions/) (documentación de Django)
+- [How to use sessions](https://docs.djangoproject.com/en/6.1/topics/http/sessions/) (documentación de Django)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django/Authentication", "Learn_web_development/Extensions/Server-side/Django")}}
