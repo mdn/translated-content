@@ -3,19 +3,18 @@ title: "HTMLElement: draggable プロパティ"
 short-title: draggable
 slug: Web/API/HTMLElement/draggable
 l10n:
-  sourceCommit: 71790d0ff0ecd94a2d734f81d98a3317b61aa468
+  sourceCommit: f2dc3d5367203c860cf1a71ce0e972f018523849
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
-**`draggable`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、要素がドラッグ可能かどうかを示す論理値プリミティブを取得または設定します。
+**`draggable`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、要素がドラッグ可能かどうかを示す論理値 ({{jsxref("Boolean")}}) を取得または設定します。
 
-これは、dragableHTML グローバル属性の値を反映します。
-It reflects the value of the [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) HTML global attribute.
+これは、[`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) グローバル属性の値を反映します。
 
 ## 値
 
-論理値プリミティブで、要素がドラッグ可能であれば `true`、そうでなければ `false` です。
+論理値で、要素がドラッグ可能であれば `true`、そうでなければ `false` です。
 
 ## 例
 
@@ -26,14 +25,10 @@ const draggableElement = document.querySelector(".draggable-element");
 const notDraggableElement = document.querySelector(".not-draggable-element");
 
 // 対象とする要素のドラッグ機能を有効にする
-if (!draggableElement.draggable) {
-  draggableElement.draggable = true;
-}
+draggableElement.draggable = true;
 
 // 対象とする要素のドラッグ機能を無効にする
-if (notDraggableElement.draggable) {
-  notDraggableElement.draggable = false;
-}
+notDraggableElement.draggable = false;
 ```
 
 ## 仕様書
