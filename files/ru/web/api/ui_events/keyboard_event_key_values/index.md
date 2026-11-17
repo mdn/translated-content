@@ -1674,8 +1674,8 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
 | `GDK_KEY_dead_cedilla` (0xFE5B) `Qt::Key_Dead_Cedilla` (0x0100125B)                   | ¸      |                                                           |
 | `GDK_KEY_dead_ogonek` (0xFE5C) `Qt::Key_Dead_Ogonek` (0x0100125C)                     | ˛      | Also called a nosinė; used in Polish and Old Irish.       |
 | `GDK_KEY_dead_iota` (0xFE5D) `Qt::Key_Dead_Iota` (0x0100125D)                         | ͅ       | Iota subscript.                                           |
-| `GDK_KEY_dead_voiced_sound` (0xFE5E) `Qt::Key_Dead_Voiced_Sound` (0x0100125E)         | ゙     |                                                           |
-| `GDK_KEY_dead_semivoiced_sound` (0xFE5F) `Qt::Key_Dead_Semivoiced_Sound` (0x0100125F) | ゚     |                                                           |
+| `GDK_KEY_dead_voiced_sound` (0xFE5E) `Qt::Key_Dead_Voiced_Sound` (0x0100125E)         | ゙       |                                                           |
+| `GDK_KEY_dead_semivoiced_sound` (0xFE5F) `Qt::Key_Dead_Semivoiced_Sound` (0x0100125F) | ゚       |                                                           |
 | `GDK_KEY_dead_belowdot` (0xFE60) `Qt::Key_Dead_Belowdot` (0x01001260)                 | ̣̣       |                                                           |
 | `GDK_KEY_dead_hook` (0xFE61) `Qt::Key_Dead_Hook` (0x01001261)                         | ̡       |                                                           |
 | `GDK_KEY_dead_horn` (0xFE62) `Qt::Key_Dead_Horn` (0x01001262)                         | ̛       |                                                           |
