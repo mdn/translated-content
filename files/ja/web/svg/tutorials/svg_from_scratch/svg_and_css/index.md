@@ -1,9 +1,8 @@
 ---
 title: SVG と CSS
 slug: Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS
-original_slug: Web/SVG/Tutorial/SVG_and_CSS
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: a988fe7e721539634bad936da7259ffbad37d0e5
 ---
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG") }}
@@ -24,8 +23,7 @@ l10n:
   width="600px"
   height="600px"
   viewBox="-300 -300 600 600"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="http://www.w3.org/2000/svg">
   <link
     xmlns="http://www.w3.org/1999/xhtml"
     rel="stylesheet"
@@ -413,11 +411,28 @@ SVG 対応のブラウザーで `doc8.svg` 文書を開いてください。マ�
 
 外側の花びらが動作する方法は変えずに、内側の花びらのどれかにマウスポインターが重なったときに内側の花びらがすべてピンクになるようにスタイルシートを変更しましょう。
 
-[この練習の解答を見る](/ja/docs/Learn_web_development/Core#svg_and_css)
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
+
+特定の花びらに対する `:hover` 擬似クラスの指定を、すべての花びらに対する指定に移動します。
+
+```css
+#inner-petals {
+  --segment-fill-fill-hover: pink;
+}
+
+/* 一部の古いブラウザー向けの標準的でない方法 */
+#inner-petals:hover .segment-fill {
+  fill: pink;
+  stroke: none;
+}
+```
+
+</details>
 
 ## 構造の簡略化
 
-上に示した SVG 構造は、 {{SVGElement("use")}} 要素を介して花の各部分を参照することで、より簡潔に書くことができます。この[動作は標準化されています](https://svgwg.org/svg2-draft/struct.html#UseStyleInheritance)が、今のところ `<use>` 要素で参照される要素に対して {{cssxref(":hover")}} 擬似クラスと他の複雑な CSS セレクターに対応しているブラウザーはいくつかしかありません。[このような参照する要素にどのようなルールが適用されるかについての課題](https://github.com/w3c/svgwg/issues/504)があります。
+上に示した SVG 構造は、 {{SVGElement("use")}} 要素を介して花の各部分を参照することで、より簡潔に書くことができます。この[動作は標準化されています](https://w3c.github.io/svgwg/svg2-draft/struct.html#UseStyleInheritance)が、今のところ `<use>` 要素で参照される要素に対して {{cssxref(":hover")}} 擬似クラスと他の複雑な CSS セレクターに対応しているブラウザーはいくつかしかありません。[このような参照する要素にどのようなルールが適用されるかについての課題](https://github.com/w3c/svgwg/issues/504)があります。
 
 そのときの構造は下記をご覧ください。
 
@@ -426,8 +441,7 @@ SVG 対応のブラウザーで `doc8.svg` 文書を開いてください。マ�
   width="600px"
   height="600px"
   viewBox="-300 -300 600 600"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="http://www.w3.org/2000/svg">
   <link
     xmlns="http://www.w3.org/1999/xhtml"
     rel="stylesheet"

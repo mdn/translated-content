@@ -1,9 +1,9 @@
 ---
-title: "`clip-path` プロパティ (CSS)"
+title: "`clip-path` プロパティ"
 short-title: clip-path
 slug: Web/CSS/Reference/Properties/clip-path
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 **`clip-path`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のどの部分を表示するかを設定するクリッピング領域を作ります。具体的には、領域の内部の部分は表示され、外側の部分は非表示になります。
@@ -388,7 +388,7 @@ function log(text) {
 
 #### 結果
 
-{{EmbedLiveSample("Complete_example", 230, 300)}}
+{{EmbedLiveSample("the_various_value_types", 230, 300)}}
 
 `clip-path` の値を変更するには、別のオプションを選択してください。
 

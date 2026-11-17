@@ -1,28 +1,14 @@
 ---
-title: "`stroke-miterlimit` プロパティ (CSS)"
+title: "`stroke-miterlimit` プロパティ"
 short-title: stroke-miterlimit
 slug: Web/CSS/Reference/Properties/stroke-miterlimit
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c4e64810ce10fb5cb1eebfcd8b6f526866fd0982
 ---
 
 **`stroke-miterlimit`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[SVG](/ja/docs/Web/SVG) 要素のストロークパスの角に使用される形状がマイター接合である場合、マイター長と {{CSSxref("stroke-width") }} の比率に対する制限を定義します。このプロパティで定義された制限値を超えると、接合方法が `miter` から `bevel` に変換され、角が切り取られるようになります。
 
 このプロパティは、SVG の角を生成する図形やテキストコンテンツ要素（完全な一覧は {{SVGAttr("stroke-miterlimit")}} を参照）に適用されますが、継承プロパティであるため、{{SVGElement("g")}} などの要素に適用された場合、子孫要素のストロークにも意図した効果が及びます。これが存在する場合、その要素の {{SVGAttr("stroke-miterlimit")}} 属性を上書きします。
-
-## 解説
-
-2 本の線分が鋭角で交差し、`miter` 接合が {{ CSSxref("stroke-linejoin") }} に対して指定されている場合、またはデフォルトでその値が適用されている場合、接合部がパスを描く線の太さを大幅に超えて突出することがあります。`stroke-miterlimit` の比率は、この突出量の上限を定義するために使用され、この上限を超えると接合部はマイターから面取りに変更されます。
-
-マイター長（外側の先端とマイターの内側の角の間の距離）と {{ CSSxref("stroke-width") }} の比率は、ユーザー空間における線分同士の角度 (θ) と次の式で直接関連しています。
-
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mstyle displaystyle="true"><mi>stroke-miterlimit</mi><mo>=</mo><mfrac><mrow><mi>miterLength</mi></mrow><mrow><mi>stroke-width</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mrow><mi>sin</mi><mrow><mo>(</mo><mfrac><mrow><mo>θ</mo></mrow><mrow><mn>2</mn></mrow></mfrac><mo>)</mo></mrow></mrow></mrow></mfrac></mstyle><annotation encoding="TeX">\text{stroke-miterlimit} = \frac{\text{miterLength}}{\text{stroke-width}} = \frac{1}{\sin\left(\frac{\theta}{2}\right)}</annotation></semantics>
-</math>
-<!-- prettier-ignore-end -->
-
-例えば、`1.414` をマイター制限値に設定すると、θ 値が 90 度未満の場合にマイターを面取りに変更します。`4.0` を制限値に設定すると、θ 値が約 29 度未満の場合に変更し、`10.0` を制限値に設定すると、θ 値が約 11.5 度未満の場合に変更します。
 
 ## 構文
 
@@ -43,6 +29,20 @@ stroke-miterlimit: unset;
 
 - {{cssxref("&lt;number&gt;")}}
   - : `1` 以上である任意の実数。それより小さい値は無効です。初期値は `4` です。
+
+## 解説
+
+2 本の線分が鋭角で交差し、`miter` 接合が {{ CSSxref("stroke-linejoin") }} に対して指定されている場合、またはデフォルトでその値が適用されている場合、接合部がパスを描く線の太さを大幅に超えて突出することがあります。`stroke-miterlimit` の比率は、この突出量の上限を定義するために使用され、この上限を超えると接合部はマイターから面取りに変更されます。
+
+マイター長（外側の先端とマイターの内側の角の間の距離）と {{ CSSxref("stroke-width") }} の比率は、ユーザー空間における線分同士の角度 (θ) と次の式で直接関連しています。
+
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mstyle displaystyle="true"><mi>stroke-miterlimit</mi><mo>=</mo><mfrac><mrow><mi>miterLength</mi></mrow><mrow><mi>stroke-width</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mrow><mi>sin</mi><mrow><mo>(</mo><mfrac><mrow><mo>θ</mo></mrow><mrow><mn>2</mn></mrow></mfrac><mo>)</mo></mrow></mrow></mrow></mfrac></mstyle><annotation encoding="TeX">\text{stroke-miterlimit} = \frac{\text{miterLength}}{\text{stroke-width}} = \frac{1}{\sin\left(\frac{\theta}{2}\right)}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
+
+例えば、`1.414` をマイター制限値に設定すると、θ 値が 90 度未満の場合にマイターを面取りに変更します。`4.0` を制限値に設定すると、θ 値が約 29 度未満の場合に変更し、`10.0` を制限値に設定すると、θ 値が約 11.5 度未満の場合に変更します。
 
 ## 公式定義
 

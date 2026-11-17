@@ -1,8 +1,9 @@
 ---
-title: tab-size
+title: "`tab-size` プロパティ"
+short-title: tab-size
 slug: Web/CSS/Reference/Properties/tab-size
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 CSS の **`tab-size`** プロパティは、タブ文字 (U+0009) の表示幅の指定に用います。
@@ -128,7 +129,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Comparing_to_the_default_size", "100%", "250")}}
+{{EmbedLiveSample("default_tab_size_vs_custom_sizes", "100%", "250")}}
 
 ## 仕様書
 
