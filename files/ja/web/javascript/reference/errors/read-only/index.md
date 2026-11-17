@@ -1,41 +1,40 @@
 ---
 title: 'TypeError: "x" is read-only'
 slug: Web/JavaScript/Reference/Errors/Read-only
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
-
-JavaScript の [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)のみの例外 "is read-only" は、代入されたグローバル変数またはオブジェクトプロパティが読み取り専用プロパティであった場合に発生します。
+JavaScript の [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ発生する "is read-only" 例外は、代入先のグローバル変数またはオブジェクトプロパティが読み取り専用プロパティの場合に発生します。
 
 ## エラーメッセージ
 
-```js
-TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
+```plain
+TypeError: Cannot assign to read only property 'x' of #<Object> (V8-based)
 TypeError: "x" is read-only (Firefox)
-TypeError: 0 is read-only (Firefox)
-TypeError: Cannot assign to read only property 'x' of #<Object> (Chrome)
-TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
+TypeError: Attempted to assign to readonly property. (Safari)
 ```
 
-## エラーの種類
+## エラー型
 
-{{jsxref("TypeError")}}
+{{jsxref("TypeError")}} です。[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ発生します。
 
 ## エラーの原因
 
-代入しようとしたグローバル変数、またはオブジェクトのプロパティが読み取り専用プロパティです。 (技術的には、 [non-writable データプロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#writable_attribute)です。)
+代入先のグローバル変数またはオブジェクトプロパティが読み取り専用プロパティです。
+技術的には、[書き込み不可のデータプロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#writable_attribute)です。
 
-このエラーは、 [strict モードのコード](/ja/docs/Web/JavaScript/Reference/Strict_mode)にだけ発生します。 strict コードではない場合、割り当ては無視されるだけです。</p>
+このエラーは、[厳格モードのコード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ発生します。厳格モードではないコードでは、代入は暗黙のうちに無視されます。
 
 ## 例
 
 ### 無効な場合
 
-<p>読み取り専用プロパティはさほど一般的ではありませんが、 {{jsxref("Object.defineProperty()")}}、または {{jsxref("Object.freeze()")}} を使用して生成することができます。</p>
+読み取り専用プロパティはあまり一般的ではありませんが、{{jsxref("Object.defineProperty()")}} または {{jsxref("Object.freeze()")}} を使用して作成できます。
 
 ```js example-bad
 "use strict";
-var obj = Object.freeze({ name: "Elsa", score: 157 });
+const obj = Object.freeze({ name: "Elsa", score: 157 });
 obj.score = 0; // TypeError
 
 ("use strict");
@@ -43,11 +42,11 @@ Object.defineProperty(this, "LUNG_COUNT", { value: 2, writable: false });
 LUNG_COUNT = 3; // TypeError
 
 ("use strict");
-var frozenArray = Object.freeze([0, 1, 2]);
+const frozenArray = Object.freeze([0, 1, 2]);
 frozenArray[0]++; // TypeError
 ```
 
-JavaScript の組み込みにも、いくつか読み取り専用プロパティがあります。数学的な定数を再定義しようとしたとします。
+JavaScript には読み取り専用の組み込みプロパティもいくつかあります。例えば、数学定数を再定義しようとした場合を考えてみてください。
 
 ```js example-bad
 "use strict";
@@ -56,7 +55,7 @@ Math.PI = 4; // TypeError
 
 残念ながらできません。
 
-グローバル変数の `undefined` も読み取り専用のため、このようにすると悪名高い "undefined is not a function" エラーが発生します。
+グローバル変数の `undefined` も読み取り専用なので、次のようにしても悪名高い "undefined is not a function" エラーを抑止することはできません。
 
 ```js example-bad
 "use strict";
@@ -67,12 +66,8 @@ undefined = function () {}; // TypeError: "undefined" is read-only
 
 ```js example-good
 "use strict";
-var obj = Object.freeze({ name: "Score", points: 157 });
-obj = { name: obj.name, points: 0 }; // 新しいオブジェクトで置き換える
-
-("use strict");
-var LUNG_COUNT = 2; // `var` が使われているので、読み取り専用ではない
-LUNG_COUNT = 3; // ok (解剖学的にはおかしいけれども)
+let obj = Object.freeze({ name: "Score", points: 157 });
+obj = { name: obj.name, points: 0 }; // 新しいオブジェクトで置き換えれば動作する
 ```
 
 ## 関連情報
