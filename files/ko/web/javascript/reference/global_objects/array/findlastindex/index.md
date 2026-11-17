@@ -3,7 +3,7 @@ title: Array.prototype.findLastIndex()
 short-title: findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 l10n:
-  sourceCommit: 57375b77984037c614982a9327bc96101824db89
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 {{JSRef}}
@@ -16,11 +16,11 @@ l10n:
 {{InteractiveExample("JavaScript Demo: Array.prototype.findLastIndex()", "shorter")}}
 
 ```js interactive-example
-const array1 = [5, 12, 50, 130, 44];
+const array = [5, 12, 50, 130, 44];
 
 const isLargeNumber = (element) => element > 45;
 
-console.log(array1.findLastIndex(isLargeNumber));
+console.log(array.findLastIndex(isLargeNumber));
 // Expected output: 3
 // Index of element with value: 130
 ```
@@ -52,7 +52,7 @@ findLastIndex(callbackFn, thisArg)
 
 ## 설명
 
-`findLastIndex()` 메서드는 [순회 가능 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)입니다. 이 메서드는 배열의 각 요소마다 제공된 `callbackFn` 함수를 역순으로 한 번씩 호출하며, `callbackFn`이 [참 같은 값](/ko/docs/Glossary/Truthy)을 반환할 때까지 반복합니다. 참 같은 값이 반환되면 `findLastIndex()`는 해당 요소의 인덱스를 반환하고 배열 순회를 중단합니다. 만약 `callbackFn`이 참 같은 값을 반환하지 않으면, `findLastIndex()`는 `-1`을 반환합니다.
+`findLastIndex()` 메서드는 [순회 가능 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)입니다. 이 메서드는 배열의 각 요소마다 제공된 `callbackFn` 함수를 역순으로 한 번씩 호출하며, `callbackFn`이 [참 같은 값](/ko/docs/Glossary/Truthy)을 반환할 때까지 반복합니다. 참 같은 값이 반환되면 `findLastIndex()`는 해당 요소의 인덱스를 반환하고 배열 순회를 중단합니다. 만약 `callbackFn`이 참 같은 값을 반환하지 않으면, `findLastIndex()`는 `-1`을 반환합니다. 보편적으로 이들 메서드가 동작하는 방법을 알고 싶으시다면 [순회 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods) 섹션을 읽어보시기 바랍니다.
 
 `callbackFn`는 배열의 모든 인덱스에 대해 호출됩니다. 할당된 값이 있는 인덱스뿐만 아니라 [희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)의 비어있는 슬롯도 `undefined`와 동일하게 동작합니다.
 
@@ -65,15 +65,15 @@ findLastIndex(callbackFn, thisArg)
 다음 예제는 배열에서 마지막으로 나오는 소수(prime number)의 인덱스를 반환하며, 소수가 없는 경우 `-1`을 반환합니다.
 
 ```js
-function isPrime(element) {
-  if (element < 2) {
+function isPrime(n) {
+  if (n < 2) {
     return false;
   }
-  if (element % 2 === 0) {
-    return element === 2;
+  if (n % 2 === 0) {
+    return n === 2;
   }
-  for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
-    if (element % factor === 0) {
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
@@ -83,6 +83,9 @@ function isPrime(element) {
 console.log([4, 6, 8, 12].findLastIndex(isPrime)); // -1, 찾을 수 없음
 console.log([4, 5, 7, 8, 9, 11, 12].findLastIndex(isPrime)); // 5
 ```
+
+> [!NOTE]
+> 이 `isPrime()` 구현은 설명을 위한 것입니다. 실제 애플리케이션에서는 반복 계산을 피하기 위해 [에라토스테네스의 체](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)와 같이 {{Glossary("Memoization", "메모이제이션")}}을 적극적으로 활용하는 알고리즘을 사용하는 것이 좋습니다.
 
 ### callbackFn의 세 번째 인수 사용하기
 
@@ -120,6 +123,7 @@ const arrayLike = {
   0: 2,
   1: 7.3,
   2: 4,
+  3: 3, // ignored by findLastIndex() since length is 3
 };
 console.log(
   Array.prototype.findLastIndex.call(arrayLike, (x) => Number.isInteger(x)),
@@ -136,7 +140,9 @@ console.log(
 
 ## 같이 보기
 
-- [`core-js`에서의 `Array.prototype.findIndex` 폴리필](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js`의 `Array.prototype.findLastIndex` 폴리필](https://core-js.io/docs/features/ecmascript/array)
+- [`Array.prototype.findLastIndex`의 es-shims 폴리필](https://www.npmjs.com/package/array.prototype.findlastindex)
+- [인덱스 기반 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections) 안내서
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.findIndex()")}}

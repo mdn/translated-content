@@ -1,15 +1,16 @@
 ---
 title: TypedArray.prototype.findLast()
+short-title: findLast()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findLast
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 {{JSRef}}
 
 {{jsxref("TypedArray")}} 인스턴스의 **`findLast()`** 메서드는 형식화 배열을 역순으로 순회하며 제공된 테스트 함수를 만족하는 첫 번째 요소의 값을 반환합니다. 테스트 함수를 만족하는 요소가 없으면 {{jsxref("undefined")}}가 반환됩니다. 이 메서드는 {{jsxref("Array.prototype.findLast()")}}와 같은 알고리즘을 가집니다.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.findLast()")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.findLast()")}}
 
 ```js interactive-example
 function isNegative(element /*, index, array */) {
@@ -18,7 +19,7 @@ function isNegative(element /*, index, array */) {
 
 const int8 = new Int8Array([10, 0, -10, 20, -30, 40, 50]);
 
-console.log(int8.find(isNegative));
+console.log(int8.findLast(isNegative));
 // Expected output: -30
 ```
 
@@ -57,15 +58,15 @@ findLast(callbackFn, thisArg)
 다음 예제는 형식화 배열의 마지막 요소 중 소수인 요소를 반환하거나, 소수가 없는 경우 {{jsxref("undefined")}}를 반환합니다.
 
 ```js
-function isPrime(element) {
-  if (element < 2) {
+function isPrime(n) {
+  if (n < 2) {
     return false;
   }
-  if (element % 2 === 0) {
-    return element === 2;
+  if (n % 2 === 0) {
+    return n === 2;
   }
-  for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
-    if (element % factor === 0) {
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
@@ -78,47 +79,8 @@ uint8 = new Uint8Array([4, 5, 7, 8, 9, 11, 12]);
 console.log(uint8.findLast(isPrime)); // 11
 ```
 
-### 콜백이 모든 요소를 방문했으며 변경되었을 수 있습니다
-
-다음 예제는 모든 요소가 방문되었으며 콜백에 전달된 값이 방문 시 해당 요소의 값임을 보여줍니다.
-
-```js
-// 인덱스 2,3,4에는 요소가 없는 배열을 선언합니다
-// 누락된 요소는 0으로 초기화 됩니다.
-const uint8 = new Uint8Array([0, 1, , , , 5, 6]);
-
-// 역순으로 요소를 순회합니다.
-// 모든 요소를 방문하는 점을 유의하시기 바랍니다.
-uint8.findLast((value, index) => {
-  console.log(`Visited index ${index} with value ${value}`);
-});
-
-// 삭제된 것을 포함한 모든 인덱스를 보여줍니다
-uint8.findLast((value, index) => {
-  // 첫 순회때 요소 3을 수정합니다
-  if (index === 6) {
-    console.log("Set uint8[3] to 44");
-    uint8[3] = 44;
-  }
-  // 요소 3은 여전히 방문하지만 새로운 값을 가집니다
-  console.log(`Visited index ${index} with value ${value}`);
-});
-// Visited index 6 with value 6
-// Visited index 5 with value 5
-// Visited index 4 with value 0
-// Visited index 3 with value 0
-// Visited index 2 with value 0
-// Visited index 1 with value 1
-// Visited index 0 with value 0
-// Set uint8[3] to 44
-// Visited index 6 with value 6
-// Visited index 5 with value 5
-// Visited index 4 with value 0
-// Visited index 3 with value 44
-// Visited index 2 with value 0
-// Visited index 1 with value 1
-// Visited index 0 with value 0
-```
+> [!NOTE]
+> 이 `isPrime()` 구현은 설명을 위한 것입니다. 실제 애플리케이션에서는 반복 계산을 피하기 위해 [에라토스테네스의 체](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)와 같이 {{Glossary("Memoization", "메모이제이션")}}을 적극적으로 활용하는 알고리즘을 사용하는 것이 좋습니다.
 
 ## 명세서
 
@@ -130,7 +92,7 @@ uint8.findLast((value, index) => {
 
 ## 같이 보기
 
-- [`core-js`에서 `TypedArray.prototype.findLast` 폴리필](https://github.com/zloirock/core-js#array-find-from-last)
+- [`core-js`에서 `TypedArray.prototype.findLast` 폴리필](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 안내서
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.find()")}}
