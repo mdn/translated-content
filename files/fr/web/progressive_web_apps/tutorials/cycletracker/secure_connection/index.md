@@ -75,7 +75,7 @@ Les options précédentes sont acceptables et nécessaires pour tester une appli
 
 Pour bénéficier des fonctionnalités propres aux PWA comme l'installation rapide, une interface utilisateur dédiée et une éventuelle publication sur un magasin d'application, l'application doit être une PWA, ce qui signifie qu'elle doit utiliser un <i lang="en">service worker</i>, ce qui implique d'utiliser une connexion sécurisée. Pour distribuer votre application et permettre à d'autres de la voir, de l'utiliser et de l'installer, vous aurez besoin que votre contenu soit hébergé et disponible sur un serveur _distant_.
 
-Pour publier officiellement une PWA, vous souhaiterez peut-être investir dans [un nom de domaine et un hébergement web](/fr/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#hébergement). Pour les projets <i lang="en">open source</i>, où le code est disponible publiquement pour que toutes et tous puissent l'étudier et y contribuer, vous pouvez héberger votre projet sur [GitHub Pages](https://pages.github.com/).
+Pour publier officiellement une PWA, vous souhaiterez peut-être investir dans [un nom de domaine et un hébergement web](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#hébergement). Pour les projets <i lang="en">open source</i>, où le code est disponible publiquement pour que toutes et tous puissent l'étudier et y contribuer, vous pouvez héberger votre projet sur [GitHub Pages](https://pages.github.com/).
 
 ## GitHub Pages
 
