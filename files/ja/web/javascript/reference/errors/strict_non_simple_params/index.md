@@ -1,51 +1,51 @@
 ---
 title: 'SyntaxError: "use strict" not allowed in function with non-simple parameters'
 slug: Web/JavaScript/Reference/Errors/Strict_non_simple_params
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
+JavaScript の例外 "`"use strict"` not allowed in function" は、{{jsxref("Functions/Default_parameters", "デフォルト引数", "", 1)}}、{{jsxref("Functions/rest_parameters", "残余引数", "", 1)}}、{{jsxref("Operators/Destructuring", "構造分解引数", "", 1)}}を持つ関数の先頭で `"use strict"` ディレクティブを使用したときに発生します。
 
-## メッセージ
+## エラーメッセージ
 
-```
-Firefox:
-SyntaxError: "use strict" not allowed in function with default parameter
-SyntaxError: "use strict" not allowed in function with rest parameter
-SyntaxError: "use strict" not allowed in function with destructuring parameter
-
-Chrome:
-SyntaxError: Illegal 'use strict' directive in function with non-simple parameter list
+```plain
+SyntaxError: Illegal 'use strict' directive in function with non-simple parameter list (V8-based)
+SyntaxError: "use strict" not allowed in function with default parameter (Firefox)
+SyntaxError: "use strict" not allowed in function with rest parameter (Firefox)
+SyntaxError: "use strict" not allowed in function with destructuring parameter (Firefox)
+SyntaxError: 'use strict' directive not allowed inside a function with a non-simple parameter list. (Safari)
 ```
 
-## エラーの種類
+## エラー型
 
 {{jsxref("SyntaxError")}}。
 
 ## 何がうまくいかなかったのか？
 
-次の引数のうちいずれかを持つ関数の先頭に `"use strict"` ディレクティブが書かれています:
+次の引数のいずれかを持つ関数の先頭に `"use strict"` ディレクティブが書かれています。
 
-- {{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}
-- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}
-- {{jsxref("Operators/Destructuring", "Destructuring parameters", "", 1)}}
+- {{jsxref("Functions/Default_parameters", "デフォルト引数", "", 1)}}
+- {{jsxref("Functions/rest_parameters", "残余引数", "", 1)}}
+- {{jsxref("Operators/Destructuring", "構造分解引数", "", 1)}}
 
-ECMAScript 仕様に則って、このような関数の先頭では `"use strict"` を使用できません。
+ECMAScript 仕様では、このような関数の先頭に `"use strict"` を使用することは許可されていません。
 
 ## 例
 
-### Function ステートメント
+### 関数宣言
 
-このケースでは、関数 `sum` は既定値を持つ引数 `a=1` と `b=2` を持っています:
+この例では、関数 `sum` はデフォルト引数 `a=1` と `b=2` を持っています。
 
-```js example-bad
-function sum(a=1, b=2) {
+```js-nolint example-bad
+function sum(a = 1, b = 2) {
   // SyntaxError: "use strict" not allowed in function with default parameter
   "use strict";
   return a + b;
 }
 ```
 
-関数を [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)にしたい、かつスクリプト全体、またはエンクロージャー関数が strict モードになってもよいなら、`"use strict"` ディレクティブを関数の外側に移動できます:
+関数を[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)にしたく、スクリプト全体または外側の関数も厳格モードになってよい場合は、`"use strict"` ディレクティブを関数の外側に移動できます。
 
 ```js example-good
 "use strict";
@@ -54,22 +54,22 @@ function sum(a = 1, b = 2) {
 }
 ```
 
-### Function 式
+### 関数式
 
-function 式では、別の回避策をとることができます:
+関数式では、別の回避策を使えます。
 
-```js example-bad
-var sum = function sum([a, b]) {
+```js-nolint example-bad
+const sum = function sum([a, b]) {
   // SyntaxError: "use strict" not allowed in function with destructuring parameter
   "use strict";
   return a + b;
 };
 ```
 
-これは、次の式に変換できます:
+これは、次の式に変換できます。
 
 ```js example-good
-var sum = (function () {
+const sum = (function () {
   "use strict";
   return function sum([a, b]) {
     return a + b;
@@ -79,32 +79,30 @@ var sum = (function () {
 
 ### アロー関数
 
-アロー関数が `this` 変数にアクセスする必要がある場合、アロー関数をエンクロージャー関数として使用できます:
+アロー関数が `this` 変数にアクセスする必要がある場合、アロー関数を外側の関数として使用できます。
 
-```js example-bad
-var callback = (...args) => {
+```js-nolint example-bad
+const callback = (...args) => {
   // SyntaxError: "use strict" not allowed in function with rest parameter
   "use strict";
   return this.run(args);
 };
 ```
 
-これは、次の式に変換できます:
+これは、次の式に変換できます。
 
 ```js example-good
-var callback = (() => {
+const callback = (() => {
   "use strict";
-  return (...args) => {
-    return this.run(args);
-  };
+  return (...args) => this.run(args);
 })();
 ```
 
 ## 関連情報
 
-- {{jsxref("Strict_mode", "Strict mode", "", 1)}}
-- {{jsxref("Statements/function", "function statement", "", 1)}}
-- {{jsxref("Operators/function", "function expression", "", 1)}}
-- {{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}
-- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}
-- {{jsxref("Operators/Destructuring", "Destructuring parameters", "", 1)}}
+- {{jsxref("Strict_mode", "厳格モード", "", 1)}}
+- {{jsxref("Statements/function", "関数宣言", "", 1)}}
+- {{jsxref("Operators/function", "関数式", "", 1)}}
+- {{jsxref("Functions/Default_parameters", "デフォルト引数", "", 1)}}
+- {{jsxref("Functions/rest_parameters", "残余引数", "", 1)}}
+- {{jsxref("Operators/Destructuring", "構造分解引数", "", 1)}}
