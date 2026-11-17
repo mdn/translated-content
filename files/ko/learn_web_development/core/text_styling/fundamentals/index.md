@@ -612,7 +612,7 @@ p {
 
 ## 글꼴 약식 (shorthand)
 
-많은 글꼴 속성은 단축 속성 {{cssxref("font")}}을 통해 설정할 수도 있습니다. 이들은 다음 순서로 작성됩니다: {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}}) 및 {{cssxref("font-family")}}입니다.
+많은 글꼴 속성은 단축 속성 {{cssxref("font")}}을 통해 설정할 수도 있습니다. 이들은 다음 순서로 작성됩니다: {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}} 및 {{cssxref("font-family")}}입니다.
 
 이러한 모든 속성 중 `font` 속기 속성을 사용할 때 `font-size` 및 `font-family`만 필요합니다.
 
