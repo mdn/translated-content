@@ -3,38 +3,36 @@ title: "HTMLElement: dir プロパティ"
 short-title: dir
 slug: Web/API/HTMLElement/dir
 l10n:
-  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{ApiRef("HTML DOM")}}
 
-**`HTMLElement.dir`** プロパティは、現在の要素のコンテンツのテキストを書く書字方向を取得または設定します。
+**`HTMLElement.dir`** プロパティは、現在の要素のコンテンツの書字方向を示します。このプロパティは、要素の [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) 属性を反映します。
 
-要素のテキストを書く書字方向 (text writing directionality) は、テキストが向かう方向です（様々な言語体系に対応するため）。アラビア語とヘブライ語は、 RTL 書字方向を使用する典型的な言語です。
+なお、`dir` 属性が指定されていない場合でも、要素自体は親要素から書字方向を継承することがあります。ただし、この継承された書字方向は、このプロパティの値には反映されません。
 
-画像の `dir` プロパティを "`rtl`" に設定できます。 この場合、 HTML 属性の `title` と `alt` は、 "`rtl`" としてフォーマットされ、定義されます。
-
-表の `dir` が "`rtl`" に設定されている場合、列の順序は右から左に配置されます。
-
-要素の `dir` が "`auto`" に設定されている場合、要素の方向は、最初の強い書字方向文字 (strong directionality character)、または既定では親要素の書字方向に基づいて決定されます。
-
-> [!NOTE]
-> ブラウザーは、コンテンツの作成を支援するために、ユーザーが {{ HTMLElement("input") }} と {{ HTMLElement("textarea") }} の書字方向を変更することを許可する場合があります。 Chrome と Safari は入力フィールドのコンテキストメニューで書字方向のオプションを提供しており、 Chromium になる前の Edge は <kbd>Ctrl</kbd> + <kbd>左 Shift</kbd> と <kbd>Ctrl</kbd> + <kbd>右 Shift</kbd> のキーバインドを使用しています。 Firefox は <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> を使用しますが、 **`dir`** 属性の値は更新しません。
+要素のテキストの書字方向とは、テキストがどちらの方向へ進むかを示すものです（さまざまな言語体系に対応するため）。アラビア語やヘブライ語は、右書きの書字方向を使用する代表的な言語です。
 
 ## 値
 
-以下のうちの何れかです。
+次のいずれかです。
 
-- `ltr`: 左書き（左から右へ）
-- `rtl`: 右書き（右から左へ）
-- `auto`: 要素の内容に基づいて方向を決定しなければならないことを指定するためのものです。
+- `"ltr"`
+  - : 左書き
+- `"rtl"`
+  - : 右書き
+- `"auto"`
+  - : 要素の書字方向は、その内容に基づいて決定されます。
+- `""`
+  - : デフォルト値です。親要素から書字方向を継承します。
 
 ## 例
 
 ```js
-const parg = document.getElementById("para1");
-parg.dir = "rtl";
-// "para1" として識別される段落のテキストの方向を変更します
+const para = document.getElementById("para1");
+para.dir = "rtl";
+// "para1" で識別される段落の書字方向を変更
 ```
 
 ## 仕様書
