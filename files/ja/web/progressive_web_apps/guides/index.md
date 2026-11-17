@@ -2,11 +2,9 @@
 title: ガイド
 slug: Web/Progressive_web_apps/Guides
 l10n:
-  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
+  sourceCommit: 628b29f53d15f203c4a6b33c1d0303f864f6af63
 ---
 
-{{PWASidebar}}
-
-このページでは、PWA 技術に関するガイドを掲載しています。ガイドでは PWA の様々な側面について概念的な説明をしています。PWA でどのようなことが可能なのかを理解し、それを実現する方法を理解するのに十分な指針を提供することを意図しています。
+このページでは、PWA 技術に関するガイドを紹介します。各ガイドでは PWA のさまざまな側面を概念的に解説し、PWA で何ができるのかを理解し、それを実現する方法を調べるための手がかりを提供します。
 
 {{ListSubpages}}
