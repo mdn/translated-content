@@ -2,7 +2,7 @@
 title: ポップオーバー API の使用
 slug: Web/API/Popover_API/Using
 l10n:
-  sourceCommit: 0c13af55e869cbc54830fd1a601fd05f60717375
+  sourceCommit: 93149226b6b94a770731d262508f5c4aa10bcbed
 ---
 
 {{DefaultAPISidebar("Popover API")}}
@@ -27,7 +27,7 @@ l10n:
 <div id="mypopover" popover>ポップオーバーのコンテンツ</div>
 ```
 
-既定では、ボタンはトグルボタンになっています。繰り返し押すと、ポップオーバーの表示と非表示が切り替わります。
+デフォルトでは、ボタンはトグルボタンになっています。繰り返し押すと、ポップオーバーの表示と非表示が切り替わります。
 
 この動作を変更したい場合は、 [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性を使用します - これは `"hide"`、`"show"`、`"toggle"` の何れかの値を取ります。例えば、表示ボタンと非表示ボタンを別個に作成するには、次のようにします。
 
@@ -44,7 +44,7 @@ l10n:
 [基本的な宣言的ポップオーバーの例](https://mdn.github.io/dom-examples/popover-api/basic-declarative/)（[ソース](https://github.com/mdn/dom-examples/tree/main/popover-api/basic-declarative)）で、上記のコード片がどのように見えるかを確認できます。
 
 > [!NOTE]
-> `popovertargetaction` 属性が省略されると、制御ボタンで実行される既定のアクションは `"toggle"` になります。
+> `popovertargetaction` 属性が省略されると、制御ボタンで実行されるデフォルトのアクションは `"toggle"` になります。
 
 ポップオーバーが表示されると、`display: none`が削除されて{{glossary("top layer", "最上位レイヤー")}}に配置され、他のすべてのページのコンテンツの上に置かれるようになります。
 
@@ -64,7 +64,7 @@ l10n:
 
 ## 自動状態と「簡単な解除」
 
-上記のように、ポップオーバー要素に `popover` または `popover="auto"` が設定されている場合、その要素は**自動状態** (auto state) であると言います。自動状態について注意すべき重要な動作が 2 つあります。
+上記のように、ポップオーバー要素に `popover` または `popover="auto"` が設定されている場合、その要素は**自動状態** (auto state) であると言います。自動状態について注意すべき重要な動作は次のとおりです。
 
 - ポップオーバーは「簡単に解除する」("light dismissed") ことができます。これは、ポップオーバーの外側をクリックすることによって、ポップオーバーを閉じることができるという意味です。
 - ポップオーバーは、 <kbd>Esc</kbd> キーを押すなど、ブラウザー依存の仕組みを使って閉じることもできます。
@@ -130,6 +130,8 @@ popover.addEventListener("toggle", (e) => {
 });
 ```
 
+なお、別のポップオーバーの表示中または非表示中に `beforetoggle` イベントリスナー内から {{domxref("HTMLElement.showPopover()", "showPopover()")}}、{{domxref("HTMLElement.hidePopover()", "hidePopover()")}}、または {{domxref("HTMLElement.togglePopover()", "togglePopover()")}} を呼び出すことはできません。この場合、`InvalidStateError` の {{domxref("DOMException")}} が発生します。
+
 詳細情報と例については、前回の参照リンクを参照してください。
 
 ## JavaScript でポップオーバーを表示
@@ -154,8 +156,6 @@ function supportsPopover() {
 ```js
 const popover = document.getElementById("mypopover");
 const toggleBtn = document.getElementById("toggleBtn");
-
-const keyboardHelpPara = document.getElementById("keyboard-help-para");
 
 const popoverSupported = supportsPopover();
 
@@ -242,27 +242,11 @@ JavaScript のポップオーバーのプロパティ、機能検出、`togglePo
    <div popover anchor="foo">子</div>
    ```
 
-例は、[入れ子メニューの例](https://mdn.github.io/dom-examples/popover-api/nested-popovers/)（[ソース](https://github.com/mdn/dom-examples/tree/main/popover-api/nested-popovers)）を参照してください。マウスやキーボードの操作でサブポップオーバーを適切に表示・非表示を切り替えるため、また、どちらかのオプションが選択されたときに両方のメニューを非表示にするために、いくつかのイベントハンドラーが使用されていることがわかります。SPA や複数ページのウェブサイトでは、新しいコンテンツの読み込みをどのように処理するかによって、これらのうちのいくつかは必要ないかもしれませんが、このデモでは説明のために含めています。
-
-## ポップオーバーの "hint" 状態の使用
-
-作成できるポップオーバーには 3 つ目の種類として、**ヒントポップオーバー**があります。これはポップオーバー要素に `popover="hint"` を設定することで指定します。`hint` ポップオーバーは表示時に `auto` ポップオーバーを閉じませんが、それ以外の `hint` ポップオーバーは閉じます。簡単に閉じるが可能で、閉じるリクエストにも応答します。
-
-これは、例えばツールバーボタンを押すと UI ポップオーバーを表示できるボタンであると同時に、ボタンにポインターを当てた際に UI ポップオーバーを閉じずにツールチップを表示したい場合などに有用です。
-
-`hint` ポップオーバーは、非クリック JavaScript イベント（[`mouseover`](/ja/docs/Web/API/Element/mouseover_event)/[`mouseout`](/ja/docs/Web/API/Element/mouseout_event) や [`focus`](/ja/docs/Web/API/Element/focus_event)/ [`blur`](/ja/docs/Web/API/Element/blur_event) など）が発生すると、要素は表示・非表示されます。ボタンをクリックして `hint` ポップオーバーを開くための JavaScript が実行されると、開いている `auto` ポップオーバーは簡単に解除されるようになります。
-
-以上の動作を正確に再現した例については、[ポップオーバーヒントのデモ](https://mdn.github.io/dom-examples/popover-api/popover-hint/)（[ソース](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)）をご覧ください。このデモではボタンバーを採用しています。ボタンを押すと、`auto` ポップアップサブメニューが表示され、さらに詳細なオプションを選択することが可能になります。ただし、ボタンに当てたまたはフォーカスした際には、各ボタンの機能を示すツールチップ（`hint` ポップオーバー）も同時に表示されます。このツールチップは、現在表示中のサブメニューを非表示にしません。
-
-下記の節では、コードの重要な部分をすべて追ってみましょう。
-
 > [!NOTE]
-> `hint` ポップオーバーは、`manual` ポップオーバーと同時に使用できますが、実際にはその必要性はあまりありません。これらは主に `auto` ポップオーバーの制限を回避するために設計されており、この節で詳細に説明するように用途を拡大することができます。
->
-> なお、`popover="hint"` は未対応ブラウザーでは `popover="manual"` に代替されます。
+> `auto` ポップオーバーは、`auto` の[ポップオーバースタック](#ポップオーバーの表示・非表示の相互作用ルール)内で `hint` ポップオーバーを親にすることはできません（`auto` または `hint` ポップオーバーを子にすることはできます）。
+> `auto` ポップオーバーが `hint` ポップオーバーの内部に構造的に入れ子になっている場合（例えば、`auto` ポップオーバーが `hint` の DOM 子孫である場合や、そのインボーカーが `hint` 内にある場合）、ブラウザーは `auto` ポップオーバーの実効的な種類を `hint` に自動的に格下げし、`hint` として扱います。
 
-> [!NOTE]
-> 関連する機能として、**インタレストインボーカー**があります。これは JavaScript を必要とせずに、ホバー/フォーカス時のポップオーバー機能を便利かつ一貫して生成するために使用できます。詳細については、[インタレストインボーカーの使用方法](/ja/docs/Web/API/Popover_API/Using_interest_invokers)をご覧ください。
+例は、[入れ子メニューの例](https://mdn.github.io/dom-examples/popover-api/nested-popovers/)（[ソース](https://github.com/mdn/dom-examples/tree/main/popover-api/nested-popovers)）を参照してください。マウスやキーボードの操作でサブポップオーバーを適切に表示・非表示を切り替えるため、また、どちらかのオプションが選択されたときに両方のメニューを非表示にするために、いくつかのイベントハンドラーが使用されていることがわかります。SPA や複数ページのウェブサイトでは、新しいコンテンツの読み込みをどのように処理するかによって、これらの一部または全部が必要ない場合もありますが、このデモでは説明のために含めています。
 
 ### `popover="auto"` によるサブメニューの作成
 
@@ -299,6 +283,31 @@ JavaScript のポップオーバーのプロパティ、機能検出、`togglePo
   <button>選択肢 A</button><br /><button>選択肢 B</button>
 </div>
 ```
+
+## ポップオーバーの "hint" 状態の使用
+
+作成できるポップオーバーには 3 つ目の種類として、**ヒントポップオーバー**があります。ポップオーバー要素に `popover="hint"` を設定して指定します。
+簡単に解除でき、閉じるリクエストにも応答します。
+
+`hint` ポップオーバーを表示しても `auto` ポップオーバーは閉じませんが、ヒントスタック内で祖先ではない他の `hint` ポップオーバーは閉じます。
+逆に、<kbd>Esc</kbd> キーを押すか簡単に解除して `auto` ポップオーバーを閉じても、閉じた `auto` ポップオーバーの子孫ではない `hint` ポップオーバーには影響しません。
+
+これは、例えばツールバーボタンを押すと UI ポップオーバーを表示できる一方で、ボタンにポインターを当てたときにも UI ポップオーバーを閉じずにツールチップを表示したい場合に便利です。
+
+`hint` ポップオーバーは、[`mouseover`](/ja/docs/Web/API/Element/mouseover_event)/[`mouseout`](/ja/docs/Web/API/Element/mouseout_event) や [`focus`](/ja/docs/Web/API/Element/focus_event)/[`blur`](/ja/docs/Web/API/Element/blur_event) など、クリック以外の JavaScript イベントに応じて表示・非表示になることが多いです。
+ボタンをクリックして `hint` ポップオーバーを開くこともできますが、クリックしたボタンを含まない `auto` ポップオーバーは簡単に解除されます（通常は意図しない動作でしょう）。
+
+上記の動作を正確に再現した例については、[ポップオーバーヒントのデモ](https://mdn.github.io/dom-examples/popover-api/popover-hint/)（[ソース](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)）をご覧ください。このデモではボタンバーを採用しています。ボタンを押すと、`auto` ポップアップサブメニューが表示され、さらに詳細なオプションを選択できます。ただし、ボタンにポインターを当てたりフォーカスしたりすると、各ボタンの機能を示すツールチップ（`hint` ポップオーバー）も表示されます。このツールチップは、現在表示中のサブメニューを非表示にしません。
+
+以下の節では、コードの重要な部分をすべて見ていきます。
+
+> [!NOTE]
+> `hint` ポップオーバーは `manual` ポップオーバーと一緒に使用できますが、そうする必要性はあまりありません。これらは主に `auto` ポップオーバーの制限を回避するために設計されており、この節で説明するような用途を可能にします。
+>
+> `popover="hint"` は、未対応のブラウザーでは `popover="manual"` に代替されることにも注意してください。
+
+> [!NOTE]
+> 関連する機能として、**関心インボーカー**があります。これは JavaScript を必要とせずに、ホバー/フォーカス時にポップオーバーを便利かつ一貫して表示するために使用できます。詳しくは[関心インボーカーの使用](/ja/docs/Web/API/Popover_API/Using_interest_invokers)をご覧ください。
 
 ### `popover="hint"` によるツールチップの作成
 
@@ -344,13 +353,30 @@ function addEventListeners(i) {
 }
 ```
 
-最後に、[`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) ループを使用して、`btns` `NodeList` 内の `<buttons>` を反復処理し、それぞれの `addEventListeners()` 関数を呼び出します。これにより、すべてのボタンに目的のイベントリスナーが設定されます。
+最後に、[`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) ループを使用して、`btns` `NodeList` 内の `<button>` 要素を反復処理し、それぞれに対して `addEventListeners()` 関数を呼び出します。これにより、すべてのボタンに目的のイベントリスナーが設定されます。
 
 ```js
 for (let i = 0; i < btns.length; i++) {
   addEventListeners(i);
 }
 ```
+
+## ポップオーバーの表示・非表示の相互作用ルール
+
+ブラウザーは、開いているポップオーバーを 2 つの独立したスタックで管理します。`auto` ポップオーバー用の **auto スタック**と、`hint` ポップオーバー用の **hint スタック**です。
+ポップオーバーを表示すると、対応するスタックに追加されます。非表示にすると、ブラウザーはそのスタックをさかのぼり、同じスタック内の子孫ポップオーバーを先に閉じます。
+2 つのスタックは独立しているため、一方への操作が他方に自動的に影響することはありません。
+
+仕様から導かれる、ポップオーバー間の相互作用に関するルールは次のとおりです。
+
+- `hint` ポップオーバーを表示しても `auto` ポップオーバーは閉じません。
+- `hint` ポップオーバーを表示すると、hint スタック内で祖先にあたるポップオーバーを除き、他の `hint` ポップオーバーは閉じます。
+- ポップオーバーの外側をクリックすると、クリックされた要素の祖先ではない、開いているすべての `auto` および `hint` ポップオーバーが簡単に解除されます。
+- `auto` ポップオーバーを閉じても、その子孫ではない `hint` ポップオーバーは閉じません。
+- `hint` ポップオーバーの子として `auto` ポップオーバーを表示すると、その `auto` ポップオーバーの種類は `hint` に格下げされます。
+- 別のポップオーバーの表示中または非表示中にポップオーバーを表示することはできません。
+
+`manual` ポップオーバーはどちらのスタックにも参加しません。独立して表示・非表示になり、`auto` や `hint` ポップオーバーに影響しません。
 
 ## ポップオーバーのスタイル設定
 
@@ -435,15 +461,15 @@ for (let i = 0; i < btns.length; i++) {
 
 [あらゆる種類のポップオーバーをそのインボーカーに関連付ける](#ポップオーバーとインボーカーの関係を設定する他の方法)と、両者の間に暗黙のアンカー参照が生成されます。これによりインボーカーがポップオーバーの**アンカー要素**となり、[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)を使用してポップオーバーを相対的に配置できる、ということになります。
 
-ポップオーバーとインボーカーとの関連付けは暗黙的に行われるため、{{cssxref("anchor-name")}} および {{cssxref("position-anchor")}} プロパティを用いた明示的な関連付けは必要ありません。ただし、位置指定に関する CSS の指定は依然として必要です。
+ポップオーバーとインボーカーとの関連付けは暗黙的に行われるため、{{cssxref("anchor-name")}} でアンカー名を指定する必要はありません。{{cssxref("position-area")}} を使ってポップオーバーを配置すると、暗黙のアンカーが自動的に採用されます。一方、{{cssxref("anchor()")}} または `anchor-center` を使って配置する場合は、`position-anchor: auto` を指定して明示的に有効にする必要があります。{{cssxref("position-anchor")}} の初期値は `normal` で、`position-area` が `none` の間は `none` として動作します。
 
-例えば、{{glossary("inset properties", "インセットプロパティ")}}に設定された {{cssxref("anchor()")}} 関数の値と、配置プロパティに設定された `anchor-center` の値を組み合わせて使用することができます。
+例えば、{{glossary("inset properties", "インセットプロパティ")}}に設定した {{cssxref("anchor()")}} 関数の値と、配置プロパティに設定した `anchor-center` の値を組み合わせて使用できます。
 
 ```css
 .my-popover {
   margin: 0;
-  inset: auto;
-  bottom: calc(anchor(top) + 20px);
+  position-anchor: auto;
+  top: calc(anchor(bottom) + 10px);
   justify-self: anchor-center;
 }
 ```
@@ -452,21 +478,21 @@ for (let i = 0; i < btns.length; i++) {
 
 ```css
 .my-popover {
-  margin: 0;
-  inset: auto;
   position-area: top;
 }
 ```
 
-{{cssxref("position-area")}} または {{cssxref("anchor()")}} を使用してポップオーバーを位置指定する場合、[ポップオーバーのデフォルトスタイル](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B)が、設定しようとしている位置と競合する可能性があることに注意してください。主な原因は `margin` と `inset` のデフォルトスタイルであるため、以上の例のようにそれらをリセットすることをお勧めします。CSS ワーキンググループは、[この回避策を要求されることを避ける方法を探して](https://github.com/w3c/csswg-drafts/issues/10258)います。
+`anchor()` と `anchor-center` を使ってポップオーバーを配置する場合、[ポップオーバーのデフォルトスタイル](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B)が意図した位置指定と競合する可能性があることに注意してください。主な原因は {{cssxref("margin")}} のデフォルト値 `auto` です。意図した位置指定が機能するよう、ポップオーバーの `margin` を `0`、または位置指定要素とアンカーの間に余白を設ける場合は正の `<length>` に設定してください。この節の最初のコード例に例があります。
+
+{{cssxref("position-area")}} で配置したポップオーバーでは、この問題は起こりません。`position-area` が `none` 以外に設定された要素では、`auto` のマージン（および[インセットプロパティ](/ja/docs/Glossary/Inset_properties)）の使用値が `0` になるためです。
 
 アンカーと位置指定要素の関連付け、および要素をアンカーに対して相対的に位置指定する方法の詳細については、[CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#要素をアンカーに対して相対的に配置)を参照してください。
 
 > [!NOTE]
-> 例えば、この暗黙の関連付けを使用した例については、[ポップオーバーヒントデモ](https://mdn.github.io/dom-examples/popover-api/popover-hint/)（[ソース](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)）を参照してください。CSS のコードを確認すると、{{cssxref("anchor-name")}} および {{cssxref("position-anchor")}} プロパティを使用して明示的なアンカー関連付けが行われていないことがわかります。
+> 例えば、この暗黙の関連付けを使用した例については、[ポップオーバーヒントデモ](https://mdn.github.io/dom-examples/popover-api/popover-hint/)（[ソース](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)）を参照してください。CSS コードでは、`position-area` と `anchor()`/`anchor-center` の両方を使った暗黙の関連付けの例を確認できます。
 
 > [!NOTE]
-> ポップオーバーがインボーカー要素にアンカーされるのを防ぐには、暗黙のアンカー参照を削除する必要があります。これを行うには、ポップオーバーの `position-anchor` プロパティを、現在のドキュメント内に存在しないアンカー名（`--not-an-anchor-name` など）に設定します。詳細は[アンカー関連付けの削除](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#removing_an_anchor_association)も参照してください。
+> ポップオーバーがインボーカー要素にアンカーされるのを防ぐには、暗黙のアンカー参照を削除する必要があります。これを行うには、ポップオーバーの `position-anchor` プロパティを `none`、または現在のドキュメント内に存在しないアンカー名（`--not-an-anchor-name` など）に設定します。詳細は[アンカーの関連付けを解除](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#アンカーの関連付けを解除)も参照してください。
 
 ## ポップオーバーのアニメーション
 
@@ -476,20 +502,20 @@ for (let i = 0; i < btns.length; i++) {
 - `display` を `block` （または他の表示可能な `display` 値）から `none` にアニメーションさせる場合、値はアニメーション時間の `100%` で `none` に切り替わり、ずっと表示されます。
 
 > [!NOTE]
-> [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)を使用してアニメーションを行う場合、上記の動作を有効にするには [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) を設定する必要があります。 [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)でアニメーションさせる場合、既定では上記の動作が利用できます。
+> [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)を使用してアニメーションを行う場合、上記の動作を有効にするには [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) を設定する必要があります。[CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)でアニメーションさせる場合、デフォルトでは上記の動作が利用できます。
 
 ### ポップオーバーのトランジション
 
 CSS のトランジションでポップオーバーをアニメーションさせる場合、以下の機能が必要です。
 
 - {{CSSxRef("@starting-style")}} アットルール
-  - : ポップオーバーが最初に表示されたときにトランジションさせたい、ポップオーバーに設定するプロパティの開始値のセットを提供します。これは予期しない動作を避けるために必要です。既定では、 CSS のトランジションは可視要素でプロパティがある値から別の値に変更されたときのみ発生します。要素の最初のスタイル更新時や `display` 型が `none` から別の型に変更されたときには発生しません。
+  - : ポップオーバーが最初に表示されたときにトランジションさせたい、ポップオーバーに設定するプロパティの開始値のセットを提供します。これは予期しない動作を避けるために必要です。デフォルトでは、CSS のトランジションは可視要素でプロパティがある値から別の値に変更されたときのみ発生します。要素の最初のスタイル更新時や `display` 型が `none` から別の型に変更されたときには発生しません。
 - {{CSSxRef("display")}} プロパティ
   - : トランジションのリストに `display` を追加して、ポップオーバーがトランジションの再生時間の間、`display: block` （または他の表示可能な `display` 値）として残り、他のトランジションが確実に表示されるようにします。
 - {{CSSxRef("overlay")}} プロパティ
   - : トランジションのリストに `overlay` を記述して、最上位レイヤーからのポップオーバーの除去をトランジションが完全に完了するまで確実に延期し、トランジションが確実に表示されるようにします。
 - {{cssxref("transition-behavior")}} プロパティ
-  - : `transition-behavior:allow-discrete` を `display` と `overlay` のトランジション（または一括指定の {{cssxref("transition")}}）に設定し、既定ではアニメーション不可能なこれら 2 つのプロパティの離散トランジションを有効にします。
+  - : `transition-behavior:allow-discrete` を `display` と `overlay` のトランジション（または一括指定の {{cssxref("transition")}}）に設定し、デフォルトではアニメーション不可能なこれら 2 つのプロパティの離散トランジションを有効にします。
 
 この例がどのように見えるものか、見ていきましょう。
 
@@ -577,7 +603,7 @@ html {
 - トランジションする要素のリストに `overlay` を追加し、アニメーションが完了するまで最上位レイヤーからの要素の除去が延期されるようにします。この効果は、このような基本的なアニメーションでは気にならないかもしれませんが、より複雑なケースでは、このプロパティを省略すると、トランジションの完了前に要素がオーバーレイから除去されてしまう可能性があります。
 - 上記のトランジションの両方のプロパティに `allow-discrete` を設定し、[離散トランジション](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties#離散)ができるようにします。
 
-また、開くためのポップオーバーの背後に現れる {{cssxref("::backdrop")}} にトランジションを記述子、暗くなるアニメーションを指定していることに注意してください。
+また、ポップオーバーが開いているときにその背後に現れる {{cssxref("::backdrop")}} にトランジションを記述し、暗くなるアニメーションを指定していることに注意してください。
 
 #### 結果
 
@@ -586,7 +612,7 @@ html {
 {{ EmbedLiveSample("Transitioning a popover", "100%", "200") }}
 
 > [!NOTE]
-> ポップオーバーは表示されるたびに `display: none` から `display: block` に変わるので、項目がトランジションするたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルにトランジションします。ポップオーバーが閉じられたとき、 `[popover]:popover-open` 状態から既定の `[popover]` 状態にトランジションします。
+> ポップオーバーは表示されるたびに `display: none` から `display: block` に変わるので、項目がトランジションするたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルにトランジションします。ポップオーバーが閉じられたとき、`[popover]:popover-open` 状態からデフォルトの `[popover]` 状態にトランジションします。
 >
 > このような場合、出現時と消滅時のスタイル設定を異なる形にすることが可能です。このことの証明については、[開始スタイルを使用する場合のデモ](/ja/docs/Web/CSS/Reference/At-rules/@starting-style#開始スタイルを使用する場合のデモ)の例を参照してください。
 
@@ -659,7 +685,7 @@ html {
     opacity: 0;
     transform: scaleX(0);
     /* display: none はここでは必須ではない。閉じたポップオーバーの
-    既定値であるため。ただし、ここでは動作を明確化するために入れている */
+    デフォルト値であるため。ただし、ここでは動作を明確化するために入れている */
     display: none;
   }
 }
