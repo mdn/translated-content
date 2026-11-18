@@ -1,15 +1,16 @@
 ---
 title: TypedArray.prototype.findLastIndex()
+short-title: findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findLastIndex
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 {{JSRef}}
 
 {{jsxref("TypedArray")}} 인스턴스의 **`findLastIndex()`** 메서드는 배열을 역순으로 순회하며 주어진 판별 함수를 만족하는 배열의 첫번째 요소의 인덱스를 반환합니다. 만족하는 요소가 없으면 -1을 반환합니다. 이 메서드는 {{jsxref("Array.prototype.findLastIndex()")}}와 알고리즘이 같습니다.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.findLastIndex()")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.findLastIndex()")}}
 
 ```js interactive-example
 function isNegative(element /*, index, array */) {
@@ -57,12 +58,15 @@ findLastIndex(callbackFn, thisArg)
 다음 예제는 형식화 배열의 마지막 요소 중 소수인 요소를 반환하거나, 소수가 없는 경우 `-1`을 반환합니다.
 
 ```js
-function isPrime(element) {
-  if (element % 2 === 0 || element < 2) {
+function isPrime(n) {
+  if (n < 2) {
     return false;
   }
-  for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
-    if (element % factor === 0) {
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
@@ -77,6 +81,9 @@ console.log(uint8.findLastIndex(isPrime));
 // 5
 ```
 
+> [!NOTE]
+> 이 `isPrime()` 구현은 설명을 위한 것입니다. 실제 애플리케이션에서는 반복 계산을 피하기 위해 [에라토스테네스의 체](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)와 같이 {{Glossary("Memoization", "메모이제이션")}}을 적극적으로 활용하는 알고리즘을 사용하는 것이 좋습니다.
+
 ## 명세서
 
 {{Specifications}}
@@ -87,7 +94,7 @@ console.log(uint8.findLastIndex(isPrime));
 
 ## 같이 보기
 
-- [`core-js`에서의 `TypedArray.prototype.findLastIndex` 폴리필](https://github.com/zloirock/core-js#array-find-from-last)
+- [`core-js`에서의 `TypedArray.prototype.findLastIndex` 폴리필](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 안내서
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.find()")}}
