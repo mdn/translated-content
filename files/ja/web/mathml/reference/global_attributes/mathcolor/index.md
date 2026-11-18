@@ -2,7 +2,7 @@
 title: mathcolor
 slug: Web/MathML/Reference/Global_attributes/mathcolor
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
 **`mathcolor`** は[グローバル属性](/ja/docs/Web/MathML/Reference/Global_attributes)で、MathML 要素の[色](/ja/docs/Web/CSS/Reference/Properties/color)を設定します。
