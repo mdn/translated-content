@@ -3,7 +3,7 @@ title: "HTMLButtonElement: popoverTargetElement プロパティ"
 short-title: popoverTargetElement
 slug: Web/API/HTMLButtonElement/popoverTargetElement
 l10n:
-  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("Popover API")}}
@@ -11,6 +11,11 @@ l10n:
 **`popoverTargetElement`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、制御ボタンで制御されるポップオーバー要素を取得および設定します。
 
 これは JavaScript において HTML の [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性に相当するものです。
+
+`popoverTargetElement` プロパティを使用してポップオーバーと呼び出し元ボタンを関連付けると、さらに次の 2 つの有用な効果があります。
+
+- ブラウザーは、ポップオーバーと呼び出し元の間に [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) および [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) の暗黙の関係を作成します。また、ポップオーバーの表示時に、キーボードフォーカスナビゲーション順序内の論理的な位置に配置します。これにより、キーボードや支援技術 (AT) を利用するユーザーにとって、ポップオーバーがよりアクセスしやすくなります（[ポップオーバーのアクセシビリティ機能](/ja/docs/Web/API/Popover_API/Using#ポップオーバーのアクセシビリティ機能)も参照してください）。
+- ブラウザーは両者の間に暗黙のアンカー参照も作成するため、[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)を使って、制御ボタンに対するポップオーバーの位置を簡単に指定できます。詳しくは[ポップオーバーのアンカー位置指定](/ja/docs/Web/API/Popover_API/Using#ポップオーバーのアンカー位置指定)を参照してください。
 
 ## 値
 
@@ -38,9 +43,9 @@ JavaScriptのコードでは、最初に `<div>` および `<button>` 要素を�
 const popover = document.getElementById("mypopover");
 const toggleBtn = document.getElementById("toggleBtn");
 
-// ポップオーバー API の対応を調べます。
+// ポップオーバー API の対応状況を確認
 function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+  return Object.hasOwn(HTMLElement.prototype, "popover");
 }
 ```
 
