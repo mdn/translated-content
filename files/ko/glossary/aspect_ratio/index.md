@@ -28,7 +28,7 @@ SVG에서는, 종횡비는 네 가지 값을 가진 [`viewBox`](/ko/docs/Web/SVG
 <svg viewBox="0 0 300 100" xmlns="https://www.w3.org/2000/svg"></svg>
 ```
 
-JavaScript APIs에서는, 종횡비를 질의하면 너비를 높이로 나눈 값인 배정밀도 부동소수점 숫자를 반환합니다. JavaScript를 사용하여 요소의 종횡비를 설정할 수도 있습니다. 예를 들어, {{domxref("MediaStreamTrack")}} 또는 {{domxref("MediaTrackSettings")}} 사전의 [`aspectRatio`](/ko/docs/Web/API/MediaTrackSettings/aspectRatio) 속성을 사용하여 1920x1080 비디오의 종횡비 제약을 설정하는 경우, 16/9 또는 1920/1080으로 계산되며 이 값은 `1.7777777778`입니다.
+JavaScript APIs에서는, 종횡비를 질의하면 너비를 높이로 나눈 값인 배정밀도 부동소수점 숫자를 반환합니다. JavaScript를 사용하여 요소의 종횡비를 설정할 수도 있습니다. 예를 들어, {{domxref("MediaStreamTrack")}} 또는 {{domxref("MediaTrackSettings")}} 사전의 [`aspectRatio`](/ko/docs/Web/API/MediaStreamTrack/getSettings) 속성을 사용하여 1920x1080 비디오의 종횡비 제약을 설정하는 경우, 16/9 또는 1920/1080으로 계산되며 이 값은 `1.7777777778`입니다.
 
 ```js
 const constraints = {
