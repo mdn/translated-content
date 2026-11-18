@@ -49,21 +49,21 @@ Esta sección enumera los valores de `page-type` para las páginas de [Learn](/e
 
 ### Tipos de página de accesibilidad
 
-Esta sección enumera los valores de `page-type` para las páginas de [Web/Accessibility](/es/docs/Web/Accessibility). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#generic_page_types).
+Esta sección enumera los valores de `page-type` para las páginas de [Web/Accessibility](/es/docs/Web/Accessibility). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#tipos_de_página_genéricos).
 
 - `aria-role`: un [rol](/es/docs/Web/Accessibility/ARIA/Reference/Roles) ARIA, como [`section`](/es/docs/Web/Accessibility/ARIA/Reference/Roles/section_role).
 - `aria-attribute`: un [atributo](/es/docs/Web/Accessibility/ARIA/Reference/Attributes) ARIA, como [`aria-sort`](/es/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort).
 
 ### Tipos de página de CSS
 
-Esta sección enumera los valores de `page-type` para las páginas de [Web/CSS](/es/docs/Web/CSS). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#generic_page_types).
+Esta sección enumera los valores de `page-type` para las páginas de [Web/CSS](/es/docs/Web/CSS). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#tipos_de_página_genéricos).
 
 - `css-at-rule`: una [regla-at](/es/docs/Web/CSS/Guides/Syntax/At-rules), como {{cssxref("@media")}}.
 - `css-at-rule-descriptor`: un descriptor de regla-at, como [`@counter-style/prefix`](/es/docs/Web/CSS/Reference/At-rules/@counter-style/prefix).
 - `css-combinator`: un combinador, como el [combinador de descendientes](/es/docs/Web/CSS/Reference/Selectors/Descendant_combinator).
 - `css-function`: una [función](/es/docs/Web/CSS/Reference/Values/Functions), como {{cssxref("max")}}.
 - `css-keyword`: una palabra clave, como {{cssxref("inherit")}}.
-- `css-media-feature`: una [característica de medios](/es/docs/Web/CSS/Reference/At-rules/@media#media_features), como {{cssxref("@media/hover")}}.
+- `css-media-feature`: una [característica de medios](/es/docs/Web/CSS/Reference/At-rules/@media#características_de_medios_media_feature), como {{cssxref("@media/hover")}}.
 - `css-module`: un módulo, como [CSS Animations](/es/docs/Web/CSS/Guides/Animations).
 - `css-property`: una propiedad, como {{cssxref("background-color")}}.
 - `css-pseudo-class`: una [pseudoclase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes), como {{cssxref(":enabled")}}.
@@ -81,7 +81,7 @@ Esta sección enumera los valores de `page-type` para las páginas de [Glossary]
 
 ### Tipos de página de HTML
 
-Esta sección enumera los valores de `page-type` para las páginas de [Web/HTML](/es/docs/Web/HTML). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#generic_page_types).
+Esta sección enumera los valores de `page-type` para las páginas de [Web/HTML](/es/docs/Web/HTML). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#tipos_de_página_genéricos).
 
 - `html-attribute`: un atributo HTML, como [`autocomplete`](/es/docs/Web/HTML/Reference/Attributes/autocomplete).
 - `html-attribute-value`: un valor concreto de un atributo HTML, como [`dns-prefetch`](/es/docs/Web/HTML/Reference/Attributes/rel/dns-prefetch).
@@ -89,7 +89,7 @@ Esta sección enumera los valores de `page-type` para las páginas de [Web/HTML]
 
 ### Tipos de página de HTTP
 
-Esta sección enumera los valores de `page-type` para las páginas de [Web/HTTP](/es/docs/Web/HTTP). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#generic_page_types).
+Esta sección enumera los valores de `page-type` para las páginas de [Web/HTTP](/es/docs/Web/HTTP). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#tipos_de_página_genéricos).
 
 - `http-csp-directive`: una directiva [CSP](/es/docs/Web/HTTP/Reference/Headers/Content-Security-Policy), como [`script-src`](/es/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src).
 - `http-cors-error`: un error de [CORS](/es/docs/Web/HTTP/Guides/CORS), como [`CORSDidNotSucceed`](/es/docs/Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed).
@@ -100,7 +100,7 @@ Esta sección enumera los valores de `page-type` para las páginas de [Web/HTTP]
 
 ### Tipos de página de JavaScript
 
-Esta sección enumera los valores de `page-type` para las páginas de [Web/JavaScript](/es/docs/Web/JavaScript). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#generic_page_types).
+Esta sección enumera los valores de `page-type` para las páginas de [Web/JavaScript](/es/docs/Web/JavaScript). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#tipos_de_página_genéricos).
 
 - `javascript-class`: la definición de un objeto integrado, como [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array).
 - `javascript-constructor`: el constructor de un objeto, como [`Array()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Array).
@@ -120,21 +120,21 @@ Esta sección enumera los valores de `page-type` para las páginas de [Web/JavaS
 
 ### Tipos de página de MathML
 
-Esta sección enumera los valores de `page-type` para las páginas de [Web/MathML](/es/docs/Web/MathML). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#generic_page_types).
+Esta sección enumera los valores de `page-type` para las páginas de [Web/MathML](/es/docs/Web/MathML). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#tipos_de_página_genéricos).
 
 - `mathml-attribute`: un atributo de MathML, como [`mathcolor`](/es/docs/Web/MathML/Reference/Global_attributes/mathcolor).
 - `mathml-element`: un elemento MathML, como [`<msqrt>`](/es/docs/Web/MathML/Reference/Element/msqrt).
 
 ### Tipos de página de SVG
 
-Esta sección enumera los valores de `page-type` para las páginas de [Web/SVG](/es/docs/Web/SVG). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#generic_page_types).
+Esta sección enumera los valores de `page-type` para las páginas de [Web/SVG](/es/docs/Web/SVG). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#tipos_de_página_genéricos).
 
 - `svg-attribute`: un atributo SVG, como [`crossorigin`](/es/docs/Web/SVG/Reference/Attribute/crossorigin).
 - `svg-element`: un elemento SVG, como [`<circle>`](/es/docs/Web/SVG/Reference/Element/circle).
 
 ### Tipos de página de la API web
 
-Esta sección enumera los valores de `page-type` para las páginas de [Web/API](/es/docs/Web/API). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#generic_page_types).
+Esta sección enumera los valores de `page-type` para las páginas de [Web/API](/es/docs/Web/API). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#tipos_de_página_genéricos).
 
 - `web-api-overview`: ofrece una descripción general de una API web, como la [API Fetch](/es/docs/Web/API/Fetch_API).
 - `web-api-interface`: una interfaz de una API web, como [`Request`](/es/docs/Web/API/Request).
@@ -161,7 +161,7 @@ Esta sección enumera los valores de `page-type` para las páginas de [WebAssemb
 
 ### Tipos de página de WebDriver
 
-Esta sección enumera los valores de `page-type` para las páginas de [Web/WebDriver](/es/docs/Web/WebDriver). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#generic_page_types).
+Esta sección enumera los valores de `page-type` para las páginas de [Web/WebDriver](/es/docs/Web/WebDriver). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#tipos_de_página_genéricos).
 
 - `webdriver-command`: un comando de WebDriver, como [`CloseWindow`](/es/docs/Web/WebDriver/Reference/Classic/Commands/CloseWindow).
 - `webdriver-capability`: una capacidad de WebDriver, como [`acceptInsecureCerts`](/es/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts).
@@ -169,7 +169,7 @@ Esta sección enumera los valores de `page-type` para las páginas de [Web/WebDr
 
 ### Tipos de página de WebExtensions
 
-Esta sección enumera los valores de `page-type` para las páginas de [Mozilla/Add-ons/WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#generic_page_types).
+Esta sección enumera los valores de `page-type` para las páginas de [Mozilla/Add-ons/WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#tipos_de_página_genéricos).
 
 - `webextension-api`: una API de WebExtension, como [`alarms`](/es/docs/Mozilla/Add-ons/WebExtensions/API/alarms).
 - `webextension-api-event`: un evento de una API de WebExtension, como [`action.onClicked`](/es/docs/Mozilla/Add-ons/WebExtensions/API/action/onClicked).
@@ -180,30 +180,30 @@ Esta sección enumera los valores de `page-type` para las páginas de [Mozilla/A
 
 ### Tipos de página de manifiesto web
 
-Esta sección enumera los valores de `page-type` para las páginas de [Web/Manifest](/es/docs/Web/Progressive_web_apps/Manifest). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#generic_page_types).
+Esta sección enumera los valores de `page-type` para las páginas de [Web/Manifest](/es/docs/Web/Progressive_web_apps/Manifest). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#tipos_de_página_genéricos).
 
 - `web-manifest-member`: un miembro de un manifiesto, como [`description`](/es/docs/Web/Progressive_web_apps/Manifest/Reference/description).
 
 ### Tipos de página de XPath
 
-Esta sección enumera los valores de `page-type` para las páginas de [Web/XPath](/es/docs/Web/XML/XPath). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#generic_page_types).
+Esta sección enumera los valores de `page-type` para las páginas de [Web/XPath](/es/docs/Web/XML/XPath). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#tipos_de_página_genéricos).
 
 - `xpath-function`: una función, como [`ceiling()`](/es/docs/Web/XML/XPath/Reference/Functions/ceiling).
 
 ### Tipos de página de XSLT
 
-Esta sección enumera los valores de `page-type` para las páginas de [Web/XSLT](/es/docs/Web/XML/XSLT). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#generic_page_types).
+Esta sección enumera los valores de `page-type` para las páginas de [Web/XSLT](/es/docs/Web/XML/XSLT). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#tipos_de_página_genéricos).
 
 - `xslt-element`: un elemento de XSLT, como [`<xsl:message>`](/es/docs/Web/XML/XSLT/Reference/Element/message).
 
 ### Tipos de página de EXSLT
 
-Esta sección enumera los valores de `page-type` para las páginas de [Web/EXSLT](/es/docs/Web/XML/EXSLT). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#generic_page_types).
+Esta sección enumera los valores de `page-type` para las páginas de [Web/EXSLT](/es/docs/Web/XML/EXSLT). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#tipos_de_página_genéricos).
 
 - `exslt-function`: una función de EXSLT, como [`exsl:node-set()`](/es/docs/Web/XML/EXSLT/Reference/exsl/node-set).
 
 ### Tipos de página de Firefox
 
-Esta sección enumera los valores de `page-type` para las páginas de [Mozilla/Firefox](/es/docs/Mozilla/Firefox). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#generic_page_types).
+Esta sección enumera los valores de `page-type` para las páginas de [Mozilla/Firefox](/es/docs/Mozilla/Firefox). Todas las páginas de esa parte del árbol deben tener un `page-type`, y su valor debe ser uno de los que se indican a continuación o uno de los valores de [tipo de página genérico](#tipos_de_página_genéricos).
 
 - `firefox-release-notes`: las notas de la versión de una versión concreta de Firefox, como [_Firefox 115 para desarrolladores_](/es/docs/Mozilla/Firefox/Releases/115).

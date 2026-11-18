@@ -35,7 +35,7 @@ l10n:
 > - **page-type**
 >   - : La clave `page-type` para interfaces Web/API siempre es `web-api-interface`.
 > - **status**
->   - : Indicadores que describen el estado de esta funcionalidad. Es un arreglo que puede contener uno o más de los siguientes valores: `experimental`, `deprecated`, `non-standard`. Esta clave no debe configurarse manualmente: se establece automáticamente según los valores en los datos de compatibilidad de navegadores para la funcionalidad. Consulta ["Cómo se añaden o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
+>   - : Indicadores que describen el estado de esta funcionalidad. Es un arreglo que puede contener uno o más de los siguientes valores: `experimental`, `deprecated`, `non-standard`. Esta clave no debe configurarse manualmente: se establece automáticamente según los valores en los datos de compatibilidad de navegadores para la funcionalidad. Consulta ["Cómo se añaden o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características).
 > - **browser-compat**
 >   - : Reemplaza el valor de marcador de posición `path.to.feature.NameOfTheMethod` con la cadena de consulta para el método en el [repositorio de datos de compatibilidad de navegadores](https://github.com/mdn/browser-compat-data). La cadena de herramientas usa automáticamente esta clave para rellenar las secciones de compatibilidad y especificaciones (reemplazando las macros `\{{Compat}}` y `\{{Specifications}}`).
 >
@@ -60,7 +60,7 @@ l10n:
 > - `\{{AvailableInWorkers}}` — genera una nota de **Disponible en workers** que indica que la tecnología está disponible en el [contexto de workers](/es/docs/Web/API/Web_Workers_API). Si solo está disponible en el contexto de window, puedes eliminar la llamada a la macro.
 > - `\{{APIRef("GroupDataName")}}` — genera la barra lateral de referencia a la izquierda con enlaces de referencia rápida relacionados con la página actual. Consulta nuestra guía de [barras laterales de referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) para saber cómo hacerlo.
 >
-> No añadas manualmente macros de encabezado de estado. Consulta ["Cómo se añaden o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) para añadir estos estados a la página.
+> No añadas manualmente macros de encabezado de estado. Consulta ["Cómo se añaden o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características) para añadir estos estados a la página.
 >
 > Justo después de este bloque de notas se muestran ejemplos de los banners de **Contexto seguro**, **Disponible en workers**, **Experimental**, **Obsoleto** y **No estándar**.
 >
@@ -197,7 +197,7 @@ _Para usar esta macro, elimina las comillas invertidas y la barra invertida en e
 
 ## Véase también
 
-Incluye enlaces a páginas de referencia y guías relacionadas con la API actual. Para más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#seccion_vease_tambien) en la _Guía de estilo de escritura_.
+Incluye enlaces a páginas de referencia y guías relacionadas con la API actual. Para más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#sección_véase_también) en la _Guía de estilo de escritura_.
 
 - enlace1
 - enlace2

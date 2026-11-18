@@ -33,7 +33,7 @@ Esta regla no se aplica a la función de CSS que se está documentando en la pá
 Hay algunos principios universalmente reconocidos que no necesitamos exponer aquí exhaustivamente:
 
 - Asegúrate de que tu código no tenga errores de sintaxis, lo que puede resultar en que la [propiedad o declaración sea ignorada](/es/docs/Web/CSS/Guides/Syntax/Error_handling). La sintaxis estándar que no se ha implementado es aceptable, si se ajusta a nuestra [regla general sobre funciones modernas de CSS](#utiliza_funciones_modernas_de_css_cuando_sean_compatibles).
-- No uses funciones [no estándar, obsoletas o en desuso](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete). Esta directiva se extiende a [funciones con prefijos](/es/docs/Glossary/Vendor_Prefix#css_prefixes): usa la alternativa con prefijo _solo si_ la función estándar no está disponible (consulta nuestra [regla general sobre funciones modernas de CSS](#utiliza_funciones_modernas_de_css_cuando_sean_compatibles)). Si el lector necesita una compatibilidad más amplia, puede agregar el respaldo con prefijo por sí mismo o usar un postprocesador de CSS.
+- No uses funciones [no estándar, obsoletas o en desuso](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete). Esta directiva se extiende a [funciones con prefijos](/es/docs/Glossary/Vendor_Prefix#prefijos_css): usa la alternativa con prefijo _solo si_ la función estándar no está disponible (consulta nuestra [regla general sobre funciones modernas de CSS](#utiliza_funciones_modernas_de_css_cuando_sean_compatibles)). Si el lector necesita una compatibilidad más amplia, puede agregar el respaldo con prefijo por sí mismo o usar un postprocesador de CSS.
 - No escribas código redundante o no funcional, que es un indicador común de errores o restos de refactorización. Esto incluye propiedades repetidas en una declaración, declaraciones vacías, comentarios vacíos o selectores que no coinciden con ningún elemento.
 
 ### No uses preprocesadores
@@ -50,7 +50,7 @@ Para tener un control máximo sobre CSS en todas las plataformas, mucha gente so
 
 ### Sintaxis formal y pseudocódigo
 
-La sintaxis formal es una parte integral de la documentación de CSS de MDN (como ejemplo, consulta la sección [Sintaxis formal](/es/docs/Web/CSS/Reference/Properties/background-image#formal_syntax) en la página de la propiedad `background-image`). Dado que muchos desarrolladores están familiarizados con la sintaxis en este formato, es aceptable escribir pseudocódigo de una manera similar a la sintaxis formal en descripciones y ejemplos. Sin embargo, cualquier código que no sea CSS sintácticamente bien formado no debe marcarse como CSS. Los errores de sintaxis en bloques de código `css` hacen que el código no sea analizable por verificadores estáticos, confunden a los lectores que esperan ver código CSS válido y pueden incluso resultar en un resaltado de sintaxis sin sentido. Marca tu bloque de código como `plain` o usa la macro `CSSSyntaxRaw` para representar la sintaxis formal completa.
+La sintaxis formal es una parte integral de la documentación de CSS de MDN (como ejemplo, consulta la sección [Sintaxis formal](/es/docs/Web/CSS/Reference/Properties/background-image#sytaxis_formal) en la página de la propiedad `background-image`). Dado que muchos desarrolladores están familiarizados con la sintaxis en este formato, es aceptable escribir pseudocódigo de una manera similar a la sintaxis formal en descripciones y ejemplos. Sin embargo, cualquier código que no sea CSS sintácticamente bien formado no debe marcarse como CSS. Los errores de sintaxis en bloques de código `css` hacen que el código no sea analizable por verificadores estáticos, confunden a los lectores que esperan ver código CSS válido y pueden incluso resultar en un resaltado de sintaxis sin sentido. Marca tu bloque de código como `plain` o usa la macro `CSSSyntaxRaw` para representar la sintaxis formal completa.
 
 No escribas descripciones como esta (de todos modos, esto no es sintaxis formal real; es solo CSS seudocódigo con algunos marcadores de posición):
 
@@ -94,7 +94,7 @@ rgb(31 41 59);
 rgb(31 41 59 / 26%);
 ```
 
-Ten en cuenta que esta regla no se aplica al primer bloque de código en la sección "Sintaxis", que se especifica en su lugar por [Secciones de sintaxis](/es/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections#css_reference_syntax), y requiere que las funciones se escriban sin el nombre de la propiedad.
+Ten en cuenta que esta regla no se aplica al primer bloque de código en la sección "Sintaxis", que se especifica en su lugar por [Secciones de sintaxis](/es/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections#sintaxis_de_la_referencia_de_css), y requiere que las funciones se escriban sin el nombre de la propiedad.
 
 ## Animaciones
 
@@ -296,9 +296,9 @@ input:not(:checked):not(:disabled) {
 
 ## Uso de mayúsculas y minúsculas
 
-De forma predeterminada, todos los identificadores deben estar en minúsculas. Esto se aplica a selectores, funciones y palabras clave. Los identificadores personalizados deben usar [kebab-case](/es/docs/Glossary/Kebab_case), como `--custom-property` o `my-animation`. Consulta la [guía de estilo de HTML](/es/docs/MDN/Writing_guidelines/Code_style_guide/HTML#casing_convention_on_mdn) para las convenciones de uso de mayúsculas y minúsculas de ID y clases de HTML que se referencian como selectores CSS.
+De forma predeterminada, todos los identificadores deben estar en minúsculas. Esto se aplica a selectores, funciones y palabras clave. Los identificadores personalizados deben usar [kebab-case](/es/docs/Glossary/Kebab_case), como `--custom-property` o `my-animation`. Consulta la [guía de estilo de HTML](/es/docs/MDN/Writing_guidelines/Code_style_guide/HTML#convención_de_mayúsculas_y_minúsculas_en_mdn) para las convenciones de uso de mayúsculas y minúsculas de ID y clases de HTML que se referencian como selectores CSS.
 
-Las excepciones incluyen valores de palabras clave definidos en SVG, que por razones históricas están en [camelCase](/es/docs/Glossary/Camel_case), y deben escribirse como tales para mejorar la legibilidad. Estas palabras clave incluyen: [`currentColor`](/es/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword), valores de {{cssxref("text-rendering")}}, valores de {{cssxref("shape-rendering")}}, valores de {{cssxref("pointer-events")}} y valores de {{cssxref("color-interpolation-filters")}}.
+Las excepciones incluyen valores de palabras clave definidos en SVG, que por razones históricas están en [camelCase](/es/docs/Glossary/Camel_case), y deben escribirse como tales para mejorar la legibilidad. Estas palabras clave incluyen: [`currentColor`](/es/docs/Web/CSS/Reference/Values/color_value#palabra_clave_currentcolor), valores de {{cssxref("text-rendering")}}, valores de {{cssxref("shape-rendering")}}, valores de {{cssxref("pointer-events")}} y valores de {{cssxref("color-interpolation-filters")}}.
 
 ## Colores
 
@@ -345,7 +345,7 @@ h3 {
 
 ### Especificar familias de fuentes
 
-Al especificar una familia de fuentes, agrega siempre un nombre de [familia de fuentes genérica](/es/docs/Web/CSS/Reference/Properties/font-family#generic-name) como último respaldo. Esto asegura que si la fuente especificada no está disponible, el navegador muestre una fuente de respaldo más adecuada. Las [fuentes web seguras](/es/docs/Learn_web_development/Core/Text_styling/Fundamentals#web_safe_fonts) están exentas de esta regla.
+Al especificar una familia de fuentes, agrega siempre un nombre de [familia de fuentes genérica](/es/docs/Web/CSS/Reference/Properties/font-family) como último respaldo. Esto asegura que si la fuente especificada no está disponible, el navegador muestre una fuente de respaldo más adecuada. Las [fuentes web seguras](/es/docs/Learn_web_development/Core/Text_styling/Fundamentals#fuentes_seguras_para_la_web) están exentas de esta regla.
 
 ```css example-bad
 body {
@@ -372,7 +372,7 @@ Prefiere valores de palabras clave como `normal` y `bold`, y pesos relativos com
 
 ### Usa unidades flexibles/relativas
 
-Para obtener la máxima flexibilidad en la mayor cantidad posible de dispositivos, usa de forma predeterminada unidades relativas como `em`, `rem`, porcentajes y unidades de la ventana gráfica (si deseas que varíen según el ancho de la ventana gráfica) para todas las longitudes. Puedes obtener más información sobre esto en nuestra [guía de valores y unidades CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#relative_length_units).
+Para obtener la máxima flexibilidad en la mayor cantidad posible de dispositivos, usa de forma predeterminada unidades relativas como `em`, `rem`, porcentajes y unidades de la ventana gráfica (si deseas que varíen según el ancho de la ventana gráfica) para todas las longitudes. Puedes obtener más información sobre esto en nuestra [guía de valores y unidades CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#unidades_de_longitud_relativa).
 
 Escribe esto:
 
@@ -468,4 +468,4 @@ Con la regla-at `@import`, especifica la ruta del módulo como una cadena, no co
 
 ## Véase también
 
-[Índice de referencia de CSS](/es/docs/Web/CSS/Reference#index) - navega por nuestras páginas de referencia de propiedades CSS para ver algunos fragmentos de CSS buenos, concisos y significativos. Nuestros ejemplos interactivos en la sección "Pruébalo" generalmente están escritos siguiendo las pautas descritas en esta página.
+[Índice de referencia de CSS](/es/docs/Web/CSS/Reference#índice_de_palabras_clave) - navega por nuestras páginas de referencia de propiedades CSS para ver algunos fragmentos de CSS buenos, concisos y significativos. Nuestros ejemplos interactivos en la sección "Pruébalo" generalmente están escritos siguiendo las pautas descritas en esta página.

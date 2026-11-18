@@ -8,7 +8,7 @@ l10n:
 
 Este artículo describe detalladamente los criterios de inclusión de contenido en MDN Web Docs, el proceso de solicitud para nueva documentación y las expectativas y pautas para la parte solicitante.
 
-Esto está dirigido a proyectos más grandes. Para sugerir una nueva página o artículo, consulta la sección [Sugerir contenido](/es/docs/MDN/Writing_guidelines/What_we_write#suggesting_content) en la página "Qué escribimos".
+Esto está dirigido a proyectos más grandes. Para sugerir una nueva página o artículo, consulta la sección [Sugerir contenido](/es/docs/MDN/Writing_guidelines/What_we_write#sugerir_contenido) en la página "Qué escribimos".
 
 ## Tecnologías de estándares web
 

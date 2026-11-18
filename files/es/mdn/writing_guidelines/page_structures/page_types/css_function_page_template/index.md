@@ -38,7 +38,7 @@ l10n:
 > - **page-type**
 >   - : El valor de `page-type` para las funciones CSS es `css-function`.
 > - **status**
->   - : Etiquetas que describen el estado de esta característica. Un array que puede contener uno o más de los siguientes valores: `experimental`, `deprecated`, `non-standard`. Esta clave no debe configurarse manualmente: se establece automáticamente según los valores en los datos de compatibilidad del navegador para la característica. Consulta ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
+>   - : Etiquetas que describen el estado de esta característica. Un array que puede contener uno o más de los siguientes valores: `experimental`, `deprecated`, `non-standard`. Esta clave no debe configurarse manualmente: se establece automáticamente según los valores en los datos de compatibilidad del navegador para la característica. Consulta ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características).
 > - **browser-compat**
 >   - : Reemplaza el valor de marcador de posición `css.types.NombreDeLaFuncion` con la cadena de consulta para la función en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data/tree/main/css/types). Revisa la sección _Otras macros en la página_ de este bloque de notas para ver cómo se utiliza esta relación clave-valor para generar contenido para las secciones de _Especificaciones_ y _Compatibilidad con navegadores_.
 > - **sidebar**
@@ -56,7 +56,7 @@ l10n:
 >   Si la tecnología es experimental y está oculta detrás de una preferencia en Firefox, también debes rellenar una entrada para ella en la página de [Características experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
 > - `\{{Non-standard_Header}}` — esto genera un banner de **No estándar (Non-standard)** que indica que la característica no forma parte de ninguna especificación.
 >
-> No proporciones macros de encabezado de estado manualmente. Consulta la sección ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) para añadir estos estados a la página.
+> No proporciones macros de encabezado de estado manualmente. Consulta la sección ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características) para añadir estos estados a la página.
 >
 > Muestras de los banners **Experimental**, **Deprecated** y **Non-standard** se muestran justo después de este bloque de notas.
 >
@@ -78,7 +78,7 @@ Comienza el contenido de la página con un párrafo introductorio que nombre la 
 
 ## Pruébalo
 
-Esta sección es generada por la macro `InteractiveExample`. Incluye el título de la sección "Pruébalo" y el editor de código. Consulta la sección de [Ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#interactive_examples) en nuestras _Guías de escritura_ para más información.
+Esta sección es generada por la macro `InteractiveExample`. Incluye el título de la sección "Pruébalo" y el editor de código. Consulta la sección de [Ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#ejemplos_interactivos) en nuestras _Guías de escritura_ para más información.
 
 ## Sintaxis
 
@@ -121,7 +121,7 @@ Incluye un término y una definición para cada parámetro.
   - : Incluye una descripción del parámetro, su tipo de datos y su valor predeterminado si lo hubiera.
 
 > [!WARNING]
-> No añadas [macros de estado en línea](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_icons_in_definition_lists) en las páginas de CSS.
+> No añadas [macros de estado en línea](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#iconos_de_estado_en_las_listas_de_definiciones) en las páginas de CSS.
 
 ### Valor de retorno
 

@@ -44,7 +44,7 @@ Las siguientes macros se añaden automáticamente al contenido para que coincida
 - `\{{SeeCompatTable}}` — genera un banner de **Esta es una tecnología experimental** que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 - `\{{Non-standard_Header}}` — genera un banner de **No estándar** que indica que el uso de la tecnología no forma parte de una especificación formal, incluso si está implementada en varios navegadores.
 
-[Actualiza el estado de la característica en el repositorio browser-compat-data](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) para modificar estos valores.
+[Actualiza el estado de la característica en el repositorio browser-compat-data](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características) para modificar estos valores.
 
 > [!NOTE]
 > Aunque puedes actualizar manualmente estas macros en el contenido, los valores que no coincidan con los datos de compatibilidad de navegadores serán reemplazados o eliminados.
@@ -64,7 +64,7 @@ Es importante aclarar a los lectores el estado de estandarización actual de est
 
   ```md
   > [!WARNING]
-  > Esta característica está actualmente rechazada por <número> proveedor(es) de navegadores. Consulta la sección [Posiciones sobre estándares](#standards_positions) a continuación para obtener más detalles sobre la oposición.
+  > Esta característica está actualmente rechazada por <número> proveedor(es) de navegadores. Consulta la sección [Posiciones sobre estándares](#experimental_banner_de_posiciones_sobre_estándares) a continuación para obtener más detalles sobre la oposición.
   ```
 
   - Reemplaza `<número>` con el número de proveedores de navegadores que se oponen a la característica.
