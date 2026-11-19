@@ -3,12 +3,12 @@ title: "`column-rule-inset-junction-end` プロパティ"
 short-title: column-rule-inset-junction-end
 slug: Web/CSS/Reference/Properties/column-rule-inset-junction-end
 l10n:
-  sourceCommit: 1a2a5b56a689b441ebf3be91b90f15746c5a5a01
+  sourceCommit: 068c46001316cf268128ab7a26b33fd5705cde1b
 ---
 
 {{SeeCompatTable}}
 
-**`column-rule-inset-junction-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[接合端点](#接合端点を理解する)にある列間罫の区間の末尾側の端点をずらせます。つまり、罫線区間が交差する隙間の接合部にある端点をずらせます。
+**`column-rule-inset-junction-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[接合端点](#接合端点を理解する)にある列間罫の区間の下端をずらせます。つまり、罫線区間が交差する隙間の接合部にある端点をずらせます。
 
 {{InteractiveExample("CSS デモ: column-rule-inset-junction-end")}}
 
@@ -66,6 +66,7 @@ column-rule-inset-junction-end: overlap-join;
 }
 #example-element i {
   background-color: #efefef;
+  color: #333333;
   padding: 1em;
 }
 ```
@@ -113,17 +114,17 @@ column-rule-inset-junction-end: unset;
 
 `column-rule-inset-junction-end` プロパティは、いくつかの[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)を構成するプロパティです。
 
-- 列間罫の区間の先頭側と末尾側にある接合端点を内側にずらすには、`column-rule-inset-junction-end` プロパティと {{cssxref("column-rule-inset-junction-start")}} プロパティを {{cssxref("column-rule-inset-junction")}} 一括指定で設定できます。
+- 列間罫の区間の上端側と下端側にある接合端点を内側にずらすには、`column-rule-inset-junction-end` プロパティと {{cssxref("column-rule-inset-junction-start")}} プロパティを {{cssxref("column-rule-inset-junction")}} 一括指定で設定できます。
 
-- 列間罫の区間の末尾側にあるすべての端点を内側にずらすには、`column-rule-inset-junction-end` プロパティと {{cssxref("column-rule-inset-cap-end")}} プロパティを {{cssxref("column-rule-inset-end")}} 一括指定で設定できます。
+- 列間罫の区間の下端側にあるすべての端点を内側にずらすには、`column-rule-inset-junction-end` プロパティと {{cssxref("column-rule-inset-cap-end")}} プロパティを {{cssxref("column-rule-inset-end")}} 一括指定で設定できます。
 
-- 列間罫の区間の末尾側にある接合端点と、行間罫の区間の末尾側にある接合端点を内側にずらすには、`column-rule-inset-junction-end` プロパティと {{cssxref("row-rule-inset-junction-end")}} プロパティを {{cssxref("rule-inset-junction-end")}} 一括指定で設定できます。
+- 区間の上端、下端、左端、右端にある接合端点を内側にずらすには、{{cssxref("column-rule-inset-junction")}} 一括指定と {{cssxref("row-rule-inset-junction")}} 一括指定を {{cssxref("rule-inset-junction")}} 一括指定で設定できます。
 
 このプロパティの `-start`、`-cap`、`row-` に相当するプロパティも含め、すべての区間端点は {{cssxref("rule-inset")}} 一括指定で設定できます。
 
 ### 接合端点を理解する
 
-_接合端点_とは、内部の隙間にある区間端点のうち、ほかの罫線区間や列間罫の区間が存在する隙間の交差部に達するものです。`column-rule-inset-junction-end` プロパティは、列間罫の接合端点の末尾側を内側にずらし、区間を短縮または延長できます。
+接合端点とは、内部の隙間にある区間端点のうち、ほかの罫線区間や列間罫の区間が存在する隙間の交差部に達するものです。`column-rule-inset-junction-end` プロパティは、列間罫の接合端点の末尾側を内側にずらし、区間を短縮または延長できます。
 
 `column-rule-inset-junction-end` に長さを指定すると、その値の分だけ区間が内側にずれます。負の長さの値を指定すると外側にずれ、接合区間の末尾側の端点が伸びます。パーセント値は {{cssxref("row-gap")}} の大きさを基準とします。`-50%` を設定すると、行の隙間の幅にかかわらず、接合区間の末尾側の端点がその下の行の隙間の中ほどまで伸びます。
 
@@ -283,9 +284,9 @@ visibility.addEventListener("change", () => {
 
 ### `overlap-join` 値
 
-`overlap-join` 値は内部区間の末尾側の端点を外側にずらし、交差する行間罫の末尾に揃えます。この値は {{cssxref("row-gap")}} の半分（隙間の中央まで伸ばす長さ）と、行間罫の幅の半分を足した値として解決されます。
+`overlap-join` 値は内部区間の末尾側の端点を外側にずらし、交差する行間罫の下端に揃えます。この値は {{cssxref("row-gap")}} の半分（隙間の中央まで伸ばす長さ）と、行間罫の幅の半分を足した値として解決されます。
 
-`column-rule-inset-junction-end` に `overlap-join` キーワード値を設定すると、接合端点を持つ区間の末尾側が行の隙間に伸び、その隙間に描画された行間罫の末尾に接続します。
+`column-rule-inset-junction-end` に `overlap-join` キーワード値を設定すると、接合端点を持つ列間罫の区間が行の隙間に伸び、その隙間に描画された行間罫の下端に接続します。
 
 次のライブサンプルでは、`column-rule-inset-junction-end` に `overlap-join` を設定しています。
 
@@ -392,7 +393,7 @@ ruleWidth.addEventListener("input", () => {
 
 ### 基本的な使い方
 
-この例では、`column-rule-inset-junction-end` を設定して、フレックスコンテナー内の接合区間の末尾側の端点を内側にずらす方法を示します。
+この例では、`column-rule-inset-junction-end` を設定して、フレックスコンテナー内の列間罫の接合区間の末尾側の端点を内側にずらす方法を示します。
 
 #### HTML
 
@@ -530,7 +531,7 @@ inset.addEventListener("input", () => {
 
 {{EmbedLiveSample("Basic usage", "", "330")}}
 
-インセットの大きさを変更してみてください。右側の例では、列間罫は上から下まで続く 1 つの区間であり、この区間には 2 つのキャップ端点があり、接合端点はありません。そのため、`column-rule-inset-junction-end` の値を変更しても、この例には影響しません。
+インセットの大きさを変更してみてください。このプロパティは、複数の区間に分割された列間罫にのみ影響します。列間罫がコンテナーの高さ全体にわたる単一の区間である場合、その区間には 2 つのキャップ端点があり、接合端点はありません。そのため、`column-rule-inset-junction-end` の値を変更しても影響しません。
 
 ## 仕様書
 
@@ -544,7 +545,6 @@ inset.addEventListener("input", () => {
 
 - {{cssxref("column-rule-inset-junction-start")}}
 - {{cssxref("column-rule-inset-junction")}} 一括指定
-- {{cssxref("rule-inset-junction-start")}} 一括指定
 - {{cssxref("column-rule-inset")}} 一括指定
 - {{cssxref("rule-inset")}} 一括指定
 - {{cssxref("column-rule-break")}}
