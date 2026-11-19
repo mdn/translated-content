@@ -3,10 +3,10 @@ title: "`column-gap` プロパティ (CSS)"
 short-title: column-gap
 slug: Web/CSS/Reference/Properties/column-gap
 l10n:
-  sourceCommit: 04dfe418f2942ae739d41592c22fafa3679fc03c
+  sourceCommit: e57c161bccdd08db7e46922255e1dc3ea74058d4
 ---
 
-**`column-gap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウト、フレックスボックスレイアウト、グリッドレイアウトの要素の段または列の間の隙間（{{glossary("Gutters", "溝")}}）の寸法を設定します。
+**`column-gap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウト、フレックスボックスレイアウト、グリッドレイアウトにおける要素の列間（段組みでは段間）の隙間（{{glossary("Gutters", "溝")}}）の寸法を設定します。
 
 {{InteractiveExample("CSS デモ: column-gap")}}
 
@@ -30,11 +30,11 @@ column-gap: 20px;
 <section class="default-example" id="default-example">
   <div class="example-container">
     <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
     </div>
   </div>
 </section>
@@ -92,7 +92,7 @@ column-gap: unset;
 
 ## 解説
 
-`column-gap` プロパティは、要素の列間（段間）のサイズを設定します。このプロパティは、コンテナー内のアイテム間に固定長の隙間を指定し、コンテナーのインライン軸上でボックスを別個のものとします。負の値は無効です。段組みのコンテナーにおける段間は、デフォルトで `1em` の幅になりますが、グリッドの列間やフレックスアイテム、行の間には隙間は追加されません。レイアウトの種類ごとの隙間に関する情報については、[CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)を参照してください。
+`column-gap` プロパティは、要素の列間（段組みでは段間）の隙間のサイズを設定します。このプロパティは、コンテナー内のアイテム間に固定長の隙間を指定し、コンテナーのインライン軸上でボックスを隔てます。負の値は無効です。段組みコンテナーではデフォルトで幅 `1em` の隙間になりますが、グリッドの列、フレックスアイテム、行の間には隙間が追加されません。レイアウトの種類ごとの隙間については、[CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)を参照してください。
 
 パーセント値は、[コンテンツボックス](/ja/docs/Web/CSS/Guides/Box_model/Introduction#コンテンツ領域)のサイズが確定している場合はコンテナー要素のインライン軸のサイズを基準に、そうでない場合は `0` を基準に計算されます。ただし、グリッドレイアウトの場合は例外であり、パーセント値が循環するので、{{glossary("intrinsic size", "内在サイズ")}}の寄与を決定する際には 0 を基準として処理されますが、コンテンツのレイアウトを行う際には、要素のコンテンツボックスを基準として処理されます。詳しくは、[隙間の値のパーセント値での指定](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps#specifying_gap_values_as_percentages)を参照してください。
 
@@ -133,7 +133,7 @@ column-gap: unset;
 
 #### CSS
 
-{{cssxref("display")}} プロパティを `flex` に、{{cssxref("flex-flow")}} プロパティを `row wrap` に設定し、アイテムが横一列に並ぶフレックスコンテナーを生成します。これにより、必要に応じてアイテムが改行されて表示することができるようになります。それぞれのフレックスアイテムには、`200px` または `300px` のフレックスベースが指定されています。
+{{cssxref("display")}} プロパティを `flex` に、{{cssxref("flex-flow")}} プロパティを `row wrap` に設定し、アイテムが横一列に並ぶフレックスコンテナーを生成します。必要に応じてアイテムは次の行に折り返されます。それぞれのフレックスアイテムには、`200px` または `300px` のフレックスベースが指定されています。
 
 {{cssxref("column-rule")}} プロパティを使用して、列間罫を定義します。フレックスコンテナーの `column-gap` 値を `20px` に設定することで、それぞれの行の隣接するフレックスアイテムの間に `20px` の隙間が生成されます。列間罫は、この隙間の中央に描画されます。
 
@@ -161,7 +161,7 @@ div:nth-of-type(3n) {
 
 {{EmbedLiveSample("Flex_layout", "auto", "170")}}
 
-フレックスアイテムの行間に垂直方向の空間を設定するには、{{cssxref("row-gap")}} プロパティに 0 以外の値を指定してください。必要に応じて、`row-gap` と `column-gap` の両方を `gap` 一括指定を使用して設定することもできます。
+フレックスアイテムの行の隙間に垂直方向の空間を設定するには、{{cssxref("row-gap")}} プロパティに 0 以外の値を指定してください。必要に応じて、`row-gap` と `column-gap` の両方を `gap` 一括指定を使用して設定することもできます。
 
 ### グリッドレイアウト
 
@@ -237,7 +237,7 @@ div:nth-of-type(3n) {
 
 ```html-nolint
 <p class="content-box">
-  これは、CSS の `column-gap` プロパティを使用して、列間の溝を 40px に設定して作成した、段組みテキストです。面白くて期待が膨らみますね。私はそう思います！
+  これは、CSS の `column-gap` プロパティに `thin` を指定して作成した段組みテキストです。段組みレイアウトでは、`column-gap` プロパティのデフォルト値 `normal` は `1em` に解決されます。
 </p>
 ```
 
@@ -282,7 +282,9 @@ div:nth-of-type(3n) {
 - {{CSSxRef("gap")}}
 - {{CSSxRef("column-rule")}}
 - {{CSSxRef("rule")}}
+- [CSS 隙間と隙間装飾プロパティの概要](/ja/docs/Web/CSS/Guides/Gaps/Overview)
 - [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+- [CSS 隙間の罫線の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_rules)
 - [グリッドレイアウトの基本概念: 溝](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#溝)
 - [段組みのスタイル設定](/ja/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)
 - [CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)モジュール
