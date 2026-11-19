@@ -3,7 +3,7 @@ title: Content-Digest ヘッダー
 short-title: Content-Digest
 slug: Web/HTTP/Reference/Headers/Content-Digest
 l10n:
-  sourceCommit: e5a63f8d002dcac9654be79bd03bfda262dd4d89
+  sourceCommit: f4174abd45aefde55b6d45144c57ec3c2dc037a1
 ---
 
 HTTP の **`Content-Digest`** {{Glossary("request header", "リクエスト")}}・{{Glossary("response header", "レスポンスヘッダー")}}は、メッセージのコンテンツにハッシュアルゴリズムを適用して計算された{{Glossary("hash function", "ダイジェスト")}}を提供します。
@@ -197,7 +197,7 @@ Repr-Digest: sha-512=:PlrIZYU3M76B30wGsL0h6O79BoxHTdAG+RnMPjOyECTSJCN/KnYdOrSCCW
 
 ## 関連情報
 
-- {{HTTPHeader("Want-Content-Digest")}} ヘッダー、コンテンツダイジェストをリクエストするためのもの
-- {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}} 表現ダイジェストヘッダー
+- コンテンツダイジェストをリクエストするための {{HTTPHeader("Want-Content-Digest")}} ヘッダー
+- 表現ダイジェストヘッダーの {{HTTPHeader("Repr-Digest")}} および {{HTTPHeader("Want-Repr-Digest")}}
 - {{HTTPHeader("ETag")}}
-- [Digital Signatures for APIs](https://developer.ebay.com/develop/guides/digital-signatures-for-apis) SDK ガイドでは、HTTP 呼び出しにおけるデジタル署名に `Content-Digest` を使用しています（developer.ebay.com）
+- [Digital Signatures for APIs](https://developer.ebay.com/develop/guides/sell/digital-signatures-for-apis) SDK ガイドでは、HTTP 呼び出しにおけるデジタル署名に `Content-Digest` を使用しています（developer.ebay.com）

@@ -17,7 +17,8 @@ slug: Web/API/CDATASection
 
 ```html
 <foo>
-  这是一个 CDATA 片段：<![CDATA[ < > & ]]> 其中包含了一些没有转义的字符。
+  这是一个 CDATA 片段：<![CDATA[ < > & ]]>
+  其中包含了一些没有转义的字符。
 </foo>
 ```
 

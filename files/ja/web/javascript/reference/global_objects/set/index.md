@@ -9,13 +9,13 @@ l10n:
 
 ## 解説
 
-`Set` オブジェクトは値の集合です。 `Set` に**重複する値は格納出来ません**。 `Set` 内の値は集合内で一意になります。 `Set` はその要素について挿入順で反復処理を行うことができます。挿入順は、各要素が [`add`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/add) メソッドによって正常に `Set` に挿入された順番に対応します。
+`Set` オブジェクトは値の集合です。 `Set` に**重複する値は格納出来ません**。 `Set` 内の値は集合内で一意になります。 `Set` はその要素について挿入順で反復処理を行うことができます。挿入順は、各要素が [`add()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/add) メソッドによって正常に `Set` に挿入された順番に対応します。
 
 仕様書では `Set` の実装について「平均アクセス時間が集合内の要素数に対して線形探索以下」であることが要求されています。したがって、計算量が O(N) よりも優れている限り、内部的にはハッシュ表（ルックアップは O(1)）、探索木（ルックアップは O(log(N))）、または他のデータ構造として表すことができます。
 
 ### 値の等価性
 
-値の等値性は、 [SameValueZero](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムに基づいています。（以前は [SameValue](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#object.is_を使用した同値等価性) を使用しており、0 と -0 は異なるものとして扱われていました。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)の "Key equality for -0 and 0" を参照してください。）つまり、 {{jsxref("NaN")}} は `NaN` と同じとみなされ（例え `NaN !== NaN` であっても）、それ以外の値は `===` 演算子の挙動に従って等しいとみなされます。
+値の等値性は、 [SameValueZero](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムに基づいています。（以前は [SameValue](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#object.is_を使用した同値等価性) を使用しており、0 と -0 は異なるものとして扱われていました。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)の "Key equality for -0 and 0" を参照してください。）つまり、 {{jsxref("NaN")}} は `NaN` と同じとみなされ（例え `NaN !== NaN` であっても）、それ以外の値は `===` 演算子の挙動に従って等しいとみなされます。また、オブジェクトキーの場合、等価性はオブジェクトの同一性に基づきます。これらは値ではなく、参照によって比較されます。例については、[Set オブジェクトの使用](#set_オブジェクトの使用)を参照してください。
 
 ### パフォーマンス
 
@@ -141,7 +141,7 @@ interface GPUSupportedFeatures {
 
 `Set` 風オブジェクトは、読み取り専用か読み書き可能かのどちらかです（上記の IDL で `readonly` キーワードを確認してください）。
 
-- 読み取り専用の `Set` 風オブジェクトには {{jsxref("Set/size", "size")}}, and the methods: {{jsxref("Set/entries", "entries()")}}, {{jsxref("Set/forEach", "forEach()")}}, {{jsxref("Set/has", "has()")}}, {{jsxref("Set/keys", "keys()")}}, {{jsxref("Set/values", "values()")}}, [`Symbol.iterator()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) の各メソッドがあります。
+- 読み取り専用の `Set` 風オブジェクトには {{jsxref("Set/size", "size")}}, and the methods: {{jsxref("Set/entries", "entries()")}}, {{jsxref("Set/forEach", "forEach()")}}, {{jsxref("Set/has", "has()")}}, {{jsxref("Set/keys", "keys()")}}, {{jsxref("Set/values", "values()")}}, [`[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) の各メソッドがあります。
 - 読み書き可能な `Set` 風オブジェクトには、それに加えて {{jsxref("Set/clear", "clear()")}}, {{jsxref("Set/delete", "delete()")}}, {{jsxref("Set/add", "add()")}} の各メソッドがあります。
 
 メソッドとプロパティは `Set` の等価なエンティティと同じ動作をしますが、項目のの型に制限があります。
@@ -156,6 +156,7 @@ interface GPUSupportedFeatures {
 - {{domxref("CustomStateSet")}}
 - {{domxref("FontFaceSet")}}
 - {{domxref("Highlight")}}
+- {{domxref("ViewTransitionTypeSet")}}
 
 ## コンストラクター
 
@@ -181,19 +182,19 @@ interface GPUSupportedFeatures {
 ## インスタンスメソッド
 
 - {{jsxref("Set.prototype.add()")}}
-  - : この `Set` オブジェクト内に同じ値を持つ要素がまだ存在しなかった場合、指定した値を持つ新しい要素を `Set` オブジェクトに挿入します。
+  - : 指定された値がまだこの集合に存在していない場合、その値を追加します。
 - {{jsxref("Set.prototype.clear()")}}
   - : この `Set` オブジェクトからすべての要素を取り除きます。
 - {{jsxref("Set.prototype.delete()")}}
-  - : `value` に関連した要素を取り除き、要素の削除に成功したかどうかを示す論理値を返します。 `Set.prototype.has(value)` はその後は `false` を返します。
+  - : 指定された値がこの集合に含まれている場合、その値を除去します。
 - {{jsxref("Set.prototype.difference()")}}
-  - : 集合を取り、この `Set` の中にあって与えられた集合の中にない要素が入った新しい `Set` を返します。
+  - : 集合を取り、この集合の中にあって与えられた集合の中にない要素が入った新しい `Set` を返します。
 - {{jsxref("Set.prototype.entries()")}}
   - : `Set` オブジェクト内の各要素を **`[value, value]` の配列**の形で挿入順で返す、新しいイテレーターオブジェクトを返します。これは {{jsxref("Map")}} オブジェクトと似ていますが、それぞれの項目の _key_ が `Set` では _value_ と同じになります。
 - {{jsxref("Set.prototype.forEach()")}}
   - : この `Set` オブジェクト内に存在する各値に対して、挿入順に一度ずつ `callbackFn` を呼びます。`thisArg` 引数が指定された場合、それぞれの `callbackFn` の呼び出しにおいて `this` の値として使用されます。
 - {{jsxref("Set.prototype.has()")}}
-  - : この `Set` オブジェクト内に引数で与えられた値をもつ要素が存在するかどうかを示す論理値を返します。
+  - : 指定された値がこの `Set` に存在するかどうかを示す論理値を返します。
 - {{jsxref("Set.prototype.intersection()")}}
   - : 集合を取り、この `Set` の中と与えられた集合の中の両方にある要素が入った新しい `Set` を返します。
 - {{jsxref("Set.prototype.isDisjointFrom()")}}
@@ -416,7 +417,8 @@ console.assert(set.size === array.length);
 
 ## 関連情報
 
-- [`Set` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#set)
+- [`Set` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/collections#h-set)
+- [es-shims による `Set` のポリフィル](https://www.npmjs.com/package/es-set)
 - {{jsxref("Map")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

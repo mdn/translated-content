@@ -70,12 +70,12 @@ The following code also uses `break` statements with labeled blocks but generate
 
 ```js
 block_1: {
-  console.log('1');
+  console.log("1");
   break block_2; // SyntaxError: label not found
 }
 
 block_2: {
-  console.log('2');
+  console.log("2");
 }
 ```
 

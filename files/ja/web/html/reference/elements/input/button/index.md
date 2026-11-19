@@ -3,15 +3,18 @@ title: '`<input type="button">` 属性値'
 short-title: <input type="button">
 slug: Web/HTML/Reference/Elements/input/button
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
 {{HTMLElement("input")}} 要素の **`button`** 型は、プッシュボタンとして描画され、イベントハンドラー関数（ふつうは {{domxref("Element/click_event", "click")}} イベント）を割り当てることで、ウェブページのあらゆる場所でカスタム機能を制御するようにプログラムすることができます。
 
+> [!NOTE]
+> `<input>` 要素の `button` 型は完全に有効な HTML ですが、ボタンの作成には {{HTMLElement("button")}} 要素が好まれます。{{HTMLElement("button")}} のラベル文字列は開始タグと終了タグの間に挿入されるため、画像を含む HTML をラベルに含めることができます。
+
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<input class="styled" type="button" value="Add to favorites" />
+<input class="styled" type="button" value="お気に入りに追加" />
 ```
 
 ```css interactive-example
@@ -47,9 +50,6 @@ l10n:
 }
 ```
 
-> [!NOTE]
-> `<input>` 要素の `button` 型は完全に妥当な HTML ですが、より新しい {{HTMLElement("button")}} 要素が、ボタンの作成にはより好まれるようになりました。 {{HTMLElement("button")}} のラベル文字列は開始タグと終了タグの間に挿入され、ラベルに画像を含む HTML を含めることができます。
-
 ## 値
 
 ### value ありのボタン
@@ -64,7 +64,7 @@ l10n:
 
 ### value なしのボタン
 
-`value` を指定しなかった場合は、無印のボタンになります。
+`value` を指定しなかった場合は、空のボタンになります。
 
 ```html
 <input type="button" />
@@ -148,7 +148,7 @@ function updateButton() {
 ボタンを無効にするには、次のように [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled) グローバル属性を指定するだけです。
 
 ```html
-<input type="button" value="Disable me" disabled />
+<input type="button" value="無効化" disabled />
 ```
 
 #### disabled 属性の設定
@@ -156,7 +156,7 @@ function updateButton() {
 実行時に `disabled` に `true` または `false` を設定するだけで、ボタンを有効化したり無効化したりすることができます。この例では、ボタンは有効の状態で始まりますが、押すと `button.disabled = true` を使用して無効化されます。それから {{domxref("Window.setTimeout", "setTimeout()")}} 関数を使用して、2 秒後にボタンの状態を有効の状態にリセットしています。
 
 ```html
-<input type="button" value="Enabled" />
+<input type="button" value="有効" />
 ```
 
 ```js
@@ -166,10 +166,10 @@ button.addEventListener("click", disableButton);
 
 function disableButton() {
   button.disabled = true;
-  button.value = "Disabled";
+  button.value = "無効";
   setTimeout(() => {
     button.disabled = false;
-    button.value = "Enabled";
+    button.value = "有効";
   }, 2000);
 }
 ```
@@ -184,10 +184,10 @@ function disableButton() {
 
 ```html
 <fieldset>
-  <legend>Button group</legend>
-  <input type="button" value="Button 1" />
-  <input type="button" value="Button 2" />
-  <input type="button" value="Button 3" />
+  <legend>ボタングループ</legend>
+  <input type="button" value="ボタン 1" />
+  <input type="button" value="ボタン 2" />
+  <input type="button" value="ボタン 3" />
 </fieldset>
 ```
 
@@ -208,7 +208,7 @@ function disableButton() {
 {{EmbedLiveSample("Inheriting_the_disabled_state", 650, 100)}}
 
 > [!NOTE]
-> Firefox は他のブラウザーと異なり、ページが再読み込みされた後でも `<input>` 要素の `disabled` 状態を維持します。回避するには、 `<input>` 要素の [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete) 属性を `off` に設定します。（詳しくは [Firefox バグ 654072](https://bugzil.la/654072) を参照してください。）
+> Firefox は他のブラウザーと異なり、ページが再読み込みされた後でも `<input>` 要素の `disabled` 状態を維持します。回避するには、 `<input>` 要素の [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete) 属性を `off` に設定してください。（詳しくは [Firefox バグ 654072](https://bugzil.la/654072) を参照してください。）
 
 ## 検証
 
@@ -220,18 +220,18 @@ function disableButton() {
 
 ```html
 <div class="toolbar">
-  <input type="color" aria-label="select pen color" />
+  <input type="color" aria-label="ペンの色を選択" />
   <input
     type="range"
     min="2"
     max="50"
     value="30"
-    aria-label="select pen size" /><span class="output">30</span>
-  <input type="button" value="Clear canvas" />
+    aria-label="ペンのサイズを選択" /><span class="output">30</span>
+  <input type="button" value="キャンバスを消去" />
 </div>
 
 <canvas class="myCanvas">
-  <p>Add suitable fallback here.</p>
+  <p>適切な代替コンテンツをここに追加してください。</p>
 </canvas>
 ```
 
@@ -364,10 +364,6 @@ draw();
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>なし</td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>

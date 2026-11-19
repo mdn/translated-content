@@ -26,7 +26,7 @@ import.defer(moduleName, options)
 
 ### 返値
 
-モジュールグラフの[読み込み](/ja/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph)とリンクが完了し、最上位の `await` を含み先行評価される依存モジュールの評価がすべて完了した後、[遅延評価されるモジュール名前空間オブジェクト](/ja/docs/Web/JavaScript/Reference/Statements/import/defer#deferred_module_namespace_object)で履行されるプロミスを返します。
+モジュールグラフの[読み込み](/ja/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph)とリンクが完了し、先行して評価される[最上位の `await` の依存関係](/ja/docs/Web/JavaScript/Reference/Statements/import/defer#top-level_await)の評価がすべて完了した後、[遅延評価されるモジュール名前空間オブジェクト](/ja/docs/Web/JavaScript/Reference/Statements/import/defer#deferred_module_namespace_object)で履行されるプロミスを返します。
 
 通常の [`import()`](/ja/docs/Web/JavaScript/Reference/Operators/import#返値) と同様に、モジュールまたはその依存関係を読み込み、構文解析、リンクできない場合、プロミスは拒否されます。先行して評価されるモジュールで例外が発生した場合も拒否されます。一方、遅延されたままの評価で発生するエラーは、評価を開始する名前空間の操作によって同期的に発生します。
 

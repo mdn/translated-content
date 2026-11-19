@@ -1,9 +1,9 @@
 ---
 title: StorageArea.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/remove
+l10n:
+  sourceCommit: 81c80db5f9f98dd2ac197474829fe52cd75acf1b
 ---
-
-{{AddonSidebar}}
 
 1 つ以上のアイテムをストレージ領域から削除します。
 
@@ -11,30 +11,26 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/remove
 
 ## 構文
 
-```js
+```js-nolint
 let removingItem = browser.storage.<storageType>.remove(
-  keys             // string, or array of strings
+  keys             // 文字列または文字列の配列
 )
 ```
 
-`<storageType>` は {{WebExtAPIRef("storage.sync")}} または {{WebExtAPIRef("storage.local")}} の書き込み可能なストレージタイプです。
+`<storageType>` は、書き込み可能なストレージ種別であり、{{WebExtAPIRef("storage.local")}}、{{WebExtAPIRef("storage.session")}}、{{WebExtAPIRef("storage.sync")}} のいずれかです。
 
 ### 引数
 
 - `keys`
-  - : 削除したいアイテムのキー(文字列または文字列の配列)を指定します。
+  - : 削除するアイテムのキー（文字列または文字列の配列）です。
 
-### 返り値
+### 返値
 
-成功時は引数の無い [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。 失敗した場合 promise はエラーメッセージと共にリジェクトされます。
-
-## ブラウザーの互換性
-
-{{Compat}}
+操作に成功した場合は引数なしで履行される [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) です。操作に失敗した場合、このプロミスはエラーメッセージとともに拒否されます。
 
 ## 例
 
-1 つのアイテムを削除する例です。
+次の例では、アイテムを 1 つ削除します。
 
 ```js
 function onRemoved() {
@@ -45,11 +41,15 @@ function onError(e) {
   console.log(e);
 }
 
-let removeKitten = browser.storage.remove("kitten");
+let removeKitten = browser.storage.sync.remove("kitten");
 removeKitten.then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}
 
+## ブラウザーの互換性
+
+{{Compat}}
+
 > [!NOTE]
-> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。
+> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage)<sup>(英語)</sup> API に基づいています。このドキュメントは Chromium のコードにある [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) から派生したものです。
