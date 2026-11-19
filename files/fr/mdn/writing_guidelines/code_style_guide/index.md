@@ -3,7 +3,7 @@ title: Guide pour rédiger des exemples de code
 short-title: Style de code
 slug: MDN/Writing_guidelines/Code_style_guide
 l10n:
-  sourceCommit: ad54ecbfce4d029128ac83686707dd500e8e7b1c
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
 
 Les règles qui sont décrites dans cet article concernent la mise en forme des exemples de code, quel que soit le langage de programmation concerné. Pour savoir quel contenu inclure lors de l'écriture d'exemples de code, veuillez vous référer [au guide stylistique](/fr/docs/MDN/Writing_guidelines/Writing_style_guide#exemples_de_code).
@@ -20,7 +20,10 @@ Pour les règles spécifiques à chaque langage, voir ces différents articles&n
 Il y a une considération essentielle à garder à l'esprit&nbsp;: **les lecteur·ice·s vont copier-coller les exemples dans leur propre code et peuvent les mettre en production.**
 Vous devez donc vous assurer que les exemples de code sont utilisables, respectent les bonnes pratiques généralement admises et ne font rien qui puisse rendre une application non sécurisée, inefficace, lourde ou inaccessible.
 
-Si l'exemple de code n'est pas exécutable ou prêt pour la production, ajoutez un avertissement dans un commentaire de code et dans le texte explicatif&nbsp;: par exemple, s'il ne s'agit que d'un extrait et non d'un exemple complet, précisez-le. Cela signifie aussi que vous devez fournir toutes les informations nécessaires pour exécuter l'exemple, y compris les dépendances et les instructions d'installation.
+Exécutez et testez chaque exemple de code avant de l'envoyer, quel que soit l'outil que vous avez utilisé pour le créer.
+Ne collez pas de code que vous n'avez pas vérifié.
+
+Si un exemple de code n'est qu'un extrait incomplet, précisez clairement qu'il ne s'agit pas d'un exemple complet. Fournissez toutes les informations nécessaires pour exécuter l'exemple, y compris les dépendances et les instructions d'installation. Si l'exemple n'est pas prêt pour la production, ajoutez un avertissement dans un commentaire de code et dans le texte explicatif.
 
 Les exemples de code doivent être suffisamment simples pour être compréhensibles, mais assez complexes pour faire quelque chose d'intéressant, et (de préférence) d'utile.
 L'objectif n'est pas forcément de produire un code efficace ou astucieux qui impressionne les expert·e·s et offre de grandes fonctionnalités, mais plutôt de partager des exemples réduits et fonctionnels qui peuvent être compris et assimilés le plus rapidement possible.

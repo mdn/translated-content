@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-rowindex"
 short-title: aria-rowindex
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 L'attribut `aria-rowindex` définit la position d'un élément par rapport au nombre total de lignes dans un tableau, une grille ou une arborescence de grille.
@@ -18,12 +18,37 @@ Ajouté sur l'élément {{HTMLElement('tr')}} ou sur un élément avec le rôle 
 
 La valeur de `aria-rowindex` est un entier supérieur ou égal à `1`, supérieur à la valeur de `aria-rowindex` de toute ligne précédente, et inférieur ou égal au nombre de lignes du tableau complet.
 
-Si toutes les lignes sont chargées et présentes dans le DOM, il n'est pas nécessaire d'ajouter `aria-rowindex` car les navigateurs calculent automatiquement l'index de chaque ligne. Cependant, lorsque seule une partie des lignes est présente dans le DOM, `aria-rowindex` est nécessaire pour indiquer la position de chaque ligne dans le tableau complet. Si seule une partie des lignes est chargée, il faut aussi inclure [`aria-rowcount`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount) sur l'ancêtre tableau, même si le nombre total de lignes n'est pas connu.
+Si toutes les lignes sont chargées et présentes dans le DOM, il n'est pas nécessaire d'ajouter `aria-rowindex`, car les navigateurs calculent automatiquement l'index de chaque ligne. Cependant, lorsque seule une partie des lignes est présente dans le DOM, `aria-rowindex` est nécessaire pour indiquer la position de chaque ligne dans le tableau complet. Si seule une partie des lignes est chargée, il faut aussi inclure [`aria-rowcount`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount) sur l'ancêtre tableau, même si le nombre total de lignes n'est pas connu.
 
 Si le tableau avec une sous-partie de lignes possède une cellule qui s'étend sur plusieurs lignes, la ligne et la cellule doivent toutes deux avoir l'attribut `aria-rowindex`. Si une cellule s'étend sur plusieurs lignes (quand le rôle de la cellule inclut l'attribut `aria-rowspan` ou que la cellule HTML possède l'attribut `rowspan` supérieur à 1), incluez la valeur de `aria-rowindex` de la ligne de départ sur la cellule en plus de l'attribut d'étendue de ligne approprié. La valeur doit être l'index de la ligne où commence l'étendue.
 
 > [!NOTE]
 > L'attribut `aria-rowindex` doit être ajouté à chaque ligne, mais il est optionnel sur les cellules, sauf pour les cellules qui s'étendent sur plusieurs lignes&nbsp;: l'attribut `aria-rowindex` est requis sur toutes les cellules étendues.
+
+## Valeurs
+
+- `<integer>`
+  - : Un entier supérieur ou égal à 1, supérieur à la valeur de `aria-rowindex` de la ligne précédente (si elle existe), et inférieur ou égal à la valeur de [`aria-rowcount`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount).
+
+## Interfaces associées
+
+- {{DOMxRef("Element.ariaRowIndex")}}
+  - : La propriété {{DOMxRef("Element.ariaRowIndex", "ariaRowIndex")}}, qui fait partie de l'interface {{DOMxRef("Element")}}, reflète la valeur de l'attribut `aria-rowindex`.
+- {{DOMxRef("ElementInternals.ariaRowIndex")}}
+  - : La propriété {{DOMxRef("ElementInternals.ariaRowIndex", "ariaRowIndex")}}, qui fait partie de l'interface {{DOMxRef("ElementInternals")}}, reflète la valeur de l'attribut `aria-rowindex`.
+
+## Rôles associés
+
+Utilisé dans les rôles&nbsp;:
+
+- [`cell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
+- [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
+
+Hérité dans les rôles&nbsp;:
+
+- [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
 
 ## Exemple
 
@@ -65,31 +90,6 @@ L'exemple suivant montre une grille de 24 lignes, dont la première et les ligne
 ```
 
 Notez que `aria-rowspan` et `aria-rowindex` sont présents sur la cellule «&nbsp;Gardienne de but&nbsp;», qui s'étend sur deux lignes.
-
-## Valeurs
-
-- `<integer>`
-  - : Un entier supérieur ou égal à 1, supérieur à la valeur de `aria-rowindex` de la ligne précédente (si elle existe), et inférieur ou égal à la valeur de [`aria-rowcount`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount).
-
-## Interfaces associées
-
-- {{DOMxRef("Element.ariaRowIndex")}}
-  - : La propriété {{DOMxRef("Element.ariaRowIndex", "ariaRowIndex")}}, qui fait partie de l'interface {{DOMxRef("Element")}}, reflète la valeur de l'attribut `aria-rowindex`.
-- {{DOMxRef("ElementInternals.ariaRowIndex")}}
-  - : La propriété {{DOMxRef("ElementInternals.ariaRowIndex", "ariaRowIndex")}}, qui fait partie de l'interface {{DOMxRef("ElementInternals")}}, reflète la valeur de l'attribut `aria-rowindex`.
-
-## Rôles associés
-
-Utilisé dans les rôles&nbsp;:
-
-- [`cell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
-- [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
-
-Hérité dans les rôles&nbsp;:
-
-- [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-- [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-- [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
 
 ## Spécifications
 

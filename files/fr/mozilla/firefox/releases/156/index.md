@@ -3,7 +3,7 @@ title: Firefox 156 note de version pour les développeurs
 short-title: Firefox 156
 slug: Mozilla/Firefox/Releases/156
 l10n:
-  sourceCommit: beede695ee6e0cceaabc3e678eb75a148d77a81e
+  sourceCommit: 4d218f9fdff30e8e01a26402b9f9615c9527ccf6
 ---
 
 Cet article présente les informations concernant les changements de Firefox 156 qui concernent les développeur·euse·s.
@@ -15,7 +15,7 @@ Firefox 156 est sorti le [15 septembre 2026 <sup>(angl.)</sup>](https://whattrai
 
 - La lecture de la taille de la zone d'affichage dans le surligneur de l'inspecteur n'arrondit plus la largeur et la hauteur, ce qui auparavant signalait une taille trompeuse aux niveaux de zoom fractionnaires ou sur les écrans à haute densité.
   ([bogue Firefox 2055445 <sup>(angl.)</sup>](https://bugzil.la/2055445)).
-- Les outils de développement peuvent désormais se connecter à un serveur de débogage jusqu'à trois versions plus anciennes que le client, contre la limite précédente. Cela est important lors du débogage à distance d'une version plus ancienne de Firefox ou de GeckoView.
+- Les outils de développement peuvent désormais se connecter à un serveur de débogage jusqu'à trois versions plus anciennes que le client, contre la limite précédente. C'est important lors du débogage à distance d'une version plus ancienne de Firefox ou de GeckoView.
   ([bogue Firefox 2064221 <sup>(angl.)</sup>](https://bugzil.la/2064221)).
 - Correction du problème où le surligneur des règles restait visible après avoir été désactivé, lorsque l'inspecteur n'était pas le panneau sélectionné.
   ([bogue Firefox 2063982 <sup>(angl.)</sup>](https://bugzil.la/2063982)).
@@ -112,7 +112,7 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 
 - **L'API Container Timing**&nbsp;: `dom.enable_container_timing`
 
-  L'API Container Timing signale quand le contenu d'un élément conteneur est peint, ce qui vous permet de mesurer le temps de rendu d'une région de la page plutôt que de l'ensemble du viewport.
+  [L'API Container Timing](/fr/docs/Web/API/PerformanceContainerTiming) signale quand le contenu d'un élément conteneur est peint, ce qui vous permet de mesurer le temps de rendu d'une région de la page plutôt que de l'ensemble du viewport.
   ([bogue Firefox 1940240 <sup>(angl.)</sup>](https://bugzil.la/1940240)).
 
 - **Formats personnalisés du Web dans l'API Clipboard asynchrone** (Nightly)&nbsp;: `dom.clipboard.customFormatSupport.enabled`

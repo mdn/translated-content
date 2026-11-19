@@ -2,7 +2,7 @@
 title: Étiquette pour les projets open source
 slug: MDN/Community/Open_source_etiquette
 l10n:
-  sourceCommit: da7287ff61b6ea4db7f9a5e07be11263b525b7d0
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
 
 Si vous n'avez jamais travaillé sur un projet open source (<abbr lang="en">OSP</abbr> pour «&nbsp;<i lang="en">Open Source Project</i>&nbsp;») auparavant, il est bon de lire cet article avant de commencer à contribuer à MDN Web Docs et à d'autres projets open source.
@@ -64,18 +64,22 @@ Vous pouvez également contribuer en ouvrant des [demandes de tirage](/fr/docs/M
 
 Une grande partie du travail sur MDN consiste à rédiger de la documentation et des exemples de code, mais il existe d'autres façons de contribuer&nbsp;:
 Cela peut inclure aider à trier les problèmes qui arrivent, corriger des fautes de frappe, améliorer la grammaire pour rendre les pages plus compréhensibles, ou encadrer les personnes qui essaient de corriger les problèmes.
-Chaque correction est utile, aussi petite soit-elle, et nous n'en refusons aucune.
+Chaque correction est utile, aussi petite soit-elle.
 Cela dit, veillez à ce que vos corrections soient productives. Nous vous déconseillons ce genre de contributions&nbsp;:
 
 - Modifier le style du code, la formulation des textes ou le cadre de test simplement parce que vous le préférez ainsi.
 - Remplacer l'anglais américain par l'anglais britannique dans les pages.
 - Ajouter ou supprimer des signes de ponctuation alors que le texte original est correct.
+- Envoyer des modifications que vous n'avez pas examinées, testées et comprises.
+- Apporter de nombreux changements similaires sur plusieurs pages sans en discuter au préalable.
 
 > [!NOTE]
 > Pour les contenus traduits, nous vous recommandons de respecter le contenu écrit dans les pages anglaises, c'est ce contenu qui doit se retrouver dans la version traduite. De ce fait, si vous souhaitez changer le sens d'une phrase, ou ajouter un nouvel exemple&nbsp;; il faut le faire en premier lieu **sur la page anglaise** avant de proposer une traduction.
 
 Dans de nombreux cas, les choses sont ainsi sur les OSP pour une raison.
 Vous devez lire les guides de style s'ils en ont un, et en cas de doute sur la productivité de quelque chose, demandez toujours d'abord&nbsp;!
+
+Rappelez-vous que vous êtes responsable de vos contributions. Si vous ne pouvez pas expliquer pourquoi vous avez apporté une modification, ne l'envoyez pas.
 
 ## Suivez le guide
 
@@ -99,6 +103,7 @@ En règle générale, faites ceci&nbsp;:
 - Discutez d'un sujet par problème — il est facile de garder les problèmes concentrés et productifs.
 - Corrigez un problème par PR — cela peut représenter un peu plus de travail pour vous, mais il est beaucoup plus facile de revoir une seule correction claire.
 - Contribuez à d'autres fils de discussion si vous avez un point utile à apporter ou si vous pouvez répondre à la question de quelqu'un d'autre.
+- Rédigez les problèmes, les descriptions de requêtes de tirage et les commentaires avec vos propres mots. Court et précis vaut mieux que long et soigné.
 - Posez des questions en utilisant d'autres mécanismes comme les salons de discussion ou les forums si vous n'êtes pas sûr de l'utilité de quelque chose ou si vous avez une question simple.
 - Lisez le manuel d'abord pour essayer de répondre à la question vous-même avant de la poser.
 
@@ -106,6 +111,7 @@ Ne faites pas&nbsp;:
 
 - Compliquer les problèmes en essayant de discuter de plusieurs sujets à la fois, ou en faisant des commentaires hors sujet.
 - Essayer de regrouper plusieurs corrections dans une seule requête de tirage. Cela rend la révision beaucoup plus difficile et suscite des soupçons (certaines personnes peuvent penser que vous essayez de cacher du code malveillant entre les modifications valides).
+- Ouvrir des requêtes de tirage que vous n'avez pas examinées vous-même.
 - Ouvrir de nombreux problèmes en posant des questions vagues.
 - Poser des questions sans essayer de résoudre le problème par vous-même d'abord.
 
@@ -126,6 +132,8 @@ Il est raisonnable d'attendre quelques jours, puis de relancer poliment la perso
 Il n'est **pas** raisonnable ni poli d'exiger une réponse rapide.
 
 Si quelqu'un attend que vous fassiez quelque chose pour lui, vous devez lui accorder la même courtoisie, mais en même temps, essayez de répondre aussi rapidement que possible. Si vous ne pouvez vraiment pas trouver le temps, informez-les et demandez aux mainteneur·euse·s de vous aider à trouver quelqu'un d'autre pour accomplir la tâche.
+
+Vous êtes responsable du suivi de vos contributions. Répondez vous-même aux commentaires des relecteur·ice·s, et n'ouvrez que le nombre de requêtes de tirage que vous pouvez suivre.
 
 ## Voir aussi
 

@@ -3,7 +3,7 @@ title: "Étiquettes multiples : utiliser ARIA pour des étiquettes avec champs i
 short-title: Utiliser ARIA pour des étiquettes avec champs intégrés
 slug: Web/Accessibility/ARIA/Guides/Multipart_labels
 l10n:
-  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
+  sourceCommit: 7d55f113b5a05afe6ada6bb9b76bd3b0458f077d
 ---
 
 ## Problème
@@ -16,7 +16,7 @@ La solution réside dans l'attribut ARIA `aria-labelledby`. Sa valeur est une ch
 
 `aria-labelledby` et `aria-describedby` sont tous deux définis sur l'élément de formulaire à étiqueter (par exemple un `<input>`). Dans les deux cas, les associations label/for éventuellement présentes sont remplacées par `aria-labelledby`. Si vous fournissez `aria-labelledby` dans une page HTML, ajoutez aussi un label/for pour la compatibilité avec les anciens navigateurs ne prenant pas encore ARIA en charge. Avec Firefox 3, les utilisateur·ice·s malvoyant·e·s bénéficient automatiquement d'une meilleure accessibilité, mais les utilisateur·ice·s de navigateurs plus anciens ne sont pas pénalisé·e·s.
 
-### Exemple
+## Exemple
 
 {{ EmbedLiveSample("Example") }}
 

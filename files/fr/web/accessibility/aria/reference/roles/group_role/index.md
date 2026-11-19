@@ -3,7 +3,7 @@ title: "ARIA : rôle group"
 short-title: group
 slug: Web/Accessibility/ARIA/Reference/Roles/group_role
 l10n:
-  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
+  sourceCommit: 05c1aed375bab88f322b15319e45fb326e4a341c
 ---
 
 Le rôle `group` identifie un ensemble d'objets d'interface utilisateur qui n'est pas destiné à être inclus dans un résumé de page ou une table des matières par les technologies d'assistance.
@@ -23,6 +23,21 @@ Les éléments `group` peuvent être imbriqués.
 Le rôle `group` ne doit pas être utilisé pour des sections majeures et perceptibles d'une page. Si une section est suffisamment significative pour être incluse dans la table des matières de la page, utilisez le rôle `region` ou un rôle de [point de repère standard](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#3._rôles_de_repères).
 
 Lorsqu'un rôle est ajouté à un élément, le navigateur envoie un évènement de groupe accessible aux produits de technologie d'assistance, qui peuvent alors en informer l'utilisateur·ice.
+
+### Zones de contenu défilables
+
+Un conteneur qui déborde visuellement peut nécessiter `tabindex="0"` afin que les utilisateur·ice·s utilisant uniquement le clavier puissent le sélectionner et faire défiler son contenu. Un conteneur sélectionnable doit avoir un rôle et un nom accessible. S'il n'existe pas de rôle natif approprié et que le contenu ne justifie pas un point de repère de page, utilisez le rôle `group`.
+
+```html
+<div
+  role="group"
+  aria-labelledby="transcript-heading"
+  tabindex="0"
+  style="max-height: 12rem; overflow: auto;">
+  <h3 id="transcript-heading">Transcription de l'entretien</h3>
+  <!-- Contenu de la transcription longue -->
+</div>
+```
 
 ## Exemples
 
@@ -101,6 +116,7 @@ Ce menu peut être construit en utilisant les éléments {{HTMLElement("select")
 ## Voir aussi
 
 - L'élément HTML {{HTMLElement("fieldset")}}
+- [ARIA&nbsp;: rôle `graphics-object`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-object_role)
 - [ARIA&nbsp;: rôle `section`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/section_role)
 - [ARIA&nbsp;: rôle `row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 - [ARIA&nbsp;: rôle `select`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/select_role)

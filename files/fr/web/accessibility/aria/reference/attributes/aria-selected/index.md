@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-selected"
 short-title: aria-selected
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-selected
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 L'attribut `aria-selected` indique l'état «&nbsp;sélectionné&nbsp;» actuel de divers composants.
@@ -41,6 +41,37 @@ Dans une liste d'onglets (`tablist`), `aria-selected` est utilisé sur un onglet
 L'onglet [`tab`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) sélectionné dans une [`tablist`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role) doit avoir l'attribut `aria-selected="true"`. Tous les onglets inactifs de la liste doivent avoir `aria-selected="false"`. La définition de l'état n'affecte que l'arbre d'accessibilité&nbsp;: veillez à mettre en forme l'onglet actif de façon à indiquer visuellement son état sélectionné. La valeur par défaut de `aria-selected` sur un rôle `tab` est `false`.
 
 Si plusieurs onglets peuvent être sélectionnés en même temps, ajoutez `aria-multiselectable` sur le `tablist`.
+
+## Valeurs
+
+- `true`
+  - : L'élément sélectionnable est sélectionné.
+- `false`
+  - : L'élément sélectionnable n'est pas sélectionné. Valeur par défaut implicite pour [`tab`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role).
+- `undefined` (valeur par défaut)
+  - : L'élément n'est pas sélectionnable.
+
+## Interfaces associées
+
+- {{DOMxRef("Element.ariaSelected")}}
+  - : La propriété {{DOMxRef("Element.ariaSelected", "ariaSelected")}}, qui fait partie de l'interface {{DOMxRef("Element")}}, reflète la valeur de l'attribut `aria-selected`.
+- {{DOMxRef("ElementInternals.ariaSelected")}}
+  - : La propriété {{DOMxRef("ElementInternals.ariaSelected", "ariaSelected")}}, qui fait partie de l'interface {{DOMxRef("ElementInternals")}}, reflète la valeur de l'attribut `aria-selected`.
+
+## Rôles associés
+
+Utilisé dans les rôles&nbsp;:
+
+- [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [`option`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
+- [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
+- [`tab`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
+
+Hérité dans les rôles&nbsp;:
+
+- [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
+- [`treeitem`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role)
 
 ## Exemple
 
@@ -88,37 +119,6 @@ Dans cet exemple de `tablist`, le premier onglet est sélectionné&nbsp;:
 
 > [!NOTE]
 > ARIA ne modifie que l'arbre d'accessibilité d'un élément et la façon dont les technologies d'assistance présentent le contenu aux utilisateur·ice·s. ARIA ne change rien à la fonction ou au comportement des éléments.
-
-## Valeurs
-
-- `true`
-  - : L'élément sélectionnable est sélectionné.
-- `false`
-  - : L'élément sélectionnable n'est pas sélectionné. Valeur par défaut implicite pour [`tab`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role).
-- `undefined` (valeur par défaut)
-  - : L'élément n'est pas sélectionnable.
-
-## Interfaces associées
-
-- {{DOMxRef("Element.ariaSelected")}}
-  - : La propriété {{DOMxRef("Element.ariaSelected", "ariaSelected")}}, qui fait partie de l'interface {{DOMxRef("Element")}}, reflète la valeur de l'attribut `aria-selected`.
-- {{DOMxRef("ElementInternals.ariaSelected")}}
-  - : La propriété {{DOMxRef("ElementInternals.ariaSelected", "ariaSelected")}}, qui fait partie de l'interface {{DOMxRef("ElementInternals")}}, reflète la valeur de l'attribut `aria-selected`.
-
-## Rôles associés
-
-Utilisé dans les rôles&nbsp;:
-
-- [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-- [`option`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
-- [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
-- [`tab`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
-
-Hérité dans les rôles&nbsp;:
-
-- [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-- [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
-- [`treeitem`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role)
 
 ## Spécifications
 

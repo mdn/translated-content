@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-errormessage"
 short-title: aria-errormessage
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 L'attribut `aria-errormessage` sur un objet identifie le ou les éléments qui fournissent un message d'erreur pour cet objet.
@@ -16,9 +16,46 @@ L'attribut `aria-errormessage` ne doit être utilisé que lorsque la valeur d'un
 
 Lorsque `aria-errormessage` est pertinent, le ou les éléments référencés doivent être visibles afin que les utilisateur·ice·s puissent voir ou entendre le message d'erreur.
 
-Souvent, il est utile que l'élément contenant le message d'erreur soit une [région ARIA dynamique](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions), par exemple lorsqu'un message d'erreur s'affiche après que l'utilisateur·ice a fourni une valeur invalide. Le message d'erreur doit décrire le problème et indiquer à l'utilisateur·ice ce qui est requis pour valider l'objet. Ajouter le message d'erreur dans une région ARIA dynamique informe les technologies d'assistance que l'utilisateur·ice peut bénéficier du contenu du message d'erreur, même si ce message ne serait pas transmis autrement.
+Souvent, il est utile que l'élément contenant le message d'erreur soit une [région ARIA dynamique](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions), par exemple lorsqu'un message d'erreur s'affiche après que l'utilisateur·ice a fourni une valeur invalide. Le message d'erreur doit décrire le problème et indiquer à l'utilisateur·ice ce qui est requis pour valider l'objet. Ajouter le message d'erreur dans une région ARIA dynamique informe les technologies d'assistance que l'utilisateur·ice peut bénéficier du contenu du message d'erreur, même si ce message n'est pas transmis autrement.
 
 Incluez un message d'erreur visible et reliez l'objet invalide avec l'attribut `aria-errormessage` si l'échec est visible et qu'une description explicite de l'erreur est nécessaire.
+
+## Valeurs
+
+- Liste de références d'identifiants
+  - : L'identifiant (`id`) ou la liste d'identifiants (`id`) (séparés par des espaces) des éléments qui contiennent le message d'erreur pour l'élément courant.
+
+## Interfaces associées
+
+- {{DOMxRef("Element.ariaErrorMessageElements")}}
+  - : La propriété `ariaErrorMessageElements` fait partie de l'interface de chaque élément.
+    Sa valeur est un tableau de sous-classes de l'interface {{DOMxRef("Element")}} qui reflètent les identifiants référencés dans l'attribut `aria-errormessage` ([avec certaines restrictions](/fr/docs/Web/API/Document_Object_Model/Reflected_attributes#références_déléments_réfléchies)).
+- {{DOMxRef("ElementInternals.ariaErrorMessageElements")}}
+  - : La propriété `ariaErrorMessageElements` fait partie de l'interface de chaque élément personnalisé.
+    Sa valeur est un tableau de sous-classes de l'élément {{DOMxRef("Element")}} qui reflètent les identifiants référencés dans l'attribut `aria-errormessage` ([avec certaines restrictions](/fr/docs/Web/API/Document_Object_Model/Reflected_attributes#références_déléments_réfléchies)).
+
+## Rôles associés
+
+Utilisé dans les rôles&nbsp;:
+
+- [`application`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
+- [`checkbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
+- [`combobox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
+- [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [`listbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
+- [`radiogroup`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)
+- [`slider`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
+- [`spinbutton`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
+- [`textbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
+- [`tree`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
+
+Hérite des rôles&nbsp;:
+
+- [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
+- [`searchbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
+- [`switch`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
+- [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
 
 ## Exemple
 
@@ -61,44 +98,7 @@ Lorsqu'un objet est invalide, nous utilisons JavaScript pour ajouter `aria-inval
 </p>
 ```
 
-Lorsque l'on passe d'un état valide à invalide, la seule modification JavaScript dans cet exemple est la mise à jour de `aria-invalid` sur le champ de saisie e-mail. Comme le message d'erreur suit le champ et devient visible et accessible dans l'arbre d'accessibilité, l'exemple reste simple. On pourrait aussi appliquer une propriété [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) ou utiliser un rôle de région dynamique comme [`alert`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role).
-
-## Valeurs
-
-- Liste de références d'identifiants
-  - : L'identifiant (`id`) ou la liste d'identifiants (`id`) (séparés par des espaces) des éléments qui contiennent le message d'erreur pour l'élément courant.
-
-## Interfaces associées
-
-- {{domxref("Element.ariaErrorMessageElements")}}
-  - : La propriété `ariaErrorMessageElements` fait partie de l'interface de chaque élément.
-    Sa valeur est un tableau de sous-classes de l'interface {{domxref("Element")}} qui reflètent les identifiants référencés dans l'attribut `aria-errormessage` ([avec certaines restrictions](/fr/docs/Web/API/Document_Object_Model/Reflected_attributes#références_déléments_réfléchies)).
-- {{domxref("ElementInternals.ariaErrorMessageElements")}}
-  - : La propriété `ariaErrorMessageElements` fait partie de l'interface de chaque élément personnalisé.
-    Sa valeur est un tableau de sous-classes de l'élément {{domxref("Element")}} qui reflètent les identifiants référencés dans l'attribut `aria-errormessage` ([avec certaines restrictions](/fr/docs/Web/API/Document_Object_Model/Reflected_attributes#références_déléments_réfléchies)).
-
-## Rôles associés
-
-Utilisé dans les rôles&nbsp;:
-
-- [`application`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
-- [`checkbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [`combobox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
-- [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-- [`listbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
-- [`radiogroup`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)
-- [`slider`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
-- [`spinbutton`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
-- [`textbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
-- [`tree`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
-
-Hérite des rôles&nbsp;:
-
-- [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-- [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
-- [`searchbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
-- [`switch`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
-- [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
+Lorsque nous passons d'un état valide à invalide, la seule modification JavaScript dans cet exemple est la mise à jour de `aria-invalid` sur le champ de saisie e-mail. Comme le message d'erreur suit le champ et devient visible et accessible dans l'arbre d'accessibilité, l'exemple reste simple. Nous pouvons aussi appliquer une propriété [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) ou utiliser un rôle de région dynamique comme [`alert`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role).
 
 ## Spécifications
 
@@ -106,7 +106,7 @@ Hérite des rôles&nbsp;:
 
 ## Voir aussi
 
-- La pseudo-classe CSS {{CSSxref(':invalid')}}
+- La pseudo-classe CSS {{CSSxRef(":invalid")}}
 - L'attribut ARIA [`aria-invalid`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
 - L'attribut ARIA [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 - L'attribut ARIA [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)

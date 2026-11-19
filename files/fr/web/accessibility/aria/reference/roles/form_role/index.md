@@ -3,7 +3,7 @@ title: "ARIA : rôle form"
 short-title: form
 slug: Web/Accessibility/ARIA/Reference/Roles/form_role
 l10n:
-  sourceCommit: 705109e85b6c5a9142260c58a617ef295b3b1316
+  sourceCommit: b126460df717d910e92f311f0603800987ecebee
 ---
 
 Le rôle `form` peut être utilisé pour identifier un groupe d'éléments sur une page qui fournissent une fonctionnalité équivalente à celle d'un formulaire HTML. Le formulaire n'est pas exposé en tant que région de repère à moins qu'il n'ait un [nom accessible](/fr/docs/Glossary/Accessible_name).

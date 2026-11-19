@@ -3,7 +3,7 @@ title: "Accessibilité : Comprendre les couleurs et la luminance"
 short-title: Couleurs et luminance
 slug: Web/Accessibility/Guides/Colors_and_Luminance
 l10n:
-  sourceCommit: 15e1155ab8a0587405601cc4753bb789cd6ac47c
+  sourceCommit: f4174abd45aefde55b6d45144c57ec3c2dc037a1
 ---
 
 Comprendre la couleur, la luminance et la saturation est important pour la conception et la lisibilité pour toutes les personnes voyantes, mais c'est essentiel pour celles ayant une vision réduite, une déficience de la perception des couleurs ou des troubles neurologiques, cognitifs ou autres.

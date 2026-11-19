@@ -3,7 +3,7 @@ title: "ARIA : rôle document"
 short-title: document
 slug: Web/Accessibility/ARIA/Reference/Roles/document_role
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 370f1912b54d24bd7da541f8f2dd98c26d377121
 ---
 
 Le rôle `document` est destiné au contenu sélectionnable au sein des [composants](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/widget_role) ou [applications](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/application_role) composites complexes pour lesquels les technologies d'assistance peuvent revenir à un mode de lecture.
@@ -13,7 +13,7 @@ Le rôle `document` est destiné au contenu sélectionnable au sein des [composa
 Le rôle `document` est destiné au conteneur principal contenant du contenu que les utilisateur·ice·s de technologies d'assistance peuvent vouloir parcourir en mode lecture. Il n'est utile que sur les sections sélectionnables au sein des [composants](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/widget_role) ou [applications](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/application_role) composites complexes, le rôle `document` informe les technologies d'assistance de revenir au mode de lecture&nbsp;: le rôle `document` indique aux technologies d'assistance disposant de modes de lecture ou de navigation d'utiliser le mode document pour lire le contenu contenu dans cet élément.
 
 ```html
-<div role="dialog">
+<div role="application">
   …
   <div id="InfoText" role="document" tabindex="0">
     <p>Du contenu informatif va ici.</p>
@@ -23,7 +23,7 @@ Le rôle `document` est destiné au conteneur principal contenant du contenu que
 </div>
 ```
 
-Cet exemple montre un [dialog](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role), un rôle de composant composite complexe, avec quelques contrôles et une section contenant un texte informatif que l'utilisateur·ice de la technologie d'assistance peut lire en mode lecture lorsqu'il est sélectionné.
+Cet exemple montre une [application](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/application_role) avec quelques contrôles et un `<div>` sélectionnable avec un `role` de `document` contenant du texte informatif que l'utilisateur·ice de la technologie d'assistance peut lire en mode lecture lorsqu'il est sélectionné.
 
 Par défaut, les pages Web sont traitées comme des documents&nbsp;; les technologies d'assistance (<abbr>TA</abbr>) entrent en mode de navigation ou de lecture lorsqu'elles accèdent à une nouvelle page Web. Ce mode peut être modifié par divers rôles, y compris les rôles de composant et d'application. Le rôle `document` ramène les <abbr>TA</abbr> en mode de navigation ou de lecture.
 
@@ -33,23 +33,15 @@ Parce que les <abbr>TA</abbr> avec un mode de lecture par défaut à ce mode pou
 
 Les technologies d'assistance doivent revenir au mode document, en interceptant éventuellement les contrôles réaffectés au contexte dynamique du parent, réactivant les évènements d'entrée standard, tels que les évènements de clavier flèche haut ou bas, pour contrôler le curseur de lecture.
 
-En contraste avec le rôle [`article`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/article_role), le rôle `document` n'a aucune relation avec d'autres éléments ayant un rôle de document, il a simplement une relation avec le composant composite contenant. Un article peut avoir des articles associés.
-
-### Propriétés, états et rôles WAI-ARIA associés
-
-- [`aria-expanded`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
-  - : Inclure avec une valeur `true` ou `false` si l'élément document est pliable, pour indiquer si le document est actuellement développé ou réduit. D'autres valeurs incluent la valeur par défaut `undefined` qui signifie que le document n'est pas pliable.
-
-- tabindex="0"
-  - : Utilisé pour le rendre sélectionnable afin que l'utilisateur·ice de la technologie d'assistance puisse y accéder par tabulation et commencer à lire immédiatement.
+Le rôle `document` n'est pas nécessaire à l'intérieur d'une [boîte de dialogue](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role). Une boîte de dialogue est une fenêtre, et non un composant ou une application, donc les technologies d'assistance disposant d'un mode de lecture l'utilisent déjà pour le contenu de la boîte de dialogue.
 
 ### Interactions au clavier
 
-L'élément doit être rendu sélectionnable en définissant l'attribut / paire de valeurs `tabindex="0"` sur celui-ci. De cette façon, l'utilisateur·ice peut y accéder par tabulation, le mode de lecture est invoqué automatiquement et le contenu peut être lu immédiatement.
+L'élément doit être rendu sélectionnable afin que les technologies d'assistance puissent passer en mode lecture lorsqu'il reçoit la sélection. L'attribut HTML [`tabindex="0"`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) le rend sélectionnable et l'ajoute à l'ordre de tabulation, de sorte que l'utilisateur·ice peut y accéder par tabulation et lire le contenu immédiatement.
 
 ### Fonctionnalités JavaScript requises
 
-Aucune, sauf si c'est requis par des attributs. Par exemple, si le `document` est pliable, alors l'état et la valeur de `aria-expanded` doivent être maintenus.
+Aucune.
 
 ## Exemples
 
@@ -57,7 +49,7 @@ Un exemple est Gmail et la vue de conversation unique. GMail est une application
 
 ## Bonnes pratiques
 
-Assurez-vous toujours qu'un élément avec le rôle de document est sélectionnable, en définissant l'attribut `tabindex` avec une valeur de 0. Cela l'inclut également dans l'ordre de tabulation.
+Assurez-vous toujours qu'un élément avec le rôle `document` est sélectionnable. Définir `tabindex="0"` est le moyen le plus courant de le faire, mais cela ajoute également l'élément à l'ordre de tabulation, ce qui peut ne pas correspondre à la façon dont les utilisateur·ice·s naviguent dans le reste du composant. Si le composant contenant gère la sélection avec les touches fléchées, par exemple avec un [tabindex itinérant](/fr/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets#technique_1_roving_tabindex), assurez-vous que les utilisateur·ice·s peuvent découvrir comment atteindre le contenu du document et comment revenir au composant par la suite.
 
 ### Avantages supplémentaires
 

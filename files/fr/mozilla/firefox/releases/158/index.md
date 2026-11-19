@@ -3,7 +3,7 @@ title: Firefox 158 note de version pour les développeurs
 short-title: Firefox 158
 slug: Mozilla/Firefox/Releases/158
 l10n:
-  sourceCommit: bd4e1a75486ccdf2d36aef41c63d22ec5536b6a6
+  sourceCommit: 521fe7795f4dbfa723d800a94884d7608fa0e17e
 ---
 
 Cet article présente les informations concernant les changements de Firefox 158 qui concernent les développeur·euse·s.
