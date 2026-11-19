@@ -9,7 +9,7 @@ l10n:
 
 **`import.source()`** 構文は通常の [`import()`](/ja/docs/Web/JavaScript/Reference/Operators/import) 構文と同様に動作しますが、モジュールのコンパイル済みソースコードを表すオブジェクトで履行されるプロミスを返します。モジュールは[取得およびコンパイル](/ja/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph)されますが、依存関係は読み込まれず、[リンク](/ja/docs/Web/JavaScript/Guide/Modules/Module_graph#linking_modules)も[評価](/ja/docs/Web/JavaScript/Guide/Modules/Module_graph#evaluating_modules)もされません。後から[動的インポート](/ja/docs/Web/JavaScript/Reference/Operators/import)や[`WebAssembly.instantiate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static)などを使って、明示的に評価できます。
 
-`import.source()` を使用するには、対象のモジュールがソースフェーズのインポートに対応している必要があります。現在、ソースフェーズのインポートに対応しているのは WebAssembly モジュールのみであり、返されるのは [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) オブジェクトです。[ECMAScript Module Phase Imports](https://github.com/tc39/proposal-esm-phase-imports) 提案により、JavaScript モジュールのソースオブジェクトも追加される予定です。
+`import.source()` を使用するには、対象のモジュールがソースフェーズのインポートに対応している必要があります。現在、ソースフェーズのインポートに対応しているのは WebAssembly モジュールのみであり、返されるのは [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) オブジェクトです。[ECMAScript Module Phase Imports](https://github.com/tc39/proposal-esm-phase-imports)<sup>(英語)</sup> 提案により、JavaScript モジュールのソースオブジェクトも追加される予定です。
 
 ソースフェーズのインポートの意味について詳しくは、[`import source`](/ja/docs/Web/JavaScript/Reference/Statements/import/source) 宣言形式を参照してください。
 
