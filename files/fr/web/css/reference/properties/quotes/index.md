@@ -3,10 +3,12 @@ title: Propriété CSS `quotes`
 short-title: quotes
 slug: Web/CSS/Reference/Properties/quotes
 l10n:
-  sourceCommit: 652d220f00bede14baef1fc755003a3bcfd2573c
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`quotes`** définit la manière dont le navigateur doit afficher les guillemets qui sont automatiquement ajoutés à l'élément HTML {{HTMLElement("q")}} ou ajoutés en utilisant les valeurs `open-quotes` ou `close-quotes` (ou omis en utilisant les valeurs `no-open-quote` et `no-close-quote`) de la propriété CSS {{CSSxRef("content")}}.
+
+Les navigateurs insèrent des guillemets à l'ouverture et à la fermeture des éléments `<q>` et pour les valeurs `open-quote` et `close-quote` de la propriété `content`. Chaque guillemet ouvrant ou fermant est remplacé par l'une des chaînes de caractères de la valeur de `quotes`, en fonction de la profondeur d'imbrication, ou, si `quotes` est explicitement défini sur ou résout autrement à `auto`, les guillemets utilisés dépendent de la langue.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: quotes")}}
 
@@ -44,8 +46,6 @@ q {
   font-size: 1.2rem;
 }
 ```
-
-Les navigateurs insèrent des guillemets à l'ouverture et à la fermeture des éléments `<q>` et pour les valeurs `open-quote` et `close-quote` de la propriété `content`. Chaque guillemet ouvrant ou fermant est remplacé par l'une des chaînes de caractères de la valeur de `quotes`, en fonction de la profondeur d'imbrication, ou, si `quotes` est explicitement défini sur ou résout autrement à `auto`, les guillemets utilisés dépendent de la langue.
 
 ## Syntaxe
 
@@ -96,7 +96,7 @@ quotes: unset;
 
 Cet exemple compare les guillemets par défaut fournis par l'élément HTML sémantique `<q>` à ceux que nous définissons en utilisant la propriété CSS `quotes`.
 
-La valeur par défaut de `quotes` est [`auto`](#auto). Dans cet exemple, le premier élément de la liste a `quotes: auto` défini, donc il obtient les guillemets par défaut pour la langue définie&nbsp;; c'est la même chose que si aucune propriété `quotes` n'était définie. Le deuxième élément de la liste définit quels guillemets utiliser pour les citations et les citations imbriquées&nbsp;; ces guillemets sont utilisés pour les descendants d'un élément avec la classe `specialQuotes` indépendamment de la langue (comme pour toute valeur de l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang) définie).
+La valeur par défaut de `quotes` est [`auto`](#auto). Dans cet exemple, le premier élément de la liste a `quotes: auto` défini, donc il obtient les guillemets par défaut pour la langue définie&nbsp;; c'est la même chose que si aucune propriété `quotes` n'est définie. Le deuxième élément de la liste définit quels guillemets utiliser pour les citations et les citations imbriquées&nbsp;; ces guillemets sont utilisés pour les descendants d'un élément avec la classe `specialQuotes` indépendamment de la langue (comme pour toute valeur de l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang) définie).
 
 #### HTML
 

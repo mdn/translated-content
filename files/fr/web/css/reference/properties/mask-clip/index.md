@@ -3,10 +3,10 @@ title: Propriété CSS `mask-clip`
 short-title: mask-clip
 slug: Web/CSS/Reference/Properties/mask-clip
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: d78544a841b0e266a6efc169c044573f5e0b4e7d
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`mask-clip`** définit la zone qui est modifiée par un masque. Le contenu «&nbsp;peint&nbsp;» sera restreint à cette zone.
+La propriété [CSS](/fr/docs/Web/CSS) **`mask-clip`** définit la zone qui est modifiée par un masque. Le contenu «&nbsp;peint&nbsp;» est restreint à cette zone.
 
 ## Syntaxe
 
@@ -67,7 +67,7 @@ La propriété accepte une liste de mots-clés séparés par des virgules. Chaqu
 
 La propriété `mask-clip` définit la zone de l'élément qui est affectée par le masque appliqué.
 
-Pour les images de calque de masque qui ne font pas référence à un élément SVG {{SVGElement("mask")}}, la propriété `mask-clip` définit la zone de peinture du masque, ou la zone affectée par le masque. Le contenu peint de l'élément sera limité à cette zone.
+Pour les images de calque de masque qui ne font pas référence à un élément SVG {{SVGElement("mask")}}, la propriété `mask-clip` définit la zone de peinture du masque, ou la zone affectée par le masque. Le contenu peint de l'élément est limité à cette zone.
 
 La propriété `mask-clip` n'a aucun effet sur une image de calque de masque qui fait référence à un élément `<mask>`. Les attributs {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}} et {{SVGAttr("maskUnits")}} de l'élément `<mask>` déterminent la zone de peinture du masque lorsque la source de {{CSSxRef("mask-image")}} est un `<mask>`.
 

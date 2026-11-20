@@ -3,7 +3,7 @@ title: Propriété CSS `overlay`
 short-title: overlay
 slug: Web/CSS/Reference/Properties/overlay
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: d78544a841b0e266a6efc169c044573f5e0b4e7d
 ---
 
 {{SeeCompatTable}}

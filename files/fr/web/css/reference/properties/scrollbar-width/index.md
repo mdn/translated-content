@@ -3,7 +3,7 @@ title: Propriété CSS `scrollbar-width`
 short-title: scrollbar-width
 slug: Web/CSS/Reference/Properties/scrollbar-width
 l10n:
-  sourceCommit: 2e2dfb27a085911dd64aa4798d4a1071660c2397
+  sourceCommit: 7484d45816002fbf082a59c5d95c38a1eb2b2e4b
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`scrollbar-width`** permet aux auteur·ice·s de définir l'épaisseur souhaitée des barres de défilement d'un élément lorsqu'elles sont affichées.
@@ -70,17 +70,6 @@ Le critère WCAG 2.1.1 (Clavier) existe depuis longtemps pour conseiller sur l'a
 
 ### Redimensionner les barres de défilement
 
-#### CSS
-
-```css
-.scroller {
-  width: 300px;
-  height: 100px;
-  overflow-y: scroll;
-  scrollbar-width: thin;
-}
-```
-
 #### HTML
 
 ```html
@@ -91,6 +80,17 @@ Le critère WCAG 2.1.1 (Clavier) existe depuis longtemps pour conseiller sur l'a
   fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
   earthnut pea peanut soko zucchini.
 </div>
+```
+
+#### CSS
+
+```css
+.scroller {
+  width: 300px;
+  height: 100px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
 ```
 
 #### Résultat

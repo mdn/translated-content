@@ -3,7 +3,7 @@ title: Propriété CSS `mask-image`
 short-title: mask-image
 slug: Web/CSS/Reference/Properties/mask-image
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-image`** définit l'image utilisée comme calque de masque pour un élément, masquant les sections de l'élément sur lesquelles l'image de masquage est définie en fonction du canal alpha de l'image de masque et, selon la valeur de la propriété {{CSSxRef("mask-mode")}}, de la luminosité de l'image de masque.
@@ -35,7 +35,7 @@ mask-image: unset;
 ### Valeurs
 
 - `none`
-  - : Le masque défini par ce mot-clé sera une image noire transparente.
+  - : Le masque défini par ce mot-clé est une image noire transparente.
 
 - `<mask-source>`
   - : Une référence {{CSSxRef("url_value", "&lt;url&gt;")}} vers un masque SVG {{SVGElement("mask")}} ou une image CSS.
@@ -49,11 +49,11 @@ La propriété `mask-image` fournit un masque qui cache une partie de l'élémen
 
 Une `<image>` peut être de n'importe quel type d'image, y compris des images générées telles que les [dégradés CSS](/fr/docs/Web/CSS/Reference/Values/gradient).
 
-Si une seule valeur est définie dans la valeur de la propriété `mask-image`, et que cette valeur est `none`, aucun effet de masquage ne sera apparent. Si plusieurs valeurs sont définies, une valeur `none` incluse dans la liste peut ne pas avoir d'effet direct, cependant, d'autres valeurs `mask-*` dans la même position de la liste s'appliqueront à une couche de masque noire transparente et n'auront aucun effet visuel.
+Si une seule valeur est définie dans la valeur de la propriété `mask-image`, et que cette valeur est `none`, aucun effet de masquage n'est apparent. Si plusieurs valeurs sont définies, une valeur `none` incluse dans la liste peut ne pas avoir d'effet direct, cependant, d'autres valeurs `mask-*` dans la même position de la liste s'appliquent à une couche de masque noire transparente et n'ont aucun effet visuel.
 
-Seules les sources d'image servies par les protocoles HTTP et HTTPS sont acceptées comme valeurs `<image>` en raison de la politique {{Glossary("CORS")}}. Les images servies localement, y compris les protocoles relatifs ou absolus `file://`, ne sont pas acceptées et seront rendues en noir transparent. Pour tester les sources d'image URL localement, [configurez un serveur local](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection#localhost).
+Seules les sources d'image servies par les protocoles HTTP et HTTPS sont acceptées comme valeurs `<image>` en raison de la politique {{Glossary("CORS")}}. Les images servies localement, y compris les protocoles relatifs ou absolus `file://`, ne sont pas acceptées et sont rendues en noir transparent. Pour tester les sources d'image URL localement, [configurez un serveur local](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection#localhost).
 
-Un masque sera considéré comme une couche d'image noire transparente, ne révélant rien, dans les cas suivants&nbsp;:
+Un masque est considéré comme une couche d'image noire transparente, ne révélant rien, dans les cas suivants&nbsp;:
 
 - L'image de masque est vide (largeur ou hauteur nulle).
 - L'image de masque n'a pas pu être téléchargée.
@@ -65,9 +65,9 @@ La valeur par défaut de la propriété {{CSSxRef("mask-mode")}} est `match-sour
 
 La valeur de `mask-mode` est importante, car elle détermine si l'effet de masquage dépend uniquement des valeurs du canal alpha de la source de l'image ou d'une combinaison de celles-ci et de la luminance du masque (la clarté/obscurité des couleurs qui composent le `mask-image`)&nbsp;:
 
-- Dans tous les cas, la transparence alpha du masque est importante&nbsp;; les zones de l'élément masquées par des sections opaques du `mask-image` seront rendues, tandis que les zones masquées par des sections d'image transparentes sont cachées.
+- Dans tous les cas, la transparence alpha du masque est importante&nbsp;; les zones de l'élément masquées par des sections opaques du `mask-image` sont rendues, tandis que les zones masquées par des sections d'image transparentes sont cachées.
 - Lorsque la valeur de `mask-mode` est définie ou résout à `alpha`, seul le canal alpha des couleurs compte&nbsp;; la teinte, la luminosité, etc., n'ont pas d'importance.
-- Si la propriété `mask-mode` est définie ou par défaut à `luminance`, la valeur de masquage est la valeur de luminance de chaque couleur multipliée par sa valeur alpha. Le `mask-mode` résoudra à `luminance` si explicitement défini à cette valeur, ou si la propriété est définie à `match-source` et que la source du `mask-image` est un SVG {{SVGElement("mask")}} qui n'a pas sa propriété {{CSSxRef("mask-type")}} ou son attribut {{SVGAttr("mask-type")}} explicitement défini à `alpha`.
+- Si la propriété `mask-mode` est définie ou par défaut à `luminance`, la valeur de masquage est la valeur de luminance de chaque couleur multipliée par sa valeur alpha. Le `mask-mode` résout à `luminance` si explicitement défini à cette valeur, ou si la propriété est définie à `match-source` et que la source du `mask-image` est un SVG {{SVGElement("mask")}} qui n'a pas sa propriété {{CSSxRef("mask-type")}} ou son attribut {{SVGAttr("mask-type")}} explicitement défini à `alpha`.
 
 ## Définition formelle
 
@@ -85,7 +85,7 @@ Dans cet exemple, nous utilisons une valeur `<image>` comme masque, en définiss
 
 #### HTML
 
-Nous incluons un élément HTML {{HTMLElement("img")}}, qui sera également utilisé dans tous les autres exemples.
+Nous incluons un élément HTML {{HTMLElement("img")}}, qui est également utilisé dans tous les autres exemples.
 
 ```html live-sample___example-image live-sample___first-example
 <img
@@ -177,7 +177,7 @@ img {
 
 ### Masquer avec le `<mask>` SVG
 
-Cet exemple démontre l'utilisation des éléments SVG {{SVGElement("mask")}} comme masques. Dans ce cas, la couleur du masque est importante car la valeur {{CSSxRef("mask-type")}} pour les masques SVG est par défaut `luminance`, ce qui signifie que les zones opaques blanches (100% de luminance) seront masquées et visibles, les zones transparentes et noires (0% de luminance) seront découpées, et tout ce qui se trouve entre les deux sera partiellement masqué.
+Cet exemple démontre l'utilisation des éléments SVG {{SVGElement("mask")}} comme masques. Dans ce cas, la couleur du masque est importante, car la valeur {{CSSxRef("mask-type")}} pour les masques SVG est par défaut `luminance`, ce qui signifie que les zones opaques blanches (100% de luminance) sont masquées et visibles, les zones transparentes et noires (0% de luminance) sont découpées, et tout ce qui se trouve entre les deux est partiellement masqué.
 
 #### HTML
 
@@ -237,7 +237,7 @@ Nous avons inclus un `id` pour chacune de nos quatre images, ainsi qu'un SVG con
 
 #### CSS
 
-Nous appliquons un `<mask>` différent à chaque `<img>`. Aucune partie de la dernière image, avec le remplissage `black`, ne sera visible par défaut. Dans ce cas, bien que toutes les couleurs utilisées dans cet exemple soient entièrement opaques, le `mask-mode` par défaut est `match-type`, ce qui se résout en `luminance` dans ce cas.
+Nous appliquons un `<mask>` différent à chaque `<img>`. Aucune partie de la dernière image, avec le remplissage `black`, n'est visible par défaut. Dans ce cas, bien que toutes les couleurs utilisées dans cet exemple soient entièrement opaques, le `mask-mode` par défaut est `match-type`, ce qui se résout en `luminance` dans ce cas.
 
 ```css
 #green {
@@ -258,13 +258,13 @@ body:has(:checked) img {
 }
 ```
 
-Les valeurs de luminance de `black`, `white` et `green` sont respectivement `0`, `100` et [`46.228` <sup>(angl.)</sup>](https://www.colorhexa.com/008000). Cela signifie que les zones où le masque est blanc seront visibles, tandis que les zones où le masque est noir ou entièrement transparent seront découpées (non visibles). Les zones où le masque est vert seront visibles mais plus claires, équivalentes à avoir un masque blanc à 46,228 % d'opacité.
+Les valeurs de luminance de `black`, `white` et `green` sont respectivement `0`, `100` et [`46.228` <sup>(angl.)</sup>](https://www.colorhexa.com/008000). Cela signifie que les zones où le masque est blanc sont visibles, tandis que les zones où le masque est noir ou entièrement transparent sont découpées (non visibles). Les zones où le masque est vert sont visibles mais plus claires, équivalentes à avoir un masque blanc à 46,228 % d'opacité.
 
 #### Résultats
 
 {{EmbedLiveSample("Masquer avec le `<mask>` SVG", "100%", 540)}}
 
-Basculez la case à cocher pour changer la valeur de `mask-mode` entre `alpha` (coché) et la valeur initiale, qui se résout en `luminance` (non coché). Lorsque `alpha` est utilisé, la couleur du masque n'a pas d'importance&nbsp;; tout ce qui compte est la transparence alpha. Lorsque la valeur se résout en `luminance`, les zones blanches sont visibles, les zones noires ne le sont pas, et les zones vertes sont visibles mais avec une opacité correspondant à la luminance de la couleur verte. Lorsque `mask-mode` est défini sur `alpha`, les couleurs sont équivalentes car elles sont toutes entièrement opaques.
+Basculez la case à cocher pour changer la valeur de `mask-mode` entre `alpha` (coché) et la valeur initiale, qui se résout en `luminance` (non coché). Lorsque `alpha` est utilisé, la couleur du masque n'a pas d'importance&nbsp;; tout ce qui compte est la transparence alpha. Lorsque la valeur se résout en `luminance`, les zones blanches sont visibles, les zones noires ne le sont pas, et les zones vertes sont visibles mais avec une opacité correspondant à la luminance de la couleur verte. Lorsque `mask-mode` est défini sur `alpha`, les couleurs sont équivalentes, car elles sont toutes entièrement opaques.
 
 ## Spécifications
 

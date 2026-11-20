@@ -3,16 +3,10 @@ title: Propriété CSS `position-try-fallbacks`
 short-title: position-try-fallbacks
 slug: Web/CSS/Reference/Properties/position-try-fallbacks
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`position-try-fallbacks`** permet de définir une liste d'une ou plusieurs **options de repli de position** pour les éléments positionnés par une ancre afin qu'ils soient placés par rapport à leurs éléments d'ancrage associés. Lorsque l'élément dépasse autrement son bloc contenant modifié par les marges internes, le navigateur essaie de placer l'élément positionné dans ces différentes positions de repli, dans l'ordre fourni, jusqu'à ce qu'il trouve une valeur qui empêche le débordement de son conteneur ou de la zone d'affichage.
-
-> [!NOTE]
-> La propriété raccourcie {{CSSxRef("position-try")}} peut être utilisée pour définir les valeurs de {{CSSxRef("position-try-order")}} et `position-try-fallbacks` dans une seule déclaration.
-
-> [!NOTE]
-> Cette propriété était à l'origine nommée et prise en charge dans les navigateurs Chromium sous le nom de `position-try-options`, avec les mêmes valeurs de propriété. Jusqu'à ce que `position-try-fallbacks` soit pris en charge, utilisez la propriété raccourcie {{CSSxRef("position-try")}} à la place.
 
 ## Syntaxe
 
@@ -55,6 +49,8 @@ La propriété `position-try-fallbacks` peut être définie soit avec la valeur 
 
 ### Valeurs
 
+Cette propriété est définie avec le mot-clé `none` ou une liste séparée par des virgules des valeurs suivantes&nbsp;:
+
 - `none`
   - : La valeur par défaut. Aucune option de repli de position n'est définie.
 - `<try-tactic>`
@@ -70,9 +66,6 @@ La propriété `position-try-fallbacks` peut être définie soit avec la valeur 
 - {{CSSxRef("dashed-ident")}}
   - : Ajoute une option personnalisée {{CSSxRef("@position-try")}} à la liste des options de repli, dont le nom identifiant correspond au `dashed-ident` défini. Si aucune option de position personnalisée n'existe avec ce nom, l'option est ignorée.
 
-> [!NOTE]
-> Plusieurs options peuvent être définies, séparées par des virgules.
-
 ## Description
 
 Les éléments positionnés par une ancre doivent toujours apparaître dans un endroit pratique pour que l'utilisateur·ice puisse interagir avec eux, si possible, quel que soit l'endroit où leur ancre est positionnée. Pour empêcher l'élément positionné de déborder de la zone d'affichage, il est souvent nécessaire de changer sa position lorsque son ancre se rapproche du bord de son élément contenant ou de la zone d'affichage.
@@ -83,6 +76,8 @@ Si aucune option ne permet de placer l'élément positionné complètement à l'
 
 > [!NOTE]
 > Dans certaines situations, vous pouvez vouloir simplement masquer les éléments positionnés qui débordent, ce qui peut être réalisé en utilisant la propriété {{CSSxRef("position-visibility")}}. Dans la plupart des cas, cependant, il est préférable de les garder à l'écran et utilisables.
+
+La propriété `position-try-fallbacks`, ainsi que la propriété {{CSSxRef("position-try-order")}}, peut également être définie en utilisant la propriété raccourcie {{CSSxRef("position-try")}}.
 
 Pour des informations détaillées sur les fonctionnalités d'ancre et l'utilisation des essais de position de repli, regardez le module [sur le positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [des options de repli et masquage conditionnel pour le débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding).
 

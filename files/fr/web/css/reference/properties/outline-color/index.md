@@ -3,7 +3,7 @@ title: Propriété CSS `outline-color`
 short-title: outline-color
 slug: Web/CSS/Reference/Properties/outline-color
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 4371d98674430c6693a5111df85438e7f5aa8fb7
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`outline-color`** définit la couleur du contour d'un élément.
@@ -70,7 +70,7 @@ La propriété `outline-color` est définie avec une des valeurs listées ci-apr
 - {{CSSxRef("&lt;color&gt;")}}
   - : La couleur du contour, définie comme un `<color>`.
 
-La spécification liste également une valeur supplémentaire, `auto`, qui n'est actuellement prise en charge par aucun navigateur. Lorsqu'elle sera implémentée, `auto` sera calculée comme [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor) sauf si {{CSSxRef("outline-style")}} est défini sur `auto`, auquel cas elle sera calculée comme la [couleur d'accentuation](/fr/docs/Web/CSS/Reference/Properties/accent-color).
+La spécification liste également une valeur supplémentaire, `auto`, qui n'est actuellement prise en charge par aucun navigateur. Lorsqu'elle est implémentée, `auto` est calculée comme [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor) sauf si {{CSSxRef("outline-style")}} est défini sur `auto`, auquel cas elle est calculée comme la [couleur d'accentuation](/fr/docs/Web/CSS/Reference/Properties/accent-color).
 
 ## Description
 
@@ -82,11 +82,11 @@ Il est souvent plus pratique d'utiliser la propriété raccourcie {{CSSxRef("out
 
 Les styles de [sélection personnalisés](/fr/docs/Web/CSS/Reference/Selectors/:focus) impliquent souvent des ajustements de la propriété {{CSSxRef("outline")}}. Si la couleur du contour est modifiée, il est important de s'assurer que le contraste entre celle-ci et l'arrière-plan sur lequel le contour est placé est suffisamment élevé pour que les personnes ayant une vision réduite puissent le percevoir.
 
-Le ratio de contraste des couleurs est déterminé en comparant la luminosité des valeurs de couleur du texte et de l'arrière-plan. Pour respecter les [Directives pour l'accessibilité des contenus Web (WCAG) <sup>(angl.)</sup>](https://www.w3.org/WAI/standards-guidelines/wcag/), un ratio de 4,5:1 est requis pour le contenu textuel et de 3:1 pour le texte plus grand, comme les titres. Le texte de grande taille est défini comme ayant une taille de `18.66px` et [gras](/fr/docs/Web/CSS/Reference/Properties/font-weight) ou plus, ou `24px` ou plus.
+Un contour est un indicateur visuel. Pour se conformer aux [Directives pour l'accessibilité des contenus Web (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), le [critère de succès 1.4.11 Contraste non textuel](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast) exige une proportion de contraste d'au moins 3:1 entre le contour et les couleurs adjacentes sur lesquelles il se trouve. Notez que lorsque le contour est utilisé comme indicateur de sélection, les couleurs adjacentes incluent à la fois l'arrière-plan à l'extérieur de l'élément et l'arrière-plan de l'élément lui-même lorsque le contour borde les deux.
 
 - [WebAIM&nbsp;: Vérificateur de contraste des couleurs <sup>(angl.)</sup>](https://webaim.org/resources/contrastchecker/)
 - [Comprendre le WCAG sur le MDN, explications de la règle 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
-- [Comprendre le critère de succès 1.4.3 | Comprendre le WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [Comprendre le critère de succès 1.4.11&nbsp;: Contraste non textuel | Comprendre le WCAG 2.2 du W3C <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast)
 
 ## Définition formelle
 

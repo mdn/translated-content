@@ -3,12 +3,12 @@ title: Propriété CSS `path-length`
 short-title: path-length
 slug: Web/CSS/Reference/Properties/path-length
 l10n:
-  sourceCommit: a9dc3374034d357cbfea717fd5d641605359e3c7
+  sourceCommit: b7e9f482c51817d3a885e26092f8219fd0d9d278
 ---
 
 {{SeeCompatTable}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`path-length`** permet de définir une longueur totale de chemin, en unités utilisateur·ice. Tous les calculs de chemin sont ensuite mis à l'échelle en utilisant le ratio `path-length` / _(valeur calculée de la longueur du chemin)_ — cela inclut les chemins de texte, les chemins d'animation et diverses opérations de trait.
+La propriété [CSS](/fr/docs/Web/CSS) **`path-length`** permet de définir une longueur totale de chemin, en unités utilisateur·ice. Tous les calculs de chemin sont ensuite mis à l'échelle en utilisant la proportion `path-length` / _(valeur calculée de la longueur du chemin)_ — cela inclut les chemins de texte, les chemins d'animation et diverses opérations de trait.
 
 La propriété `path-length` s'applique seulement sur les éléments imbriqués {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}} et {{SVGElement("rect")}} dans un {{SVGElement("svg")}}.
 
@@ -24,8 +24,8 @@ path-length: none;
 
 /* Valeurs de type <length> */
 path-length: 0;
-path-length: 70;
-path-length: 500;
+path-length: 70px;
+path-length: 500px;
 
 /* Valeurs globales */
 path-length: inherit;
@@ -41,7 +41,7 @@ path-length: unset;
   - : Aucune longueur de chemin n'est définie par l'auteur·ice&nbsp;; la longueur de chemin calculée par l'agent utilisateur est utilisée pour tous les calculs liés au chemin.
 
 - `<length>`
-  - : Une valeur positive ou nulle, sans unité, représentant une longueur de chemin totale définie par l'auteur·ice, en unités utilisateur·ice.
+  - : Une valeur {{CSSxRef("&lt;length&gt;")}} qui n'est pas négative, représentant une longueur de chemin totale définie par l'auteur·ice.
 
 ## Définition formelle
 
@@ -78,7 +78,7 @@ On définit une valeur `path-length` sur le `<path>`&nbsp;:
 
 ```css live-sample___basic-path-length
 path {
-  path-length: 500;
+  path-length: 500px;
 }
 ```
 
@@ -106,11 +106,11 @@ Cet exemple inclut le même `<path>` SVG que le précédent. De plus, il inclut 
 
 #### CSS
 
-Sur l'élément {{CSSxRef(":root")}}, nous définissons une [propriété personnalisée CSS](/fr/docs/Web/CSS/Reference/Properties/--*) appelée `--longueur-chemin` et lui donnons une valeur initiale de `200`. Nous définissons ensuite la valeur de `path-length` de l'élément `<path>` sur la propriété `--longueur-chemin`, et lui appliquons une {{CSSxRef("animation")}} qui s'exécute un nombre infini de fois et alterne entre l'avant et l'arrière.
+Sur l'élément {{CSSxRef(":root")}}, nous définissons une [propriété personnalisée CSS](/fr/docs/Web/CSS/Reference/Properties/--*) appelée `--longueur-chemin` et lui donnons une valeur initiale de `200px`. Nous définissons ensuite la valeur de `path-length` de l'élément `<path>` sur la propriété `--longueur-chemin`, et lui appliquons une {{CSSxRef("animation")}} qui s'exécute un nombre infini de fois et alterne entre l'avant et l'arrière.
 
 ```css live-sample___path-length-animation
 :root {
-  --longueur-chemin: 200;
+  --longueur-chemin: 200px;
 }
 
 path {
@@ -157,8 +157,8 @@ Ensuite, nous ajoutons un gestionnaire d'évènements `input` au curseur de plag
 
 ```js live-sample___path-length-animation
 slider.addEventListener("input", () => {
-  output.textContent = slider.value;
-  rootElem.style.setProperty("--longueur-chemin", slider.value);
+  output.textContent = `${slider.value}px`;
+  rootElem.style.setProperty("--longueur-chemin", `${slider.value}px`);
 });
 ```
 

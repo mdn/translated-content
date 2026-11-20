@@ -3,7 +3,7 @@ title: Propriété CSS `scroll-initial-target`
 short-title: scroll-initial-target
 slug: Web/CSS/Reference/Properties/scroll-initial-target
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: b7e9f482c51817d3a885e26092f8219fd0d9d278
 ---
 
 {{SeeCompatTable}}
@@ -125,7 +125,7 @@ div.none {
 /* alignement scroll-snap pour les enfants */
 div > div {
   scroll-snap-align: center;
-  scroll-initial-target: always;
+  scroll-snap-stop: always;
 }
 ```
 

@@ -3,10 +3,10 @@ title: Propriété CSS `scroll-padding`
 short-title: scroll-padding
 slug: Web/CSS/Reference/Properties/scroll-padding
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
-La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`scroll-padding`** définit le padding de défilement sur tous les côtés d'un élément à la fois. Elle définit des décalages qui déterminent la zone de visualisation optimale d'un viewport de défilement à l'intérieur d'un {{Glossary("scroll container", "conteneur de défilement")}}.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`scroll-padding`** définit le remplissage de défilement sur tous les côtés d'un élément à la fois. Elle définit des décalages qui déterminent la zone de visualisation optimale d'un viewport de défilement à l'intérieur d'un {{Glossary("scroll container", "conteneur de défilement")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: scroll-padding")}}
 
@@ -107,7 +107,7 @@ scroll-padding: unset;
 
 ## Description
 
-La propriété `scroll-padding` est une propriété raccourcie qui définit {{CSSxRef("scroll-padding-top")}}, {{CSSxRef("scroll-padding-right")}}, {{CSSxRef("scroll-padding-bottom")}} et {{CSSxRef("scroll-padding-left")}}, dans cet ordre, réglant respectivement le padding de défilement en haut, à droite, en bas et à gauche d'un conteneur de défilement.
+La propriété `scroll-padding` est une propriété raccourcie qui définit {{CSSxRef("scroll-padding-top")}}, {{CSSxRef("scroll-padding-right")}}, {{CSSxRef("scroll-padding-bottom")}} et {{CSSxRef("scroll-padding-left")}}, dans cet ordre, réglant respectivement le remplissage de défilement en haut, à droite, en bas et à gauche d'un conteneur de défilement.
 
 Utile lors de la création de conteneurs d'accrochage de défilement, la propriété `scroll-padding` permet de définir des décalages pour la _zone de visualisation optimale_ de la zone de défilement&nbsp;: la région utilisée comme zone cible pour placer des éléments à la vue de l'utilisateur·ice. Cela permet de créer des encarts dans la zone de défilement pour laisser de la place aux objets qui peuvent masquer le contenu, tels que des barres d'outils ou des barres latérales en position fixe, ou pour laisser plus d'espace entre un élément ciblé et les bords de la zone de défilement.
 
@@ -120,6 +120,98 @@ Bien que définie dans le [module d'accrochage de défilement CSS](/fr/docs/Web/
 ## Syntaxe formelle
 
 {{CSSSyntax}}
+
+## Exemples
+
+### Prévenir le masquage du contenu par un en-tête fixe
+
+Un cas d'utilisation courant de `scroll-padding` est de prévenir que le contenu défilant soit masqué par un en-tête en position fixe. Cet exemple montre comment utiliser `scroll-padding` à cet effet.
+
+#### HTML
+
+L'en-tête contient des liens vers trois sections de la page.
+
+```html
+<header>
+  <nav>
+    <a href="#section-1">Section 1</a>
+    <a href="#section-2">Section 2</a>
+    <a href="#section-3">Section 3</a>
+  </nav>
+</header>
+<main>
+  <section id="section-1">
+    <h2>Section 1</h2>
+    <p>Utilisez les liens dans l'en-tête pour passer à une autre section.</p>
+  </section>
+  <section id="section-2">
+    <h2>Section 2</h2>
+    <p>Ce titre reste visible sous l'en-tête fixe.</p>
+  </section>
+  <section id="section-3">
+    <h2>Section 3</h2>
+    <p>Ce titre reste également visible sous l'en-tête fixe.</p>
+  </section>
+</main>
+```
+
+#### CSS
+
+```css hidden
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+section {
+  box-sizing: border-box;
+  padding: 1rem;
+  min-height: 60vh;
+}
+
+h2 {
+  margin-top: 0;
+}
+```
+
+L'en-tête est fixé en haut de la zone de visualisation et mesure `60px` de hauteur. Nous définissons `scroll-padding` sur l'élément racine pour réserver `60px` en haut de la zone de visualisation lors du défilement vers une section, sans décalage sur les autres côtés.
+
+```css
+html {
+  --hauteur-barre-navigation: 60px;
+
+  scroll-padding: var(--hauteur-barre-navigation) 0 0;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  height: var(--hauteur-barre-navigation);
+  width: 100%;
+}
+```
+
+Nous ajoutons un remplissage au contenu principal afin que la première section commence sous l'en-tête lors du chargement initial.
+
+```css
+main {
+  padding-top: var(--hauteur-barre-navigation);
+}
+```
+
+#### Résultat
+
+Cliquez sur les liens dans l'en-tête pour passer d'une section à l'autre. Chaque section apparaît sous l'en-tête, gardant son titre visible. Ouvrez cet exemple dans le terrain de jeu, supprimez la ligne `scroll-padding`, puis cliquez à nouveau sur les liens pour voir l'en-tête masquer les titres.
+
+{{EmbedLiveSample("Prévenir le masquage du contenu par un en-tête fixe", "100%", 300)}}
 
 ## Spécifications
 

@@ -3,7 +3,7 @@ title: Propriété CSS `orphans`
 short-title: orphans
 slug: Web/CSS/Reference/Properties/orphans
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: e4ed2e4bfb88dab98ae65c44c134e3359b623d9b
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`orphans`** définit le nombre minimum de lignes dans un bloc englobant qui doivent être affichées en bas d'une [page](/fr/docs/Web/CSS/Guides/Paged_media), d'une région ou d'une [colonne](/fr/docs/Web/CSS/Guides/Multicol_layout).
@@ -40,7 +40,9 @@ orphans: unset;
 
 ## Exemples
 
-### Définir une taille minimale d'orphelin de trois lignes
+### Contrôler les orphelins de colonne
+
+Cet exemple utilise une case à cocher pour basculer `orphans` entre `2` et `1`. Avec `orphans: 2`, au moins deux lignes d'un paragraphe doivent apparaître en bas d'une colonne. Avec `orphans: 1`, le paragraphe peut être coupé n'importe où.
 
 #### HTML
 
@@ -57,6 +59,10 @@ orphans: unset;
     premier.
   </p>
 </div>
+<form>
+  <input type="checkbox" id="orphans" checked />
+  <label for="orphans">Appliquer orphans: 2</label>
+</form>
 ```
 
 #### CSS
@@ -64,9 +70,16 @@ orphans: unset;
 ```css
 div {
   background-color: #8cffa0;
-  height: 150px;
+  width: 420px;
+  height: 120px;
   columns: 3;
-  orphans: 3;
+  column-fill: auto;
+  orphans: 1;
+  widows: 1;
+}
+
+div:has(~ form input:checked) {
+  orphans: 2;
 }
 
 p {
@@ -80,7 +93,11 @@ p:first-child {
 
 #### Résultat
 
-{{EmbedLiveSample("Définir une taille minimale d'orphelin de trois lignes", 380, 150)}}
+{{EmbedLiveSample("Contrôler les orphelins de colonne", "", 240)}}
+
+Dans Firefox, qui ne prend pas en charge `orphans`, le comportement dans cet exemple est essentiellement équivalent à `orphans: 1`, quel que soit l'état de la case à cocher. La capture d'écran suivante montre le résultat avec `orphans: 2` dans un navigateur compatible&nbsp;:
+
+![Trois paragraphes en trois colonnes. Le premier paragraphe occupe la première colonne. Le deuxième paragraphe commence dans la deuxième colonne, laissant de l'espace sous le premier paragraphe, et continue dans la troisième colonne. Le troisième paragraphe occupe le reste de la troisième colonne.](with-orphans.png)
 
 ## Spécifications
 

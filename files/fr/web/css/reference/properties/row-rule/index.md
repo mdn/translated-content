@@ -3,12 +3,12 @@ title: Propriété CSS `row-rule`
 short-title: row-rule
 slug: Web/CSS/Reference/Properties/row-rule
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 5fd3b03e9ad1ee4e8bc64d4f6888570690a7fbc8
 ---
 
 {{SeeCompatTable}}
 
-La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`row-rule`** définit la largeur, le style et la couleur de la ligne tracée entre les lignes dans les mises en page multi-lignes de type grille, flexible et multi-colonnes.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`row-rule`** définit la largeur, le style et la couleur de la ligne tracée entre les lignes dans les mises en page multi-rangées de type grille, flexible et multi-colonnes.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: row-rule")}}
 
@@ -100,7 +100,7 @@ row-rule: unset;
 
 ### Valeurs
 
-La propriété `row-rule` accepte une liste de valeurs séparées par des virgules, y compris&nbsp;:
+Cette propriété est définie comme une liste de valeurs séparées par des virgules. Chaque valeur peut être l'un des types de valeurs suivants&nbsp;:
 
 - `<gap-rule>`
   - : Défini comme une, deux ou trois des valeurs listées ci-dessous, dans n'importe quel ordre.
@@ -119,19 +119,19 @@ La propriété `row-rule` accepte une liste de valeurs séparées par des virgul
 
 ## Description
 
-La propriété `row-rule` définit le style de ligne de toutes les règles de lignes tracées dans les espaces entre les lignes dans les conteneurs [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grilles](/fr/docs/Web/CSS/Guides/Grid_layout) contenant plus d'une ligne.
+La propriété `row-rule` définit le style de ligne de toutes les règles de lignes tracées dans les espaces entre les lignes dans les conteneurs [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grilles](/fr/docs/Web/CSS/Guides/Grid_layout) contenant plus d'une rangée.
 
 Le raccourci `row-rule` pour {{CSSxRef("row-rule-color")}}, {{CSSxRef("row-rule-style")}} et {{CSSxRef("row-rule-width")}}. Le raccourci `row-rule`, ainsi que le raccourci {{CSSxRef("column-rule")}}, peut également être défini en utilisant le raccourci {{CSSxRef("rule")}}.
 
 La valeur de la propriété est une liste de composants séparés par des virgules, qui peuvent inclure des types `<gap-rule>`, `<gap-repeat-rule>` et `<gap-auto-repeat-rule>`. Chaque `<gap-rule>` définit la largeur, la couleur et le style d'une ou plusieurs règle de lignes.
 
-Si la valeur de la propriété ne consiste qu'en une seule `<gap-rule>`, toutes les lignes de la règle ont ce style. Si nous déclarons ce qui suit, toutes les règles de lignes sont `dashed red 3px`&nbsp;:
+Si la valeur de la propriété ne consiste qu'en une seule `<gap-rule>`, toutes les rangées de la règle ont ce style. Si nous déclarons ce qui suit, toutes les règles de rangées sont `dashed red 3px`&nbsp;:
 
 ```css
 row-rule: dashed red 3px;
 ```
 
-Lorsque plus d'une `<gap-rule>` est déclarée, elles sont appliquées aux règle de lignes dans l'ordre défini. S'il y a plus d'interstices entre les lignes que de valeurs `<gap-rule>`, la liste des valeurs est répétée jusqu'à ce que chaque règle de ligne ait une ligne d'interstice. Si nous déclarons ce qui suit, par exemple, toutes les règles de lignes impaires sont `dashed red 3px`, et toutes les règles de lignes paires sont `dotted blue 5px`.
+Lorsque plus d'une `<gap-rule>` est déclarée, elles sont appliquées aux règles de lignes dans l'ordre défini. S'il y a plus de gouttière entre les lignes que de valeurs `<gap-rule>`, la liste des valeurs est répétée jusqu'à ce que chaque règle de rangée a une ligne de gouttière. Si nous déclarons ce qui suit, par exemple, toutes les règles de lignes impaires sont `dashed red 3px`, et toutes les règles de lignes paires sont `dotted blue 5px`.
 
 ```css
 row-rule:
@@ -157,9 +157,9 @@ row-rule:
   repeat(3, outset blue 10px, inset green 1px);
 ```
 
-Cela crée une liste de sept règle de lignes. Si le nombre de styles dans la liste de styles de la valeur `row-rule` dépasse le nombre d'interstices entre les lignes, les styles excédentaires sont ignorés. Si le conteneur sur lequel c'est appliqué a trois lignes, la règle de ligne dans le premier interstice est `solid red 5px` et la deuxième `outset blue 10px`.
+Cela crée une liste de sept règle de lignes. Si le nombre de styles dans la liste de styles de la valeur `row-rule` dépasse le nombre de gouttière entre les lignes, les styles excédentaires sont ignorés. Si le conteneur sur lequel c'est appliqué a trois lignes, la règle de ligne dans le premier interstice est `solid red 5px` et la deuxième `outset blue 10px`.
 
-Si le nombre d'interstices entre les lignes est supérieur au nombre de styles, la liste des styles est répétée. Si le conteneur a 8, 15, 22 ou 29 lignes, cette séquence de styles est répétée une, deux, trois ou quatre fois, respectivement, la dernière règle de ligne étant `inset green 1px`.
+Si le nombre de gouttière entre les lignes est supérieur au nombre de styles, la liste des styles est répétée. Si le conteneur a 8, 15, 22 ou 29 lignes, cette séquence de styles est répétée une, deux, trois ou quatre fois, respectivement, la dernière règle de ligne étant `inset green 1px`.
 
 ### Styles de ligne à répétition automatique
 
@@ -172,9 +172,9 @@ row-rule:
   solid red 5px;
 ```
 
-Dans ce cas, les premières et dernières règle de lignes sont `solid red 5px`, et toutes les autres alternent entre `dotted green 1px` et `dashed blue 1px`. Peu importe si le conteneur a 3, 6, 11, 16 ou 21 lignes&nbsp;: les premiers et derniers interstices ont toujours une ligne solide rouge épaisse peinte entre eux (sauf si {{CSSxRef("row-rule-visibility-items")}} entraîne qu'aucune ligne ne soit tracée), et toutes les autres règle de lignes sont fines, vertes pointillées ou bleues en tirets. S'il n'y a que 2 ou 3 lignes, il n'y a pas de lignes pointillées ou en tirets.
+Dans ce cas, les premières et dernières règle de rangées sont `solid red 5px`, et toutes les autres alternent entre `dotted green 1px` et `dashed blue 1px`. Peu importe si le conteneur a 3, 6, 11, 16 ou 21 lignes&nbsp;: les premières et dernières gouttières ont toujours une ligne solide rouge épaisse peinte entre eux (sauf si {{CSSxRef("row-rule-visibility-items")}} entraîne qu'aucune ligne ne soit tracée), et toutes les autres règle de rangées sont fines, vertes pointillées ou bleues en tirets. S'il n'y a que 2 ou 3 lignes, il n'y a pas de lignes pointillées ou en tirets.
 
-Le mot-clé `auto` dans la fonction `repeat()` crée un répétiteur automatique qui remplit les valeurs pour les règles de lignes qui ne reçoivent pas autrement de valeurs provenant d'autres parties de la liste, empêchant la liste d'être répétée. Au maximum, une seule occurrence de `repeat(auto, <gap-rule>)` peut être présente dans une valeur `row-rule`.
+Le mot-clé `auto` dans la fonction `repeat()` crée un répétiteur automatique qui remplit les valeurs pour les règles de rangées qui ne reçoivent pas autrement de valeurs provenant d'autres parties de la liste, empêchant la liste d'être répétée. Au maximum, une seule occurrence de `repeat(auto, <gap-rule>)` peut être présente dans une valeur `row-rule`.
 
 ## Définition formelle
 
@@ -223,9 +223,11 @@ ul {
 
 {{EmbedLiveSample("basic", "", 180)}}
 
-### Répétition des valeurs
+### Valeurs répétées
 
-Cet exemple montre comment les valeurs sont répétées lorsqu'il y a moins de valeurs dans la liste des styles que de règle de lignes. Il montre également les valeurs par défaut pour la largeur, la couleur et le style de `medium`, `currentcolor` et `none`, respectivement.
+Cet exemple montre comment les valeurs sont répétées lorsqu'il y a moins de valeurs dans la liste des styles que de règle de rangées. Il montre également les valeurs par défaut pour la largeur, la couleur et le style de `medium`, `currentcolor` et `none`, respectivement.
+
+#### CSS
 
 En utilisant le même HTML et CSS que dans l'exemple précédent, nous incluons quatre valeurs `<gap-rule>` séparées par des virgules comme valeur de `row-rule`, en omettant la largeur dans le premier `<gap-rule>`, la couleur dans le deuxième et le style dans le troisième, le quatrième incluant les trois composants&nbsp;:
 
@@ -247,6 +249,8 @@ La ligne rouge a une largeur de `3px`, la ligne pointillée est de la même coul
 
 Cet exemple montre comment utiliser la fonction `repeat()` dans la valeur de la propriété `row-rule`. Nous utilisons le même HTML et CSS que dans les exemples précédents. Nous incluons une fonction `repeat()`, définissant la liste de deux valeurs `<gap-rule>` à répéter 3 fois.
 
+#### CSS
+
 ```css live-sample___func live-sample___auto
 ul {
   row-rule:
@@ -256,15 +260,19 @@ ul {
 }
 ```
 
+#### Résultat
+
 {{EmbedLiveSample("func", "", 180)}}
 
-Le conteneur flexible a six lignes, donc cinq interstices. La fonction `repeat()` répète deux valeurs de style trois fois, créant une liste de huit valeurs de style. Comme il y a moins d'interstices entre les lignes que de `<gap-rule>` au total, les trois dernières valeurs de la liste sont ignorées.
+Le conteneur flexible a six rangées, donc cinq gouttières. La fonction `repeat()` répète deux valeurs de style trois fois, créant une liste de huit valeurs de style. Comme il y a moins de gouttières entre les rangées que de `<gap-rule>` au total, les trois dernières valeurs de la liste sont ignorées.
 
 ### Utiliser `auto` dans `repeat()`
 
 Cet exemple montre comment utiliser l'argument `auto` au lieu d'un entier dans la fonction `repeat()`.
 
-En utilisant `repeat(auto, <gap-rule>)`, nous définissons toutes les règles de lignes sur `1px dotted` et par défaut à la couleur actuelle, sauf la première et la dernière, que nous définissons sur `3px solid red`.
+#### CSS
+
+En utilisant `repeat(auto, <gap-rule>)`, nous définissons toutes les règles de rangées sur `1px dotted` et par défaut à la couleur actuelle, sauf la première et la dernière, que nous définissons sur `3px solid red`.
 
 ```css live-sample___auto
 ul {
@@ -274,6 +282,8 @@ ul {
     3px red solid;
 }
 ```
+
+#### Résultat
 
 {{EmbedLiveSample("auto", "", 180)}}
 

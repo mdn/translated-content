@@ -3,12 +3,12 @@ title: Propriété CSS `rule-color`
 short-title: rule-color
 slug: Web/CSS/Reference/Properties/rule-color
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 04dfe418f2942ae739d41592c22fafa3679fc03c
 ---
 
 {{SeeCompatTable}}
 
-La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`rule-color`** définit les couleurs des lignes tracées entre les colonnes et les lignes dans les mises en page multi-colonnes, flexibles et en multi-colonnes, en réglant les couleurs des règles de colonne et de ligne sur la même valeur.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`rule-color`** définit les couleurs des lignes tracées entre les colonnes et les rangées dans les mises en page multi-colonnes, flexibles et en multi-colonnes, en réglant les couleurs des règles de colonne et de rangée sur la même valeur.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: rule-color")}}
 
@@ -119,20 +119,20 @@ La propriété `rule-color` accepte une liste de valeurs séparées par des virg
 
 ## Description
 
-La propriété `rule-color` définit les couleurs des lignes tracées dans les gouttières entre les colonnes et les lignes des conteneurs [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grilles](/fr/docs/Web/CSS/Guides/Grid_layout) qui comportent plus d'une colonne ou d'une ligne. Il s'agit d'un raccourci qui règle à la même valeur les propriétés {{CSSxRef("row-rule-color")}} et {{CSSxRef("column-rule-color")}}.
+La propriété `rule-color` définit les couleurs des lignes tracées dans les gouttières entre les colonnes et les rangées des conteneurs [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grilles](/fr/docs/Web/CSS/Guides/Grid_layout) qui comportent plus d'une colonne ou d'une rangée. Il s'agit d'un raccourci qui règle à la même valeur les propriétés {{CSSxRef("row-rule-color")}} et {{CSSxRef("column-rule-color")}}.
 
 La valeur est une liste d'éléments séparés par des virgules, qui peut inclure les types `<line-color>`, `<repeat-line-color>` et `<auto-repeat-line-color>`.
 La propriété `rule-color`, avec les propriétés {{CSSxRef("rule-width")}} et {{CSSxRef("rule-style")}}, se définit avec le raccourci {{CSSxRef("rule")}}.
 
 ### Couleurs des lignes
 
-Un `<line-color>` se déclare avec n'importe quelle valeur CSS valide de type {{CSSxRef("&lt;color&gt;")}}. Si la valeur de la propriété contient une seule `<color>`, toutes les lignes de règle prennent cette couleur. Par exemple, les lignes dans les gouttières entre colonnes et lignes sont bleues&nbsp;:
+Un `<line-color>` se déclare avec n'importe quelle valeur CSS valide de type {{CSSxRef("&lt;color&gt;")}}. Si la valeur de la propriété contient une seule `<color>`, toutes les lignes de règle prennent cette couleur. Par exemple, les lignes dans les gouttières entre colonnes et rangées sont bleues&nbsp;:
 
 ```css
 rule-color: blue;
 ```
 
-Lorsque plusieurs valeurs `<line-color>` sont déclarées, elles s'appliquent aux lignes peintes dans les gouttières de colonnes et de lignes dans l'ordre défini. Si le nombre de règles dépasse le nombre de valeurs `<line-color>`, la liste des couleurs se répète jusqu'à ce que chaque règle de colonne possède une couleur. Par exemple, chaque règle impaire est rouge et chaque règle paire est jaune.
+Lorsque plusieurs valeurs `<line-color>` sont déclarées, elles s'appliquent aux lignes peintes dans les gouttières de colonnes et de rangées dans l'ordre défini. Si le nombre de règles dépasse le nombre de valeurs `<line-color>`, la liste des couleurs se répète jusqu'à ce que chaque règle de colonne possède une couleur. Par exemple, chaque règle impaire est rouge et chaque règle paire est jaune.
 
 ```css
 rule-color: red, yellow;
@@ -147,17 +147,17 @@ rule-color: blue, yellow, red, yellow, red, yellow, red;
 rule-color: blue, repeat(3, yellow, red);
 ```
 
-Cela crée une liste de sept couleurs. Si le nombre de couleurs de la liste de la valeur `rule-color` dépasse le nombre de gouttières entre colonnes et lignes, les couleurs excédentaires sont ignorées. S'il y a moins de couleurs que de gouttières, la liste de valeurs se répète jusqu'à ce que chaque règle ait une couleur associée. Par exemple, si le conteneur comporte trois colonnes et 18 lignes, la règle de la première gouttière de colonne est bleue et la deuxième est jaune. Pour les règles de ligne, la séquence se répète, les première, huitième et quinzième règles de ligne étant bleues.
+Cela crée une liste de sept couleurs. Si le nombre de couleurs de la liste de la valeur `rule-color` dépasse le nombre de gouttières entre colonnes et rangées, les couleurs excédentaires sont ignorées. S'il y a moins de couleurs que de gouttières, la liste de valeurs se répète jusqu'à ce que chaque règle ait une couleur associée. Par exemple, si le conteneur comporte trois colonnes et 18 rangées, la règle de la première gouttière de colonne est bleue et la deuxième est jaune. Pour les règles de rangée, la séquence se répète, les première, huitième et quinzième règles de rangée étant bleues.
 
 ### Répétition automatique des couleurs
 
-La fonction `repeat()` accepte également `auto` comme premier argument au lieu d'un entier. Avec `auto`, les valeurs `<color>` fournies comme arguments suivants sont répétées autant de fois que nécessaire pour remplir les valeurs des règles de colonne et de ligne qui ne sont pas explicitement définies par d'autres composants de la valeur.
+La fonction `repeat()` accepte également `auto` comme premier argument au lieu d'un entier. Avec `auto`, les valeurs `<color>` fournies comme arguments suivants sont répétées autant de fois que nécessaire pour remplir les valeurs des règles de colonne et de rangée qui ne sont pas explicitement définies par d'autres composants de la valeur.
 
 ```css
 rule-color: blue, repeat(auto, yellow), red;
 ```
 
-Dans ce cas, les premières règles de colonne et de ligne sont bleues, les dernières sont rouges et toutes les autres sont jaunes. Tant qu'il y a au moins deux règles dans une direction, la première règle reste bleue et la dernière reste rouge. Toutes les autres règles sont jaunes, ce qui signifie que 2 ou 3 colonnes et lignes ne produisent aucune ligne jaune.
+Dans ce cas, les premières règles de colonne et de rangée sont bleues, les dernières sont rouges et toutes les autres sont jaunes. Tant qu'il y a au moins deux règles dans une direction, la première règle reste bleue et la dernière reste rouge. Toutes les autres règles sont jaunes, ce qui signifie que 2 ou 3 colonnes et rangées ne produisent aucune ligne jaune.
 
 Le mot-clé `auto` dans `repeat()` crée un auto-répéteur qui complète les valeurs des couleurs des règles qui n'en reçoivent pas autrement, évitant la mise en cycle de la liste. Une valeur `rule-color` peut contenir au maximum un `repeat(auto, <color>)`.
 
@@ -173,7 +173,7 @@ Le mot-clé `auto` dans `repeat()` crée un auto-répéteur qui complète les va
 
 ### Exemple simple
 
-Dans cet exemple, vous définissez une seule `<color>` pour les lignes tracées entre les colonnes et les lignes d'éléments dans un conteneur grille.
+Dans cet exemple, vous définissez une seule `<color>` pour les lignes tracées entre les colonnes et les rangées d'éléments dans un conteneur grille.
 
 #### HTML
 
@@ -183,7 +183,7 @@ Nous créons une liste de 75 éléments. La plupart du HTML est masqué pour plu
 <ul>
   <li>1</li>
   <li>2</li>
-  ...
+  …
   <li>74</li>
   <li>75</li>
 </ul>
@@ -271,7 +271,7 @@ Nous créons une liste de 75 éléments. La plupart du HTML est masqué pour plu
 
 #### CSS
 
-Nous définissons la liste non ordonnée comme un conteneur à 10 colonnes, en créant les colonnes et les lignes avec la propriété {{CSSxRef("grid-template-columns")}}. Nous incluons un {{CSSxRef("gap")}} de `5px` pour fournir assez d'espace entre les colonnes et les lignes pour notre règle en pointillés de `3px`, et définissons {{CSSxRef("list-style-type")}} sur `none` pour supprimer les puces.
+Nous définissons la liste non ordonnée comme un conteneur à 10 colonnes, en créant les colonnes et les rangées avec la propriété {{CSSxRef("grid-template-columns")}}. Nous incluons un {{CSSxRef("gap")}} de `5px` pour fournir assez d'espace entre les colonnes et les rangées pour notre règle en pointillés de `3px`, et définissons {{CSSxRef("list-style-type")}} sur `none` pour supprimer les puces.
 
 Nous incluons un {{CSSxRef("gap")}} de `5px` pour fournir assez d'espace entre les éléments pour notre règle en pointillés moyens. Nous définissons `rule-color` sur `#22BB22`, une valeur verte {{CSSxRef("hex-color")}}&nbsp;:
 
@@ -316,7 +316,7 @@ li {
 
 ### Plusieurs valeurs de couleur
 
-Cet exemple montre la déclaration de plusieurs couleurs et la manière dont les valeurs se répètent lorsque la liste de couleurs contient moins de valeurs que de gouttières entre colonnes et lignes.
+Cet exemple montre la déclaration de plusieurs couleurs et la manière dont les valeurs se répètent lorsque la liste de couleurs contient moins de valeurs que de gouttières entre colonnes et rangées.
 
 En utilisant le même HTML et CSS que dans l'exemple précédent, nous incluons trois couleurs séparées par des virgules comme valeur de `rule-color`&nbsp;:
 
@@ -348,7 +348,7 @@ ul {
 
 {{EmbedLiveSample("multiple", "", 600)}}
 
-Il y a neuf gouttières de colonnes et six gouttières de lignes, mais seulement trois couleurs dans notre liste de couleurs, qui se répète donc, les première, quatrième et septième lignes étant bleues.
+Il y a neuf gouttières de colonnes et six gouttières de rangées, mais seulement trois couleurs dans notre liste de couleurs, qui se répète donc, les première, quatrième et septième rangées étant bleues.
 
 ### Utiliser la fonction `repeat()`
 
@@ -358,7 +358,7 @@ Cet exemple montre l'utilisation de la fonction `repeat()` dans la valeur de la 
 
 Pour montrer comment les valeurs peuvent devenir complexes et l'utilité de la fonction `repeat()`, nous déclarons deux propriétés personnalisées, que nous utilisons dans quatre déclarations de fonction de couleur {{CSSxRef("color-mix()")}} pour créer des couleurs bleue, rougeâtre, sarcelle et jaune. Les couleurs rougeâtre et sarcelle de `color-mix()` se trouvent dans une fonction `repeat()`, réglée pour se répéter 3 fois.
 
-Nous ajoutons également une bordure autour de chaque élément de la grille afin de voir la règle au milieu de la gouttière entre les colonnes et les lignes.
+Nous ajoutons également une bordure autour de chaque élément de la grille afin de voir la règle au milieu de la gouttière entre les colonnes et les rangées.
 
 ```css live-sample___repeat
 ul {
@@ -380,7 +380,7 @@ ul {
 
 {{EmbedLiveSample("repeat", "", "600")}}
 
-La grille comporte 10 colonnes et 7 lignes, créant 9 gouttières de colonnes et 6 gouttières de lignes. La fonction `repeat()` répète trois fois les deux couleurs mélangées qu'elle contient, créant une liste de huit couleurs au total. Même si beaucoup de CSS est nécessaire pour créer les quatre couleurs, nous n'avons pas à écrire les huit fonctions `color-mix()`. Comme il y a plus de gouttières de colonnes que de couleurs dans la liste, les couleurs se répètent pour les gouttières de colonnes. Comme il y a moins de gouttières de lignes que de couleurs, les deux dernières couleurs de la liste ne sont pas utilisées pour les gouttières de lignes.
+La grille comporte 10 colonnes et 7 rangées, créant 9 gouttières de colonnes et 6 gouttières de rangées. La fonction `repeat()` répète trois fois les deux couleurs mélangées qu'elle contient, créant une liste de huit couleurs au total. Même si beaucoup de CSS est nécessaire pour créer les quatre couleurs, nous n'avons pas à écrire les huit fonctions `color-mix()`. Comme il y a plus de gouttières de colonnes que de couleurs dans la liste, les couleurs se répètent pour les gouttières de colonnes. Comme il y a moins de gouttières de rangées que de couleurs, les deux dernières couleurs de la liste ne sont pas utilisées pour les gouttières de rangées.
 
 ### Utiliser `auto` dans `repeat()`
 
@@ -398,7 +398,7 @@ ul {
 
 {{EmbedLiveSample("auto", "", "600")}}
 
-Même s'il y a plus de lignes de règle de colonne que de lignes de règle de ligne, la valeur `<auto-repeat-line-color>` permet de créer cet effet symétrique.
+Même s'il y a plus de lignes de règle de colonne que de lignes de règle de rangée, la valeur `<auto-repeat-line-color>` permet de créer cet effet symétrique.
 
 ```css hidden live-sample___repeat live-sample___auto
 @layer no-support {

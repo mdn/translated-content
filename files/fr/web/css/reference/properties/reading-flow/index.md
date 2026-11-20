@@ -3,7 +3,7 @@ title: Propriété CSS `reading-flow`
 short-title: reading-flow
 slug: Web/CSS/Reference/Properties/reading-flow
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 {{SeeCompatTable}}
@@ -59,7 +59,7 @@ La propriété `reading-flow` prend l'un des mots-clés suivants comme valeur&nb
 
 La propriété `reading-flow` modifie {{Glossary("reading order", "l'ordre de lecture")}} des élément dans un conteneur de {{Glossary("Block/CSS", "bloc")}}, conteneur [flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout) ou conteneur [de grille](/fr/docs/Web/CSS/Guides/Grid_layout) lorsque sa valeur est différente de `normal`. Un tel conteneur est appelé [conteneur de flux de lecture](/fr/docs/Glossary/Reading_order#modifier_lordre_de_lecture_en_css).
 
-Par défaut, le contenu web est lu dans l'ordre source du DOM. En général, l'ordre source doit exprimer un ordre de lecture logique pour le contenu, et cela doit également se refléter dans l'ordre visuel de la mise en page du contenu. Cependant, parfois, l'ordre visuel ou l'ordre de tabulation diffère de l'ordre source. Par exemple, lors de l'application de plusieurs mises en page flexbox ou grille à un document avec des [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using) pour répondre à différents besoins de l'appareil ou de l'utilisateur·ice, l'ordre du contenu peut différer en fonction de la largeur de la zone d'affichage. Dans ce cas, la propriété `reading-flow` peut être utilisée pour garantir que l'ordre de lecture et de tabulation reflète l'ordre visuel.
+Par défaut, le contenu web est lu dans l'ordre source du DOM. En général, l'ordre source doit exprimer un ordre de lecture logique pour le contenu, et cela doit également se refléter dans l'ordre visuel de la mise en page du contenu. Cependant, parfois, l'ordre visuel ou l'ordre de tabulation diffère de l'ordre source. Par exemple, lors de l'application de plusieurs mises en page de boîtes flexibles ou grille à un document avec des [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using) pour répondre à différents besoins de l'appareil ou de l'utilisateur·ice, l'ordre du contenu peut différer en fonction de la largeur de la zone d'affichage. Dans ce cas, la propriété `reading-flow` peut être utilisée pour garantir que l'ordre de lecture et de tabulation reflète l'ordre visuel.
 
 Dans certains cas, vous pouvez souhaiter affiner davantage l'ordre de lecture au sein d'un conteneur de flux de lecture. Vous pouvez utiliser les valeurs de la propriété {{CSSxRef("reading-order")}} sur les enfants du conteneur, en les regroupant en groupes ordinaux qui sont ensuite lus dans l'ordre numérique.
 
@@ -145,7 +145,7 @@ Tout d'abord, essayez de naviguer entre les liens avec `reading-flow: normal` d�
 
 Maintenant, essayez de changer la valeur de `reading-flow` et de naviguer à nouveau entre les liens&nbsp;:
 
-- Une valeur de `flex-visual` fait que les éléments sont parcourus dans l'ordre «&nbsp;Élément 1&nbsp;», «&nbsp;Élément 3&nbsp;», puis «&nbsp;Élément 2&nbsp;», ce qui correspond à l'ordre d'affichage visuel résultant des propriétés flexbox appliquées.
+- Une valeur de `flex-visual` fait que les éléments sont parcourus dans l'ordre «&nbsp;Élément 1&nbsp;», «&nbsp;Élément 3&nbsp;», puis «&nbsp;Élément 2&nbsp;», ce qui correspond à l'ordre d'affichage visuel résultant des propriétés de boîte flexibles appliquées.
 - Une valeur de `flex-flow` fait que les éléments sont parcourus dans l'ordre «&nbsp;Élément 2&nbsp;», «&nbsp;Élément 3&nbsp;», puis «&nbsp;Élément 1&nbsp;», ce qui correspond à la direction du `flex-flow` — dans ce cas, `row-reverse`. Ici, l'ordre de tabulation est l'inverse de l'ordre d'affichage.
 
 ### Comparer les valeurs de la grille
