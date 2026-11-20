@@ -1,11 +1,10 @@
 ---
 title: Date.prototype.setTime()
+short-title: setTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
 l10n:
-  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`setTime()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日付の[タイムスタンプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)を変更します。これは、 UTC の 1970 年 1 月 1 日午前 0 時を[元期](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)として定義される、元期からのミリ秒数です。
 

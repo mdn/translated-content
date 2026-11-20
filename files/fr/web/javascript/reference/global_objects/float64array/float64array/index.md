@@ -3,7 +3,7 @@ title: Constructeur Float64Array()
 short-title: Float64Array()
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Le constructeur **`Float64Array()`** crée des objets {{JSxRef("Float64Array")}}. Le contenu est initialisé à `0` sauf si des données d'initialisation sont explicitement fournies.
@@ -76,7 +76,7 @@ console.log(float64DepuisUnIterable);
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Float64Array` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Float64Array` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - Le guide [des tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - L'objet natif {{JSxRef("TypedArray")}}
 - L'objet natif {{JSxRef("ArrayBuffer")}}

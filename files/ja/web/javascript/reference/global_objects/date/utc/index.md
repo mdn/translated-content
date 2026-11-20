@@ -1,11 +1,10 @@
 ---
 title: Date.UTC()
+short-title: UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
 l10n:
-  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Date.UTC()`** は静的メソッドで、 {{jsxref("Date")}} コンストラクターと同様に日付と時刻の要素を表す引数を受け入れますが、それらを UTC として扱います。 1970 年 1 月 1 日 00:00:00 UTC からのミリ秒数を返します。
 
@@ -40,17 +39,17 @@ Date.UTC(year, monthIndex, day, hours, minutes, seconds, milliseconds)
   - : 整数値で、年を表します。 `0` から `99` までの値は `1900` から `1999` までに対応付けられます。それ以外の値はすべて、実際の年を表します。[例](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#2_桁の年の補完)を参照してください。
 
 - `monthIndex` {{optional_inline}}
-  - : 月を表す整数で、 `0` (1 月) から始まり、 `11` (12 月) までです。既定値は `0` です。
+  - : 月を表す整数で、 `0` (1 月) から始まり、 `11` (12 月) までです。デフォルト値は `0` です。
 - `day` {{optional_inline}}
-  - : 「日」を表す `1` から `31` までの整数値。既定値は `1` です。
+  - : 「日」を表す `1` から `31` までの整数値。デフォルト値は `1` です。
 - `hours` {{optional_inline}}
-  - : 「時」を表す `0` から `23` までの整数値。既定値は `0` です。
+  - : 「時」を表す `0` から `23` までの整数値。デフォルト値は `0` です。
 - `minutes` {{optional_inline}}
-  - : 「分」を表す `0` から `59` までの整数値。既定値は `0` です。
+  - : 「分」を表す `0` から `59` までの整数値。デフォルト値は `0` です。
 - `seconds` {{optional_inline}}
-  - : 「秒」を表す `0` から `59` までの整数値。既定値は `0` です。
+  - : 「秒」を表す `0` から `59` までの整数値。デフォルト値は `0` です。
 - `milliseconds` {{optional_inline}}
-  - : 「ミリ秒」を表す `0` から `999` までの整数値。既定値は `0` です。
+  - : 「ミリ秒」を表す `0` から `999` までの整数値。デフォルト値は `0` です。
 
 ### 返値
 

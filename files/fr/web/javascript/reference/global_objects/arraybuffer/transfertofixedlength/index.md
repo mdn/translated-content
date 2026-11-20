@@ -3,7 +3,7 @@ title: "ArrayBuffer : méthode transferToFixedLength()"
 short-title: transferToFixedLength()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/transferToFixedLength
 l10n:
-  sourceCommit: 16f462ee43bbd7fd39561a480e3e323d1c542966
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`transferToFixedLength()`** des instances de {{JSxRef("ArrayBuffer")}} crée un nouvel objet `ArrayBuffer` non redimensionnable contenant les mêmes octets que ce tampon, puis détache ce tampon.
@@ -24,7 +24,7 @@ transferToFixedLength(newByteLength)
 
 ### Valeur de retour
 
-Un nouvel objet {{JSxRef("ArrayBuffer")}}. Son contenu est initialisé à partir de cet `ArrayBuffer`, et les octets supplémentaires, s'il y en a, sont remplis de zéros. Le nouvel `ArrayBuffer` est toujours non redimensionnable. L'`ArrayBuffer` d'origine est détaché.
+Un nouvel objet {{JSxRef("ArrayBuffer")}}. Son contenu est initialisé à partir de cet `ArrayBuffer`, et les octets supplémentaires, s'il y en a, sont remplis de zéros. Le nouvel `ArrayBuffer` est toujours non redimensionnable. Le `ArrayBuffer` d'origine est détaché.
 
 ### Exceptions
 
@@ -53,7 +53,7 @@ console.log(view2[1]); // 2
 console.log(view2[7]); // 4
 ```
 
-Avec `transferToFixedLength`, `newByteLength` peut être supérieur à la propriété `maxByteLength` de l'`ArrayBuffer` d'origine.
+Avec `transferToFixedLength`, `newByteLength` peut être supérieur à la propriété `maxByteLength` du `ArrayBuffer` d'origine.
 
 ```js
 const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
@@ -79,8 +79,8 @@ console.log(view2[7]); // 4
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `ArrayBuffer.prototype.transferToFixedLength` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `ArrayBuffer.prototype.transferToFixedLength` <sup>(angl.)</sup>](https://www.npmjs.com/package/arraybuffer.prototype.transfertofixedlength)
 - L'objet natif {{JSxRef("ArrayBuffer")}}
 - La propriété {{JSxRef("ArrayBuffer.prototype.detached")}}
 - La méthode {{JSxRef("ArrayBuffer.prototype.transfer()")}}
-- [Prothèse d'émulation de `ArrayBuffer.prototype.transferToFixedLength` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#arraybufferprototypetransfer-and-friends)
-- [Prothèse d'émulation es-shims de `ArrayBuffer.prototype.transferToFixedLength` <sup>(angl.)</sup>](https://www.npmjs.com/package/arraybuffer.prototype.transfertofixedlength)

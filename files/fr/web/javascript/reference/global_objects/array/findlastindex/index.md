@@ -3,7 +3,7 @@ title: "Array : méthode findLastIndex()"
 short-title: findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 l10n:
-  sourceCommit: 9f46f08d20b21498293cbf6b84f508103272ec6f
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`findLastIndex()`** des instances de {{JSxRef("Array")}} parcourt le tableau dans l'ordre inverse et retourne l'indice du premier élément qui satisfait la fonction de test fournie.
@@ -136,6 +136,8 @@ console.log(
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.findLastIndex` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.findLastIndex` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.findlastindex)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.find()")}}
@@ -144,5 +146,3 @@ console.log(
 - La méthode {{JSxRef("Array.prototype.indexOf()")}}
 - La méthode {{JSxRef("Array.prototype.lastIndexOf()")}}
 - La méthode {{JSxRef("TypedArray.prototype.findLastIndex()")}}
-- [Prothèse d'émulation de `Array.prototype.findLastIndex` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#array-find-from-last)
-- [Prothèse d'émulation es-shims de `Array.prototype.findLastIndex` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.findlastindex)

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-**`Intl.RelativeTimeFormat`** オブジェクトは言語独自の相対時間の書式化をできるようにします。
+**`Intl.RelativeTimeFormat`** オブジェクトは、相対時間を言語に応じて書式化するために使用します。
 
 {{InteractiveExample("JavaScript デモ: Intl.RelativeTimeFormat")}}
 
@@ -32,7 +32,7 @@ console.log(rtf2.format(2, "day"));
 ## 静的メソッド
 
 - {{jsxref("Intl/RelativeTimeFormat/supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
-  - : 指定されたロケールのうち、実行時の既定のロケールに代替されずに対応するものを配列に収めて返します。
+  - : 指定されたロケールのうち、実行環境のデフォルトのロケールに代替されることなく対応するものを配列に収めて返します。
 
 ## インスタンスプロパティ
 
@@ -59,29 +59,29 @@ console.log(rtf2.format(2, "day"));
 次の例は、英語の相対時間フォーマッターの使用方法を示しています。
 
 ```js
-// 明示的に渡された既定値を使って
-// ロケールの相対時間を生成します
+// ロケールに対応する相対時間フォーマッターを
+// デフォルト値を明示して生成
 const rtf = new Intl.RelativeTimeFormat("en", {
   localeMatcher: "best fit", // other values: "lookup"
   numeric: "always", // other values: "auto"
   style: "long", // other values: "short" or "narrow"
 });
 
-// 負数の値 (-1) を使った相対時間の形式
+// 負数の値 (-1) で相対時間を書式化
 rtf.format(-1, "day"); // "1 day ago"
 
-// 正数の値 (1) を使った相対時間の形式
+// 正数の値 (1) で相対時間を書式化
 rtf.format(1, "day"); // "in 1 day"
 ```
 
 ### formatToParts の使用例
 
-以下は形式された部品を返す相対時間フォーマッターの生成方法の例です。
+次の例は、書式化された各部分を返す相対時間フォーマッターの作成方法を示しています。
 
 ```js
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
-// 日単位の相対時間形式
+// 日単位で相対時間を書式化
 rtf.formatToParts(-1, "day");
 // [{ type: "literal", value: "yesterday"}]
 

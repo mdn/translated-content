@@ -1,91 +1,102 @@
 ---
-title: link ロールの使用
+title: "ARIA: link ロール"
+short-title: link
 slug: Web/Accessibility/ARIA/Reference/Roles/link_role
-original_slug: Web/Accessibility/ARIA/Roles/link_role
+l10n:
+  sourceCommit: b5437b737639d6952d18b95ebd1045ed73e4bfa7
 ---
 
-{{AccessibilitySidebar}}
-
-### 説明
-
-このテクニックは、[`link`](https://www.w3.org/WAI/PF/aria-1.1/roles#link) ロールを使用する方法を示し、ブラウザーと支援技術に与える影響について説明します。
-
-`link` ロールは、アプリケーションまたは外部にあるリソースへのハイパーリンクを作成する要素を識別するために使用されます。 このロールが要素に追加されると、タブを使用してリンクへのフォーカスを変更したり、リンクの実行にスペースやエンターを使用することができます。
+`link` ウィジェットは、リソースへの操作可能な参照を提供します。対象となるリソースは、外部でも内部でもかまいません。つまり、現在のページやアプリケーションの外側でも、内側でも構いません。
 
 > [!NOTE]
-> 可能であれば、ネイティブ要素は古いユーザーエージェントや支援技術によって広くサポートされているため、`link` ロールではなくネイティブの {{HTMLElement("a")}} 要素を使用することをお勧めします。 ネイティブ {{HTMLElement("a")}} 要素は、追加のカスタマイズを必要とせずに、デフォルトでキーボードとフォーカスの要件もサポートしています。
+> 可能であれば、`link` ロールではなくネイティブの {{HTMLElement("a")}} 要素を使用することをお勧めします。ネイティブ要素は古いユーザーエージェントや支援技術によって広くサポートされているためです。ネイティブの {{HTMLElement("a")}} 要素は、追加のカスタマイズを必要とせずに、デフォルトでキーボードとフォーカスの要件にも対応しています。
 
-[`tabindex`](https://www.w3.org/TR/wai-aria-practices/#kbd_roving_tabindex) 属性は、タブの順序で要素の位置を直接指定するために、このロールで任意に使用できます。
+## 解説
 
-### ユーザーエージェントと支援技術への影響
+`link` ロールは、アプリケーション内または外部にあるリソースへのハイパーリンクを生成する要素を識別するために使用されます。
 
-要素に `link` ロールが追加された場合、またはそのような要素が可視になる場合、ユーザーエージェントは以下を行うべきです。
+意味的 HTM Lを本来の目的通りに使用しない場合、対話機能は再実装する必要があります。例えば、要素に `role="link"` が追加されている場合、<kbd>tab</kbd> キーを押すとそのリンクにフォーカスが移動し、<kbd>enter</kbd> キーを押すと、フォーカスが当たったリンクが実行されるようにする必要があります。
 
-- オペレーティングシステムのアクセシビリティ API で `link` ロールを持つ要素を公開します。
-- オペレーティングシステムのアクセシビリティ API がサポートされている場合は、アクセシビリティ API を使用してアクセス可能なリンクイベントを発生させます。
+[`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性を `0` の値で使用し、このリンクが正しいタブフォーカス順に確実に含まれるようにしてください。
 
-支援技術製品は、そのようなイベントをリスンし、それに応じてユーザーに以下を通知するべきです。
+> [!WARNING]
+> 要素に `link` ロールを適用しても、ブラウザーはその要素に、下線、フォーカスリング、リンク先への移動、コンテキストメニューの操作といった、標準的なリンクの外観や動作を行うことはありません。これらは開発者の責任となります。
 
-- スクリーンリーダーは、リンクがフォーカスされているときに、リンクであるという事実とともに、リンクまたはそのラベルのテキストをアナウンスするべきです。 ARIA リンクは通常のリンクと同様にスクリーンリーダーの「リンクのリスト」機能に含まれているべきで、「リンクのアクティブ化」や「リンクへの移動」など、このダイアログのリストに対するアクションは通常のリンクと同じように行われるべきです。
-- スクリーン拡大鏡はリンクを拡大することがあります。
+## 例
 
-**注**: 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
-
-### 例
-
-#### 例 1: HTML コードにロールを追加する
-
-以下のスニペットは、`link` ロールが html ソースコードに直接どのように追加されるかを示しています。
+{{HTMLElement('a')}} ではない要素に対して `link` ロールを使用してアクセシブルなリンクを再現するには、そのリンクが正しいタブ順序でフォーカスを受け取ることを確実にし、要素がリンクのように見えることを実現し、そしてその「リンク」がリンクとして機能することを実現する必要があります。
 
 ```html
-<div role="link">リンク</div>
+<span data-href="https://mozilla.org" tabindex="0" role="link">
+  span 要素を使用して作成された偽のアクセシブルなリンク
+</span>
 ```
 
-#### 例 2: span を使用したアプリケーションからのアクセス可能なリンクの構築
+### CSS
 
-```html
-<script type="text/javascript">
-  sap = { ui: { keycodes: { SPACE: 32, ENTER: 13 } } };
-  //リンク上のクリックとキーダウンを処理する
-  function navigateLink(evt) {
-    if (evt.type == "click" || evt.keyCode == sap.ui.keycodes.ENTER) {
-      var ref = evt.target != null ? evt.target : evt.srcElement;
-      if (ref) window.open(ref.getAttribute("href"), "_blank");
+```css
+span[role="link"] {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+span[role="link"]:hover,
+span[role="link"]:active,
+span[role="link"]:focus {
+  color: purple;
+}
+
+span[role="link"]:focus {
+  background-color: palegoldenrod;
+  outline: 1px dotted;
+}
+```
+
+### JavaScript
+
+```js
+const fakeLinks = document.querySelectorAll('[role="link"]');
+
+for (const link of fakeLinks) {
+  link.addEventListener("click", navigateLink);
+  link.addEventListener("keydown", navigateLink);
+}
+
+// リンクの click および keydown イベントを処理
+function navigateLink(e) {
+  if (e.type === "click" || e.key === "Enter") {
+    const ref = e.target ?? e.srcElement;
+    if (ref) {
+      window.open(ref.getAttribute("data-href"), "_blank");
     }
   }
-</script>
-
-<body role="application">
-  <h3>span を使った単純なリンクの構築</h3>
-  <span
-    href="http://www.w3c.org"
-    onkeydown="navigateLink(event)"
-    onclick="navigateLink(event)"
-    tabindex="0"
-    id="link1"
-    role="link"
-    class="link">
-    スペースバーまたはエンターキーを使用してこのリンクをアクティブ化します。
-  </span>
-</body>
+}
 ```
 
-### 注
+`role="link"` が設定された要素が <kbd>Enter</kbd> キーイベントを受け取った場合、そのリンクが実行され、リンク先のページに移動するか、ページ内のターゲットにフォーカスが移動されます。
 
-リンクを押すとアクションがトリガーされますが、ブラウザーのフォーカスは変更されず、新しいページに移動することもありません。 `link` ロールの代わりに [`button`](https://www.w3.org/TR/wai-aria/#button) ロールを使用することを検討してください。
+オプションで、<kbd>Shift</kbd> + <kbd>F10</kbd> を押すと、そのリンクのコンテキストメニューが開きます。
 
-### 使用された ARIA 属性
+## ベストプラクティス
 
-- [link](https://www.w3.org/TR/wai-aria/#link)
+さまざまなウィジェットロールが、一般的な対話パターン を定義するために使用されます。文書構造ロールと同様に、`link` ロールを含むこれらのロールの一部は、十分に対応されて いるネイティブの HTML 要素の意味づけと重複しているため、使用すべきではありません。
 
-### 関連する ARIA 技術
+完全性を期すために `link` を含めましたが、使用することは避けてください。アクセシビリティに配慮した対話的機能を備えた、意味的に同等の {{HTMLElement('a')}} が利用可能であり、対応しています。
 
-- [button](https://www.w3.org/TR/wai-aria/#button) ロール
+### 推奨される HTML
 
-### 互換性
+代わりに {{HTMLElement('a')}} を使用してください。
 
-TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する
+> [!NOTE]
+> HTML のリンクに `role="link"` を記載する必要はありません。なぜなら、`<a>` にはデフォルトでそのロールがすでに設定されているからです。
+
+## 仕様書
+
+{{Specifications}}
 
 ### その他のリソース
 
-- ARIA のベストプラクティス - link ロール: <https://www.w3.org/TR/wai-aria-practices/#kbd_roving_tabindex>
+- {{HTMLElement('a')}} 要素
+- {{HTMLElement('button')}} 要素
+- [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
+- [ARIA practices `link` role examples](https://www.w3.org/WAI/ARIA/apg/patterns/link/examples/link/)

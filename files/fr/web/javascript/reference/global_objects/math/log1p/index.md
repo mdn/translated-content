@@ -3,7 +3,7 @@ title: "Math : méthode statique log1p()"
 short-title: log1p()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La fonction **`Math.log1p()`** retourne le logarithme népérien (en base {{JSxRef("Math/E","e")}}) d'un nombre +1, donné par la formule&nbsp;:
@@ -59,7 +59,7 @@ Puisque `log1p()` est une méthode statique de `Math`, vous l'utilisez toujours 
 
 ## Exemples
 
-### Utiliser `Math.log1p()`
+### Utiliser la méthode `Math.log1p()`
 
 ```js
 Math.log1p(-2); // NaN
@@ -80,8 +80,8 @@ Math.log1p(Infinity); // Infinity
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.log1p` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
-- [La prothèse d'émulation es-shims de `Math.log1p` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.log1p)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.log1p` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.log1p` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.log1p)
 - La méthode statique {{JSxRef("Math.exp()")}}
 - La méthode statique {{JSxRef("Math.log()")}}
 - La méthode statique {{JSxRef("Math.expm1()")}}

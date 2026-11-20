@@ -3,7 +3,7 @@ title: Array.prototype.concat()
 short-title: concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`concat()`** は {{jsxref("Array")}} インスタンスのメソッドで、2 つ以上の配列を結合するために使用します。
@@ -160,7 +160,7 @@ console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
 
 ## 関連情報
 
-- [`Array.prototype.concat` のポリフィル (`core-js`)（`Symbol.isConcatSpreadable` の対応など、最近の動作の修正と実装付き）](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.concat` のポリフィル (`core-js`)（`Symbol.isConcatSpreadable` の対応など、最近の動作の修正と実装付き）](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.concat` のポリフィル](https://www.npmjs.com/package/array.prototype.concat)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}

@@ -3,7 +3,7 @@ title: "Iterator : méthode chunks()"
 short-title: chunks()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/chunks
 l10n:
-  sourceCommit: e316526e520d8163e9151dca8973eb777b5285e0
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 {{SeeCompatTable}}
@@ -81,7 +81,7 @@ Sortie&nbsp;:
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Iterator.prototype.chunks` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-chunking)
-- [La prothèse d'émulation es-shims de `Iterator.prototype.chunks` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Iterator.prototype.chunks` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator.prototype.chunks` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
 - L'objet natif {{JSxRef("Iterator")}}
 - La méthode {{JSxRef("Iterator.prototype.windows()")}}

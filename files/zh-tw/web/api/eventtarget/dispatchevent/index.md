@@ -16,7 +16,7 @@ cancelled = !target.dispatchEvent(event)
 ### 參數
 
 - `event` 是要被觸發的事件（{{domxref("Event")}} 物件）。
-- `target` 會被初始化為事件的 {{domxref("Event", "", "target")}} 屬性，其也影響了要呼叫哪一個事件監聽器。
+- `target` 會被初始化為事件的 {{domxref("Event", "", "#target")}} 屬性，其也影響了要呼叫哪一個事件監聽器。
 
 ### 回傳值
 

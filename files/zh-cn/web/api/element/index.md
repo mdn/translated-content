@@ -2,7 +2,7 @@
 title: Element
 slug: Web/API/Element
 l10n:
-  sourceCommit: d105060fc9f3269c6559e55c4fcd5cea27f065fa
+  sourceCommit: 5351b03470685486d841a3340c6971351058194f
 ---
 
 {{APIRef("DOM")}}
@@ -19,6 +19,8 @@ l10n:
 
 _`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOMxRef("EventTarget")}} 继承属性。_
 
+- {{DOMxRef("Element.activeViewTransition")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : 返回一个表示某个元素上当前活动的[视图过渡](/zh-CN/docs/Web/API/View_Transition_API)的 {{domxref("ViewTransition")}} 实例。
 - {{DOMxRef("Element.assignedSlot")}} {{ReadOnlyInline}}
   - : 返回一个表示节点所插入的 {{htmlelement("slot")}} 的 {{DOMxRef("HTMLSlotElement")}} 值。
 - {{DOMxRef("Element.attributes")}} {{ReadOnlyInline}}
@@ -41,6 +43,8 @@ _`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOM
   - : 返回代表元素内部宽度的数值。
 - {{DOMxRef("Element.currentCSSZoom")}} {{ReadOnlyInline}}
   - : 表示元素有效缩放尺寸的数字，如果元素未渲染，则为 1.0。
+- {{DOMxRef("Element.customElementRegistry")}} {{ReadOnlyInline}}
+  - : 与该元素相关的 {{domxref("CustomElementRegistry")}} 对象，若未设置则为 `null`。
 - {{DOMxRef("Element.elementTiming")}} {{Experimental_Inline}}
   - : 一个字符串，反映了 [`elementtiming`](/zh-CN/docs/Web/HTML/Reference/Attributes/elementtiming) 属性，该属性在 {{domxref("PerformanceElementTiming")}} API 中标记了一个观察元素。
 - {{domxref("Element.firstElementChild")}} {{ReadOnlyInline}}
@@ -59,7 +63,7 @@ _`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOM
   - : 一个 `Element`，树中紧跟给定元素的元素，如果没有同级节点，则为 `null`。
 - {{DOMxRef("Element.outerHTML")}}
   - : 一个字符串，代表元素的标记（包括其内容）。作为 setter 使用时，将用从给定字符串解析出的节点替换元素。
-- {{DOMxRef("Element.part")}}
+- {{DOMxRef("Element.part")}} {{ReadOnlyInline}}
   - : 代表元素的部分标识符（即使用 `part` 属性设置的标识符），以 {{domxref("DOMTokenList")}} 的形式返回。
 - {{DOMxRef("Element.prefix")}} {{ReadOnlyInline}}
   - : 代表元素命名空间前缀的字符串，如果没有指定前缀，则为 `null`。
@@ -132,7 +136,7 @@ _`Element` 接口也包括以下属性。_
   - : 反映 [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) 属性的字符串，表示元素将被更新，并描述了用户代理、辅助技术和用户可期望从实时区域获得的更新类型。
 - {{domxref("Element.ariaModal")}}
   - : 反映 [`aria-modal`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal) 属性的字符串，表示元素在显示时是否为模态元素。
-- {{domxref("Element.ariaMultiline")}}
+- {{domxref("Element.ariaMultiLine")}}
   - : 反映 [`aria-multiline`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline) 属性的字符串，表示文本框是接受多行输入还是只接受单行输入。
 - {{domxref("Element.ariaMultiSelectable")}}
   - : 反映 [`aria-multiselectable`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable) 属性的字符串，表示用户可以从当前可选后代中选择多个项目。
@@ -206,6 +210,8 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
   - : 在 `Element` 父节点的子节点列表中插入一组 {{domxref("Node")}} 对象或字符串，位于 `Element` 之后。
 - {{DOMxRef("Element.animate()")}}
   - : 在元素上创建并运行动画的快捷方法。返回创建的动画对象实例。
+- {{DOMxRef("Element.ariaNotify()")}}
+  - : 指定屏幕阅读器应当朗读的文本的给定字符串。
 - {{DOMxRef("Element.append()")}}
   - : 在元素的最后一个子元素后插入一组 {{domxref("Node")}} 对象或字符串。
 - {{DOMxRef("Element.attachShadow()")}}
@@ -260,10 +266,12 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
   - : 将给定的文本节点插入调用该函数的元素的指定位置。
 - {{DOMxRef("Element.matches()")}}
   - : 返回一个布尔值，表示该元素是否会被指定的选择器字符串选中。
-- {{DOMxRef("Element.moveBefore()")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.moveBefore()")}}
   - : 将给定的 {{domxref("Node")}} 作为直接子节点移动到调用节点内部的给定引用节点之前，而无需先移除节点再插入。
 - {{DOMxRef("Element.prepend()")}}
   - : 在元素的第一个子元素之前插入一组 {{domxref("Node")}} 对象或字符串。
+- {{DOMxRef("Element.pseudo()")}} {{experimental_inline}}
+  - : 返回一个 {{domxref("CSSPseudoElement")}} 对象，该对象表示一个与该元素相关的指定类型的 [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)。
 - {{DOMxRef("Element.querySelector()")}}
   - : 返回相对于元素符合指定选择器字符串的第一个 {{DOMxRef("Node")}}。
 - {{DOMxRef("Element.querySelectorAll()")}}
@@ -285,7 +293,7 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
 - {{DOMxRef("Element.requestFullscreen()")}}
   - : 异步要求浏览器全屏显示元素。
 - {{DOMxRef("Element.requestPointerLock()")}}
-  - : 允许异步请求锁定给定元素上的指针。
+  - : 允许你异步请求将指针锁定到给定元素上。
 - {{domxref("Element.scroll()")}}
   - : 滚动到指定元素内部的特定坐标。
 - {{domxref("Element.scrollBy()")}}
@@ -306,12 +314,14 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
   - : 设置当前节点指定名称和命名空间的属性值。
 - {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : 设置鼠标事件捕获，将所有鼠标事件重定向到此元素。
-- {{DOMxRef("Element.setHTML()")}} {{SecureContext_Inline}} {{experimental_inline}}
+- {{DOMxRef("Element.setHTML()")}} {{SecureContext_Inline}}
   - : 将 HTML 字符串解析并[净化](/zh-CN/docs/Web/API/HTML_Sanitizer_API)为文档片段，然后在 DOM 中替换元素的原始子树。
 - {{DOMxRef("Element.setHTMLUnsafe()")}}
   - : 将 HTML 字符串解析为文档片段，不进行净化处理，然后替换 DOM 中元素的原始子树。HTML 字符串可能包含声明式影子根，如果使用 [`Element.innerHTML`](/zh-CN/docs/Web/API/Element/innerHTML) 设置 HTML，这些影子根将被解析为模板元素。
 - {{DOMxRef("Element.setPointerCapture()")}}
   - : 指定一个特定的元素作为未来[指针事件](/zh-CN/docs/Web/API/Pointer_events)的捕获目标。
+- {{DOMxRef("Element.startViewTransition()")}} {{experimental_inline}}
+  - : 开始一个同文档（SPA）的[元素级](/zh-CN/docs/Web/API/View_Transition_API/Using_element-scoped)[视图过渡](/zh-CN/docs/Web/API/View_Transition_API)并返回一个表示它的 {{domxref("ViewTransition")}} 对象。
 - {{DOMxRef("Element.toggleAttribute()")}}
   - : 在指定的元素上切换布尔属性，如果存在则删除它，如果不存在则添加它。
 
@@ -330,7 +340,7 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
 - {{domxref("Element/beforexrselect_event", "beforexrselect")}} {{Experimental_Inline}}
   - : 在派发 WebXR 选择事件（{{domxref("XRSession/select_event", "select")}}、{{domxref("XRSession/selectstart_event", "selectstart")}}、{{domxref("XRSession/selectend_event", "selectend")}}）前触发此事件。
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} {{Experimental_Inline}}
-  - : 当元素开始或停止[与用户相关](/zh-CN/docs/Web/CSS/Guides/Containment#与用户相关)和[跳过其内容](/zh-CN/docs/Web/CSS/Guides/Containment#跳过其内容)时，触发任何设置了 {{cssxref("content-visibility", "content-visibility: auto")}} 的元素。
+  - : 当元素开始或停止[与用户相关](/zh-CN/docs/Web/CSS/Guides/Containment/Using#与用户相关)和[跳过其内容](/zh-CN/docs/Web/CSS/Guides/Containment/Using#跳过其内容)时，触发任何设置了 {{cssxref("content-visibility", "content-visibility: auto")}} 的元素。
 - {{domxref("Element/input_event","input")}}
   - : 当用户操作直接导致元素值发生变化时触发此事件。
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}

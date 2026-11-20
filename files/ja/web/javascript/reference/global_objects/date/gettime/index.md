@@ -1,11 +1,10 @@
 ---
 title: Date.prototype.getTime()
+short-title: getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 0abb70602b0b3b11a2909c417a03e10eabd607a8
 ---
-
-{{JSRef}}
 
 **`getTime()`** は {{jsxref("Date")}} インスタンスのメソッドで、 [元期](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)、すなわち協定世界時 (UTC) における 1970 年 1 月 1 日の先頭の深夜からの経過ミリ秒数を返します。
 

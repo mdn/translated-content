@@ -3,7 +3,7 @@ title: Type CSS `<calc-keyword>`
 short-title: <calc-keyword>
 slug: Web/CSS/Reference/Values/calc-keyword
 l10n:
-  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
+  sourceCommit: d78544a841b0e266a6efc169c044573f5e0b4e7d
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<calc-keyword>`** représente des constantes bien définies comme `e` et `pi`. Plutôt que d'obliger les auteur·ice·s à saisir manuellement plusieurs chiffres de ces constantes mathématiques ou à les calculer, certaines d'entre elles sont directement fournies par CSS pour plus de commodité.
@@ -30,17 +30,17 @@ Le type `<calc-keyword>` définit des constantes numériques qui peuvent être u
 
 La sérialisation des arguments à l'intérieur de {{CSSxRef("calc", "calc()")}} suit la norme IEEE-754 pour les calculs en virgule flottante, ce qui implique quelques cas particuliers à connaître concernant les constantes comme `infinity` et `NaN`&nbsp;:
 
-- Une division par zéro renverra `infinity` positif ou négatif selon le signe du numérateur.
-- Ajouter, soustraire ou multiplier `infinity` à n'importe quelle valeur renverra `infinity`, sauf si cela produit `NaN` (voir ci-dessous).
-- Toute opération comportant au moins un argument `NaN` renverra `NaN`.
-  Cela signifie que `0 / 0`, `infinity / infinity`, `0 * infinity`, `infinity + (-infinity)` et `infinity - infinity` renverront toutes `NaN`.
+- Une division par zéro retourne `infinity` positif ou négatif selon le signe du numérateur.
+- Ajouter, soustraire ou multiplier `infinity` à n'importe quelle valeur retourne `infinity`, sauf si cela produit `NaN` (voir ci-dessous).
+- Toute opération comportant au moins un argument `NaN` retourne `NaN`.
+  Cela signifie que `0 / 0`, `infinity / infinity`, `0 * infinity`, `infinity + (-infinity)` et `infinity - infinity` retournent toutes `NaN`.
 
 - Les zéros positifs et négatifs sont des valeurs possibles (`0⁺` et `0⁻`).
   Cela a les effets suivants&nbsp;:
-  - Une multiplication ou division produisant zéro avec exactement un argument négatif (`-5 * 0` ou `1 / (-infinity)`) ou un résultat négatif issu d'autres fonctions mathématiques renverra `0⁻`.
-  - `0⁻ + 0⁻` ou `0⁻ - 0` renverra `0⁻`.
-    Toutes les autres additions ou soustractions produisant un zéro renverront `0⁺`.
-  - Multiplier ou diviser `0⁻` par un nombre positif (y compris `0⁺`) renverra un résultat négatif (soit `0⁻`, soit `-infinity`), tandis que multiplier ou diviser `0⁻` par un nombre négatif renverra un résultat positif.
+  - Une multiplication ou division produisant zéro avec exactement un argument négatif (`-5 * 0` ou `1 / (-infinity)`) ou un résultat négatif issu d'autres fonctions mathématiques retourne `0⁻`.
+  - `0⁻ + 0⁻` ou `0⁻ - 0` retourne `0⁻`.
+    Toutes les autres additions ou soustractions produisant un zéro retournent `0⁺`.
+  - Multiplier ou diviser `0⁻` par un nombre positif (y compris `0⁺`) retourne un résultat négatif (soit `0⁻`, soit `-infinity`), tandis que multiplier ou diviser `0⁻` par un nombre négatif retourne un résultat positif.
 
 Des exemples illustrant l'application de ces règles sont présentés dans la section [Infini, NaN et division par zéro](#infini_nan_et_division_par_zéro).
 
@@ -59,7 +59,7 @@ Par exemple&nbsp;:
 
 - `animation-name: pi;` fait référence à une animation nommée «&nbsp;pi&nbsp;», et non à la constante numérique `pi`.
 - `line-height: e;` est invalide, mais `line-height: calc(e);` est valide.
-- `rotate(1rad * pi);` ne fonctionnera pas car {{CSSxRef("transform-function/rotate", "rotate()")}} n'est pas une fonction mathématique. Utilisez `rotate(calc(1rad * pi));`
+- `rotate(1rad * pi);` ne fonctionne pas, car {{CSSxRef("transform-function/rotate", "rotate()")}} n'est pas une fonction mathématique. Utilisez `rotate(calc(1rad * pi));`
 
 Dans les fonctions mathématiques, les valeurs `<calc-keyword>` sont évaluées comme des valeurs {{CSSxRef("number")}}, donc `e` et `pi` agissent comme des constantes numériques.
 

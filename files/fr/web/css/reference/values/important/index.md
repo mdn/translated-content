@@ -3,7 +3,7 @@ title: Mot-clé CSS `!important`
 short-title: "!important"
 slug: Web/CSS/Reference/Values/important
 l10n:
-  sourceCommit: aaedffba9f47d6dce7967a4191963378026d9406
+  sourceCommit: d93983dfe60b65633f67fffe04676c241ff92960
 ---
 
 Un délimiteur `!` suivi du mot-clé `important` marque la déclaration comme importante. Le drapeau `!important` modifie les règles de sélection des déclarations dans la [cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction). Une déclaration qui n'est pas _importante_ est dite _normale_.
@@ -51,9 +51,9 @@ Dans cet exemple, les propriétés `color` et `background-color` passent à l'é
 
 Dans chacune des trois origines de feuilles de style — auteur·ice, utilisateur·ice et agent utilisateur — les déclarations normales dans les styles non superposés prévalent sur les déclarations de styles en couches, la dernière déclarée ayant priorité sur les couches déclarées avant elle. Les déclarations importantes inversent l'ordre de priorité&nbsp;: les déclarations importantes dans la première couche prévalent sur celles de la couche suivante, et ainsi de suite. De plus, toutes les déclarations importantes prévalent sur celles faites en dehors de toute couche.
 
-### Styles en ligne
+### Styles en incise
 
-Les styles en ligne sont des styles définis à l'aide de l'attribut [`style`](/fr/docs/Web/HTML/Reference/Global_attributes/style). Ils peuvent aussi être normaux ou importants. Les styles en ligne _normaux_ prévalent sur toutes les déclarations _normales_, quelle que soit l'origine. Les styles en ligne _importants_ prévalent sur tous les autres styles _importants_ de l'auteur·ice, quelle que soit la couche, mais les styles importants des feuilles de style de l'utilisateur·ice ou de l'agent utilisateur et les transitions les outrepassent.
+Les styles en incise sont des styles définis à l'aide de l'attribut [`style`](/fr/docs/Web/HTML/Reference/Global_attributes/style). Ils peuvent aussi être normaux ou importants. Les styles en incise _normaux_ prévalent sur toutes les déclarations _normales_, quelle que soit l'origine. Les styles en incise _importants_ prévalent sur tous les autres styles _importants_ de l'auteur·ice, quelle que soit la couche, mais les styles importants des feuilles de style de l'utilisateur·ice ou de l'agent utilisateur et les transitions les outrepassent.
 
 ### `!important` et spécificité
 
@@ -83,7 +83,7 @@ p {
 }
 ```
 
-Dans ce cas, la spécificité du sélecteur compte. Ce n'est que si les sélecteurs avaient la même spécificité que l'ordre des sources importerait.
+Dans ce cas, la spécificité du sélecteur compte. Ce n'est que si les sélecteurs ont la même spécificité que l'ordre des sources importe.
 
 ## Impact sur les propriétés raccourcies
 
@@ -153,5 +153,5 @@ Cette fonctionnalité est prise en charge dans tous les navigateurs.
 
 ## Voir aussi
 
-- [Spécificité CSS](/fr/docs/Web/CSS/Guides/Cascade/Specificity)
-- [Cascade CSS](/fr/docs/Web/CSS/Guides/Cascade/Introduction)
+- [La spécificité CSS](/fr/docs/Web/CSS/Guides/Cascade/Specificity)
+- [La cascade CSS](/fr/docs/Web/CSS/Guides/Cascade/Introduction)

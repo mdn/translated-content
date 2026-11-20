@@ -3,7 +3,7 @@ title: "Math : méthode statique acosh()"
 short-title: acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.acosh()`** retourne le cosinus hyperbolique inverse d'un nombre. C'est-à-dire,
@@ -45,7 +45,7 @@ Le cosinus hyperbolique inverse de `x`. Si `x` est inférieur à 1, retourne {{J
 
 ## Description
 
-Parce que `acosh()` est une méthode statique de `Math`, vous l'utilisez toujours comme `Math.acosh()`, plutôt qu'en tant que méthode d'un objet `Math` que vous auriez créé (`Math` n'est pas un constructeur).
+Parce que `acosh()` est une méthode statique de `Math`, vous l'utilisez toujours comme `Math.acosh()`, plutôt qu'en tant que méthode d'un objet `Math` que vous avez créé (`Math` n'est pas un constructeur).
 
 ## Exemple
 
@@ -68,8 +68,8 @@ Math.acosh(Infinity); // Infinity
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Math.acosh` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
-- [Prothèse d'émulation es-shims de `Math.acosh` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.acosh)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.acosh` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.acosh` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.acosh)
 - La méthode statique {{JSxRef("Math.asinh()")}}
 - La méthode statique {{JSxRef("Math.atanh()")}}
 - La méthode statique {{JSxRef("Math.cosh()")}}

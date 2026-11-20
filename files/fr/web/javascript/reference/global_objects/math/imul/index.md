@@ -3,7 +3,7 @@ title: "Math : méthode statique imul()"
 short-title: imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.imul()`** retourne le résultat de la multiplication sur 32 bits à la manière du langage C des deux paramètres.
@@ -47,11 +47,11 @@ La méthode `Math.imul()` permet une multiplication d'entiers sur 32 bits avec u
 
 Parce que `imul()` est une méthode statique de `Math`, il faut toujours l'utiliser sous la forme `Math.imul()`, plutôt que comme méthode d'un objet `Math` que vous avez créé (`Math` n'est pas un constructeur).
 
-Si vous utilisez des nombres flottants JavaScript normaux dans `imul()`, vous constatez une dégradation des performances. Cela est dû à la coûteuse conversion d'un flottant en entier pour la multiplication, puis à la conversion de l'entier multiplié en flottant. Cependant, avec [asm.js](/fr/docs/Games/Tools/asm.js), qui permet aux optimiseurs JIT d'utiliser plus efficacement les entiers en JavaScript, multiplier deux nombres stockés en interne en tant qu'entiers (ce qui n'est possible qu'avec asm.js) avec `imul()` peut être potentiellement plus performant.
+Si vous utilisez des nombres flottants JavaScript normaux dans `imul()`, vous constatez une dégradation des performances. C'est dû à la coûteuse conversion d'un flottant en entier pour la multiplication, puis à la conversion de l'entier multiplié en flottant. Cependant, avec [asm.js](/fr/docs/Games/Tools/asm.js), qui permet aux optimiseurs JIT d'utiliser plus efficacement les entiers en JavaScript, multiplier deux nombres stockés en interne en tant qu'entiers (ce qui n'est possible qu'avec asm.js) avec `imul()` peut être potentiellement plus performant.
 
 ## Exemples
 
-### Utiliser `Math.imul()`
+### Utiliser la méthode `Math.imul()`
 
 ```js
 Math.imul(2, 4); // 8
@@ -71,6 +71,6 @@ Math.imul(0xfffffffe, 5); // -10
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.imul` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
-- [La prothèse d'émulation es-shims de `Math.imul` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.imul)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.imul` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.imul` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.imul)
 - [Emscripten <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Emscripten) sur Wikipedia

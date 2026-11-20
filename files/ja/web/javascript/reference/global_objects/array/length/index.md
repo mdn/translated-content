@@ -3,10 +3,10 @@ title: "Array: length"
 short-title: length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 5a745d55a26933ffd9e71f3b2246deba3f9e6f82
 ---
 
-**`length`** は {{jsxref("Array")}} インスタンスのデータプロパティで、配列の要素の数を表します。値は符号なし 32 ビット整数で、常に配列の最も大きなインデックスよりも数値的に大きくなります。
+**`length`** は {{jsxref("Array")}} インスタンスのデータプロパティで、その配列に含まれるスロットの数を表します。その値は、符号なしの 32 ビット整数であり、常に配列内の最大のインデックスよりも数値的に大きくなります。配列が[疎配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#配列メソッドと空のスロット)である場合、その値は要素数よりも大きくなることがあります。
 
 {{InteractiveExample("JavaScript デモ: Array: length", "shorter")}}
 

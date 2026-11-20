@@ -2,10 +2,10 @@
 title: "名前付き後方参照: \\k<name>"
 slug: Web/JavaScript/Reference/Regular_expressions/Named_backreference
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 288e644117c29285df2acf37a2ac97f57546a146
 ---
 
-**名前付き後方参照**は、以前の[名前付きキャプチャグループ]の一致部分を参照し、そのグループと同じテキストに一致します。[名前なしキャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)の場合は、通常の[後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)構文を使用する必要があります。
+**名前付き後方参照**は、以前の[名前付きキャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)の一致部分を参照し、そのグループと同じテキストに一致します。[名前なしキャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)の場合は、通常の[後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)構文を使用する必要があります。
 
 ## 構文
 

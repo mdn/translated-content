@@ -2,7 +2,7 @@
 title: Atribución y licencia de derechos de autor
 slug: MDN/Writing_guidelines/Attrib_copyright_license
 l10n:
-  sourceCommit: 24b4a3d9e5488d5c5600cf8eb278484d47bca07e
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
 
 El contenido de MDN Web Docs está disponible de forma gratuita y bajo varias licencias de código abierto.
@@ -45,9 +45,13 @@ Si tienes alguna pregunta o inquietud sobre cualquier tema tratado aquí, comun�
 
 Los derechos sobre los logotipos, las marcas comerciales y las marcas de servicio de la Fundación Mozilla, así como la apariencia de este sitio web, no están sujetos a la licencia Creative Commons y, en la medida en que sean trabajos de autoría (como logotipos y diseños gráficos), no están incluidos en el trabajo que se licencia bajo esos términos. Si usas el texto de los documentos y también deseas usar cualquiera de estos derechos, o si tienes alguna otra pregunta sobre el cumplimiento de nuestros términos de licencia para esta colección, debes comunicarte con la Fundación Mozilla aquí: [licensing@mozilla.org](mailto:licensing@mozilla.org).
 
-## Usar contenido de otro lugar en MDN Web Docs
+## Usar contenido de otro lugar
 
-En general, no aprobamos copiar contenido de otras fuentes y ponerlo en MDN. MDN debe estar compuesto de contenido original siempre que sea posible. Si recibimos un pull request y descubrimos que contiene contenido plagiado, lo cerraremos y solicitaremos que el remitente vuelva a enviar el cambio con el contenido reescrito en sus propias palabras.
+No aprobamos copiar contenido de otras fuentes y ponerlo en MDN.
+MDN debe estar compuesto de contenido original, salvo en los casos descritos en [Reutilizar o volver a publicar tu contenido en MDN](#reutilizar_o_volver_a_publicar_tu_contenido_en_mdn).
+Ten cuidado con las herramientas que pueden reproducir material de otras fuentes sin atribución.
+Debes tener derecho a licenciar todo lo que contribuyas bajo los términos descritos en esta página.
+Si recibimos un pull request y descubrimos que contiene contenido plagiado, lo cerraremos y solicitaremos que el remitente vuelva a enviar el cambio con el contenido reescrito en sus propias palabras.
 
 ### Reutilizar o volver a publicar tu contenido en MDN
 

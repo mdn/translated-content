@@ -1,134 +1,98 @@
 ---
-title: String.prototype.charCodeAt()
+title: "String : méthode charCodeAt()"
+short-title: charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-La méthode **`charCodeAt()`** retourne un entier compris entre 0 et 65535 qui correspond au code UTF-16 d'un caractère de la chaîne situé à une position donnée.
+La méthode **`charCodeAt()`** des valeurs {{JSxRef("String")}} retourne un entier compris entre `0` et `65535` représentant le codet UTF-16 à l'indice donné.
 
-{{InteractiveExample("JavaScript Demo: String.charCodeAt()")}}
+`charCodeAt()` indexe la chaîne de caractères comme une séquence de [unités de code UTF-16](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#caractères_utf-16_points_de_code_unicode_et_groupes_de_graphèmes), donc elle peut retourner des substituts isolés. Pour obtenir le point de code Unicode complet à l'indice donné, utilisez {{JSxRef("String.prototype.codePointAt()")}}.
+
+{{InteractiveExample("Démonstration JavaScript&nbsp;: String.prototype.charCodeAt()", "shorter")}}
 
 ```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+const sentence = "Le rapide renard brun saute par-dessus le chien paresseux.";
 
 const index = 4;
 
 console.log(
-  `Character code ${sentence.charCodeAt(index)} is equal to ${sentence.charAt(
+  `Le code du caractère ${sentence.charCodeAt(index)} est égal à ${sentence.charAt(
     index,
   )}`,
 );
-// Expected output: "Character code 113 is equal to q"
+// Résultat attendu : "Le code du caractère 113 est égal à q"
 ```
-
-Le codet UTF-16 renvoyé correspond au codet Unicode si le caractère peut être représenté sur un seul codet. Si le codet Unicode ne peut pas être représenté sur un seul codet UTF-16 (car sa valeur est supérieure à `0xFFFF`), seule la première partie de la paire sera renvoyée. Si vous souhaitez obtenir l'ensemble de la valeur, vous pouvez utiliser la méthode {{jsxref("String.prototype.codePointAt()","codePointAt()")}}.
 
 ## Syntaxe
 
-```js
-str.charCodeAt(indice);
+```js-nolint
+charCodeAt(index)
 ```
 
 ### Paramètres
 
-- `indice`
-  - : Un entier supérieur ou égal à zéro et strictement inférieur à la longueur de la chaîne. La valeur par défaut (si le paramètre est absent ou n'est pas un nombre) sera zéro (0).
+- `index`
+  - : Un entier représentant l'indice basé sur zéro du caractère à retourner. [Converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier) — `undefined` est converti en 0.
 
 ### Valeur de retour
 
-Un nombre qui représente la valeur du point de code UTF-16 pour le caractère à la position indiquée. Si `index` pointe en dehors de la chaîne, ce sera {{jsxref("NaN")}} qui sera renvoyé.
+Un entier compris entre `0` et `65535` représentant la valeur de l'unité de code UTF-16 du caractère à un `index` défini. Si `index` est en dehors de la plage de `0` à `str.length - 1`, `charCodeAt()` retourne {{JSxRef("NaN")}}.
 
 ## Description
 
-Les codets Unicode vont de 0 à 1 114 111 (0x10FFFF). Les 128 premiers caractères Unicode correspondent aux caractères ASCII (leur encodage est le même). Pour plus d'informations sur la gestion de l'Unicode en JavaScript, voir le [Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#unicode).
+Les caractères dans une chaîne de caractères sont indexés de gauche à droite. L'indice du premier caractère est `0`, et l'indice du dernier caractère dans une chaîne de caractères appelée `str` est `str.length - 1`.
 
-La méthode `charCodeAt()` renverra toujours une valeur inférieure à 65 536. En effet, les caractères encodés sur les plus grandes valeurs sont encodés sur deux « demi-codets » (appelés _surrogate pair_ en anglais). Pour recomposer de tels caractères, il faut donc utiliser `charCodeAt(i)` **et aussi** `charCodeAt(i+1)` afin de pouvoir récupérer chaque demi-codet. Pour plus de détails, voir le deuxième et troisième exemples.
-
-`charCodeAt()` renverra {{jsxref("NaN")}} si l'indice fourni est strictement inférieur à 0 ou dépasse la longueur de la chaîne.
-
-Dans les anciennes versions (JavaScript 1.2 par exemple) la méthode `charCodeAt()` renvoyait la valeur du caractère selon l'encodage ISO-Latin-1. L'encodage ISO-Latin-1 permet de représenter des caractères dont les valeurs vont de 0 à 255. Les valeurs 0 à 127 correspondent aux différentes valeurs ASCII.
+Les points de code Unicode vont de `0` à `1114111` (`0x10FFFF`). `charCodeAt()` retourne toujours une valeur inférieure à `65536`, car les points de code plus élevés sont représentés par _une paire_ de pseudo-caractères sur 16 bits appelés substituts. Par conséquent, pour obtenir un caractère complet dont la valeur est supérieure à `65535`, il est nécessaire de récupérer non seulement `charCodeAt(i)`, mais aussi `charCodeAt(i + 1)` (comme si l'on manipule une chaîne de caractères qui a deux caractères), ou d'utiliser {{JSxRef("String/codePointAt", "codePointAt(i)")}} à la place. Pour plus d'informations sur Unicode, voir [Caractères UTF-16, points de code Unicode et groupes de graphèmes](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#caractères_utf-16_points_de_code_unicode_et_groupes_de_graphèmes).
 
 ## Exemples
 
-### Utiliser `charCodeAt()`
+### Utiliser la méthode `charCodeAt()`
 
 L'exemple suivant retourne 65, la valeur Unicode de A.
 
 ```js
-"ABC".charCodeAt(0); // returns 65
+"ABC".charCodeAt(0); // retourne 65
 ```
 
-### Utiliser charCodeAt pour gérer les caractères hors du plan multilingue de base sans hypothèse sur leur présence
-
-Cette fonction peut être utilisée dans des boucles ou autres dans les cas où on ne sait pas si des caractères représentés sur deux demi-codets (hors du plan BMP) existent avant la position indiquée.
+`charCodeAt()` peut retourner des substituts isolés, qui ne sont pas des caractères Unicode valides.
 
 ```js
-function fixedCharCodeAt(str, idx) {
-  // ex. fixedCharCodeAt ('\uD800\uDC00', 0); // 65536
-  // ex. fixedCharCodeAt ('\uD800\uDC00', 1); // false
-  idx = idx || 0;
-  var code = str.charCodeAt(idx);
-  var hi, low;
-
-  // On gère le demi-codet supérieur (la borne supérieure
-  // utilisée pourrait être 0xDB7F afin de traiter les
-  // paires surrogates privées comme des caractères uniques)
-  if (0xd800 <= code && code <= 0xdbff) {
-    hi = code;
-    low = str.charCodeAt(idx + 1);
-    if (isNaN(low)) {
-      throw (
-        "Le demi-codet supérieur n'est pas suivi " +
-        "par un demi-codet inférieur dans fixedCharCodeAt()"
-      );
-    }
-    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
-  }
-  if (0xdc00 <= code && code <= 0xdfff) {
-    // Demi-codet inférieur
-
-    // On renvoie false pour permettre aux boucles
-    // car le cas a normalement déjà été géré avec
-    // l'étape précédente
-    return false;
-  }
-  return code;
-}
+const chaine = "𠮷𠮾";
+console.log(chaine.charCodeAt(0)); // 55362, ou d842, qui n'est pas un caractère Unicode valide
+console.log(chaine.charCodeAt(1)); // 57271, ou dfb7, qui n'est pas un caractère Unicode valide
 ```
 
-### Utiliser `charCodeAt()` pour gérer les caractères du plan multilingue de base (en sachant qu'ils sont présents)
+Pour obtenir le point de code Unicode complet à l'indice donné, utilisez {{JSxRef("String.prototype.codePointAt()")}}.
 
 ```js
-function knownCharCodeAt(str, idx) {
-  str += "";
-  var code,
-    end = str.length;
+const chaine = "𠮷𠮾";
+console.log(chaine.codePointAt(0)); // 134071
+```
 
-  var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while (surrogatePairs.exec(str) != null) {
-    var li = surrogatePairs.lastIndex;
-    if (li - 2 < idx) {
-      idx++;
-    } else {
-      break;
-    }
-  }
+> [!NOTE]
+> Évitez de réimplémenter `codePointAt()` en utilisant `charCodeAt()`. La conversion des substituts UTF-16 en points de code Unicode est complexe, et `codePointAt()` peut être plus performant, car il utilise directement la représentation interne de la chaîne de caractères. Installez une prothèse d'émulation pour `codePointAt()` si nécessaire.
 
-  if (idx >= end || idx < 0) {
-    return NaN;
-  }
+Voici un algorithme possible pour convertir une paire d'unités de code UTF-16 en un point de code Unicode, adapté de la [FAQ Unicode <sup>(angl.)</sup>](https://unicode.org/faq/utf_bom.html#utf16-3)&nbsp;:
 
-  code = str.charCodeAt(idx);
+```js
+// constantes
+const LEAD_OFFSET = 0xd800 - (0x10000 >> 10);
+const SURROGATE_OFFSET = 0x10000 - (0xd800 << 10) - 0xdc00;
 
-  var hi, low;
-  if (0xd800 <= code && code <= 0xdbff) {
-    hi = code;
-    low = str.charCodeAt(idx + 1);
-    // On prend un caractère de plus
-    // car on a deux demi-codets à récupérer
-    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
-  }
-  return code;
+function utf16ToUnicode(lead, trail) {
+  return (lead << 10) + trail + SURROGATE_OFFSET;
 }
+function unicodeToUTF16(codePoint) {
+  const lead = LEAD_OFFSET + (codePoint >> 10);
+  const trail = 0xdc00 + (codePoint & 0x3ff);
+  return [lead, trail];
+}
+
+const str = "𠮷";
+console.log(utf16ToUnicode(str.charCodeAt(0), str.charCodeAt(1))); // 134071
+console.log(str.codePointAt(0)); // 134071
 ```
 
 ## Spécifications
@@ -141,7 +105,7 @@ function knownCharCodeAt(str, idx) {
 
 ## Voir aussi
 
-- {{jsxref("String.fromCharCode()")}}
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.fromCodePoint()")}}
-- {{jsxref("String.prototype.codePointAt()")}}
+- La méthode statique {{JSxRef("String.fromCharCode()")}}
+- La méthode {{JSxRef("String.prototype.charAt()")}}
+- La méthode statique {{JSxRef("String.fromCodePoint()")}}
+- La méthode {{JSxRef("String.prototype.codePointAt()")}}

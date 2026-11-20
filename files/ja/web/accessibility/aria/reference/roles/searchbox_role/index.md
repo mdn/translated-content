@@ -1,13 +1,14 @@
 ---
 title: "ARIA: searchbox ロール"
+short-title: searchbox
 slug: Web/Accessibility/ARIA/Reference/Roles/searchbox_role
 l10n:
-  sourceCommit: 50f209459d9e1db35bf0d973d7878ea4600acb8c
+  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
 `searchbox` ロールは、要素が検索条件を指定するための `textbox` の一種であることを示します。
 
-## 説明
+## 解説
 
 `searchbox` は、テキストボックスがロール [`search`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) を持つ要素内にある場合に、[`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) の代わりに使用できます。`searchbox` は、HTML の {{HTMLElement('input')}} 要素の `search` タイプ、つまり [`<input type="search">`](/ja/docs/Web/HTML/Reference/Elements/input/search) と意味的に等価であり、可能であればこちらを使用すべきです。
 

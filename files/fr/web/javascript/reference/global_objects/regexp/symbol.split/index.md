@@ -3,7 +3,7 @@ title: "RegExp : méthode [Symbol.split]()"
 short-title: "[Symbol.split]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split
 l10n:
-  sourceCommit: 5b3aa7e4e8cd54f1b662534d8c97074e522b7fc4
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`[Symbol.split]()`** des instances de {{JSxRef("RegExp")}} définit comment [`String.prototype.split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split) doit se comporter lorsque l'expression rationnelle est passée en tant que séparateur.
@@ -109,7 +109,7 @@ console.log(resultat); // ["(2016)", "(01)", "(02)"]
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `RegExp.prototype[Symbol.split]` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `RegExp.prototype[Symbol.split]` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
 - La méthode {{JSxRef("String.prototype.split()")}}
 - La méthode [`RegExp.prototype[Symbol.match]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)
 - La méthode [`RegExp.prototype[Symbol.matchAll]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)

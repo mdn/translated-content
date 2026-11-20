@@ -3,7 +3,7 @@ title: Pseudo-classe CSS `:read-only`
 short-title: :read-only
 slug: Web/CSS/Reference/Selectors/:read-only
 l10n:
-  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
+  sourceCommit: bf3b0f3217d5d5a6957e9e17f863ece19d939d20
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:read-only`** permet de cibler les éléments (tels que certains types de {{HTMLElement("input")}} et {{HTMLElement("textarea")}}) qui ne sont pas modifiables par l'utilisateur·ice. Les éléments sur lesquels l'attribut HTML [`readonly`](/fr/docs/Web/HTML/Reference/Attributes/readonly) n'a pas d'effet (tels que [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio), [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) et tous les autres éléments non liés à un formulaire) sont également sélectionnés par la pseudo-classe `:read-only`. En fait, `:read-only` correspond à tout ce qui ne correspond pas à {{CSSxRef(":read-write")}}, ce qui le rend équivalent à `:not(:read-write)`.
@@ -11,8 +11,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/f
 {{InteractiveExample("Démonstration CSS&nbsp;: :read-only", "tabbed-shorter")}}
 
 ```css interactive-example
-label,
-input[type="submit"] {
+label {
   display: block;
   margin-top: 1em;
 }
@@ -24,27 +23,23 @@ input[type="submit"] {
 ```
 
 ```html interactive-example
-<p>Veuillez remplir vos coordonnées&nbsp;:</p>
+<p>Veuillez entrer vos coordonnées :</p>
 
-<form>
-  <label for="email">Adresse e-mail&nbsp;:</label>
-  <input id="email" name="email" type="email" value="test@example.com" />
+<label for="email">Adresse e-mail :</label>
+<input id="email" name="email" type="email" value="test@example.com" readonly />
 
-  <label for="note">Courte note à propos de vous&nbsp;:</label>
-  <textarea id="note" name="note">N'ayez pas peur</textarea>
+<label for="note">Courte note à propos de vous :</label>
+<textarea id="note" name="note">N'ayez pas peur</textarea>
 
-  <label for="pic">Votre photo&nbsp;:</label>
-  <input id="pic" name="pic" type="file" />
-
-  <input type="submit" value="Envoyer le formulaire" />
-</form>
+<label for="pic">Votre photo :</label>
+<input id="pic" name="pic" type="file" />
 ```
 
 ## Syntaxe
 
 ```css
 :read-only {
-  /* ... */
+  /* … */
 }
 ```
 
@@ -52,51 +47,47 @@ input[type="submit"] {
 
 ### Confirmer les informations du formulaire à l'aide de contrôles en lecture seule ou en lecture-écriture
 
-Une utilisation des contrôles de formulaire en lecture seule est de permettre à l'utilisateur·ice de vérifier les informations qu'il a pu saisir dans un formulaire précédent (par exemple, les détails d'expédition), tout en étant en mesure d'envoyer les informations avec le reste du formulaire. C'est exactement ce que nous faisons dans l'exemple ci-dessous.
+Une utilisation des contrôles de formulaire en lecture seule est de permettre à l'utilisateur·ice de vérifier les informations qu'il a pu saisir dans un formulaire précédent (par exemple, les détails d'expédition), tout en étant en mesure d'envoyer les informations avec le reste du formulaire. Cet exemple montre comment mettre en forme ces contrôles.
 
 La pseudo-classe `:read-only` est utilisée pour supprimer tout le style qui fait que les champs de saisie ressemblent à des champs cliquables, les faisant ressembler davantage à des paragraphes en lecture seule. La pseudo-classe `:read-write`, en revanche, est utilisée pour fournir un style plus agréable à la `<textarea>` modifiable.
 
 ```html hidden
-<form>
-  <fieldset>
-    <legend>Vérifier les détails d'expédition</legend>
-    <div>
-      <label for="name">Nom&nbsp;: </label>
-      <input id="name" name="name" type="text" value="Mr. Toto" readonly />
-    </div>
-    <div>
-      <label for="address">Adresse&nbsp;: </label>
-      <textarea id="address" name="address" readonly>
+<fieldset>
+  <legend>Vérifier les détails d'expédition</legend>
+  <div>
+    <label for="name">Nom&nbsp;: </label>
+    <input id="name" name="name" type="text" value="Mr. Toto" readonly />
+  </div>
+  <div>
+    <label for="address">Adresse&nbsp;: </label>
+    <textarea id="address" name="address" readonly>
 16 Rue des Blagues,
 Blagues en Cascades,
 France
 </textarea>
-    </div>
-    <div>
-      <label for="postal-code">Code postal&nbsp;: </label>
-      <input
-        id="postal-code"
-        name="postal-code"
-        type="text"
-        value="99000"
-        readonly />
-    </div>
-  </fieldset>
+  </div>
+  <div>
+    <label for="postal-code">Code postal&nbsp;: </label>
+    <input
+      id="postal-code"
+      name="postal-code"
+      type="text"
+      value="99000"
+      readonly />
+  </div>
+</fieldset>
 
-  <fieldset>
-    <legend>Instructions finales</legend>
-    <div>
-      <label for="sms-confirm">Envoyer la confirmation par SMS&nbsp;?</label>
-      <input id="sms-confirm" name="sms-confirm" type="checkbox" />
-    </div>
-    <div>
-      <label for="instructions">Des instructions spéciales&nbsp;?</label>
-      <textarea id="instructions" name="instructions"></textarea>
-    </div>
-  </fieldset>
-
-  <div><button type="submit">Modifier les détails et envoyer</button></div>
-</form>
+<fieldset>
+  <legend>Instructions finales</legend>
+  <div>
+    <label for="sms-confirm">Envoyer la confirmation par SMS&nbsp;?</label>
+    <input id="sms-confirm" name="sms-confirm" type="checkbox" />
+  </div>
+  <div>
+    <label for="instructions">Des instructions spéciales&nbsp;?</label>
+    <textarea id="instructions" name="instructions"></textarea>
+  </div>
+</fieldset>
 ```
 
 ```css hidden
@@ -123,7 +114,6 @@ fieldset > div {
   justify-content: space-between;
 }
 
-button,
 label,
 input[type="text"],
 textarea {
@@ -155,11 +145,6 @@ input:focus,
 textarea:hover,
 textarea:focus {
   background-color: #eeeeee;
-}
-
-button {
-  width: 60%;
-  margin: 20px auto;
 }
 ```
 

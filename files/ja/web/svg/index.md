@@ -41,7 +41,7 @@ SVG は 1999 年から[ワールドワイドウェブコンソーシアム (W3C)
 - [画像としての SVG](/ja/docs/Web/SVG/Guides/SVG_as_an_image)
   - : SVG は、HTML、CSS、特定の SVG 要素、およびキャンバス API を通じて画像形式として使用できます。
     このページでは、画像ソースとして SVG を提供できる機能を掲載しています。
-- [SVG フィルター](/ja/docs/Web/SVG/Guides/SVG_filters)
+- [SVG フィルター](/ja/docs/Web/SVG/Guides/Filters)
   - : SVG はフィルターに対応しているため、作成者は影やぼかしなどの効果を適用したり、さまざまなフィルターの結果を合成したりすることができます。
 - [HTML 内の SVG 入門](/ja/docs/Web/SVG/Guides/SVG_in_HTML)
   - : この記事は、インライン SVG を使用する方法を示し、説明のための例を記載しています。

@@ -3,7 +3,7 @@ title: Array.prototype.fill()
 short-title: fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`fill()`** は {{jsxref("Array")}} インスタンスのメソッドで、インデックスの範囲内にある配列のすべての要素を一定の値に変更します。これは変更した配列を返します。
@@ -132,7 +132,7 @@ console.log(Array.prototype.fill.call(arrayLike, 1));
 
 ## 関連情報
 
-- [`Array.prototype.fill` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.fill` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}
 - {{jsxref("TypedArray.prototype.fill()")}}

@@ -2,7 +2,7 @@
 title: Plantilla de página de propiedad CSS
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
 l10n:
-  sourceCommit: d2fb8cdc9422dd2b68ff23f616d70811729f1fbd
+  sourceCommit: 5c739c00c318740ed42a431b64867048c4fe449d
 ---
 
 > [!NOTE]
@@ -54,7 +54,6 @@ l10n:
 >
 > - `\{{SeeCompatTable}}`: Esta macro genera un banner de **Experimental**, que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   Si la tecnología es experimental y está oculta detrás de una preferencia en Firefox, también debes completar una entrada para ella en la página [Características experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}`: Esta macro genera un banner de **Obsoleto (Deprecated)**, que indica que el uso de la tecnología está [desaconsejado](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 > - `\{{Non-standard_Header}}` — esto genera un banner de **No estándar (Non-standard)** que indica que la característica no forma parte de ninguna especificación.
 >
 > Debes actualizar o eliminar las siguientes macros de acuerdo con los consejos a continuación:
@@ -78,7 +77,7 @@ l10n:
 
 {{SeeCompatTable}}{{Non-standard_Header}}
 
-Comienza el contenido de la página con un párrafo introductorio que nombre la propiedad y explique qué hace. Idealmente, debería ser una o dos frases cortas.
+Comienza el contenido de la página con un párrafo introductorio que nombre la propiedad y explique qué hace. Idealmente, debería ser una o dos frases cortas. Todas las demás explicaciones, si las hay, deben incluirse en la sección «Descripción».
 
 ## Pruébalo
 
@@ -87,6 +86,26 @@ Esta sección es generada por la macro `InteractiveExample`. Incluye el título 
 ## Propiedades constituyentes
 
 Añade esta sección solo para propiedades abreviadas (shorthand), como [animation](/es/docs/Web/CSS/Reference/Properties/animation), para enumerar todas las propiedades completas (longhand) relacionadas.
+
+Introduce los valores con una de las siguientes frases, según corresponda:
+
+```md
+Esta propiedad es una forma abreviada de las siguientes propiedades CSS:
+
+Esta propiedad es una forma abreviada de las siguientes propiedades lógicas:
+
+Esta propiedad es una forma abreviada de las siguientes propiedades físicas:
+```
+
+### Subpropiedades de solo restablecimiento
+
+Añade esta sección solo para propiedades abreviadas (shorthand), como [animation](/es/docs/Web/CSS/Reference/Properties/animation), para enumerar todas las propiedades completas (longhand) que solo se restablecen (las restablece la forma abreviada, pero no se pueden establecer con ella).
+
+Introduce las propiedades con la siguiente introducción:
+
+```md
+Esta propiedad restablece las siguientes propiedades CSS a sus valores iniciales:
+```
 
 ## Sintaxis
 
@@ -99,7 +118,17 @@ Incluye los casos de uso comunes como un bloque de código y describe los subval
 
 ### Valores
 
-Incluye un término y una definición para cada subvalor.
+Incluye una frase, como una de las siguientes, para indicar cómo se construye el valor de la propiedad:
+
+```md
+Esta propiedad se especifica como uno de los siguientes valores de palabra clave:
+
+Esta propiedad se especifica como un único valor de la siguiente lista:
+
+Esta propiedad se especifica como una lista de los siguientes valores separados por espacios:
+```
+
+A continuación, añade una lista de definiciones que incluya un término y una definición para cada subvalor. Si existe una página de referencia de MDN para un tipo de valor, añade ese enlace en el término.
 
 - `subvalor1`
   - : Incluye una descripción del subvalor, su tipo de datos y qué representa.
@@ -111,7 +140,13 @@ Incluye un término y una definición para cada subvalor.
 
 ## Descripción
 
-Esta es una sección opcional para incluir una descripción de la propiedad y explicar cómo funciona. Usa esta sección para explicar términos relacionados y añadir casos de uso para la propiedad.
+Incluye una descripción de la propiedad y explica cómo funciona. Usa esta sección para explicar términos relacionados y añadir casos de uso para la propiedad.
+
+Si la propiedad forma parte de una forma abreviada (shorthand), incluye formas alternativas de declarar el valor:
+
+```md
+La propiedad `nombre-de-la-propiedad`, junto con la propiedad \{{cssxref("propiedad-hermana")}}, también se puede establecer usando la forma abreviada \{{cssxref("propiedad-abreviada")}}.
+```
 
 ## Definición formal
 
@@ -135,7 +170,7 @@ Ten en cuenta que usamos el plural "Ejemplos" incluso si la página solo contien
 
 ### Añade un encabezado descriptivo
 
-Cada ejemplo debe tener un encabezado H3 (`###`) que nombre el ejemplo. El encabezado debe ser descriptivo de lo que hace el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y, por lo tanto, no es un buen encabezado. El encabezado debe ser conciso. Para una descripción más larga, usa el párrafo después del encabezado.
+Cada ejemplo debe tener un encabezado H3 (`###`) que nombre el ejemplo. El encabezado debe ser descriptivo de lo que hace el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y, por lo tanto, no es un buen encabezado. Dicho esto, "Uso básico" es aceptable para el primer encabezado de ejemplo cuando solo demuestra la asignación de un valor y a continuación hay ejemplos más complejos. El encabezado debe ser conciso. Para una descripción más larga, usa el párrafo después del encabezado.
 
 Consulta nuestra guía sobre cómo añadir [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para más información.
 
@@ -182,8 +217,9 @@ _Para usar esta macro, elimina las comillas invertidas y la barra invertida en e
 
 ## Véase también
 
-Incluye enlaces a páginas de referencia y guías relacionadas con la propiedad actual. Para más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
+Incluye enlaces a páginas de referencia y guías relacionadas con la propiedad actual. Incluye también un enlace al módulo CSS al que pertenece la propiedad. Para más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
 
 - enlace1
 - enlace2
+- enlace_módulo
 - enlace_externo (año)

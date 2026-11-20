@@ -3,7 +3,7 @@ title: Math.f16round()
 short-title: f16round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/f16round
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`Math.f16round()`** は静的メソッドで、数値に最も近い [16 ビット半精度](https://ja.wikipedia.org/wiki/半精度浮動小数点数)浮動小数点表現を返します。
@@ -79,7 +79,7 @@ Math.f16round(100000); // Infinity
 
 ## 関連情報
 
-- [`Math.f16round` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#float16-methods)
+- [`Math.f16round` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - [es-shims による `Math.f16round` のポリフィル](https://www.npmjs.com/package/math.f16round)
 - {{jsxref("Math.fround()")}}
 - {{jsxref("Math.round()")}}

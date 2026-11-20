@@ -3,7 +3,7 @@ title: "AsyncDisposableStack : méthode use()"
 short-title: use()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/use
 l10n:
-  sourceCommit: 419694495e070daaf466c923b413b3f476740fd6
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`use()`** des instances de {{JSxRef("AsyncDisposableStack")}} enregistre dans la pile une valeur qui implémente le [protocole de libération asynchrone](/fr/docs/Web/JavaScript/Guide/Resource_management).
@@ -34,7 +34,7 @@ La même valeur `value` que celle passée en argument.
 
 ## Exemples
 
-### Utilisation de `use()`
+### Utiliser la méthode `use()`
 
 La fonction suivante lit un fichier (comme un [`FileHandle` <sup>(angl.)</sup>](https://nodejs.org/api/fs.html#class-filehandle) de Node.js) et retourne son contenu. Le descripteur de fichier est automatiquement fermé à la fin de la fonction, car la classe `FileHandle` implémente une méthode `[Symbol.asyncDispose]()` qui ferme le fichier de façon asynchrone.
 
@@ -58,6 +58,7 @@ async function lireContenuFichier(chemin) {
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `AsyncDisposableStack.prototype.use` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources en JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
 - L'objet natif {{JSxRef("AsyncDisposableStack")}}
 - La méthode {{JSxRef("AsyncDisposableStack.prototype.adopt()")}}

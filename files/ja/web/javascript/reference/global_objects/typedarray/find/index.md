@@ -3,7 +3,7 @@ title: TypedArray.prototype.find()
 short-title: find()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`find()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列のある要素の値が与えられたテスト関数を満たした場合、その値を返します。そうでなければ {{jsxref("undefined")}} を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.find()")}} と同じです。
@@ -43,7 +43,7 @@ find(callbackFn, thisArg)
 
 ### 返値
 
-テストを満たした配列の要素の位置を返します。それ以外の場合は、 {{jsxref("undefined")}} を返します。
+テストを満たした型付き配列の最初の要素を返します。それ以外の場合は、 {{jsxref("undefined")}} を返します。
 
 ## 解説
 
@@ -76,7 +76,7 @@ console.log(uint8.find(isPrime)); // 5
 ```
 
 > [!NOTE]
-> この `isPrime( )` の実装はデモンストレーション用です。実際のアプリケーションでは、繰り返し計算を避けることができますので、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)のような高度な記憶化アルゴリズムを使用することをお勧めします。
+> この `isPrime()` の実装はデモ用です。実際のアプリケーションでは、計算の繰り返しを避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)のような{{Glossary("Memoization", "メモ化")}}を多用するアルゴリズムを使用するとよいでしょう。
 
 ## 仕様書
 
@@ -88,7 +88,7 @@ console.log(uint8.find(isPrime)); // 5
 
 ## 関連情報
 
-- [`TypedArray.prototype.find` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.find` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.findIndex()")}}

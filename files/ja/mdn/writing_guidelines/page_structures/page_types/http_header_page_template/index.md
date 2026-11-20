@@ -2,7 +2,7 @@
 title: HTTP ヘッダーページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template
 l10n:
-  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 > [!NOTE]
@@ -28,31 +28,31 @@ l10n:
 > ```
 >
 > - **title**
->   - : タイトルの見出しで、ページの最上部に表示されます。書式は _NameOfTheHeader ヘッダー_ です。例えば、 [Cache-Control](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) ヘッダーの _title_ は `Cache-Control ヘッダー` となります。
+>   - : タイトルの見出しで、ページの最上部に表示されます。書式は _NameOfTheHeader ヘッダー_ です。例えば、[Cache-Control](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) ヘッダーの _title_ は `Cache-Control ヘッダー` となります。
 > - **short-title**
 >   - : パンくずリストやサイドバーで使用される短縮タイトルです。_NameOfTheHeader_ の書式で記述します。例えば、[Cache-Control](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) ヘッダーの _short-title_ は `Cache-Control` です。
 > - **slug**
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。これは `Web/HTTP/Reference/Headers/NameOfTheHeader` のような形式になります。例えば、[Cache-Control](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) の _slug_ は `Web/HTTP/Reference/Headers/Cache-Control` となります。
 > - **sourceCommit**
->   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
+>   - : （翻訳記事のみ）翻訳元の英語版記事の GitHub コミット ID を記述します。GitHub 上で英語版記事のコミット ID を確認してください。
 >
 > ---
 >
 > **ページ先頭のマクロ**
 >
 > コンテンツ部の上部、ページのフロントマターのすぐ下には、いくつかのマクロ呼び出しが現れます。
-> **訳注:** 英語版では以下のマクロは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のマクロに合わせてください。
 >
-> - `\{{SeeCompatTable}}` — これは **これは実験的な機能です。** のバナーを生成し、このヘッダーが[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。
->   実験的なもので、その技術が Firefox の設定で隠されている場合は、 [Firefox での実験的な機能](/ja/docs/Mozilla/Firefox/Experimental_features) ページにもそのためのエントリーを記入する必要があります。
-> - `\{{deprecated_header}}` — これは **非推奨** バナーを生成し、このヘッダーの使用を[避けるべき](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)であることを示します。
+> **訳注:** 英語版では以下のマクロは自動的に追加・更新されますが、翻訳記事には自動的に反映されません。翻訳時に英語版に合わせて手動で追加、更新、削除してください。
+>
+> - `\{{SeeCompatTable}}` — これは **実験的な機能です。** のバナーを生成し、このヘッダーが[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。
+>   この技術が実験的で、Firefox の設定によって利用できないようにされている場合は、[Firefox での実験的な機能](/ja/docs/Mozilla/Firefox/Experimental_features)ページにも項目を記入してください。
 > - `\{{Non-standard_Header}}` — これは **標準外** バナーを生成し、この機能がどの仕様書にもないことを示します。
 >
 > **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
 >
-> **実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
+> **実験的** と **標準外** のバナーは、このメモブロックの直後に表示しています。
 >
-> _公開する前に、この説明文全体を削除することを忘れないでください。_
+> _この説明文全体を削除してから公開してください。_
 
 {{SeeCompatTable}}{{Non-standard_Header}}
 
@@ -106,7 +106,7 @@ NameOfTheHeader: <directive3>, …, <directiveN>
 ```
 
 ディレクティブは大文字と小文字を区別せず、トークンと引用符で囲まれた文字列の構文を使用することができます。
-複数のディレクティブはカンマで区切られます (必要に応じて情報を削除してください)。
+複数のディレクティブはカンマで区切られます（必要に応じて情報を削除してください）。
 
 ## ディレクティブ
 
@@ -125,11 +125,11 @@ NameOfTheHeader: <directive3>, …, <directiveN>
 
 ## 例
 
-英語版では、ページ内に例が 1 つしかない場合でも、複数形の "Examples" を使用していることに留意してください。
+英語版では、例が 1 つだけのページでも、複数形の "Examples" を使用しています。
 
 ### 説明的な見出し
 
-それぞれの例には、その例を説明する H3 見出し (`###`) が**なければなりません**。見出しは例が何を行っているかを説明するものであるべきです。例えば、「単純な例」というのは例について何も説明していないので、良い見出しとは言えません。見出しは簡潔であるべきです。より詳しい説明をする場合は、見出しの後の段落を使用してください。
+それぞれの例には、その例の内容を説明する H3 見出し (`###`) が必要です。見出しには例で何を行うかを具体的に記述してください。「単純な例」のような、何を示すのか分からない見出しは避けてください。見出しは簡潔にし、詳しい説明は見出しの後の段落に記載してください。
 
 詳しくは、[サンプルコード](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples)を追加する方法のガイドをご覧ください。
 
@@ -154,7 +154,7 @@ NameOfTheHeader: <directive3>, …, <directiveN>
 >
 > **シナリオ 2:** このページには何も例がなく、他のページに*だけ*ある場合。
 >
-> H3 の見出しは追加せず、 H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
+> H3 の見出しは追加せず、H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
 >
 > ```md
 > ## 例
@@ -166,12 +166,12 @@ NameOfTheHeader: <directive3>, …, <directiveN>
 
 `\{{Specifications}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、Markdown ファイルから逆引用符とバックスラッシュを削除してください。_
 
 ## ブラウザーの互換性
 
 _ブラウザーがこのヘッダーに対して特別な処理を行わない場合は、下記マクロを除去してください。_
-_それ以外の場合は、このマクロを使用するために、Markdown ファイル内のバッククォートとバックスラッシュを除去してください。_
+_それ以外の場合は、このマクロを使用するために、Markdown ファイル内の逆引用符とバックスラッシュを除去してください。_
 
 `\{{Compat}}`
 
@@ -183,7 +183,7 @@ _ブラウザーがヘッダーに対して特定の処理を行う場合は、�
 ## 関連情報
 
 現在の HTTP ヘッダーに関連するリファレンスページやガイドへのリンクを記述してください。
-その他のガイドラインについては、スタイル設定ガイドの[「関連情報」の節](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#関連情報)を参照してください。
+その他のガイドラインについては、執筆スタイルガイドの[「関連情報」の節](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#関連情報)を参照してください。
 `\{{HTTPStatus("123", "123 Reason")}}` のような関連するレスポンスステータスや、`\{{HTTPHeader("Header-Name")}}` のようなヘッダーにリンクを設定できます。
 簡潔にするために、関連するステータスやヘッダーを 1 つのリストアイテムにまとめても構いません。
 

@@ -3,7 +3,7 @@ title: "Tutorial de Django parte 2: Crear un sitio web esqueleto"
 short-title: "2: Sitio web esqueleto"
 slug: Learn_web_development/Extensions/Server-side/Django/skeleton_website
 l10n:
-  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
+  sourceCommit: d0d002817fbb057e80a4f7b8670b09cc80250516
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}
@@ -92,6 +92,9 @@ La subcarpeta del proyecto _locallibrary_ es el punto de entrada del sitio web:
 
 El script **manage.py** se usa para crear aplicaciones, trabajar con bases de datos e iniciar el servidor web de desarrollo.
 
+> [!NOTE]
+> En el resto de este tutorial, las rutas de archivo como **/locallibrary/settings.py** son relativas a la carpeta de nivel superior del proyecto, la que contiene **manage.py** (la `/` inicial representa esa carpeta).
+
 ## Creación de la aplicación catalog
 
 A continuación, ejecuta el siguiente comando para crear la aplicación _catalog_ que vivirá dentro de nuestro proyecto _locallibrary_. Asegúrate de ejecutar este comando desde la misma carpeta donde está el **manage.py** de tu proyecto:
@@ -139,7 +142,7 @@ Además, ahora tenemos:
 
 Ahora que la aplicación ha sido creada, tenemos que registrarla en el proyecto para que se incluya cuando se ejecute cualquier herramienta (como agregar modelos a la base de datos, por ejemplo). Las aplicaciones se registran añadiéndolas a la lista `INSTALLED_APPS` en la configuración del proyecto.
 
-Abre el archivo de configuración del proyecto, **django-locallibrary-tutorial/locallibrary/settings.py**, y busca la definición de la lista `INSTALLED_APPS`. Luego añade una nueva línea al final de la lista, como se muestra a continuación:
+Abre el archivo de configuración del proyecto, **/locallibrary/settings.py**, y busca la definición de la lista `INSTALLED_APPS`. Luego añade una nueva línea al final de la lista, como se muestra a continuación:
 
 ```bash
 INSTALLED_APPS = [
@@ -154,14 +157,14 @@ INSTALLED_APPS = [
 ]
 ```
 
-La nueva línea especifica el objeto de configuración de la aplicación (`CatalogConfig`) que se generó para ti en **/django-locallibrary-tutorial/catalog/apps.py** cuando creaste la aplicación.
+La nueva línea especifica el objeto de configuración de la aplicación (`CatalogConfig`) que se generó para ti en **/catalog/apps.py** cuando creaste la aplicación.
 
 > [!NOTE]
 > Notarás que ya hay muchas otras `INSTALLED_APPS` (y `MIDDLEWARE`, más abajo en el archivo de configuración). Estas habilitan el soporte para el [sitio de administración de Django](/es/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site) y la funcionalidad que usa (incluyendo sesiones, autenticación, etc.).
 
 ## Especificar la base de datos
 
-Este es también el punto en el que normalmente especificarías la base de datos que se usará para el proyecto. Tiene sentido usar la misma base de datos para desarrollo y producción siempre que sea posible, para evitar pequeñas diferencias de comportamiento. Puedes conocer las distintas opciones en [Databases](https://docs.djangoproject.com/en/5.0/ref/settings/#databases) (documentación de Django).
+Este es también el punto en el que normalmente especificarías la base de datos que se usará para el proyecto. Tiene sentido usar la misma base de datos para desarrollo y producción siempre que sea posible, para evitar pequeñas diferencias de comportamiento. Puedes conocer las distintas opciones en [Databases](https://docs.djangoproject.com/en/6.1/ref/settings/#databases) (documentación de Django).
 
 Usaremos la base de datos SQLite por defecto para la mayor parte de este ejemplo, porque no esperamos necesitar mucho acceso concurrente en una base de datos de demostración, ¡y no requiere trabajo adicional para configurarla! Puedes ver cómo está configurada esta base de datos en **settings.py**:
 
@@ -178,7 +181,7 @@ Más adelante, en [Desplegar Django a producción](/es/docs/Learn_web_developmen
 
 ## Otras configuraciones del proyecto
 
-El archivo **settings.py** también se usa para configurar otras opciones, pero en este punto probablemente solo quieras cambiar [TIME_ZONE](https://docs.djangoproject.com/en/5.0/ref/settings/#std:setting-TIME_ZONE) — debe corresponder a una cadena de la [lista estándar de zonas horarias de la base de datos tz](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (la columna TZ de la tabla contiene los valores que necesitas). Cambia el valor de `TIME_ZONE` por una de estas cadenas apropiada para tu zona horaria, por ejemplo:
+El archivo **settings.py** también se usa para configurar otras opciones, pero en este punto probablemente solo quieras cambiar [TIME_ZONE](https://docs.djangoproject.com/en/6.1/ref/settings/#std-setting-TIME_ZONE) — debe corresponder a una cadena de la [lista estándar de zonas horarias de la base de datos tz](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (la columna TZ de la tabla contiene los valores que necesitas). Cambia el valor de `TIME_ZONE` por una de estas cadenas apropiada para tu zona horaria, por ejemplo:
 
 ```python
 TIME_ZONE = 'Europe/London'
@@ -193,14 +196,14 @@ Hay otras dos configuraciones que no vas a cambiar ahora, pero que deberías con
 
 El sitio web se crea con un archivo asignador de URL (**urls.py**) en la carpeta del proyecto. Aunque puedes usar este archivo para gestionar todas tus asignaciones de URL, es más habitual delegar las asignaciones a la aplicación correspondiente.
 
-Abre **django-locallibrary-tutorial/locallibrary/urls.py** y observa el texto instructivo que explica algunas de las formas de usar el asignador de URL.
+Abre **/locallibrary/urls.py** y observa el texto instructivo que explica algunas de las formas de usar el asignador de URL.
 
 ```python
 """
 URL configuration for locallibrary project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
+    https://docs.djangoproject.com/en/6.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -247,7 +250,7 @@ Añade las siguientes líneas al final del archivo:
 # Añade asignaciones de URL para redirigir la URL base a nuestra aplicación
 from django.views.generic import RedirectView
 urlpatterns += [
-    path('', RedirectView.as_view(url='catalog/', permanent=True)),
+    path('', RedirectView.as_view(url='/catalog/', permanent=True)),
 ]
 ```
 
@@ -304,7 +307,7 @@ Antes de hacer eso, primero deberíamos ejecutar una _migración de base de dato
 
 ### Ejecución de migraciones de base de datos
 
-Django usa un Mapeador Objeto-Relacional (ORM) para asignar las definiciones de modelos en el código de Django a la estructura de datos usada por la base de datos subyacente. A medida que cambiamos nuestras definiciones de modelos, Django rastrea los cambios y puede crear scripts de migración de base de datos (en **/django-locallibrary-tutorial/catalog/migrations/**) para migrar automáticamente la estructura de datos subyacente en la base de datos y que coincida con el modelo.
+Django usa un Mapeador Objeto-Relacional (ORM) para asignar las definiciones de modelos en el código de Django a la estructura de datos usada por la base de datos subyacente. A medida que cambiamos nuestras definiciones de modelos, Django rastrea los cambios y puede crear scripts de migración de base de datos (en **/catalog/migrations/**) para migrar automáticamente la estructura de datos subyacente en la base de datos y que coincida con el modelo.
 
 Cuando creamos el sitio web, Django añadió automáticamente varios modelos para su uso por la sección de administración del sitio (que veremos más adelante). Ejecuta los siguientes comandos para definir tablas para esos modelos en la base de datos (asegúrate de estar en el directorio que contiene **manage.py**):
 
@@ -323,14 +326,14 @@ El comando `migrate` es el que aplica las migraciones a tu base de datos. Django
 > [!NOTE]
 > Deberías volver a ejecutar las migraciones y volver a probar el sitio siempre que hagas cambios significativos. ¡No lleva mucho tiempo!
 >
-> Consulta [Migrations](https://docs.djangoproject.com/en/5.0/topics/migrations/) (documentación de Django) para obtener información adicional sobre los comandos de migración menos usados.
+> Consulta [Migrations](https://docs.djangoproject.com/en/6.1/topics/migrations/) (documentación de Django) para obtener información adicional sobre los comandos de migración menos usados.
 
 ### Ejecución del sitio web
 
 Durante el desarrollo, puedes servir el sitio web primero usando el _servidor web de desarrollo_, y luego verlo en tu navegador web local.
 
 > [!NOTE]
-> El servidor web de desarrollo no es lo suficientemente robusto ni eficiente para uso en producción, pero es una forma muy sencilla de poner en marcha tu sitio web Django durante el desarrollo y hacerle una prueba rápida y cómoda. Por defecto servirá el sitio a tu computadora local (`http://127.0.0.1:8000/)`, pero también puedes especificar otras computadoras de tu red a las que servir. Para más información, consulta [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/5.0/ref/django-admin/#runserver) (documentación de Django).
+> El servidor web de desarrollo no es lo suficientemente robusto ni eficiente para uso en producción, pero es una forma muy sencilla de poner en marcha tu sitio web Django durante el desarrollo y hacerle una prueba rápida y cómoda. Por defecto servirá el sitio a tu computadora local (`http://127.0.0.1:8000/)`, pero también puedes especificar otras computadoras de tu red a las que servir. Para más información, consulta [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/6.1/ref/django-admin/#runserver) (documentación de Django).
 
 Ejecuta el _servidor web de desarrollo_ llamando al comando `runserver` (en el mismo directorio que **manage.py**):
 
@@ -340,7 +343,7 @@ python3 manage.py runserver
 
 Una vez que el servidor esté en ejecución, puedes ver el sitio navegando a `http://127.0.0.1:8000/` en tu navegador web local. Deberías ver una página de error del sitio que se parece a esta:
 
-![Página de depuración de Django (Django 4.2)](django_404_debug_page.png)
+![Página de depuración de Django](django_404_debug_page.png)
 
 ¡No te preocupes! Esta página de error es esperada porque no tenemos ninguna página/URL definida en el módulo `catalog.urls` (al que somos redirigidos cuando llegamos a la URL raíz del sitio).
 
@@ -400,8 +403,8 @@ Ahora que el esqueleto del [sitio web Local Library](/es/docs/Learn_web_developm
 
 ## Véase también
 
-- [Writing your first Django app - part 1](https://docs.djangoproject.com/en/5.0/intro/tutorial01/) (documentación de Django)
-- [Applications](https://docs.djangoproject.com/en/5.0/ref/applications/#configuring-applications) (documentación de Django).
+- [Writing your first Django app - part 1](https://docs.djangoproject.com/en/6.1/intro/tutorial01/) (documentación de Django)
+- [Applications](https://docs.djangoproject.com/en/6.1/ref/applications/#configuring-applications) (documentación de Django).
   Contiene información sobre cómo configurar aplicaciones.
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}

@@ -3,7 +3,7 @@ title: Array.prototype.toSpliced()
 short-title: toSpliced()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSpliced
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`toSpliced()`** は {{jsxref("Array")}} インスタンスのメソッドで、 {{jsxref("Array/splice", "splice()")}} メソッドに対応する[コピー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)メソッドです。これは、指定された位置の要素を除去したり置き換えたりした新しい配列を返します。
@@ -110,7 +110,7 @@ console.log(Array.prototype.toSpliced.call(arrayLike, 0, 1, 2, 3));
 
 ## 関連情報
 
-- [`Array.prototype.toSpliced` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#change-array-by-copy)
+- [`Array.prototype.toSpliced` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.toSpliced` のポリフィル](https://www.npmjs.com/package/array.prototype.tospliced)
 - {{jsxref("Array.prototype.splice()")}}
 - {{jsxref("Array.prototype.toReversed()")}}

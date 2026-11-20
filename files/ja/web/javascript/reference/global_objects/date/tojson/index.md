@@ -1,11 +1,10 @@
 ---
 title: Date.prototype.toJSON()
+short-title: toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 13d5331637ae88b41af236e4b3d1b6c901d08f69
 ---
-
-{{JSRef}}
 
 **`toJSON()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日時を {{jsxref("Date/toISOString", "toISOString()")}} と同じ ISO 形式で表す文字列を返します。
 
@@ -39,7 +38,7 @@ toJSON()
 
 ## 解説
 
-`toJSON()` メソッドは、 `Date` オブジェクトが文字列化されると、{{jsxref("JSON.stringify()")}} によって自動的に呼び出されます。このメソッドは、通常、 [JSON](/ja/docs/Glossary/JSON) シリアライズ中に {{jsxref("Date")}} オブジェクトをシリアライズするために使用することを意図しており、 {{jsxref("Date/Date", "Date()")}} コンストラクターを使用して {{jsxref("JSON.parse()")}} の復元関数としてシリアライズ解除することができます。
+`toJSON()` メソッドは、 `Date` オブジェクトが文字列化されると、{{jsxref("JSON.stringify()")}} によって自動的に呼び出されます。このメソッドは、通常、 [JSON](/ja/docs/Glossary/JSON) シリアライズ中に {{jsxref("Date")}} オブジェクトをシリアライズするために使用することを意図しており、 {{jsxref("Date/Date", "Date()")}} コンストラクターを使用して {{jsxref("JSON.parse()")}} の復元関数の中でシリアライズ解除することができます。
 
 このメソッドは、[プリミティブ値に変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ変換)するために、まず、その `this` 値を [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (ヒントとして `"number"` を使用)、{{jsxref("Object/valueOf", "valueOf()")}}、{{jsxref("Object/toString", "toString()")}} の各メソッドをこの順で呼び出します。結果が[有限数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite)でない場合は、 `null` が返されます（これは通常、{{jsxref("Date/valueOf", "valueOf()")}} が {{jsxref("NaN")}} を返す無効な日付に対応します）。それ以外の場合、変換されたプリミティブが数値でないか、有限の数値である場合は、 {{jsxref("Date/toISOString", "this.toISOString()")}} の返値が返されます。
 

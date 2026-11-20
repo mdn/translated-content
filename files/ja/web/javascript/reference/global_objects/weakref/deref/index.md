@@ -1,11 +1,10 @@
 ---
 title: WeakRef.prototype.deref()
+short-title: deref()
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
 l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`deref()`** は {{jsxref("WeakRef")}} インスタンスのメソッドで、この `WeakRef` のターゲット値、またはその値が既にガベージコレクションされている場合は `undefined` を返します。
 

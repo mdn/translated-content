@@ -9,5 +9,5 @@ slug: Glossary/FTP
 
 ### 基礎知識
 
-- [初學者指引通過 FTP 上傳文件](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [初學者指引通過 FTP 上傳文件](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 - 維基百科上的[FTP](https://zh.wikipedia.org/wiki/File_Transfer_Protocol)

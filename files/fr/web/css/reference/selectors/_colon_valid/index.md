@@ -3,7 +3,7 @@ title: Pseudo-classe CSS `:valid`
 short-title: :valid
 slug: Web/CSS/Reference/Selectors/:valid
 l10n:
-  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
+  sourceCommit: bf3b0f3217d5d5a6957e9e17f863ece19d939d20
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:valid`** permet de cibler tout élément HTML {{HTMLElement("input")}} ou {{HTMLElement("form")}} dont la [validation](/fr/docs/Web/HTML/Guides/Constraint_validation) du contenu s'effectue correctement par rapport au type de donnée attendu. Cela vous permet de donner facilement aux champs valides un aspect qui aide l'utilisateur·ice à vérifier que ses données sont correctement formatées.
@@ -26,39 +26,35 @@ input:valid {
 ```
 
 ```html interactive-example
-<form>
-  <label for="email">Adresse e-mail&nbsp;:</label>
-  <input id="email" name="email" type="email" value="na@me@example.com" />
+<label for="email">Adresse e-mail :</label>
+<input id="email" name="email" type="email" value="na@me@example.com" />
 
-  <label for="secret">Code secret&nbsp;: (lettres minuscules)</label>
-  <input id="secret" name="secret" type="text" value="test" pattern="[a-z]+" />
+<label for="secret">Code secret : (lettres minuscules)</label>
+<input id="secret" name="secret" type="text" value="test" pattern="[a-z]+" />
 
-  <label for="age">Votre âge&nbsp;: (18+)</label>
-  <input id="age" name="age" type="number" value="5" min="18" />
+<label for="age">Votre âge : (18+)</label>
+<input id="age" name="age" type="number" value="5" min="18" />
 
-  <label
-    ><input name="tos" type="checkbox" required checked />
-    - Acceptez-vous les CGU&nbsp;?
-  </label>
-</form>
+<label
+  ><input name="tos" type="checkbox" required checked />
+  - Acceptez-vous les CGU ?
+</label>
 ```
-
-La pseudo-classe est utile pour mettre en évidence les champs corrects pour l'utilisateur·ice.
 
 ## Syntaxe
 
 ```css
 :valid {
-  /* ... */
+  /* … */
 }
 ```
 
 ## Accessibilité
 
-La couleur rouge est généralement utilisée afin d'indiquer une valeur invalide. Les personnes ayant du mal à différencier les couleurs ne seront pas capables de déterminer la validité du champ si celui-ci n'est pas accompagné d'un indicateur qui n'est pas basé sur une couleur. Pour résoudre ce problème, on pourra utiliser un texte indicatif et/ou une icône.
+La couleur rouge est généralement utilisée afin d'indiquer une valeur invalide. Les personnes ayant du mal à différencier les couleurs ne sont pas capables de déterminer la validité du champ si celui-ci n'est pas accompagné d'un indicateur qui n'est pas basé sur une couleur. Pour résoudre ce problème, on peut utiliser un texte indicatif et/ou une icône.
 
 - [Comprendre le WCAG sur le MDN, explications de la règle 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
-- [Comprendre le critère de succès 1.4.3 | Comprendre les WCAG 2.0 de la W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [Comprendre le critère de succès 1.4.3 | Comprendre les WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Exemples
 
@@ -67,30 +63,27 @@ La couleur rouge est généralement utilisée afin d'indiquer une valeur invalid
 Dans cet exemple, nous incluons des éléments `<span>` supplémentaires pour générer du contenu qui indique des données valides ou invalides&nbsp;:
 
 ```html
-<form>
-  <fieldset>
-    <legend>Formulaire de retour d'information</legend>
-    <p>Les champs obligatoires sont indiqués par «&nbsp;requis&nbsp;».</p>
-    <div>
-      <label for="fname">Prénom&nbsp;: </label>
-      <input id="fname" name="fname" type="text" required />
-      <span></span>
-    </div>
-    <div>
-      <label for="lname">Nom&nbsp;: </label>
-      <input id="lname" name="lname" type="text" required />
-      <span></span>
-    </div>
-    <div>
-      <label for="email">
-        Courriel (inclure si vous souhaitez une réponse)&nbsp;:
-      </label>
-      <input id="email" name="email" type="email" />
-      <span></span>
-    </div>
-    <div><button>Envoyer</button></div>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>Informations de contact</legend>
+  <p>Les champs obligatoires sont indiqués par «&nbsp;requis&nbsp;».</p>
+  <div>
+    <label for="fname">Prénom&nbsp;: </label>
+    <input id="fname" name="fname" type="text" required />
+    <span></span>
+  </div>
+  <div>
+    <label for="lname">Nom&nbsp;: </label>
+    <input id="lname" name="lname" type="text" required />
+    <span></span>
+  </div>
+  <div>
+    <label for="email">
+      Courriel (inclure si vous souhaitez une réponse)&nbsp;:
+    </label>
+    <input id="email" name="email" type="email" />
+    <span></span>
+  </div>
+</fieldset>
 ```
 
 Pour fournir ces indicateurs, nous utilisons le CSS suivant&nbsp;:
@@ -118,7 +111,6 @@ fieldset > div {
   flex-flow: row wrap;
 }
 
-button,
 label,
 input {
   display: block;
@@ -149,11 +141,6 @@ input:required + span::after {
   padding: 5px 10px;
   top: -26px;
   left: -70px;
-}
-
-button {
-  width: 60%;
-  margin: 0 auto;
 }
 ```
 

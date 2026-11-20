@@ -3,7 +3,7 @@ title: Pautas de escritura para Aprende desarrollo web
 short-title: Contenido educativo
 slug: MDN/Writing_guidelines/Learning_content
 l10n:
-  sourceCommit: a1ac64fa4da965d2a152f08221b1a9aed638fd16
+  sourceCommit: 3143a6094e7b87cf1a96b61f9551fb4d95049777
 ---
 
 La sección [Aprende desarrollo web](/es/docs/Learn_web_development) de MDN está destinada específicamente a las personas que están aprendiendo los fundamentos básicos del desarrollo web y, por lo tanto, requiere un enfoque diferente del resto del contenido de MDN. Este artículo proporciona pautas para redactar contenido didáctico.

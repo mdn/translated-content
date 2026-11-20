@@ -2,7 +2,7 @@
 title: Polyfills
 slug: MDN/Writing_guidelines/Page_structures/Polyfills
 l10n:
-  sourceCommit: 15be229ea1379b99a02f0c8b102f2acb5c3d6633
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Esta página describe la política de MDN para incluir polyfills en la documentación de referencia de [JavaScript](/es/docs/Web/JavaScript) y de las [API web](/es/docs/Web/API).
@@ -17,7 +17,7 @@ Los polyfills son importantes para quienes desarrollan para la web, pero tambié
 
 La [documentación de referencia de JavaScript](/es/docs/Web/JavaScript) puede enlazar a polyfills de dos fuentes:
 
-- La biblioteca [core-js](https://github.com/zloirock/core-js/tree/master).
+- La biblioteca [core-js](https://core-js.io/).
 - La organización [es-shims](https://github.com/es-shims).
 
 Las fuentes son seleccionadas por las personas que mantienen MDN según los siguientes criterios:

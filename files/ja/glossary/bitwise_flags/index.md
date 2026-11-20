@@ -2,17 +2,17 @@
 title: Bitwise flags (ビットフラグ)
 slug: Glossary/Bitwise_flags
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-**ビットフラグ**は変数 (通常はシンプルな整数値) の集合で、メソッドやその他のコードの構造において、特定の使用法や機能を有効にしたり無効にしたりするのに使用できるものです。ビットレベルで操作を行うので、これを高速に効率よくできます。一般的に、同じグループ内の関連するフラグには単一の値 (たとえば、十六進数) の中の異なるビット位置を表す相補的な値が割り当てられるので、単一の値で複数のフラグ設定を表すことができます。
+**ビットフラグ**は変数 (通常はシンプルな整数値) の集合で、メソッドやその他のコードの構造において、特定の使用法や機能を有効にしたり無効にしたりするのに使用できるものです。ビットレベルで操作を行うので、これを高速に効率よくできます。一般的に、同じグループ内の関連するフラグには単一の値 (たとえば十六進数) の中の異なるビット位置を表す相補的な値が割り当てられるので、単一の値で複数のフラグ設定を表すことができます。
 
 たとえば、{{domxref("WebGPU API", "WebGPU API", "", "nocode")}} では、{{domxref("GPUDevice.createBuffer()")}} メソッドで {{domxref("GPUBuffer")}} オブジェクトを作成します。このメソッドを呼び出す際、ディスクリプターで、バッファーで許される異なる使用法を有効化する 1 個または複数のフラグが入った `usage` プロパティを定義します。
 
 ```js
-usage: GPUBufferUsage.COPY_SRC | GPUBufferUsage.MAP_WRITE;
+const descriptor = {
+  usage: GPUBufferUsage.COPY_SRC | GPUBufferUsage.MAP_WRITE,
+};
 ```
 
 これらの値は同じ名前空間内で定義されており、それぞれに十六進数の値があります。

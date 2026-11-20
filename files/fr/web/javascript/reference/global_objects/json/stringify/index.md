@@ -3,7 +3,7 @@ title: "JSON : méthode statique stringify()"
 short-title: stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 l10n:
-  sourceCommit: 30e0adab23668217555b7ed37df7e6e61b002bf3
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`JSON.stringify()`** convertit une valeur JavaScript en une chaîne de caractères JSON, en remplaçant éventuellement des valeurs si une fonction de remplacement est définie ou en incluant éventuellement uniquement les propriétés définies si un tableau de remplacement est défini.
@@ -65,7 +65,7 @@ Une chaîne de caractères JSON qui représente la valeur indiquée.
 `JSON.stringify()` convertit une valeur en la notation JSON que cette valeur représente. Les valeurs sont converties en chaîne de caractères de la manière suivante&nbsp;:
 
 - Les objets {{JSxRef("Boolean")}}, {{JSxRef("Number")}}, {{JSxRef("String")}} et {{JSxRef("BigInt")}} (obtenus avec [`Object()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/Object)) sont convertis en leur valeur primitive correspondante lors de la conversion, conformément à la sémantique de conversion traditionnelle. Les objets {{JSxRef("Symbol")}} (obtenus avec [`Object()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/Object)) sont traités comme de simples objets.
-- Tenter de sérialiser des valeurs {{JSxRef("BigInt")}} lève une exception. Cependant, si le BigInt possède une méthode `toJSON()` (par modification dynamique&nbsp;: `BigInt.prototype.toJSON = ...`), cette méthode peut fournir le résultat de la sérialisation. Cette contrainte garantit qu'un comportement de sérialisation approprié (et, très probablement, sa désérialisation associée) est toujours explicitement fourni par l'utilisateur·ice.
+- Tenter de sérialiser des valeurs {{JSxRef("BigInt")}} lève une exception. Cependant, si le BigInt possède une méthode `toJSON()` (par modification dynamique&nbsp;: `BigInt.prototype.toJSON = ...`), cette méthode peut fournir le résultat de la sérialisation. Cette contrainte garantit qu'un comportement de sérialisation approprié (et, très probablement, sa dé-sérialisation associée) est toujours explicitement fourni par l'utilisateur·ice.
 - Les valeurs {{JSxRef("undefined")}}, {{JSxRef("Function")}} et {{JSxRef("Symbol")}} ne sont pas des valeurs JSON valides. Si de telles valeurs sont rencontrées lors de la conversion, elles sont soit omises (lorsqu'elles se trouvent dans un objet), soit transformées en [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) (lorsqu'elles se trouvent dans un tableau). `JSON.stringify()` peut retourner `undefined` lorsqu'on lui passe des valeurs «&nbsp;pures&nbsp;» comme `JSON.stringify(() => {})` ou `JSON.stringify(undefined)`.
 - Les nombres {{JSxRef("Infinity")}} et {{JSxRef("NaN")}}, ainsi que la valeur [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null), sont tous considérés comme `null`. (Mais contrairement aux valeurs du point précédent, elles ne sont jamais omises.)
 - Les tableaux sont sérialisés comme des tableaux (délimités par des crochets). Seuls les indices de 0 à `length - 1` (inclus) sont sérialisés&nbsp;; les autres propriétés sont ignorées.
@@ -387,6 +387,6 @@ Cette modification doit être rétrocompatible tant que vous transmettez le rés
 
 ## Voir aussi
 
-- [La prothèse d'émulation du comportement moderne de `JSON.stringify` (symbol, unicode bien formé, JSON brut) dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-json)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) du comportement moderne de `JSON.stringify` (symbol, unicode bien formé, JSON brut) dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/json)
 - La méthode {{JSxRef("JSON.parse()")}}
 - La méthode {{JSxRef("JSON.rawJSON()")}}

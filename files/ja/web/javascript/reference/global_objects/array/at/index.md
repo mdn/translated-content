@@ -3,7 +3,7 @@ title: Array.prototype.at()
 short-title: at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`at()`** は {{jsxref("Array")}} インスタンスのメソッドで、整数値を受け取り、そのインデックスにある項目を返します。正の整数値と負の整数値が使用できます。負の整数は、配列の最後の項目から前へ数えます。
@@ -120,7 +120,7 @@ console.log(Array.prototype.at.call(arrayLike, 2)); // undefined
 
 ## 関連情報
 
-- [`Array.prototype.at` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#relative-indexing-method)
+- [`Array.prototype.at` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.at` のポリフィル](https://www.npmjs.com/package/array.prototype.at)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}

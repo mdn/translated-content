@@ -3,7 +3,7 @@ title: Math.hypot()
 short-title: hypot()
 slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`Math.hypot()`** は静的メソッドで、各引数の二乗の合計値の平方根を返します。
@@ -85,7 +85,7 @@ Math.hypot(-3); // 3、Math.abs(-3) と同じ
 
 ## 関連情報
 
-- [`Math.hypot` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.hypot` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.pow()")}}
 - {{jsxref("Math.sqrt()")}}

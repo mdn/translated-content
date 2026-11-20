@@ -1,5 +1,5 @@
 ---
-title: "`stop-opacity` プロパティ (CSS)"
+title: "`stop-opacity` プロパティ"
 short-title: stop-opacity
 slug: Web/CSS/Reference/Properties/stop-opacity
 l10n:

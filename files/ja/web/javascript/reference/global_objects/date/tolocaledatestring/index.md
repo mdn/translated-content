@@ -1,15 +1,14 @@
 ---
 title: Date.prototype.toLocaleDateString()
+short-title: toLocaleDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
-{{JSRef}}
+**`toLocaleDateString()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日時の日付部分を、現地時間で言語に依存した表現の文字列で返します。 [`Intl.DateTimeFormat` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) に対応している実装では、このメソッドは `Intl.DateTimeFormat` に転送されます。
 
-**`toLocaleDateString()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日時の日付部分を、地方時で言語に依存した表現の文字列で返します。 [`Intl.DateTimeFormat` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) に対応している実装では、このメソッドは `Intl.DateTimeFormat` に転送されます。
-
-`toLocaleString` が呼び出されるたびに、ローカライズ文字列の巨大なデータベースを検索しなければならず、これは非効率的である可能性があります。同じ引数でメソッドが何度も呼び出される場合は、 {{jsxref("Intl.DateTimeFormat")}} オブジェクトを作成し、その {{jsxref("Intl/DateTimeFormat/format", "format()")}} メソッドを使用したほうがよいでしょう。 `DateTimeFormat` オブジェクトは、渡された引数を記憶し、データベースの一部をキャッシュすることを決定できるため、今後の `format` の呼び出しでは、より厳密なコンテキスト内でローカライズ文字列を検索することができます。
+`toLocaleDateString` が呼び出されるたびに、ローカライズ文字列の巨大なデータベースを検索しなければならず、これは非効率的である可能性があります。同じ引数でメソッドが何度も呼び出される場合は、{{jsxref("Intl.DateTimeFormat")}} オブジェクトを作成し、その {{jsxref("Intl/DateTimeFormat/format", "format()")}} メソッドを使用したほうがよいでしょう。 `DateTimeFormat` オブジェクトは、渡された引数を記憶し、データベースの一部をキャッシュすることを決定できるため、今後の `format` の呼び出しでは、より厳密なコンテキスト内でローカライズ文字列を検索することができます。
 
 {{InteractiveExample("JavaScript デモ: Date.prototype.toLocaleDateString()", "taller")}}
 
@@ -23,13 +22,13 @@ const options = {
 };
 
 console.log(event.toLocaleDateString("de-DE", options));
-// 期待される結果（地方時によって変化）: Donnerstag, 20. Dezember 2012
+// 期待される結果（現地時間によって変化）: Donnerstag, 20. Dezember 2012
 
 console.log(event.toLocaleDateString("ar-EG", options));
-// 期待される結果（地方時によって変化）: الخميس، ٢٠ ديسمبر، ٢٠١٢
+// 期待される結果（現地時間によって変化）: الخميس، ٢٠ ديسمبر، ٢٠١٢
 
 console.log(event.toLocaleDateString(undefined, options));
-// 期待される結果（地方時と既定のロケールによって変化）: 2012年12月20日木曜日
+// 期待される結果（現地時間とデフォルトのロケールによって変化）: 2012年12月20日木曜日
 ```
 
 ## 構文
@@ -47,7 +46,7 @@ toLocaleDateString(locales, options)
 [`Intl.DateTimeFormat` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) に対応している実装では、これらの引数は [`Intl.DateTimeFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) コンストラクターの引数と正確に一致していることに注意してください。 `Intl.DateTimeFormat` に対応していない実装では、両方の引数を無視するように求められます。使用するロケールと返す文字列の形式は、完全に実装に依存します。
 
 - `locales` {{optional_inline}}
-  - : BCP 47 の言語タグを持つ文字列、あるいはそのような文字列の配列です。 `Intl.DateTimeFormat()` コンストラクターの [`locales`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) 引数に相当します。
+  - : {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}を持つ文字列、あるいはそのような文字列の配列です。 `Intl.DateTimeFormat()` コンストラクターの [`locales`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) 引数に相当します。
 
     `Intl.DateTimeFormat` に対応していない実装では、この引数は無視され、通常はホストのロケールを使用します。
 
@@ -71,13 +70,13 @@ toLocaleDateString(locales, options)
 
 ### toLocaleDateString() の使用
 
-`locale` を指定せずにこのメソッドを基本で使用すると、既定のロケールで、既定のオプションを使用して書式化された文字列が返されます。
+`locale` を指定せずにこのメソッドを基本で使用すると、デフォルトのロケールで、デフォルトのオプションを使用して書式化された文字列が返されます。
 
 ```js
 const date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
 // toLocaleDateString() に引数を与えなければ実装に依存し、
-// 既定のロケールとタイムゾーンを返す
+// デフォルトのロケールとタイムゾーンを返す
 console.log(date.toLocaleDateString());
 // → "12/11/2012" : アメリカ/ロサンゼルスのタイムゾーンの ja ロケールで実行した場合
 ```

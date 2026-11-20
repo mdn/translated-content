@@ -3,7 +3,7 @@ title: TypedArray.prototype.copyWithin()
 short-title: copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`copyWithin()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、この型付き配列の一部を同じ型付き配列の別の場所にシャローコピーし、この型付き配列の長さを変更せずに返します。このメソッドは {{jsxref("Array.prototype.copyWithin()")}} と同じアルゴリズムです。
@@ -67,7 +67,7 @@ console.log(uint8); // Uint8Array [ 1, 2, 3, 1, 2, 3, 0, 0 ]
 
 ## 関連情報
 
-- [`TypedArray.prototype.copyWithin` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.copyWithin` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("Array.prototype.copyWithin()")}}

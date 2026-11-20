@@ -2,7 +2,7 @@
 title: "名前付きキャプチャグループ: (?<name>...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Named_capturing_group
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 288e644117c29285df2acf37a2ac97f57546a146
 ---
 
 **名前付きキャプチャグループ**は特定の種類の[キャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)で、グループに名前を付けることができます。グループの照合結果は、パターン内のインデックスではなく、この名前で後で識別することができます。
@@ -24,7 +24,8 @@ l10n:
 
 名前付きキャプチャグループは、キャプチャグループと同様に使用することができます 。結果の配列の一致インデックスも持っており、`\1`、`\2` などによって参照することができます。唯一の違いは、名前によって「追加的に」参照することができるということです。 キャプチャグループの一致する情報には、以下のようにしてアクセスすることができます。
 
-- {{jsxref("RegExp.prototype.exec()")}}、{{jsxref("String.prototype.match()")}}、{{jsxref("String.prototype.matchAll()")}} の返値の `groups` プロパティ
+- {{jsxref("RegExp.prototype.exec()")}} の返値、または正規表現に `g` フラグがない場合の {{jsxref("String.prototype.match()")}} の返値の `groups` プロパティ
+- {{jsxref("String.prototype.matchAll()")}} が返すイテレーターが生成する各一致配列の `groups` プロパティ
 - {{jsxref("String.prototype.replace()")}} および {{jsxref("String.prototype.replaceAll()")}} メソッドの `replacement` コールバック関数の `groups` 引数
 - 同じパターン内の[名前付き後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
 
@@ -84,7 +85,7 @@ parseLog("1560979912,Caroline"); // "Caroline committed on 6/19/2019, 5:31:52 PM
 
 ## 関連情報
 
-- [名前付きキャプチャグループのポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [名前付きキャプチャグループのポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/string-regexp)
 - [グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)ガイド
 - [正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
 - [キャプチャグループ: `(...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)

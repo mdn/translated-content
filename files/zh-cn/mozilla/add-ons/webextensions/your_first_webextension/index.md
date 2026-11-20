@@ -24,7 +24,7 @@ cd borderify
 
 ### manifest.json
 
-使用合适的[文本编辑器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors)，在“borderify”目录下直接创建一个名为“manifest.json”的文件。写入这些内容：
+使用合适的[文本编辑器](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors)，在“borderify”目录下直接创建一个名为“manifest.json”的文件。写入这些内容：
 
 ```json
 {

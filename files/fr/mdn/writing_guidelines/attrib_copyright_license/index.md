@@ -2,7 +2,7 @@
 title: Attribution et licences de droits d'auteur
 slug: MDN/Writing_guidelines/Attrib_copyright_license
 l10n:
-  sourceCommit: f4c221962681b1472cd57da60379ad7825fe5081
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
 
 Le contenu de MDN Web Doc est disponible gratuitement et sous diverses licences libres.
@@ -18,12 +18,12 @@ Cette section présente les types de contenu que nous fournissons et les droits 
 
 La réutilisation du contenu ici est publiée sous la même licence que le contenu original — CC-BY-SA v2.5 ou toute version ultérieure.
 Lorsque vous réutilisez le contenu de MDN Web Docs, vous devez vous assurer que [l'attribution est donnée <sup>(angl.)</sup>](https://creativecommons.org/licenses/by/2.5/deed.en#ref-appropriate-credit) au matériel ainsi qu'aux «&nbsp;Contributrices et contributeurs de Mozilla&nbsp;».
-Une bonne attribution correspond au **titre** du document, avec un lien hypertexte (en ligne) ou une URL (imprimée) vers la page spécifique du contenu utilisé, et toute modification que vous avez apportée brièvement décrite.
+Une bonne attribution correspond au **titre** du document, avec un lien hypertexte (en incise) ou une URL (imprimée) vers la page spécifique du contenu utilisé, et toute modification que vous avez apportée brièvement décrite.
 Par exemple, pour fournir une attribution pour cette page, vous pouvez écrire&nbsp;:
 
 > [Attributions et licence de copyright](/fr/docs/MDN/Writing_guidelines/Attrib_copyright_license) par les [Contributrices et contributeurs de Mozilla](/fr/docs/MDN/Community/Roles_teams#contributeur) est sous licence [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/).
 
-Vous pouvez également faire pointer «&nbsp;les contributrices et contributeurs de Mozilla&nbsp;» vers un fichier `contributors.txt` lié dans le pied de page de la page de référence pour obtenir la liste des auteur·ice·s, si cela est pertinent.
+Vous pouvez également faire pointer «&nbsp;les contributrices et contributeurs de Mozilla&nbsp;» vers un fichier `contributors.txt` lié dans le pied de page de la page de référence pour obtenir la liste des auteur·ice·s, si c'est pertinent.
 Voir [Pratiques recommandées en matière d'attribution <sup>(angl.)</sup>](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution) pour de plus amples explications.
 
 ### Échantillons de code
@@ -49,13 +49,15 @@ Si vous avez des questions ou des inquiétudes à propos de tout ce qui est disc
 
 Les droits sur les logos, les marques commerciales et les marques de service de la Fondation Mozilla, ainsi que l'aspect et l'ergonomie de ce site web, ne font pas l'objet d'une licence Creative Commons et, dans la mesure où il s'agit d'œuvres d'auteur·ice·s (comme les logos et la conception graphique), ils ne sont pas inclus dans l'œuvre qui fait l'objet d'une licence selon ces termes. Si vous utilisez le texte des documents et souhaitez également bénéficier de l'un de ces droits, ou si vous avez d'autres questions concernant le respect de nos conditions de licence pour cette collection, vous devez contacter la Fondation Mozilla ici&nbsp;: [licensing@mozilla.org](mailto:licensing@mozilla.org).
 
-## Utiliser du contenu provenant d'un autre site sur MDN Web Docs
+## Utiliser du contenu provenant d'ailleurs
 
-En général, nous n'approuvons pas le fait de copier le contenu d'autres sources et de le mettre sur MDN.
-MDN doit, dans la mesure du possible, être constitué de contenu original.
+Nous n'approuvons pas le fait de copier le contenu d'autres sources et de le mettre sur MDN.
+MDN doit, dans la mesure du possible, être constitué de contenu original, sauf dans les cas décrits dans [Réutiliser ou republier votre contenu sur la MDN](#réutiliser_ou_republier_votre_contenu_sur_le_mdn).
+Faites attention aux outils qui peuvent reproduire du matériel provenant d'autres sources sans attribution.
+Vous devez avoir le droit de concéder sous licence tout ce que vous contribuez selon les termes décrits sur cette page.
 Si nous recevons une demande de modification et découvrons qu'elle contient du contenu plagié, nous la fermons et demandons à l'autrice ou l'auteur·ice de la demande d'envoyer à nouveau la modification en réécrivant le contenu avec ses propres termes.
 
-### Si vous souhaitez réutiliser ou republier du contenu
+### Réutiliser ou republier votre contenu sur le MDN
 
 > [!NOTE]
 > À moins qu'il n'y ait une bonne raison de republier le contenu, nous dirons probablement «&nbsp;non&nbsp;».
@@ -79,4 +81,4 @@ Si quelqu'un souhaite faire don à MDN d'un article qu'il a précédemment publi
 
 ## Lien vers les articles de MDN Web Docs
 
-Nous recevons régulièrement des questions sur la manière de créer des liens vers les documents web de MDN Web Docs et pour savoir si cela est autorisé ou non. La réponse est simple&nbsp;: **oui, vous pouvez créer un lien vers MDN Web Docs&nbsp;!** Non seulement le lien hypertexte est l'essence même du Web, mais c'est aussi un moyen de diriger vos utilisateur·ice·s vers des ressources précieuses, mais aussi témoigner de votre confiance envers le travail de notre communauté.
+Nous recevons régulièrement des questions sur la manière de créer des liens vers les documents web de MDN Web Docs et pour savoir si c'est autorisé ou non. La réponse est simple&nbsp;: **oui, vous pouvez créer un lien vers MDN Web Docs&nbsp;!** Non seulement le lien hypertexte est l'essence même du Web, mais c'est aussi un moyen de diriger vos utilisateur·ice·s vers des ressources précieuses, mais aussi témoigner de votre confiance envers le travail de notre communauté.

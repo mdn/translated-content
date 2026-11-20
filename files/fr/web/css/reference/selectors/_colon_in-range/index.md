@@ -3,7 +3,7 @@ title: Pseudo-classe CSS `:in-range`
 short-title: :in-range
 slug: Web/CSS/Reference/Selectors/:in-range
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: bf3b0f3217d5d5a6957e9e17f863ece19d939d20
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:in-range`** cible un élément HTML {{HTMLElement("input")}} lorsque sa valeur courante est comprise dans l'intervalle défini par les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max).
@@ -22,40 +22,34 @@ input:in-range {
 ```
 
 ```html interactive-example
-<form>
-  <label for="amount"
-    >Combien de billets&nbsp;? (Vous pouvez acheter 2 à 6 billets)</label
-  >
-  <input id="amount" name="amount" type="number" min="2" max="6" value="4" />
+<label for="amount"
+  >Combien de billets ? (Vous pouvez acheter 2 à 6 billets)</label
+>
+<input id="amount" name="amount" type="number" min="2" max="6" value="4" />
 
-  <label for="dep"
-    >Date de départ&nbsp;: (Toute l'année 2022 est acceptée)</label
-  >
-  <input
-    id="dep"
-    name="dep"
-    type="date"
-    min="2022-01-01"
-    max="2022-12-31"
-    value="2025-05-05" />
+<label for="dep">Date de départ : (Toute l'année 2022 est acceptée)</label>
+<input
+  id="dep"
+  name="dep"
+  type="date"
+  min="2022-01-01"
+  max="2022-12-31"
+  value="2025-05-05" />
 
-  <label for="ret"
-    >Date de retour&nbsp;: (Toute l'année 2022 est acceptée)</label
-  >
-  <input id="ret" name="ret" type="date" min="2022-01-01" max="2022-12-31" />
-</form>
+<label for="ret">Date de retour : (Toute l'année 2022 est acceptée)</label>
+<input id="ret" name="ret" type="date" min="2022-01-01" max="2022-12-31" />
 ```
 
 Cette pseudo-classe s'avère utile lorsqu'on souhaite fournir une indication visuelle quand la valeur est en dehors de la fourchette autorisée.
 
 > [!NOTE]
-> Cette pseudo-classe ne s'applique qu'aux éléments qui ont des limites de valeurs (autrement dit la valeur doit être comprise dans un intervalle donné). Sans ces limitations, l'élément ne pourra pas être vu comme «&nbsp;dans l'intervalle&nbsp;» ou «&nbsp;en dehors de l'intervalle&nbsp;».
+> Cette pseudo-classe ne s'applique qu'aux éléments qui ont des limites de valeurs (autrement dit la valeur doit être comprise dans un intervalle donné). Sans ces limitations, l'élément ne peut pas être vu comme «&nbsp;dans l'intervalle&nbsp;» ou «&nbsp;en dehors de l'intervalle&nbsp;».
 
 ## Syntaxe
 
 ```css
 :in-range {
-  /* ... */
+  /* … */
 }
 ```
 
@@ -64,32 +58,25 @@ Cette pseudo-classe s'avère utile lorsqu'on souhaite fournir une indication vis
 ### HTML
 
 ```html
-<form action="" id="form1">
-  <ul>
-    Les valeurs entre 1 et 10 sont valides.
-    <li>
-      <input
-        id="valeur1"
-        name="valeur1"
-        type="number"
-        placeholder="de 1 à 10"
-        min="1"
-        max="10"
-        value="12" />
-      <label for="valeur1">Votre valeur est </label>
-    </li>
-  </ul>
-</form>
+<p>
+  <label for="value1"
+    >Combien d'orteils ? Les valeurs entre 1 et 10 sont valides.</label
+  >
+  <input
+    id="valeur1"
+    name="valeur1"
+    type="number"
+    placeholder="de 1 à 10"
+    min="1"
+    max="10"
+    value="12" />
+  <span></span>
+</p>
 ```
 
 ### CSS
 
 ```css
-li {
-  list-style: none;
-  margin-bottom: 1em;
-}
-
 input {
   border: 1px solid black;
 }
@@ -103,12 +90,12 @@ input:out-of-range {
   border: 2px solid red;
 }
 
-input:in-range + label::after {
-  content: "valide.";
+input:in-range + span::after {
+  content: "Votre valeur est correcte.";
 }
 
-input:out-of-range + label::after {
-  content: "hors de portée !";
+input:out-of-range + span::after {
+  content: "Votre valeur est hors de portée !";
 }
 ```
 
@@ -117,7 +104,7 @@ input:out-of-range + label::after {
 {{EmbedLiveSample("Exemples", 600, 140)}}
 
 > [!NOTE]
-> Un élément `<input>` vide n'est pas considéré comme en dehors de la plage et ne sera pas sélectionné à l'aide du sélecteur de pseudo-classe `:out-of-range`. La pseudo-classe {{CSSxRef(":blank")}} existe pour sélectionner les entrées vides, bien qu'au moment de la rédaction de cet article, elle soit encore expérimentale et peu prise en charge. Vous pouvez également utiliser l'attribut `required` et la pseudo-classe {{CSSxRef(":invalid")}} pour fournir une logique et un style plus généraux afin de rendre les champs obligatoires (`:invalid` mettra en forme les champs vides _et_ hors limites).
+> Un élément `<input>` vide n'est pas considéré comme en dehors de la plage et n'est pas sélectionné à l'aide du sélecteur de pseudo-classe `:out-of-range`. La pseudo-classe {{CSSxRef(":blank")}} existe pour sélectionner les entrées vides, bien qu'au moment de la rédaction de cet article, elle soit encore expérimentale et peu prise en charge. Vous pouvez également utiliser l'attribut `required` et la pseudo-classe {{CSSxRef(":invalid")}} pour fournir une logique et un style plus généraux afin de rendre les champs obligatoires (`:invalid` met en forme les champs vides _et_ hors limites).
 
 ## Spécifications
 

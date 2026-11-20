@@ -3,7 +3,7 @@ title: "RegExp : méthode [Symbol.replace]()"
 short-title: "[Symbol.replace]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace
 l10n:
-  sourceCommit: 5b3aa7e4e8cd54f1b662534d8c97074e522b7fc4
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`[Symbol.replace]()`** des instances de {{JSxRef("RegExp")}} définit comment [`String.prototype.replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace) et [`String.prototype.replaceAll()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) doivent se comporter lorsque l'expression rationnelle est passée en tant que motif.
@@ -138,7 +138,7 @@ console.log(nouvelleChaine); // ###34567
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `RegExp.prototype[Symbol.replace]` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `RegExp.prototype[Symbol.replace]` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
 - La méthode {{JSxRef("String.prototype.replace()")}}
 - La méthode {{JSxRef("String.prototype.replaceAll()")}}
 - La méthode [`RegExp.prototype[Symbol.match]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)

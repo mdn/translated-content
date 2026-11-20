@@ -17,7 +17,7 @@ new File(bits, name, options);
 ### 매개변수
 
 - `bits`
-  - : {{domxref("File")}} 객체 내에 저장할 데이터를 나타내는 {{jsxref("Array")}}입니다. {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, 문자열을 요소로 제공할 수 있습니다. `USVString` 객체는 UTF-8로 인코딩해 사용합니다.
+  - : {{domxref("File")}} 객체 내에 저장할 데이터를 나타내는 {{jsxref("Array")}}입니다. {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{domxref("Blob")}}, 문자열을 요소로 제공할 수 있습니다. `USVString` 객체는 UTF-8로 인코딩해 사용합니다.
 - `name`
   - : 파일의 이름이나 경로를 나타내는 문자열입니다.
 - `options` {{optional_inline}}

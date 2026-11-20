@@ -3,7 +3,7 @@ title: "Promise : méthode statique allSettledKeyed()"
 short-title: allSettledKeyed()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettledKeyed
 l10n:
-  sourceCommit: f8759faac983abbcd8276fd45ae881bb39efdf7a
+  sourceCommit: 9fac65196ac2b9a26afabbcb7f14fd58621916ae
 ---
 
 {{SeeCompatTable}}
@@ -44,7 +44,7 @@ La méthode `Promise.allSettledKeyed()` est l'une des méthodes de [concurrence 
 
 ## Exemples
 
-### Utiliser `Promise.allSettledKeyed()`
+### Utiliser la méthode `Promise.allSettledKeyed()`
 
 La méthode `Promise.allSettledKeyed()` prend un objet et traite toutes ses propres propriétés énumérables.
 
@@ -53,7 +53,7 @@ function repousse(value, timeout) {
   return new Promise((res) => setTimeout(() => res(value), timeout));
 }
 
-const sym = Symbol();
+const sym = Symbol("exemple");
 
 const promesses = {
   a: repousse("a", 500),
@@ -71,9 +71,7 @@ console.log(resultat);
 // {
 //   a: { status: "fulfilled", value: "a" },
 //   [sym]: { status: "fulfilled", value: "symbol" },
-//   nested: {
-//     b: <Promise>,
-//   },
+//   nested: { status: "fulfilled", value: { b: <Promise> } },
 // }
 ```
 
@@ -89,8 +87,8 @@ Pour plus d'exemples liés au comportement de concurrence commun à `Promise.all
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Promise.allSettledKeyed` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/proposals/await-dictionary)
-- [La prothèse d'émulation es-shims de `Promise.allSettledKeyed` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.allsettledkeyed)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Promise.allSettledKeyed` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/proposals/await-dictionary)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Promise.allSettledKeyed` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.allsettledkeyed)
 - L'objet natif {{JSxRef("Promise")}}
 - La méthode statique {{JSxRef("Promise.allKeyed()")}}
 - La méthode statique {{JSxRef("Promise.allSettled()")}}

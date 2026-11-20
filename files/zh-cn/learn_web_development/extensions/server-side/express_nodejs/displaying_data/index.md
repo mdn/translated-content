@@ -49,16 +49,15 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_dat
 3. [主页](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page)
 4. [书本清单页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
 5. [书本实例清单页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
-6. [日期格式化 - 使用 moment](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
-7. [作者清单页面、分类清单页面挑战](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
-8. [分类详情页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
-9. [书本详情页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
-10. [作者详情页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
-11. [书本实例详情页面挑战](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
+6. [作者清单页面、分类清单页面挑战](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
+7. [分类详情页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
+8. [书本详情页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
+9. [作者详情页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
+10. [书本实例详情页面挑战](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
 
 ## 总结
 
-我们现在已经为我们的网站，创建了所有 "只读" 的页面：一个主页，可以显示每一个模组的实例数量，书本的列表与详细信息页面，书本的实例、作者、分类。沿着目前的学习路径，我们学到了许多基本知识，有控制器、在异步操作时管理流控制、使用 Pug 创建视图模板、使用模型查询数据库、如何从视图传送信息到模板、如何创建并扩展模板。而完成挑战的人，还会学到如何用 moment 处理日期。
+我们现在已经为我们的网站，创建了所有 "只读" 的页面：一个主页，可以显示每一个模组的实例数量，书本的列表与详细信息页面，书本的实例、作者、分类。沿着目前的学习路径，我们学到了许多基本知识，有控制器、在异步操作时管理流控制、使用 Pug 创建视图模板、使用模型查询数据库、如何从视图传送信息到模板、如何创建并扩展模板。
 
 在下一篇文章，我们将依据目前为止学到的知识，创建 HTML 表单以及表单管理代码，开始修改储存在网站中的资料。
 
@@ -67,6 +66,5 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_dat
 - [Async](http://caolan.github.io/async/docs.html) 模组 (Async 模组官方文件)
 - [在 Express 中使用模板引擎](https://expressjs.com/en/guide/using-template-engines.html) (Express 官方文件)
 - [Pug](https://pugjs.org/api/getting-started.html) (Pug 官方文件)
-- [Moment](http://momentjs.com/docs/) (Moment 官方文件)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

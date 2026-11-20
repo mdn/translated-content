@@ -3,7 +3,7 @@ title: bookmarks.create()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
 ---
 
-Crée un signet ou un dossier en tant qu'enfant de {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} avec `parentId` spécifié. Pour créer un dossier, omettez ou laissez vide le paramètre {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}}.
+Crée un signet ou un dossier en tant qu'enfant de {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} avec `parentId` spécifié. Pour créer un dossier, omettez ou laissez vide le paramètre {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "#url")}}.
 
 > [!WARNING]
 > Si votre extension tente de créer un nouveau signet dans le nœud racine de l'arborescence du signet, une erreur est générée: "_La racine du signet ne peut pas être modifiée_" et le signet ne sera pas créé.

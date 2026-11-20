@@ -2,7 +2,7 @@
 title: Float64Array
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Le tableau typé **`Float64Array`** représente un tableau de nombres à virgule flottante sur 64 bits dans l'ordre des octets de la plateforme. Si vous avez besoin de contrôler l'ordre des octets, utilisez plutôt {{JSxRef("DataView")}}. Le contenu est initialisé à `0` sauf si des données d'initialisation sont explicitement fournies. Une fois créé, vous pouvez accéder aux éléments du tableau en utilisant les méthodes de l'objet ou la syntaxe d'index de tableau standard (c'est-à-dire la notation entre crochets).
@@ -84,7 +84,7 @@ console.log(float64DepuisUnIterable);
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Float64Array` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Float64Array` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - Le guide [des tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - L'objet natif {{JSxRef("TypedArray")}}
 - L'objet natif {{JSxRef("ArrayBuffer")}}

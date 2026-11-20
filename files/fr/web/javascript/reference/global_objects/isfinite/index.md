@@ -2,7 +2,7 @@
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 52aca3c51ce0ff04036a13d4db471c9844d07b00
 ---
 
 La fonction **`isFinite()`** détermine si une valeur est finie, en convertissant d'abord la valeur en nombre si nécessaire. Un nombre fini est un nombre qui n'est pas {{JSxRef("NaN")}} ou ±{{JSxRef("Infinity")}}. Comme la contrainte à l'intérieur de la fonction `isFinite()` peut être [surprenante](/fr/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description), vous pouvez préférer utiliser {{JSxRef("Number.isFinite()")}}.
@@ -37,7 +37,7 @@ isFinite(value)
 
 ### Valeur de retour
 
-`false` si la valeur donnée est {{JSxRef("NaN")}}, {{JSxRef("Infinity")}} ou `-Infinity` après avoir été [convertie en nombre](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre)&nbsp;; sinon, `true`.
+`true`, sauf lorsque la valeur donnée est soit {{JSxRef("Infinity")}}, `-Infinity`, ou {{JSxRef("NaN")}} après avoir été [convertie en un nombre](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_nombre).
 
 ## Description
 
@@ -60,9 +60,11 @@ isFinite(0); // true
 isFinite(2e64); // true
 isFinite(910); // true
 
-// Aurait été false avec la méthode plus robuste Number.isFinite() :
-isFinite(null); // true
-isFinite("0"); // true
+// Ce qui suit est faux avec la méthode plus robuste `Number.isFinite()` :
+
+isFinite(null); // true, parce que null est converti en 0
+isFinite(""); // true, parce que la chaîne de caractères vide est convertie en 0
+isFinite("123"); // true, parce que la chaîne de caractères peut être analysée comme un nombre
 ```
 
 ## Spécifications

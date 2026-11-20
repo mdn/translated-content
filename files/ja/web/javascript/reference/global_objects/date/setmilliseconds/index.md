@@ -1,13 +1,12 @@
 ---
 title: Date.prototype.setMilliseconds()
+short-title: setMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: b3840f6234d24ade72a43171fd6489dd533aaf15
 ---
 
-{{JSRef}}
-
-**`setMilliseconds()`** は {{jsxref("Date")}} インスタンスのメソッドで、地方時に基づき、指定された日時の「ミリ秒」を設定します。
+**`setMilliseconds()`** は {{jsxref("Date")}} インスタンスのメソッドで、現地時間に基づき、指定された日時の「ミリ秒」を設定します。
 
 {{InteractiveExample("JavaScript デモ: Date.prototype.setMilliseconds()")}}
 
@@ -41,6 +40,10 @@ setMilliseconds(millisecondsValue)
 ## 解説
 
 指定した値が期待される日付の範囲外の場合、それに応じて {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、1005 を指定した場合、秒の数値が 1 加算され、ミリ秒に 5 が使用されます。
+
+`setMilliseconds()` は現地時間を基に動作するため、夏時間 (DST) の境界を越えると、予想外の経過時間が算出されることがあります。例えば、日付の設定によって「春の移行期間（1 時間遅れる）」を跨ぐ場合、新しい日付と古い日付のタイムスタンプの差は、名目上の日数の差に24時間を掛けた値よりも 1 時間少なくなります。逆に、夏時間終了（1 時間進む）の移行期間を越えた場合は、1 時間分多く加算されます。日付を一定の時間分調整する必要がある場合は、{{jsxref("Date/setUTCMilliseconds", "setUTCMilliseconds()")}} または {{jsxref("Date/setTime", "setTime()")}} を考えてみることを検討してください。
+
+新しい現地時刻がオフセットの移行期間内に該当する場合、正確な時刻は `Temporal` の [`disambiguation: "compatible"`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#現地時間から協定世界時_utc_への変換に伴う曖昧さや不一致) オプションと同じ動作を使用して算出されます。つまり、現地時刻が 2 つの瞬間に該当する場合は、より早い方が選択されます。現地時刻が存在しない場合（ギャップがある場合）、ギャップの期間分だけ先へ進みます。
 
 ## 例
 

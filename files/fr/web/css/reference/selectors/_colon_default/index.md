@@ -3,18 +3,21 @@ title: Pseudo-classe CSS `:default`
 short-title: :default
 slug: Web/CSS/Reference/Selectors/:default
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: bf3b0f3217d5d5a6957e9e17f863ece19d939d20
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:default`** représente un élément de l'interface utilisateur qui est l'élément par défaut parmi d'autres éléments semblables (par exemple le bouton par défaut d'un groupe de boutons).
 
-{{InteractiveExample("Démonstration CSS&nbsp;: :default", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: :default", "tabbed-standard")}}
 
 ```css interactive-example
-label,
-input[type="submit"] {
+label {
   display: block;
-  margin-top: 1em;
+  margin-top: 0.5em;
+}
+
+fieldset {
+  margin-top: 0.5em;
 }
 
 input:default {
@@ -24,26 +27,38 @@ input:default {
 ```
 
 ```html interactive-example
-<form>
-  <p>Comment avez-vous entendu parler de nous ?</p>
-  <label
-    ><input name="origin" type="radio" value="google" checked /> Google</label
-  >
-  <label><input name="origin" type="radio" value="facebook" /> Facebook</label>
-  <p>Veuillez accepter nos conditions :</p>
+<label for="name">Nom (requis)&nbsp;:</label>
+<input id="name" name="name" type="text" required />
 
-  <label
-    ><input name="newsletter" type="checkbox" checked /> Je souhaite m'abonner à
-    une newsletter personnalisée.</label
-  >
+<label for="birth">Date de naissance&nbsp;:</label>
+<input id="birth" name="birth" type="date" />
 
-  <label
-    ><input name="privacy" type="checkbox" /> J'ai lu et j'accepte la Politique
-    de confidentialité.</label
-  >
+<label for="origin"
+  >Comment avez-vous entendu parler de nous&nbsp;? (requis)</label
+>
+<select id="origin" name="origin" required>
+  <option value="">Choisissez une option</option>
+  <option value="google">Google</option>
+  <option value="facebook">Facebook</option>
+  <option value="advertisement">Publicité</option>
+</select>
 
-  <input type="submit" value="Envoyer le formulaire" />
-</form>
+<fieldset>
+  <legend>Méthode de contact privilégiée&nbsp;:</legend>
+  <label>
+    <input name="contact" type="radio" value="email" checked /> Courriel
+  </label>
+  <label><input name="contact" type="radio" value="phone" /> Téléphone</label>
+</fieldset>
+
+<label>
+  <input name="newsletter" type="checkbox" checked /> Je souhaite m'abonner à
+  une lettre d'information personnalisée.
+</label>
+<label>
+  <input name="privacy" type="checkbox" required /> J'ai lu et j'accepte la
+  Politique de confidentialité (obligatoire).
+</label>
 ```
 
 Ce sélecteur est définit par WHATWG HTML dans [le paragraphe 4.16.3 <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default) et peut être utilisé par les éléments {{HTMLElement("button")}}, [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox), [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio) et {{HTMLElement("option")}}&nbsp;:

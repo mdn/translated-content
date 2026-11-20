@@ -3,7 +3,7 @@ title: Array.prototype.toString()
 short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
 **`toString()`** は {{jsxref("Array")}} インスタンスのメソッドで、指定された配列とその要素を表す文字列を返します。

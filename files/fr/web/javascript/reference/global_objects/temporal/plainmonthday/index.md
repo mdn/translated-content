@@ -2,7 +2,7 @@
 title: Temporal.PlainMonthDay
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay
 l10n:
-  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
+  sourceCommit: 76c2e04d720aa8260ba7d75788ed96776aac35c6
 ---
 
 L'objet **`Temporal.PlainMonthDay`** représente le mois et le jour d'une date calendaire, sans année ni fuseau horaire&nbsp;; par exemple, un évènement sur un calendrier qui se répète chaque année et couvre toute la journée. Il est fondamentalement représenté comme une date au format ISO 8601, avec des champs année, mois et jour, et un système de calendrier associé. L'année est utilisée pour lever l'ambiguïté du mois et du jour dans les systèmes calendaires non ISO.
@@ -26,15 +26,15 @@ YYYY-MM-DD [u-ca=calendar_id]
 - `DD`
   - : Un nombre à deux chiffres de `01` à `31`. Les composants `YYYY`, `MM` et `DD` peuvent être séparés par `-` ou non.
 - `[u-ca=calendar_id]` {{Optional_Inline}}
-  - : Remplacez `calendar_id` par le calendrier à utiliser. Voir [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_calendriers_pris_en_charge) pour une liste des types de calendriers couramment pris en charge. Par défaut `[u-ca=iso8601]`. Peut comporter un _drapeau critique_ en préfixant la clé par `!`&nbsp;: par exemple, `[!u-ca=iso8601]`. Ce drapeau indique généralement aux autres systèmes qu'il ne peut pas être ignoré s'ils ne le prennent pas en charge. L'analyseur `Temporal` lèvera une erreur si les annotations contiennent deux annotations de calendrier ou plus et que l'une d'elles est critique. Notez que `YYYY-MM-DD` est toujours interprété comme une date au format ISO 8601 puis converti vers le calendrier défini.
+  - : Remplacez `calendar_id` par le calendrier à utiliser. Voir [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_calendriers_pris_en_charge) pour une liste des types de calendriers couramment pris en charge. Par défaut `[u-ca=iso8601]`. Peut comporter un _drapeau critique_ en préfixant la clé par `!`&nbsp;: par exemple, `[!u-ca=iso8601]`. Ce drapeau indique généralement aux autres systèmes qu'il ne peut pas être ignoré s'ils ne le prennent pas en charge. L'analyseur `Temporal` lève une erreur si les annotations contiennent deux annotations de calendrier ou plus et que l'une d'elles est critique. Notez que `YYYY-MM-DD` est toujours interprété comme une date au format ISO 8601 puis converti vers le calendrier défini.
 
-En entrée, vous pouvez optionnellement inclure l'heure, le décalage et l'identifiant du fuseau horaire, dans le même format que [`PlainDateTime`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#format_rfc_9557), mais ils seront ignorés. D'autres annotations au format `[clé=valeur]` sont également ignorées et ne doivent pas comporter le drapeau critique.
+En entrée, vous pouvez optionnellement inclure l'heure, le décalage et l'identifiant du fuseau horaire, dans le même format que [`PlainDateTime`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#format_rfc_9557), mais ils sont ignorés. D'autres annotations au format `[clé=valeur]` sont également ignorées et ne doivent pas comporter le drapeau critique.
 
 Lors de la sérialisation, vous pouvez configurer l'affichage de l'identifiant de calendrier et l'ajout éventuel d'un drapeau critique.
 
 ## Constructeur
 
-- {{JSxRef("Temporal/PlainMonthDay/PlainMonthDay", "Temporal.PlainMonthDay()")}} {{Experimental_Inline}}
+- {{JSxRef("Temporal/PlainMonthDay/PlainMonthDay", "Temporal.PlainMonthDay()")}}
   - : Crée un nouvel objet `Temporal.PlainMonthDay` en fournissant directement les données sous-jacentes.
 
 ## Méthodes statiques

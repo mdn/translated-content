@@ -2,7 +2,7 @@
 title: HTMLLinkElement
 slug: Web/API/HTMLLinkElement
 l10n:
-  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
+  sourceCommit: e1250f3487ad2d64e06cca58660ddc95b9a2d65c
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -16,12 +16,14 @@ l10n:
 _親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
 
 - {{domxref("HTMLLinkElement.as")}}
-  - : 文字列で、この HTML リンクによって読み込まれるコンテンツの種類を表します。
+  - : 文字列で、この HTML リンクが [`rel="preload"`](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) または [`rel="modulepreload"`](/ja/docs/Web/HTML/Reference/Attributes/rel/modulepreload) の場合に読み込まれるコンテンツの種類を表します。
+- {{domxref("HTMLLinkElement.blocking")}}
+  - : 外部リソースの取得中に特定の操作をブロックする必要があることを示す文字列です。{{HTMLElement("link")}} 要素の `blocking` 属性を反映します。
 - {{domxref("HTMLLinkElement.crossOrigin")}}
   - : 文字列で、このリンク要素の CORS 設定に対応します。詳細については、 [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を参照してください。
 - {{domxref("HTMLLinkElement.disabled")}}
   - : 論理値で、リンクが無効であるかどうかを表します。現在、スタイルシートリンクでのみ使用されています。
-- {{domxref("HTMLLinkElement.fetchPriority")}} {{experimental_inline}}
+- {{domxref("HTMLLinkElement.fetchPriority")}}
   - : オプションの文字列で、ブラウザーが先読みの取得を他の同じ種類のリソースと比較してどのように優先させるべきかというヒントを表します。この値を指定した場合、許可された値のいずれかでなければなりません。高い優先度で取得する場合は `high`、低い優先度で取得する場合は `low`、優先度を指定しない場合は `auto` （既定値）となります。
 - {{domxref("HTMLLinkElement.href")}}
   - : 文字列で、対象リソースの URI を表します。
@@ -32,19 +34,19 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 - {{domxref("HTMLLinkElement.imageSrcset")}}
   - : 文字列で、 HTML の [`imagesrcset`](/ja/docs/Web/HTML/Reference/Elements/link#imagesrcset) 属性を反映します。画像候補文字列のコンマ区切りリストです。
 - {{domxref("HTMLLinkElement.integrity")}}
-  - : 文字列で、ブラウザーが取得されたリソースが予期しない操作なしに配信されたことを確認するために使用できるインラインメタデータを含みます。 [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素の `integrity` 属性を反映します。
+  - : 文字列で、取得したリソースが予期しない改ざんを受けずに配信されたことをブラウザーが検証するために使用できるインラインメタデータを含みます。{{HTMLElement("link")}} 要素の `integrity` 属性を反映します。
 - {{domxref("HTMLLinkElement.media")}}
-  - : 文字列で、リソースに適用される 1 つ以上のメディア形式のリストを表します。
+  - : 文字列で、リソースに適用される 1 つ以上のメディア形式のリストを表します。{{HTMLElement("link")}} 要素の `media` 属性を反映します。
 - {{domxref("HTMLLinkElement.referrerPolicy")}}
   - : 文字列で、使用するリファラーを示す HTML の [`referrerpolicy`](/ja/docs/Web/HTML/Reference/Elements/link#referrerpolicy) 属性を反映します。
 - {{domxref("HTMLLinkElement.rel")}}
   - : 文字列で、リンク元文書からリンク先リソースに対する関連性を表します。
 - {{domxref("HTMLLinkElement.relList")}} {{ReadOnlyInline}}
   - : {{domxref("DOMTokenList")}} で、 HTML の [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性をトークンのリストとして反映します。
-- {{domxref("HTMLLinkElement.sheet")}} {{ReadOnlyInline}}
-  - : 指定された要素に関連付けられた {{domxref("StyleSheet")}} オブジェクトを返します。存在しない場合は `null` を返します。
 - {{domxref("HTMLLinkElement.sizes")}} {{ReadOnlyInline}}
   - : {{domxref("DOMTokenList")}} で、トークンのリストとして HTML の [`sizes`](/ja/docs/Web/HTML/Reference/Elements/link#sizes) 属性を反映します。
+- {{domxref("HTMLLinkElement.sheet")}} {{ReadOnlyInline}}
+  - : 指定された要素に関連付けられた {{domxref("CSSStyleSheet")}} オブジェクトを返します。存在しない場合は `null` を返します。
 - {{domxref("HTMLLinkElement.type")}}
   - : 文字列で、リンク先リソースの MIME タイプを表します。
 

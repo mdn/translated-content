@@ -3,10 +3,10 @@ title: "AsyncDisposableStack : méthode move()"
 short-title: move()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/move
 l10n:
-  sourceCommit: 1474534461893381d54c502e655f334b5568e597
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-La méthode **`move()`** des instances de {{JSxRef("AsyncDisposableStack")}} crée une nouvelle instance d'`AsyncDisposableStack` contenant les mêmes libérateurs que cette pile, puis marque cette pile comme libérée sans appeler les libérateurs.
+La méthode **`move()`** des instances de {{JSxRef("AsyncDisposableStack")}} crée une nouvelle instance de `AsyncDisposableStack` contenant les mêmes libérateurs que cette pile, puis marque cette pile comme libérée sans appeler les libérateurs.
 
 ## Syntaxe
 
@@ -110,6 +110,7 @@ class HébergeurDePlugin {
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `AsyncDisposableStack.prototype.move` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources en JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
 - L'objet natif {{JSxRef("AsyncDisposableStack")}}
 - La méthode {{JSxRef("AsyncDisposableStack.prototype.disposeAsync()")}}

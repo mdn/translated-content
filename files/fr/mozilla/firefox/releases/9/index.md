@@ -3,7 +3,7 @@ title: Firefox 9 note de version pour les développeurs
 short-title: Firefox 9
 slug: Mozilla/Firefox/Releases/9
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: c61fd478259d34aa4fd6ac4cbf9b7d64a78aff43
 ---
 
 Firefox 9, basé sur Gecko 9.0, est sorti le 20 décembre 2011 sur Windows. La version 9.0.1, qui corrige un problème de plantage découvert au dernier moment, est sortie le 21 décembre 2011, sur Mac et Linux.

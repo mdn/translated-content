@@ -3,7 +3,7 @@ title: "Array : méthode copyWithin()"
 short-title: copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`copyWithin()`** des instances de {{JSxRef("Array")}} copie superficiellement une partie de ce tableau à un autre emplacement dans le même tableau et retourne ce tableau sans en modifier la longueur.
@@ -32,18 +32,18 @@ copyWithin(target, start, end)
 ### Paramètres
 
 - `target`
-  - : L'indice (à partir de zéro) auquel copier la séquence, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière). Cela correspond à l'emplacement où l'élément à l'indice `start` sera copié, et tous les éléments compris entre `start` et `end` seront copiés aux indices suivants.
+  - : L'indice (à partir de zéro) auquel copier la séquence, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier). Cela correspond à l'emplacement où l'élément à l'indice `start` sera copié, et tous les éléments compris entre `start` et `end` seront copiés aux indices suivants.
     - Un indice négatif compte à rebours depuis la fin du tableau — si `-array.length <= target < 0`, on utilise `target + array.length`.
     - Si `target < -array.length`, on utilise `0`.
     - Si `target >= array.length`, rien n'est copié.
     - Si `target` est positionné après `start` après normalisation, la copie ne se fait que jusqu'à la fin de `array.length` (autrement dit, `copyWithin()` n'étend jamais le tableau).
 - `start`
-  - : L'indice (à partir de zéro) à partir duquel commencer à copier les éléments, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière).
+  - : L'indice (à partir de zéro) à partir duquel commencer à copier les éléments, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier).
     - Un indice négatif compte à rebours depuis la fin du tableau — si `-array.length <= start < 0`, on utilise `start + array.length`.
     - Si `start < -array.length`, on utilise `0`.
     - Si `start >= array.length`, rien n'est copié.
 - `end` {{Optional_Inline}}
-  - : L'indice (à partir de zéro) auquel arrêter de copier les éléments, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière). `copyWithin()` copie jusqu'à (mais sans inclure) `end`.
+  - : L'indice (à partir de zéro) auquel arrêter de copier les éléments, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier). `copyWithin()` copie jusqu'à (mais sans inclure) `end`.
     - Un indice négatif compte à rebours depuis la fin du tableau — si `-array.length <= end < 0`, on utilise `end + array.length`.
     - Si `end < -array.length`, on utilise `0`.
     - Si `end >= array.length` ou si `end` est omis ou `undefined`, on utilise `array.length`, ce qui fait que tous les éléments jusqu'à la fin sont copiés.
@@ -119,8 +119,8 @@ console.log(Array.prototype.copyWithin.call(objetSimilaireTableau, 3, 1));
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.copyWithin` dans `core-js`<sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.copyWithin`<sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.copywithin)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("TypedArray.prototype.copyWithin()")}}
-- [Prothèse d'émulation de `Array.prototype.copyWithin` dans `core-js`<sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.copyWithin`<sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.copywithin)

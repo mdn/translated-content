@@ -2,12 +2,12 @@
 title: WebTransport
 slug: Web/API/WebTransport
 l10n:
-  sourceCommit: 581fd2ecfa9a6a5fb6d2b9d0085a089213e168fa
+  sourceCommit: 25abd448c8a088e9f333360dea0adbe8143e6b86
 ---
 
 {{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-**`WebTransport`** は{{domxref("WebTransport API", "ウェブトランスポート API", "", "nocode")}} のインターフェイスで、ユーザーエージェントが HTTP/3 サーバーに接続し、単方向または双方向で信頼性のあるトランスポートおよび信頼性のないトランスポートを開始し、接続が必要できなくなった時点で接続を閉じるための機能を提供します。
+**`WebTransport`** は{{domxref("WebTransport API", "ウェブトランスポート API", "", "nocode")}} のインターフェイスで、ユーザーエージェントが HTTP/3 サーバーに接続し、単方向または双方向で信頼性のあるトランスポートおよび信頼性のないトランスポートを開始し、接続が不要になった時点で接続を閉じるための機能を提供します。
 
 {{InheritanceDiagram}}
 
@@ -16,22 +16,38 @@ l10n:
 - {{domxref("WebTransport.WebTransport", "WebTransport()")}}
   - : 新しい `WebTransport` オブジェクトのインスタンスを作成します。
 
+## 静的プロパティ
+
+- {{domxref("WebTransport.supportsReliableOnly_static", "supportsReliableOnly")}} {{ReadOnlyInline}}
+  - : ブラウザーが信頼性のあるトランスポートのみを介した WebTransport セッションに対応しているかどうかを示す論理値を返します。
+
 ## インスタンスプロパティ
 
+- {{domxref("WebTransport.anticipatedConcurrentIncomingBidirectionalStreams", "anticipatedConcurrentIncomingBidirectionalStreams")}}
+  - : サーバーが同時に開いているとアプリケーションが想定する受信双方向ストリームの数を表します。
+- {{domxref("WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams", "anticipatedConcurrentIncomingUnidirectionalStreams")}}
+  - : サーバーが同時に開いているとアプリケーションが想定する受信単方向ストリームの数を表します。
 - {{domxref("WebTransport.closed", "closed")}} {{ReadOnlyInline}}
-  - : トランスポートが閉じられたときに解決するプロミスを返します。
-- {{domxref("WebTransport.datagrams", "datagrams")}} {{ReadOnlyInline}}
-  - : データグラムの送受信に使用できる {{domxref("WebTransportDatagramDuplexStream")}} インスタンスを返します。
+  - : トランスポートが閉じられたときに解決する {{jsxref("Promise")}} を返します。
 - {{domxref("WebTransport.congestionControl", "congestionControl")}} {{ReadOnlyInline}}
   - : データ送信時に、高スループットと低レイテンシーのどちらを推奨するかを示す文字列を返します。
+- {{domxref("WebTransport.datagrams", "datagrams")}} {{ReadOnlyInline}}
+  - : データグラムの送受信に使用できる {{domxref("WebTransportDatagramDuplexStream")}} インスタンスを返します。
+- {{domxref("WebTransport.draining", "draining")}} {{ReadOnlyInline}}
+  - : トランスポートセッションのドレイン処理が開始されたときに解決する {{jsxref("Promise")}} を返します。
 - {{domxref("WebTransport.incomingBidirectionalStreams", "incomingBidirectionalStreams")}} {{ReadOnlyInline}}
   - : サーバーによって開かれた 1 つ以上の双方向ストリームを表します。{{domxref("WebTransportBidirectionalStream")}} オブジェクトの {{domxref("ReadableStream")}} を返します。それぞれのオブジェクトを使用して、サーバーからデータを読み込んだり、サーバーにデータを書き戻したりすることができます。
 - {{domxref("WebTransport.incomingUnidirectionalStreams", "incomingUnidirectionalStreams")}} {{ReadOnlyInline}}
   - : サーバーによって開かれた 1 つ以上の単方向ストリームを表します。{{domxref("WebTransportReceiveStream")}} オブジェクトの {{domxref("ReadableStream")}} を返します。それぞれのオブジェクトを使用して、サーバーからデータを読み取ることができます。
+- {{domxref("WebTransport.protocol", "protocol")}} {{ReadOnlyInline}}
+  - : サーバーが選択したアプリケーション固有のプロトコルを表す文字列を返します。何も選択されていない場合は `""` を返します。
+    クライアントが希望するプロトコルは、コンストラクターの [`protocols`](/ja/docs/Web/API/WebTransport/WebTransport#protocols) オプションで渡します。
 - {{domxref("WebTransport.ready", "ready")}} {{ReadOnlyInline}}
-  - : トランスポートが使用可能になった時点で解決するプロミスを返します。
+  - : トランスポートが使用可能になった時点で解決する {{jsxref("Promise")}} を返します。
 - {{domxref("WebTransport.reliability", "reliability")}} {{ReadOnlyInline}}
   - : 接続が信頼性のあるトランスポートにのみ対応しているか、それとも信頼性のないトランスポート（UDP など）にも対応しているかを示す文字列を返します。
+- {{domxref("WebTransport.responseHeaders", "responseHeaders")}} {{ReadOnlyInline}}
+  - : セッションを確立するリクエストに対するサーバーのレスポンスに含まれる HTTP ヘッダーを格納する {{domxref("Headers")}} オブジェクトを返します。セッションがまだ確立されていない場合は `null` を返します。
 
 ## インスタンスメソッド
 
@@ -39,16 +55,20 @@ l10n:
   - : 進行中のウェブトランスポートセッションが閉じられます。
 - {{domxref("WebTransport.createBidirectionalStream", "createBidirectionalStream()")}}
   - : サーバーとの間でデータの読み書きを行うために使用できる双方向ストリーム ({{domxref("WebTransportBidirectionalStream")}}) を非同期で開きます。
+- {{domxref("WebTransport.createSendGroup", "createSendGroup()")}}
+  - : ストリームとデータグラムをまとめ、それらの相対的な送信優先度をひとまとまりとして制御できる {{domxref("WebTransportSendGroup")}} を返します。
 - {{domxref("WebTransport.createUnidirectionalStream", "createUnidirectionalStream()")}}
   - : サーバーへの書き込みに使用できる単方向ストリーム ({{domxref("WritableStream")}}) を非同期で開きます。
+- {{domxref("WebTransport.exportKeyingMaterial", "exportKeyingMaterial()")}}
+  - : 接続の基礎となる TLS セッションから導出された鍵素材で履行される {{jsxref("Promise")}} を返します。
 - {{domxref("WebTransport.getStats", "getStats()")}}
-  - : 非同期で、HTTP/3 接続の統計情報を含むオブジェクトで履行される {{jsxref("Promise")}} を返します。
+  - : トランスポートの基礎となる接続の統計情報を含むオブジェクトで履行される {{jsxref("Promise")}} を返します。
 
 ## 例
 
 下記のサンプルコードは、{{domxref("WebTransport.WebTransport", "WebTransport()")}} コンストラクターに URL を渡すことで、HTTP/3 サーバーに接続する方法を示しています。
 なお、プロトコルは HTTPS である必要があり、ポート番号は明示的に指定する必要があります。
-{{domxref("WebTransport.ready")}} プロミスが履行されたら、接続を使用することができ0ます。
+{{domxref("WebTransport.ready")}} プロミスが履行されたら、接続を使用することができます。
 
 ```js
 async function initTransport(url) {

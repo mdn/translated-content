@@ -3,10 +3,12 @@ title: Type CSS `<gradient>`
 short-title: <gradient>
 slug: Web/CSS/Reference/Values/gradient
 l10n:
-  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<gradient>`** permet de représenter une {{CSSxRef("&lt;image&gt;")}} contenant un dégradé entre deux ou plusieurs couleurs. Un dégradé CSS n'est pas une couleur CSS (type {{CSSxRef("&lt;color&gt;")}}) mais une image [sans dimension intrinsèque](/fr/docs/Web/CSS/Reference/Values/image) (elle n'a aucune taille naturelle ou ratio), sa taille réelle sera celle de l'élément auquel elle est appliquée.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<gradient>`** permet de représenter une {{CSSxRef("&lt;image&gt;")}} contenant un dégradé entre deux ou plusieurs couleurs. Un dégradé CSS n'est pas une couleur CSS (type {{CSSxRef("&lt;color&gt;")}}) mais une image [sans dimension intrinsèque](/fr/docs/Web/CSS/Reference/Values/image) (elle n'a aucune taille naturelle ou proportion), sa taille réelle est celle de l'élément auquel elle est appliquée.
+
+Un dégradé CSS est [sans dimension intrinsèque](/fr/docs/Web/CSS/Reference/Values/image#description)&nbsp;: il n'a ni taille naturelle ni préférée, ni proportion privilégiée. Sa taille réelle correspond à celle de l'élément auquel il s'applique.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: &lt;gradient&gt;")}}
 
@@ -41,8 +43,6 @@ background: conic-gradient(#f69d3c, #3f87a6);
   min-height: 100%;
 }
 ```
-
-Un dégradé CSS est [sans dimension intrinsèque](/fr/docs/Web/CSS/Reference/Values/image#description)&nbsp;: il n'a ni taille naturelle ni préférée, ni ratio préféré. Sa taille réelle correspond à celle de l'élément auquel il s'applique.
 
 ## Syntaxe
 
@@ -104,7 +104,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Exemple de dégradé linéaire', 240, 120)}}
+{{EmbedLiveSample("Exemple de dégradé linéaire", 240, 120)}}
 
 ### Exemple de dégradé radial
 
@@ -127,7 +127,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Exemple de dégradé radial', 240, 120)}}
+{{EmbedLiveSample("Exemple de dégradé radial", 240, 120)}}
 
 ### Exemple de dégradé conique
 
@@ -150,7 +150,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Exemple de dégradé conique', 240, 240)}}
+{{EmbedLiveSample("Exemple de dégradé conique", 240, 240)}}
 
 ### Exemples de dégradés répétitifs
 
@@ -205,7 +205,7 @@ span {
 }
 ```
 
-{{EmbedLiveSample('Exemples de dégradés répétitifs', 240, 300)}}
+{{EmbedLiveSample("Exemples de dégradés répétitifs", 240, 300)}}
 
 ## Spécifications
 

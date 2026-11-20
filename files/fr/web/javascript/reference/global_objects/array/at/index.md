@@ -3,7 +3,7 @@ title: "Array : méthode at()"
 short-title: at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`at()`** des instances de {{JSxRef("Array")}} prend une valeur entière et retourne l'élément à cet indice, en acceptant des entiers positifs ou négatifs. Les entiers négatifs comptent à rebours depuis le dernier élément du tableau.
@@ -33,7 +33,7 @@ at(index)
 ### Paramètres
 
 - `index`
-  - : Indice (commençant à zéro) de l'élément du tableau à retourner, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière). Un indice négatif compte à rebours depuis la fin du tableau — si `index < 0`, c'est `index + array.length` qui est utilisé.
+  - : Indice (commençant à zéro) de l'élément du tableau à retourner, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier). Un indice négatif compte à rebours depuis la fin du tableau — si `index < 0`, c'est `index + array.length` qui est utilisé.
 
 ### Valeur de retour
 
@@ -129,6 +129,8 @@ console.log(Array.prototype.at.call(objetSimilaireTableau, 2)); // undefined
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.at` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.at` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.at)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.findIndex()")}}
@@ -136,5 +138,3 @@ console.log(Array.prototype.at.call(objetSimilaireTableau, 2)); // undefined
 - La méthode {{JSxRef("Array.prototype.with()")}}
 - La méthode {{JSxRef("TypedArray.prototype.at()")}}
 - La méthode {{JSxRef("String.prototype.at()")}}
-- [Prothèse d'émulation pour `Array.prototype.at` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#relative-indexing-method)
-- [Prothèse d'émulation es-shims pour `Array.prototype.at` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.at)

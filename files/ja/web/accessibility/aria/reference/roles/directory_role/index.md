@@ -1,8 +1,9 @@
 ---
 title: "ARIA: directory ロール"
+short-title: directory
 slug: Web/Accessibility/ARIA/Reference/Roles/directory_role
 l10n:
-  sourceCommit: 4c0588c10b4266b8a87a1f80d93e8f99eabc1a4e
+  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
 `directory` ロールは、グループのメンバーへの参照リスト（静的な目次など）に使用されていました。
@@ -10,7 +11,7 @@ l10n:
 > [!WARNING]
 > `directory` ロールは ARIA 1.2 で非推奨になりました
 
-## 説明
+## 解説
 
 directory は、リンク付きまたはリンクなしの静的な目次です。これは、入れ子になったリストを含むリストで作成された目次を含みます。ただし、動的な目次には tree ロールが使われる場合があります。
 

@@ -3,7 +3,7 @@ title: Cómo documentar una cabecera HTTP
 short-title: Documentar una cabecera HTTP
 slug: MDN/Writing_guidelines/Howto/Document_an_HTTP_header
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 La [referencia de cabeceras HTTP](/es/docs/Web/HTTP/Reference/Headers) documenta la sección de cabeceras de los mensajes de solicitud y respuesta en el Protocolo de Transferencia de Hipertexto ([HTTP](/es/docs/Web/HTTP)).
@@ -12,7 +12,7 @@ Este artículo explica cómo crear una nueva página de referencia para una cabe
 ## Paso 1 – Determina la cabecera HTTP para documentar
 
 - Hay muchas cabeceras HTTP definidas en varios estándares IETF.
-- IANA mantiene un [registro de campos de cabecera HTTP](https://www.iana.org/assignments/http-fields/http-fields.xhtml) y Wikipedia enumera los [campos de cabecera conocidos](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields), pero no todos son relevantes para los desarrolladores web o forman parte de un estándar oficial.
+- IANA mantiene un [registro de campos de cabecera HTTP](https://www.iana.org/assignments/http-fields) y Wikipedia enumera los [campos de cabecera conocidos](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields), pero no todos son relevantes para los desarrolladores web o forman parte de un estándar oficial.
 - Si hay **enlaces rojos** en la [página de descripción general de referencia de cabeceras HTTP](/es/docs/Web/HTTP/Reference/Headers) actual, estas cabeceras son una buena opción para documentar.
 - En caso de duda, [pregunta al equipo de MDN Web Docs](/es/docs/MDN/Community/Communication_channels) si tiene sentido o no escribir sobre la cabecera que has elegido.
 

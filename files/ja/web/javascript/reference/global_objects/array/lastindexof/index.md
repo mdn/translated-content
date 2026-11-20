@@ -3,7 +3,7 @@ title: Array.prototype.lastIndexOf()
 short-title: lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`lastIndexOf()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列中で与えられた要素が見つかった最後の添字を返します。もし存在しなければ -1 を返します。配列は `fromIndex` から逆向きに検索されます。
@@ -130,7 +130,7 @@ console.log(Array.prototype.lastIndexOf.call(arrayLike, 5));
 
 ## 関連情報
 
-- [`Array.prototype.lastIndexOf` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.lastIndexOf` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.lastIndexOf` のポリフィル](https://www.npmjs.com/package/array.prototype.lastindexof)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}

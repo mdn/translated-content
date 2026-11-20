@@ -3,7 +3,7 @@ title: TypedArray.prototype.findIndex()
 short-title: findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`findIndex()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、指定されたテスト関数を満たす型付き配列の最初の要素のインデックスを返します。テスト関数を満たす要素がない場合、 -1 を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.findIndex()")}} と同じです。
@@ -43,7 +43,7 @@ findIndex(callbackFn, thisArg)
 
 ### 返値
 
-テストを通った配列の要素の位置を返します。それ以外の場合は、 `-1` を返します。
+テストに合格した型付き配列の最初の要素のインデックスを返します。それ以外の場合は、 `-1` を返します。
 
 ## 解説
 
@@ -51,9 +51,9 @@ findIndex(callbackFn, thisArg)
 
 ## 例
 
-### 型付き配列内の最初の素数の位置を検索
+### 型付き配列内の最初の素数のインデックスを探す
 
-次の例では、型付き配列の中で素数の入った最初の素数の要素の位置を返し、素数が見つからなかった場合は `-1` を返します。
+次の例では、型付き配列内で最初に見つかった素数のインデックスを返し、素数が見つからなかった場合は `-1` を返します。
 
 ```js
 function isPrime(n) {
@@ -74,12 +74,12 @@ function isPrime(n) {
 const uint8 = new Uint8Array([4, 6, 8, 12]);
 const uint16 = new Uint16Array([4, 6, 7, 12]);
 
-console.log(uint8.findIndex(isPrime)); // -1, not found
+console.log(uint8.findIndex(isPrime)); // -1、見つからない
 console.log(uint16.findIndex(isPrime)); // 2
 ```
 
 > [!NOTE]
-> この `isPrime()` の実装はデモンストレーション用です。実際のアプリケーションでは、繰り返し計算を避けることができますので、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)のような高度な記憶化アルゴリズムを使用することをお勧めします。
+> この `isPrime()` の実装はデモ用です。実際のアプリケーションでは、計算の繰り返しを避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)のような{{Glossary("Memoization", "メモ化")}}を多用するアルゴリズムを使用するとよいでしょう。
 
 ## 仕様書
 
@@ -91,7 +91,7 @@ console.log(uint16.findIndex(isPrime)); // 2
 
 ## 関連情報
 
-- [`TypedArray.prototype.findIndex` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.findIndex` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.find()")}}

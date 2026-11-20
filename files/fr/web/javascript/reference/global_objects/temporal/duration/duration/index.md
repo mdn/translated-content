@@ -3,12 +3,12 @@ title: Constructeur Temporal.Duration()
 short-title: Temporal.Duration()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/Duration
 l10n:
-  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
+  sourceCommit: 4c5b1bd7b5f9142c4c53ab6321e19bfdfaf1ddda
 ---
 
 Le constructeur **`Temporal.Duration()`** crée des objets {{JSxRef("Temporal.Duration")}}.
 
-Ce constructeur permet de créer des instances en fournissant directement les données sous-jacentes. Comme pour toutes les autres classes `Temporal`, vous devriez généralement construire des objets `Temporal.Duration` en utilisant la méthode statique {{JSxRef("Temporal/Duration/from", "Temporal.Duration.from()")}}, qui peut gérer une variété de types d'entrée.
+Ce constructeur permet de créer des instances en fournissant directement les données sous-jacentes. Comme pour toutes les autres classes `Temporal`, vous devez généralement construire des objets `Temporal.Duration` en utilisant la méthode statique {{JSxRef("Temporal/Duration/from", "Temporal.Duration.from()")}}, qui peut gérer une variété de types d'entrée.
 
 ## Syntaxe
 

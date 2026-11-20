@@ -1,9 +1,9 @@
 ---
-title: '`<input type="file">` 属性値 (HTML)'
+title: '`<input type="file">` 属性値'
 short-title: <input type="file">
 slug: Web/HTML/Reference/Elements/input/file
 l10n:
-  sourceCommit: 6488b82388db9e593ec28be1d845688e29c679e1
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 {{HTMLElement("input")}} 要素の **`type="file"`** 型は、ユーザーが一つまたは複数のファイルを端末のストレージから選択することができるようにします。選択されると、ファイルは[フォーム投稿](/ja/docs/Learn_web_development/Extensions/Forms)を使用してサーバーにアップロードしたり、JavaScript コードと[ファイル API](/ja/docs/Web/API/File_API/Using_files_from_web_applications) を使用して操作したりすることができます。
@@ -43,7 +43,7 @@ label {
 
 ### accept
 
-[`accept`](/ja/docs/Web/HTML/Reference/Attributes/accept) 属性の値は文字列で、ファイル入力フィールドが受け付けるファイル型を定義します。この文字列は **[固有ファイル型指定子](#固有ファイル型指定子)** をカンマで区切ったリストです。指定されたファイル型が複数の方法で識別されることがあるので、指定された形式のファイルが必要な場合は一連の型指定子を提供するといいでしょう。
+[`accept`](/ja/docs/Web/HTML/Reference/Attributes/accept) 属性の値は文字列で、ファイル入力フィールドが受け付けるファイル形式を定義します。この文字列は **[固有ファイル形式指定子](#固有ファイル形式指定子)** をカンマで区切ったリストです。指定されたファイル形式が複数の方法で識別されることがあるので、指定された形式のファイルが必要な場合は一連の型指定子を提供するといいでしょう。
 
 例えば、 Microsoft Word ファイルを識別する方法がいくつもあるので、 Word ファイルを受け付けるサイトは次のように `<input>` を使用することがあります。
 
@@ -72,9 +72,9 @@ label {
 > [!NOTE]
 > `webkitdirectory` は、[ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API) で定義されています。この名前が `webkitdirectory` となっているのは、もともと Chrome 独自の API だったためです。現在では、すべてのブラウザーで利用可能です。
 
-## 固有ファイル型指定子
+## 固有ファイル形式指定子
 
-**固有ファイル型指定子**は文字列で、 `file` 型の {{HTMLElement("input")}} 要素でユーザーが選択することができるファイルの種類を記述します。それぞれの固有ファイル型指定子は、次の形のうち一つを取ることができます。
+**固有ファイル形式指定子**は文字列で、 `file` 型の {{HTMLElement("input")}} 要素でユーザーが選択することができるファイルの種類を記述します。それぞれの固有ファイル形式指定子は、次の形のうち一つを取ることができます。
 
 - 有効なファイル拡張子で、大文字小文字の区別なく、ピリオド (".") 文字で始まるもの。例えば、 `.jpg`, `.pdf`, `.doc` など。
 - 有効な MIME タイプ文字列で、拡張子のないもの。
@@ -82,7 +82,7 @@ label {
 - 文字列 `video/*` で「任意の動画ファイル」を意味する。
 - 文字列 `image/*` で「任意の画像ファイル」を意味する。
 
-`accept` 属性は、これらの固有ファイル型指定子を 1 つ以上含む文字列を取ります。例えば、ファイル選択ダイアログが画像として表示することができるコンテンツを必要としており、標準の画像形式と PDF ファイルの両方を含める場合、このようになります。
+`accept` 属性は、これらの固有ファイル形式指定子を 1 つ以上含む文字列を取ります。例えば、ファイル選択ダイアログが画像として表示することができるコンテンツを必要としており、標準の画像形式と PDF ファイルの両方を含める場合、このようになります。
 
 ```html
 <input type="file" accept="image/*,.pdf" />
@@ -93,15 +93,10 @@ label {
 ### 基本的な例
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="file">アップロードするファイルを選択してください</label>
-    <input type="file" id="file" name="file" multiple />
-  </div>
-  <div>
-    <button>送信</button>
-  </div>
-</form>
+<div>
+  <label for="file">アップロードするファイルを選択してください</label>
+  <input type="file" id="file" name="file" multiple />
+</div>
 ```
 
 ```css hidden
@@ -137,11 +132,11 @@ div {
 - `webkitRelativePath` {{non-standard_inline}}
   - : ディレクトリー選択ダイアログ (つまり、 [`webkitdirectory`](#webkitdirectory) 属性が設定されている `file` ダイアログ) で選択されたベースディレクトリーからのファイルの相対パスを表す文字列です。_これは標準外なので使用するには注意してください。_
 
-### 受け付けるファイル型の制限
+### 受け付けるファイル形式を制限する
 
 ふつう、ユーザーが自由な形式のファイルを選択できるようにはしたくないでしょう。代わりに、特定の形式のファイルを選択させたいでしょう。例えば、ファイル入力フィールドでユーザーにプロフィールファイルをアップロードさせるのであれば、おそらく {{Glossary("JPEG")}} または {{Glossary("PNG")}} のようなウェブに互換性がある画像形式を選択させたいでしょう。
 
-受付可能なファイル形式は [`accept`](#accept) 属性で、受け付けるファイルの拡張子または MIME タイプいくつか例を示します。
+受け付けるファイル形式は、ファイル拡張子または MIME タイプをカンマ区切りで指定する [`accept`](#accept) 属性で設定できます。例をいくつか示します。
 
 - `accept="image/png"` または `accept=".png"` — PNG ファイルを受け付けます。
 - `accept="image/png, image/jpeg"` または `accept=".png, .jpg, .jpeg"` — PNG または JPEG ファイルを受け付けます。
@@ -151,19 +146,14 @@ div {
 もっと複雑な例を見てみましょう。
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="profile_pic">アップロードするファイルを選択してください</label>
-    <input
-      type="file"
-      id="profile_pic"
-      name="profile_pic"
-      accept=".jpg, .jpeg, .png" />
-  </div>
-  <div>
-    <button>送信</button>
-  </div>
-</form>
+<div>
+  <label for="profile_pic">アップロードするファイルを選択してください</label>
+  <input
+    type="file"
+    id="profile_pic"
+    name="profile_pic"
+    accept=".jpg, .jpeg, .png" />
+</div>
 ```
 
 ```css hidden
@@ -217,16 +207,16 @@ elem.click();
 
 ### 完全な file の例
 
-この例では、この例では、 `HTMLInputElement.files` プロパティで利用できるファイル情報を利用する、さらに高度なファイル選択ダイアログを示し、またいくつか巧妙なテクニックを示します。
+この例では、`HTMLInputElement.files` プロパティで利用できるファイル情報を使った、さらに高度なファイル選択ダイアログと、いくつかのテクニックを示します。
 
 #### HTML
 
 HTML はこのようなものです。
 
 ```html-nolint
-<form method="post" enctype="multipart/form-data">
+<div class="file-picker">
   <div>
-    <label for="image_uploads">アップロードする画像を選択してください (PNG, JPG)</label>
+    <label for="image_uploads">アップロードする画像を選択してください (PNG、JPG)</label>
     <input
       type="file"
       id="image_uploads"
@@ -238,9 +228,9 @@ HTML はこのようなものです。
     <p>アップロードするファイルが選択されていません</p>
   </div>
   <div>
-    <button>送信</button>
+    <button type="button">アップロード</button>
   </div>
-</form>
+</div>
 ```
 
 ```css hidden
@@ -248,18 +238,18 @@ html {
   font-family: sans-serif;
 }
 
-form {
+.file-picker {
   background: #cccccc;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid black;
 }
 
-form ol {
+.file-picker ol {
   padding-left: 0;
 }
 
-form li,
+.file-picker li,
 div > p {
   background: #eeeeee;
   display: flex;
@@ -269,18 +259,18 @@ div > p {
   border: 1px solid black;
 }
 
-form img {
+.file-picker img {
   height: 64px;
   order: 1;
 }
 
-form p {
+.file-picker p {
   line-height: 32px;
   padding-left: 10px;
 }
 
-form label,
-form button {
+.file-picker label,
+.file-picker button {
   background-color: #7f9ccb;
   padding: 5px 10px;
   border-radius: 5px;
@@ -289,14 +279,14 @@ form button {
   height: auto;
 }
 
-form label:hover,
-form button:hover {
+.file-picker label:hover,
+.file-picker button:hover {
   background-color: #2d5ba3;
   color: white;
 }
 
-form label:active,
-form button:active {
+.file-picker label:active,
+.file-picker button:active {
   background-color: #0d3f8f;
   color: white;
 }
@@ -306,7 +296,7 @@ form button:active {
 
 #### JavaScript
 
-スクリプトの最初の行で、フォームの入力フィールド自体と `.preview` クラスが設定された {{htmlelement("div")}} 要素の参照を取得します。次に {{htmlelement("input")}} 要素を非表示にします。 — これは、ファイル入力フィールドが概して醜く、スタイル付けをするのが難しく、ブラウザー間でデザインに一貫性がないからです。 {{htmlelement("label")}} をクリックすることで `input` 要素をアクティブ化することができるので、 `input` 要素を見かけは非表示にしてラベルをボタンらしくしたほうが、ユーザーがファイルをアップロードしたいときの操作が分かります。
+スクリプトの最初の行で、ファイル入力フィールド自体と、`.preview` クラスが設定された {{htmlelement("div")}} 要素への参照を取得します。次に {{htmlelement("input")}} 要素を非表示にします。ファイル入力フィールドは見た目がよくなく、スタイル付けが難しいうえ、ブラウザー間でデザインに一貫性がないためです。{{htmlelement("label")}} をクリックすると `input` 要素をアクティブ化できるので、`input` 要素を視覚的に隠し、ラベルをボタンのようにスタイル付けすると、ファイルをアップロードする際の操作が分かりやすくなります。
 
 ```js
 const input = document.querySelector("input");
@@ -415,11 +405,10 @@ function returnFileSize(number) {
 > ここで使用されている "KB" および "MB" の単位は、1KB = 1000B という [SI 接頭辞](https://ja.wikipedia.org/wiki/2進接頭辞)の慣例に従っており、macOS と同様です。システムが異なると、ファイルサイズの表し方も異なります。例えば、Ubuntu では 1KiB = 1024B という IEC 接頭辞を使用していますが、RAM の仕様では 2 のべき乗を表す SI 接頭辞 (1KB = 1024B) がよく使われます。このため、ここでは `1e3` (`1000`) や `1e6` (`100000`) を `1024` や `1048576` の代わりに使用しました。 アプリケーションでは、正確なサイズが重要である場合は、ユーザーに単位系を明確に伝える必要があります。
 
 ```js hidden
-const button = document.querySelector("form button");
-button.addEventListener("click", (e) => {
-  e.preventDefault();
+const button = document.querySelector(".file-picker button");
+button.addEventListener("click", () => {
   const para = document.createElement("p");
-  para.append("画像がアップロードされました。");
+  para.append("画像をアップロードしました。");
   preview.replaceChildren(para);
 });
 ```

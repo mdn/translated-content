@@ -1,8 +1,9 @@
 ---
 title: "CSSStyleSheet: deleteRule() メソッド"
+short-title: deleteRule()
 slug: Web/API/CSSStyleSheet/deleteRule
 l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+  sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
 ---
 
 {{APIRef("CSSOM")}}
@@ -43,6 +44,6 @@ myStyles.deleteRule(0);
 ## 関連情報
 
 - [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)
-- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
+- [Constructable Stylesheets](https://web.dev/articles/constructable-stylesheets) (web.dev)
 - [動的スタイル情報の利用](/ja/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
 - {{domxref("CSSStyleSheet.insertRule", "insertRule()")}}

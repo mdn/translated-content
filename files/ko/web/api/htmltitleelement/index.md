@@ -14,7 +14,7 @@ slug: Web/API/HTMLTitleElement
 _부모인 {{domxref("HTMLElement")}}로부터 상속합니다._
 
 - {{domxref("HTMLTitleElement.text")}}
-  - : 문서의 제목을 나타내는 {{domxref("DOMString")}}입니다.
+  - : 문서의 제목을 나타내는 {{jsxref("String")}}입니다.
 
 ## 메서드
 

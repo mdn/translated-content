@@ -3,7 +3,7 @@ title: "Number : propriété statique MAX_SAFE_INTEGER"
 short-title: MAX_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 l10n:
-  sourceCommit: c1c0f13171a9e266210f0b284243b2996fc3ec91
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La propriété statique **`Number.MAX_SAFE_INTEGER`** représente le nombre entier sûr maximal en JavaScript (2<sup>53</sup> - 1).
@@ -66,8 +66,8 @@ Number.MAX_SAFE_INTEGER * Number.EPSILON; // 1.9999999999999998
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Number.MAX_SAFE_INTEGER` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
-- [La prothèse d'émulation es-shims de `Number.MAX_SAFE_INTEGER` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-constants)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Number.MAX_SAFE_INTEGER` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Number.MAX_SAFE_INTEGER` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-constants)
 - La propriété statique {{JSxRef("Number.MIN_SAFE_INTEGER")}}
 - La propriété statique {{JSxRef("Number.MAX_VALUE")}}
 - La méthode statique {{JSxRef("Number.isSafeInteger()")}}

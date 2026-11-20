@@ -1,9 +1,9 @@
 ---
-title: "`<search>` 一般検索要素"
+title: "`<search>` 汎用検索要素"
 short-title: <search>
 slug: Web/HTML/Reference/Elements/search
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 **`<search>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書やアプリケーションのうち、検索や絞り込み操作を行うことに関連する、フォームコントロールやその他のコンテンツの部分を表すコンテナーです。`<search>` 要素は意味的に、要素の内容の目的が検索や絞り込み機能であることを示します。検索や絞り込み機能は、ウェブサイトやアプリケーション、現在のウェブページや文書、あるいはインターネット全体やそのサブセクションを対象とする可能性があります。
@@ -39,6 +39,12 @@ l10n:
     </form>
   </search>
 </header>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 #### 結果

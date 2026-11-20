@@ -2,7 +2,7 @@
 title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
 l10n:
-  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 > [!NOTE]
@@ -57,7 +57,7 @@ escape("@*_+-./"); // "@*_+-./"
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `escape` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `escape` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
 - La fonction {{JSxRef("encodeURI()")}}
 - La fonction {{JSxRef("encodeURIComponent()")}}
-- La fonction {{JSxRef("unescape()")}} {{Deprecated_Inline}}
+- La fonction {{JSxRef("unescape()")}}

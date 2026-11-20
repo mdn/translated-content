@@ -3,7 +3,7 @@ title: "Array : méthode every()"
 short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
 l10n:
-  sourceCommit: dd88a6eb2176fa31f5b744d8964efecf3f1f425b
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`every()`** des instances de {{JSxRef("Array")}} retourne `false` si elle trouve un élément du tableau qui ne satisfait pas la fonction de test fournie. Sinon, elle retourne `true`.
@@ -135,11 +135,11 @@ console.log(
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.every` dans `core-js`<sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.every`<sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.every)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.forEach()")}}
 - La méthode {{JSxRef("Array.prototype.some()")}}
 - La méthode {{JSxRef("Array.prototype.find()")}}
 - La méthode {{JSxRef("TypedArray.prototype.every()")}}
-- [Prothèse d'émulation de `Array.prototype.every` dans `core-js`<sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.every`<sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.every)

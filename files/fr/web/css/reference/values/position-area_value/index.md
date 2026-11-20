@@ -3,7 +3,7 @@ title: Type CSS `<position-area>`
 short-title: <position-area>
 slug: Web/CSS/Reference/Values/position-area_value
 l10n:
-  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
+  sourceCommit: c9f812354ae36bbafc6f6d9b0961f3b25f350f4c
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<position-area>`** définit la cellule ou les cellules étendues d'une **grille de zones de position** (<i lang="en">position-area grid</i>), une grille 3×3 dont la cellule centrale est un élément ancre.
@@ -40,7 +40,7 @@ Les zones de position fonctionnent sur le concept d'une **grille de zones de pos
 
 Lorsqu'elle est utilisée comme valeur de la propriété `position-area` d'un élément positionné, les dimensions de la tuile centrale sont définies par le [bloc conteneur](/fr/docs/Web/CSS/Guides/Display/Containing_block) de l'élément d'ancrage par défaut. Les dimensions du bord externe de la grille sont définies par le bloc conteneur de l'élément positionné. Les termes logiques sont généralement basés sur le mode d'écriture et la direction du bloc conteneur, sauf pour les mots-clés `self-*`, qui sont calculés à partir du mode d'écriture de l'élément positionné par une ancre.
 
-Les tuiles de la grille sont réparties en lignes et colonnes&nbsp;:
+Les tuiles de la grille sont réparties en incises et colonnes&nbsp;:
 
 - Les trois lignes sont représentées par les valeurs physiques `top`, `center` et `bottom`. Elles ont aussi des équivalents logiques tels que `block-start`, `center` et `block-end`, et des équivalents de coordonnées&nbsp;: `y-start`, `center` et `y-end`.
 - Les trois colonnes sont représentées par les valeurs physiques `left`, `center` et `right`. Elles ont aussi des équivalents logiques tels que `inline-start`, `center` et `inline-end`, et des équivalents de coordonnées&nbsp;: `x-start`, `center` et `x-end`.
@@ -74,7 +74,7 @@ position-area: self-x-start span-all;
 position-area: top; /* identique à top span-all */
 position-area: inline-start; /* identique à inline-start span-all */
 position-area: center; /* identique à center center */
-position-area: span-all; /* identique à center center */
+position-area: span-all; /* identique à span-all span-all */
 position-area: start; /* identique à start start */
 position-area: end; /* identique à end end */
 ```
@@ -83,7 +83,7 @@ Les différents types de mots-clés utilisables incluent&nbsp;:
 
 - [Mots-clés de la grille physique](#mots-clés_de_la_grille_physique)
 - [Mots-clés génériques logiques de ligne et de colonne](#mots-clés_génériques_logiques_de_ligne_et_de_colonne)
-- [Mots-clés logiques explicites en ligne et bloc](#mots-clés_logiques_explicites_en_ligne_et_bloc)
+- [Mots-clés logiques explicites en incise et bloc](#mots-clés_logiques_explicites_en_incise_et_bloc)
 - [Mots-clés de la grille par coordonnées](#mots-clés_de_la_grille_par_coordonnées)
 
 > [!NOTE]
@@ -122,7 +122,7 @@ Les mots-clés d'étendue physiques — lorsqu'ils sont combinés avec un mot-cl
 Par exemple, `top span-left` étend les tuiles centre-haut et gauche-haut de la grille.
 
 > [!NOTE]
-> Essayer d'associer un mot-clé de ligne ou de colonne avec un mot-clé d'étendue inapproprié rendra la valeur invalide. Par exemple, `right span-right` est invalide — vous ne pouvez pas sélectionner la tuile center-right puis essayer de vous étendre davantage vers la droite.
+> Essayer d'associer un mot-clé de ligne ou de colonne avec un mot-clé d'étendue inapproprié rend la valeur invalide. Par exemple, `right span-right` est invalide — vous ne pouvez pas sélectionner la tuile center-right puis essayer de vous étendre davantage vers la droite.
 
 ### Valeurs par défaut des mots-clés de la grille physique
 
@@ -131,8 +131,11 @@ Si un seul mot-clé physique est défini dans la valeur `position-area`, l'autre
 - `left`, `right`, `top` ou `bottom`
   - : L'autre valeur par défaut est [`span-all`](#span-all_2), ce qui fait que l'élément s'étend sur les trois tuiles de la colonne ou ligne initiale. Par exemple, `left` équivaut à `left span-all`.
 
-- `center`, `span-left`, `span-right`, `span-top` ou `span-bottom`
-  - : L'autre valeur par défaut est `center`. Par exemple, `span-left` équivaut à `center span-left` et `center` équivaut à `center center`.
+- `span-left`, `span-right`, `span-top` ou `span-bottom`
+  - : L'autre valeur par défaut est [`span-all`](#span-all_2). Par exemple, `span-left` équivaut à `span-left span-all`.
+
+- `center` ou `span-all`
+  - : L'autre valeur par défaut est la même que la première valeur. Par exemple, `center` équivaut à `center center` et `span-all` équivaut à `span-all span-all`.
 
 ## Mots-clés logiques
 
@@ -140,24 +143,24 @@ Les mots-clés de grille logique définissent une zone de la grille de zones de 
 
 ### Mots-clés logiques génériques de ligne et de colonne
 
-Les mots-clés logiques génériques utilisent les mêmes termes pour les directions en ligne et bloc, la direction étant déterminée par la position du mot-clé dans une paire de valeurs `<position-area>`. La première valeur définit la position dans la direction bloc et la seconde valeur définit la valeur dans la direction en ligne. Vous pouvez définir un ou deux mots-clés dans la liste suivante. La définition de deux mots-clés dans cette liste définit une tuile de grille définie. La position ou la direction du mot-clé est&nbsp;:
+Les mots-clés logiques génériques utilisent les mêmes termes pour les directions en incise et bloc, la direction étant déterminée par la position du mot-clé dans une paire de valeurs `<position-area>`. La première valeur définit la position dans la direction bloc et la seconde valeur définit la valeur dans la direction en incise. Vous pouvez définir un ou deux mots-clés dans la liste suivante. La définition de deux mots-clés dans cette liste définit une tuile de grille définie. La position ou la direction du mot-clé est&nbsp;:
 
 - `start`
-  - : Le début de la direction bloc ou en ligne de la grille, calculé à partir du mode d'écriture du bloc conteneur.
+  - : Le début de la direction bloc ou en incise de la grille, calculé à partir du mode d'écriture du bloc conteneur.
 
 - `end`
-  - : La fin de la direction bloc ou en ligne de la grille, calculé à partir du mode d'écriture du bloc conteneur.
+  - : La fin de la direction bloc ou en incise de la grille, calculé à partir du mode d'écriture du bloc conteneur.
 
 - `self-start`
-  - : Le début de la direction bloc ou en ligne de la grille, calculé à partir du mode d'écriture propre à l'élément.
+  - : Le début de la direction bloc ou en incise de la grille, calculé à partir du mode d'écriture propre à l'élément.
 
 - `self-end`
-  - : La fin de la direction bloc ou en ligne de la grille, calculé à partir du mode d'écriture propre à l'élément.
+  - : La fin de la direction bloc ou en incise de la grille, calculé à partir du mode d'écriture propre à l'élément.
 
 - `center`
-  - : Le centre de la direction bloc de la grille (si ce mot-clé est défini en premier) ou de la direction en ligne de la grille (si ce mot-clé est défini en second).
+  - : Le centre de la direction bloc de la grille (si ce mot-clé est défini en premier) ou de la direction en incise de la grille (si ce mot-clé est défini en second).
 
-Par exemple, `start end` et `self-start self-end` décrivent tous deux la position au début de la direction bloc et à la fin de la direction en ligne. Avec `writing-mode: horizontal-tb` défini, c'est le coin supérieur droit de l'élément d'ancrage, tandis qu'avec `writing-mode: vertical-rl`, c'est le coin inférieur droit de l'ancre.
+Par exemple, `start end` et `self-start self-end` décrivent tous deux la position au début de la direction bloc et à la fin de la direction en incise. Avec `writing-mode: horizontal-tb` défini, c'est le coin supérieur droit de l'élément d'ancrage, tandis qu'avec `writing-mode: vertical-rl`, c'est le coin inférieur droit de l'ancre.
 
 #### Mots-clés génériques d'étendue logiques de ligne et de colonne
 
@@ -175,11 +178,11 @@ Les mots-clés génériques d'étendue logiques — lorsqu'ils sont combinés av
 - `span-self-end`
   - : Étend la tuile centrale et la tuile de fin de la ligne/colonne de la grille, calculé à partir du mode d'écriture propre à l'élément.
 
-Par exemple, `start span-end` et `self-start span-self-end` définissent tous deux une zone de position de grille qui commence au centre de la ligne de début bloc et s'étend sur les tuiles de cette ligne qui se trouvent dans les colonnes de centre et de fin en ligne. Avec `writing-mode: horizontal-tb` défini, cela s'étendrait sur le centre supérieur et le coin supérieur droit de l'ancre, tandis qu'avec `writing-mode: vertical-rl` défini, cela s'étendrait sur le centre droit et le coin inférieur droit.
+Par exemple, `start span-end` et `self-start span-self-end` définissent tous deux une zone de position de grille qui commence au centre de la ligne de début bloc et s'étend sur les tuiles de cette ligne qui se trouvent dans les colonnes de centre et de fin en incise. Avec `writing-mode: horizontal-tb` défini, cela s'étend sur le centre supérieur et le coin supérieur droit de l'ancre, tandis qu'avec `writing-mode: vertical-rl` défini, cela s'étend sur le centre droit et le coin inférieur droit.
 
-### Mots-clés logiques explicites en ligne et bloc
+### Mots-clés logiques explicites en incise et bloc
 
-Les mots-clés logiques explicites de ligne et de colonne font référence explicitement à une position bloc (ligne) ou en ligne (colonne). Vous pouvez définir un mot-clé pour la direction bloc et un pour la direction en ligne pour sélectionner une tuile de grille spécifique. Contrairement aux mots-clés logiques génériques, l'ordre des mots-clés n'a pas d'importance. Cependant, la déclaration de deux mots-clés sur le même axe invalide la valeur.
+Les mots-clés logiques explicites de ligne et de colonne font référence explicitement à une position bloc (ligne) ou en incise (colonne). Vous pouvez définir un mot-clé pour la direction bloc et un pour la direction en incise pour sélectionner une tuile de grille spécifique. Contrairement aux mots-clés logiques génériques, l'ordre des mots-clés n'a pas d'importance. Cependant, la déclaration de deux mots-clés sur le même axe invalide la valeur.
 
 - `block-start`
   - : Le début de la direction block de la grille calculé à partir du mode d'écriture du bloc conteneur.
@@ -188,39 +191,39 @@ Les mots-clés logiques explicites de ligne et de colonne font référence expli
   - : La fin de la direction block de la grille calculé à partir du mode d'écriture du bloc conteneur.
 
 - `inline-start`
-  - : Le début de la direction inline de la grille calculé à partir du mode d'écriture du bloc conteneur.
+  - : Le début de la direction en incise de la grille calculé à partir du mode d'écriture du bloc conteneur.
 
 - `inline-end`
-  - : La fin de la direction inline de la grille calculé à partir du mode d'écriture du bloc conteneur.
+  - : La fin de la direction en incise de la grille calculé à partir du mode d'écriture du bloc conteneur.
 
-Par exemple, `block-start inline-end` définit la tuile au début de la direction bloc et à la fin de la direction en ligne. Avec `writing-mode: horizontal-tb` défini, cela serait la tuile en haut à droite de l'ancre, tandis qu'avec `writing-mode: vertical-rl` défini, cela serait la tuile en bas à droite.
+Par exemple, `block-start inline-end` définit la tuile au début de la direction bloc et à la fin de la direction en incise. Avec `writing-mode: horizontal-tb` défini, d'est la tuile en haut à droite de l'ancre, tandis qu'avec `writing-mode: vertical-rl` défini, d'est la tuile en bas à droite.
 
 > [!NOTE]
 > La spécification définit des équivalents `self` de ces mots-clés — `block-self-start`, `block-self-end`, `inline-self-start` et `inline-self-end`. Cependant, ceux-ci ne sont actuellement pris en charge par aucun navigateur.
 
-#### Mots-clés d'étendue logiques explicites en ligne et bloc
+#### Mots-clés d'étendue logiques explicites en incise et bloc
 
 Les mots-clés d'étendue logiques explicites — lorsqu'ils sont combinés avec un mot-clé de logique de ligne ou de colonne — définissent une seconde tuile de grille dans laquelle la zone de position s'étend. Lorsqu'une telle combinaison est définie comme valeur de la propriété `position-area`, un élément sélectionné est initialement placé au centre de la ligne ou de la colonne définie, en fonction du mode d'écriture du bloc contenant, et il s'étend ensuite dans la direction indiquée par le mot-clé d'étendue, couvrant deux tuiles de la grille&nbsp;:
 
 - `span-block-start`
-  - : Étend la tuile centrale et la tuile de début du bloc de la colonne définie en ligne.
+  - : Étend la tuile centrale et la tuile de début du bloc de la colonne définie en incise.
 
 - `span-block-end`
-  - : Étend la tuile centrale et la tuile de fin du bloc de la colonne définie en ligne.
+  - : Étend la tuile centrale et la tuile de fin du bloc de la colonne définie en incise.
 
 - `span-inline-start`
-  - : Étend la tuile centrale et la tuile de début en ligne de la ligne définie en bloc.
+  - : Étend la tuile centrale et la tuile de début en incise de la ligne définie en bloc.
 
 - `span-inline-end`
-  - : Étend la tuile centrale et la tuile de fin en ligne de la ligne définie en bloc.
+  - : Étend la tuile centrale et la tuile de fin en incise de la ligne définie en bloc.
 
-Par exemple, `block-end span-inline-start` sélectionne la tuile centrale de la ligne définie en bloc et s'étend sur les tuiles de cette ligne qui se trouvent dans les colonnes de centre et de début en ligne. Avec `writing-mode: horizontal-tb` défini, cela s'étendrait sur les tuiles en bas-centre et en bas à gauche, tandis qu'avec `writing-mode: vertical-rl` défini, cela s'étendrait sur les tuiles à gauche-centre et en haut à gauche.
+Par exemple, `block-end span-inline-start` sélectionne la tuile centrale de la ligne définie en bloc et s'étend sur les tuiles de cette ligne qui se trouvent dans les colonnes de centre et de début en incise. Avec `writing-mode: horizontal-tb` défini, cela s'étend sur les tuiles en bas-centre et en bas à gauche, tandis qu'avec `writing-mode: vertical-rl` défini, cela s'étend sur les tuiles à gauche-centre et en haut à gauche.
 
 > [!NOTE]
 > La spécification définit des équivalents `self` de ces mots-clés, par exemple — `span-self-block-start`, `span-self-block-end`, `span-self-inline-start`, et `span-self-inline-end`. Cependant, ceux-ci ne sont pas actuellement pris en charge par navigateur.
 
 > [!NOTE]
-> Essayer d'associer un mot-clé de ligne ou de colonne avec un mot-clé d'étendue inapproprié rendra la valeur invalide. Par exemple, `block-end span-block-end` est invalide — vous ne pouvez pas sélectionner la ligne de fin block centrale puis essayer de vous étendre d'un cran supplémentaire dans la direction de fin du bloc.
+> Essayer d'associer un mot-clé de ligne ou de colonne avec un mot-clé d'étendue inapproprié rend la valeur invalide. Par exemple, `block-end span-block-end` est invalide — vous ne pouvez pas sélectionner la ligne de fin block centrale puis essayer de vous étendre d'un cran supplémentaire dans la direction de fin du bloc.
 
 ### Valeurs par défaut des mots-clés logiques
 
@@ -230,19 +233,19 @@ Si un seul mot-clé logique `<position-area>` est défini, l'autre valeur est im
   - : L'autre valeur par défaut est la même que la première valeur, sélectionnant la cellule de grille au début de la ligne et de la colonne, ou à la fin de la ligne et de la colonne.
 
 - `span-start`, `span-self-start`, `span-end`, `span-self-end`
-  - : L'autre valeur par défaut est `center`. Par exemple, `span-start` équivaut à `span-start center`.
+  - : L'autre valeur par défaut est la même que la première valeur. Par exemple, `span-start` équivaut à `span-start span-start`.
 
 - `block-start`, `block-end`, `inline-start`, `inline-end`
   - : L'autre valeur par défaut est [`span-all`](#span-all_2), s'étendant sur les trois tuiles de la colonne ou de la ligne définie. Par exemple, `block-start` équivaut à `block-start span-all`.
 
 - `span-block-start`, `span-block-end`, `span-inline-start`, `span-inline-end`
-  - : L'autre valeur par défaut est `center`. Par exemple, `span-inline-start` équivaut à `span-inline-start center`.
+  - : L'autre valeur par défaut est [`span-all`](#span-all_2). Par exemple, `span-inline-start` équivaut à `span-inline-start span-all`.
 
 ## Mots-clés de la grille par coordonnées
 
-Ces mots-clés définissent les cellules de la grille `position-area` en utilisant des valeurs de coordonnées x et y. Sa position/direction sera affectée par les paramètres {{CSSxRef("writing-mode")}} et/ou {{CSSxRef("direction")}} sur le [bloc conteneur](/fr/docs/Web/CSS/Guides/Display/Containing_block) d'un élément ou, dans le cas des mots-clés `self`, sur l'élément lui-même.
+Ces mots-clés définissent les cellules de la grille `position-area` en utilisant des valeurs de coordonnées x et y. Sa position/direction est affectée par les paramètres {{CSSxRef("writing-mode")}} et/ou {{CSSxRef("direction")}} sur le [bloc conteneur](/fr/docs/Web/CSS/Guides/Display/Containing_block) d'un élément ou, dans le cas des mots-clés `self`, sur l'élément lui-même.
 
-Cependant, les cellules de la grille sont définies selon des axes physiques plutôt qu'en fonction des directions bloc/en ligne&nbsp;:
+Cependant, les cellules de la grille sont définies selon des axes physiques plutôt qu'en fonction des directions bloc/en incise&nbsp;:
 
 - Pour `writing-mode: horizontal-tb` et `vertical-lr`, l'axe des x s'étend de gauche à droite et l'axe des y de haut en bas.
 - Pour `writing-mode: horizontal-tb; direction: rtl` et `writing-mode: vertical-rl`, l'axe des x s'étend de droite à gauche et l'axe des y de haut en bas.
@@ -283,7 +286,7 @@ Les mots-clés de l'axe des y incluent&nbsp;:
 - `center`
   - : Le centre de l'axe des y de la grille, calculé à partir du mode d'écriture propre à l'élément.
 
-Par exemple, `x-end y-start` et `self-x-end self-y-start` sélectionnent tous deux la cellule de grille à la fin de l'axe des x et au début de l'axe des y. Avec `writing-mode: horizontal-tb` défini, cela serait la cellule en haut à droite de l'ancre, tandis qu'avec `writing-mode: vertical-rl`, cela serait en haut à gauche.
+Par exemple, `x-end y-start` et `self-x-end self-y-start` sélectionnent tous deux la cellule de grille à la fin de l'axe des x et au début de l'axe des y. Avec `writing-mode: horizontal-tb` défini, c'est la cellule en haut à droite de l'ancre, tandis qu'avec `writing-mode: vertical-rl`, c'est en haut à gauche.
 
 ### Mots-clés d'étendue par coordonnées
 
@@ -301,7 +304,7 @@ Lorsqu'ils sont combinés avec un mot-clé de coordonnées de ligne ou de colonn
 - `span-y-end`
   - : Étend la tuile centrale et la tuile de fin y de la colonne définie de l'axe des x.
 
-Par exemple, `y-end span-x-end` sélectionne la tuile au centre de la ligne de fin y, et s'étend sur les tuiles de cette ligne qui se trouvent dans les colonnes de centre et de fin x. Avec `writing-mode: horizontal-tb` défini, la zone de la grille de position s'étendrait sur les tuiles de la grille en bas-centre et en bas à droite, tandis qu'avec `writing-mode: vertical-rl` défini, cela s'étendrait sur les tuiles en bas-centre et en haut à droite.
+Par exemple, `y-end span-x-end` sélectionne la tuile au centre de la ligne de fin y, et s'étend sur les tuiles de cette ligne qui se trouvent dans les colonnes de centre et de fin x. Avec `writing-mode: horizontal-tb` défini, la zone de la grille de position s'étend sur les tuiles de la grille en bas-centre et en bas à droite, tandis qu'avec `writing-mode: vertical-rl` défini, cela s'étend sur les tuiles en bas-centre et en haut à droite.
 
 > [!NOTE]
 > La spécification ne définit pas de mots-clés d'étendue `self` séparés pour les coordonnées, mais ceux-ci ne sont pas nécessaires — les mots-clés d'étendue peuvent être utilisés avec les mots-clés de ligne et de colonne de coordonnées.
@@ -313,7 +316,7 @@ Si un seul mot-clé de grille par coordonnées `<position-area>` est défini, l'
 - `x-start`, `self-x-start`, `x-end`, `self-x-end`, `y-start`, `self-y-start`, `y-end` ou `self-y-end`
   - : L'autre valeur par défaut est [`span-all`](#span-all_2), sélectionnant les tuiles de grille s'étendant sur les trois tuiles de la colonne ou de la ligne dans laquelle elle a été initialement placée. Par exemple, `x-start` équivaut à `x-start span-all`.
 - `span-x-start`, `span-x-end`, `span-y-start`, `span-y-end`, `span-self-x-start`, `span-self-x-end`, `span-self-y-end` ou `span-self-y-start`
-  - : L'autre valeur par défaut est `center`. Par exemple, `span-start` équivaut à `span-start center`.
+  - : L'autre valeur par défaut est [`span-all`](#span-all_2). Par exemple, `span-x-start` équivaut à `span-x-start span-all`.
 
 ## `span-all`
 

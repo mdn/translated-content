@@ -2,7 +2,7 @@
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
 l10n:
-  sourceCommit: 9bda33365e40b6c609fa5190a0af9b5dc6438cf0
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 L'objet **`Promise`** représente un objet qui incarne la complétion éventuelle (ou l'échec) d'une opération asynchrone et sa valeur résultante.
@@ -174,7 +174,7 @@ Toutes ces méthodes prennent un [itérable](/fr/docs/Web/JavaScript/Reference/I
 
 Il existe deux autres méthodes statiques pratiques&nbsp;: {{JSxRef("Promise.allKeyed()")}} et {{JSxRef("Promise.allSettledKeyed()")}}, qui se comportent comme `Promise.all()` et `Promise.allSettled()`, mais prennent des _objets_ de promesses et retournent des promesses qui se complètent avec des _objets_ de la même forme. En travaillant avec des objets au lieu de tableaux, vous pouvez associer les résultats à des clés sémantiquement significatives, au lieu d'un ordre de tableau arbitraire qui peut être difficile à maintenir.
 
-Ces méthodes attachent des gestionnaires à chaque promesse d'entrée en utilisant {{jsxref("Promise/then", "then()")}}. Même lorsque la promesse résultante est acquittée tôt (par exemple lorsqu'une entrée dans `Promise.race()` est acquittée), les autres gestionnaires ne sont pas supprimés. Passer de manière répétée la même promesse en attente aux méthodes de concurrence peut accumuler des gestionnaires même lorsque ces gestionnaires ne sont jamais utilisés&nbsp;:
+Ces méthodes attachent des gestionnaires à chaque promesse d'entrée en utilisant {{JSxRef("Promise/then", "then()")}}. Même lorsque la promesse résultante est acquittée tôt (par exemple lorsqu'une entrée dans `Promise.race()` est acquittée), les autres gestionnaires ne sont pas supprimés. Passer de manière répétée la même promesse en attente aux méthodes de concurrence peut accumuler des gestionnaires même lorsque ces gestionnaires ne sont jamais utilisés&nbsp;:
 
 ```js
 const promesseEnAttente = new Promise(() => {});
@@ -186,7 +186,7 @@ for (let i = 0; i < 1000; i++) {
 // gestionnaires attachés par les 1000 courses.
 ```
 
-Les promesses ne fournissent aucun moyen de se désabonner de ces gestionnaires&nbsp;; ils restent attachés tant que la promesse d'entrée est en attente et accessible. Dans la mesure du possible, annulez l'opération sous-jacente en utilisant un {{domxref("AbortSignal")}} lorsque la promesse en attente n'est plus utile.
+Les promesses ne fournissent aucun moyen de se désabonner de ces gestionnaires&nbsp;; ils restent attachés tant que la promesse d'entrée est en attente et accessible. Dans la mesure du possible, annulez l'opération sous-jacente en utilisant un {{DOMxRef("AbortSignal")}} lorsque la promesse en attente n'est plus utile.
 
 Notez que JavaScript fonctionne sur un [processus unique](/fr/docs/Glossary/Thread) par nature&nbsp;; à un instant donné, une seule tâche est en cours d'exécution, bien que le contrôle puisse passer d'une promesse à l'autre, donnant l'impression que l'exécution des promesses est concurrente. [L'exécution parallèle <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Parallel_computing) en JavaScript ne peut être réalisée que par le biais de [processus de travail](/fr/docs/Web/API/Web_Workers_API).
 
@@ -219,7 +219,7 @@ Notez que JavaScript fonctionne sur un [processus unique](/fr/docs/Glossary/Thre
 - {{JSxRef("Promise.resolve()")}}
   - : Retourne un objet `Promise` qui est résolu avec la valeur donnée. Si la valeur est une semi-promesse (c'est-à-dire qu'elle possède une méthode `then`), la promesse retournée «&nbsp;suit&nbsp;» cette semi-promesse, adoptant son état final&nbsp;; sinon, la promesse retournée est acquittée avec la valeur.
 - {{JSxRef("Promise.try()")}}
-  - : Prend une fonction de rappel de n'importe quel type (qui retourne ou lève une exception, de manière synchrone ou asynchrone) et encapsule son résultat dans une promesse (`Promise`).
+  - : Prend une fonction de rappel de n'importe quel type (qui retourne ou lève une exception, de manière synchrone ou asynchrone) et résout son résultat en une promesse (`Promise`).
 - {{JSxRef("Promise.withResolvers()")}}
   - : Retourne un objet contenant un nouvel objet `Promise` et deux fonctions permettant de le résoudre ou de le rompre, correspondant aux deux paramètres transmis à l'exécuteur du constructeur {{JSxRef("Promise/Promise", "Promise()")}}.
 
@@ -544,7 +544,7 @@ Dans l'exemple ci-dessus, le texte interne d'un `<iframe>` n'est mis à jour que
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Promise` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-promise)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Promise` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/promise)
 - Le guide [Utiliser les promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)
 - [Promesses/Spécification A+ <sup>(angl.)</sup>](https://promisesaplus.com/)
 - [Promesses JavaScript&nbsp;: une introduction <sup>(angl.)</sup>](https://web.dev/articles/promises) sur web.dev (2013)

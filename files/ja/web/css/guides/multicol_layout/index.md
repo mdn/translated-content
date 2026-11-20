@@ -3,7 +3,7 @@ title: CSS 段組みレイアウト
 short-title: 段組みレイアウト
 slug: Web/CSS/Guides/Multicol_layout
 l10n:
-  sourceCommit: 04defe50e601cf53adde40c4bd652a7a4e6eae55
+  sourceCommit: 1a2a5b56a689b441ebf3be91b90f15746c5a5a01
 ---
 
 **CSS 段組みレイアウト** (CSS multi-column layout) モジュールを使用すると、コンテンツを複数の段に分割することができます。このモジュールのプロパティを使用すると、段の推奨数と幅、段間の間隔、およびオプションで段の分割線（段間罫と呼ばれる）の外観を定義することができます。また、コンテンツが段から段へどのように流れるか、および段間でコンテンツをどのように分割するかを定義することもできます。
@@ -276,19 +276,14 @@ blockquote p::after {
 {{EmbedLiveSample("multicol", "", "800px")}}
 
 > [!NOTE]
-> 段組みレイアウトは、文書全体が印刷ページに分割されるように行ボックスに分割することから、[ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)に密接に関連します。従って、 [CSS 断片化](/ja/docs/Web/CSS/Guides/Fragmentation)仕様書に定義されているプロパティが、段間のコンテンツの区切り位置を制御するために必要になりました。
+> 段組みレイアウトは[ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)と密接に関連しています。それぞれの段ボックスは、文書を構成する印刷ページと同様に、断片です。[CSS 断片化](/ja/docs/Web/CSS/Guides/Fragmentation)モジュールで定義されているプロパティを使用すると、段やページの間でコンテンツをどのように分割するかを制御できます。
 
 ## リファレンス
 
 ### プロパティ
 
 - {{cssxref("column-fill")}}
-- {{cssxref("column-gap")}}
 - {{cssxref("column-span")}}
-- {{cssxref("column-rule")}} 一括指定
-  - {{cssxref("column-rule-color")}}
-  - {{cssxref("column-rule-style")}}
-  - {{cssxref("column-rule-width")}}
 - {{cssxref("columns")}} 一括指定
   - {{cssxref("column-count")}}
   - {{cssxref("column-height")}}
@@ -313,13 +308,33 @@ blockquote p::after {
 - [段抜きと段の均衡](/ja/docs/Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns)
   - : すべての段にまたがる要素の作り方と、段を埋める方法の制御です。
 - [段組みでのオーバーフローの処理](/ja/docs/Web/CSS/Guides/Multicol_layout/Handling_overflow)
-  - : アイテムが段をオーバーフローときに起こることと、段内のコンテンツが多すぎてコンテナーに収まらない場合に起こることです。
+  - : アイテムが段からオーバーフローするときや、段内のコンテンツが多すぎてコンテナーに収まらないときに起こることを説明します。
 - [段組みにおけるコンテンツの分割の処理](/ja/docs/Web/CSS/Guides/Multicol_layout/Handling_content_breaks)
   - : 断片化仕様と、段のコンテンツの分割位置を制御する方法について説明します。
 - [CSS カルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)
   - : スクロールボタン、スクロールマーカー、生成された列を使用する、純粋な CSS によるカルーセル UI 機能を作成します。
+- [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+  - : グリッド、フレックスボックス、段組みレイアウトでの隙間の定義方法と、パーセント値の解決方法について説明します。
 
 ## 関連概念
+
+[CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)モジュール
+
+- {{cssxref("column-rule")}} 一括指定
+  - {{cssxref("column-rule-color")}}
+  - {{cssxref("column-rule-style")}}
+  - {{cssxref("column-rule-width")}}
+- {{cssxref("gap")}} 一括指定
+  - {{cssxref("column-gap")}}
+  - {{cssxref("row-gap")}}
+- {{cssxref("row-rule")}}
+- {{cssxref("rule")}} 一括指定
+- {{cssxref("rule-break")}}
+- {{cssxref("rule-color")}}
+- {{cssxref("rule-inset")}}
+- {{cssxref("rule-overlap")}}
+- {{cssxref("rule-style")}}
+- {{cssxref("rule-width")}}
 
 [CSS 断片化](/ja/docs/Web/CSS/Guides/Fragmentation)モジュール
 

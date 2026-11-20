@@ -3,12 +3,12 @@ title: Fonction CSS `param()`
 short-title: param()
 slug: Web/CSS/Reference/Values/param
 l10n:
-  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
+  sourceCommit: 5738cef418354ffa76a451281312fec98a7aad63
 ---
 
 {{SeeCompatTable}}
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`param()`** est utilisée pour définir des paramètres de lien. Cela peut être fait en utilisant la propriété CSS {{CSSxRef("link-parameters")}}, dans le fragment URL d'une ressource externe, ou dans un [`<url-modifier>`](/fr/docs/Web/CSS/Reference/Values/url_function#url-modifier) de la fonction CSS `url()`.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`param()`** est utilisée pour définir des paramètres de lien. Elle peut être utilisée dans la propriété CSS {{CSSxRef("link-parameters")}}, dans le fragment URL d'une ressource externe, ou dans un [`<url-modifier>`](/fr/docs/Web/CSS/Reference/Values/url_function#url-modifier) de la fonction CSS `url()`.
 
 ## Syntaxe
 
@@ -30,9 +30,9 @@ param(--color3, green);
 - `<declaration_value>` {{Optional_Inline}}
   - : Une valeur `<declaration_value>` est la valeur de l'attribut mis à jour. Si la `<declaration_value>` est omise, elle représente une valeur vide.
 
-## Définition formelle
+## Syntaxe formelle
 
-{{CSSInfo}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -128,7 +128,7 @@ Dans cet exemple, les attributs SVG sont mis à jour en passant la fonction `par
 .foo {
   background-image: url(
     "square.svg"
-    param(--color1, slategrey),
+    param(--color1, slategrey)
     param(--color2, lightgrey)
   );
 }

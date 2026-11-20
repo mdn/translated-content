@@ -2,7 +2,7 @@
 title: JavaScript リファレンス
 slug: Web/JavaScript/Reference
 l10n:
-  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
+  sourceCommit: f693fdeb65be430fdf3b7fc5cdf44a10a13f2bbf
 ---
 
 JavaScript リファレンスは、 JavaScript 言語に関する事実の保管庫として機能します。言語全体がここで詳細に記述されています。 JavaScript のコードを書いていると、これらのページをよく参照することになります（だから「JavaScript リファレンス」という題名なのです）。
@@ -120,6 +120,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 
 ### リフレクション
 
+- {{jsxref("AbstractModuleSource")}}
 - {{jsxref("Reflect")}}
 - {{jsxref("Proxy")}}
 
@@ -184,6 +185,8 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 - {{jsxref("Statements/debugger", "debugger")}}
 - {{jsxref("Statements/export", "export")}}
 - {{jsxref("Statements/import", "import")}}
+- {{jsxref("Statements/import/defer", "import defer")}}
+- {{jsxref("Statements/import/source", "import source")}}
 - {{jsxref("Statements/label", "ラベル", "", 1)}}
 - {{jsxref("Statements/with", "with")}} {{deprecated_inline}}
 
@@ -215,6 +218,8 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 - {{jsxref("Operators/import.meta", "import.meta")}}
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Operators/import", "import()")}}
+- {{jsxref("Operators/import/defer", "import.defer()")}}
+- {{jsxref("Operators/import/source", "import.source()")}}
 
 ### インクリメントとデクリメント
 

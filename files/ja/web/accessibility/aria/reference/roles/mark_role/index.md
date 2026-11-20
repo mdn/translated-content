@@ -1,13 +1,14 @@
 ---
 title: "ARIA: mark ロール"
+short-title: mark
 slug: Web/Accessibility/ARIA/Reference/Roles/mark_role
 l10n:
-  sourceCommit: 22cf84fc5704222a2e2e5ac67b95b02dcfea08ff
+  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
 `mark` ロールは、囲んでいるコンテキストにおいて関連性があるため、参照や注釈の目的でマークまたはハイライトされたコンテンツを示します。
 
-## 説明
+## 解説
 
 `mark` ロールは、参照目的でマーク/ハイライトされたテキストを含む HTML 要素を意味的に示します。これは、HTML の {{HTMLElement('mark')}} 要素と意味的に同等です。可能であれば、この要素を代わりに使用するべきです。
 

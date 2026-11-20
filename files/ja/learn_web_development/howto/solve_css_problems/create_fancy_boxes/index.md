@@ -2,10 +2,8 @@
 title: 装飾的なボックスの作成
 slug: Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: f78ca75460fbdbc7f17b6e366dad47b9760054b0
 ---
-
-{{LearnSidebar}}
 
 CSS ボックスは、CSS で装飾されたウェブページの構成要素です。 見栄えを良くすることは、楽しさとやりがいの両方です。 デザインのアイデアを実用的なコードに変えることがすべてだからです。 面倒な制約と CSS の使用における狂気の自由のために、それは挑戦的です。 いくつかの装飾的なボックスをやりましょう。
 
@@ -85,7 +83,7 @@ CSS ボックスは、CSS で装飾されたウェブページの構成要素で
 
 さて、背景を楽しんでみましょう。
 
-```css-nolint
+```css
 .fancy {
   padding: 1em;
   width: 100%;
@@ -101,25 +99,26 @@ CSS ボックスは、CSS で装飾されたウェブページの構成要素で
      お気づきのとおり、
      色のグラデーションは画像と見なされ、
      そのように操作することができます。 */
-  background-image: linear-gradient(175deg, rgb(0 0 0 / 0%) 95%, #8da389 95%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 95%, #8da389 95%),
-                    linear-gradient(175deg, rgb(0 0 0 / 0%) 90%, #b4b07f 90%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 92%, #b4b07f 92%),
-                    linear-gradient(175deg, rgb(0 0 0 / 0%) 85%, #c5a68e 85%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 89%, #c5a68e 89%),
-                    linear-gradient(175deg, rgb(0 0 0 / 0%) 80%, #ba9499 80%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 86%, #ba9499 86%),
-                    linear-gradient(175deg, rgb(0 0 0 / 0%) 75%, #9f8fa4 75%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 83%, #9f8fa4 83%),
-                    linear-gradient(175deg, rgb(0 0 0 / 0%) 70%, #74a6ae 70%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 80%, #74a6ae 80%);
+  background-image:
+    linear-gradient(175deg, transparent 95%, #8da389 95%),
+    linear-gradient(85deg, transparent 95%, #8da389 95%),
+    linear-gradient(175deg, transparent 90%, #b4b07f 90%),
+    linear-gradient(85deg, transparent 92%, #b4b07f 92%),
+    linear-gradient(175deg, transparent 85%, #c5a68e 85%),
+    linear-gradient(85deg, transparent 89%, #c5a68e 89%),
+    linear-gradient(175deg, transparent 80%, #ba9499 80%),
+    linear-gradient(85deg, transparent 86%, #ba9499 86%),
+    linear-gradient(175deg, transparent 75%, #9f8fa4 75%),
+    linear-gradient(85deg, transparent 83%, #9f8fa4 83%),
+    linear-gradient(175deg, transparent 70%, #74a6ae 70%),
+    linear-gradient(85deg, transparent 80%, #74a6ae 80%);
 }
 ```
 
 {{ EmbedLiveSample('Backgrounds', '100%', '200') }}
 
 > [!NOTE]
-> グラデーションは、非常に独創的な方法で使用できます。 あなたがクレイジーな例を見たいのなら、[Lea Verou の CSS パターン](https://projects.verou.me/css3patterns/)（英語）を見てください。グラデーションについてもっと知りたい場合は、気軽に[専用の記事](/ja/docs/Web/CSS/Guides/Images/Using_gradients)を見てください。
+> グラデーションは、非常に独創的な方法で使用できます。 独創的な例を見たい場合は、[Lea Verou の CSS パターン](https://projects.verou.me/css3patterns/)（英語）をご覧ください。グラデーションについてもっと知りたい場合は、[専用の記事](/ja/docs/Web/CSS/Guides/Images/Using_gradients)をご覧ください。
 
 ## 擬似要素
 
@@ -213,8 +212,9 @@ CSS ボックスは、CSS で装飾されたウェブページの構成要素で
 
 ```html
 <blockquote>
-  People who think they know everything are a great annoyance to those of us who
-  do. <i>Isaac Asimov</i>
+  何でも知っていると思っている人は、本当に何でも知っている私たちにとって大きな悩みの種だ。<i
+    >アイザック・アシモフ</i
+  >
 </blockquote>
 <blockquote lang="fr">
   L'intelligence, c'est comme les parachutes, quand on n'en a pas, on s'écrase.
@@ -238,9 +238,7 @@ blockquote::after {
   position: absolute;
   height: 3rem;
   font:
-    6rem/100% Georgia,
-    "Times New Roman",
-    Times,
+    6rem/100% "Georgia",
     serif;
 }
 
@@ -286,12 +284,12 @@ blockquote i {
 <div class="fancy">Hi! I want to be fancy.</div>
 ```
 
-部分的なドロップシャドウ効果を作成してみましょう。{{cssxref("box-shadow")}} プロパティでは、内照や 平面的なドロップシャドウ効果を作成することができますが、少し作業を加えることで、擬似要素や {{cssxref("transform")}} の 3 つの個別プロパティのひとつである {{cssxref("rotate")}} プロパティを使用してより自然に近い形状を作ることが可能です。
+部分的なドロップシャドウ効果を作成してみましょう。{{cssxref("box-shadow")}} プロパティでは、内側に光を当てた効果や平面的なドロップシャドウ効果を作成できますが、少し手を加えることで、擬似要素や {{cssxref("transform")}} の 3 つの個別プロパティのひとつである {{cssxref("rotate")}} プロパティを使用して、より自然な形状を作成できます。
 
 ```css
 .fancy {
   position: relative;
-  background-color: #ffc;
+  background-color: #ffffcc;
   padding: 2rem;
   text-align: center;
   max-width: 200px;

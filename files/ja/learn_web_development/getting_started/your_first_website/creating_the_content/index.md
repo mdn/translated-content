@@ -63,7 +63,7 @@ HTML は、テキストコンテンツを囲み（または包含し）、その
 HTML は、テキストの構成だけでなく、テキストや画像を他のウェブページにリンクさせたり、画像や動画を埋め込みしたり、データ表を作成したりするなど、それ以外にも多くの用途があります。
 
 > [!NOTE]
-> Scrimba の [HTML tags](https://scrimba.com/frontend-path-c0j/~0g?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>は、見出しを含む HTML の基礎を練習できる操作可能なレッスンです。
+> Scrimba の [HTML tags](https://scrimba.com/frontend-path-c0j/~0g?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>は、見出しを含む HTML の基礎を練習できる操作可能なレッスンです。
 
 ## 初めての HTML 文書の作成
 
@@ -138,7 +138,7 @@ alt テキストは、その画像が何を伝えているのかを読者が十�
 この節では、文字列をマークアップするために使用する基本的な HTML 要素をいくつか見ていきます。
 
 > [!NOTE]
-> Scrimba の [The basics of semantic HTML](https://scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn)<sup>[_MDN 言語パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>は、HTML について有益な説明を提供する対話的ななレッスンであり、特にその意味的な側面がなぜ重要なのかに重点を置いています。
+> Scrimba の [The basics of semantic HTML](https://scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn)<sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>は、HTML について有益な説明を提供する対話的ななレッスンであり、特にその意味的な側面がなぜ重要なのかに重点を置いています。
 
 ### 見出し
 
@@ -243,7 +243,7 @@ HTML ページ内の {{htmlelement("img")}} 要素のすぐ上、`<h1> ... </h1>
 
 ## 関連情報
 
-- [Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
   - : [Scrimba](https://scrimba.com?via=MDN) の _Learn HTML and CSS_ コースでは、知識豊富な講師による楽しい対話型のレッスンや課題を通じて、5 つの素晴らしいプロジェクトを構築・展開しながら、HTML と CSS を学ぶことができます。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}

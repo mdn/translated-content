@@ -1,8 +1,9 @@
 ---
 title: "ARIA: roletype ロール"
+short-title: roletype
 slug: Web/Accessibility/ARIA/Reference/Roles/roletype_role
 l10n:
-  sourceCommit: 50f209459d9e1db35bf0d973d7878ea4600acb8c
+  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
 **`roletype`** ロールは、[抽象ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#6._抽象ロール) であり、他のすべての ARIA ロールが継承する基底ロールです。
@@ -10,7 +11,7 @@ l10n:
 > [!WARNING]
 > `roletype` ロールは、オントロジーのために使用される抽象ロールです。これは文書の完全性のためにここに含まれています。ウェブ作成者が使用すべきではありません。
 
-## 説明
+## 解説
 
 `roletype` ロールのプロパティは、このロールまたは「インスタンス」が割り当てられたオブジェクトの構造的および機能的な目的を記述します。ロールとは、インスタンスを理解し操作するために使用できる概念です。
 

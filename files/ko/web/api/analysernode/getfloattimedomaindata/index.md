@@ -5,7 +5,7 @@ slug: Web/API/AnalyserNode/getFloatTimeDomainData
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AnalyserNode") }} 인터페이스의 **`getFloatTimeDomainData()`** 메서드는 전달된 {{domxref("Float32Array")}} 배열 내로 현재 파형, 즉 시간 영역 데이터를 복사합니다.
+{{ domxref("AnalyserNode") }} 인터페이스의 **`getFloatTimeDomainData()`** 메서드는 전달된 {{jsxref("Float32Array")}} 배열 내로 현재 파형, 즉 시간 영역 데이터를 복사합니다.
 
 ## 구문
 
@@ -19,7 +19,7 @@ analyser.getFloatTimeDomainData(dataArray); // getFloatTimeDomainData()로부터
 ### 매개변수
 
 - `array`
-  - : 시간 영역 데이터가 복사될 {{domxref("Float32Array")}}.
+  - : 시간 영역 데이터가 복사될 {{jsxref("Float32Array")}}.
     만약 배열이 {{domxref("AnalyserNode.frequencyBinCount")}}보다 더 적은 요소를 가지고 있다면, 초과한 요소는 탈락됩니다. 만약 이것이 필요한 것보다 더 많은 요소를 가지고 있다면, 초과한 요소는 무시됩니다.
 
 ### 반환 값

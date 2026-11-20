@@ -3,7 +3,7 @@ title: "Object : méthode toString()"
 short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`toString()`** des instances de {{JSxRef("Object")}} retourne une chaîne de caractères représentant cet objet. Cette méthode est destinée à être surchargée par les objets dérivés pour une logique personnalisée de [conversion de type](/fr/docs/Web/JavaScript/Guide/Data_structures#conversion_de_type).
@@ -155,7 +155,7 @@ Object.prototype.toString.call(new Date()); // [object prototype pollué]
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Object.prototype.toString` avec la prise en charge de `Symbol.toStringTag` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.prototype.toString` avec la prise en charge de `Symbol.toStringTag` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
 - La méthode {{JSxRef("Object.prototype.valueOf()")}}
 - La méthode {{JSxRef("Number.prototype.toString()")}}
 - La propriété statique {{JSxRef("Symbol.toPrimitive")}}

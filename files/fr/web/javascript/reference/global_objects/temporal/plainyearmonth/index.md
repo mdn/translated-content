@@ -2,7 +2,7 @@
 title: Temporal.PlainYearMonth
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth
 l10n:
-  sourceCommit: 9b86874b5762b52ce0055f58d561004d1a204ad5
+  sourceCommit: 76c2e04d720aa8260ba7d75788ed96776aac35c6
 ---
 
 L'objet **`Temporal.PlainYearMonth`** représente l'année et le mois d'une date d'un calendrier, sans jour ni fuseau horaire&nbsp;; par exemple, un évènement sur un calendrier qui se produit pendant tout le mois. Il est fondamentalement représenté comme une date de calendrier ISO 8601, avec des champs pour l'année, le mois et le jour, et un système de calendrier associé. Le jour est utilisé pour faire disparaître l'ambiguïté de l'année et du mois dans les systèmes de calendrier non ISO.
@@ -26,15 +26,15 @@ YYYY-MM-DD [u-ca=calendar_id]
 - `DD` {{Optional_Inline}}
   - : Un nombre à deux chiffres de `01` à `31`. Il est requis pour les calendriers non ISO, et optionnel sinon. S'il est omis, la chaîne de caractères ressemble à `YYYY-MM` ou `YYYYMM`. Notez que le jour de référence réellement stocké peut être différent de celui que vous fournissez, mais l'année et le mois représentés sont les mêmes. Voir {{JSxRef("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}} pour plus d'informations. Les composants `YYYY`, `MM` et `DD` peuvent être séparés par `-` ou rien.
 - `[u-ca=calendar_id]` {{Optional_Inline}}
-  - : Remplacez `calendar_id` par le calendrier à utiliser. Voir [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_calendriers_pris_en_charge) pour une liste des types de calendriers couramment pris en charge. Par défaut, `[u-ca=iso8601]`. Peut avoir un _drapeau critique_ en préfixant la clé avec `!`&nbsp;: par exemple, `[!u-ca=iso8601]`. Ce drapeau indique généralement aux autres systèmes qu'il ne peut pas être ignoré s'ils ne le prennent pas en charge. L'analyseur `Temporal` générera une erreur si les annotations contiennent deux annotations de calendrier ou plus et qu'une d'entre elles est critique. Notez que le `YYYY-MM-DD` est toujours interprété comme une date de calendrier ISO 8601, puis converti en calendrier défini.
+  - : Remplacez `calendar_id` par le calendrier à utiliser. Voir [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_calendriers_pris_en_charge) pour une liste des types de calendriers couramment pris en charge. Par défaut, `[u-ca=iso8601]`. Peut avoir un _drapeau critique_ en préfixant la clé avec `!`&nbsp;: par exemple, `[!u-ca=iso8601]`. Ce drapeau indique généralement aux autres systèmes qu'il ne peut pas être ignoré s'ils ne le prennent pas en charge. L'analyseur `Temporal` génère une erreur si les annotations contiennent deux annotations de calendrier ou plus et qu'une d'entre elles est critique. Notez que le `YYYY-MM-DD` est toujours interprété comme une date de calendrier ISO 8601, puis converti en calendrier défini.
 
-Comme entrée, vous pouvez éventuellement inclure l'heure, le décalage et l'identifiant du fuseau horaire, dans le même format que [`PlainDateTime`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#format_rfc_9557), mais ils seront ignorés. Les autres annotations au format `[clé=valeur]` sont également ignorées, et elles ne doivent pas avoir le drapeau critique.
+Comme entrée, vous pouvez éventuellement inclure l'heure, le décalage et l'identifiant du fuseau horaire, dans le même format que [`PlainDateTime`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#format_rfc_9557), mais ils sont ignorés. Les autres annotations au format `[clé=valeur]` sont également ignorées, et elles ne doivent pas avoir le drapeau critique.
 
 Lors de la sérialisation, vous pouvez configurer l'affichage de l'identifiant du calendrier et l'ajout d'un drapeau critique pour celui-ci.
 
 ## Constructeur
 
-- {{JSxRef("Temporal/PlainYearMonth/PlainYearMonth", "Temporal.PlainYearMonth()")}} {{Experimental_Inline}}
+- {{JSxRef("Temporal/PlainYearMonth/PlainYearMonth", "Temporal.PlainYearMonth()")}}
   - : Crée un nouvel objet `Temporal.PlainYearMonth` en fournissant directement les données sous-jacentes.
 
 ## Méthodes statiques
@@ -42,7 +42,7 @@ Lors de la sérialisation, vous pouvez configurer l'affichage de l'identifiant d
 - {{JSxRef("Temporal/PlainYearMonth/compare", "Temporal.PlainYearMonth.compare()")}}
   - : Retourne un nombre (-1, 0 ou 1) indiquant si le premier mois de l'année qui précède, est identique ou suit le second mois de l'année. Équivaut à comparer leurs dates ISO 8601 sous-jacentes. Deux mois de l'année de calendriers différents peuvent être considérés comme égaux s'ils commencent à la même date ISO.
 - {{JSxRef("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}
-  - : Crée un nouvel objet `Temporal.PlainYearMonth` à partir d'un autre objet `Temporal.PlainYearMonth`, d'un objet avec des propriétés year et month, ou d'une chaîne [RFC 9557](#rfc_9557_format).
+  - : Crée un nouvel objet `Temporal.PlainYearMonth` à partir d'un autre objet `Temporal.PlainYearMonth`, d'un objet avec des propriétés year et month, ou d'une chaîne de caractères [RFC 9557](#rfc_9557_format).
 
 ## Propriétés d'instance
 
@@ -69,7 +69,7 @@ Ces propriétés sont définies sur `Temporal.PlainYearMonth.prototype` et parta
 - {{JSxRef("Temporal/PlainYearMonth/monthsInYear", "Temporal.PlainYearMonth.prototype.monthsInYear")}}
   - : Retourne un entier positif représentant le nombre de mois dans l'année de cette valeur mois et année. Dépend du [calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendriers). Pour le calendrier ISO 8601, c'est toujours 12, mais dans d'autres systèmes de calendrier, cela peut varier.
 - {{JSxRef("Temporal/PlainYearMonth/year", "Temporal.PlainYearMonth.prototype.year")}}
-  - : Retourne un entier représentant le nombre d'années de cette valeur mois et année par rapport au début d'une année d'époque spécifique au calendrier. Dépend du [calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendriers). Généralement, l'année 1 est soit la première année de la dernière ère, soit l'année ISO 8601 `0001`. Si l'époque est au milieu de l'année, cette année aura la même valeur avant et après la date de début de l'ère.
+  - : Retourne un entier représentant le nombre d'années de cette valeur mois et année par rapport au début d'une année d'époque spécifique au calendrier. Dépend du [calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendriers). Généralement, l'année 1 est soit la première année de la dernière ère, soit l'année ISO 8601 `0001`. Si l'époque est au milieu de l'année, cette année a la même valeur avant et après la date de début de l'ère.
 - `Temporal.PlainYearMonth.prototype[Symbol.toStringTag]`
   - : La valeur initiale de la propriété [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne de caractères `"Temporal.PlainYearMonth"`. Cette propriété est utilisée dans {{JSxRef("Object.prototype.toString()")}}.
 

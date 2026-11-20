@@ -3,7 +3,7 @@ title: "Array : méthode statique of()"
 short-title: of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Array.of()`** crée une nouvelle instance de `Array` à partir d'un nombre variable d'arguments, quel que soit le nombre ou le type des arguments.
@@ -48,7 +48,7 @@ Array.of(1, 2, 3); // [1, 2, 3]
 Array(1, 2, 3); // [1, 2, 3]
 ```
 
-La méthode `Array.of()` est une méthode de fabrique générique. Par exemple, si une sous-classe de `Array` hérite de la méthode `of()`, la méthode héritée retournera de nouvelles instances de la sous-classe au lieu d'instances de `Array`. En fait, la valeur de `this` peut être n'importe quelle fonction constructeur qui accepte un seul argument représentant la longueur du nouveau tableau, et le constructeur sera appelé avec le nombre d'arguments passés à `of()`. La propriété finale `length` sera à nouveau définie une fois que tous les éléments auront été assignés. Si la valeur de `this` n'est pas une fonction constructeur, le constructeur natif `Array` est utilisé à la place.
+La méthode `Array.of()` est une méthode de fabrique générique. Par exemple, si une sous-classe de `Array` hérite de la méthode `of()`, la méthode héritée retourne de nouvelles instances de la sous-classe au lieu d'instances de `Array`. En fait, la valeur de `this` peut être n'importe quelle fonction constructeur qui accepte un seul argument représentant la longueur du nouveau tableau, et le constructeur est appelé avec le nombre d'arguments passés à `of()`. La propriété finale `length` est à nouveau définie une fois que tous les éléments ont été assignés. Si la valeur de `this` n'est pas une fonction constructeur, le constructeur natif `Array` est utilisé à la place.
 
 ## Exemples
 
@@ -92,10 +92,10 @@ console.log(Array.of.call({}, 1)); // [ 1 ]
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.of` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.of` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.of)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - Le constructeur {{JSxRef("Array/Array", "Array()")}}
 - La méthode {{JSxRef("Array.from()")}}
 - La méthode {{JSxRef("TypedArray.of()")}}
-- [Prothèse d'émulation de `Array.of` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.of` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.of)

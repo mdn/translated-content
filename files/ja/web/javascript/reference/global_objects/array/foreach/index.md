@@ -3,10 +3,10 @@ title: Array.prototype.forEach()
 short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-**`forEach()`** メソッドは、与えられた関数を、配列の各要素に対して一度ずつ実行します。
+**`forEach()`** は {{jsxref("Array")}} インスタンスのメソッドで、与えられた関数を、配列の各要素に対して一度ずつ実行します。
 
 {{InteractiveExample("JavaScript デモ: Array.prototype.forEach()")}}
 
@@ -260,7 +260,7 @@ Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
 
 ## 関連情報
 
-- [`Array.prototype.forEach` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.forEach` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.forEach` のポリフィル](https://www.npmjs.com/package/array.prototype.foreach)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}

@@ -50,7 +50,7 @@ l10n:
   - : ガイド、チェックリスト、ツールなどを含む。
 - [Web Accessibility Evaluation Tools List](https://www.w3.org/WAI/ER/tools/)
   - : ウェブアクセシビリティ評価ツールの一覧を含む。
-- [Learn Accessible Web Design](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Learn Accessible Web Design](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
   - : [Scrimba](https://scrimba.com?via=mdn) の _Learn Accessible Web Design_ コースでは、対話型のコーディング課題を解き、現実のウェブサイトを修正することで、アクセシビリティの高い HTML の書き方を学びます。
 
 {{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}

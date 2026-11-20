@@ -3,14 +3,14 @@ title: CSS スクロール駆動アニメーション
 short-title: スクロール駆動アニメーション
 slug: Web/CSS/Guides/Scroll-driven_animations
 l10n:
-  sourceCommit: 3ad3708851fee2f25927c90e0062f259dab5df18
+  sourceCommit: 4aba58b4ad2745a73054f60b6d649d8e29b7b44d
 ---
 
 **CSS スクロール駆動アニメーション**モジュールは、[CSS アニメーションモジュール](/ja/docs/Web/CSS/Guides/Animations)と[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) の上に構築する機能を提供します。これは、デフォルトの時間ベースの文書タイムラインではなく、スクロールベースのタイムラインに沿ってプロパティ値をアニメーションできるようにします。つまり、時間の経過だけでなく、要素自体、そのスクロールコンテナー、またはそのルート要素をスクロールすることで要素をアニメーションできるということです。
 
 ## スクロール駆動アニメーションの実演
 
-アニメーションを制御するスクローラーは、アニメーションに名前を付けるか、 {{cssxref("animation-timeline/scroll", "scroll()")}} 関数を使用するかして定義できます。
+アニメーションを制御するスクローラーは、アニメーションに名前を付けるか、{{cssxref("animation-timeline/scroll", "scroll()")}} 関数または {{cssxref("animation-timeline/view()", "view()")}} 関数を使用して定義できます。
 
 ```html hidden live-sample___scroll_animation
 <main>
@@ -143,6 +143,8 @@ div::after {
   - : スクロール駆動アニメーションのタイムラインとスクロール駆動アニメーションの作成についてです。
 - [タイムライン範囲名を理解する](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
   - : {{cssxref("timeline-range-name")}} データ型: さまざまなタイムライン範囲名を理解します。
+- [CSS スクロールトリガーアニメーションの使用](/ja/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
+  - : スクロールトリガーアニメーションを作成します。
 - [ビュー進行タイムラインのインセット](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets)
   - : スクロール連動アニメーションのアニメーション適用範囲をインセットします。
 
@@ -152,6 +154,18 @@ div::after {
   - {{cssxref("animation-timeline")}}
   - {{cssxref("@keyframes")}} アットルール
   - [`<keyframe-selector>`](/ja/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)
+- [CSS アニメーショントリガー](/ja/docs/Web/CSS/Guides/Animation_triggers)モジュール
+  - {{cssxref("animation-trigger")}}
+  - {{cssxref("timeline-trigger")}} 一括指定
+  - {{cssxref("timeline-trigger-activation-range")}} 一括指定
+    - {{cssxref("timeline-trigger-activation-range-end")}}
+    - {{cssxref("timeline-trigger-activation-range-start")}}
+  - {{cssxref("timeline-trigger-active-range")}} 一括指定
+    - {{cssxref("timeline-trigger-active-range-end")}}
+    - {{cssxref("timeline-trigger-active-range-start")}}
+  - {{cssxref("timeline-trigger-name")}}
+  - {{cssxref("timeline-trigger-source")}}
+  - {{cssxref("trigger-scope")}}
 - [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
   - {{glossary("Scroll container", "スクロールコンテナー")}}
   - [スクロールポート](/ja/docs/Glossary/Scroll_container#scrollport)

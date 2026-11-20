@@ -3,7 +3,7 @@ title: "`accept` 属性"
 short-title: accept
 slug: Web/HTML/Reference/Attributes/accept
 l10n:
-  sourceCommit: 2066cc916dfdcbb782340bf0ce562b230e947cba
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 **`accept`** 属性は、値としてカンマ区切りでファイル種別または[固有ファイル種別指定子](#unique_file_type_specifiers)を取り、どのファイル種別を受け入れるかを記述します。
@@ -102,15 +102,10 @@ accept プロパティは {{HTMLElement("input/file", "file")}} 型の {{htmlele
 ### 基本的な例
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="file">アップロードするファイルを選択してください</label>
-    <input type="file" id="file" name="file" multiple />
-  </div>
-  <div>
-    <button>送信</button>
-  </div>
-</form>
+<div>
+  <label for="file">アップロードするファイルを選択してください</label>
+  <input type="file" id="file" name="file" multiple />
+</div>
 ```
 
 ```css hidden
@@ -141,19 +136,14 @@ div {
 もっと完全な例を見てみましょう。
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="profile_pic">アップロードするファイルを選んでください</label>
-    <input
-      type="file"
-      id="profile_pic"
-      name="profile_pic"
-      accept=".jpg, .jpeg, .png" />
-  </div>
-  <div>
-    <button>送信</button>
-  </div>
-</form>
+<div>
+  <label for="profile_pic">アップロードするファイルを選んでください</label>
+  <input
+    type="file"
+    id="profile_pic"
+    name="profile_pic"
+    accept=".jpg, .jpeg, .png" />
+</div>
 ```
 
 ```css hidden

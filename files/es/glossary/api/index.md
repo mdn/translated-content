@@ -1,22 +1,21 @@
 ---
 title: API
 slug: Glossary/API
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Una **API** (interfaz de programación de aplicaciones, por sus siglas en inglés) es un conjunto de funcionalidades y reglas integradas en un programa de software (la aplicación) que permiten interactuar con él mediante software, a diferencia de una interfaz de usuario pensada para personas. Una API puede verse como un contrato sencillo (la interfaz) entre la aplicación que la ofrece y otros elementos, como software o hardware de terceros.
 
-## Resumen
+En el desarrollo web, una API suele ser un conjunto de recursos de código (por ejemplo, {{glossary("method","métodos")}}, {{Glossary("property","propiedades")}}, eventos y {{Glossary("URL","URLs")}}) que un desarrollador puede usar en sus aplicaciones para interactuar con componentes del navegador web del usuario, con otro software o hardware de su equipo, o con sitios web y servicios de terceros.
 
-Una **_Interfaz de Programación de Aplicaciones_** (API, por sus siglas en inglés) define un conjunto de directivas que pueden ser usadas para tener una pieza de software funcionando con algunas otras.
+Por ejemplo:
 
-## Más a fondo
+- La API [getUserMedia](/es/docs/Web/API/MediaDevices/getUserMedia) permite obtener audio y video de la cámara web del usuario, que luego queda a disposición del desarrollador para, por ejemplo, grabar video y audio, transmitirlos a otro usuario en una videoconferencia o capturar imágenes fijas del video.
+- La [API de geolocalización](/es/docs/Web/API/Geolocation) permite obtener información de ubicación a partir de los servicios que el usuario tiene disponibles en su dispositivo (por ejemplo, GPS). Esa información puede combinarse con otros servicios, como las [API de Google Maps](https://developers.google.com/maps/), para marcar la ubicación del usuario en un mapa personalizado y mostrarle qué atracciones turísticas hay en su zona.
+- La [API de animaciones web](/es/docs/Web/API/Web_Animations_API) permite animar partes de una página web, por ejemplo, para mover o rotar imágenes mediante código.
 
-Una Interfaz de Programación de Aplicaciones es un término común en Ciencias de la Computación. Es un término genérico que es usado para cubrir todos los requerimientos técnicos para tener varios componentes de software capaces de funcionar con los demás. En un contexto web, su uso es un poco más restrictivo, ya que es usado casi sólo con {{Glossary("JavaScript")}}. En ese contexto, una API es usualmente un conjunto de métodos, {{Glossary("JavaScript property","propiedades")}} y eventos para con el fin lograr ciertas tareas. Por ejemplo, el API 2D de {{Glossary("Canvas")}} provee los métodos necesarios para dibujar gráficos 2D dentro de un {{Glossary("elemento")}} Canvas de <{{Glossary("HTML")}}.
+## Véase también
 
-Pero en algunos puntos, un conjunto de {{Glossary("CSS property","propiedades de CSS")}} o {{Glossary("Element","elementos de HTML")}} también son API. Algunos conceptos de arquitectura técnica, como {{Glossary("REST")}}, incluso afirman que un conjunto de varias {{Glossary("URL","URL")}} formadas también son una API para usar en un sitio dado.
-
-## Conoce más
-
-### Conocimiento general
-
-- [API en Wikipedia](http://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones)
+- [Referencia de las API web](/es/docs/Web/API)
+- [API](https://es.wikipedia.org/wiki/API) en Wikipedia

@@ -125,5 +125,5 @@ NOT FOUND
 Итак, мы поговорили о процессах и архитектуре. Время двигаться дальше.
 
 - Если вы хотите попробовать сделать что-то руками, то самое время разобраться в дизайне и изучить [анатомию веб-страницы](/ru/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts).
-- Также не стоит забывать, что некоторые аспекты создания сайта стоят денег. Здесь мы рассказываем, [сколько стоит создание веб-сайта](/ru/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost).
+- Также не стоит забывать, что некоторые аспекты создания сайта стоят денег. Здесь мы рассказываем, [сколько стоит создание веб-сайта](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website).
 - И ещё вы можете прочитать о [доменных именах](http://en.wikipedia.org/wiki/Domain_name) в Wikipedia.

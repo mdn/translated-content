@@ -3,7 +3,7 @@ title: Fonction CSS `opacity()`
 short-title: opacity()
 slug: Web/CSS/Reference/Values/filter-function/opacity
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: cff28ac91efd68d0809779c81902bd080f614a1d
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`opacity()`** permet de modifier la transparence de l'image. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
@@ -52,7 +52,7 @@ opacity(amount)
 ### Paramètres
 
 - `amount` {{Optional_Inline}}
-  - : Niveau de transparence, exprimé en nombre ({{CSSxRef("&lt;number&gt;")}}) ou en pourcentage ({{CSSxRef("&lt;percentage&gt;")}}). Une valeur de `0%` rend l'image complètement transparente, tandis qu'une valeur de `100%` laisse l'image inchangée. Les valeurs comprises entre `0%` et `100%` appliquent un effet proportionnel. La valeur initiale utilisée pour {{Glossary("interpolation", "l'interpolation")}} est `1`. La valeur par défaut est `1`.
+  - : Niveau de transparence, exprimé en nombre ({{CSSxRef("&lt;number&gt;")}}) ou en pourcentage ({{CSSxRef("&lt;percentage&gt;")}}). Une valeur de `0%` rend l'image complètement transparente, tandis qu'une valeur de `100%` laisse l'image inchangée. Les valeurs comprises entre `0%` et `100%` appliquent un effet proportionnel. Les valeurs supérieures à `100%` sont autorisées, mais l'effet est limité à `100%`. Les valeurs négatives ne sont pas autorisées. La valeur initiale utilisée pour {{Glossary("interpolation", "l'interpolation")}} est `1`. La valeur par défaut est `1`.
 
 ## Syntaxe formelle
 
@@ -64,7 +64,7 @@ opacity(amount)
 
 ```css
 opacity(0%)   /* Complètement transparente */
-opacity(50%)  /* TTransparent à 50% */
+opacity(50%)  /* Transparente à 50% */
 
 opacity()     /* Aucun effet */
 opacity(1)

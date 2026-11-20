@@ -17,11 +17,10 @@ l10n:
 
 编程概念（或特定编程语言）的基础知识是有用的，但不是必需的。同样，客户端编码的专业知识也不是必需的，但基础知识将帮助你更好地与创建你的客户端 Web“前端”的开发人员合作。
 
-你需要了解“Web 是如何工作的”。我们建议你首先阅读以下主题：
+你需要了解“Web 是如何工作的”。我们建议你首先阅读以下模块：
 
-- [什么是 Web 服务器](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
-- [我需要什么软件来构建一个网站](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- [如何将文件上传到 Web 服务器？](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [环境搭建](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup)
+- [Web 标准](/zh-CN/docs/Learn_web_development/Getting_started/Web_standards)
 
 有了这些基本的了解，你就可以开始学习本节中的模块了。
 

@@ -78,7 +78,7 @@ l10n:
 
 これらを試してみて、一番合ったものを見つけてみましょう。
 
-- [Scrimba](https://scrimba.com/new?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Scrimba](https://scrimba.com/new?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
 - [JSFiddle](https://jsfiddle.net/)
 - [JSBin](https://jsbin.com/)
 - [CodePen](https://codepen.io/)
@@ -113,7 +113,7 @@ l10n:
 
 - [ウェブサーバーとは何か](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [ドメイン名を理解する](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
-- [ウェブサイトで何かするのにいくらかかるか?](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
+- [ウェブサイトで何かするのにいくらかかるか?](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 - [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website): Codecademy の良いチュートリアルで、もう少し詳しく追加のテクニック含めて示しています。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}

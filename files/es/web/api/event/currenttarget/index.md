@@ -40,4 +40,4 @@ document.body.addEventListener("click", hide, false);
 
 ## Ver también
 
-[Comparativa de Event Targets](/es/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+[Comparativa de Event Targets](/es/docs/Learn_web_development/Core/Scripting/Event_bubbling)

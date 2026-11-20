@@ -3,7 +3,7 @@ title: "Temporal.PlainDate : méthode toJSON()"
 short-title: toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/toJSON
 l10n:
-  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
+  sourceCommit: 13d5331637ae88b41af236e4b3d1b6c901d08f69
 ---
 
 La méthode **`toJSON()`** des instances de {{JSxRef("Temporal.PlainDate")}} retourne une chaîne de caractères représentant cette date dans le même [format RFC 9557](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#format_rfc_9557) que l'appel de {{JSxRef("Temporal/PlainDate/toString", "toString()")}}. Elle est destinée à être appelée implicitement par {{JSxRef("JSON.stringify()")}}.
@@ -24,7 +24,7 @@ Une chaîne de caractères représentant la date donnée dans le [format RFC 955
 
 ## Description
 
-La méthode `toJSON()` est automatiquement appelée par {{JSxRef("JSON.stringify()")}} lorsqu'un objet `Temporal.PlainDate` est converti en chaîne de caractères. Cette méthode est généralement destinée à, par défaut, sérialiser de manière utile les objets `Temporal.PlainDate` lors de la sérialisation [JSON](/fr/docs/Glossary/JSON), qui peuvent ensuite être désérialisés en utilisant la fonction {{JSxRef("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}} comme réactivateur de {{JSxRef("JSON.parse()")}}.
+La méthode `toJSON()` est automatiquement appelée par {{JSxRef("JSON.stringify()")}} lorsqu'un objet `Temporal.PlainDate` est converti en chaîne de caractères. Cette méthode est généralement destinée à, par défaut, sérialiser de manière utile les objets `Temporal.PlainDate` lors de la sérialisation [JSON](/fr/docs/Glossary/JSON), qui peuvent ensuite être désérialisés en utilisant la fonction {{JSxRef("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}} dans le réactivateur de {{JSxRef("JSON.parse()")}}.
 
 ## Exemples
 

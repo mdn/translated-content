@@ -3,7 +3,7 @@ title: フレックスボックスの基本概念
 short-title: 基本概念
 slug: Web/CSS/Guides/Flexible_box_layout/Basic_concepts
 l10n:
-  sourceCommit: 81f8fcd666952c1782653a3675347c392cc997ca
+  sourceCommit: 3143a6094e7b87cf1a96b61f9551fb4d95049777
 ---
 
 [フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)（通常フレックスボックスと呼ばれる）は、アイテム間の余白を分配するための一次元レイアウトモデルで、数多くの配置機能を含んでいます。この記事ではフレックスボックスの主な機能の概要を説明し、このガイドの残りの部分でさらに詳しく説明します。
@@ -67,12 +67,12 @@ l10n:
 
 CSS のすべてのプロパティと同様に、いくつかの初期値が定義されており、新しいフレックスコンテナーのコンテンツは次のように動作します。
 
-- フレックスアイテムは行に沿って並んで表示されます（{{cssxref("flex-direction")}} プロパティの既定値は `row` です）。
+- フレックスアイテムは行に沿って並んで表示されます（{{cssxref("flex-direction")}} プロパティのデフォルト値は `row` です）。
 - フレックスアイテムは主軸の先頭側を先頭に並びます。
-- フレックスアイテムは主軸方向に引き伸ばされませんが、収縮する場合があります（フレックスアイテムの {{cssxref("flex-grow")}} プロパティの既定値は `0`、 {{cssxref("flex-shrink")}} プロパティの既定値は `1` です）。
-- フレックスアイテムは、交差軸の大きさを埋めるように引き伸ばされます（{{cssxref("align-items")}} プロパティの既定値は `stretch` です）。
-- フレックスアイテムの {{cssxref("flex-basis")}} プロパティの既定値は `auto` です。つまり、横書きの場合はフレックスアイテムの {{cssxref("width")}} と等しくなり、縦書きの場合はフレックスアイテムの {{cssxref("height")}} と等しくなります。対応する `width`/`height` も `auto` に設定されている場合は、代わりに `flex-basis` の `content` の値が使用されます。
-- すべてのアイテムは 1 列に並び（{{cssxref("flex-wrap")}} プロパティの既定値は `nowrap` です）、それらの `width`/`height` の合計がコンテナー要素の `width`/`height` を超えると、コンテナーからはみ出します。
+- フレックスアイテムは主軸方向に引き伸ばされませんが、収縮する場合があります（フレックスアイテムの {{cssxref("flex-grow")}} プロパティのデフォルト値は `0`、 {{cssxref("flex-shrink")}} プロパティのデフォルト値は `1` です）。
+- フレックスアイテムは、交差軸の大きさを埋めるように引き伸ばされます（{{cssxref("align-items")}} プロパティのデフォルト値は `stretch` です）。
+- フレックスアイテムの {{cssxref("flex-basis")}} プロパティのデフォルト値は `auto` です。つまり、横書きの場合はフレックスアイテムの {{cssxref("width")}} と等しくなり、縦書きの場合はフレックスアイテムの {{cssxref("height")}} と等しくなります。対応する `width`/`height` も `auto` に設定されている場合は、代わりに `flex-basis` の `content` の値が使用されます。
+- すべてのアイテムは 1 列に並び（{{cssxref("flex-wrap")}} プロパティのデフォルト値は `nowrap` です）、それらの `width`/`height` の合計がコンテナー要素の `width`/`height` を超えると、コンテナーからはみ出します。
 
 その結果、アイテムはすべて一行に並び、コンテンツの寸法が主軸方向の寸法になります。アイテムがコンテナーに収まらない場合は、折り返されずにあふれます。一部のアイテムの高さが他のアイテムより高い場合、すべてのアイテムは交差軸全体の大きさまで引き伸ばされます。
 
@@ -339,7 +339,7 @@ CSS のすべてのプロパティと同様に、いくつかの初期値が定�
 
 {{cssxref("align-items")}} プロパティは、交差軸におけるアイテムの配置を行います。
 
-このプロパティの既定値は `stretch` であり、フレックスアイテムは既定ではフレックスコンテナーの高さ（`flex-direction` が `column` または `column-reverse` に設定されている場合は幅）に引き伸ばされます。この高さはコンテナー内で最も背の高いアイテムか、フレックスコンテナーそのものに設定されているサイズから決まります。
+このプロパティの初期値は `stretch` であり、フレックスアイテムはデフォルトでフレックスコンテナーの高さ（`flex-direction` が `column` または `column-reverse` に設定されている場合は幅）に引き伸ばされます。この高さはコンテナー内で最も背の高いアイテムか、フレックスコンテナーそのものに設定されているサイズから決まります。
 
 アイテムをフレックスコンテナーの先頭側に揃えるためには `align-items` に `flex-start` または単に `start` を設定し、末尾側に揃えるためには `flex-end` または単に `end` を、中央揃えにするには `center` を設定します。 以下の例で試してみましょう。この例では、コンテナー内でアイテムがどのように移動するかわかりやすくするためフレックスコンテナーに高さを設定しています。`align-items` に以下の値を設定したときにそれぞれ何が起こるか確認してください。
 
@@ -429,13 +429,13 @@ CSS のすべてのプロパティと同様に、いくつかの初期値が定�
 
 ### justify-items
 
-[`justify-items`](/ja/docs/Web/CSS/Reference/Properties/justify-items) プロパティは、フレックスボックスレイアウトでは無視されます。
+{{cssxref("justify-items")}} プロパティは、フレックスボックスレイアウトでは無視されます。
 
 ### place-items と place-content
 
-[`place-items`](/ja/docs/Web/CSS/Reference/Properties/place-items) プロパティは `align-items` と `justify-items` の一括指定プロパティです。フレックスコンテナーに設定すると、配置は設定されますが位置ぞろえは設定されず、 `justify-items` はフレックスボックスでは無視されます。
+{{cssxref("place-items")}} プロパティは `align-items` と `justify-items` の一括指定プロパティです。フレックスコンテナーに設定すると、配置は設定されますが位置ぞろえは設定されず、 `justify-items` はフレックスボックスでは無視されます。
 
-別な一括指定プロパティとして [`place-content`](/ja/docs/Web/CSS/Reference/Properties/place-content) があり、これは {{cssxref("align-content")}} プロパティと `justify-content` プロパティを定義します。 `align-content` プロパティは折り返しのあるフレックスコンテナーにのみ効果があり、[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)で解説しています。
+別な一括指定プロパティとして {{cssxref("place-content")}} があり、これは {{cssxref("align-content")}} プロパティと `justify-content` プロパティを定義します。 `align-content` プロパティは折り返しのあるフレックスコンテナーにのみ効果があり、[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)で解説しています。
 
 ## 次のステップ
 

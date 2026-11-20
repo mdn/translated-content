@@ -3,7 +3,7 @@ title: Constructeur AsyncDisposableStack()
 short-title: AsyncDisposableStack()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/AsyncDisposableStack
 l10n:
-  sourceCommit: 7a5b580a28a0b1a33e42e9fb81c8234994ec0e36
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Le constructeur **`AsyncDisposableStack()`** crée des objets {{JSxRef("AsyncDisposableStack")}}.
@@ -46,4 +46,5 @@ await gestionnaire.disposeAsync();
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `AsyncDisposableStack` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources en JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)

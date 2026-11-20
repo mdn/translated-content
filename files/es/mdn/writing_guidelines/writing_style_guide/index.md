@@ -3,7 +3,7 @@ title: Guía de estilo de redacción
 short-title: Guía de estilo
 slug: MDN/Writing_guidelines/Writing_style_guide
 l10n:
-  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
 
 Esta guía de estilo de redacción describe cómo debe escribirse, organizarse, deletrearse y formatearse el contenido en MDN Web Docs.
@@ -21,12 +21,14 @@ El objetivo es escribir páginas que incluyan toda la información que los lecto
 
 Las siguientes subsecciones proporcionan las recomendaciones para lograr esto:
 
-- [Considera tu público objetivo](#considera_tu_publico_objetivo)
-- [Considera las tres C de la redacción](#considera_las_tres_c_de_la_redaccion)
+- [Considera tu público objetivo](#considera_tu_público_objetivo)
+- [Considera las tres C de la redacción](#considera_las_tres_c_de_la_redacción)
 - [Incluye ejemplos relevantes](#incluye_ejemplos_relevantes)
-- [Proporciona una introducción descriptiva](#proporciona_una_introduccion_descriptiva)
+- [Proporciona una introducción descriptiva](#proporciona_una_introducción_descriptiva)
 - [Usa un lenguaje inclusivo](#usa_un_lenguaje_inclusivo)
+- [Usa un lenguaje accesible](#usa_un_lenguaje_accesible)
 - [Escribe pensando en SEO](#escribe_pensando_en_seo)
+- [Sé responsable de lo que escribes](#sé_responsable_de_lo_que_escribes)
 
 ### Considera tu público objetivo
 
@@ -83,7 +85,7 @@ En una guía o tutorial, el(los) párrafo(s) introductorio(s) debe(n) informar a
   > El método **`strokeText()`** de {{domxref("CanvasRenderingContext2D")}}, parte de la [API Canvas 2D](/es/docs/Web/API/Canvas_API), traza (dibuja los contornos de) los caracteres de una cadena especificada, anclada en la posición indicada por las coordenadas X e Y dadas.
   > El texto se dibuja usando la {{domxref("CanvasRenderingContext2D.font", "fuente")}} actual del contexto, y se justifica y alinea de acuerdo con las propiedades {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}} y {{domxref("CanvasRenderingContext2D.direction", "direction")}}.
   >
-  > Para obtener más detalles y ejemplos, consulta la sección [Texto](/es/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics#texto) en la página Dibujo de gráficos, así como nuestro artículo principal sobre el tema, [Dibujo de texto](/es/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+  > Para obtener más detalles y ejemplos, consulta la sección [Texto](/es/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics) en la página Dibujo de gráficos, así como nuestro artículo principal sobre el tema, [Dibujo de texto](/es/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 ### Usa un lenguaje inclusivo
 
@@ -139,7 +141,7 @@ En su lugar, usa frases descriptivas que identifiquen claramente la sección, co
 
 Por ejemplo:
 
-- **Correcto**: "Consulta la sección [Accesibilidad](/es/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient#accesibilidad) más adelante en esta página."
+- **Correcto**: "Consulta la sección [Accesibilidad](/es/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient) más adelante en esta página."
 - **Incorrecto**: "Consulta la sección de Accesibilidad a continuación."
 
 - **Correcto**: "En el siguiente ejemplo de código, animamos un círculo usando transiciones de CSS."
@@ -193,20 +195,26 @@ La siguiente lista de verificación es buena para tener en cuenta al escribir y 
 
 - **Enfócate en el contenido del tema**: Es mucho mejor escribir contenido en torno al tema de la página que una palabra clave específica. Es muy probable que haya muchas palabras clave que podrías incluir para un tema dado; de hecho, muchos expertos en SEO compilan una lista de 5-100 palabras clave diferentes (variando entre palabras clave cortas, medianas y de cola larga) para incluir dentro de su artículo, dependiendo de la longitud. Hacerlo diversificará tu redacción, lo que llevará a menos repetición.
 
+### Sé responsable de lo que escribes
+
+Sean cuales sean las herramientas que uses para escribir, tú eres responsable del resultado.
+Una persona debe revisar toda la prosa antes de enviarla.
+Edita el texto para que siga las [tres C de la redacción](#considera_las_tres_c_de_la_redacción) y comprueba que sea técnicamente correcto.
+
 ## Estilo de redacción
 
 Además de escribir oraciones gramaticalmente correctas en inglés, te recomendamos que sigas estas pautas para mantener el contenido coherente en MDN Web Docs.
 
-- [Abreviaturas y acrónimos](#abreviaturas_y_acronimos)
-- [Uso de mayúsculas](#uso_de_mayusculas)
+- [Abreviaturas y acrónimos](#abreviaturas_y_acrónimos)
+- [Uso de mayúsculas](#uso_de_mayúsculas)
 - [Contracciones](#contracciones)
-- [Números y numerales](#numeros_y_numerales)
-- [Pluralización](#pluralizacion)
-- [Apóstrofos y comillas](#apostrofos_y_comillas)
+- [Números y numerales](#números_y_numerales)
+- [Pluralización](#pluralización)
+- [Apóstrofos y comillas](#apóstrofos_y_comillas)
 - [Comas](#comas)
 - [Guiones](#guiones)
-- [Ortografía](#ortografia)
-- [Terminología](#terminologia)
+- [Ortografía](#ortografía)
+- [Terminología](#terminología)
 - [Voz](#voz)
 
 ### Abreviaturas y acrónimos
@@ -414,7 +422,7 @@ Estas son nuestras recomendaciones para usar ciertos términos técnicos:
   - **Correcto**: el elemento `<span>`
   - **Incorrecto**: la etiqueta span
 
-  En MDN, opcionalmente puedes especificar el elemento HTML en el [`HTMLElement` macro](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_reference_pages), que lo estilizará, agregará los corchetes angulares "<>", así como agregará un enlace a su página de referencia.
+  En MDN, opcionalmente puedes especificar el elemento HTML en el [`HTMLElement` macro](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#enlaces_a_páginas_de_referencia), que lo estilizará, agregará los corchetes angulares "<>", así como agregará un enlace a su página de referencia.
   - **Usando comillas inversas**: `<span>`
   - **Usando la macro**: {{HTMLElement("span")}} (fuente en markdown: `\{{HTMLElement("span")}}`)
 
@@ -433,17 +441,17 @@ Intenta ser coherente, sin embargo.
 
 Esta sección enumera las pautas a seguir para diferentes partes de cada página, como encabezados, notas, enlaces y ejemplos.
 
-- [Ejemplos de código](#ejemplos_de_codigo)
-- [Referencias cruzadas (vinculación)](#referencias_cruzadas_vinculacion)
+- [Ejemplos de código](#ejemplos_de_código)
+- [Referencias cruzadas (vinculación)](#referencias_cruzadas_vinculación)
 - [Enlaces externos](#enlaces_externos)
 - [URL acortadas (enlaces cortos)](#url_acortadas_enlaces_cortos)
 - [Niveles de encabezado](#niveles_de_encabezado)
-- [Imágenes y otros medios](#imagenes_y_otros_medios)
+- [Imágenes y otros medios](#imágenes_y_otros_medios)
 - [Listas](#listas)
-- [Sección Véase también](#seccion_vease_tambien)
-- [Subpáginas](#subpaginas)
+- [Sección Véase también](#sección_véase_también)
+- [Subpáginas](#subpáginas)
 - [Slugs](#slugs)
-- [Títulos](#titulos)
+- [Títulos](#títulos)
 
 ### Ejemplos de código
 
@@ -472,18 +480,18 @@ Sigue un estilo coherente al vincular a secciones dentro de una página:
 
 Si la sección a la que te estás vinculando está en la misma página, puedes sugerir la ubicación de la sección usando frases descriptivas.
 
-- **Correcto**: "This concept is described in more detail in the [Accessibility](/es/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient#accesibilidad) section of this document."
-- **Incorrecto**: "This concept is described in more detail in the [Accessibility](/es/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient#accesibilidad) section below."
+- **Correcto**: "This concept is described in more detail in the [Accessibility](/es/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient) section of this document."
+- **Incorrecto**: "This concept is described in more detail in the [Accessibility](/es/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient) section below."
 
-En MDN, otra forma de vincular a una página de referencia es usando una macro. Estas macros se describen en la página [Macros de uso común](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_reference_pages). Por ejemplo, para vincular a la página de referencia de un elemento HTML, usa la macro `HTMLElement`, y para vincular a la página de referencia de una propiedad de CSS, usa la macro `CSSxRef`.
+En MDN, otra forma de vincular a una página de referencia es usando una macro. Estas macros se describen en la página [Macros de uso común](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#enlaces_a_páginas_de_referencia). Por ejemplo, para vincular a la página de referencia de un elemento HTML, usa la macro `HTMLElement`, y para vincular a la página de referencia de una propiedad de CSS, usa la macro `CSSxRef`.
 
-Seguimos pautas similares de referencia cruzada en las secciones [Véase también](#seccion_vease_tambien) al final de las páginas de referencia, páginas del glosario y guías.
+Seguimos pautas similares de referencia cruzada en las secciones [Véase también](#sección_véase_también) al final de las páginas de referencia, páginas del glosario y guías.
 
 ### Enlaces externos
 
 Los enlaces externos están permitidos en MDN Web Docs en situaciones específicas. Usa las pautas descritas en esta sección para decidir si es o no aceptable incluir un enlace externo en MDN Web Docs. Las solicitudes de incorporación de cambios que agreguen enlaces externos serán rechazadas si no siguen estas pautas.
 
-Si estás considerando agregar un enlace externo al contenido [Aprender desarrollo web](/es/docs/Learn_web_development) de MDN, por favor también lee [Pautas de redacción de contenido de aprendizaje > Enlaces y recursos asociados](/es/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds).
+Si estás considerando agregar un enlace externo al contenido [Aprender desarrollo web](/es/docs/Learn_web_development) de MDN, por favor también lee [Pautas de redacción de contenido de aprendizaje > Enlaces y recursos asociados](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos).
 
 En general, si estás considerando agregar un enlace externo, necesitas asegurar que haya un riesgo mínimo de lo siguiente:
 
@@ -550,7 +558,7 @@ Si incluyes imágenes u otros medios en una página, sigue estas pautas:
 - Asegúrate de que la licencia del medio te permita usarlos. Intenta usar medios que tengan una licencia muy permisiva como [CC0](https://creativecommons.org/public-domain/cc0/) o al menos una que sea compatible con nuestra licencia de contenido general — [Licencia Creative Commons Atribución-CompartirIgual](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
 - Para las imágenes, pásalas por <https://tinypng.com> o <https://imageoptim.com> para reducir el peso de la página.
 - Para `SVG`, pasa el código por [SVGOMG](https://jakearchibald.github.io/svgomg/), y asegúrate de que el archivo `SVG` tenga una línea vacía al final del archivo.
-- Cada imagen debe [incluir texto `alt` descriptivo](/es/docs/MDN/Writing_guidelines/Howto/Images_media#adding_alternative_text_to_images).
+- Cada imagen debe [incluir texto `alt` descriptivo](/es/docs/MDN/Writing_guidelines/Howto/Images_media#añadir_texto_alternativo_a_las_imágenes).
 
 ### Listas
 
@@ -596,9 +604,9 @@ Sin embargo, dependiendo del tipo de lista que estés creando, querrás ajustar 
 
 ### Sección Véase también
 
-La mayoría de las guías, páginas de referencia e incluso páginas del glosario en MDN Web Docs contienen una sección _Véase también_ al final del artículo. Esta sección contiene [referencias cruzadas](#referencias_cruzadas_vinculacion) a temas relacionados dentro de MDN y, a veces, enlaces a artículos externos relacionados. Por ejemplo, esta es la [sección Véase también](/es/docs/Web/CSS/Reference/At-rules/@layer#see_also) para la página `@layer`.
+La mayoría de las guías, páginas de referencia e incluso páginas del glosario en MDN Web Docs contienen una sección _Véase también_ al final del artículo. Esta sección contiene [referencias cruzadas](#referencias_cruzadas_vinculación) a temas relacionados dentro de MDN y, a veces, enlaces a artículos externos relacionados. Por ejemplo, esta es la [sección Véase también](/es/docs/Web/CSS/Reference/At-rules/@layer) para la página `@layer`.
 
-En general, presenta los enlaces en una sección Véase también en formato de [lista con viñetas](#listas) con cada elemento de la lista como una frase. Sin embargo, en la sección [Aprender desarrollo web](/es/docs/Learn_web_development) de MDN, la sección Véase también sigue el formato de [lista de definiciones](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#definition_lists).
+En general, presenta los enlaces en una sección Véase también en formato de [lista con viñetas](#listas) con cada elemento de la lista como una frase. Sin embargo, en la sección [Aprender desarrollo web](/es/docs/Learn_web_development) de MDN, la sección Véase también sigue el formato de [lista de definiciones](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#listas_de_definiciones).
 
 Para mantener la coherencia en MDN Web Docs, ten en cuenta las siguientes pautas al agregar o actualizar una sección Véase también.
 
@@ -609,7 +617,7 @@ Para mantener la coherencia en MDN Web Docs, ten en cuenta las siguientes pautas
 - Usa el uso de mayúsculas estilo oración en el texto del enlace incluso si es diferente del título de la página o sección vinculada. Podría ser que el uso de mayúsculas en el título de la página o sección sea incorrecto. Por ejemplo, el texto del enlace a la página [Quirks Mode](/es/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode) en mayúsculas de oración correctas será:
   - **Correcto**: [Quirks mode](/es/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
 - Para los enlaces externos también, usa mayúsculas de oración incluso si el uso de mayúsculas en la página del artículo de destino es diferente. Esto es para asegurar la coherencia en MDN Web Docs. Las excepciones incluyen nombres de libros.
-- En MDN, opcionalmente puedes usar una macro para vincular a una página, como se explica en la sección [Vincular a páginas de referencia](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_reference_pages) en la página _Macros de uso común_. El uso de la macro agregará formato de código a la palabra clave en el texto del enlace, como se muestra en el siguiente ejemplo.
+- En MDN, opcionalmente puedes usar una macro para vincular a una página, como se explica en la sección [Vincular a páginas de referencia](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#enlaces_a_páginas_de_referencia) en la página _Macros de uso común_. El uso de la macro agregará formato de código a la palabra clave en el texto del enlace, como se muestra en el siguiente ejemplo.
 - No se necesita ningún artículo ("Un", "Una", "El", "La") al comienzo del elemento de la lista de enlaces. No se requiere puntuación al final del elemento de la lista porque invariablemente será un término o una frase.
   - **Correcto**: {{cssxref("revert-layer")}}
   - **Incorrecto**: The {{cssxref("revert-layer")}} keyword.
@@ -625,7 +633,7 @@ Para mantener la coherencia en MDN Web Docs, ten en cuenta las siguientes pautas
   - **Correcto**: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("color")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}: Otras propiedades relacionadas con el color
 - Para los enlaces externos, trata de especificar el sitio web de origen y el año de publicación o última actualización (entre paréntesis) siempre que sea factible y apropiado. Proporcionar esta información por adelantado da a los lectores una idea clara del destino que alcanzarán al hacer clic en el enlace. La fecha de publicación o última actualización guía a los lectores para evaluar la relevancia del artículo vinculado y también ayuda a los mantenedores de MDN a revisar los enlaces a artículos que no se han actualizado en mucho tiempo. Si proporcionas un enlace a un artículo en Wikipedia, por ejemplo, puedes ignorar la fecha de publicación/actualización. El siguiente elemento de la lista es un ejemplo de agregar un enlace al artículo externo [Top-level await](https://v8.dev/features/top-level-await) en la sección Véase también, junto con la información de origen y año:
   - **Correcto**: [Top-level await](https://v8.dev/features/top-level-await) en v8.dev (2019)
-- Para los enlaces externos a libros, también puedes proporcionar los nombres de los autores. Se enumeran algunos ejemplos en la sección [Lectura adicional](#idioma_gramatica_y_ortografia). Abstente de agregar nombres de autores para publicaciones de blog o repositorios de GitHub a los que puedas vincular.
+- Para los enlaces externos a libros, también puedes proporcionar los nombres de los autores. Se enumeran algunos ejemplos en la sección [Lectura adicional](#idioma_gramática_y_ortografía). Abstente de agregar nombres de autores para publicaciones de blog o repositorios de GitHub a los que puedas vincular.
 
 #### Orden de los enlaces
 

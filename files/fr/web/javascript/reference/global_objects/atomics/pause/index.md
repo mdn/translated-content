@@ -3,7 +3,7 @@ title: "Atomics : méthode statique pause()"
 short-title: pause()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/pause
 l10n:
-  sourceCommit: f3bcd518b873a2264b2ec9005060741e4def8b2c
+  sourceCommit: 9d64ff6c5d0eee1800b0d3b4f9076de65f34f5ce
 ---
 
 La méthode statique **`Atomics.pause()`** fournit une primitive de micro‑attente qui indique au processeur que l'appelant effectue une boucle d'attente active en attendant l'accès à une ressource partagée. Cela permet au système de réduire les ressources allouées au cœur (par exemple la consommation d'énergie) ou au processus, sans céder l'exécution du processus courant.
@@ -30,34 +30,38 @@ Notez que ces exemples ne peuvent pas être exécutés directement depuis la con
 
 ### Utiliser la méthode `Atomics.pause()`
 
-Appeler {{JSxRef("Atomics.wait()")}} ou {{JSxRef("Atomics.waitAsync()")}} pour attendre l'accès à une mémoire partagée entraîne la mise hors du cœur du fil d'exécution, puis son retour après l'attente. Cela est efficace en période de forte contention, où l'accès à la mémoire partagée peut prendre un certain temps. Lorsque la contention est faible, il est souvent plus efficace de sonder le verrou sans céder le fil d'exécution&nbsp;: cette approche est connue sous le nom [d'attente active](https://fr.wikipedia.org/wiki/Attente_active) ou de [verrou tournant](https://fr.wikipedia.org/wiki/Spinlock). La méthode `pause()` permet d'effectuer l'attente active de manière plus efficace en fournissant au processeur un indice sur ce que fait le fil d'exécution, et donc sur son faible besoin en ressources.
+Appeler {{JSxRef("Atomics.wait()")}} ou {{JSxRef("Atomics.waitAsync()")}} pour attendre l'accès à une mémoire partagée entraîne la mise hors du cœur du fil d'exécution, puis son retour après l'attente. C'est efficace en période de forte contention, où l'accès à la mémoire partagée peut prendre un certain temps. Lorsque la contention est faible, il est souvent plus efficace de sonder le verrou sans céder le fil d'exécution&nbsp;: cette approche est connue sous le nom [d'attente active](https://fr.wikipedia.org/wiki/Attente_active) ou de [verrou tournant](https://fr.wikipedia.org/wiki/Spinlock). La méthode `pause()` permet d'effectuer l'attente active de manière plus efficace en fournissant au processeur un indice sur ce que fait le fil d'exécution, et donc sur son faible besoin en ressources.
 
-Pour couvrir les deux cas, une approche courante consiste d'abord à effectuer une attente active en espérant que la contention est faible, puis à attendre si le verrou n'est pas acquis après un court laps de temps. Si le verrou a déjà été acquis avec l'attente active, l'appel à `wait()` est une opération sans effet.
+Pour couvrir les deux cas, une approche courante consiste d'abord à effectuer une attente active en espérant que la contention est faible, puis à attendre si le verrou n'est pas acquis après un court laps de temps. Si le verrou a déjà été acquis avec l'attente active, l'appel à `wait()` est ignoré.
 
 L'exemple ci-dessous montre comment utiliser `Atomics.pause()` et `Atomics.wait()`.
 
 > [!WARNING]
-> L'utilisation des verrous tournants sur le thread principal n'est pas recommandée, car elle figerait la page entière. En général, à moins d'être conçus avec beaucoup de soin, les verrous tournants peuvent ne pas être plus performants qu'une attente normale.
+> L'utilisation des verrous tournants sur le processus principal n'est pas recommandée, car elle fige la page entière. En général, à moins d'être conçus avec beaucoup de soin, les verrous tournants peuvent ne pas être plus performants qu'une attente normale.
 
 ```js
 // Imaginez qu'un autre processus a aussi accès à cette mémoire partagée
 const sab = new SharedArrayBuffer(1024);
 const i32 = new Int32Array(sab);
 
-// Voie rapide : faire tourner le processeur un court instant
-let spin = 0;
-do {
-  if (Atomics.compareExchange(i32, 0, 0, 1) === 0) {
-    break;
-  }
-  Atomics.pause();
-  spin++;
-} while (spin < 10);
+function lock() {
+  while (true) {
+    // Voie rapide : faire tourner le processeur un court instant
+    let spin = 0;
+    do {
+      if (Atomics.compareExchange(i32, 0, 0, 1) === 0) {
+        break;
+      }
+      Atomics.pause();
+      spin++;
+    } while (spin < 10);
 
-// Voie lente : attendre le verrou
-// Cela ne peut être appelé que dans un worker, car le processus
-// principal ne peut pas être bloqué
-Atomics.wait(i32, 0, 1);
+    // Voie lente : attendre le verrou
+    // Cela ne peut être appelé que dans un worker, car le processus
+    // principal ne peut pas être bloqué
+    Atomics.wait(i32, 0, 1);
+  }
+}
 ```
 
 ## Spécifications

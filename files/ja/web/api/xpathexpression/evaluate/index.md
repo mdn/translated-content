@@ -23,7 +23,7 @@ evaluate(contextNode, type, result)
 - `contextNode`
   - : 式を評価するために使用するコンテキストを表す {{domxref("Node")}} です。
 - `type` {{optional_inline}}
-  - : 式を評価して返す結果の型を指定します。これは{{domxref("XPathResult", "XPathResult", "定数")}}のいずれかでなければなりません。
+  - : 式を評価して返す結果の型を指定します。これは{{domxref("XPathResult", "XPathResult", "#定数")}}のいずれかでなければなりません。
 - `result` {{optional_inline}}
   - : このメソッドが再利用して返す結果オブジェクトを指定することができます。
     `null` を指定した場合や、実装が指定した結果を再利用しない場合は、新しい結果オブジェクトを返します。

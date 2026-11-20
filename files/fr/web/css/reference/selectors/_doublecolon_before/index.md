@@ -65,7 +65,7 @@ Par défaut, les pseudo-éléments `::before` et `::after` partagent le même co
 
 ## Accessibilité
 
-Il est déconseillé d'utiliser un pseudo-élément `::before` pour ajouter du contenu, car ce n'est pas toujours accessible de manière fiable aux lecteur·ice·s d'écran.
+Il est déconseillé d'utiliser un pseudo-élément `::before` pour ajouter du contenu, car ce n'est pas toujours accessible de manière fiable aux lecteurs d'écran.
 
 ## Exemples
 

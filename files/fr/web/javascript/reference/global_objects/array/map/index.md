@@ -3,7 +3,7 @@ title: "Array : méthode map()"
 short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 l10n:
-  sourceCommit: 4df87a237b1ffa981254e5e3c97628f890ab1191
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`map()`** des instances de {{JSxRef("Array")}} crée un nouveau tableau rempli avec les résultats de l'appel d'une fonction fournie sur chaque élément du tableau appelant.
@@ -284,11 +284,11 @@ Vous pouvez aussi utiliser {{JSxRef("Array.from()")}} pour transformer `elems` e
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.map` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.map` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.map)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.forEach()")}}
 - La méthode {{JSxRef("Array.from()")}}
 - La méthode {{JSxRef("TypedArray.prototype.map()")}}
 - L'objet natif {{JSxRef("Map")}}
-- [Prothèse d'émulation de `Array.prototype.map` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.map` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.map)

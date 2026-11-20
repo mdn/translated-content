@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`closedBy`** de l'interface {{DOMxRef("HTMLDialogElement")}} indique les types d'actions utilisateur·ice·s qui peuvent être utilisées pour fermer l'élément {{HTMLElement("dialog")}} associé. Elle définit ou retourne la valeur de l'attribut {{HTMLElement("dialog", "<code>closedby</code>", "closedby")}} du dialogue.
+La propriété **`closedBy`** de l'interface {{DOMxRef("HTMLDialogElement")}} indique les types d'actions utilisateur·ice·s qui peuvent être utilisées pour fermer l'élément {{HTMLElement("dialog")}} associé. Elle définit ou retourne la valeur de l'attribut {{HTMLElement("dialog", "<code>closedby</code>", "#closedby")}} du dialogue.
 
 ## Valeur
 

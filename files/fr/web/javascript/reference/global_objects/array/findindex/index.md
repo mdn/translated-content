@@ -3,7 +3,7 @@ title: "Array : méthode findIndex()"
 short-title: findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 l10n:
-  sourceCommit: 9f46f08d20b21498293cbf6b84f508103272ec6f
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`findIndex()`** des instances de {{JSxRef("Array")}} retourne l'indice du premier élément d'un tableau qui satisfait la fonction de test fournie.
@@ -139,6 +139,8 @@ console.log(
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.findIndex` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.findIndex` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.findindex)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.find()")}}
@@ -147,5 +149,3 @@ console.log(
 - La méthode {{JSxRef("Array.prototype.indexOf()")}}
 - La méthode {{JSxRef("Array.prototype.lastIndexOf()")}}
 - La méthode {{JSxRef("TypedArray.prototype.findIndex()")}}
-- [Prothèse d'émulation core-js pour `Array.prototype.findIndex` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims pour `Array.prototype.findIndex` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.findindex)

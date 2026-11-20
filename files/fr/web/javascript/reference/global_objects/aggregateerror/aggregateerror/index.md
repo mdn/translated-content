@@ -3,7 +3,7 @@ title: Constructeur AggregateError()
 short-title: AggregateError()
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
 l10n:
-  sourceCommit: f5ff65031db62ca1d855f2043525462b00455d1b
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Le **constructeur `AggregateError()`** permet de créer une erreur qui agrège plusieurs erreurs.
@@ -21,7 +21,7 @@ AggregateError(errors, message, options)
 ```
 
 > [!NOTE]
-> La fonction `AggregateError()` peut être appelée avec ou sans [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Les deux créent une nouvelle instance d'`AggregateError`.
+> La fonction `AggregateError()` peut être appelée avec ou sans [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Les deux créent une nouvelle instance de `AggregateError`.
 
 ### Paramètres
 
@@ -61,5 +61,5 @@ try {
 ## Voir aussi
 
 - La propriété {{JSxRef("Promise.any")}}
-- [Une prothèse d'émulation pour `AggregateError` avec la bibliothèque `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-error)
-- [Une prothèse d'émulation es-shims pour `AggregateError` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-aggregate-error)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `AggregateError` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `AggregateError` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-aggregate-error)

@@ -3,7 +3,7 @@ title: フレックスアイテムの折り返しをマスターする
 short-title: フレックスアイテムの折り返し
 slug: Web/CSS/Guides/Flexible_box_layout/Wrapping_items
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: ae836b44d9faa0e9f581631ed1dcccd2a502b618
 ---
 
 フレックスボックスは一次元のレイアウトツールとして設計されており、アイテムを単一の行または列として扱います（両方同時ではありません）。しかし、フレックスアイテムを改行し、 {{cssxref("flex-direction")}} が `row` の場合は新しい行を、 `flex-direction` が `column` の場合は新しい列を生成することができます。このガイドでは、フレックスボックスの折り返しについて、何のために設計されているのか、どのような場合にフレックスボックスより [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)が必要になるかを説明します。
@@ -120,6 +120,101 @@ l10n:
 {{EmbedLiveSample("row-reverse-wrap")}}
 
 なお、反転は行内方向にのみ行われます。右から開始して 2 行目に進み、再び右から開始します。下から開始してコンテナーを上がっていくという、両方の方向で反転しているわけではありません。
+
+## バランスの取れた折り返し
+
+フレックスボックスで折り返す場合に起こりうる問題の 1 つは、デフォルトではフレックスアイテムが各行に均等に分配されないことです。前の例では、最初の 3 行にはアイテムが 3 つずつありますが、最後の行には 1 つしかありません。`flex-wrap` の値に `wrap` または `wrap-reverse` キーワードとともに [`balance`](/ja/docs/Web/CSS/Reference/Properties/flex-wrap#balance) キーワードを含めると、4 つのフレックス行にアイテムをより均等に分配できます。
+
+この例では前の例と同じ HTML とほぼ同じ CSS を使いますが、`flex-wrap` の値を `wrap` から `wrap balance` に変更しています。
+
+```html hidden live-sample___balanced-wrap live-sample___line-count
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+</div>
+```
+
+```css hidden live-sample___balanced-wrap
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap balance;
+  flex-direction: row-reverse;
+  width: 500px;
+}
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 160px;
+}
+```
+
+```css hidden live-sample___balanced-wrap live-sample___line-count
+@supports not (flex-wrap: balance) {
+  body::before {
+    content: "お使いのブラウザーは flex-wrap: balance に対応していません。";
+    background-color: wheat;
+    text-align: center;
+    padding: 1rem 0;
+
+    z-index: 1;
+    position: fixed;
+    inset: 40% 0 auto;
+  }
+}
+```
+
+```css
+flex-wrap: wrap balance;
+```
+
+この行は `flex-wrap: balance` とだけ書くこともできます。`flex-wrap` の値として `balance` キーワードだけを指定した場合、もう一方のキーワードはデフォルトで `wrap` になります。動作をわかりやすくするため、ここでは明示的に記述しています。`nowrap` 値とともに `balance` キーワードを含めるのは無効であり、その宣言は無視されることに注意してください。
+
+更新後の表示は次のようになります。
+
+{{EmbedLiveSample("balanced-wrap")}}
+
+アイテムがより均等に、つまり「バランスよく」分配され、3 つのアイテムからなる行が 2 行、2 つのアイテムからなる行が 2 行できていることに注目してください。
+
+バランスよく配置されたフレックスアイテムをさらに多くの行に分配するには、{{cssxref("flex-line-count")}} プロパティを使います。このプロパティは行の最小数を指定します。前の例に次のものを追加すると、
+
+```css hidden live-sample___line-count
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap balance;
+  flex-line-count: 5;
+  flex-direction: row-reverse;
+  width: 500px;
+}
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 160px;
+}
+```
+
+```css
+flex-line-count: 5;
+```
+
+次のようになります。
+
+{{EmbedLiveSample("line-count")}}
+
+フレックスアイテムが 2 つずつ並ぶ 5 行ができました。
+
+`flex-line-count` プロパティは、`flex-wrap` の値に `balance` キーワードを含まないフレックスコンテナーには効果がありません。
 
 ## 一次元レイアウトの説明
 
@@ -263,7 +358,7 @@ l10n:
 
 以下のライブ例では、折り返しのないフレックスコンテナー内に、等しいサイズに設定された 3 つのフレックスアイテムを含む行が含まれています。3 番目のアイテムには複数行のコンテンツがあり、コンテナーを拡大します。`align-items` のデフォルト値は `normal` です。フレックスアイテムの場合、`normal` は `stretch` と同様に動作するため、デフォルトではすべてのアイテムがコンテナーの交差軸サイズの高さを埋めるように伸縮します。
 
-交差軸サイズを生成するアイテムは `visibility: collapse` に設定されており、これによりフレックスアイテムが折りたたまれたり非表示になったりします（ブラウザーによって異なります）。いずれの場合でも、フレックスコンテナーは非表示であっても交差軸サイズの支柱を保持します。これにより、アイテムが表示された場合でも、単一行フレックスコンテナーの交差軸サイズは変化しません。CSSから`visibility: collapse`を削除するか、値を`visible`に変更すると、そのアイテムが表示され、主軸サイズの余白は非折り畳みアイテム間で再分配されますが、交差軸サイズは変更されません。
+交差軸サイズを生成するアイテムは `visibility: collapse` に設定されており、これによりフレックスアイテムが折りたたまれたり非表示になったりします（ブラウザーによって異なります）。いずれの場合でも、フレックスコンテナーは非表示であっても交差軸サイズの支柱を保持します。これにより、アイテムが表示された場合でも、単一行フレックスコンテナーの交差軸サイズは変化しません。CSS から `visibility: collapse` を削除するか、値を `visible` に変更すると、そのアイテムが表示され、主軸サイズの余白は折り畳まれていないアイテム間で再分配されますが、交差軸サイズは変化しません。
 
 > [!NOTE]
 > 以下の例では Firefox を使用してください。他の主要なブラウザーでは `collapse` を `hidden` として扱います。
@@ -309,14 +404,16 @@ p:has(:checked) + div .collapse {
 
 上の例は単一行で折り返しなしのフレックスコンテナーであり、幅は `600px` に固定されています。そのため、アイテムが表示されているか折り畳まれていても、幅は同じです。重要なのは、コンテナーは折り畳まれたアイテムの横方向サイズ（交差軸サイズ）の支柱を保持しますが、主軸サイズ（縦方向サイズ）は保持されないという点です。複数行フレックスコンテナーは、折り畳まれたアイテムをレンダリングから除外した後、アイテムを再配置します。折り畳まれたアイテムが主方向に生み出す新たな空間により、折り畳まれていないアイテムが、折り畳まれていた場合とは異なる行に配置される可能性があります。各行は独立した単一行フレックスコンテナーのようにレイアウトされ、折り畳み後に構成が変化するため、その交差軸サイズも変化する可能性があります。
 
-次の例はこの動作を示しています。3 番目のフレックスアイテムは折りたたまれているため、主軸方向の空間を一切占有しません（インラインサイズは `0`）。折り畳まれた状態では、その支柱は 4 番目のアイテムの後の最初の行に位置し、最初の行は 3 番目のアイテムが本来持つはずだった 3 行分のテキストを収めるのに十分な高さがあります。次に、このアイテムの折りたたみを解除すると（例：`collapse` クラスを削除）、最初の行に 5 番目のアイテムを配置する十分な横方向の空間がなくなるため、5 番目のアイテムは 2 行目に移動します。これにより、2 行目は新しいメンバーの 2 行分のテキストを収めるために高さが伸び、最後のフレックスアイテムは新しい行に押し出されます。2 行目が長くなり、新たに3行目が追加されたことで、フレックスコンテナの高さは以前よりも大幅に増加します。
+次の例はこの動作を示しています。3 番目のフレックスアイテムは折りたたまれているため、主軸方向の空間を一切占有しません（インラインサイズは `0`）。折り畳まれた状態では、その支柱は 4 番目のアイテムの後の最初の行に位置し、最初の行は 3 番目のアイテムが本来持つはずだった 3 行分のテキストを収めるのに十分な高さがあります。次に、このアイテムの折りたたみを解除すると（例：`collapse` クラスを削除）、最初の行に 5 番目のアイテムを配置する十分な横方向の空間がなくなるため、5 番目のアイテムは 2 行目に移動します。これにより、2 行目は新たに加わったアイテムの 2 行分のテキストを収めるために高さが伸び、最後のフレックスアイテムは新しい行に押し出されます。2 行目が長くなり、新たに 3 行目が追加されたことで、フレックスコンテナーの高さは以前よりも大幅に増加します。
 
 > [!NOTE]
 > 以下の例では Firefox を使用してください。他の主要なブラウザーでは `collapse` を `hidden` として扱います。
 
 ```html hidden live-sample___wrapped-visibility-collapse
 <p>
-  <label><input type="checkbox" /> Toggle <code>visibility</code> value</label>
+  <label
+    ><input type="checkbox" /> <code>visibility</code> の値の切り替え</label
+  >
 </p>
 ```
 
@@ -368,5 +465,5 @@ p:has(:checked) + div .collapse {
 
 ### `visibility: hidden` と `display: none` の使用
 
-上のライブサンプルにおいて、 `visiblity: collapse` の代わりに `visibility: hidden` または `display: none` を使用してみてください。 `visibility: hidden` を使用すると、アイテムは見えなくなりますが、ボックスは書式構造内に保持されるので、レイアウトの一部であるかのように動作します。
-`display: none` を使用すると、項目は完全に書式構造から除去されます。見えないだけでなく、構造も除去されます。これはカウンターがそれを無視し、トランジションなどのことが実行されないことを意味しています。
+上のライブサンプルにおいて、`visibility: collapse` の代わりに `visibility: hidden` または `display: none` を使用してみてください。`visibility: hidden` を使用すると、アイテムは見えなくなりますが、ボックスは書式構造内に保持されるので、レイアウトの一部であるかのように動作します。
+`display: none` を使用すると、アイテムは書式構造から完全に取り除かれます。見えなくなるだけでなく、構造からも除かれます。そのため、カウンターはそのアイテムを無視し、トランジションなども実行されません。

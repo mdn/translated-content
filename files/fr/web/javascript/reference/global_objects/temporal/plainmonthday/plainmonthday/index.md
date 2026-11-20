@@ -3,10 +3,8 @@ title: Constructeur Temporal.PlainMonthDay()
 short-title: Temporal.PlainMonthDay()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay/PlainMonthDay
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 76c2e04d720aa8260ba7d75788ed96776aac35c6
 ---
-
-{{SeeCompatTable}}
 
 Le constructeur **`Temporal.PlainMonthDay()`** crée des objets {{JSxRef("Temporal.PlainMonthDay")}}.
 
@@ -24,7 +22,7 @@ new Temporal.PlainMonthDay(month, day, calendar, referenceYear)
 > `Temporal.PlainMonthDay()` ne peut être construit qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` lève un {{JSxRef("TypeError")}}.
 
 > [!WARNING]
-> Évitez d'utiliser les paramètres `calendar` et `referenceYear`, car {{JSxRef("Temporal/PlainMonthDay/equals", "equals()")}} prendra en compte l'année de référence pour l'égalité, ce qui peut amener deux mois et jours équivalents à être considérés comme différents si leurs années de référence diffèrent. Pour créer un objet `Temporal.PlainMonthDay` avec un calendrier non ISO, utilisez la méthode statique {{JSxRef("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}}.
+> Évitez d'utiliser les paramètres `calendar` et `referenceYear`, car {{JSxRef("Temporal/PlainMonthDay/equals", "equals()")}} prend en compte l'année de référence pour l'égalité, ce qui peut amener deux mois et jours équivalents à être considérés comme différents si leurs années de référence diffèrent. Pour créer un objet `Temporal.PlainMonthDay` avec un calendrier non ISO, utilisez la méthode statique {{JSxRef("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}}.
 
 ### Paramètres
 

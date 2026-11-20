@@ -3,7 +3,7 @@ title: "DisposableStack : méthode dispose()"
 short-title: dispose()
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/dispose
 l10n:
-  sourceCommit: 5d6f5187d1c657edec7e735d3cc5ad36907e2030
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`dispose()`** des instances de {{JSxRef("DisposableStack")}} libère cette pile en appelant tous les gestionnaires de libération enregistrés dans l'ordre inverse de leur enregistrement. Si la pile est déjà libérée, cette méthode ne fait rien.
@@ -35,7 +35,7 @@ Aucune ({{JSxRef("undefined")}}).
 
 Ici, nous ajoutons trois gestionnaires de libération à la pile, en utilisant les méthodes {{JSxRef("DisposableStack/use", "use()")}}, {{JSxRef("DisposableStack/adopt", "adopt()")}} et {{JSxRef("DisposableStack/defer", "defer()")}}. Lorsque `dispose()` est appelée, les gestionnaires sont appelés dans l'ordre inverse de leur enregistrement.
 
-Notez que généralement, vous n'avez pas besoin d'appeler `dispose()` manuellement. Déclarez la pile avec {{JSxRef("Statements/using", "using")}}, et sa méthode [`[Symbol.dispose]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DisposableStack/Symbol.dispose) sera automatiquement appelée lorsque la pile sort de la portée.
+Notez que généralement, vous n'avez pas besoin d'appeler `dispose()` manuellement. Déclarez la pile avec {{JSxRef("Statements/using", "using")}}, et sa méthode [`[Symbol.dispose]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DisposableStack/Symbol.dispose) est automatiquement appelée lorsque la pile sort de la portée.
 
 ```js
 class Resource {
@@ -72,6 +72,7 @@ class Resource {
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `DisposableStack.prototype.dispose` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
 - L'objet natif {{JSxRef("DisposableStack")}}
 - La méthode {{JSxRef("DisposableStack.prototype.adopt()")}}

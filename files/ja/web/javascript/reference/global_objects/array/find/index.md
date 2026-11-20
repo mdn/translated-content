@@ -3,16 +3,18 @@ title: Array.prototype.find()
 short-title: find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-**`find()`** は {{jsxref("Array")}} インスタンスのメソッドで、提供されたテスト関数を満たす配列内の最初の要素を返します。
-テスト関数を満たす値がない場合は、 {{jsxref("undefined")}} を返します。
+**`find()`** は {{jsxref("Array")}} インスタンスのメソッドで、提供された判定関数を満たす配列内の最初の要素を返します。
+判定関数を満たす値がない場合は、 {{jsxref("undefined")}} を返します。
 
 - 配列内で見つかった要素の**インデックス**が必要な場合は、{{jsxref("Array/findIndex", "findIndex()")}} を使用してください。
-- **値のインデックス**を検索する必要がある場合は、{{jsxref("Array/indexOf", "indexOf()")}} を使用してください。({{jsxref("Array/findIndex", "findIndex()")}} と似ていますが、それぞれの要素の等価性はテスト関数ではなく値でチェックします。)
+- **値のインデックス**を検索する必要がある場合は、{{jsxref("Array/indexOf", "indexOf()")}} を使用してください。
+  （{{jsxref("Array/findIndex", "findIndex()")}} と似ていますが、それぞれの要素の等価性判定関数ではなく値でチェックします。）
 - 配列内に値が**存在する**かどうかを調べる必要がある場合は、 {{jsxref("Array/includes", "includes()")}} を使用してください。
-- 指定したテスト関数を満たす要素があるかどうかを調べる必要がある場合は、 {{jsxref("Array/some", "some()")}} を使用してください。
+  こちらも、判定関数を使用せず、それぞれの要素が値と等しいかどうかを個別に調べます。
+- 指定した判定関数を満たす要素があるかどうかを調べる必要がある場合は、 {{jsxref("Array/some", "some()")}} を使用してください。
 - 指定された検査関数を満たすすべての要素を探す必要がある場合は、 {{jsxref("Array/filter", "filter()")}} を使用してください。
 
 {{InteractiveExample("JavaScript デモ: Array.prototype.find()", "shorter")}}
@@ -48,7 +50,7 @@ find(callbackFn, thisArg)
 
 ### 返値
 
-配列の中で、提供されたテスト関数を満たす最初の要素です。
+配列の中で、提供された判定関数を満たす最初の要素です。
 見つからなかった場合は {{jsxref("undefined")}} を返します。
 
 ## 解説
@@ -117,7 +119,7 @@ console.log([4, 5, 8, 12].find(isPrime)); // 5
 ```
 
 > [!NOTE]
-> `isPrime()` の実装は、説明のみを目的としています。実際のアプリケーションでは、繰り返し計算を避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)などの、高度に最適化されたアルゴリズムを使用することをお勧めします。
+> `isPrime()` の実装は、説明のみを目的としています。実際のアプリケーションでは、繰り返し計算を避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)などの、{{Glossary("Memoization", "メモ化")}}を多用したアルゴリズムを使用することをお勧めします。
 
 ### callbackFn の第 3 引数の使用
 
@@ -205,7 +207,7 @@ console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
 
 ## 関連情報
 
-- [`Array.prototype.find` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.find` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.find` のポリフィル](https://www.npmjs.com/package/array.prototype.find)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}

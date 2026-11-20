@@ -3,7 +3,7 @@ title: Directrices para escribir ejemplos de código CSS
 short-title: Ejemplos de CSS
 slug: MDN/Writing_guidelines/Code_style_guide/CSS
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b25798255cfb773885c94557b74179400ac7153d
 ---
 
 Las siguientes directrices abordan cómo escribir ejemplos de código CSS para MDN Web Docs.
@@ -42,7 +42,7 @@ No utilices la sintaxis de preprocesadores, como [Sass](https://sass-lang.com/),
 
 ### No uses metodologías CSS específicas
 
-En el mismo espíritu que la guía anterior, no escribas códigos de ejemplo en MDN Web Docs utilizando una metodología CSS específica como [BEM](https://getbem.com/naming/) o [SMACSS](https://smacss.com/). Aunque son sintaxis CSS válidas, las convenciones de nombres pueden resultar confusas para personas que no están familiarizadas con esas metodologías.
+En el mismo espíritu que la guía anterior, no escribas códigos de ejemplo en MDN Web Docs utilizando una metodología CSS específica como [BEM](https://css-tricks.com/bem-101/) o [SMACSS](https://smacss.com/). Aunque son sintaxis CSS válidas, las convenciones de nombres pueden resultar confusas para personas que no están familiarizadas con esas metodologías.
 
 ### No uses reinicios (resets)
 

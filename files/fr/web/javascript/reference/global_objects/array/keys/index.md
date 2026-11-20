@@ -3,7 +3,7 @@ title: "Array : méthode keys()"
 short-title: keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`keys()`** des instances de {{JSxRef("Array")}} retourne un nouvel objet _[itérateur de tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ qui contient les clés pour chaque indice du tableau.
@@ -39,7 +39,7 @@ Un nouvel [objet itérateur itérable](/fr/docs/Web/JavaScript/Reference/Global_
 
 ## Description
 
-Lorsqu'elle est utilisée sur un [tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux), la méthode `keys()` itère sur les emplacements vides comme s'ils avaient la valeur `undefined`.
+Lorsqu'elle est utilisée sur un [tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux), la méthode `keys()` itère sur les emplacements vides comme s'ils ont la valeur `undefined`.
 
 La méthode `keys()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend uniquement que la valeur de `this` possède une propriété `length` et des propriétés à clés entières.
 
@@ -83,6 +83,8 @@ for (const entry of Array.prototype.keys.call(objetSimilaireTableau)) {
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.keys` dans core-js <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.keys` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.keys)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.entries()")}}
@@ -90,5 +92,3 @@ for (const entry of Array.prototype.keys.call(objetSimilaireTableau)) {
 - [`Array.prototype[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
 - La méthode {{JSxRef("TypedArray.prototype.keys()")}}
 - [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [Prothèse d'émulation de `Array.prototype.keys` dans core-js <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.keys` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.keys)

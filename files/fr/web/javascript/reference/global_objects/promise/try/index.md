@@ -3,10 +3,10 @@ title: "Promise : méthode statique try()"
 short-title: try()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/try
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-La méthode statique **`Promise.try()`** prend une fonction de rappel de n'importe quel type (qui retourne ou lève une erreur, de manière synchrone ou asynchrone) et enveloppe son résultat dans une promesse ({{JSxRef("Promise")}}).
+La méthode statique **`Promise.try()`** prend une fonction de rappel de n'importe quel type (qui retourne ou lève une erreur, de manière synchrone ou asynchrone) et [résout](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) son résultat en une promesse ({{JSxRef("Promise")}}).
 
 ## Syntaxe
 
@@ -30,25 +30,38 @@ Une promesse ({{JSxRef("Promise")}}) qui est&nbsp;:
 
 - Déjà complétée, si `func` retourne une valeur de manière synchrone.
 - Déjà rompue, si `func` lève une erreur de manière synchrone.
-- Complétée ou rompue de manière asynchrone, si `func` retourne une promesse.
+- Complétée ou rompue de manière asynchrone, si `func` retourne une promesse. La valeur retournée est [résolue](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) en une promesse, ce qui signifie que les objets {{JSxRef("Promise")}} intégrés sont retournés tels quels.
 
 ## Description
 
 Vous pouvez avoir une API qui prend une fonction de rappel. La fonction de rappel peut être synchrone ou asynchrone. Vous voulez tout gérer de manière uniforme en enveloppant le résultat dans une promesse. La manière la plus simple peut être {{JSxRef("Promise/resolve", "Promise.resolve(func())")}}. Le problème est que si `func()` lève une erreur de manière synchrone, cette erreur n'est pas capturée et transformée en promesse rompue.
 
-L'approche courante (élever le résultat d'un appel de fonction dans une promesse, complétée ou rompue) ressemble souvent à ceci&nbsp;:
+Vous pouvez envelopper cette expression dans un bloc `try...catch`&nbsp;:
+
+```js
+let resultat;
+try {
+  resultat = Promise.resolve(func());
+} catch (erreur) {
+  resultat = Promise.reject(erreur);
+}
+```
+
+Le problème est que `try...catch` n'est pas une expression, donc vous ne pouvez pas l'utiliser directement dans des positions d'expression comme le passage à d'autres fonctions.
+
+Par conséquent, lorsqu'il s'agit d'élever le résultat d'un appel de fonction dans une promesse, qu'elle soit complétée ou rompue, on utilise plus couramment cette approche&nbsp;:
 
 ```js
 new Promise((resolve) => resolve(func()));
 ```
 
-Mais `Promise.try()` est plus utile ici&nbsp;:
+Pour le constructeur `Promise()` natif, les erreurs levées par l'exécuteur sont automatiquement capturées et transformées en rejets, donc cela empêche également les erreurs synchrones. Le problème est qu'il crée inconditionnellement un nouvel objet `Promise`, ce qui est inutile si `func()` retourne déjà une promesse. `Promise.resolve()`, en revanche, est suffisamment intelligent pour éviter cet emballage supplémentaire de promesse.
+
+`Promise.try()` est presque exactement équivalent à l'approche `try...catch`, sauf qu'il est plus court et peut être utilisé comme une expression&nbsp;:
 
 ```js
 Promise.try(func);
 ```
-
-Pour le constructeur `Promise()` natif, les erreurs levées par l'exécuteur sont automatiquement capturées et transformées en rejets, donc ces deux approches sont essentiellement équivalentes, sauf que `Promise.try()` est plus concis et lisible.
 
 Notez que `Promise.try()` n'est _pas_ équivalent à ceci, malgré la forte ressemblance&nbsp;:
 
@@ -74,9 +87,11 @@ Promise.try(func, arg1, arg2);
 
 Ces deux formes sont équivalentes, mais la dernière évite de créer une fermeture supplémentaire et est plus efficace.
 
+`Promise.try()` est générique et prend en charge l'héritage, ce qui signifie qu'elle peut être appelée sur des sous-classes de `Promise`, et que le résultat contient une promesse du type de la sous-classe. Pour ce faire, le constructeur de la sous-classe doit implémenter la même signature que le constructeur [`Promise()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) — acceptant une seule fonction `executor` qui peut être appelée avec les rappels `resolve` et `reject` comme paramètres.
+
 ## Exemples
 
-### Utiliser `Promise.try()`
+### Utiliser la méthode `Promise.try()`
 
 L'exemple suivant prend une fonction de rappel, la «&nbsp;convertit&nbsp;» en promesse, gère le résultat et effectue une gestion des erreurs&nbsp;:
 
@@ -123,18 +138,20 @@ async function faireQuelqueChose(action) {
 Ce qui suit est une approximation légèrement plus fidèle de l'implémentation réelle de `Promise.try()` (même si elle ne doit toujours pas être utilisée comme prothèse d'émulation)&nbsp;:
 
 ```js
-Promise.try = function (func) {
-  return new this((resolve, reject) => {
-    try {
-      resolve(func());
-    } catch (erreur) {
-      reject(erreur);
-    }
-  });
+Promise.try = function (func, ...args) {
+  let resultat;
+  try {
+    resultat = func(...args);
+  } catch (erreur) {
+    return Promise.reject.call(this, erreur);
+  }
+  return Promise.resolve.call(this, resultat);
 };
 ```
 
-En raison de la manière dont `Promise.try()` est implémentée (c'est-à-dire avec `try...catch`), vous pouvez appeler `Promise.try()` avec sa valeur `this` définie sur n'importe quel constructeur personnalisé, et elle ne lève jamais d'erreur de manière synchrone.
+`Promise.try()` délègue à {{JSxRef("Promise.resolve()")}} et {{JSxRef("Promise.reject()")}} pour créer la valeur de retour, et ces deux fonctions sont génériques.
+
+Par exemple, nous pouvons l'appeler sur un constructeur qui passe `console.log` comme fonctions `resolve` et `reject` à `executor`&nbsp;:
 
 ```js
 class PasUnePromesse {
@@ -147,18 +164,20 @@ class PasUnePromesse {
       (raison) => console.log("Rompue", raison),
     );
   }
+
+  static try = Promise.try;
 }
 
-const p = Promise.try.call(PasUnePromesse, () => "bonjour");
+const p = PasUnePromesse.try(() => "bonjour");
 // Journaux : Résolue bonjour
+// p est une instance de PasUnePromesse
 
-const p2 = Promise.try.call(PasUnePromesse, () => {
+const p2 = PasUnePromesse.try(() => {
   throw new Error("oups");
 });
 // Journaux : Rompue Error: oups
+// p2 est une instance de PasUnePromesse
 ```
-
-Contrairement à `Promise()`, ce constructeur `PasUnePromesse()` _ne_ gère _pas_ correctement les exceptions lors de l'exécution de l'exécuteur. Malgré le `throw`, `Promise.try()` intercepte tout de même l'exception et la transmet à `reject()` pour la journaliser.
 
 ## Spécifications
 
@@ -170,8 +189,8 @@ Contrairement à `Promise()`, ce constructeur `PasUnePromesse()` _ne_ gère _pas
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Promise.try` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#promisetry)
-- [La prothèse d'émulation es-shims de `Promise.try` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.try)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Promise.try` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/promise)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Promise.try` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.try)
 - Le guide [d'utilisation des promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)
 - L'objet natif {{JSxRef("Promise")}}
 - Le constructeur {{JSxRef("Promise/Promise", "Promise()")}}

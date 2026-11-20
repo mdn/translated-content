@@ -34,8 +34,10 @@ Idéalement, ce paragraphe ne doit pas dépasser deux phrases.
 Assurez-vous que toute personne qui lit cette description peut immédiatement comprendre le terme qui est défini.
 
 > [!NOTE]
-> Veillez à ne pas copier-coller de définitions ou de contenus provenant d'autres pages sur Internet.
-> (Notamment depuis Wikipédia, les versions de sa licence sont plus restreintes et incompatibles avec celle de MDN). Le contenu de votre entrée de glossaire doit être original.
+> Ne copiez pas et ne collez pas de définitions ou de contenus provenant d'autres pages sur Internet.
+> (Et surtout pas Wikipédia, dont les versions de licence sont plus restreintes et incompatibles avec celle de MDN.)
+> N'utilisez pas non plus de texte généré.
+> Votre entrée de glossaire doit être un contenu original, rédigé avec vos propres mots.
 
 #### Rédiger une bonne entrée dans le glossaire
 

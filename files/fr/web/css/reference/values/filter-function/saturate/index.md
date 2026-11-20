@@ -3,7 +3,7 @@ title: Fonction CSS `saturate()`
 short-title: saturate()
 slug: Web/CSS/Reference/Values/filter-function/saturate
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: cff28ac91efd68d0809779c81902bd080f614a1d
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`saturate()`** permet d'accentuer ou de réduire la saturation d'une image. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
@@ -45,7 +45,7 @@ saturate(amount)
 ### Paramètres
 
 - `amount` {{Optional_Inline}}
-  - : Niveau de saturation, exprimé en nombre ({{CSSxRef("&lt;number&gt;")}}) ou en pourcentage ({{CSSxRef("&lt;percentage&gt;")}}). Une valeur inférieure à `100%` désature l'image, tandis qu'une valeur supérieure à `100%` la sursature. Une valeur de `0%` rend l'image totalement désaturée, tandis qu'une valeur de `100%` laisse l'image inchangée. La valeur initiale utilisée pour {{Glossary("interpolation", "l'interpolation")}} est `1`. La valeur par défaut est `1`.
+  - : Niveau de saturation, exprimé en nombre ({{CSSxRef("&lt;number&gt;")}}) ou en pourcentage ({{CSSxRef("&lt;percentage&gt;")}}). Une valeur inférieure à `100%` désature l'image, tandis qu'une valeur supérieure à `100%` la sursature. Une valeur de `0%` rend l'image totalement désaturée, tandis qu'une valeur de `100%` laisse l'image inchangée. Les valeurs supérieures à `100%` sont autorisées, mais l'effet est limité à `100%`. Les valeurs négatives ne sont pas autorisées. La valeur initiale utilisée pour {{Glossary("interpolation", "l'interpolation")}} est `1`. La valeur par défaut est `1`.
 
 ## Syntaxe formelle
 

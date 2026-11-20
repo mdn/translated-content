@@ -3,7 +3,7 @@ title: Set.prototype.entries()
 short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Set/entries
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
 **`entries()`** は {{jsxref("Set")}} インターフェイスのメソッドで、集合の新しい[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。これは **`[value, value]` の配列**の形で集合の各要素を挿入順に返します。 `Set` オブジェクトは、`Map` オブジェクトのように `key` を持つことはありません。しかしながら、`Map` オブジェクトと似た API をもつために、それぞれの項目は _key_ と _value_ に対して同じ値を持ちます。そのため、配列 `[value, value]` が返されます。

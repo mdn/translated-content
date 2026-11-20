@@ -3,7 +3,7 @@ title: "Object : méthode statique getOwnPropertyDescriptors()"
 short-title: getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Object.getOwnPropertyDescriptors()`** retourne l'ensemble des descripteurs des propriétés propres d'un objet donné.
@@ -96,7 +96,7 @@ sousClasse.prototype = Object.create(superClasse.prototype, {
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Object.getOwnPropertyDescriptors` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
-- [La prothèse d'émulation es-shims de `Object.getOwnPropertyDescriptors` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.getownpropertydescriptors)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.getOwnPropertyDescriptors` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Object.getOwnPropertyDescriptors` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.getownpropertydescriptors)
 - La méthode statique {{JSxRef("Object.getOwnPropertyDescriptor()")}}
 - La méthode statique {{JSxRef("Object.defineProperty()")}}

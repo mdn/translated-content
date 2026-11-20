@@ -1,12 +1,15 @@
 ---
-title: HTML style グローバル属性
+title: "`style` グローバル属性"
 short-title: style
 slug: Web/HTML/Reference/Global_attributes/style
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
 **`style`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、要素に適用する [CSS](/ja/docs/Web/CSS) スタイル宣言を指定します。なお、スタイルは別のファイルで定義することが推奨されます。この属性と {{HTMLElement("style")}} 要素の主な用途は、例えばテストのために、すばやくスタイルを適用できるようにすることです。
+
+> [!NOTE]
+> この属性は、意味的な情報を伝えるために使用してはいけません。すべてのスタイルが削除されたとしても、ページは依然として意味的に正しくあるべきです。通常、無関係な情報を隠すために使用すべきではありません。その場合は [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性を使用してください。
 
 {{InteractiveExample("HTML デモ: style", "tabbed-shorter")}}
 
@@ -18,9 +21,6 @@ l10n:
   </p>
 </div>
 ```
-
-> [!NOTE]
-> この属性は、意味的な情報を伝えるために使用してはいけません。すべてのスタイルが削除されたとしても、ページは依然として意味的に正しくあるべきです。特に、無関係な情報を隠すために使用しないようにしてください。これには [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性を使用してください。
 
 ## 仕様書
 

@@ -3,7 +3,7 @@ title: Type CSS `<basic-shape>`
 short-title: <basic-shape>
 slug: Web/CSS/Reference/Values/basic-shape
 l10n:
-  sourceCommit: 6edb918a9e6bd17858d48dcfa5d76aa5ed5b9659
+  sourceCommit: 2e0b9415ed31484a4830e214eff9e06e408c7261
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<basic-shape>`** représente une forme utilisée dans les propriétés {{CSSxRef("border-shape")}}, {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}} et {{CSSxRef("shape-outside")}}.
@@ -146,7 +146,7 @@ polygon( <'fill-rule'>? [ round <length> ]? , [ <length-percentage> <length-perc
 Le premier paramètre facultatif peut contenir l'un ou l'autre des éléments suivants, ou les deux, séparés par une espace&nbsp;:
 
 - Une valeur SVG {{SVGAttr("fill-rule")}}, soit `nonzero`, soit `evenodd`, qui définit l'algorithme utilisé pour remplir la forme du polygone.
-- Le mot-clé [`round`](/fr/docs/Web/CSS/Reference/Values/basic-shape/polygon#round) suivi d'une valeur {{CSSxRef("&lt;length&gt;")}}, séparés par une espace. Cela définit que le polygone possède des coins arrondis, `<length>` définissant le rayon des coins.
+- Le mot-clé [`round`](/fr/docs/Web/CSS/Reference/Values/basic-shape/polygon#round_length) suivi d'une valeur {{CSSxRef("&lt;length&gt;")}}, séparés par une espace. Cela définit que le polygone possède des coins arrondis, `<length>` définissant le rayon des coins.
 
 Chaque paire de coordonnées se compose de deux valeurs `<length-percentage>` séparées par une espace. Ces valeurs représentent les coordonnées sur les axes x et y d'un sommet du polygone.
 

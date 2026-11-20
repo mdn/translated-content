@@ -3,7 +3,7 @@ title: "Array : méthode find()"
 short-title: find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 l10n:
-  sourceCommit: 9f46f08d20b21498293cbf6b84f508103272ec6f
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`find()`** des instances de {{JSxRef("Array")}} retourne le premier élément du tableau fourni qui satisfait la fonction de test donnée.
@@ -209,6 +209,8 @@ console.log(
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.find` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.find` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.find)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.findIndex()")}}
@@ -219,5 +221,3 @@ console.log(
 - La méthode {{JSxRef("Array.prototype.every()")}}
 - La méthode {{JSxRef("Array.prototype.some()")}}
 - La méthode {{JSxRef("TypedArray.prototype.find()")}}
-- [La prothèse d'émulation core-js pour `Array.prototype.find` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [La prothèse d'émulation es-shims pour `Array.prototype.find` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.find)

@@ -3,7 +3,7 @@ title: "Number : méthode statique isInteger()"
 short-title: isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Number.isInteger()`** détermine si la valeur passée est un entier.
@@ -50,7 +50,7 @@ De la même manière, les nombres de l'ordre de grandeur de [`Number.MAX_SAFE_IN
 
 ## Exemples
 
-### Utiliser `isInteger()`
+### Utiliser la méthode `isInteger()`
 
 ```js
 Number.isInteger(0); // true
@@ -85,6 +85,6 @@ Number.isInteger(4500000000000000.1); // true, à cause d'une perte de précisio
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Number.isInteger` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
-- [La prothèse d'émulation es-shims de `Number.isInteger` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.isinteger)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Number.isInteger` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Number.isInteger` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.isinteger)
 - L'objet natif {{JSxRef("Number")}}

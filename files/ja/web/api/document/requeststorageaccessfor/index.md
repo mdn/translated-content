@@ -3,12 +3,12 @@ title: "Document: requestStorageAccessFor() メソッド"
 short-title: requestStorageAccessFor()
 slug: Web/API/Document/requestStorageAccessFor
 l10n:
-  sourceCommit: 0ebc78fd61acddbe9505330f006b706ac786456d
+  sourceCommit: 41a472e5bad6c6d2698d6e85c1172909cb102fa1
 ---
 
-{{APIRef("Storage Access API")}}{{SeeCompatTable}}
+{{APIRef("Storage Access API")}}{{non-standard_header}}
 
-**`requestStorageAccessFor()`** は {{domxref("Document")}} インターフェイスのメソッドで、最上位のサイトが、同じ[一連の関連ウェブサイト](/ja/docs/Web/API/Storage_Access_API)内の別のサイトを元とする埋め込みコンテンツに代わって、サードパーティのクッキーへのアクセスをリクエストできるようにします。アクセスが許可された場合は解決されたプロミス ({{jsxref("Promise")}}) を返し、アクセスが拒否された場合は拒否されたプロミスを返します。
+**`requestStorageAccessFor()`** は {{domxref("Document")}} インターフェイスのメソッドで、最上位のサイトが、同じ[関連ウェブサイトセット](https://privacysandbox.google.com/cookies/related-website-sets-integration)内の別のサイトに由来する埋め込みコンテンツに代わって、サードパーティクッキーへのアクセスをリクエストできるようにします。アクセスが許可された場合は履行し、拒否された場合は拒否される {{jsxref("Promise")}} を返します。
 
 ## 構文
 
@@ -19,41 +19,41 @@ requestStorageAccessFor(requestedOrigin)
 ### 引数
 
 - `requestedOrigin`
-  - : 文字列で、サードパーティクッキーアクセスをリクエストされたオリジンの URL を表します。
+  - : サードパーティクッキーへのアクセスをリクエストするオリジンの URL を表す文字列です。
 
 ### 返値
 
-{{jsxref("Promise")}} で、サードパーティクッキーが許可された場合は `undefined` で履行され、アクセスが拒否された場合は拒否されます。
+{{jsxref("Promise")}} で、サードパーティクッキーへのアクセスが許可された場合は `undefined` で履行され、拒否された場合は拒否されます。
 
-`requestStorageAccessFor()` のリクエストは、埋め込みコンテンツがタップやクリックなどのユーザージェスチャーを処理中（{{Glossary("transient activation", "単発の活性化")}}）でない限り、またはその権限が前回すでに付与されていない限り、自動的に拒否されます。その権限が前回付与されていない場合は、ユーザージェスチャーに基づくイベントハンドラー内で実行する必要があります。ユーザージェスチャーの動作は、プロミスの状態に依存します。
+`requestStorageAccessFor()` のリクエストは、最上位のコンテンツがタップやクリックなどのユーザージェスチャーを処理中（{{Glossary("transient activation", "一時的な有効化")}}）でない限り、または権限がすでに付与されていない限り、自動的に拒否されます。権限が以前に付与されていない場合は、ユーザージェスチャーに基づくイベントハンドラー内で呼び出す必要があります。ユーザージェスチャーの扱いは、プロミスの状態によって異なります。
 
-- プロミスが解決され（権限が許可された場合など）、ユーザーのジェスチャーが消費されていない場合、スクリプトはユーザーのジェスチャーを必要とするすべての API を呼び出すことができます。
-- プロミスが拒否され（権限が許可されなかった場合など）、ユーザーのジェスチャーが消費されている場合、スクリプトはジェスチャーを必要とする API を呼び出すことができません。権限が拒否された場合に `requestStorageAccessFor()` を再び呼び出すのを防ぐためです。
+- プロミスが履行された場合（つまり、権限が許可された場合）、ユーザージェスチャーは消費されていないため、その後もスクリプトからユーザージェスチャーが必要な API を呼び出せます。
+- プロミスが拒否された場合（つまり、権限が許可されなかった場合）、ユーザージェスチャーは消費されているため、スクリプトはユーザージェスチャーが必要な操作を行えません。これにより、権限が拒否された後にスクリプトが `requestStorageAccessFor()` を再度呼び出すことを防ぎます。
 
 ### 例外
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : 現在の {{domxref("Document")}} がまだアクティブ化されたいない場合に発生します。
+  - : 現在の {{domxref("Document")}} がまだアクティブでない場合に発生します。
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if:
+  - : 次の場合に発生します。
     - 文書のウィンドウが[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)ではない場合。
     - この文書が最上位の文書でない場合。
-    - この文書のオリジンが `null` であった場合。
-    - 指定された `requestedOrigin` が[不透明](https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque)であった場合。
-    - 最上位のサイトと埋め込まれたサイトが同じ[関連する一連のウェブサイト](/ja/docs/Web/API/Storage_Access_API)でない場合。
+    - 文書のオリジンが `null` の場合。
+    - 指定された `requestedOrigin` が[不透明](https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque)な場合。
+    - 最上位のサイトと埋め込み先のサイトが同じ[関連ウェブサイトセット](https://privacysandbox.google.com/cookies/related-website-sets-integration)に属していない場合。
     - 埋め込まれた {{htmlelement("iframe")}} がサンドボックス化されており、`allow-storage-access-by-user-activation` トークンが設定されていない場合。
-    - {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によって、使用がブロックされた場合。
+    - {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によって使用がブロックされた場合。
     - ユーザーエージェントの権限リクエストにより、この API の使用が拒否された場合。
-- `TypeError`
-  - : Thrown if `requestedOrigin` is not a valid URL.
+- {{jsxref("TypeError")}}
+  - : `requestedOrigin` が有効な URL ではない場合に発生します。
 
 ## 解説
 
-`requestStorageAccessFor()` メソッドは、クッキーを必要とする別サイトの画像やスクリプトを使用している最上位のサイトでストレージアクセス API を採用する際の課題に対処します。既定ではプライバシーを改善するために（例えばトラッキングを防ぐために）[サードパーティ](/ja/docs/Web/Privacy/Guides/Third-party_cookies)の[分離されていない](/ja/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies)クッキーへのアクセスをブロックしているユーザエージェントに関連しており、[ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API) の拡張提案です。
+`requestStorageAccessFor()` メソッドは、クッキーを必要とする別サイトの画像やスクリプトを使用する最上位のサイトで、ストレージアクセス API を採用する際の課題に対処します。これは、プライバシーを改善するため（例えばトラッキングを防ぐため）、デフォルトで[サードパーティ](/ja/docs/Web/Privacy/Guides/Third-party_cookies)の[パーティション化されていない](/ja/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies)クッキーへのアクセスをブロックするユーザーエージェントに関連する機能であり、[ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API) の拡張提案です。
 
-`requestStorageAccessFor()` は、例えば {{htmlelement("img")}} 要素など、ストレージアクセスをリクエストすることができない最上位サイトに直接埋め込まれた別サイトのリソースに対して、サードパーティのクッキーアクセスを有効にすることができます。自分自身でロジックとリソースを保有し、サードパーティのクッキーアクセスを必要とする `<iframe>` に埋め込まれた別サイトのコンテンツは、{{domxref("Document.requestStorageAccess()")}} を介してストレージアクセスをリクエストする必要があります。
+`requestStorageAccessFor()` は、例えば {{htmlelement("img")}} 要素など、ストレージアクセスをリクエストできない最上位サイトに直接埋め込まれた別サイトのリソースに対して、サードパーティクッキーへのアクセスを有効にできます。独自のロジックとリソースを持ち、サードパーティクッキーへのアクセスを必要とする `<iframe>` 内の別サイトのコンテンツは、{{domxref("Document.requestStorageAccess()")}} を介してストレージアクセスをリクエストする必要があります。
 
-サードパーティのクッキーにアクセスする権限が `requestStorageAccessFor()` によって既に付与されているかどうかを調べるには、{{domxref("Permissions.query()")}} を呼び出します。その際、機能名 `"top-level-storage-access"` を指定します。これは通常の {{domxref("Document.requestStorageAccess()")}} メソッドで使用する機能名とは異なり、`"storage-access"` です。
+サードパーティクッキーにアクセスする権限が `requestStorageAccessFor()` によってすでに付与されているかどうかを調べるには、{{domxref("Permissions.query()")}} を呼び出します。その際、機能名 `"top-level-storage-access"` を指定します。これは通常の {{domxref("Document.requestStorageAccess()")}} メソッドで使用する機能名とは異なり、`"storage-access"` です。
 
 `Permissions.query()` の呼び出しでは、埋め込みオリジンを指定する必要があります。例えば、次のようにします。
 
@@ -65,7 +65,7 @@ navigator.permissions.query({
 ```
 
 > [!NOTE]
-> この機能の使用は、サーバーに設定する {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)（ストレージアクセス API の残りの部分をコントロールするものと同じ）によってブロックされる可能性があります。さらに、許可リスト、ブロックリスト、端末上の分類、ユーザー設定、アンチ[クリックジャッキング](/ja/docs/Web/Security/Attacks/Clickjacking)の経験則など、 ブラウザー独自のチェックも通過しなければなりません。
+> この機能の使用は、サーバーに設定された {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)（ストレージアクセス API の他の部分を制御するものと同じ）によってブロックされる場合があります。また、許可リスト、ブロックリスト、端末上の分類、ユーザー設定、[クリックジャッキング](/ja/docs/Web/Security/Attacks/Clickjacking)対策の経験則など、ブラウザー固有の追加チェックにも合格する必要があります。
 
 ## 例
 
@@ -74,18 +74,18 @@ function rSAFor() {
   if ("requestStorageAccessFor" in document) {
     document.requestStorageAccessFor("https://example.com").then(
       (res) => {
-        // Use storage access
+        // ストレージアクセスを使用
         doThingsWithCookies();
       },
       (err) => {
-        // Handle errors
+        // エラーを処理
       },
     );
   }
 }
 ```
 
-`requestStorageAccessFor()` の呼び出しが成功した後、[CORS](/ja/docs/Web/HTTP/Guides/CORS) / [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) を含む場合、クロスサイトリクエストはクッキーを入れることができます。このようなリクエストは [`credentials: "include"`](/ja/docs/Web/API/RequestInit#credentials) オプションを用い、リソースは `crossorigin="use-credentials"` 属性を記載しなければなりません。
+`requestStorageAccessFor()` の呼び出しが成功すると、[CORS](/ja/docs/Web/HTTP/Guides/CORS) / [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) を使用するクロスサイトリクエストにはクッキーが含まれるため、サイト側ではリクエストの開始を待つ必要がある場合があります。このようなリクエストでは [`credentials: "include"`](/ja/docs/Web/API/RequestInit#credentials) オプションを使用し、リソースには `crossorigin="use-credentials"` 属性を指定する必要があります。
 
 例えば、次のようにします。
 
@@ -97,13 +97,13 @@ function checkCookie() {
   })
     .then((response) => response.json())
     .then((json) => {
-      // Do something
+      // 何らかの処理を行う
     });
 }
 ```
 
 > [!NOTE]
-> より完全な例については、[ストレージアクセス API の使用](/ja/docs/Web/API/Storage_Access_API/Using)を参照してください。
+> より詳しい例については、[ストレージアクセス API の使用](/ja/docs/Web/API/Storage_Access_API/Using)を参照してください。
 
 ## 仕様書
 

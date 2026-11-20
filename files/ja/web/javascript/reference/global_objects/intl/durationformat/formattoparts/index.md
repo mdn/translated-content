@@ -3,7 +3,7 @@ title: Intl.DurationFormat.prototype.formatToParts()
 short-title: formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/formatToParts
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`formatToParts()`** は {{jsxref("Intl.DurationFormat")}} インスタンスのメソッドで、 {{jsxref("Intl/DurationFormat/format", "format()")}} によって返される、書式化された文字列の各部分を表すオブジェクトの配列を返します。これは、ロケール固有のトークンからカスタム文字列を構築するのに役立ちます。
@@ -16,7 +16,7 @@ formatToParts(duration)
 
 ### 引数
 
-- `duration` {{optional_inline}}
+- `duration`
   - : 書式化される経過時間オブジェクト。 `years`, `months`, `weeks`, `days`, `hours`, `minutes`, `seconds`, `milliseconds`, `microseconds`, `nanoseconds` プロパティの一部またはすべてを含める必要があります。各プロパティの値は整数であり、その符号は一致している必要があります。これは {{jsxref("Temporal.Duration")}} オブジェクトであることができます。これらのプロパティの詳細については、 {{jsxref("Temporal.Duration")}} のドキュメントを参照してください。
 
 ### 返値
@@ -39,7 +39,7 @@ const duration = {
 
 new Intl.DurationFormat("en", { style: "long" }).formatToParts(duration);
 
-// Returned value:
+// 返値:
 [
   { type: "integer", value: "7", unit: "hour" },
   { type: "literal", value: " ", unit: "hour" },

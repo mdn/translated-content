@@ -2,7 +2,7 @@
 title: Mozilla Firefox
 slug: Glossary/Mozilla_Firefox
 l10n:
-  sourceCommit: ef78a9a3336c884fb3587e4ff833e64704296f01
+  sourceCommit: a4ff34eef85ccb654c5c3af7974caba396e8adcf
 ---
 
 **Firefox** est un {{Glossary("Browser","navigateur web")}} gratuit et open source développé par la Mozilla Corporation. Firefox est disponible pour Windows, macOS, Linux, Android et iOS.
@@ -20,7 +20,7 @@ Utilisez ces liens pour télécharger Firefox pour différentes plateformes, app
 - [Ordinateur](https://www.firefox.com/fr/)
 - [Android](https://www.firefox.com/fr/mobile/)
 - [iOS](https://www.firefox.com/fr/mobile/)
-- [Firefox pour les entreprises](https://www.firefox.com/fr/browsers/enterprise/)
+- [Firefox pour les entreprises](https://www.firefox.com/fr/enterprise/)
 
 ### Développeur·euse·s web
 
@@ -38,7 +38,7 @@ Si vous souhaitez essayer les dernières fonctionnalités de Firefox, installez 
 - [Documentation développeur·euse Firefox](/fr/docs/Mozilla/Firefox) sur MDN Web Docs
 - [SpiderMonkey <sup>(angl.)</sup>](https://spidermonkey.dev/) moteur JavaScript et WebAssembly
 - [Positions de Mozilla sur les standards <sup>(angl.)</sup>](https://mozilla.github.io/standards-positions/)
-- [Signaler un bug Firefox <sup>(angl.)</sup>](https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox)
+- [Signaler un bogue Firefox <sup>(angl.)</sup>](https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox)
 - Termes associés du glossaire&nbsp;:
   - {{Glossary("Browser", "Navigateur web")}}
   - {{Glossary("Gecko")}}

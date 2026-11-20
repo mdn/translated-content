@@ -3,7 +3,7 @@ title: "Map : méthode set()"
 short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
 l10n:
-  sourceCommit: 7b63b90d24ad8945977bb9dc2735d75f72829bc1
+  sourceCommit: 81a384e18b61c1d1b23d7f58f1fbd8ec3af45558
 ---
 
 La méthode **`set()`** des instances de {{JSxRef("Map")}} ajoute une nouvelle entrée avec une clé et une valeur définies à cette `Map`, ou met à jour une entrée existante si la clé existe déjà.
@@ -55,7 +55,7 @@ maMap.set("truc", "fuuu");
 
 ### Utiliser la méthode `set()` avec un enchaînement
 
-La méthode `set()` renvoie le même objet `Map` et on peut donc la chaîner pour des opérations successives&nbsp;:
+La méthode `set()` retourne le même objet `Map` et on peut donc la chaîner pour des opérations successives&nbsp;:
 
 ```js
 // Ajouter de nouveaux éléments au tableau associatif avec chaînage.

@@ -3,7 +3,7 @@ title: "Array : méthode concat()"
 short-title: concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`concat()`** est utilisée afin de fusionner deux ou plusieurs tableaux en les concaténant. Cette méthode ne modifie pas les tableaux existants, elle renvoie un nouveau tableau qui est le résultat de l'opération.
@@ -157,6 +157,8 @@ console.log(Array.prototype.concat.call(objetSimilaireTableau, 3, 4)); // [1, 2,
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.concat` dans `core-js` avec corrections et prise en charge des comportements modernes comme `Symbol.isConcatSpreadable` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.concat` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.concat)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.push()")}}
@@ -164,5 +166,3 @@ console.log(Array.prototype.concat.call(objetSimilaireTableau, 3, 4)); // [1, 2,
 - La méthode {{JSxRef("Array.prototype.splice()")}}
 - La méthode {{JSxRef("String.prototype.concat()")}}
 - La propriété {{JSxRef("Symbol.isConcatSpreadable")}}
-- [Prothèse d'émulation pour `Array.prototype.concat` dans `core-js` avec corrections et prise en charge des comportements modernes comme `Symbol.isConcatSpreadable` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims pour `Array.prototype.concat` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.concat)

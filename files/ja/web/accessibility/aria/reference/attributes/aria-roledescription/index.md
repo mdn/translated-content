@@ -1,18 +1,19 @@
 ---
-title: aria-roledescription
+title: "ARIA: aria-roledescription 属性"
+short-title: aria-roledescription
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription
 l10n:
-  sourceCommit: a3ca206486709d88291ee616182257eac2375143
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 `aria-roledescription` 属性は、要素のロールについて、人間が読める形で作成者がローカライズした説明を定義します。
 
 ## 解説
 
-スクリーンリーダーなどの一部の支援技術（<abbr>AT</abbr>）は、要素のロールをユーザー体験の一部として提示します。`aria-roledescription` 属性は、AT によって要素のロールとして提示される、人間が判読できる別の名前を定義する方法を提供します。
+スクリーンリーダーなどの一部の支援技術 (<abbr>AT</abbr>) は、要素のロールをユーザー体験の一部として提示します。`aria-roledescription` 属性は、AT によって要素のロールとして提示される、人間が判読できる別の名前を定義する方法を提供します。
 
 > [!NOTE]
-> aria-roledescription は、非対話型コンテナーロールの目的を明確にし、ウィジェットにさらに具体的な説明を提供する場合にのみ使用してください。
+> `aria-roledescription` は、非対話型コンテナーロールの目的を明確にし、ウィジェットにさらに具体的な説明を提供する場合にのみ使用してください。
 
 ユーザーは、既知のロール名の表示に基づいて、要素の目的を理解し、ウィジェットの場合はその操作方法を理解します。したがって、`group` や `region` などの非対話型コンテナーロールの目的を明確にするため、およびウィジェットにさらに具体的な説明を提供する場合にのみ `aria-roledescription` を使用してください。
 
@@ -28,13 +29,29 @@ AT は ARIA ロールの名前をカスタマイズおよびローカライズ�
 
 繰り返しますが、`aria-roledescription` の使用は避けてください。この例では、`escape` はユーザーにとって意味を持ちませんが、`button` のラベルとして「escape」を使用すると意味を持ちます。
 
-`aria-roledescription` を使用する場合は、適用される要素に有効な ARIA [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) があること、または暗黙的なロールセマンティクスがあること、また値自体が空でなく、空白文字以外の文字が含まれていることも確認してください。
+`aria-roledescription` を使用する場合は、適用される要素に有効な ARIA [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) があること、または暗黙のロールがあること、また値自体が空でなく、空白文字以外の文字が含まれていることも確認してください。
 
 `aria-brailleroledescription` を使用する場合は `aria-roledescription` が必要です。一般に `aria-brailleroledescription` は、点字でレンダリングすると `aria-roledescription` が過度に冗長になるという稀な場合にのみ使用してください。
 
+## 値
+
+- `<string>`
+  - : 空でない文字列で、制約のない値型であり、空白以外の文字を含みます。
+
+## 関連インターフェイス
+
+- {{domxref("Element.ariaRoleDescription")}}
+  - : {{domxref("Element")}} インターフェイスの一部である [`ariaRoleDescription`](/ja/docs/Web/API/Element/ariaRoleDescription) プロパティは、`aria-roledescription` 属性の値を反映します。
+- {{domxref("ElementInternals.ariaRoleDescription")}}
+  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaRoleDescription`](/ja/docs/Web/API/ElementInternals/ariaRoleDescription) プロパティは、`aria-roledescription` 属性の値を反映します。
+
+## 関連付けられたロール
+
+すべてのロールと、`role="generic"` を除くすべての基本マークアップ要素に対応しています。
+
 ## 例
 
-次の例は、非対話型コンテナーがウェブベースのプレゼンテーションアプリケーションの「slide」であることを示すために `aria-roledescription` を使用する方法を示しています。
+次の例は、非対話型コンテナーがウェブベースのプレゼンテーションアプリケーションの「スライド」であることを示すために `aria-roledescription` を使用する方法を示しています。
 
 ```html
 <div
@@ -48,22 +65,6 @@ AT は ARIA ロールの名前をカスタマイズおよびローカライズ�
 ```
 
 上の例では、スクリーンリーダーのユーザーは、正確性が低い「Quarterly Report, article」ではなく、「Quarterly Report, slide」と聞き取ることができます。
-
-## 値
-
-- `<string>`
-  - : 空でない文字列、制約のない値型、空白以外の内容を含みます。
-
-## 関連インターフェイス
-
-- {{domxref("Element.ariaRoleDescription")}}
-  - : {{domxref("Element")}} インターフェイスの一部である [`ariaRoleDescription`](/ja/docs/Web/API/Element/ariaRoleDescription) プロパティは、`aria-roledescription` 属性の値を反映します。
-- {{domxref("ElementInternals.ariaRoleDescription")}}
-  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaRoleDescription`](/ja/docs/Web/API/ElementInternals/ariaRoleDescription) プロパティは、`aria-roledescription` 属性の値を反映します。
-
-## 関連付けられたロール
-
-全てのロールと、`role="generic"` を除くすべての基本マークアップ要素でサポートされます。
 
 ## 仕様書
 

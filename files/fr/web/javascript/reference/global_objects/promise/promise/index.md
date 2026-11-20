@@ -3,7 +3,7 @@ title: Constructeur Promise()
 short-title: Promise()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 l10n:
-  sourceCommit: 3b7310aac5ffd95db697bf136b7323cffc7e5bd2
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Le constructeur **`Promise()`** crée des objets {{JSxRef("Promise")}}. Il est principalement utilisé pour envelopper des API basées sur les fonctions de rappel qui ne prennent pas déjà en charge les promesses.
@@ -238,6 +238,6 @@ const resolutionRejetee2 = new Promise((resolve) => {
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Promise` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-promise)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Promise` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/promise)
 - Le guide [d'utilisation des promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)
 - La méthode statique {{JSxRef("Promise.withResolvers()")}}

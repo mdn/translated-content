@@ -1,5 +1,6 @@
 ---
 title: JSON.parse()
+short-title: parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 l10n:
   sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46

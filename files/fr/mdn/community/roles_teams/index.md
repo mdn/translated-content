@@ -3,7 +3,7 @@ title: MDN Web Docs les rôles et les équipes
 short-title: Rôles et équipes
 slug: MDN/Community/Roles_teams
 l10n:
-  sourceCommit: c5a0a55ef65c6ef451713b0aa594b782527676d1
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
 
 Le succès et la croissance du projet MDN Web Docs sont en grande partie dus à notre communauté de contributeur·ice·s. Certain·e·s contributeur·ice·s consacrent une partie de leur temps pour aider aux tâches quotidiennes liées à MDN Web Docs. Les modifications du site, y compris les tâches de maintenance, sont réalisées par des employé·e·s, des prestataires et un réseau de partenaires, tous·tes engagé·e·s pour la santé, la croissance et la maintenance de MDN Web Docs. Le projet s'appuie fortement sur les [rôles](#roles) et les [équipes](#equipes) de [l'organisation MDN sur GitHub <sup>(angl.)</sup>](https://github.com/mdn) pour gérer et intégrer les changements de ces différents groupes. La liste des membres actuels de l'organisation est disponible sur [github.com/orgs/mdn <sup>(angl.)</sup>](https://github.com/orgs/mdn/people).
@@ -44,10 +44,11 @@ En tant que contributeur·ice, vous pouvez participer au projet par les activit�
 
 **Exigences&nbsp;:**
 
-Pour être contributeur·ice, vous devez respecter&nbsp;:
+Pour être contributeur·ice, vous devez&nbsp;:
 
-- [Le code de conduite de Mozilla](https://www.mozilla.org/fr/about/governance/policies/participation/)
-- Les consignes spécifiques à chaque dépôt. Si des indications ou règles spécifiques existent pour un projet, elles sont dans un fichier `CONTRIBUTING.md` à la racine du dépôt.
+- Suivre [le code de conduite de Mozilla](https://www.mozilla.org/fr/about/governance/policies/participation/)
+- Suivre les consignes spécifiques à chaque dépôt. Si des indications ou règles spécifiques existent pour un projet, elles sont dans un fichier `CONTRIBUTING.md` à la racine du dépôt.
+- Assumer la responsabilité de vos contributions. Avant de les envoyer, relisez tout et testez votre code, quels que soient les outils que vous utilisez pour le créer.
 
 **Privilèges&nbsp;:**
 

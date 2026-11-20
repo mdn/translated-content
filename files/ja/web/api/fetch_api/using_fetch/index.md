@@ -191,7 +191,7 @@ const response = await fetch(`https://example.org/login?${params}`);
 
 ### オリジン間リクエストを行う
 
-オリジン間のリクエストができるかどうかは {{domxref("RequestInit", "", "mode")}} オプションの値で決まります。これは `cors`、`same-origin`、`no-cors` の 3 つの値のいずれかを取ります。
+オリジン間のリクエストができるかどうかは {{domxref("RequestInit", "", "#mode")}} オプションの値で決まります。これは `cors`、`same-origin`、`no-cors` の 3 つの値のいずれかを取ります。
 
 - フェッチリクエストでは、`mode`の既定値は`cors`です。これは、リクエストがオリジンをまたぐ場合、[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS) の仕組みを使用するという意味です。具体的には以下の通りです。
   - リクエストが[単純リクエスト](/ja/docs/Web/HTTP/Guides/CORS#単純リクエスト)の場合、リクエストは常に送信されますが、サーバーは正しい {{httpheader("Access-Control-Allow-Origin")}} ヘッダーで応答しなければなりません。
@@ -201,7 +201,7 @@ const response = await fetch(`https://example.org/login?${params}`);
 
 - `mode` を `no-cors` に設定すると、オリジンを越えるリクエストに対する CORS が無効化されます。これにより、設定可能なヘッダーが制限され、メソッドは GET、HEAD、POST に限定されます。レスポンスは不透明となり、そのヘッダーと本体は JavaScript で利用できません。ほとんどの場合、ウェブサイトは `no-cors` を使用すべきではありません。主な用途は特定のサービスワーカーの用途に限られます。
 
-詳細については、{{domxref("RequestInit", "", "mode")}} のリファレンスドキュメントを参照してください。
+詳細については、{{domxref("RequestInit", "", "#mode")}} のリファレンスドキュメントを参照してください。
 
 ### 資格情報を含める
 

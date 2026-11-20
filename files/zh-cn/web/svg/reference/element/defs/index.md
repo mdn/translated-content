@@ -1,57 +1,59 @@
 ---
-title: defs
+title: <defs>
 slug: Web/SVG/Reference/Element/defs
+l10n:
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
-SVG 允许我们定义以后需要重复使用的图形元素。建议把所有需要再次使用的引用元素定义在`defs`元素里面。这样做可以增加 SVG 内容的易读性和无障碍。在`defs`元素中定义的图形元素不会直接呈现。你可以在你的视口的任意地方利用 {{ SVGElement("use") }}元素呈现这些元素。
+**`<defs>`** [SVG](/zh-CN/docs/Web/SVG) 元素用于存储稍后使用的图形对象。在 `<defs>` 元素内创建的对象不会被直接渲染。要显示它们，你必须引用它们（例如使用 {{SVGElement("use")}} 元素）。
+
+图形对象可以从任何地方引用，不过把这些对象定义在 `<defs>` 元素内部有助于理解 SVG 内容，也对文档的整体无障碍性有益。
 
 ## 使用上下文
 
 {{svginfo}}
 
-## 示例
-
-```xml
-<svg width="80px" height="30px" viewBox="0 0 80 30"
-     xmlns="http://www.w3.org/2000/svg">
-
-  <defs>
-    <linearGradient id="Gradient01">
-      <stop offset="20%" stop-color="#39F" />
-      <stop offset="90%" stop-color="#F3F" />
-    </linearGradient>
-  </defs>
-
-  <rect x="10" y="10" width="60" height="10"
-        fill="url(#Gradient01)"  />
-</svg>
-```
-
 ## 属性
 
-### 全局属性
-
-- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
-
-### 专有属性
-
-_没有专有属性。_
+此元素仅包含全局属性。
 
 ## DOM 接口
 
-这个元素实现了 [`SVGDefsElement`](/zh-CN/docs/DOM/SVGDefsElement) 接口。
+该元素实现了 {{domxref("SVGDefsElement")}} 接口。
+
+## 示例
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+  <!-- 一些供使用的图形对象 -->
+  <defs>
+    <circle id="myCircle" cx="0" cy="0" r="5" />
+
+    <linearGradient id="myGradient" gradientTransform="rotate(90)">
+      <stop offset="20%" stop-color="gold" />
+      <stop offset="90%" stop-color="red" />
+    </linearGradient>
+  </defs>
+
+  <!-- 使用我的图形对象 -->
+  <use x="5" y="5" href="#myCircle" fill="url('#myGradient')" />
+</svg>
+```
+
+{{EmbedLiveSample("示例", 150, "100%")}}
+
+## 规范
+
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
-
-## 参见
-
-- {{ SVGElement("use") }}

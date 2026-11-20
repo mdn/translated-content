@@ -3,12 +3,12 @@ title: "`<meta name>` 属性"
 short-title: <meta name>
 slug: Web/HTML/Reference/Elements/meta/name
 l10n:
-  sourceCommit: 4607393c465f5a8bdbb36047f2ec03c2fb058af5
+  sourceCommit: 04c41175b160dc00b1a1b8e4e13b2183d89fdf1a
 ---
 
 **`name`** 属性は {{htmlelement("meta")}} 要素で、メタデータを名前と値の組み合わせで提供します。
 `<meta>` 要素に `name` 属性がある場合、 [`content`](/ja/docs/Web/HTML/Reference/Attributes/content) 属性で対応する値を定義します。
-メタデータは、ページ全体に適用される「文書レベルメタデータ」です。
+これはページ全体に適用される文書レベルのメタデータです。
 
 例えば、次の `<meta>` タグは、文書内のメタデータとして `description` を提供します。
 
@@ -20,14 +20,14 @@ l10n:
 
 ## 値
 
-### HTML 仕様書で定義されている meta name
+### HTML 仕様書で定義されている name 値
 
 HTML 仕様書では、次の一連の標準メタデータ名を定義しています。
 
 - `application-name`
   - : ブラウザーは、ウェブページで実行されているアプリケーションを識別するためにこれを使用する場合があります。
-    これは、アプリケーション（またはウェブサイト）の名前を含む場合のある {{HTMLElement("title")}} 要素とは異なります。 `<title>` は、文書名や状態などのコンテキスト情報を追加することがあります。
-    個々のページは、自分自身で固有の `application-name` を定義してはいけません。
+    これは、アプリケーション（またはウェブサイト）の名前を含むことがある {{HTMLElement("title")}} 要素とは異なります。`<title>` には、文書名や状態などの補足情報が含まれることがあります。
+    個々のページで、それぞれ異なる `application-name` を定義するべきではありません。
     翻訳を提供するには、複数の `<meta>` タグにそれぞれの言語に対応する `lang` 属性を設定して使用してください。
 
     ```html
@@ -38,12 +38,12 @@ HTML 仕様書では、次の一連の標準メタデータ名を定義してい
 - `author`
   - : 文書の著者の名前です。
 - [`color-scheme`](/ja/docs/Web/HTML/Reference/Elements/meta/name/color-scheme)
-  - : 文書と互換性のある 1 つ以上の複数の配色を指定します。
+  - : 文書と互換性のある 1 つ以上の配色を指定します。
     ブラウザーは、この情報をユーザーのブラウザーや端末の設定と合わせて使用し、背景や前景、フォームコントロールやスクロールバーなど、あらゆるものに使用する色を決定します。
     `<meta name="color-scheme">` の主な用途は、ライトモードとダークモードの互換性と優先順位を示すことです。
 - `description`
   - : ページのコンテンツの簡潔で正確な概要で、ふつう「メタディスクリプション」と呼ばれます。
-    Google などの検索エンジンは、このメタデータを使用して、[検索結果に表示されるウェブページの見え方](https://developers.google.com/search/docs/appearance/snippet#meta-descriptions)（英語）を調整しています。
+    Google などの検索エンジンは、このメタデータを使用して、[検索結果に表示されるウェブページの見え方](https://developers.google.com/search/docs/appearance/snippet#meta-descriptions)<sup>(英語)</sup>を調整しています。
 - `generator`
   - : ページを生成したソフトウェアの識別子です。
 - `keywords`
@@ -51,31 +51,33 @@ HTML 仕様書では、次の一連の標準メタデータ名を定義してい
 - [`referrer`](/ja/docs/Web/HTML/Reference/Elements/meta/name/referrer)
   - : この文書から送信されるリクエストの HTTP {{httpheader("Referer")}} ヘッダーを制御します。
 - [`theme-color`](/ja/docs/Web/HTML/Reference/Elements/meta/name/theme-color)
-  - : ユーザーエージェントが、ページまたはその周辺のユーザーインターフェイスの表示をカスタマイズするために使用すべき提案としての色を示します。
+  - : ユーザーエージェントがページやその周辺のユーザーインターフェイスの表示をカスタマイズするために使用する、推奨色を示します。
     [`content`](/ja/docs/Web/HTML/Reference/Attributes/content) 属性は、有効な CSS の {{cssxref("&lt;color&gt;")}} を含んでいます。
     [`media`](/ja/docs/Web/HTML/Reference/Elements/meta#media) 属性で有効なメディアクエリーのリストを記載することで、テーマカラーメタデータが適用されるメディアを設定することができます。
 
-### 他の仕様書で定義されている meta name
+### 他の仕様書で定義されている name 値
 
+- [`responsive-embedded-sizing`](/ja/docs/Web/HTML/Reference/Elements/meta/name/responsive-embedded-sizing) {{experimental_inline}}
+  - : 埋め込み文書が、そのサイズ情報を親ページと共有することを許可します。[CSS ボックスサイズ設定モジュール](/ja/docs/Web/CSS/Guides/Box_sizing)で定義されています。
+- [`text-scale`](/ja/docs/Web/HTML/Reference/Elements/meta/name/text-scale) {{experimental_inline}}
+  - : ページの {{htmlelement("html")}} ルート要素の {{cssxref("font-size")}} を、OS およびブラウザーレベルのテキスト倍率設定に応じて比例的に変倍できるようにします。[CSS フォントモジュール](/ja/docs/Web/CSS/Guides/Fonts)で定義されています。
 - [`viewport`](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport)
-  - : {{glossary("viewport", "ビューポート")}}の初期サイズに関するヒントを提供します。
-- [`text-scale`](/ja/docs/Web/HTML/Reference/Elements/meta/name/text-scale)
-  - : ページが、{{htmlelement("html")}} のルート要素の {{cssxref("font-size")}} を、OS およびブラウザーレベルのテキスト倍率設定に応じて、比例的に変倍するように設定します。[CSS フォントモジュール](/ja/docs/Web/CSS/Guides/Fonts)で定義されています。
+  - : {{glossary("viewport", "ビューポート")}}の初期サイズに関するヒントを提供します。[CSS ビューポートモジュール](/ja/docs/Web/CSS/Guides/Viewport)で定義されています。
 
-### WHATWG MetaExtensions wiki で定義されているメタデータ名
+### WHATWG Wiki の MetaExtensions ページで定義されているメタデータ名
 
-[WHATWG Wiki MetaExtensions ページ](https://wiki.whatwg.org/wiki/MetaExtensions) には、標準外のメタデータ名の大規模なセットが含まれています。
+[WHATWG Wiki の MetaExtensions ページ](https://wiki.whatwg.org/wiki/MetaExtensions)<sup>(英語)</sup>には、標準外のメタデータ名が多数掲載されています。
 記載されている名前のいくつかは、実際にはごく一般に使用されています。特に、次のものが挙げられます。
 
 - `creator`
   - : この文書の作成者（組織や機関など）の名前です。
     複数ある場合は、複数の {{HTMLElement("meta")}} 要素を使用する必要があります。
 - `googlebot`
-  - : `robots` と同様ですが、 Googlebot （Google のインデックス作成用クローラー）のみが従います。
+  - : `robots` と同様ですが、Googlebot（Google のインデックス作成用クローラー）だけが従います。
 - `publisher`
   - : この文書の発行者の名前です。
 - [`robots`](/ja/docs/Web/HTML/Reference/Elements/meta/name/robots)
-  - : 協力的なクローラー、つまり「ロボット」がページに対して使用すべき動作です。以下の値をカンマで区切ったリストです。
+  - : 協力的なクローラー、つまり「ロボット」がページに対して使用するクロール動作を定義する、カンマ区切りの値のリストです。
 
 ## 仕様書
 

@@ -3,7 +3,7 @@ title: "Object : méthode statique getPrototypeOf()"
 short-title: getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Object.getPrototypeOf()`** retourne le prototype (c'est-à-dire la valeur de la propriété interne `[[Prototype]]`) de l'objet défini.
@@ -35,7 +35,7 @@ Le prototype de l'objet donné, qui peut être {{JSxRef("null")}}.
 
 ## Exemples
 
-### Utiliser `Object.getPrototypeOf()`
+### Utiliser la méthode `Object.getPrototypeOf()`
 
 ```js
 const proto = {};
@@ -64,8 +64,8 @@ Object.getPrototypeOf("toto");
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Object.getPrototypeOf` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
-- [La prothèse d'émulation es-shims de `Object.getPrototypeOf` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.getprototypeof)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.getPrototypeOf` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Object.getPrototypeOf` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.getprototypeof)
 - La méthode statique {{JSxRef("Object.prototype.isPrototypeOf()")}}
 - La méthode statique {{JSxRef("Object.setPrototypeOf()")}}
 - La propriété [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

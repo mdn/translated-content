@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-在指定的 `parentId` 的 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 下创建一个书签或文件夹。要创建文件夹，请省略或留空 {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}} 参数。
+在指定的 `parentId` 的 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 下创建一个书签或文件夹。要创建文件夹，请省略或留空 {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "#url")}} 参数。
 
 > [!WARNING]
 > 如果你的扩展尝试在书签树的根节点中创建新书签，则会引发错误：“_The bookmark root cannot be modified_”，并且不会创建该书签。

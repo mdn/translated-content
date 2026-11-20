@@ -3,7 +3,7 @@ title: Math.asin()
 short-title: asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
 **`Math.asin()`** は静的メソッドで、数値の逆正弦（アークサイン）をラジアン単位で返します。
@@ -78,3 +78,4 @@ Math.asin(2); // NaN
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("asin()")}} 関数

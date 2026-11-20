@@ -2,7 +2,7 @@
 title: Información contenida en un archivo WebIDL
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
 l10n:
-  sourceCommit: 0d155984425e8964c889efb63ec39593e11bbc14
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Al documentar una API, hay muchas fuentes de información: las especificaciones describen qué se debe implementar, así como el modelo, y las implementaciones muestran qué es lo que realmente se ha incluido en los navegadores. Los archivos WebIDL son una forma muy condensada de proporcionar gran parte, aunque no toda, de la información sobre la API. Este documento sirve como referencia para ayudarte a comprender la sintaxis de WebIDL.
@@ -87,11 +87,16 @@ partial interface mixin MyMixin {
 MyInterface includes MyMixin;
 ```
 
-A efectos de documentación, MDN oculta los mixins. Son componentes abstractos exclusivos de la especificación. No los puedes ver en la consola del navegador, y resulta más útil saber en qué interfaces reales se implementan los métodos y propiedades.
+A efectos de documentación, MDN oculta los mixins. Son componentes abstractos exclusivos de la especificación.
+No los puedes ver en la consola del navegador, y resulta más útil saber en qué interfaces reales se implementan los métodos y propiedades.
 
-Si encuentras un mixin en un IDL, como [HTMLHyperlinkElementUtils](https://html.spec.whatwg.org/multipage/links.html#htmlhyperlinkelementutils), busca las interfaces que implementan ese mixin, por ejemplo [HTMLAnchorElement](https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmlanchorelement), y documenta los miembros del mixin directamente en esas interfaces.
+Si encuentras un mixin en un IDL, como [HTMLHyperlinkElementUtils](https://html.spec.whatwg.org/multipage/links.html#htmlhyperlinkelementutils),
+busca las interfaces que implementan ese mixin, por ejemplo
+[HTMLAnchorElement](https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmlanchorelement), y documenta los miembros del mixin directamente en esas interfaces.
 
-En la práctica, esto significa que, en lugar de documentar `HTMLHyperlinkElementUtils`, se añade la documentación a las interfaces concretas, como [`HTMLAnchorElement`](/es/docs/Web/API/HTMLAnchorElement) y [`HTMLAreaElement`](/es/docs/Web/API/HTMLAreaElement).
+En la práctica, esto significa que, en lugar de documentar `HTMLHyperlinkElementUtils`,
+se añade la documentación a las interfaces concretas, como [`HTMLAnchorElement`](/es/docs/Web/API/HTMLAnchorElement)
+y [`HTMLAreaElement`](/es/docs/Web/API/HTMLAreaElement).
 
 Consulta las siguientes dos páginas que documentan `HTMLHyperlinkElementUtils.hash` de manera correspondiente:
 
@@ -391,7 +396,7 @@ Algunos métodos pueden lanzar excepciones. Esto se indica mediante la anotació
 
 Ten en cuenta que algunas excepciones no están marcadas explícitamente, sino que están definidas por los bindings de JavaScript. [Intentar establecer un valor enumerado no válido](https://webidl.spec.whatwg.org/#es-enumeration) (mapeado a un {{jsxref('String')}} de JavaScript) como parámetro lanzará una excepción {{jsxref('TypeError')}}. Esto se debe documentar, pero solo se marca de forma implícita en el documento WebIDL.
 
-Echa un vistazo a una de estas [secciones de _Excepciones_](/es/docs/Web/API/SubtleCrypto/importKey#exceptions).
+Echa un vistazo a una de estas [secciones de _Excepciones_](/es/docs/Web/API/SubtleCrypto/importKey).
 
 ### Disponibilidad en workers
 

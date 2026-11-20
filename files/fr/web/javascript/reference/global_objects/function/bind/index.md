@@ -3,7 +3,7 @@ title: "Function : méthode bind()"
 short-title: bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 l10n:
-  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`bind()`** des instances de {{JSxRef("Function")}} crée une nouvelle fonction qui, lorsqu'elle est appelée, appelle cette fonction avec son mot-clé `this` défini sur la valeur fournie, et une séquence d'arguments donnée précédant ceux fournis lors de l'appel de la nouvelle fonction.
@@ -64,7 +64,7 @@ const journalAttache2 = journalAttache.bind("cette nouvelle valeur", 3, 4);
 journalAttache2(5, 6); // "cette valeur", 1, 2, 3, 4, 5, 6
 ```
 
-Une fonction liée peut également être construite à l'aide de l'opérateur {{JSxRef("new")}} si sa fonction cible est constructible. Cela agit comme si la fonction cible avait été construite à la place. Les arguments préfixés sont transmis à la fonction cible comme d'habitude, tandis que la valeur `this` fournie est ignorée (car la construction prépare son propre `this`, comme le montrent les paramètres de {{JSxRef("Reflect.construct")}}). Si la fonction liée est directement construite, {{JSxRef("Operators/new.target", "new.target")}} est la fonction cible. (Autrement dit, la fonction liée est transparente pour `new.target`.)
+Une fonction liée peut également être construite à l'aide de l'opérateur {{JSxRef("new")}} si sa fonction cible est constructible. Cela agit comme si la fonction cible est construite à la place. Les arguments préfixés sont transmis à la fonction cible comme d'habitude, tandis que la valeur `this` fournie est ignorée (car la construction prépare son propre `this`, comme le montrent les paramètres de {{JSxRef("Reflect.construct")}}). Si la fonction liée est directement construite, {{JSxRef("Operators/new.target", "new.target")}} est la fonction cible. (Autrement dit, la fonction liée est transparente pour `new.target`.)
 
 ```js
 class Base {
@@ -240,7 +240,7 @@ axisPoint instanceof YAxisPoint; // true
 new YAxisPoint(17, 42) instanceof Point; // true
 ```
 
-Notez qu'il n'est pas nécessaire de faire quoi que ce soit de particulier pour créer une fonction liée à utiliser avec {{JSxRef("new")}}. {{JSxRef("Operators/new.target", "new.target")}}, {{JSxRef("instanceof")}}, {{JSxRef("this")}} etc. fonctionnent tous comme prévu, comme si le constructeur n'avait jamais été lié. La seule différence est qu'elle ne peut plus être utilisée pour {{JSxRef("Classes/extends", "extends")}}.
+Notez qu'il n'est pas nécessaire de faire quoi que ce soit de particulier pour créer une fonction liée à utiliser avec {{JSxRef("new")}}. {{JSxRef("Operators/new.target", "new.target")}}, {{JSxRef("instanceof")}}, {{JSxRef("this")}} etc. fonctionnent tous comme prévu, comme si le constructeur n'est jamais attaché. La seule différence est qu'elle ne peut plus être utilisée pour {{JSxRef("Classes/extends", "extends")}}.
 
 Le corollaire est qu'il n'est pas nécessaire de faire quoi que ce soit de particulier pour créer une fonction liée à appeler simplement, même si vous préférez que la fonction liée ne soit appelée qu'avec {{JSxRef("new")}}. Si vous l'appelez sans `new`, le `this` lié n'est soudainement plus ignoré.
 
@@ -313,7 +313,7 @@ slice(arguments);
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Function.prototype.bind` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-function)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Function.prototype.bind` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/function)
 - La méthode {{JSxRef("Function.prototype.apply()")}}
 - La méthode {{JSxRef("Function.prototype.call()")}}
 - {{JSxRef("Functions", "Les fonctions", "", 1)}}

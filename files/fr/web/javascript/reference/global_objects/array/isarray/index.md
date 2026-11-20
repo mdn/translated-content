@@ -3,7 +3,7 @@ title: "Array : méthode statique isArray()"
 short-title: isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Array.isArray()`** détermine si la valeur passée est un {{JSxRef("Array")}}.
@@ -45,7 +45,7 @@ Array.isArray(value)
 
 C'est une alternative plus robuste à [`instanceof Array`](/fr/docs/Web/JavaScript/Reference/Operators/instanceof), car elle évite les faux positifs et les faux négatifs&nbsp;:
 
-- `Array.isArray()` rejette les valeurs qui ne sont pas de véritables instances de `Array`, même si elles possèdent `Array.prototype` dans leur chaîne de prototypes — `instanceof Array` accepterait ces valeurs, car il vérifie la chaîne de prototypes.
+- `Array.isArray()` rejette les valeurs qui ne sont pas de véritables instances de `Array`, même si elles possèdent `Array.prototype` dans leur chaîne de prototypes — `instanceof Array` accepte ces valeurs, car il vérifie la chaîne de prototypes.
 - `Array.isArray()` accepte les objets `Array` construits dans un autre environnement d'exécution (<i lang="en">realm</i> en anglais) — `instanceof Array` retourne `false` pour ceux-ci, car l'identité du constructeur `Array` est différente entre les environnements.
 
 Voir l'article [«&nbsp;Déterminer avec une précision absolue si un objet JavaScript est un tableau&nbsp;» <sup>(angl.)</sup>](https://web.mit.edu/jwalden/www/isArray.html) pour plus de détails.
@@ -53,7 +53,7 @@ Voir l'article [«&nbsp;Déterminer avec une précision absolue si un objet Java
 ## Exemples
 
 ```js
-// Tous les appels suivant renvoient true
+// Tous les appels suivant retournent true
 Array.isArray([]);
 Array.isArray([1]);
 Array.isArray(new Array());
@@ -62,7 +62,7 @@ Array.isArray(new Array(3));
 // Une petite anecdote: Array.prototype lui même est un Array
 Array.isArray(Array.prototype);
 
-// Tous les appels suivant renvoient false
+// Tous les appels suivant retournent false
 Array.isArray();
 Array.isArray({});
 Array.isArray(null);
@@ -104,7 +104,7 @@ arr instanceof Array; // false
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.isArray` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.isArray` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.isarray)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
-- [Prothèse d'émulation de `Array.isArray` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.isArray` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.isarray)

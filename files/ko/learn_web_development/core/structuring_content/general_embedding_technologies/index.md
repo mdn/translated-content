@@ -280,7 +280,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 웹사이트에 HTTPS를 적용하려면 특별한 보안 인증서를 설치해야 합니다. 여러 호스팅 업체에서는 직접 인증서를 설치하지 않아도 HTTPS를 적용할 수 있는 호스팅을 제공합니다. 하지만 직접 HTTPS를 적용해야 한다면, [Let's Encrypt](https://letsencrypt.org/)에서 Apache 웹 서버나 Nginx 등 널리 사용되는 웹 서버를 지원할 뿐만 아니라 자동으로 필요한 인증서를 생성하고 설치할 수 있는 도구와 설명서를 제공하고 있습니다. Let's Encrypt는 이 과정을 최대한 쉽게 만들도록 설계되었습니다. 그러니 웹페이지에 HTTPS를 적용하기 위하여 Let's Encrypt를 사용하지 않을 이유가 전혀 없습니다.
 
 > [!NOTE]
-> [GitHub pages](/ko/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)는 기본적으로 HTTPS를 통해 콘텐츠 전송을 허용하므로 콘텐츠를 호스팅하기에 유용합니다. 만약 다른 호스팅 업체를 사용하는데 HTTPS 적용 여부가 확실하지 않다면 업체에 문의해보세요.
+> [GitHub pages](/ko/docs/Learn_web_development/Core/Version_control)는 기본적으로 HTTPS를 통해 콘텐츠 전송을 허용하므로 콘텐츠를 호스팅하기에 유용합니다. 만약 다른 호스팅 업체를 사용하는데 HTTPS 적용 여부가 확실하지 않다면 업체에 문의해보세요.
 
 #### 항상 `sandbox` 특성을 사용하세요
 

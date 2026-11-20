@@ -3,7 +3,7 @@ title: Intl.Locale.prototype.numeric
 short-title: numeric
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric
 l10n:
-  sourceCommit: e509776556a47f12843b91ab5c6e9be6585698c6
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`numeric`** は {{jsxref("Intl.Locale")}} インスタンスのアクセサープロパティで、このロケールが特別な数字の照合処理を行うかどうかを返します。
@@ -12,7 +12,7 @@ l10n:
 
 {{jsxref("Intl/Locale/caseFirst", "caseFirst")}} と同様、 `numeric` はロケールが使用する照合規則を変更するものです。 `numeric` は論理値で、 `true` か `false` のどちらかになります。 `numeric` を `false` に設定した場合は、文字列内の数値を特別に扱うことはありません。 `numeric` を `true` に設定した場合は、ロケールは文字列を照合する際に数値を考慮します。この数値の特別な扱いとは、数字の並びを数値として比較するということです。例えば、 "A-21" という文字列は "A-123" よりも小さいとみなされます。
 
-`numeric` プロパティの値は、ロケール識別子の `kn` キー、または {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} コンストラクターの `numeric` オプションを通じて、構築時に設定されます。両方が存在する場合、後者が優先されます。どちらも存在しない場合、プロパティの値は `undefined` となります。
+`numeric` プロパティの値は、ロケール識別子の `kn` キー、または {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} コンストラクターの `numeric` オプションを通じて、構築時に設定されます。両方が存在する場合、後者が優先されます。どちらも存在しない場合、プロパティの値は `false` となります。
 
 `numeric` の設定アクセサーは `undefined` です。このプロパティを直接変更することはできません。
 
@@ -26,7 +26,7 @@ l10n:
 
 ```js
 const locale = new Intl.Locale("fr-Latn-FR-u-kn-false");
-console.log(locale.numeric); // "false" と表示
+console.log(locale.numeric); // false と表示
 ```
 
 ### 構成オブジェクト引数から `numeric` の値を設定
@@ -35,7 +35,7 @@ console.log(locale.numeric); // "false" と表示
 
 ```js
 const locale = new Intl.Locale("en-Latn-US", { numeric: true });
-console.log(locale.numeric); // "true" と表示
+console.log(locale.numeric); // true と表示
 ```
 
 ## 仕様書

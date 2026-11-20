@@ -2,7 +2,7 @@
 title: Int8Array
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Le tableau typé **`Int8Array`** représente un tableau d'entiers signés sur 8 bits. Les contenus sont initialisés à `0` sauf si des données d'initialisation sont explicitement fournies. Une fois établi, vous pouvez référencer les éléments du tableau en utilisant les méthodes de l'objet, ou en utilisant la syntaxe d'index de tableau standard (c'est-à-dire la notation entre crochets).
@@ -84,7 +84,7 @@ console.log(int8FromIterable);
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Int8Array` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Int8Array` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - Le guide [des tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - L'objet natif {{JSxRef("TypedArray")}}
 - L'objet natif {{JSxRef("ArrayBuffer")}}

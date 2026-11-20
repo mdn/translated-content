@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-invalid"
 short-title: aria-invalid
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-invalid
 l10n:
-  sourceCommit: fc52eb81b630ca02c16addc346924295bdb5aaa8
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 L'attribut `aria-invalid` indique l'état de la valeur saisie comme ne correspondant pas au format attendu par l'application.
@@ -17,7 +17,7 @@ L'attribut `aria-invalid` peut être utilisé avec n'importe quel élément de f
 L'attribut doit être défini avec JavaScript à la suite d'un processus de validation. Si une valeur est jugée invalide ou hors plage, définissez `aria-invalid="true"` **et** informez l'utilisateur·ice qu'il y a une erreur. Pour une meilleure expérience, fournissez des suggestions pour corriger l'erreur. Ne définissez pas `aria-invalid="true"` sur les éléments obligatoires vides tant que l'utilisateur·ice n'a pas tenté d'envoyer le formulaire. Il·Elle peut encore être en train de le remplir.
 
 > [!NOTE]
-> Lorsque `aria-invalid` est utilisé avec l'attribut `aria-required`, `aria-invalid` ne doit pas être défini à true avant la soumission du formulaire — uniquement en réponse à la validation.
+> Lorsque `aria-invalid` est utilisé avec l'attribut `aria-required`, `aria-invalid` ne doit pas être défini à true avant l'envoi du formulaire — uniquement en réponse à la validation.
 
 Il existe actuellement quatre valeurs&nbsp;: en plus de `true` et `false`, on trouve `grammar` pour une erreur grammaticale détectée et `spelling` pour une erreur d'orthographe. Si l'attribut n'est pas présent, ou que sa valeur est `false` ou une chaîne de caractères vide, la valeur par défaut est `false`. Toute autre valeur est traitée comme si `true` est défini.
 
@@ -47,6 +47,36 @@ Si vous créez vos propres scripts de validation de formulaire, veillez à inclu
   - : La valeur saisie par l'utilisateur·ice n'a pas passé la validation.
 
 Toute valeur non présente dans cette liste est traitée comme `true`.
+
+## Interfaces associées
+
+- {{DOMxRef("Element.ariaInvalid")}}
+  - : La propriété [`ariaInvalid`](/fr/docs/Web/API/Element/ariaInvalid), qui fait partie de l'interface {{DOMxRef("Element")}}, reflète la valeur de l'attribut `aria-invalid`, qui indique si l'élément est exposé à une API d'accessibilité.
+- {{DOMxRef("ElementInternals.ariaInvalid")}}
+  - : La propriété [`ariaInvalid`](/fr/docs/Web/API/ElementInternals/ariaInvalid), qui fait partie de l'interface {{DOMxRef("ElementInternals")}}, reflète la valeur de l'attribut `aria-invalid`.
+
+## Rôles associés
+
+Utilisé dans les rôles&nbsp;:
+
+- [`application`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
+- [`checkbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
+- [`combobox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
+- [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [`listbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
+- [`radiogroup`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)
+- [`slider`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
+- [`spinbutton`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
+- [`textbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
+- [`tree`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
+
+Hérité dans le rôle&nbsp;:
+
+- [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
+- [`searchbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
+- [`switch`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
+- [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
 
 ## Exemple
 
@@ -124,36 +154,6 @@ function updateAlert(msg) {
 
 Notez que l'alerte possède l'attribut de rôle ARIA [`alert`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role).
 
-## Interfaces associées
-
-- {{DOMxRef("Element.ariaInvalid")}}
-  - : La propriété [`ariaInvalid`](/fr/docs/Web/API/Element/ariaInvalid), qui fait partie de l'interface {{DOMxRef("Element")}}, reflète la valeur de l'attribut `aria-invalid`, qui indique si l'élément est exposé à une API d'accessibilité.
-- {{DOMxRef("ElementInternals.ariaInvalid")}}
-  - : La propriété [`ariaInvalid`](/fr/docs/Web/API/ElementInternals/ariaInvalid), qui fait partie de l'interface {{DOMxRef("ElementInternals")}}, reflète la valeur de l'attribut `aria-invalid`.
-
-## Rôles associés
-
-Utilisé dans les rôles&nbsp;:
-
-- [`application`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
-- [`checkbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [`combobox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
-- [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-- [`listbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
-- [`radiogroup`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)
-- [`slider`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
-- [`spinbutton`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
-- [`textbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
-- [`tree`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
-
-Hérité dans le rôle&nbsp;:
-
-- [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-- [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
-- [`searchbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
-- [`switch`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
-- [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
-
 ## Spécifications
 
 {{Specifications}}
@@ -161,6 +161,6 @@ Hérité dans le rôle&nbsp;:
 ## Voir aussi
 
 - L'attribut ARIA [`aria-errormessage`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
-- La pseudo-classe CSS {{CSSxRef(':valid')}}
-- La pseudo-classe CSS {{CSSxRef(':invalid')}}
+- La pseudo-classe CSS {{CSSxRef(":valid")}}
+- La pseudo-classe CSS {{CSSxRef(":invalid")}}
 - [Validation de formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)

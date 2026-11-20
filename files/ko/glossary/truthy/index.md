@@ -14,19 +14,19 @@ l10n:
 다음은 참 같은 값에 대한 예시입니다. JavaScript는 불리언 문맥에서 참 같은 값을 `true`로 변환하기 때문에 아래의 모든 `if` 블록을 실행합니다.
 
 ```js
-if (true)
-if ({})
-if ([])
-if (42)
-if ("0")
-if ("false")
-if (new Date())
-if (-42)
-if (12n)
-if (3.14)
-if (-3.14)
-if (Infinity)
-if (-Infinity)
+if (true);
+if ({});
+if ([]);
+if (42);
+if ("0");
+if ("false");
+if (new Date());
+if (-42);
+if (12n);
+if (3.14);
+if (-3.14);
+if (Infinity);
+if (-Infinity);
 ```
 
 ### 논리적 AND 연산자, &&
@@ -34,10 +34,10 @@ if (-Infinity)
 첫 번째 피연산자가 참인 경우, [논리적 AND 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Logical_AND)는 두 번째 피연산자를 반환합니다.
 
 ```js
-true && "dog"
+true && "dog";
 // "dog" 반환합니다.
 
-[] && "dog"
+[] && "dog";
 // "dog" 반환합니다.
 ```
 

@@ -3,7 +3,7 @@ title: "Object : méthode statique create()"
 short-title: create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Object.create()`** crée un nouvel objet, en utilisant un objet existant comme prototype du nouvel objet créé.
@@ -194,7 +194,7 @@ Bien sûr, si le constructeur `Constructor` contient du code d'initialisation, l
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Object.create` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.create` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
 - La méthode statique {{JSxRef("Object.defineProperty()")}}
 - La méthode statique {{JSxRef("Object.defineProperties()")}}
 - La méthode {{JSxRef("Object.prototype.isPrototypeOf()")}}

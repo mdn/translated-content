@@ -1,13 +1,14 @@
 ---
 title: "ARIA: marquee ロール"
+short-title: marquee
 slug: Web/Accessibility/ARIA/Reference/Roles/marquee_role
 l10n:
-  sourceCommit: 22cf84fc5704222a2e2e5ac67b95b02dcfea08ff
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 `marquee` は、頻繁に変化する重要でない情報を含む [ライブリージョン](/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions) の一種です。
 
-## 説明
+## 解説
 
 `marquee` ロールは、頻繁に変化する重要でない情報を提示するライブリージョンの一種として領域を定義します。marquee の例には、株価表示やバナー広告などがあります。これらは、ユーザーが必ずしも求めているわけではない情報で、任意の順序で表示される場合があります。`marquee` と [`log`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/log_role) の主な違いは、log の情報は日付など意味のある順序で表示されることです。
 

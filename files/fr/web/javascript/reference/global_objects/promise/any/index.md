@@ -3,7 +3,7 @@ title: "Promise : méthode statique any()"
 short-title: any()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/any
 l10n:
-  sourceCommit: 9bda33365e40b6c609fa5190a0af9b5dc6438cf0
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Promise.any()`** prend comme argument un itérable contenant des promesses et retourne une unique promesse ({{JSxRef("Promise")}}). La promesse retournée est complétée (<i lang="en">fulfilled</i> en anglais) dès qu'une des promesses de l'itérable est complétée, avec la valeur de cette première promesse complétée. Elle est rompue (<i lang="en">rejected</i> en anglais) lorsque toutes les promesses de l'itérable sont rompues (y compris lorsque l'itérable est vide), avec un objet {{JSxRef("AggregateError")}} contenant un tableau des raisons de rejet.
@@ -55,7 +55,7 @@ Compléter la promesse retournée ne supprime pas les autres opérations ni ne d
 
 ## Exemples
 
-### Utiliser `Promise.any()`
+### Utiliser la méthode `Promise.any()`
 
 `Promise.any()` prend pour valeur de résolution celle de la première promesse résolue, et ce même si une des promesses de l'itérable a échoué avant. Ce comportement est différent de ce {{JSxRef("Promise.race()")}}, qui s'arrête à la première promesse qui se termine avec sa valeur de résolution ou d'échec.
 
@@ -135,8 +135,8 @@ Promise.any([cafe, the])
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Promise.any` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-promise)
-- [La prothèse d'émulation es-shims de `Promise.any` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.any)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Promise.any` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/promise)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Promise.any` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.any)
 - L'objet natif {{JSxRef("Promise")}}
 - La méthode statique {{JSxRef("Promise.all()")}}
 - La méthode statique {{JSxRef("Promise.allSettled()")}}

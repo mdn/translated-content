@@ -3,7 +3,7 @@ title: "Tutorial Django Parte 4: Sitio de Administración de Django"
 short-title: "4: Sitio de administración de Django"
 slug: Learn_web_development/Extensions/Server-side/Django/Admin_site
 l10n:
-  sourceCommit: 815f1a18f44059500b337719295c6eda14b6228e
+  sourceCommit: d0d002817fbb057e80a4f7b8670b09cc80250516
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django")}}
@@ -33,13 +33,13 @@ Ahora que hemos creado los modelos para el sitio web de [LocalLibrary](/es/docs/
 
 La _aplicación_ de administración de Django puede usar tus modelos para construir automáticamente un área del sitio que puedes usar para crear, ver, actualizar y eliminar registros. Esto puede ahorrarte mucho tiempo durante el desarrollo, facilitando bastante probar tus modelos y hacerte una idea de si tienes los datos _correctos_. La aplicación de administración también puede ser útil para gestionar datos en producción, dependiendo del tipo de sitio web. El proyecto Django la recomienda solo para gestión interna de datos (es decir, para uso exclusivo de administradores o personas dentro de tu organización), ya que el enfoque centrado en el modelo no es necesariamente la mejor interfaz posible para todos los usuarios, y expone muchos detalles innecesarios sobre los modelos.
 
-Toda la configuración necesaria para incluir la aplicación de administración en tu sitio web se hizo automáticamente cuando [creaste el proyecto esqueleto](/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) (para información sobre las dependencias reales necesarias, consulta la [documentación de Django aquí](https://docs.djangoproject.com/en/5.0/ref/contrib/admin/)). Como resultado, todo lo que **debes** hacer para agregar tus modelos a la aplicación de administración es _registrarlos_. Al final de este artículo daremos una breve demostración de cómo puedes configurar aún más el área de administración para mostrar mejor los datos de nuestro modelo.
+Toda la configuración necesaria para incluir la aplicación de administración en tu sitio web se hizo automáticamente cuando [creaste el proyecto esqueleto](/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) (para información sobre las dependencias reales necesarias, consulta [El sitio de administración de Django](https://docs.djangoproject.com/en/6.1/ref/contrib/admin/) en la documentación de Django). Como resultado, todo lo que **debes** hacer para agregar tus modelos a la aplicación de administración es _registrarlos_. Al final de este artículo daremos una breve demostración de cómo puedes configurar aún más el área de administración para mostrar mejor los datos de nuestro modelo.
 
 Después de registrar los modelos te mostraremos cómo crear un nuevo "superusuario", iniciar sesión en el sitio, y crear algunos libros, autores, instancias de libro y géneros. Estos serán útiles para probar las vistas y plantillas que empezaremos a crear en el siguiente tutorial.
 
 ## Registro de modelos
 
-Primero, abre **admin.py** en la aplicación catalog (**/django-locallibrary-tutorial/catalog/admin.py**). Actualmente se ve así, nota que ya importa `django.contrib.admin`:
+Primero, abre **admin.py** en la aplicación catalog (**/catalog/admin.py**). Actualmente se ve así, nota que ya importa `django.contrib.admin`:
 
 ```python
 from django.contrib import admin
@@ -141,13 +141,13 @@ Puedes personalizar aún más la interfaz para hacerla incluso más fácil de us
 
 En esta sección veremos algunos cambios que mejorarán la interfaz de nuestra _LocalLibrary_, incluyendo agregar más información a las listas de los modelos `Book` y `Author`, y mejorar el diseño de sus vistas de edición. No cambiaremos la presentación de los modelos `Language` y `Genre` porque cada uno tiene solo un campo, ¡así que no hay un beneficio real en hacerlo!
 
-Puedes encontrar una referencia completa de todas las opciones de personalización del sitio de administración en [El sitio de administración de Django](https://docs.djangoproject.com/en/5.0/ref/contrib/admin/) (documentación de Django).
+Puedes encontrar una referencia completa de todas las opciones de personalización del sitio de administración en [El sitio de administración de Django](https://docs.djangoproject.com/en/6.1/ref/contrib/admin/) (documentación de Django).
 
 ### Registrar una clase ModelAdmin
 
-Para cambiar cómo se muestra un modelo en la interfaz de administración, defines una clase [ModelAdmin](https://docs.djangoproject.com/en/5.0/ref/contrib/admin/#modeladmin-objects) (que describe el diseño) y la registras con el modelo.
+Para cambiar cómo se muestra un modelo en la interfaz de administración, defines una clase [ModelAdmin](https://docs.djangoproject.com/en/6.1/ref/contrib/admin/#modeladmin-objects) (que describe el diseño) y la registras con el modelo.
 
-Empecemos con el modelo `Author`. Abre **admin.py** en la aplicación catalog (**/django-locallibrary-tutorial/catalog/admin.py**). Comenta el registro original (agrega un # al inicio) del modelo `Author`:
+Empecemos con el modelo `Author`. Abre **admin.py** en la aplicación catalog (**/catalog/admin.py**). Comenta el registro original (agrega un # al inicio) del modelo `Author`:
 
 ```python
 # admin.site.register(Author)
@@ -189,7 +189,7 @@ Actualmente todas nuestras clases de administración están vacías (mira el `pa
 
 ### Configurar vistas de lista
 
-Actualmente, _LocalLibrary_ lista todos los autores usando el nombre de objeto generado por el método `__str__()` del modelo. Esto está bien cuando solo tienes unos pocos autores, pero una vez que tengas muchos podrías terminar con duplicados. Para diferenciarlos, o simplemente porque quieres mostrar información más interesante sobre cada autor, puedes usar [list_display](https://docs.djangoproject.com/en/5.0/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display) para agregar campos adicionales a la vista.
+Actualmente, _LocalLibrary_ lista todos los autores usando el nombre de objeto generado por el método `__str__()` del modelo. Esto está bien cuando solo tienes unos pocos autores, pero una vez que tengas muchos podrías terminar con duplicados. Para diferenciarlos, o simplemente porque quieres mostrar información más interesante sobre cada autor, puedes usar [list_display](https://docs.djangoproject.com/en/6.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display) para agregar campos adicionales a la vista.
 
 Reemplaza tu clase `AuthorAdmin` con el código de abajo. Los nombres de los campos a mostrar en la lista se declaran en una _tupla_ en el orden requerido, como se muestra (estos son los mismos nombres especificados en tu modelo original).
 
@@ -277,7 +277,7 @@ En tu sitio web ve a la vista de detalle del autor; ahora debería verse como se
 
 #### Dividir la vista de detalle en secciones
 
-Puedes agregar "secciones" para agrupar información relacionada del modelo dentro del formulario de detalle, usando el atributo [fieldsets](https://docs.djangoproject.com/en/5.0/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets).
+Puedes agregar "secciones" para agrupar información relacionada del modelo dentro del formulario de detalle, usando el atributo [fieldsets](https://docs.djangoproject.com/en/6.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets).
 
 En el modelo `BookInstance` tenemos información relacionada con qué es el libro (es decir, `name`, `imprint`, y `id`) y cuándo estará disponible (`status`, `due_back`). Podemos agregar esto a nuestra clase `BookInstanceAdmin` como se muestra abajo, usando la propiedad `fieldsets`.
 
@@ -306,7 +306,7 @@ Ahora navega a una vista de instancia de libro en tu sitio web; el formulario de
 
 A veces tiene sentido poder agregar registros asociados al mismo tiempo. Por ejemplo, puede tener sentido tener tanto la información del libro como la información sobre las copias específicas que tienes en la misma página de detalle.
 
-Puedes hacer esto declarando [inlines](https://docs.djangoproject.com/en/5.0/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines), del tipo [TabularInline](https://docs.djangoproject.com/en/5.0/ref/contrib/admin/#django.contrib.admin.TabularInline) (diseño horizontal) o [StackedInline](https://docs.djangoproject.com/en/5.0/ref/contrib/admin/#django.contrib.admin.StackedInline) (diseño vertical, igual que el diseño de modelo por defecto). Puedes agregar la información de `BookInstance` en línea a nuestro detalle de `Book` especificando `inlines` en tu `BookAdmin`:
+Puedes hacer esto declarando [inlines](https://docs.djangoproject.com/en/6.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines), del tipo [TabularInline](https://docs.djangoproject.com/en/6.1/ref/contrib/admin/#django.contrib.admin.TabularInline) (diseño horizontal) o [StackedInline](https://docs.djangoproject.com/en/6.1/ref/contrib/admin/#django.contrib.admin.StackedInline) (diseño vertical, igual que el diseño de modelo por defecto). Puedes agregar la información de `BookInstance` en línea a nuestro detalle de `Book` especificando `inlines` en tu `BookAdmin`:
 
 ```python
 class BooksInstanceInline(admin.TabularInline):
@@ -323,7 +323,7 @@ Ahora navega a una vista de un `Book` en tu sitio web; en la parte inferior ahor
 
 ![Sitio de administración - Libro con inlines](admin_improved_book_detail_inlines.png)
 
-En este caso, todo lo que hemos hecho es declarar nuestra clase inline tabular, que simplemente agrega todos los campos del modelo _incluido en línea_. Puedes especificar todo tipo de información adicional para el diseño, incluyendo los campos a mostrar, su orden, si son de solo lectura o no, etc. (consulta [TabularInline](https://docs.djangoproject.com/en/5.0/ref/contrib/admin/#django.contrib.admin.TabularInline) para más información).
+En este caso, todo lo que hemos hecho es declarar nuestra clase inline tabular, que simplemente agrega todos los campos del modelo _incluido en línea_. Puedes especificar todo tipo de información adicional para el diseño, incluyendo los campos a mostrar, su orden, si son de solo lectura o no, etc. (consulta [TabularInline](https://docs.djangoproject.com/en/6.1/ref/contrib/admin/#django.contrib.admin.TabularInline) para más información).
 
 > [!NOTE]
 > ¡Hay algunos límites molestos en esta funcionalidad! En la captura de pantalla de arriba tenemos tres instancias de libro existentes, seguidas de tres marcadores de posición para nuevas instancias de libro (¡que se ven muy similares!). Sería mejor no tener instancias de libro adicionales por defecto y simplemente agregarlas con el enlace **Add another Book instance**, o poder simplemente listar las `BookInstance` como enlaces no editables desde aquí. La primera opción se puede hacer estableciendo el atributo `extra` en `0` en el modelo `BooksInstanceInline`, pruébalo tú mismo
@@ -341,7 +341,7 @@ Hemos aprendido mucho en esta sección, así que ahora es momento de que intente
 
 ## Referencias adicionales
 
-- [Escribiendo tu primera aplicación de Django, parte 2: Introducción al administrador de Django](https://docs.djangoproject.com/en/5.0/intro/tutorial02/#introducing-the-django-admin) (documentación de Django)
-- [El sitio de administración de Django](https://docs.djangoproject.com/en/5.0/ref/contrib/admin/) (documentación de Django)
+- [Escribiendo tu primera aplicación de Django, parte 2: Introducción al administrador de Django](https://docs.djangoproject.com/en/6.1/intro/tutorial02/#introducing-the-django-admin) (documentación de Django)
+- [El sitio de administración de Django](https://docs.djangoproject.com/en/6.1/ref/contrib/admin/) (documentación de Django)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django")}}

@@ -3,21 +3,27 @@ title: "Element: pointerup イベント"
 short-title: pointerup
 slug: Web/API/Element/pointerup_event
 l10n:
-  sourceCommit: 6636dfb792a72346c68e44c9d042e3c2219e522b
+  sourceCommit: e1b44d1e4197102da109a563f343cf41ef06ca7c
 ---
 
-{{APIRef}}
+{{APIRef("Pointer Events")}}
 
 `pointerup` イベントは、ポインターがアクティブではなくなったときに発生します。これは代わりに [`pointercancel`](/ja/docs/Web/API/Element/pointercancel_event) イベントを用いて取得できることを覚えておいてください。
 
+この動作は {{domxref("Element/mouseup_event", "mouseup")}} イベントとは異なります。物理的なマウスを使用する場合、マウスのいずれかのボタンを離すたびに `mouseup` イベントが発生します。`pointerup` イベントは最後のボタンを離したときにのみ発生します。他のボタンを押したままそれ以前のボタンを離しても、`pointerup` イベントは発生しません。
+
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+{{domxref("EventTarget/addEventListener", "addEventListener()")}} でこのイベント名を使用してください。
 
-```js
-addEventListener("pointerup", (event) => {});
+```js-nolint
+addEventListener("pointerup", (event) => { })
+```
 
-onpointerup = (event) => {};
+または、インターフェイスの[イベントハンドラープロパティ](/ja/docs/Web/API/Document_Object_Model/Events#using_onevent_properties)に代入します。
+
+```js-nolint
+onpointerup = (event) => { }
 ```
 
 ## イベント型
@@ -25,35 +31,6 @@ onpointerup = (event) => {};
 {{domxref("PointerEvent")}} です。 {{domxref("Event")}} を継承しています。
 
 {{InheritanceDiagram("PointerEvent")}}
-
-## イベントプロパティ
-
-_このインターフェイスは {{domxref("MouseEvent")}} および {{domxref("Event")}} からプロパティを継承しています。_
-
-- {{domxref('PointerEvent.altitudeAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : トランスデューサー（ポインターまたはスタイラス）の軸と端末画面の X-Y 平面との間の角度を表します。
-- {{domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : Y-Z 平面と、トランスデューサー（ポインターまたはスタイラス）の軸と Y 軸の両方を格納する平面との間の角度を表します。
-- {{domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
-  - : イベントを発生させたポインターの固有の識別子です。
-- {{domxref('PointerEvent.width')}} {{ReadOnlyInline}}
-  - : ポインターが接触するジオメトリーの幅（X 軸の大きさ、CSS ピクセル単位）。
-- {{domxref('PointerEvent.height')}} {{ReadOnlyInline}}
-  - : ポインターが接触するジオメトリーの高さ（Y 軸の大きさ、CSS ピクセル単位）。
-- {{domxref('PointerEvent.pressure')}} {{ReadOnlyInline}}
-  - : ポインター入力の正規化された圧力で、範囲は `0` から `1` です。ここで `0` と `1` は、それぞれハードウェアが検出可能な最小圧力と最大圧力を表します。
-- {{domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
-  - : ポインター入力の正規化された接線圧力（バレル圧力またはシリンダー応力（[cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)）とも呼ばれます）で、 `-1` から `1` の範囲であり、 `0` はコントロールの中立位置です。
-- {{domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
-  - : Y-Z 平面と、ポインター（ペンスタイラスなど）の軸と Y 軸の両方を含む平面との間の平面角度（度単位、 `-90` から `90` の範囲）。
-- {{domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
-  - : X-Z 平面と、ポインター（ペンスタイラスなど）の軸と X 軸の両方を含む平面との間の平面角度（度単位、 `-90` から `90` の範囲）。
-- {{domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
-  - : ポインター（ペンスタイラスなど）の長軸を中心とした時計回りの回転の度数（`0` から `359` の範囲の値）。
-- {{domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
-  - : イベントの原因となった機器の種類（マウス、ペン、タッチなど）を示します。
-- {{domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
-  - : このポインターがこのポインター種別の主ポインターを表すかどうかを示します。
 
 ## 例
 
@@ -67,7 +44,7 @@ para.addEventListener("pointerup", (event) => {
 });
 ```
 
-`onpointerup` イベントハンドラープロパティを使用した例です。
+`onpointerup` イベントハンドラープロパティを使用した例です（`onpointerup` を使用して追加済みの他のイベントリスナーがある場合、それらは置き換えられます）。
 
 ```js
 const para = document.querySelector("p");
@@ -94,8 +71,8 @@ para.onpointerup = (event) => {
   - {{domxref('Element/pointerenter_event', 'pointerenter')}}
   - {{domxref('Element/pointerdown_event', 'pointerdown')}}
   - {{domxref('Element/pointermove_event', 'pointermove')}}
-  - {{domxref('Element/pointerup_event', 'pointerup')}}
   - {{domxref('Element/pointercancel_event', 'pointercancel')}}
   - {{domxref('Element/pointerout_event', 'pointerout')}}
   - {{domxref('Element/pointerleave_event', 'pointerleave')}}
   - {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}}
+  - {{domxref("Element/mouseup_event", "mouseup")}}

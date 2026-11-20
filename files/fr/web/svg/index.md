@@ -39,7 +39,7 @@ Les [guides SVG](/fr/docs/Web/SVG/Guides) vous aident à utiliser SVG sur le Web
   - : SMIL est un langage XML pour écrire des présentations multimédias interactives. Les auteur·ice·s peuvent utiliser la syntaxe SMIL dans SVG pour définir le minutage et la disposition des éléments à animer.
 - [SVG comme image](/fr/docs/Web/SVG/Guides/SVG_as_an_image)
   - : SVG peut être utilisé comme format d'image dans HTML, CSS, certains éléments SVG et via l'API Canvas. Cette page liste les fonctionnalités où SVG peut être utilisé comme source d'image.
-- [Filtres SVG](/fr/docs/Web/SVG/Guides/SVG_filters)
+- [Filtres SVG](/fr/docs/Web/SVG/Guides/Filters)
   - : SVG prend en charge les filtres pour appliquer des effets comme une ombre ou un flou, ou même fusionner les résultats de différents filtres.
 - [Introduction à SVG dans HTML](/fr/docs/Web/SVG/Guides/SVG_in_HTML)
   - : Cet article montre comment utiliser SVG en ligne et inclut des exemples illustrés.

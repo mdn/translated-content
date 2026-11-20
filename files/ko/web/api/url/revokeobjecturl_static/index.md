@@ -21,7 +21,7 @@ URL.revokeObjectURL(objectURL);
 ### 매개변수
 
 - `objectURL`
-  - : {{domxref("URL.createObjectURL", "createObjectURL()") }}을 통해 생성한 객체 URL을 나타내는 {{domxref("DOMString")}}.
+  - : {{domxref("URL.createObjectURL", "createObjectURL()") }}을 통해 생성한 객체 URL을 나타내는 {{jsxref("String")}}.
 
 ## 예제
 

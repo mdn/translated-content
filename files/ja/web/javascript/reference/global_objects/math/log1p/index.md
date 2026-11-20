@@ -3,7 +3,7 @@ title: Math.log1p()
 short-title: log1p()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`Math.log1p()`** は静的メソッドで、 `1 + x` の（[e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) を底とした）自然対数を返します。ここで `x` は引数です。
@@ -50,7 +50,7 @@ Math.log1p(x)
 `x` の値が非常に小さかった場合、 1 を加えると有効精度が減少します。 JS で使用する倍精度浮動小数点型の精度は 15 桁です。 1 + 1e-15 = 1.000000000000001 ですが、 1 + 1e-16 = 1.000000000000000 となり、 15 桁を超えた桁は四捨五入されるため、正確に 1.0 となります。
 
 <!-- prettier-ignore-start -->
-log(1 + _x_) を計算すると、 _x_ が小さければ、 _x_ にとても近い答えになるはずです。 <math><semantics><mrow><munder><mo movablelimits="true" form="prefix">lim</mo><mrow ><mi>x</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mi>log</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>x</mi></mfrac><mo>=</mo><mn>1</mn></mrow><annotation encoding="TeX">\lim_{x \to 0} \frac{\log(1+x)}{x} = 1</annotation></semantics></math> だからです。 `Math.log(1 + 1.1111111111e-15)` を計算すると、 `1.1111111111e-15` に近い答えが得られるはずです。しかし、 `1.00000000000000111022` の対数を取ることになります (四捨五入は二進数なので、時に醜い結果になることがあります) ので、答えは 1.11022…e-15 となり、正しい数字は 3 桁だけです。もし、代わりに `Math.log1p(1.1111111111e-15)` を計算した場合は、もっとずっと正確な答えである `1.1111111110999995e-15` が得られ、 15 桁の正しい数字が得られます (この場合は実際には 16 桁です)。
+log(1 + _x_) を計算すると、_x_ が小さい正数であれば、_x_ に非常に近い結果になるはずです。<math><semantics><mrow><munder><mo movablelimits="true" form="prefix">lim</mo><mrow ><mi>x</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mi>log</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>x</mi></mfrac><mo>=</mo><mn>1</mn></mrow><annotation encoding="TeX">\lim_{x \to 0} \frac{\log(1+x)}{x} = 1</annotation></semantics></math> だからです。`Math.log(1 + 1.1111111111e-15)` を計算すると、`1.1111111111e-15` に近い結果になるはずです。しかし、`1.00000000000000111022` の対数を取ることになり（丸めは 2 進数で行われるため、ときに不自然な結果になります）、答えは 1.11022…e-15 となり、正しい桁は 3 桁だけになります。代わりに `Math.log1p(1.1111111111e-15)` を計算すると、より正確な `1.1111111110999995e-15` が得られます。正しい有効数字は 15 桁（この場合は実際には 16 桁）です。
 <!-- prettier-ignore-end -->
 
 `x` の値が -1 未満であった場合、返値は常に {{jsxref("NaN")}} です。
@@ -80,7 +80,7 @@ Math.log1p(Infinity); // Infinity
 
 ## 関連情報
 
-- [`Math.log1p` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.log1p` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - [es-shims による `Math.log1p` のポリフィル](https://www.npmjs.com/package/math.log1p)
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}

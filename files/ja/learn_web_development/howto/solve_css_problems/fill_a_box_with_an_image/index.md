@@ -1,11 +1,10 @@
 ---
 title: 画像を歪ませずにボックスを埋めるには
+short-title: ボックスを画像で埋める
 slug: Learn_web_development/Howto/Solve_CSS_problems/Fill_a_box_with_an_image
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 451c6b58988664128473a881871707c5ec9737f2
 ---
-
-{{LearnSidebar}}
 
 このガイドでは、HTML 画像をボックスを完全に埋めるように表示させるテクニックを学ぶことができます。
 
@@ -47,7 +46,7 @@ HTML の {{htmlelement("img")}} 要素を使ってページに画像を追加す
 }
 
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
 }
 
 .box img {

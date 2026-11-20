@@ -3,10 +3,10 @@ title: Math.sin()
 short-title: sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
-**`Math.sin()`** 静的メソッドは、ラジアンの数値の正弦 (サイン) を返します。
+**`Math.sin()`** は静的メソッドで、ラジアン単位で表した数値の正弦（サイン）を返します。
 
 {{InteractiveExample("JavaScript デモ: Math.sin()")}}
 
@@ -38,7 +38,7 @@ Math.sin(x)
 
 ### 返値
 
-`x` の正弦（サイン）で、 -1 と 1 の両端を含む範囲です。 `x` が {{jsxref("Infinity")}} であった場合は `-Infinity` となり、 {{jsxref("NaN")}} であった場合は {{jsxref("NaN")}} を返します。
+`x` の正弦で、-1 から 1 まで（両端を含む）です。`x` が {{jsxref("Infinity")}}、`-Infinity`、または {{jsxref("NaN")}} の場合は、{{jsxref("NaN")}} を返します。
 
 ## 解説
 
@@ -73,3 +73,4 @@ Math.sin(Infinity); // NaN
 - {{jsxref("Math.atan2()")}}
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("sin()")}} 関数

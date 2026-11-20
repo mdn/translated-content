@@ -1,25 +1,24 @@
 ---
 title: Date.prototype.setUTCSeconds()
+short-title: setUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`setUTCSeconds()`** は {{jsxref("Date")}} インスタンスのメソッドで、協定世界時に基づき、指定された日時の「秒」を設定します。
 
 {{InteractiveExample("JavaScript デモ: Date.prototype.setUTCSeconds()")}}
 
 ```js interactive-example
-const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+const date = new Date("December 31, 1975, 23:15:30 GMT+11:00");
 
-console.log(date1.getUTCSeconds());
+console.log(date.getUTCSeconds());
 // 予想される結果: 30
 
-date1.setUTCSeconds(39);
+date.setUTCSeconds(39);
 
-console.log(date1.getUTCSeconds());
+console.log(date.getUTCSeconds());
 // 予想される結果: 39
 ```
 

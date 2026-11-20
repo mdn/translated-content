@@ -3,7 +3,7 @@ title: Descripteur de règle CSS `override-colors`
 short-title: override-colors
 slug: Web/CSS/Reference/At-rules/@font-palette-values/override-colors
 l10n:
-  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
+  sourceCommit: 72af34c38ae0d97bc3c9bde4998d538bcc56634a
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`override-colors`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-palette-values")}} est utilisé pour remplacer les couleurs de la [palette de base](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette) choisie pour une police couleur.
@@ -85,7 +85,7 @@ Cet exemple montre comment remplacer les couleurs de la police couleur [Noto Col
   font-family: "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
-  src: url("https://fonts.gstatic.com/l/font?kit=Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabts6diywYkdG3gjD0U&skey=a373f7129eaba270&v=v24")
+  src: url("https://mdn.github.io/shared-assets/fonts/noto-color-emoji/NotoColorEmoji-Regular.woff2")
     format("woff2");
 }
 
@@ -96,11 +96,11 @@ Cet exemple montre comment remplacer les couleurs de la police couleur [Noto Col
 @font-palette-values --rouge {
   font-family: "Noto Color Emoji";
   override-colors:
-    0 rgb(74 11 0),
-    1 rgb(149 22 1),
-    2 rgb(183 27 1),
-    3 rgb(193 28 1),
-    4 rgb(230 34 1);
+    720 rgb(74 11 0),
+    1192 rgb(149 22 1),
+    2052 rgb(183 27 1),
+    3426 rgb(193 28 1),
+    4614 rgb(230 34 1);
 }
 .chapeau-rouge {
   font-palette: --rouge;

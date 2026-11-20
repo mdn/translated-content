@@ -1,110 +1,89 @@
 ---
-title: String.prototype.codePointAt()
+title: "String : méthode codePointAt()"
+short-title: codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
+l10n:
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-La méthode **`codePointAt()`** renvoie un entier positif qui correspond au code Unicode (_code point_) du caractère de la chaîne à la position donnée.
+La méthode **`codePointAt()`** des valeurs {{JSxRef("String")}} retourne un entier positif qui est la valeur du point de code Unicode du caractère commençant à l'indice donné. Notez que l'indice est toujours basé sur les unités de code UTF-16, et non sur les points de code Unicode.
 
-{{InteractiveExample("JavaScript Demo: String.codePointAt()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: String.prototype.codePointAt()", "shorter")}}
 
 ```js interactive-example
 const icons = "☃★♲";
 
 console.log(icons.codePointAt(1));
-// Expected output: "9733"
+// Résultat attendu : "9733"
 ```
 
 ## Syntaxe
 
-```js
-str.codePointAt(pos);
+```js-nolint
+codePointAt(index)
 ```
 
 ### Paramètres
 
-- `pos`
-  - : La position de l'élément dans la chaîne de caractères dont on souhaite obtenir la valeur du codet.
+- `index`
+  - : Un indice à partir de zéro du caractère à retourner. [Converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier) — `undefined` est converti en 0.
 
 ### Valeur de retour
 
-Un nombre qui représente la valeur du point de code du caractère à la position indiqué. C'est la valeur {{jsxref("undefined")}} qui est renvoyée s'il n'y aucun élément à `pos`.
+Un entier qui n'est pas négatif représentant la valeur du point de code du caractère à un `index` donné.
+
+- Si `index` est en dehors de la plage de `0` à `str.length - 1`, `codePointAt()` retourne {{JSxRef("undefined")}}.
+- Si l'élément à `index` est un substitut principal UTF-16, retourne le point de code du _paire_ de substituts.
+- Si l'élément à `index` est un substitut secondaire UTF-16, retourne _seulement_ l'unité de code du substitut secondaire.
 
 ## Description
 
-S'il n'y a pas d'élément à la position donnée, la valeur renvoyée sera {{jsxref("undefined")}}. Si ce n'est pas un élément représenté sur deux demi-codets (_surrogate pair_) UTF-16 et qui commence à `pos`, le codet de l'élément à l'indice `pos` est renvoyé.
+Les caractères dans une chaîne de caractères sont indexés de gauche à droite. L'indice du premier caractère est `0`, et l'indice du dernier caractère d'une chaîne de caractères appelée `str` est `str.length - 1`.
+
+Les points de code Unicode vont de `0` à `1114111` (`0x10FFFF`). En UTF-16, chaque indice de chaîne est une unité de code avec une valeur comprise entre `0` et `65535`. Les points de code plus élevés sont représentés par _une paire_ de pseudo-caractères substituts de 16 bits. Par conséquent, `codePointAt()` retourne un point de code qui peut s'étendre sur deux indices de chaîne de caractères. Pour plus d'informations sur Unicode, voir [Caractères UTF-16, points de code Unicode et grappes de graphèmes](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#caractères_utf-16_points_de_code_unicode_et_groupes_de_graphèmes).
 
 ## Exemples
 
-```js
-"ABC".codePointAt(1); // 66
-"\uD800\uDC00".codePointAt(0); // 65536
+### Utiliser la méthode `codePointAt()`
 
-"XYZ".codePointAt(42); // undefined
+```js
+"ABC".codePointAt(0); // 65
+"ABC".codePointAt(0).toString(16); // 41
+
+"😍".codePointAt(0); // 128525
+"\ud83d\ude0d".codePointAt(0); // 128525
+"\ud83d\ude0d".codePointAt(0).toString(16); // 1f60d
+
+"😍".codePointAt(1); // 56845
+"\ud83d\ude0d".codePointAt(1); // 56845
+"\ud83d\ude0d".codePointAt(1).toString(16); // de0d
+
+"ABC".codePointAt(42); // undefined
 ```
 
-## Prothèse d'émulation (_polyfill_)
+### Boucler avec `codePointAt()`
 
-Le fragment de code suivant permet d'ajouter la méthode `codePointAt()` pour les chaînes de caractères (`String`). En effet, cette méthode fait partie de ECMAScript 2015 et certains navigateurs peuvent ne pas proposer cette fonction nativement.
+Comme l'utilisation des indices de chaîne de caractères pour boucler fait que le même point de code est visité deux fois (une fois pour le substitut principal, une fois pour le substitut secondaire), et que la deuxième fois `codePointAt()` ne retourne _que_ le substitut secondaire, il est préférable d'éviter de boucler par indice.
+
+```js example-bad
+const str = "\ud83d\udc0e\ud83d\udc71\u2764";
+
+for (let i = 0; i < str.length; i++) {
+  console.log(str.codePointAt(i).toString(16));
+}
+// '1f40e', 'dc0e', '1f471', 'dc71', '2764'
+```
+
+Au lieu de cela, utilisez une instruction [`for...of`](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration#instruction_for...of) ou [étalez la chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax), qui invoquent toutes deux le [`[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) de la chaîne de caractères, qui itère par points de code. Ensuite, utilisez `codePointAt(0)` pour obtenir le point de code de chaque élément.
 
 ```js
-/*! https://mths.be/codepointat v0.2.0 by @mathias */
-if (!String.prototype.codePointAt) {
-  (function () {
-    "use strict"; // needed to support `apply`/`call` with `undefined`/`null`
-    var defineProperty = (function () {
-      // IE 8 only supports `Object.defineProperty` on DOM elements
-      try {
-        var object = {};
-        var $defineProperty = Object.defineProperty;
-        var result = $defineProperty(object, object, object) && $defineProperty;
-      } catch (error) {}
-      return result;
-    })();
-    var codePointAt = function (position) {
-      if (this == null) {
-        throw TypeError();
-      }
-      var string = String(this);
-      var size = string.length;
-      // `ToInteger`
-      var index = position ? Number(position) : 0;
-      if (index != index) {
-        // better `isNaN`
-        index = 0;
-      }
-      // Account for out-of-bounds indices:
-      if (index < 0 || index >= size) {
-        return undefined;
-      }
-      // Get the first code unit
-      var first = string.charCodeAt(index);
-      var second;
-      if (
-        // check if it’s the start of a surrogate pair
-        first >= 0xd800 &&
-        first <= 0xdbff && // high surrogate
-        size > index + 1 // there is a next code unit
-      ) {
-        second = string.charCodeAt(index + 1);
-        if (second >= 0xdc00 && second <= 0xdfff) {
-          // low surrogate
-          // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
-          return (first - 0xd800) * 0x400 + second - 0xdc00 + 0x10000;
-        }
-      }
-      return first;
-    };
-    if (defineProperty) {
-      defineProperty(String.prototype, "codePointAt", {
-        value: codePointAt,
-        configurable: true,
-        writable: true,
-      });
-    } else {
-      String.prototype.codePointAt = codePointAt;
-    }
-  })();
+for (const codePoint of str) {
+  console.log(codePoint.codePointAt(0).toString(16));
 }
+// '1f40e', '1f471', '2764'
+
+[...str].map((cp) => cp.codePointAt(0).toString(16));
+// ['1f40e', '1f471', '2764']
 ```
 
 ## Spécifications
@@ -117,7 +96,9 @@ if (!String.prototype.codePointAt) {
 
 ## Voir aussi
 
-- {{jsxref("String.fromCodePoint()")}}
-- {{jsxref("String.fromCharCode()")}}
-- {{jsxref("String.prototype.charCodeAt()")}}
-- {{jsxref("String.prototype.charAt()")}}
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `String.prototype.codePointAt` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `String.prototype.codePointAt` <sup>(angl.)</sup>](https://www.npmjs.com/package/string.prototype.codepointat)
+- La méthode statique {{JSxRef("String.fromCodePoint()")}}
+- La méthode statique {{JSxRef("String.fromCharCode()")}}
+- La méthode {{JSxRef("String.prototype.charCodeAt()")}}
+- La méthode {{JSxRef("String.prototype.charAt()")}}

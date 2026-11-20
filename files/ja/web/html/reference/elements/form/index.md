@@ -3,10 +3,12 @@ title: "`<form>` フォーム要素"
 short-title: <form>
 slug: Web/HTML/Reference/Elements/form
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 **`<form>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウェブサーバーに情報を送信するための対話型コントロールを含む文書の区間を表します。
+
+CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)を使用すると、`<form>` 要素をフォーム内の{{domxref("HTMLFormElement.elements", "要素", "", 1)}}が有効であるかどうかに応じてスタイル付けすることができます。
 
 {{InteractiveExample("HTML デモ: &lt;form&gt;", "tabbed-standard")}}
 
@@ -24,6 +26,12 @@ l10n:
     <input type="submit" value="登録!" />
   </div>
 </form>
+```
+
+```js interactive-example
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css interactive-example
@@ -45,8 +53,6 @@ label {
   padding-right: 10px;
 }
 ```
-
-CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)を使用すると、`<form>` 要素をフォーム内の{{domxref("HTMLFormElement.elements", "要素", "", 1)}}が有効であるかどうかに応じてスタイル付けすることができます。
 
 ## 属性
 
@@ -140,6 +146,14 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
     <label><input type="radio" name="radio" value="no" /> No</label>
   </fieldset>
 </form>
+```
+
+```js hidden
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
 ```
 
 ### 結果

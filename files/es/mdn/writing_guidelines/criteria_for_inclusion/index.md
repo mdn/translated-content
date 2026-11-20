@@ -3,7 +3,7 @@ title: Criterios para la inclusión en MDN Web Docs
 short-title: Criterios para la inclusión
 slug: MDN/Writing_guidelines/Criteria_for_inclusion
 l10n:
-  sourceCommit: 0e7eafea05cd771c86e77947639f3396e7a59b2b
+  sourceCommit: f4c221962681b1472cd57da60379ad7825fe5081
 ---
 
 Este artículo describe detalladamente los criterios de inclusión de contenido en MDN Web Docs, el proceso de solicitud para nueva documentación y las expectativas y pautas para la parte solicitante.

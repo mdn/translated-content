@@ -3,7 +3,7 @@ title: Array.prototype.unshift()
 short-title: unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`unshift()`** は {{jsxref("Array")}} インスタンスのメソッドで、指定された要素を配列の先頭に追加し、新しい配列の長さを返します。
@@ -118,7 +118,7 @@ console.log(plainObj);
 
 ## 関連情報
 
-- [`Array.prototype.unshift` の修正を含むポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.unshift` の修正を含むポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.unshift` のポリフィル](https://www.npmjs.com/package/array.prototype.unshift)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}

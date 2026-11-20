@@ -1,11 +1,12 @@
 ---
-title: aria-sort
+title: "ARIA: aria-sort 属性"
+short-title: aria-sort
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-sort
 l10n:
-  sourceCommit: 914aed57175ede3f47784029e620d51b92b7bce2
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
-`aria-sort` 属性は、表またはグリッド内の項目が昇順または降順のどちらで並べ替えられているかを示します。
+`aria-sort` 属性は、表またはグリッド内のアイテムが昇順または降順のどちらで並べ替えられているかを示します。
 
 ## 解説
 
@@ -15,47 +16,14 @@ l10n:
 
 `aria-sort` 属性は、一度に表またはグリッドの 1 つの見出しにのみ追加する必要があります。この属性は支援技術のユーザーに、どの列または行が並べ替えられているかを通知するために設定されます。実際の並べ替え順序には影響しません。
 
-## 例
-
-この表は、姓の列が昇順で並べ替えられて読み込まれます。
-
-```html
-<table>
-  <caption>
-    Steering Committee Members
-  </caption>
-  <thead>
-    <tr>
-      <th>
-        <button>First Name</button>
-      </th>
-      <th aria-sort="ascending">
-        <button>Last Name</button>
-      </th>
-      <th>
-        <button>Company</button>
-      </th>
-      <th>Email</th>
-    </tr>
-  </thead>
-  <tbody>
-    …
-  </tbody>
-</table>
-```
-
-ユーザーが _Last Name_ ボタンをクリックすると、[`aria-pressed="true"`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) が {{HTMLElement('button')}} 要素に追加され、 JavaScript によって `aria-sort` の値が `"descending"` に切り替わります。ユーザーが別の見出しボタンをクリックすると、`aria-sort` が _Last Name_ 見出しから削除され、クリックしたボタンの親の {{HTMLElement('th')}} に設定されます。
-
-`th[aria-sort="ascending"]` および `th[aria-sort="descending"]` セレクターを対象にした CSS を使用して追加する下向き矢印が表示されない可能性がある支援技術のために、説明を提供しました。
-
 ## 値
 
 - `ascending`
-  - : 項目はこの列の昇順で並べ替えられます。
+  - : アイテムはこの列の昇順で並べ替えられます。
 - `descending`
-  - : 項目はこの列の降順で並べ替えられます。
-- `none` (既定値)
-  - : 列には定義された並べ替えが適用されていません。
+  - : アイテムはこの列の降順で並べ替えられます。
+- `none` (デフォルト)
+  - : 列には並べ替え順序が定義されていません。
 - `other`
   - : 昇順または降順以外の並び替えアルゴリズムが適用されました。
 
@@ -73,12 +41,45 @@ l10n:
 - [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
 - [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
 
+## 例
+
+この表は、姓の列が昇順で並べ替えられた状態で読み込まれます。
+
+```html
+<table>
+  <caption>
+    運営委員会のメンバー
+  </caption>
+  <thead>
+    <tr>
+      <th>
+        <button>名</button>
+      </th>
+      <th aria-sort="ascending">
+        <button>姓</button>
+      </th>
+      <th>
+        <button>所属企業</button>
+      </th>
+      <th>メールアドレス</th>
+    </tr>
+  </thead>
+  <tbody>
+    …
+  </tbody>
+</table>
+```
+
+ユーザーが姓ボタンをクリックすると、[`aria-pressed="true"`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) が {{HTMLElement('button')}} 要素に追加され、JavaScript によって `aria-sort` の値が `"descending"` に切り替わります。ユーザーが別の見出しボタンをクリックすると、`aria-sort` が姓の見出しから削除され、クリックしたボタンの親要素である {{HTMLElement('th')}} に設定されます。
+
+CSS で `th[aria-sort="ascending"]` および `th[aria-sort="descending"]` セレクターを対象に追加する下向き矢印が見えない支援技術の利用者に向けて、キャプションに説明を記載しています。
+
 ## 仕様書
 
 {{Specifications}}
 
 ## 関連情報
 
-- [Sortable table example](https://www.w3.org/TR/wai-aria-practices-1.2/examples/table/sortable-table.html) - W3C
+- [並べ替え可能な表の例](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/) - ARIA Authoring Practices Guide (APG)
 - [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed)
 - {{HTMLElement('th')}} 要素

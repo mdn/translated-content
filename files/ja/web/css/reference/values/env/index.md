@@ -1,5 +1,5 @@
 ---
-title: "`env()` 関数 (CSS)"
+title: "`env()` 関数"
 short-title: env()
 slug: Web/CSS/Reference/Values/env
 l10n:

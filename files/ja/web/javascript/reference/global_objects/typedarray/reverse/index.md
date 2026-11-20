@@ -3,10 +3,10 @@ title: TypedArray.prototype.reverse()
 short-title: reverse()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reverse
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-**`reverse()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列を[その場 (in-place)](https://en.wikipedia.org/wiki/In-place_algorithm) で反転し、同じ型付き配列への参照を返します。型付き配列の最初の要素は最後になり、型付き配列の最後の要素は最初になります。言い換えれば，型付き配列の他の要素の順序は，以前とは逆の順序になります。このメソッドは {{jsxref("Array.prototype.reverse()")}} と同じアルゴリズムです。
+**`reverse()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列を[その場 (in-place)](https://en.wikipedia.org/wiki/In-place_algorithm) で反転し、同じ型付き配列への参照を返します。つまり、型付き配列の先頭の要素が末尾に、末尾の要素が先頭になります。ほかの要素の順序も以前とは逆になります。このメソッドは {{jsxref("Array.prototype.reverse()")}} と同じアルゴリズムです。
 
 {{InteractiveExample("JavaScript デモ: TypedArray.prototype.reverse()", "shorter")}}
 
@@ -30,7 +30,7 @@ reverse()
 
 ### 返値
 
-反転された元の型付き配列への参照です。型付き配列は[その場 (in-place)](https://en.wikipedia.org/wiki/In-place_algorithm) で反転され，コピーは行われないことに注意してください。
+反転された元の型付き配列への参照です。型付き配列は[その場 (in-place)](https://en.wikipedia.org/wiki/In-place_algorithm) で反転され、コピーは行われません。
 
 ## 解説
 
@@ -57,7 +57,7 @@ console.log(uint8); // Uint8Array [3, 2, 1]
 
 ## 関連情報
 
-- [`TypedArray.prototype.reverse` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.reverse` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.join()")}}

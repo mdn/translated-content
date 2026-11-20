@@ -3,7 +3,7 @@ title: "AsyncDisposableStack : méthode [Symbol.asyncDispose]()"
 short-title: "[Symbol.asyncDispose]()"
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/Symbol.asyncDispose
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`[Symbol.asyncDispose]()`** des instances de {{JSxRef("AsyncDisposableStack")}} implémente le _protocole de libération asynchrone_ et permet de libérer la pile lorsqu'elle est utilisée avec {{JSxRef("Statements/await_using", "await using")}}. C'est un alias de la méthode {{JSxRef("AsyncDisposableStack/disposeAsync", "disposeAsync()")}}.
@@ -24,7 +24,7 @@ Aucune ({{JSxRef("undefined")}}).
 
 ## Exemples
 
-### Déclaration d'une pile avec `await using`
+### Déclarer une pile avec `await using`
 
 La méthode `Symbol.asyncDispose` est conçue pour être appelée automatiquement dans une déclaration `await using`.
 
@@ -48,6 +48,7 @@ async function faireQuelqueChose() {
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `AsyncDisposableStack.prototype[Symbol.asyncDispose]` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources en JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
 - L'objet natif {{JSxRef("AsyncDisposableStack")}}
 - La méthode {{JSxRef("AsyncDisposableStack.prototype.disposeAsync()")}}

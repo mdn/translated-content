@@ -3,7 +3,7 @@ title: "ARIA : rôle menuitemradio"
 short-title: menuitemradio
 slug: Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role
 l10n:
-  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
+  sourceCommit: b126460df717d910e92f311f0603800987ecebee
 ---
 
 Le rôle `menuitemradio` est un élément de menu sélectionnable dans un ensemble d'éléments ayant le même rôle, dont un seul peut être sélectionné à la fois.

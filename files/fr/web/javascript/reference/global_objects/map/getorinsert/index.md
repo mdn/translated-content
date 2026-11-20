@@ -3,7 +3,7 @@ title: "Map : méthode getOrInsert()"
 short-title: getOrInsert()
 slug: Web/JavaScript/Reference/Global_Objects/Map/getOrInsert
 l10n:
-  sourceCommit: 5956b80db199b86203b2cdfafe3e6ce45b6ad3c3
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`getOrInsert()`** des instances de {{JSxRef("Map")}} retourne la valeur correspondant à la clé définie dans cette `Map`. Si la clé n'est pas présente, elle insère une nouvelle entrée avec la clé et une valeur par défaut donnée, puis retourne la valeur insérée.
@@ -91,8 +91,8 @@ document.body.dataset.theme = options.get("theme");
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Map.prototype.getOrInsert` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#map-upsert)
-- [Prothèse d'émulation es-shims de `Map.prototype.getOrInsert` <sup>(angl.)</sup>](https://www.npmjs.com/package/map.prototype.getorinsert)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Map.prototype.getOrInsert` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/collections#h-map)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Map.prototype.getOrInsert` <sup>(angl.)</sup>](https://www.npmjs.com/package/map.prototype.getorinsert)
 - L'objet natif {{JSxRef("Map")}}
 - La méthode {{JSxRef("Map.prototype.get()")}}
 - La méthode {{JSxRef("Map.prototype.set()")}}

@@ -2,7 +2,7 @@
 title: "キャプチャグループ: (...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Capturing_group
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 288e644117c29285df2acf37a2ac97f57546a146
 ---
 
 **キャプチャグループ**は、サブパターンをグループ化し、グループ全体に[数量詞](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)を適用したり、グループ内で[論理和](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)を使用したりすることができます。サブパターンの一致に関する情報を記憶しているので、[後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)で参照したり、[照合結果](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec#返値)からその情報にアクセスしたりすることができます。
@@ -26,7 +26,8 @@ l10n:
 
 キャプチャグループには、開始括弧の順番で番号が振られます。最初のキャプチャグループは `1`、2 つ目は `2`、といった具合に番号が振られます。[名前付きキャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)もキャプチャグループであり、他の（名前のない）キャプチャグループと一緒に番号が付けられます。キャプチャグループの一致に関する情報には、以下のようにしてアクセスできます。
 
-- {{jsxref("RegExp.prototype.exec()")}}、{{jsxref("String.prototype.match()")}}、{{jsxref("String.prototype.matchAll()")}} の返値（配列）
+- {{jsxref("RegExp.prototype.exec()")}} の返値（配列）、または正規表現に `g` フラグがない場合の {{jsxref("String.prototype.match()")}} の返値
+- {{jsxref("String.prototype.matchAll()")}} が返すイテレーターから得られる各一致結果の配列
 - {{jsxref("String.prototype.replace()")}} および {{jsxref("String.prototype.replaceAll()")}} メソッドの `replacement` コールバック関数の `pN` 引数
 - 同じパターン内の[後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)
 

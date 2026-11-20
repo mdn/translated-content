@@ -2,7 +2,7 @@
 title: Utilisation du cache de Firefox 1.5
 slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 l10n:
-  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
+  sourceCommit: c61fd478259d34aa4fd6ac4cbf9b7d64a78aff43
 ---
 
 [Firefox 1.5](/fr/docs/Mozilla/Firefox/Releases/1.5) met en mémoire cache des pages Web entières, avec leurs états JavaScript, pour une même session de navigation. Revenir ou avancer entre des pages déjà visitées ne nécessite aucun chargement de page et les états JavaScript sont préservés. Cette fonctionnalité parfois appelée **bfcache** (pour «&nbsp;Back-Forward Cache&nbsp;») rend la navigation très rapide. Ce cache est préservé en mémoire jusqu'à ce que l'utilisateur·ice ferme le navigateur.

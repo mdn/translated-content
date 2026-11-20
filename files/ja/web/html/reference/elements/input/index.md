@@ -3,7 +3,7 @@ title: "`<input>` 入力要素"
 short-title: <input>
 slug: Web/HTML/Reference/Elements/input
 l10n:
-  sourceCommit: 6488b82388db9e593ec28be1d845688e29c679e1
+  sourceCommit: 5c76c9c822b4083750ff7fcabcd07422ad3a591b
 ---
 
 **`<input>`** は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーからデータを受け取るための、ウェブベースのフォーム用の操作可能なコントロールを作成するために使用します。端末と{{Glossary("User agent", "ユーザーエージェント")}}によりますが、広範に渡る種類のデータ入力やコントロールウィジェットが利用できます。`<input>` 要素は入力型と属性の組み合わせの数が非常に多いため、HTML の中で最も強力かつ最も複雑な要素の一つです。
@@ -463,7 +463,7 @@ label {
 - `height`
   - : `image` 入力型でのみ有効です。`height` はグラフィックの送信ボタンの表現を表示するための画像ファイルの高さを示します。{{HTMLElement("input/image", "image")}} 入力型を参照してください。
 - `id`
-  - : すべての入力欄を含む、すべての要素で有効なグローバル属性で、文書全体で一意でなければならない一意の識別子 (ID) を定義します。その目的は、リンクする際に要素を識別することです。この値は、ラベルとフォームコントロールをリンクするための {{htmlelement('label')}} の `for` 属性の値として使用されます。{{htmlelement('label')}} を参照してください。
+  - : すべての入力欄を含むすべての要素で有効な[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes/id)で、文書全体で一意でなければならない識別子 (ID) を定義します。その目的は、リンクする際に要素を識別することです。この値は、ラベルとフォームコントロールをリンクするための {{htmlelement('label')}} の [`for`](/ja/docs/Web/HTML/Reference/Attributes/for) 属性の値として使用されます。{{htmlelement('label')}} を参照してください。
 - `inputmode`
   - : すべての要素で有効なグローバル属性です、この要素やその内容を編集する際に使用される仮想キーボード設定の種類をブラウザーに示すヒントを提供します。値としては `none`, `text`, `tel`, `url`, `email`, `numeric`, `decimal`, `search` があります。
 - `list`
@@ -1105,6 +1105,12 @@ function validate(input) {
   <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
   <button>送信</button>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 基本的な HTML フォーム検証機能では、フォームを送信しようとしたときに、有効な値が入力されていなかったり、`pattern` と一致しない値が入力されていたりすると、デフォルトのエラーメッセージを生成します。

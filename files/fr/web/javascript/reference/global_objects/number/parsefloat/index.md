@@ -3,7 +3,7 @@ title: "Number : méthode statique parseFloat()"
 short-title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Number.parseFloat()`** analyse un argument et retourne un nombre à virgule flottante. Si un nombre ne peut pas être analysé à partir de l'argument, elle retourne {{JSxRef("NaN")}}.
@@ -66,7 +66,7 @@ Voir {{JSxRef("parseFloat()")}} pour plus de détails et d'exemples.
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Number.parseFloat` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
-- [La prothèse d'émulation es-shims de `Number.parseFloat` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.parsefloat)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Number.parseFloat` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Number.parseFloat` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.parsefloat)
 - L'objet natif {{JSxRef("Number")}}
 - La fonction native {{JSxRef("parseFloat()")}}

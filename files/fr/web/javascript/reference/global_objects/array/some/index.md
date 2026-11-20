@@ -3,7 +3,7 @@ title: "Array : méthode some()"
 short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 l10n:
-  sourceCommit: dd88a6eb2176fa31f5b744d8964efecf3f1f425b
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`some()`** des instances {{JSxRef("Array")}} retourne `true` si elle trouve un élément dans le tableau qui satisfait la fonction de test fournie. Sinon, elle retourne `false`.
@@ -179,6 +179,8 @@ console.log(
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.some` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.some` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.some)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.every()")}}
@@ -186,5 +188,3 @@ console.log(
 - La méthode {{JSxRef("Array.prototype.find()")}}
 - La méthode {{JSxRef("Array.prototype.includes()")}}
 - La méthode {{JSxRef("TypedArray.prototype.some()")}}
-- [Prothèse d'émulation de `Array.prototype.some` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.some` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.some)

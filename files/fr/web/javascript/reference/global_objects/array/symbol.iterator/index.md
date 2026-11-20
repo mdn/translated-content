@@ -3,7 +3,7 @@ title: "Array : méthode [Symbol.iterator]()"
 short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`[Symbol.iterator]()`** des instances de {{JSxRef("Array")}} implémente le [protocole itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) et permet aux tableaux d'être parcourus par la plupart des syntaxes qui attendent un itérable, comme la [syntaxe de l'opérateur de propagation](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) et les boucles {{JSxRef("Statements/for...of", "for...of")}}. Elle retourne un [objet itérateur de tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator) qui fournit la valeur de chaque indice du tableau.
@@ -81,9 +81,9 @@ console.log(arrIter.next().value); // d
 console.log(arrIter.next().value); // e
 ```
 
-### Gérer les chaînes de caractères et les tableaux de chaînes avec la même fonction
+### Gérer les chaînes de caractères et les tableaux de chaînes de caractères avec la même fonction
 
-Puisque les [chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) et les tableaux implémentent le protocole itérable, il est possible de concevoir une fonction générique pour traiter les deux types d'entrée de la même manière. Cela est préférable à l'appel direct de {{JSxRef("Array.prototype.values()")}}, qui nécessite que l'entrée soit un tableau ou au moins un objet possédant cette méthode.
+Puisque les [chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) et les tableaux implémentent le protocole itérable, il est possible de concevoir une fonction générique pour traiter les deux types d'entrée de la même manière. C'est préférable à l'appel direct de {{JSxRef("Array.prototype.values()")}}, qui nécessite que l'entrée soit un tableau ou au moins un objet possédant cette méthode.
 
 ```js
 function logIterable(it) {
@@ -123,6 +123,7 @@ logIterable(123);
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype[Symbol.iterator]` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.keys()")}}
@@ -132,4 +133,3 @@ logIterable(123);
 - La méthode [`String.prototype[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)
 - La propriété {{JSxRef("Symbol.iterator")}}
 - [Protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [Prothèse d'émulation de `Array.prototype[Symbol.iterator]` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)

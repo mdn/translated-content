@@ -3,7 +3,7 @@ title: Math.imul()
 short-title: imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`Math.imul()`** は静的メソッドで、2 つの引数で C 言語風の 32 ビット乗算を行った結果を返します。
@@ -43,7 +43,7 @@ Math.imul(a, b)
 
 ## 解説
 
-`Math.imul()` で C 言語と同様のの意味を持った 32 ビット乗算を行うことができます。この機能は [Emscripten](https://ja.wikipedia.org/wiki/Emscripten) などのプロジェクトに有効です。
+`Math.imul()` を使うと、C 言語と同様の意味を持つ 32 ビット整数乗算を行えます。この機能は [Emscripten](https://ja.wikipedia.org/wiki/Emscripten) などのプロジェクトで役立ちます。
 
 `imul()` は `Math` の静的メソッドなので、常に `Math.imul()` として使用し、自分で `Math` オブジェクトを生成してそのメソッドとして使用しないでください。 (`Math` にはコンストラクターがありません)。
 
@@ -71,6 +71,6 @@ Math.imul(0xfffffffe, 5); // -10
 
 ## 関連情報
 
-- [`Math.imul` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.imul` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - [es-shims における `Math.imul` のポリフィル](https://www.npmjs.com/package/math.imul)
 - [Emscripten](https://ja.wikipedia.org/wiki/Emscripten)

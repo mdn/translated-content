@@ -1,8 +1,9 @@
 ---
 title: "ARIA: 文書構造ロール"
+short-title: 文書構造
 slug: Web/Accessibility/ARIA/Reference/Roles/structural_roles
 l10n:
-  sourceCommit: 50f209459d9e1db35bf0d973d7878ea4600acb8c
+  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
 ARIA 文書構造ロールは、コンテンツのセクションに構造的説明を提供するために使用されます。

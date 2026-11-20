@@ -284,7 +284,7 @@ Ball.prototype.update = function () {
 - [requestAnimationFrame()](/ru/docs/Web/API/Window/requestAnimationFrame)
 - [2D collision detection](/ru/docs/Games/Techniques/2D_collision_detection)
 - [3D collision detection](/ru/docs/Games/Techniques/3D_collision_detection)
-- [2D breakout game using pure JavaScript](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — a great beginner's tutorial showing how to build a 2D game.
+- [2D breakout game using pure JavaScript](/ru/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) — a great beginner's tutorial showing how to build a 2D game.
 - [2D breakout game using Phaser](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser) — explains the basics of building a 2D game using a JavaScript game library.
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

@@ -1,8 +1,8 @@
 ---
-title: set
+title: set（セッター）
 slug: Web/JavaScript/Reference/Functions/set
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 **`set`** 構文は、あるオブジェクトプロパティを、プロパティに設定しようとしたときに呼び出される関数に結びつけます。これは[クラス](/ja/docs/Web/JavaScript/Reference/Classes)でも使用できます。
@@ -52,10 +52,10 @@ JavaScript では、セッターは指定されたプロパティを変更しよ
 
 ```js
 const obj = {
-  set prop() {
+  set prop(val) {
     // セッター、obj.prop を設定する際に実行される
   },
-}
+};
 ```
 
 この構文を使用して定義されるプロパティは、作成されたオブジェクトの自身のプロパティであり、構成可能かつ列挙可能です。

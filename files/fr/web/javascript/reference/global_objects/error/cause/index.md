@@ -3,7 +3,7 @@ title: "Error : propriété cause"
 short-title: cause
 slug: Web/JavaScript/Reference/Global_Objects/Error/cause
 l10n:
-  sourceCommit: 1d2e1875bdfdd2fb8d0806535220bbd56d3a091d
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La propriété de données **`cause`** d'une instance de {{JSxRef("Error")}} indique la cause initiale spécifique de l'erreur.
@@ -92,7 +92,7 @@ Pour un exemple plus détaillé, voir [Error > Distinguer des erreurs semblables
 
 ### Fournir des données structurées comme cause d'erreur
 
-Les messages d'erreur rédigés pour un humain peuvent être inappropriés pour un traitement automatique — puisqu'ils sont susceptibles d'être reformulés ou modifiés dans leur ponctuation, ce qui peut casser tout parseur conçu pour les consommer. Ainsi, lorsqu'on lance une erreur depuis une fonction, en alternative à un message lisible par un humain, on peut fournir la cause sous forme de données structurées, pour le traitement automatique.
+Les messages d'erreur rédigés pour un·e humain·e peuvent être inappropriés pour un traitement automatique — puisqu'ils sont susceptibles d'être reformulés ou modifiés dans leur ponctuation, ce qui peut casser tout parseur conçu pour les consommer. Ainsi, lorsqu'on lance une erreur depuis une fonction, en alternative à un message lisible par un·e humain·e, on peut fournir la cause sous forme de données structurées, pour le traitement automatique.
 
 ```js
 function makeRSA(p, q) {
@@ -126,5 +126,6 @@ function makeRSA(p, q) {
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Error` avec la prise en charge de `cause` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)
 - La propriété {{JSxRef("Error.prototype.message")}}
 - La méthode {{JSxRef("Error.prototype.toString()")}}

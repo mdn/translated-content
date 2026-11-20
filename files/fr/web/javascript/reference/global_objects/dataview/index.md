@@ -2,7 +2,7 @@
 title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
 l10n:
-  sourceCommit: 377c7d317e7ffd477bc8b1273f0e215978b76dd1
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La vue **`DataView`** fournit une interface de bas niveau pour lire et écrire des données de différents types numériques dans un objet {{JSxRef("ArrayBuffer")}}, quel que soit le [«&nbsp;boutisme&nbsp;»](https://fr.wikipedia.org/wiki/Boutisme) (<i lang="en">endianness</i> en anglais) de la plateforme.
@@ -115,6 +115,6 @@ view.getInt16(1); // 42
 
 ## Voir aussi
 
-- [Prothèse d'émulation pour `DataView` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `DataView` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - L'objet natif {{JSxRef("ArrayBuffer")}}
 - L'objet natif {{JSxRef("SharedArrayBuffer")}}

@@ -2,7 +2,7 @@
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 l10n:
-  sourceCommit: c808a24d4e4f7bda00e7117f315965ed39b780e5
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Un objet **`Map`** contient des paires de clé-valeur et mémorise l'ordre dans lequel les clés ont été insérées. N'importe quelle valeur (objet ou {{Glossary("Primitive", "valeur primitive")}}) peut être utilisée comme clé ou comme valeur.
@@ -35,13 +35,13 @@ console.log(map.size);
 
 ## Description
 
-Les objets `Map` sont des collections de paires clé-valeur. Une clé dans `Map` **ne peut apparaître qu'une seule fois**&nbsp;; elle est unique dans la collection de `Map`. Un objet Map est itéré par paires clé-valeur — une boucle {{JSxRef("Statements/for...of", "for...of")}} retourne un tableau à deux éléments `[key, value]` pour chaque itération. L'itération se fait dans _l'ordre d'insertion_, ce qui correspond à l'ordre dans lequel chaque paire clé-valeur a été insérée pour la première fois dans la map par la méthode {{JSxRef("Map/set", "set()")}} (c'est-à-dire qu'il n'y avait pas de clé avec la même valeur déjà dans la map lorsque `set()` a été appelée).
+Les objets `Map` sont des collections de paires clé-valeur. Une clé dans `Map` **ne peut apparaître qu'une seule fois**&nbsp;; elle est unique dans la collection de `Map`. Un objet `Map` est itéré par paires clé-valeur — une boucle {{JSxRef("Statements/for...of", "for...of")}} retourne un tableau à deux éléments `[key, value]` pour chaque itération. L'itération se fait dans _l'ordre d'insertion_, ce qui correspond à l'ordre dans lequel chaque paire clé-valeur a été insérée pour la première fois dans le tableau associatif par la méthode {{JSxRef("Map/set", "set()")}} (c'est-à-dire qu'il n'y a pas de clé avec la même valeur déjà dans le tableau associatif lorsque `set()` a été appelée).
 
 La spécification exige que les tables associatives soient implémentées «&nbsp;de sorte qu'elles fournissent, en moyenne, des temps d'accès sous-linéaires par rapport au nombre d'éléments de la collection&nbsp;». Elles peuvent donc être représentées en interne par une table de hachage (avec une recherche en O(1)), un arbre de recherche (avec une recherche en O(log(N))) ou toute autre structure de données, tant que la complexité est meilleure que O(N).
 
 ### Égalité des clés
 
-L'égalité de valeur est basée sur l'algorithme [SameValueZero](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality). (Auparavant, elle utilisait [SameValue](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is), qui traitait `0` et `-0` comme deux valeurs différentes. Voir [la compatibilité des navigateurs](#compatibilité_des_navigateurs).) Cela signifie que {{JSxRef("NaN")}} est considéré comme égal à `NaN` (même si `NaN !== NaN`) et toutes les autres valeurs sont considérées comme égales selon la sémantique de l'opérateur `===`. De plus, pour les clés d'objet, l'égalité est basée sur l'identité de l'objet. Elles sont comparées par référence, et non par valeur. Voir [Utiliser l'objet Map](#utiliser_lobjet_map) pour des exemples.
+L'égalité de valeur est basée sur l'algorithme [SameValueZero](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality). (Auparavant, elle utilisait [SameValue](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is), qui traitait `0` et `-0` comme deux valeurs différentes. Voir [la compatibilité des navigateurs](#compatibilité_des_navigateurs).) Cela signifie que {{JSxRef("NaN")}} est considéré comme égal à `NaN` (même si `NaN !== NaN`) et toutes les autres valeurs sont considérées comme égales selon la sémantique de l'opérateur `===`. De plus, pour les clés d'objet, l'égalité est basée sur l'identité de l'objet. Elles sont comparées par référence, et non par valeur. Voir [Utiliser l'objet `Map`](#utiliser_lobjet_map) pour des exemples.
 
 ### Comparaison entre objets et `Map`
 
@@ -128,9 +128,9 @@ Toutefois, il existe des différences importantes qui font que `Map` se démarqu
       <td>Pas d'optimisation pour les utilisations avec de nombreuses additions/suppressions de clés/valeurs.</td>
     </tr>
     <tr>
-      <th scope="row">Sérialisation et désérialisation</th>
+      <th scope="row">Sérialisation et dé-sérialisation</th>
       <td>
-        <p>Pas de prise en charge native pour la sérialisation ou la désérialisation.</p>
+        <p>Pas de prise en charge native pour la sérialisation ou la dé-sérialisation.</p>
         <p>
           (Mais vous pouvez implémenter votre propre prise en charge de la sérialisation et de l'analyse pour <code>Map</code> en utilisant {{JSxRef("JSON.stringify()")}} avec son argument <code>replacer</code>, et en utilisant {{JSxRef("JSON.parse()")}} avec son argument <code>reviver</code>. Voir la question Stack Overflow <a href="https://stackoverflow.com/q/29085197/">Comment JSON.stringify une Map ES6&nbsp;? <sup>(angl.)</sup></a>).
         </p>
@@ -464,8 +464,8 @@ console.log(fusion.get(3)); // trois
 
 ## Voir aussi
 
-- [Prothèse d'émulation pour `Map` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#map)
-- [Prothèse d'émulation pour `Map` dans es-shims <sup>(angl.)</sup>](https://www.npmjs.com/package/es-map)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) pour `Map` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/collections#h-map)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) pour `Map` dans es-shims <sup>(angl.)</sup>](https://www.npmjs.com/package/es-map)
 - L'objet natif {{JSxRef("Set")}}
 - L'objet natif {{JSxRef("WeakMap")}}
 - L'objet natif {{JSxRef("WeakSet")}}

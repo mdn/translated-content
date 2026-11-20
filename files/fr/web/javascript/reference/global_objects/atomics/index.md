@@ -2,27 +2,19 @@
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
 l10n:
-  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
+  sourceCommit: 9d64ff6c5d0eee1800b0d3b4f9076de65f34f5ce
 ---
 
 L'objet de l'espace de noms **`Atomics`** contient des méthodes statiques permettant d'effectuer des opérations atomiques. Elles sont utilisées avec les objets {{JSxRef("SharedArrayBuffer")}} et {{JSxRef("ArrayBuffer")}}.
 
 ## Description
 
-Contrairement à la plupart des objets globaux, `Atomics` n'est pas un constructeur. Vous ne pouvez pas l'utiliser avec l'[opérateur `new`](/fr/docs/Web/JavaScript/Reference/Operators/new) ni invoquer l'objet `Atomics` comme une fonction. Toutes les propriétés et méthodes de `Atomics` sont statiques (tout comme l'objet {{JSxRef("Math")}}).
-
-### Opérations atomiques
-
-Lorsque la mémoire est partagée, plusieurs processus peuvent lire et écrire les mêmes données en mémoire. Les opérations atomiques garantissent que des valeurs prévisibles sont écrites et lues, que les opérations sont terminées avant que l'opération suivante ne commence et que les opérations ne sont pas interrompues.
-
-### Attente et notification
-
-Les méthodes `wait()` et `notify()` sont modélisées sur les futex Linux «&nbsp;<i lang="en">fast user-space mutex</i>&nbsp;» et fournissent des moyens d'attendre jusqu'à ce qu'une certaine condition devienne vraie et sont généralement utilisées comme constructions bloquantes.
+Contrairement à la plupart des objets globaux, `Atomics` n'est pas un constructeur. Vous ne pouvez pas l'utiliser avec [l'opérateur `new`](/fr/docs/Web/JavaScript/Reference/Operators/new) ni invoquer l'objet `Atomics` comme une fonction. Toutes les propriétés et méthodes de `Atomics` sont statiques (tout comme l'objet {{JSxRef("Math")}}).
 
 ## Propriétés statiques
 
 - `Atomics[Symbol.toStringTag]`
-  - : La valeur initiale de la propriété [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne «&nbsp;Atomics&nbsp;». Cette propriété est utilisée dans {{JSxRef("Object.prototype.toString()")}}.
+  - : La valeur initiale de la propriété [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne de caractères «&nbsp;Atomics&nbsp;». Cette propriété est utilisée dans {{JSxRef("Object.prototype.toString()")}}.
 
 ## Méthodes statiques
 
@@ -133,6 +125,7 @@ Atomics.notify(int32, 0, 1);
 
 ## Voir aussi
 
+- Le guide [de communication et de coordination d'agent](/fr/docs/Web/JavaScript/Guide/Agent_communication_and_coordination)
 - L'objet natif {{JSxRef("ArrayBuffer")}}
 - Guide [des tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - [Web Workers](/fr/docs/Web/API/Web_Workers_API)

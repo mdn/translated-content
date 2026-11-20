@@ -3,7 +3,7 @@ title: "JSON : méthode statique isRawJSON()"
 short-title: isRawJSON()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/isRawJSON
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`JSON.isRawJSON()`** vérifie si une valeur est un objet retourné par {{JSxRef("JSON.rawJSON()")}}.
@@ -76,7 +76,7 @@ console.log(
 //     userId: 56789012345678901234
 ```
 
-Si, dans l'exemple ci‑dessus, les valeurs `userId` n'avaient pas été créées par `JSON.rawJSON()` mais passées directement comme nombres, alors nous subirions une perte de précision en raison des limites de précision des nombres à virgule flottante en JS.
+Si, dans l'exemple ci‑dessus, les valeurs `userId` ne sont pas créées par `JSON.rawJSON()` mais passées directement comme nombres, alors nous subirions une perte de précision en raison des limites de précision des nombres à virgule flottante en JS.
 
 ```js
 console.log(
@@ -109,7 +109,7 @@ console.log(
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `JSON.isRawJSON` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#jsonparse-source-text-access)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `JSON.isRawJSON` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/json)
 - L'objet natif {{JSxRef("JSON")}}
 - La méthode {{JSxRef("JSON.stringify()")}}
 - La méthode {{JSxRef("JSON.rawJSON()")}}

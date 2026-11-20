@@ -1,82 +1,87 @@
 ---
-title: String.prototype.at()
+title: "String : méthode at()"
+short-title: at()
 slug: Web/JavaScript/Reference/Global_Objects/String/at
+l10n:
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-La méthode **`at()`** prend un entier en argument et renvoie une nouvelle chaîne de caractères ([`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) contenant le codet UTF-16 présent dans la chaîne courante à l'emplacement indiqué en argument. Cette méthode permet d'utiliser des arguments positifs ou négatifs. Lorsque le paramètre passé est un entier négatif, la recherche s'effectue depuis la fin de la chaîne de caractères.
+La méthode **`at()`** de valeurs {{JSxRef("String")}} prend un entier en argument et retourne une nouvelle {{JSxRef("String")}} contenant le codet UTF-16 présent dans la chaîne de caractères courante à l'emplacement indiqué. Cette méthode permet d'utiliser des arguments positifs ou négatifs. Lorsque le paramètre passé est un entier négatif, la recherche s'effectue depuis la fin de la chaîne de caractères.
 
-{{InteractiveExample("JavaScript Demo: String.at()")}}
+{{InteractiveExample("Démonstration Javascript&nbsp;: String.prototype.at()")}}
 
 ```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+const sentence = "Le rapide renard brun saute par-dessus le chien paresseux.";
 
 let index = 5;
 
-console.log(`An index of ${index} returns the character ${sentence.at(index)}`);
-// Expected output: "An index of 5 returns the character u"
+console.log(
+  `Un indice de ${index} retourne le caractère ${sentence.at(index)}`,
+);
+// Résultat attendu : "Un indice de 5 retourne le caractère p"
 
 index = -4;
 
-console.log(`An index of ${index} returns the character ${sentence.at(index)}`);
-// Expected output: "An index of -4 returns the character d"
+console.log(
+  `Un indice de ${index} retourne le caractère ${sentence.at(index)}`,
+);
+// Résultat attendu : "Un indice de -4 retourne le caractère e"
 ```
 
 ## Syntaxe
 
-```js
-at(indice);
+```js-nolint
+at(index)
 ```
 
 ### Paramètres
 
 - `indice`
-  - : L'indice (c'est-à-dire la position) du caractère de la chaîne de caractères qu'on souhaite récupérer. Les indices relatifs sont pris en charge et on peut ainsi utiliser un indice négatif. Dans ce cas, c'est le caractère situé à la position comptée depuis la fin de la chaîne qui est renvoyé.
+  - : L'indice (c'est-à-dire la position) du caractère de la chaîne de caractères qu'on souhaite récupérer. Les indices relatifs sont pris en charge et on peut ainsi utiliser un indice négatif. Dans ce cas, c'est le caractère situé à la position comptée depuis la fin de la chaîne de caractères qui est retourné.
 
 ### Valeur de retour
 
-Une chaîne de caractères ([`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) contenant un unique codet UTF-16 situé à la position indiquée. Renvoie [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) si l'indice indiqué ne peut être trouvé dans la chaîne de caractères.
+Une chaîne de caractères ({{JSxRef("String")}}) consistant en l'unique unité de code UTF-16 située à la position définie. Retourne {{JSxRef("undefined")}} si l'indice donné ne peut être trouvé.
 
 ## Exemples
 
-### Renvoyer le dernier caractère d'une chaîne de caractères
+### Retourner le dernier caractère d'une chaîne de caractères
 
-Dans l'exemple qui suit, on fournit une fonction qui renvoie le dernier caractère trouvé dans une chaîne de caractères.
+Dans l'exemple qui suit, on fournit une fonction qui retourne le dernier caractère trouvé dans une chaîne de caractères.
 
 ```js
-// Une fonction qui renvoie le dernier caractère d'une chaîne
+// Une fonction qui retourne le dernier caractère d'une chaîne de caractères
 function dernierCar(str) {
   return str.at(-1);
 }
 
-let refFacture = "maFacture01";
+let refFacture = "ma-facture01";
 
-console.log(dernierCar(refFacture));
-// Affiche '1' dans la console
+console.log(dernierCar(refFacture)); // '1'
 
-refFacture = "maFacture02";
+refFacture = "ma-facture02";
 
-console.log(dernierCar(refFacture));
-// Affiche '2' dans la console
+console.log(dernierCar(refFacture)); // '2'
 ```
 
 ### Comparaison de méthodes
 
-On compare ici différentes méthodes pour sélectionner l'avant-dernier caractère d'une chaîne de caractères ([`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)). Bien que toutes les alternatives proposées ici soient valables, on pourra remarquer la concision et la lisibilité de la méthode `at()`.
+Ici nous comparons différentes manières de sélectionner l'avant-dernier caractère d'une chaîne de caractères ({{JSxRef("String")}}). Bien que toutes les méthodes ci-dessous soient valides, cela met en évidence la concision et la lisibilité de la méthode `at()`.
 
 ```js
 const maChaine = "Vers l'infini et au-delà !";
 
 // En utilisant la propriété length et la méthode charAt()
 const avecLength = maChaine.charAt(maChaine.length - 2);
-console.log(avecLength); // Affiche 'à' dans la console
+console.log(avecLength); // 'à'
 
 // En utilisant la méthode slice()
 const avecSlice = maChaine.slice(-2, -1);
-console.log(avecSlice); // Affiche 'à' dans la console
+console.log(avecSlice); // 'à'
 
 // En utilisant la méthode at()
 const avecAt = maChaine.at(-2);
-console.log(avecAt); // Affiche 'à' dans la console
+console.log(avecAt); // 'à'
 ```
 
 ## Spécifications
@@ -89,11 +94,10 @@ console.log(avecAt); // Affiche 'à' dans la console
 
 ## Voir aussi
 
-- [`String.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)
-- [`String.prototype.lastIndexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf)
-- [`String.prototype.charCodeAt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt)
-- [`String.prototype.codePointAt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt)
-- [`String.prototype.split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split)
-- Prothèses d'émulation (<i lang="en">polyfills</i>)&nbsp;:
-  - [Celle de la proposition TC39](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
-  - [Celle de `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `String.prototype.at` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `String.prototype.at` <sup>(angl.)</sup>](https://www.npmjs.com/package/string.prototype.at)
+- La méthode {{JSxRef("String.prototype.indexOf()")}}
+- La méthode {{JSxRef("String.prototype.lastIndexOf()")}}
+- La méthode {{JSxRef("String.prototype.charCodeAt()")}}
+- La méthode {{JSxRef("String.prototype.codePointAt()")}}
+- La méthode {{JSxRef("String.prototype.split()")}}

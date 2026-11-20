@@ -29,7 +29,7 @@ WebSocket クライアントを作成するには、まず新しい `WebSocketSt
 const wss = new WebSocketStream("wss://example.com/wss");
 ```
 
-また、独自のプロトコルや {{domxref("AbortSignal")}} が含まれている `options` オブジェクトを取ることもできます。 `AbortSignal` は、[ハンドシェイク](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake)が完了する前（つまり、 {{domxref("WebSocketStream.opened", "opened")}} プロミスが解決する前）に接続試行を中止するために使用できます。これは通常、接続タイムアウトの実装に使用されます。例えば、以下のコードはハンドシェイクが完了するのに 5 秒以上かかる場合、タイムアウトします。
+また、独自のプロトコルや {{domxref("AbortSignal")}} が含まれている `options` オブジェクトを取ることもできます。 `AbortSignal` は、[ハンドシェイク](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#websocket_ハンドシェイク)が完了する前（つまり、 {{domxref("WebSocketStream.opened", "opened")}} プロミスが解決する前）に接続試行を中止するために使用できます。これは通常、接続タイムアウトの実装に使用されます。例えば、以下のコードはハンドシェイクが完了するのに 5 秒以上かかる場合、タイムアウトします。
 
 ```js
 const controller = new AbortController();
@@ -77,7 +77,7 @@ while (true) {
 
 ## 接続の切断
 
-接続を閉じるには、 {{domxref("WebSocketStream.close()")}} メソッドを呼び出します。オプションで[終了コード](/ja/docs/Web/API/CloseEvent/code#value)と理由を渡すことができます。
+接続を閉じるには、 {{domxref("WebSocketStream.close()")}} メソッドを呼び出します。オプションで[終了コード](/ja/docs/Web/API/CloseEvent/code#値)と理由を渡すことができます。
 
 ```js
 wss.close({
@@ -99,7 +99,7 @@ const { closeCode, reason } = await wss.closed;
 
 ## 完全なサンプルクライアント
 
-`WebSocketStream` の基本的な使い方を示すために、サンプルクライアントを作成しました。記事の一番下に[全リスト](#全リスト)がありますので、以下の説明と合わせてご覧ください。
+`WebSocketStream` の基本的な使い方を示すために、サンプルクライアントを作成しました。記事の一番下に[全リスト](#完全なリスト)がありますので、以下の説明と合わせてご覧ください。
 
 > [!NOTE]
 > この例を動作させるには、サーバーコンポーネントも必要です。[WebSocket サーバーを JavaScript (Deno) で書く](/ja/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno)で説明されている Deno サーバーと連携するようにクライアントを書きましたが、互換性のあるサーバーであればどれでも構いません。

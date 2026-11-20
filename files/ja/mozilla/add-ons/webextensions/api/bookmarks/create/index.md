@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
 
 {{AddonSidebar}}
 
-**`bookmarks.create()`** は、`parentId` で指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} の配下に、ブックマークやフォルダーを作成するメソッドです。フォルダーを作成する場合は、{{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}} の引数を省略するか空にします。
+**`bookmarks.create()`** は、`parentId` で指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} の配下に、ブックマークやフォルダーを作成するメソッドです。フォルダーを作成する場合は、{{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "#url")}} の引数を省略するか空にします。
 
 ## 構文
 

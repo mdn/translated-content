@@ -3,7 +3,7 @@ title: Array.prototype.shift()
 short-title: shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
 **`shift()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列から**最初**の要素を取り除き、その要素を返します。このメソッドは配列の長さを変えます。

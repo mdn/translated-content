@@ -3,7 +3,7 @@ title: "DataView : méthode setFloat16()"
 short-title: setFloat16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat16
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`setFloat16()`** des instances de {{JSxRef("DataView")}} prend un nombre et l'enregistre comme un nombre flottant sur 16 bits dans les 2 octets à partir du décalage d'octet défini de cette `DataView`. Il n'y a pas de contrainte d'alignement&nbsp;; les valeurs sur plusieurs octets peuvent être enregistrées à n'importe quel décalage valide.
@@ -67,7 +67,7 @@ dataview.getFloat16(1); // 0
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `DataView.prototype.setFloat16` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#float16-methods)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `DataView.prototype.setFloat16` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - Le guide [des tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - L'objet natif {{JSxRef("DataView")}}
 - L'objet natif {{JSxRef("ArrayBuffer")}}

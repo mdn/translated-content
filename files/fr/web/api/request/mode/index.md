@@ -10,9 +10,9 @@ l10n:
 
 La propriété en lecture seule **`mode`** de l'interface {{DOMxRef("Request")}} contient le mode de la requête (par exemple, `cors`, `no-cors`, `same-origin` ou `navigate`). Cela sert à déterminer si les requêtes inter-origines produisent des réponses valides, et quelles propriétés de la réponse sont lisibles.
 
-Pour construire une requête avec un mode spécifique, passez la valeur souhaitée comme option {{DOMxRef("RequestInit", "", "mode")}} au constructeur {{DOMxRef("Request.Request()")}}.
+Pour construire une requête avec un mode spécifique, passez la valeur souhaitée comme option {{DOMxRef("RequestInit", "", "#mode")}} au constructeur {{DOMxRef("Request.Request()")}}.
 
-Notez que définir certains modes, en particulier `no-cors`, impose des restrictions sur les méthodes et en-têtes de requête utilisables, et empêche JavaScript d'accéder aux en-têtes ou au corps de la réponse. Consultez la documentation de {{DOMxRef("RequestInit", "", "mode")}} pour plus de détails.
+Notez que définir certains modes, en particulier `no-cors`, impose des restrictions sur les méthodes et en-têtes de requête utilisables, et empêche JavaScript d'accéder aux en-têtes ou au corps de la réponse. Consultez la documentation de {{DOMxRef("RequestInit", "", "#mode")}} pour plus de détails.
 
 ## Valeur
 

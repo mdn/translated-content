@@ -3,7 +3,7 @@ title: "AsyncDisposableStack : propriété disposed"
 short-title: disposed
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/disposed
 l10n:
-  sourceCommit: 7a5b580a28a0b1a33e42e9fb81c8234994ec0e36
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La propriété d'accesseur **`disposed`** des instances de {{JSxRef("AsyncDisposableStack")}} retourne un booléen indiquant si cette pile `AsyncDisposableStack` a été libérée ou déplacée par l'une des actions suivantes&nbsp;:
@@ -33,4 +33,5 @@ console.log(gestionnaire.disposed); // true
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `AsyncDisposableStack.prototype.disposed` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources en JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)

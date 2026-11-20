@@ -3,7 +3,7 @@ title: Intl.DateTimeFormat.prototype.formatToParts()
 short-title: formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 98972b1f827b7374e28aee591a73044ffd8fb758
 ---
 
 **`formatToParts()`** は {{jsxref("Intl.DateTimeFormat")}} インスタンスのメソッドで、 {{jsxref("Intl/DateTimeFormat/format", "format()")}} が返す書式化済み文字列の各部分を表すオブジェクトの配列を返します。これは、ロケール固有のトークンからカスタム文字列を構築するのに便利です。
@@ -24,7 +24,7 @@ const parts = dateTimeFormat.formatToParts(date);
 const partValues = parts.map((p) => p.value);
 
 console.log(partValues);
-// 予想される結果: "["Friday", ", ", "June", " ", "1", ", ", "2012"]"
+// 予想される結果: Array ["Friday", ", ", "June", " ", "1", ", ", "2012"]
 ```
 
 ## 構文
@@ -48,7 +48,7 @@ formatToParts(date)
 {{jsxref("Array")}} 型のオブジェクト配列で、各オブジェクトは日付を構成する要素ごとに書式化された日付を含みます。各オブジェクトには `type` と `value` の 2 つのプロパティがあり、それぞれ文字列を保持します。指定された順序で `value` を連結すると、{{jsxref("Intl/DateTimeFormat/format", "format()")}} と同じ文字列が生成されます。`type` は[日時成分](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#date-time_component_options)のいずれかになります。
 
 - `weekday`
-  - : 例えば `"M"`, `"Monday"`, または `"Montag"`。
+  - : 例えば `"T"`, `"Tuesday"`, または `"Dienstag"`。
 - `era`
   - : 例えば `"BC"` または `"AD"`。
 - `year`
@@ -130,6 +130,7 @@ formatter.formatToParts(date);
   { type: "minute", value: "00" },
   { type: "literal", value: ":" },
   { type: "second", value: "42" },
+  { type: "literal", value: "." },
   { type: "fractionalSecond", value: "000" },
   { type: "literal", value: " " },
   { type: "dayPeriod", value: "AM" },

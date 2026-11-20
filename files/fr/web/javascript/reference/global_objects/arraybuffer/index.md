@@ -2,14 +2,14 @@
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 L'objet **`ArrayBuffer`** est utilisé afin de représenter un tampon (_buffer_) de données binaires de longueur fixe de façon générique.
 
 Il s'agit d'un tableau d'octets. Il n'est pas possible de manipuler directement le contenu d'un `ArrayBuffer`, la manipulation se fait de façon indirecte en créant un [tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) ou un objet [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) qui permet de représenter le tampon dans un format donné qui permet de lire/écrire des contenus dans le tampon de mémoire.
 
-Le constructeur [`ArrayBuffer()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer) permet de créer un nouvel objet `ArrayBuffer` dont la longueur, en octets, est fournie par l'argument. Il est aussi possible d'obtenir un tableau typé à partir de données existantes, par exemple depuis une chaîne en [Base64](/fr/docs/Glossary/Base64) ou [depuis un fichier local](/fr/docs/Web/API/FileReader/readAsArrayBuffer).
+Le constructeur [`ArrayBuffer()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer) permet de créer un nouvel objet `ArrayBuffer` dont la longueur, en octets, est fournie par l'argument. Il est aussi possible d'obtenir un tableau typé à partir de données existantes, par exemple depuis une chaîne de caractères en [Base64](/fr/docs/Glossary/Base64) ou [depuis un fichier local](/fr/docs/Web/API/FileReader/readAsArrayBuffer).
 
 ## Description
 
@@ -21,9 +21,9 @@ Ces fonctionnalités rendent le redimensionnement des `ArrayBuffer` plus efficac
 
 ### Transfert des ArrayBuffer
 
-Un objet `ArrayBuffer` peut être transféré entre différents contextes d'exécution, comme les [Web Workers](/fr/docs/Web/API/Web_Workers_API) ou les [Service Workers](/fr/docs/Web/API/Service_Worker_API), en utilisant l'[algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). Cela se fait en passant l'`ArrayBuffer` comme [objet transférable](/fr/docs/Web/API/Web_Workers_API/Transferable_objects) lors d'un appel à {{DOMxRef("Worker.postMessage()")}} ou {{DOMxRef("ServiceWorker.postMessage()")}}. En JavaScript, vous pouvez aussi transférer la mémoire d'un `ArrayBuffer` à un autre avec {{JSxRef("ArrayBuffer/transfer", "transfer()")}} ou {{JSxRef("ArrayBuffer/transferToFixedLength", "transferToFixedLength()")}}.
+Un objet `ArrayBuffer` peut être transféré entre différents contextes d'exécution, comme les [Web Workers](/fr/docs/Web/API/Web_Workers_API) ou les [Service Workers](/fr/docs/Web/API/Service_Worker_API), en utilisant [l'algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). Cela se fait en passant le `ArrayBuffer` comme [objet transférable](/fr/docs/Web/API/Web_Workers_API/Transferable_objects) lors d'un appel à {{DOMxRef("Worker.postMessage()")}} ou {{DOMxRef("ServiceWorker.postMessage()")}}. En JavaScript, vous pouvez aussi transférer la mémoire d'un `ArrayBuffer` à un autre avec {{JSxRef("ArrayBuffer/transfer", "transfer()")}} ou {{JSxRef("ArrayBuffer/transferToFixedLength", "transferToFixedLength()")}}.
 
-Quand un `ArrayBuffer` est transféré, sa copie d'origine devient _détachée_ — cela signifie qu'il n'est plus utilisable. À tout moment, il n'existe qu'une seule copie de l'`ArrayBuffer` qui a accès à la mémoire sous-jacente. Un tampon détaché a les comportements suivants&nbsp;:
+Quand un `ArrayBuffer` est transféré, sa copie d'origine devient _détachée_ — cela signifie qu'il n'est plus utilisable. À tout moment, il n'existe qu'une seule copie de le `ArrayBuffer` qui a accès à la mémoire sous-jacente. Un tampon détaché a les comportements suivants&nbsp;:
 
 - {{JSxRef("ArrayBuffer/byteLength", "byteLength")}} vaut 0 (dans le tampon et les vues de tableau typé associées).
 - Les méthodes comme {{JSxRef("ArrayBuffer/resize", "resize()")}} et {{JSxRef("ArrayBuffer/slice", "slice()")}} lèvent une exception {{JSxRef("TypeError")}} lorsqu'on les appelle. Les méthodes des vues de tableau typé associées lèvent aussi une `TypeError`.
@@ -94,7 +94,7 @@ const view = new Int32Array(buffer);
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `ArrayBuffer` dans `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [Guide des tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - L'objet natif {{JSxRef("SharedArrayBuffer")}}
 - [<i lang="en">RangeError: invalid array length</i>](/fr/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)
-- [Prothèse d'émulation (<i lang="en">polyfill</i>) pour `ArrayBuffer` dans la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)

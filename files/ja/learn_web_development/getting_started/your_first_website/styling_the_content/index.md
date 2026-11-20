@@ -132,7 +132,7 @@ p,
 この CSS ルールには、特定の HTML 要素を選択する**要素**（または**要素型**）セレクターが含まれています。同時に、このチュートリアルの残りの部分とは関係のない、他の 2 種類のセレクターも記載されています。それらの機能について知りたい場合は、[基本的なセレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)のガイドをご覧ください。
 
 > [!NOTE]
-> Scrimba の [Write your first lines of CSS!](https://scrimba.com/the-frontend-developer-career-path-c0j/~015?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> は、CSS の構文について、有益な対話的な入門ガイドを提供しています。
+> Scrimba の [Write your first lines of CSS!](https://scrimba.com/the-frontend-developer-career-path-c0j/~015?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> は、CSS の構文について、有益な対話的な入門ガイドを提供しています。
 
 ## テキストの改善
 
@@ -270,7 +270,7 @@ padding-left: 20px;
 ```
 
 > [!NOTE]
-> Scrimba の [Margin/padding shorthand](https://scrimba.com/frontend-path-c0j/~0g?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> は、マージンとパディングの一括指定の使い方を手順を追って説明する対話的なレッスンです。
+> Scrimba の [Margin/padding shorthand](https://scrimba.com/frontend-path-c0j/~0g?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> は、マージンとパディングの一括指定の使い方を手順を追って説明する対話的なレッスンです。
 
 ### ページのメインタイトルの位置指定とスタイル設定
 
@@ -329,7 +329,7 @@ img {
 
 ## 関連情報
 
-- [Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
   - : [Scrimba](https://scrimba.com?via=mdn) の _Learn HTML and CSS_ コースでは、5 つの素晴らしいプロジェクトの構築と展開を通じて、知識豊富な講師陣による楽しいインタラクティブなレッスンや課題による HTML と CSS を学ぶことができます。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}

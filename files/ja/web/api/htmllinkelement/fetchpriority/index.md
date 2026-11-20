@@ -3,35 +3,23 @@ title: "HTMLLinkElement: fetchPriority プロパティ"
 short-title: fetchPriority
 slug: Web/API/HTMLLinkElement/fetchPriority
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: 1f00512e3c9a20b5bb927db529bb5d639e346d96
 ---
 
-{{SeeCompatTable}}{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}
 
-**`fetchPriority`** は {{domxref("HTMLLinkElement")}} インターフェイスのプロパティで、ブラウザーが同じ種類の他のリソースに対して、与えられたリソースの先読みをどのように優先させるべきかを示すヒントを表します。
+**`fetchPriority`** は {{domxref("HTMLLinkElement")}} インターフェイスのプロパティで、特定のリソースの取得を同じ種類の他のリソースと比較してどのように優先するか、ブラウザーに示すヒントを表します。
+これは `<link>` 要素の [`fetchpriority`](/ja/docs/Web/HTML/Reference/Elements/link#fetchpriority) コンテンツ属性を反映します。
 
 ## 値
 
-優先度のヒントを表す文字列です。使用可能な値は以下のとおりです。
-
-- `high`
-  - : 他の同じ種類のリソースと比較して、高い優先度で先読みを行います。
-- `low`
-  - : 同じ種類の他のリソースに対して、低い優先度で画像を取得します。
-- `auto`
-  - : 既定のモードで、フェッチの優先順位を指定しません。ブラウザーがユーザーにとって最適なものを決定します。
-
-`fetchPriority` プロパティは、先読みの優先順位を高くしたり低くしたりするための信号を送ることができます。これは {{HTMLElement("link")}} 要素に適用すると、読み込み処理の早い段階で、ユーザーエクスペリエンスにとって重要な先読みを知らせることができ、便利です。
-
-リソースの読み込みに対するヒントの効果はブラウザーによって異なるため、必ず複数のブラウザーエンジンでテストしてください。
-
-ブラウザーがリソースを自動的に読み込むための最適な方法を推測できないような例外的なケースには、控えめに使用するようにしてください。過剰に使用すると、パフォーマンスが低下することがあります。
+文字列です。許可された値については、HTML の [`fetchpriority`](/ja/docs/Web/HTML/Reference/Attributes/fetchpriority) 属性を参照してください。
 
 ## 例
 
 ```js
 const preloadLink = document.createElement("link");
-preloadLink.href = "myimage.jpg";
+preloadLink.href = "my-image.jpg";
 preloadLink.rel = "preload";
 preloadLink.as = "image";
 preloadLink.fetchPriority = "high";
@@ -45,3 +33,10 @@ document.head.appendChild(preloadLink);
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("HTMLImageElement.fetchPriority")}}
+- {{domxref("HTMLScriptElement.fetchPriority")}}
+- HTTP {{httpheader("Link")}} ヘッダー
+- [Fetch Priority API を使用したリソース読み込みの最適化](https://web.dev/articles/fetch-priority?hl=en#browser_priority_and_fetchpriority)<sup>(英語)</sup> — この API が Chrome の優先度にどのように影響するかについて

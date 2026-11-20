@@ -3,7 +3,7 @@ title: Instalar software básico
 short-title: Instalar software
 slug: Learn_web_development/Getting_started/Environment_setup/Installing_software
 l10n:
-  sourceCommit: afcdfa050626bb7eb05ee693df8997020db9ff2e
+  sourceCommit: d50a52075711e21da27bce5ee24f6334b56cf0f3
 ---
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}
@@ -113,8 +113,8 @@ Aunque las herramientas de control de versiones son esenciales para los equipos 
 
 Cuando termines de desarrollar un sitio web o una aplicación (en tu computadora local, o quizá en un servidor de desarrollo), querrás ponerlo en un servidor web remoto para que tus usuarios puedan escribir la dirección web asociada y verlo en la web.
 
-Hay varias formas de hacerlo: desde contratar un alojamiento y usar una [aplicación de SFTP](/es/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server), hasta usar un servicio como [GitHub Pages](https://pages.github.com/) o [Netlify](https://www.netlify.com/), o incluso preparar una demostración rápida para compartirla con otras personas con algo como [CodePen](https://codepen.io/) o [JSFiddle](https://jsfiddle.net/).
+Hay varias formas de hacerlo: desde contratar un alojamiento y usar un [cliente (S)FTP](/es/docs/Glossary/FTP), hasta usar un servicio como [GitHub Pages](https://pages.github.com/) o [Netlify](https://www.netlify.com/), o incluso preparar una demostración rápida para compartirla con otras personas con algo como [CodePen](https://codepen.io/) o [JSFiddle](https://jsfiddle.net/).
 
-Una lista de opciones así puede parecer abrumadora, pero no te preocupes: ahora mismo no necesitas saber nada sobre publicar sitios web. Veremos este tema muchas veces más adelante en el curso. Muy pronto tendrás experiencia práctica con él en nuestro módulo [Tu primer sitio web](/es/docs/Learn_web_development/Getting_started/Your_first_website).
+Una lista de opciones así puede parecer abrumadora, pero no te preocupes: ahora mismo no necesitas saber nada sobre publicar sitios web. Veremos este tema muchas veces más adelante en el curso. Muy pronto tendrás experiencia práctica con él en nuestro módulo [Tu primer sitio web](/es/docs/Learn_web_development/Getting_started/Your_first_website), y en particular, en el artículo [Publicar tu sitio web](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website).
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}

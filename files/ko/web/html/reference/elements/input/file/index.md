@@ -36,7 +36,7 @@ label {
       <td>
         <strong><a href="#값">값</a></strong>
       </td>
-      <td>선택한 파일의 경로를 나타내는 {{domxref("DOMString")}}.</td>
+      <td>선택한 파일의 경로를 나타내는 {{jsxref("String")}}.</td>
     </tr>
     <tr>
       <td><strong>이벤트</strong></td>
@@ -79,7 +79,7 @@ label {
 
 ## 값
 
-파일 입력 칸의 [`value`](/ko/docs/Web/HTML/Element/input#value) 특성은 선택한 파일의 경로를 나타내는 {{domxref("DOMString")}}을 담습니다. 사용자가 여러 개의 파일을 선택한 경우 `value`는 파일 목록의 첫 번째 파일을 가리키며, 나머지 파일은 요소의 {{domxref("HTMLInputElement.files")}} 속성으로 가져올 수 있습니다.
+파일 입력 칸의 [`value`](/ko/docs/Web/HTML/Element/input#value) 특성은 선택한 파일의 경로를 나타내는 {{jsxref("String")}}을 담습니다. 사용자가 여러 개의 파일을 선택한 경우 `value`는 파일 목록의 첫 번째 파일을 가리키며, 나머지 파일은 요소의 {{domxref("HTMLInputElement.files")}} 속성으로 가져올 수 있습니다.
 
 > [!NOTE]
 >
