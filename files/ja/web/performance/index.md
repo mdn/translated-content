@@ -3,7 +3,7 @@ title: ウェブパフォーマンス
 short-title: パフォーマンス
 slug: Web/Performance
 l10n:
-  sourceCommit: d37026a4d0e1e3a5a2ab82d34566689aada039f7
+  sourceCommit: bf4475f3ca689796977ddf27f4ec8623d35b4db5
 ---
 
 ウェブパフォーマンスは客観的な測定値と、読み込み時や実行時のユーザー体験の知覚状況からなります。
@@ -17,7 +17,7 @@ l10n:
 
 ## ウェブパフォーマンスガイド
 
-[パフォーマンスガイド](/ja/docs/Web/Performance/Guides) は、ブラウザーの動作、パフォーマンスに影響を与える要素、およびアプリケーションのさまざまな側面におけるパフォーマンスの測定、最適化、監視の方法について説明したリソースです。
+[パフォーマンスガイド](/ja/docs/Web/Performance/Guides)は、ブラウザーの動作、パフォーマンスに影響を与える要素、およびアプリケーションのさまざまな側面におけるパフォーマンスの測定、最適化、監視の方法について説明したリソースです。
 
 - [パフォーマンスの基本](/ja/docs/Web/Performance/Guides/Fundamentals)
   - : パフォーマンスとは効率を意味します。オープンウェブアプリというコンテキストにおいて、この記事では、パフォーマンスとは何か、ブラウザープラットフォームがパフォーマンスの改善にどのように役立つか、そしてパフォーマンスを検査および改善するために使用できるツールやプロセスについて、全般的に説明しています。
@@ -54,24 +54,44 @@ l10n:
 
 ## 初心者向けチュートリアル
 
-MDN の[ウェブパフォーマンスの学習領域](/ja/docs/Learn_web_development/Extensions/Performance)には、パフォーマンスの基礎をカバーする最新のチュートリアルが含まれています。パフォーマンスについての初心者は、ここから始めてください。
+MDN の[ウェブパフォーマンスの学習領域](/ja/docs/Learn_web_development/Extensions/Performance)には、パフォーマンスの基礎を扱う最新のチュートリアルが含まれています。
+パフォーマンスを初めて学ぶ方は、ここから始めてください。
 
-- [ウェブパフォーマンス: 短い概要](/ja/docs/Learn_web_development/Extensions/Performance/What_is_web_performance)
-  - : ウェブパフォーマンスの学習経路の概要です。ここから旅を始めましょう。
+- [ウェブパフォーマンスが重要な理由](/ja/docs/Learn_web_development/Extensions/Performance/why_web_performance)
+  - : この記事では、アクセシビリティ、ユーザー体験、ビジネス目標にとってウェブパフォーマンスが重要である理由を説明します。
 - [ウェブパフォーマンスとは](/ja/docs/Learn_web_development/Extensions/Performance/What_is_web_performance)
-  - : この記事では、パフォーマンスとは何かをよく理解することからモジュールを始めます。パフォーマンスについて考えるときに考慮すべきツール、指標、API、ネットワーク、人々のグループ、そしてウェブ開発のワークフローの一部としてパフォーマンスを活用する方法などを紹介します。
+  - : ウェブパフォーマンスが重要だと分かったところで、どのような要因がウェブパフォーマンスに影響し、どのように測定するのでしょうか。
+    この記事では、ウェブページの読み込みと描画から、コンテンツがユーザーのブラウザーに届いて表示されるまで、そしてパフォーマンスを検討する際に考慮すべき人々まで、パフォーマンスを構成する要素を紹介します。
 - [ユーザーはパフォーマンスをどう知覚するのか](/ja/docs/Learn_web_development/Extensions/Performance/Perceived_performance)
-  - : ウェブサイトの速さをミリ秒単位で示すことよりも重要なのは、ユーザーがサイトの速さをどのように認識しているかということです。これらの認識は、実際のページロード時間、アイドリング、ユーザーインタラクションへの応答性、スクロールやその他のアニメーションのスムーズさに影響されます。この記事では、様々なロード指標、アニメーション、応答性の指標と、実際の時間ではなくてもユーザーの認識を改善するためのベストプラクティスについて説明します。
-- [ウェブパフォーマンスの基本](/ja/docs/Learn_web_development/Extensions/Performance/Best_practices)
-  - : HTML、CSS、JavaScript、メディアファイルなどのフロントエンド部品に加えて、アプリケーションを遅くする機能と、主観的・客観的にアプリケーションを速くする機能があります。ウェブパフォーマンスに関連する API、開発者ツール、ベストプラクティス、バッドプラクティスは数多くあります。ここでは、これらの機能の多くを基本的なレベルで紹介し、それぞれのトピックについて、パフォーマンスを向上させるためのより深い考察へのリンクを提供します。
-- [HTML のパフォーマンス特性](/ja/docs/Learn_web_development/Extensions/Performance/HTML)
-  - : マークアップの属性やソースの順序によっては、ウェブサイトのパフォーマンスに影響を与えることがあります。 DOM ノードの数を最小限に抑え、スタイル、スクリプト、メディア、サードパーティのスクリプトなどのコンテンツを含むために、最適な順序と属性を使用することで、ユーザーエクスペリエンスを劇的に向上させることができます。この記事では、最大限のパフォーマンスを確保するために HTML をどのように使用すればよいかを詳しく見ていきます。
-- [マルチメディア: 画像と動画](/ja/docs/Learn_web_development/Extensions/Performance/Multimedia)
-  - : ウェブパフォーマンスの中で最も身近な位置にあるのは、メディアの最適化です。各ユーザーエージェントの能力、サイズ、ピクセル密度に応じて、異なるメディアファイルを提供することが可能です。また、バックグラウンドのビデオからオーディオトラックを削除するなどのヒントを加えると、さらにパフォーマンスが向上します。この記事では、動画、音声、画像のコンテンツがパフォーマンスに与える影響と、その影響をできるだけ小さくするための方法について説明します。
-- [CSS パフォーマンス特性](/ja/docs/Learn_web_development/Extensions/Performance/CSS)
-  - : CSS は、パフォーマンス向上のための最適化の焦点としてはあまり重要ではないかもしれませんが、パフォーマンスに影響を与える CSS の機能はいくつかあります。この記事では、パフォーマンスに影響を与えるいくつかの CSS プロパティと、パフォーマンスに悪影響を与えないためのスタイルの処理方法を提案します。
-- [JavaScript パフォーマンスのベストプラクティス](/ja/docs/Learn_web_development/Extensions/Performance/JavaScript)
+  - : ミリ秒単位で見たウェブサイトの速さよりも、ユーザーがサイトの速さをどのように認識するかのほうが重要です。
+    この認識は、実際のページ読み込み時間、アイドル状態、ユーザー操作への応答性、スクロールやその他のアニメーションの滑らかさに影響されます。
+    この記事では、さまざまな読み込み指標、アニメーション指標、応答性指標と、実測値が改善しなくてもユーザーの知覚を改善するためのベストプラクティスについて説明します。
+- [パフォーマンスの測定](/ja/docs/Learn_web_development/Extensions/Performance/Measuring_performance)
+  - : いくつかのパフォーマンス指標を理解したところで、ここではパフォーマンスツール、指標、API と、それらをウェブ開発のワークフローに組み込む方法を詳しく見ていきます。
+- [マルチメディア: 画像](/ja/docs/Learn_web_development/Extensions/Performance/Multimedia)
+  - : ウェブパフォーマンスでは、メディアの最適化が最も手を付けやすい改善策であることがよくあります。
+    各ユーザーエージェントの機能、サイズ、ピクセル密度に応じて異なるメディアファイルを配信できます。
+    この記事では、画像がパフォーマンスに与える影響と、画像ごとに送信するバイト数を減らす方法について説明します。
+- [マルチメディア: 動画](/ja/docs/Learn_web_development/Extensions/Performance/video)
+  - : メディアの最適化は、ウェブパフォーマンスで最も手を付けやすい改善策であることがよくあります。
+    この記事では、動画コンテンツがパフォーマンスに与える影響を説明し、バックグラウンド動画から音声トラックを削除するなど、パフォーマンスを改善するヒントも紹介します。
+- [JavaScript パフォーマンスの最適化](/ja/docs/Learn_web_development/Extensions/Performance/JavaScript)
   - : JavaScript は、適切に使用すればインタラクティブで没入感のあるウェブ体験を実現できますが、ダウンロード時間、レンダリング時間、アプリ内のパフォーマンス、バッテリー寿命、ユーザーエクスペリエンスを大きく損なう可能性があります。この記事では、複雑なコンテンツであっても可能な限りパフォーマンスを向上させるために考慮すべき JavaScript のベストプラクティスを紹介します。
+- [HTML パフォーマンスの最適化](/ja/docs/Learn_web_development/Extensions/Performance/HTML)
+  - : マークアップの属性やソースの順序によっては、ウェブサイトのパフォーマンスに影響を与えることがあります。
+    DOM ノードの数を最小限に抑え、スタイル、スクリプト、メディア、サードパーティスクリプトなどのコンテンツを含める際に最適な順序と属性を使うことで、ユーザー体験を大幅に改善できます。
+    この記事では、パフォーマンスを最大限に高めるための HTML の使い方を詳しく説明します。
+- [CSS パフォーマンスの最適化](/ja/docs/Learn_web_development/Extensions/Performance/CSS)
+  - : パフォーマンス向上のための最適化では CSS はそれほど重要な焦点ではないかもしれませんが、パフォーマンスに大きく影響する CSS の機能もあります。
+    この記事では、パフォーマンスに影響する CSS プロパティと、パフォーマンスを損なわないスタイルの扱い方を提案します。
+- [ウェブパフォーマンスのビジネス上の意義](/ja/docs/Learn_web_development/Extensions/Performance/business_case_for_performance)
+  - : 開発者がパフォーマンスを改善する方法は数多くありますが、どの程度の速さが十分なのでしょうか。
+    パフォーマンス改善の重要性を、意思決定者にどう納得してもらえばよいでしょうか。
+    最適化したあと、再び肥大化しないようにするにはどうすればよいでしょうか。
+    この記事では、経営陣への働きかけ、パフォーマンスを重視する文化とパフォーマンス予算の策定、そして性能の劣化を防ぐ方法を紹介します。
+- [ウェブパフォーマンスのベストプラクティスとヒント](/ja/docs/Learn_web_development/Extensions/Performance/Best_practices)
+  - : この記事では、さまざまなトピックを基礎レベルで扱い、それぞれについてパフォーマンスを改善するための詳しい解説へのリンクを示します。
+    HTML、CSS、JavaScript、メディアファイルなどのフロントエンドのトピックに加えて、ウェブパフォーマンスに関係する API、開発者ツール、ベストプラクティス、避けるべきプラクティスも扱います。
 
 ## パフォーマンス API
 
@@ -102,7 +122,7 @@ MDN の[ウェブパフォーマンスの学習領域](/ja/docs/Learn_web_develo
   - : サーバータイミングにより、サーバーはリクエストとレスポンスのサイクルに関する指標をユーザーエージェントに伝えることができます。
     この情報を収集し、パフォーマンス API で処理される他のすべての指標と同じ方法で、サーバー側の指標に基づいてアクションを実行することができます。
 - [ユーザータイミング API](/ja/docs/Web/API/Performance_API/User_timing)
-  - : アプリケーション固有のタイムスタンプを生成するために、[ユーザータイミング API](/ja/docs/Web/API/Performance_API/User_timing) の "mark" および "measure" の種類の項目を使用します。これらはブラウザーのパフォーマンスタイムラインの一部です。
+  - : アプリケーション固有のタイムスタンプは、[ユーザータイミング API](/ja/docs/Web/API/Performance_API/User_timing) の "mark" および "measure" の種類の項目と、ブラウザーのパフォーマンスタイムラインの一部である[高精度タイムスタンプ](/ja/docs/Web/API/DOMHighResTimeStamp)を使用して生成します。
 
 ### 関連 API
 
@@ -114,8 +134,9 @@ MDN の[ウェブパフォーマンスの学習領域](/ja/docs/Learn_web_develo
   - : **バックグラウンドタスクの協調スケジューリング API** (バックグラウンドタスク API または [`requestIdleCallback()`](/ja/docs/Web/API/Window/requestIdleCallback) API とも呼ばれる) は、ユーザーエージェントが実行可能な空き時間があると判断したときに、自動的に実行されるタスクをキューに入れる機能を提供します。
 - [ビーコン API](/ja/docs/Web/API/Beacon_API)
   - : [Beacon](/ja/docs/Web/API/Beacon_API) インターフェイスは、ウェブサーバーへの非同期かつブロックされないリクエストをスケジューリングします。
-- [交差オブザーバー API](/ja/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
-  - : [交差オブザーバー API](/ja/docs/Web/API/Intersection_Observer_API) を使って要素が見えるようになることを時間的に測定し、関心のある要素が可視化されたときに非同期に通知を受けることができます。
+- [交差オブザーバー API](/ja/docs/Web/API/Intersection_Observer_API)
+  - : 交差オブザーバー API は、対象要素と祖先要素または文書の最上位の{{Glossary("viewport", "ビューポート")}}との交差状態の変化を非同期に監視できます。
+    これにより、[要素の表示時間設定](/ja/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)などの用途で、関心のある要素が表示されたときに非同期に通知を受け取れます。
 - [メディア能力 API](/ja/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API)
   - : メディアに対応しているかどうか、再生をスムーズかつ電力効率良く行うべきかどうかなど、クライアント端末のデコードおよびエンコード機能を公開し、再生に関するリアルタイムのフィードバックを提供して、適応型ストリーミングの実現とディスプレイのプロパティ情報へのアクセスを可能にします。
 - [ネットワーク情報 API](/ja/docs/Web/API/Network_Information_API)
@@ -148,7 +169,7 @@ MDN の[ウェブパフォーマンスの学習領域](/ja/docs/Learn_web_develo
 
 ### CSS
 
-- [will-change](/ja/docs/Web/CSS/Reference/Properties/will-change)
+- {{cssxref("will-change")}}
 
 ### JavaScript
 
@@ -179,7 +200,7 @@ MDN の[ウェブパフォーマンスの学習領域](/ja/docs/Learn_web_develo
   - {{glossary('CSSOM')}}
   - {{glossary('Domain sharding', 'ドメインシャーディング')}}
   - {{glossary('Effective connection type', '有効接続種別')}}
-  - {{glossary('First contentful paint')}}
+  - {{glossary('First contentful paint', 'First contentful paint (FCP)')}}
   - {{glossary('First CPU idle')}}
   - {{glossary('First paint')}}
   - {{glossary('gzip_compression', 'gzip 圧縮')}}
@@ -221,4 +242,4 @@ MDN の[ウェブパフォーマンスの学習領域](/ja/docs/Learn_web_develo
   - {{glossary('TLS')}}
   - {{glossary('Tree shaking')}}
   - {{glossary('Web performance', 'ウェブパフォーマンス')}}
-- [Firefox 開発者ツール内のパフォーマンス](https://profiler.firefox.com/docs/#/)（英語）
+- [Firefox 開発者ツール内のパフォーマンス](https://profiler.firefox.com/docs/#/)<sup>(英語)</sup>
