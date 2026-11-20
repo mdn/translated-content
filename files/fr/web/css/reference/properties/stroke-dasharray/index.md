@@ -3,7 +3,7 @@ title: Propriété CSS `stroke-dasharray`
 short-title: stroke-dasharray
 slug: Web/CSS/Reference/Properties/stroke-dasharray
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`stroke-dasharray`** définit un motif de tirets et d'espaces utilisé pour peindre le contour d'une forme [SVG](/fr/docs/Web/SVG). Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("stroke-dasharray")}} de l'élément.
@@ -35,10 +35,10 @@ stroke-dasharray: unset;
 
 ### Valeurs
 
-La valeur est une liste de valeurs `<number>`, `<length>` et / ou `<percentage>` séparées par des virgules et/ou des espaces blancs qui définissent les longueurs des tirets et des espaces alternés, ou le mot-clé `none`. Si un nombre impair de valeurs est donné, l'ensemble de la valeur sera répété afin de définir un nombre pair de valeurs.
+La valeur est une liste de valeurs `<number>`, `<length>` et / ou `<percentage>` séparées par des virgules et/ou des espaces blancs qui définissent les longueurs des tirets et des espaces alternés, ou le mot-clé `none`. Si un nombre impair de valeurs est donné, l'ensemble de la valeur est répété afin de définir un nombre pair de valeurs.
 
 - `none`
-  - : Le contour sera tracé sans aucun tiret. Valeur par défaut.
+  - : Le contour est tracé sans aucun tiret. Valeur par défaut.
 
 - {{CSSxRef("&lt;number&gt;")}}
   - : Un nombre d'unités SVG, dont la taille est définie par l'espace d'unité actuel. Les valeurs négatives sont invalides.
@@ -82,7 +82,7 @@ Tout d'abord, nous configurons une forme de rectangle SVG de base. À ce rectang
 
 #### CSS
 
-Nous définissons un motif de tirets pour le contour&nbsp;: dix unités de tiret, suivies de cinq unités d'espace. Cela signifie que les espaces entre les tirets auront la moitié de la longueur des tirets eux-mêmes.
+Nous définissons un motif de tirets pour le contour&nbsp;: dix unités de tiret, suivies de cinq unités d'espace. Cela signifie que les espaces entre les tirets ont la moitié de la longueur des tirets eux-mêmes.
 
 ```css
 rect {
