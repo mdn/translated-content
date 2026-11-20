@@ -3,7 +3,7 @@ title: Propriété CSS `position-area`
 short-title: position-area
 slug: Web/CSS/Reference/Properties/position-area
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 93149226b6b94a770731d262508f5c4aa10bcbed
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`position-area`** permet de positionner un élément ancré par rapport aux bords de son élément d'ancrage associé en plaçant l'élément positionné sur une ou plusieurs cases d'une grille implicite 3x3, où l'élément d'ancrage est la case centrale.
@@ -44,7 +44,7 @@ position-area: self-x-start span-all;
 position-area: top; /* équivaut à : top span-all */
 position-area: inline-start; /* équivaut à : inline-start span-all */
 position-area: center; /* équivaut à : center center */
-position-area: span-all; /* équivaut à : center center */
+position-area: span-all; /* équivaut à : span-all span-all */
 position-area: end; /* équivaut à : end end */
 
 /* Valeurs globales */
@@ -82,7 +82,7 @@ La valeur {{CSSxRef("position-area_value", "&lt;position-area&gt;")}} est compos
 
 Par exemple&nbsp;:
 
-- Vous pouvez définir une valeur de ligne et une valeur de colonne pour placer l'élément positionné dans une seule case de la grille spécifique — par exemple, `top left` (équivalent logique `start start`) ou `bottom center` (équivalent logique `end center`) placera l'élément positionné dans la case en haut à droite ou au centre en bas.
+- Vous pouvez définir une valeur de ligne et une valeur de colonne pour placer l'élément positionné dans une seule case de la grille spécifique — par exemple, `top left` (équivalent logique `start start`) ou `bottom center` (équivalent logique `end center`) place l'élément positionné dans la case en haut à droite ou au centre en bas.
 - Vous pouvez définir une valeur de ligne ou de colonne plus une valeur `span-*` pour couvrir deux ou trois cases. La première valeur définit la ligne ou la colonne dans laquelle placer l'élément positionné, le plaçant initialement au centre, et l'autre définit les autres cases de cette ligne ou colonne à couvrir. Par exemple&nbsp;:
   - `top span-left` fait que l'élément positionné est placé au centre de la ligne du haut et s'étend sur les cases du centre et de la gauche de cette ligne.
   - `block-end span-inline-end` fait que l'élément positionné est placé au centre de la ligne de fin de bloc et s'étend sur les cases du centre et de la fin en incise de cette ligne.
@@ -117,16 +117,9 @@ Si l'élément positionné est placé dans toute autre case unique de la grille 
 
 ### Utiliser `position-area` pour positionner des fenêtres contextuelles
 
-Lors de l'utilisation de `position-area` pour positionner des [fenêtres contextuelles](/fr/docs/Web/HTML/Reference/Global_attributes/popover), soyez conscient que [les styles par défaut pour les fenêtres contextuelles <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) peuvent entrer en conflit avec la position que vous essayez d'obtenir. Les coupables habituels sont les styles par défaut pour `margin` et `inset`, il est donc conseillé de les réinitialiser&nbsp;:
+Lors de l'utilisation de `position-area` pour positionner des [fenêtres contextuelles](/fr/docs/Web/HTML/Reference/Global_attributes/popover), soyez conscient que la valeur utilisée de `auto` pour les propriétés [d'encart](/fr/docs/Glossary/Inset_properties) et {{CSSxRef("margin")}} se résout à `0` sur tout élément qui a une valeur `position-area` définie autre que `none`. Cela signifie que [les styles par défaut pour les fenêtres contextuelles <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) ne sont pas en conflit avec la position que vous essayez de définir avec `position-area`.
 
-```css
-.ma-fenetre-contextuelle {
-  margin: 0;
-  inset: auto;
-}
-```
-
-Le groupe de travail CSS examine [des moyens d'éviter d'avoir besoin de ce contournement <sup>(angl.)</sup>](https://github.com/w3c/csswg-drafts/issues/10258).
+Ce n'est pas le cas avec la fonction {{CSSxRef("anchor()")}} — voir [Utilisation de `anchor()` pour positionner des fenêtres contextuelles](/fr/docs/Web/CSS/Reference/Values/anchor#utiliser_anchor_pour_positionner_des_fenêtres_contextuelles).
 
 ## Définition formelle
 

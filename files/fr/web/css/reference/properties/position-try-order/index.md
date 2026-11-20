@@ -3,13 +3,10 @@ title: Propriété CSS `position-try-order`
 short-title: position-try-order
 slug: Web/CSS/Reference/Properties/position-try-order
 l10n:
-  sourceCommit: 7c56e442e76d472eff1c6a06eb5432bb11a47f3e
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`position-try-order`** vous permet de prioriser l'option {{CSSxRef("position-try-fallbacks")}} appliquée à un élément positionné par une ancre lorsqu'il est affiché pour la première fois, en fonction de l'option qui crée le plus d'espace autour de l'élément dans la direction donnée.
-
-> [!NOTE]
-> Il existe également une propriété raccourcie — {{CSSxRef("position-try")}}, qui peut être utilisée pour définir les valeurs de `position-try-order` et {{CSSxRef("position-try-fallbacks")}} dans une seule déclaration.
 
 ## Syntaxe
 
@@ -55,6 +52,8 @@ Le navigateur teste les options `position-try-fallbacks` disponibles pour déter
 Si aucune option de repli de position n'est disponible offrant plus de largeur/hauteur que la position initiale assignée à l'élément, aucune option de repli de position n'est appliquée, comme si `position-try-order` est définie sur `normal`.
 
 Pour des informations détaillées sur les fonctionnalités d'ancrage et l'utilisation des options de repli de position, consultez le module [de positionnement des ancres CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [des options de repli et masquage conditionnel pour le débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding).
+
+La propriété `position-try-order`, ainsi que la propriété {{CSSxRef("position-try-fallbacks")}}, peut également être définie en utilisant la propriété raccourcie {{CSSxRef("position-try")}}.
 
 ## Définition formelle
 

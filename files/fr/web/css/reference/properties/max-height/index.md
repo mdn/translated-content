@@ -3,10 +3,12 @@ title: Propriété CSS `max-height`
 short-title: max-height
 slug: Web/CSS/Reference/Properties/max-height
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`max-height`** définit la hauteur maximale d'un élément. Elle empêche la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de la propriété {{CSSxRef("height")}} de devenir supérieure à la valeur définie pour `max-height`.
+
+La valeur de `max-height` surcharge la valeur de {{CSSxRef("height")}} mais elle est surchargée par {{CSSxRef("min-height")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: max-height")}}
 
@@ -30,7 +32,7 @@ max-height: 10px;
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
     Ceci est une boîte où vous pouvez changer la hauteur maximale. <br />Cela
-    limitera la hauteur de la boîte, pouvant provoquer un débordement.
+    limite la hauteur de la boîte, pouvant provoquer un débordement.
   </div>
 </section>
 ```
@@ -44,8 +46,6 @@ max-height: 10px;
   color: white;
 }
 ```
-
-La valeur de `max-height` surcharge la valeur de {{CSSxRef("height")}} mais elle est surchargée par {{CSSxRef("min-height")}}.
 
 ## Syntaxe
 

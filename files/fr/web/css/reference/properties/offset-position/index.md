@@ -3,7 +3,7 @@ title: Propriété CSS `offset-position`
 short-title: offset-position
 slug: Web/CSS/Reference/Properties/offset-position
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`offset-position`** définit la position initiale d'un élément le long d'un chemin. Cette propriété est généralement utilisée en combinaison avec la propriété {{CSSxRef("offset-path")}} pour créer un effet de mouvement. La valeur de `offset-position` détermine où l'élément est placé initialement pour se déplacer le long d'un chemin de décalage si une fonction `offset-path` telle que {{CSSxRef("basic-shape/path", "path()")}} ne définit pas sa propre position de départ.
@@ -70,15 +70,15 @@ Dans cet exemple, la propriété {{CSSxRef("offset-path")}} est utilisée pour d
 #### HTML
 
 ```html
-<div id="wrap">
-  <div id="motion-demo"></div>
+<div id="enveloppe">
+  <div id="demo-mouvement"></div>
 </div>
 ```
 
 #### CSS
 
 ```css hidden
-#wrap {
+#enveloppe {
   width: 260px;
   height: 160px;
   border: 1px dashed black;
@@ -86,7 +86,7 @@ Dans cet exemple, la propriété {{CSSxRef("offset-path")}} est utilisée pour d
 ```
 
 ```css
-#motion-demo {
+#demo-mouvement {
   offset-path: path("M20,20 C20,100 200,0 200,100");
   offset-position: left top;
   animation: move 3000ms infinite alternate ease-in-out;
@@ -116,45 +116,45 @@ Dans cet exemple, la propriété {{CSSxRef("offset-path")}} est utilisée pour d
 Cet exemple compare visuellement les différentes positions de départ initiales d'un élément lorsque {{CSSxRef("ray()")}} est utilisé pour définir une valeur pour la propriété {{CSSxRef("offset-path")}}. Le numéro à l'intérieur de la boîte de l'élément indique l'élément auquel le CSS est appliqué ainsi que le point d'ancrage de l'élément.
 
 ```html hidden
-<div class="wrap">
-  <div class="box">0</div>
-  <div class="box box0">0</div>
+<div class="enveloppe">
+  <div class="boite">0</div>
+  <div class="boite boite0">0</div>
   <pre>
     offset-position: normal;
     /* Aucun offset-path défini */
   </pre>
 </div>
 
-<div class="wrap">
-  <div class="box">0</div>
-  <div class="box box1">1</div>
+<div class="enveloppe">
+  <div class="boite">0</div>
+  <div class="boite boite1">1</div>
   <pre>
     offset-position: normal;
     offset-path: ray(0deg);
   </pre>
 </div>
 
-<div class="wrap">
-  <div class="box">0</div>
-  <div class="box box2">2</div>
+<div class="enveloppe">
+  <div class="boite">0</div>
+  <div class="boite boite2">2</div>
   <pre>
     offset-position: auto;
     offset-path: ray(0deg);
   </pre>
 </div>
 
-<div class="wrap">
-  <div class="box">0</div>
-  <div class="box box3">3</div>
+<div class="enveloppe">
+  <div class="boite">0</div>
+  <div class="boite boite3">3</div>
   <pre>
     offset-position: left top;
     offset-path: ray(0deg);
   </pre>
 </div>
 
-<div class="wrap">
-  <div class="box">0</div>
-  <div class="box box4">4</div>
+<div class="enveloppe">
+  <div class="boite">0</div>
+  <div class="boite boite4">4</div>
   <pre>
     offset-position: 30% 70%;
     offset-path: ray(120deg);
@@ -163,7 +163,7 @@ Cet exemple compare visuellement les différentes positions de départ initiales
 ```
 
 ```css hidden
-.wrap {
+.enveloppe {
   position: relative;
   width: 80vw;
   height: 120px;
@@ -179,7 +179,7 @@ pre {
   line-height: 1em;
 }
 
-.box {
+.boite {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,13 +187,13 @@ pre {
   height: 50px;
 }
 
-.box + .box {
+.boite + .boite {
   opacity: 1;
 }
 ```
 
 ```css
-.box {
+.boite {
   background-color: green;
   border-top: 6px dashed white;
   background-clip: border-box;
@@ -204,26 +204,26 @@ pre {
   color: white;
 }
 
-.box0 {
+.boite0 {
   offset-position: normal;
 }
 
-.box1 {
+.boite1 {
   offset-position: normal;
   offset-path: ray(0deg);
 }
 
-.box2 {
+.boite2 {
   offset-position: auto;
   offset-path: ray(0deg);
 }
 
-.box3 {
+.boite3 {
   offset-position: left top;
   offset-path: ray(0deg);
 }
 
-.box4 {
+.boite4 {
   offset-position: 30% 70%;
   offset-path: ray(120deg);
 }

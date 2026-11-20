@@ -3,7 +3,7 @@ title: Propriété CSS `math-shift`
 short-title: math-shift
 slug: Web/CSS/Reference/Properties/math-shift
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`math-shift`** indique si les exposants à l'intérieur des formules MathML doivent être relevés par un décalage normal ou compact.
