@@ -3,7 +3,7 @@ title: Propriété CSS `r`
 short-title: r
 slug: Web/CSS/Reference/Properties/r
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`r`** définit le rayon d'un cercle. Elle ne peut être utilisée qu'avec l'élément SVG {{SVGElement("circle")}}. Si elle est présente, elle remplace l'attribut {{SVGAttr("r")}} du cercle.
