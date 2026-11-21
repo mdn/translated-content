@@ -46,7 +46,7 @@ Incluye más información de apoyo según sea necesario, pero no demasiada; no m
 
 ## Véase también
 
-Incluye una lista de enlaces que apunten a información técnica y general más detallada. Por ejemplo, puedes añadir enlaces a artículos de Wikipedia, otras entradas de enciclopedias, tutoriales técnicos y especificaciones. Para obtener pautas sobre cómo añadir esta lista de enlaces, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#seccion_vease_tambien) en la _Guía de estilo de escritura_.
+Incluye una lista de enlaces que apunten a información técnica y general más detallada. Por ejemplo, puedes añadir enlaces a artículos de Wikipedia, otras entradas de enciclopedias, tutoriales técnicos y especificaciones. Para obtener pautas sobre cómo añadir esta lista de enlaces, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#sección_véase_también) en la _Guía de estilo de escritura_.
 
 - enlace1
 - enlace2

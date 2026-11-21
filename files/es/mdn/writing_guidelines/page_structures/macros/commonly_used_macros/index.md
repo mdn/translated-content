@@ -164,7 +164,7 @@ La macro [`PreviousNext`](https://github.com/mdn/rari/blob/main/crates/rari-doc/
 - [`EmbedLiveSample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_live_sample.rs) te permite incrustar el resultado de un ejemplo de código en una página, como se describe en [Ejemplos en vivo](/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples).
 - [`LiveSampleLink`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/live_sample_link.rs) crea un enlace a una página que contiene el resultado de un ejemplo de código, tal como se describe en [Ejemplos en vivo](/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples).
 - [`EmbedGHLiveSample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_gh_live_sample.rs) permite incrustar ejemplos en vivo desde páginas de GitHub.
-  Puedes obtener más información en [Ejemplos en vivo de GitHub](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#github_live_samples).
+  Puedes obtener más información en [Ejemplos en vivo de GitHub](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#ejemplos_en_vivo_de_github).
 
 ## Añadir formato de propósito general
 
@@ -269,5 +269,5 @@ Las siguientes macros se incluyen en todas las páginas de referencia, pero tamb
 - [Macros de barra lateral](/es/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
 - [Macros de estado de características](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status)
 - [Otras macros](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other) (macros poco usadas u obsoletas)
-- [Plantillas de página](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types#page_templates)
-- [Componentes de página](/es/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
+- [Plantillas de página](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types#plantillas_de_página)
+- [Componentes de página](/es/docs/MDN/Writing_guidelines/Writing_style_guide#componentes_de_la_página)

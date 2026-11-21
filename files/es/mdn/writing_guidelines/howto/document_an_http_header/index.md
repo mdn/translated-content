@@ -30,7 +30,7 @@ Este artículo explica cómo crear una nueva página de referencia para una cabe
 
 ## Paso 4 – Escribe el contenido
 
-- Puedes comenzar desde nuestra [plantilla de página de cabecera HTTP](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types#http_header_reference_page) o usar una estructura copiada de uno de los documentos de cabeceras existentes que encontraste en el paso 2. Tú eliges.
+- Puedes comenzar desde nuestra [plantilla de página de cabecera HTTP](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types#página_de_referencia_de_cabecera_http) o usar una estructura copiada de uno de los documentos de cabeceras existentes que encontraste en el paso 2. Tú eliges.
 - Escribe sobre la nueva cabecera HTTP.
 - Asegúrate de incluir estas secciones:
   - Texto introductorio donde la primera oración mencione el nombre de la cabecera (en **negrita**) y resuma su propósito.

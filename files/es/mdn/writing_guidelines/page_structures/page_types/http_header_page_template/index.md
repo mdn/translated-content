@@ -39,7 +39,7 @@ l10n:
 > - **page-type**
 >   - : Para encabezados HTTP, debe ser `http-header`.
 > - **status**
->   - : Indicadores que describen el estado de esta funcionalidad. Es un arreglo que puede contener uno o más de los siguientes valores: `experimental`, `deprecated`, `non-standard`. Esta clave no debe configurarse manualmente: se establece automáticamente según los valores en los datos de compatibilidad de navegadores. Consulta ["Cómo se añaden o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
+>   - : Indicadores que describen el estado de esta funcionalidad. Es un arreglo que puede contener uno o más de los siguientes valores: `experimental`, `deprecated`, `non-standard`. Esta clave no debe configurarse manualmente: se establece automáticamente según los valores en los datos de compatibilidad de navegadores. Consulta ["Cómo se añaden o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características).
 > - **browser-compat**
 >   - : Reemplaza el valor de marcador de posición `path.to.feature.NombreDelEncabezado` con la cadena de consulta para el encabezado en el <a href="https://github.com/mdn/browser-compat-data">repositorio de datos de compatibilidad de navegadores</a>.
 >     La cadena de herramientas usa automáticamente esta clave para rellenar la sección de compatibilidad (reemplazando la macro `\{{Compat}}`).
@@ -61,7 +61,7 @@ l10n:
 >   Si es experimental y está oculto detrás de una preferencia en Firefox, también debes completar una entrada en la página [Funcionalidades experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
 > - `\{{Non-standard_Header}}` — genera un banner de **No estándar** que indica que la funcionalidad no forma parte de ninguna especificación.
 >
-> No proporciones macros de encabezado de estado manualmente. Consulta la sección ["Cómo se añaden o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) para añadir estos estados a la página.
+> No proporciones macros de encabezado de estado manualmente. Consulta la sección ["Cómo se añaden o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características) para añadir estos estados a la página.
 >
 > Justo después de este bloque de notas se muestran ejemplos de los banners **Experimental**, **Obsoleto** y **No estándar**.
 >
@@ -193,7 +193,7 @@ Los desarrolladores pueden establecer y obtener encabezados HTTP usando `fetch()
 
 ## Véase también
 
-Incluye enlaces a páginas de referencia y guías relacionadas con el encabezado HTTP actual. Para más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#seccion_vease_tambien) en la _Guía de estilo de escritura_.
+Incluye enlaces a páginas de referencia y guías relacionadas con el encabezado HTTP actual. Para más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#sección_véase_también) en la _Guía de estilo de escritura_.
 Puedes enlazar a estados de respuesta relevantes como `\{{HTTPStatus("123", "123 Motivo")}}` y encabezados como `\{{HTTPHeader("Nombre-Del-Encabezado")}}`. Puedes agrupar estados y encabezados relacionados en un solo elemento de la lista para mayor brevedad.
 
 - enlace1

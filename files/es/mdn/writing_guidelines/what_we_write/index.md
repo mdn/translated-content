@@ -98,7 +98,7 @@ Algunos ejemplos de temas inapropiados para MDN Web Docs son:
 - Tecnología que no está expuesta a la web y es específica de un navegador.
 - Tecnología no relacionada con la web.
 - Documentación para usuarios finales. Para los productos Mozilla, por ejemplo, dicha documentación pertenece al [sitio de soporte de Mozilla](https://support.mozilla.org).
-- Enlaces externos de autoenlace o autopromoción. Consulta nuestra [guía de estilo de escritura](/es/docs/MDN/Writing_guidelines/Writing_style_guide#external_links) antes de añadir un enlace externo.
+- Enlaces externos de autoenlace o autopromoción. Consulta nuestra [guía de estilo de escritura](/es/docs/MDN/Writing_guidelines/Writing_style_guide#enlaces_externos) antes de añadir un enlace externo.
 
 ### Cuándo eliminamos documentación
 
