@@ -3,7 +3,7 @@ title: "Tutorial de Django Parte 8: Autenticación y permisos de usuario"
 short-title: "8: Autenticación y permisos"
 slug: Learn_web_development/Extensions/Server-side/Django/Authentication
 l10n:
-  sourceCommit: f3f56081b4d400cdfa28d80a881b6be325774e5e
+  sourceCommit: d0d002817fbb057e80a4f7b8670b09cc80250516
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}
@@ -47,7 +47,7 @@ La autenticación se habilitó automáticamente cuando [creamos el sitio web esq
 > [!NOTE]
 > Toda la configuración necesaria se hizo por nosotros cuando creamos la aplicación con el comando `django-admin startproject`. Las tablas de la base de datos para los usuarios y los permisos de los modelos se crearon la primera vez que ejecutamos `python manage.py migrate`.
 
-La configuración se establece en las secciones `INSTALLED_APPS` y `MIDDLEWARE` del archivo del proyecto (**django-locallibrary-tutorial/locallibrary/settings.py**), como se muestra a continuación:
+La configuración se establece en las secciones `INSTALLED_APPS` y `MIDDLEWARE` del archivo del proyecto (**/locallibrary/settings.py**), como se muestra a continuación:
 
 ```python
 INSTALLED_APPS = [
@@ -102,7 +102,7 @@ Nuestro superusuario ya está autenticado y tiene todos los permisos, así que n
 > user.save()
 > ```
 >
-> Para más información, consulta [Using a custom user model when starting a project](https://docs.djangoproject.com/en/5.0/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) (documentación de Django).
+> Para más información, consulta [Using a custom user model when starting a project](https://docs.djangoproject.com/en/6.1/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) (documentación de Django).
 
 A continuación, primero crearemos un grupo y luego un usuario. Aunque todavía no tenemos ningún permiso que agregar para los miembros de nuestra biblioteca, si lo necesitamos más adelante, será mucho más fácil agregarlo una vez al grupo que individualmente a cada miembro.
 
@@ -156,7 +156,7 @@ En esta sección mostramos cómo integrar el sistema por defecto en el sitio web
 
 ### URLs del proyecto
 
-Agrega lo siguiente al final del archivo urls.py del proyecto (**django-locallibrary-tutorial/locallibrary/urls.py**):
+Agrega lo siguiente al final del archivo de URL del proyecto (**/locallibrary/urls.py**):
 
 ```python
 # Agrega las URLs de autenticación del sitio de Django (para inicio de sesión, cierre de sesión, administración de contraseñas)
@@ -204,7 +204,7 @@ Para este sitio, pondremos nuestras páginas HTML en el directorio **templates/r
 > Tu estructura de carpetas debería verse ahora como la siguiente:
 >
 > ```plain
-> django-locallibrary-tutorial/   # Carpeta de nivel superior del proyecto Django
+> django_local_library/   # Carpeta de nivel superior del proyecto Django
 >   catalog/
 >   locallibrary/
 >   templates/
@@ -212,22 +212,14 @@ Para este sitio, pondremos nuestras páginas HTML en el directorio **templates/r
 > ```
 
 Para hacer visible el directorio **templates** al cargador de plantillas, necesitamos agregarlo a la ruta de búsqueda de plantillas.
-Abre la configuración del proyecto (**/django-locallibrary-tutorial/locallibrary/settings.py**).
-
-Luego importa el módulo `os` (agrega la siguiente línea cerca de la parte superior del archivo si aún no está presente).
-
-```python
-import os # necesario para el siguiente código
-```
-
-Actualiza la línea `'DIRS'` de la sección `TEMPLATES` como se muestra:
+Abre la configuración del proyecto (**/locallibrary/settings.py**) y actualiza la línea `'DIRS'` de la sección `TEMPLATES` como se muestra:
 
 ```python
     # …
     TEMPLATES = [
       {
        # …
-       'DIRS': [os.path.join(BASE_DIR, 'templates')],
+       'DIRS': [BASE_DIR / 'templates'],
        'APP_DIRS': True,
        # …
 ```
@@ -237,7 +229,7 @@ Actualiza la línea `'DIRS'` de la sección `TEMPLATES` como se muestra:
 > [!WARNING]
 > Las plantillas de autenticación que se ofrecen en este artículo son una versión muy básica, ligeramente modificada, de las plantillas de inicio de sesión de demostración de Django. ¡Es posible que necesites personalizarlas para tu propio uso!
 
-Crea un nuevo archivo HTML llamado **/django-locallibrary-tutorial/templates/registration/login.html** y dale el siguiente contenido:
+Crea un nuevo archivo HTML llamado **/templates/registration/login.html** y dale el siguiente contenido:
 
 ```django
 {% extends "base_generic.html" %}
@@ -287,7 +279,7 @@ Navega de vuelta a la página de inicio de sesión (`http://127.0.0.1:8000/accou
 
 Si inicias sesión con credenciales válidas, serás redirigido a otra página (por defecto será `http://127.0.0.1:8000/accounts/profile/`). El problema es que, por defecto, Django espera que después de iniciar sesión quieras ser llevado a una página de perfil, lo cual puede ser el caso o no. Como todavía no has definido esta página, ¡obtendrás otro error!
 
-Abre la configuración del proyecto (**/django-locallibrary-tutorial/locallibrary/settings.py**) y agrega el siguiente texto al final. Ahora, cuando inicies sesión, deberías ser redirigido a la página de inicio del sitio por defecto.
+Abre la configuración del proyecto (**/locallibrary/settings.py**) y agrega el siguiente texto al final. Ahora, cuando inicies sesión, deberías ser redirigido a la página de inicio del sitio por defecto.
 
 ```python
 # Redirige a la URL de inicio después del inicio de sesión (por defecto redirige a /accounts/profile/)
@@ -296,10 +288,10 @@ LOGIN_REDIRECT_URL = '/'
 
 ### Plantilla de cierre de sesión
 
-Si navegas a la URL de cierre de sesión (`http://127.0.0.1:8000/accounts/logout/`) obtendrás un error, porque Django 5 no permite cerrar sesión usando `GET`, solo `POST`.
+Si navegas a la URL de cierre de sesión (`http://127.0.0.1:8000/accounts/logout/`) obtendrás un error, porque Django no permite cerrar sesión usando `GET`, solo `POST`.
 En un momento agregaremos un formulario que puedas usar para cerrar sesión, pero primero crearemos la página a la que se lleva a los usuarios después de cerrar sesión.
 
-Crea y abre **/django-locallibrary-tutorial/templates/registration/logged_out.html**. Copia en él el siguiente texto:
+Crea y abre **/templates/registration/logged_out.html**. Copia en él el siguiente texto:
 
 ```django
 {% extends "base_generic.html" %}
@@ -322,26 +314,23 @@ Las siguientes plantillas pueden usarse como punto de partida.
 
 #### Formulario de restablecimiento de contraseña
 
-Este es el formulario usado para obtener la dirección de correo electrónico del usuario (para enviar el correo de restablecimiento de contraseña). Crea **/django-locallibrary-tutorial/templates/registration/password_reset_form.html**, y dale el siguiente contenido:
+Este es el formulario usado para obtener la dirección de correo electrónico del usuario (para enviar el correo de restablecimiento de contraseña). Crea **/templates/registration/password_reset_form.html**, y dale el siguiente contenido:
 
 ```django
 {% extends "base_generic.html" %}
 
 {% block content %}
   <form action="" method="post">
-  {% csrf_token %}
-  {% if form.email.errors %}
-    \{{ form.email.errors }}
-  {% endif %}
-      <p>\{{ form.email }}</p>
-    <input type="submit" class="btn btn-default btn-lg" value="Restablecer contraseña">
+    {% csrf_token %}
+    \{{ form }}
+    <input type="submit" class="btn btn-primary btn-lg" value="Restablecer contraseña">
   </form>
 {% endblock %}
 ```
 
 #### Restablecimiento de contraseña enviado
 
-Este formulario se muestra después de haber recogido tu dirección de correo electrónico. Crea **/django-locallibrary-tutorial/templates/registration/password_reset_done.html**, y dale el siguiente contenido:
+Este formulario se muestra después de haber recogido tu dirección de correo electrónico. Crea **/templates/registration/password_reset_done.html**, y dale el siguiente contenido:
 
 ```django
 {% extends "base_generic.html" %}
@@ -353,7 +342,7 @@ Este formulario se muestra después de haber recogido tu dirección de correo el
 
 #### Correo electrónico de restablecimiento de contraseña
 
-Esta plantilla proporciona el texto del correo HTML que contiene el enlace de restablecimiento que enviaremos a los usuarios. Crea **/django-locallibrary-tutorial/templates/registration/password_reset_email.html**, y dale el siguiente contenido:
+Esta plantilla proporciona el texto del correo HTML que contiene el enlace de restablecimiento que enviaremos a los usuarios. Crea **/templates/registration/password_reset_email.html**, y dale el siguiente contenido:
 
 ```django
 Alguien solicitó restablecer la contraseña del correo \{{ email }}. Sigue el siguiente enlace:
@@ -362,7 +351,7 @@ Alguien solicitó restablecer la contraseña del correo \{{ email }}. Sigue el s
 
 #### Confirmación de restablecimiento de contraseña
 
-Esta página es donde ingresas tu nueva contraseña después de hacer clic en el enlace del correo de restablecimiento de contraseña. Crea **/django-locallibrary-tutorial/templates/registration/password_reset_confirm.html**, y dale el siguiente contenido:
+Esta página es donde ingresas tu nueva contraseña después de hacer clic en el enlace del correo de restablecimiento de contraseña. Crea **/templates/registration/password_reset_confirm.html**, y dale el siguiente contenido:
 
 ```django
 {% extends "base_generic.html" %}
@@ -371,23 +360,9 @@ Esta página es donde ingresas tu nueva contraseña después de hacer clic en el
     {% if validlink %}
         <p>Ingresa (y confirma) tu nueva contraseña.</p>
         <form action="" method="post">
-        {% csrf_token %}
-            <table>
-                <tr>
-                    <td>\{{ form.new_password1.errors }}
-                        <label for="id_new_password1">Nueva contraseña:</label></td>
-                    <td>\{{ form.new_password1 }}</td>
-                </tr>
-                <tr>
-                    <td>\{{ form.new_password2.errors }}
-                        <label for="id_new_password2">Confirmar contraseña:</label></td>
-                    <td>\{{ form.new_password2 }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="Cambiar mi contraseña"></td>
-                </tr>
-            </table>
+            {% csrf_token %}
+            \{{ form }}
+            <input type="submit" value="Cambiar mi contraseña">
         </form>
     {% else %}
         <h1>Error al restablecer la contraseña</h1>
@@ -398,7 +373,7 @@ Esta página es donde ingresas tu nueva contraseña después de hacer clic en el
 
 #### Restablecimiento de contraseña completado
 
-Esta es la última plantilla de restablecimiento de contraseña, que se muestra para notificarte cuando el restablecimiento de contraseña tuvo éxito. Crea **/django-locallibrary-tutorial/templates/registration/password_reset_complete.html**, y dale el siguiente contenido:
+Esta es la última plantilla de restablecimiento de contraseña, que se muestra para notificarte cuando el restablecimiento de contraseña tuvo éxito. Crea **/templates/registration/password_reset_complete.html**, y dale el siguiente contenido:
 
 ```django
 {% extends "base_generic.html" %}
@@ -419,13 +394,18 @@ Podrás probar la funcionalidad de restablecimiento de contraseña desde el enla
 Ten en cuenta que todavía no podrás probar el cierre de sesión de la cuenta, porque las solicitudes de cierre de sesión deben enviarse como `POST` en lugar de `GET`.
 
 > [!NOTE]
-> El sistema de restablecimiento de contraseña requiere que tu sitio web admita el envío de correo, lo cual está fuera del alcance de este artículo, así que esta parte **todavía no funcionará**. Para poder probarlo, agrega la siguiente línea al final de tu archivo settings.py. Esto registra en la consola cualquier correo enviado (para que puedas copiar el enlace de restablecimiento de contraseña desde la consola).
+> El sistema de restablecimiento de contraseña requiere que tu sitio web admita el envío de correo, lo cual está fuera del alcance de este artículo.
+> Para hacer pruebas, el archivo de configuración que crea `startproject` ya incluye la siguiente configuración, que registra en la consola cualquier correo enviado (para que puedas copiar el enlace de restablecimiento de contraseña desde la consola):
 >
 > ```python
-> EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+> MAILERS = {
+>     'default': {
+>         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
+>     },
+> }
 > ```
 >
-> Para más información, consulta [Sending email](https://docs.djangoproject.com/en/5.0/topics/email/) (documentación de Django).
+> Para más información, consulta [Sending email](https://docs.djangoproject.com/en/6.1/topics/email/) (documentación de Django).
 
 ## Pruebas con usuarios autenticados
 
@@ -437,11 +417,14 @@ Puedes obtener información sobre el usuario que actualmente inició sesión en 
 
 Normalmente primero probarás con la variable de plantilla `\{{ user.is_authenticated }}` para determinar si el usuario puede ver cierto contenido. Para demostrarlo, a continuación actualizaremos nuestra barra lateral para mostrar un enlace de inicio de sesión ("Login") si el usuario cerró sesión, y un enlace de cierre de sesión ("Logout") si inició sesión.
 
-Abre la plantilla base (**/django-locallibrary-tutorial/catalog/templates/base_generic.html**) y copia el siguiente texto en el bloque `sidebar`, justo antes de la etiqueta de plantilla `endblock`.
+Abre la plantilla base (**/catalog/templates/base_generic.html**) y agrega la siguiente lista nueva al bloque `sidebar`, justo después de la lista `<ul class="sidebar-nav">` existente:
 
 ```django
   <ul class="sidebar-nav">
     …
+  </ul>
+
+  <ul class="sidebar-nav">
    {% if user.is_authenticated %}
      <li>Usuario: \{{ user.get_username }}</li>
      <li>
@@ -453,7 +436,6 @@ Abre la plantilla base (**/django-locallibrary-tutorial/catalog/templates/base_g
    {% else %}
      <li><a href="{% url 'login' %}?next=\{{ request.path }}">Iniciar sesión</a></li>
    {% endif %}
-    …
   </ul>
 ```
 
@@ -461,10 +443,10 @@ Como puedes ver, usamos las etiquetas de plantilla `if` / `else` / `endif` para 
 
 Creamos la URL del enlace de inicio de sesión usando la etiqueta de plantilla `url` y el nombre de la configuración de URL `login`. Fíjate también cómo agregamos `?next=\{{ request.path }}` al final de la URL. Lo que esto hace es agregar un parámetro de URL `next` que contiene la dirección (URL) de la página _actual_, al final de la URL enlazada. Después de que el usuario haya iniciado sesión con éxito, la vista usará este valor de `next` para redirigir al usuario de vuelta a la página donde hizo clic por primera vez en el enlace de inicio de sesión.
 
-El código de la plantilla de cierre de sesión es distinto, porque desde Django 5, para cerrar sesión debes hacer `POST` a la URL `admin:logout`, usando un formulario con un botón.
+El código de la plantilla de cierre de sesión es distinto, porque en Django debes hacer `POST` a la URL `logout`, usando un formulario con un botón.
 Por defecto esto se renderizaría como un botón, pero puedes darle estilo para que se muestre como un enlace.
 En este ejemplo estamos usando _Bootstrap_, así que hacemos que el botón se vea como un enlace aplicando `class="btn btn-link"`.
-También necesitas agregar los siguientes estilos a **/django-locallibrary-tutorial/catalog/static/css/styles.css** para posicionar correctamente el enlace de cierre de sesión junto a los demás enlaces de la barra lateral:
+También necesitas agregar los siguientes estilos a **/catalog/static/css/styles.css** para posicionar correctamente el enlace de cierre de sesión junto a los demás enlaces de la barra lateral:
 
 ```css
 #logout-form {
@@ -511,7 +493,12 @@ class MyView(LoginRequiredMixin, View):
     redirect_field_name = 'redirect_to'
 ```
 
-Para más detalles, consulta la [documentación de Django](https://docs.djangoproject.com/en/5.0/topics/auth/default/#limiting-access-to-logged-in-users).
+> [!NOTE]
+> Si la mayor parte de tu sitio solo debe estar disponible para usuarios que hayan iniciado sesión, puedes añadir [`LoginRequiredMiddleware`](https://docs.djangoproject.com/en/6.1/ref/middleware/#django.contrib.auth.middleware.LoginRequiredMiddleware) a la lista `MIDDLEWARE` de tu configuración (después de `AuthenticationMiddleware`).
+> Así se exige iniciar sesión en todas las vistas de forma predeterminada, y después marcas las vistas públicas con el decorador [`login_not_required`](https://docs.djangoproject.com/en/6.1/topics/auth/default/#django.contrib.auth.decorators.login_not_required).
+> No lo usamos en _LocalLibrary_ porque la mayoría de las vistas de la biblioteca deben ser públicas.
+
+Para más detalles, consulta [Limiting access to logged-in users](https://docs.djangoproject.com/en/6.1/topics/auth/default/#limiting-access-to-logged-in-users) (documentación de Django).
 
 ## Ejemplo: listado de los libros del usuario actual
 
@@ -530,7 +517,7 @@ from django.conf import settings
 ```
 
 A continuación, agrega el campo `borrower` al modelo `BookInstance`, estableciendo el modelo de usuario para la clave como el valor de la configuración `AUTH_USER_MODEL`.
-Como no hemos sobrescrito esta configuración con un [modelo de usuario personalizado](https://docs.djangoproject.com/en/5.0/topics/auth/customizing/), esto corresponde al modelo `User` predeterminado de `django.contrib.auth.models`.
+Como no hemos sobrescrito esta configuración con un [modelo de usuario personalizado](https://docs.djangoproject.com/en/6.1/topics/auth/customizing/), esto corresponde al modelo `User` predeterminado de `django.contrib.auth.models`.
 
 ```python
 borrower = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
@@ -549,7 +536,7 @@ borrower = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL
 > ```
 
 Ya que estamos aquí, vamos a agregar una propiedad que podamos llamar desde nuestras plantillas para saber si una instancia de libro en particular está atrasada.
-Aunque podríamos calcular esto en la propia plantilla, usar una [propiedad](https://docs.python.org/3/library/functions.html#property) (`property`) como se muestra abajo será mucho más eficiente.
+Aunque podríamos calcular esto en la propia plantilla, usar una [propiedad](https://docs.python.org/3/builtins/functions.html#property) (`property`) como se muestra abajo será mucho más eficiente.
 
 Agrega esto en algún lugar cerca de la parte superior del archivo:
 
@@ -603,7 +590,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 ### Prestar algunos libros
 
-Ahora que es posible prestar libros a un usuario específico, ve y presta varios registros `BookInstance`. Establece su campo `borrowed` a tu usuario de prueba, coloca el `status` en "On loan", y establece fechas de vencimiento tanto en el futuro como en el pasado.
+Ahora que es posible prestar libros a un usuario específico, ve y presta varios registros `BookInstance`. Establece su campo `borrower` a tu usuario de prueba, coloca el `status` en "On loan", y establece fechas de vencimiento tanto en el futuro como en el pasado.
 
 > [!NOTE]
 > No detallaremos el proceso paso a paso, ¡ya que sabes cómo usar el sitio de administración!
@@ -626,12 +613,12 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
     def get_queryset(self):
         return (
             BookInstance.objects.filter(borrower=self.request.user)
-            .filter(status__exact='o')
+            .filter(status__exact=BookInstance.LoanStatus.ON_LOAN)
             .order_by('due_back')
         )
 ```
 
-Para restringir nuestra consulta solo a los objetos `BookInstance` del usuario actual, reimplementamos `get_queryset()` como se muestra arriba. Ten en cuenta que "o" es el código almacenado para "on loan" (en préstamo), y ordenamos por la fecha `due_back` para que los elementos más antiguos se muestren primero.
+Para restringir nuestra consulta solo a los objetos `BookInstance` del usuario actual, reimplementamos `get_queryset()` como se muestra arriba. Ten en cuenta que `BookInstance.LoanStatus.ON_LOAN` es el código almacenado para "on loan" (en préstamo), y ordenamos por la fecha `due_back` para que los elementos más antiguos se muestren primero.
 
 ### Configuración de URL para libros prestados
 
@@ -678,7 +665,7 @@ Con el servidor de desarrollo en ejecución, ahora deberías poder ver la lista 
 
 El último paso es agregar un enlace a esta nueva página en la barra lateral. Lo pondremos en la misma sección donde mostramos otra información para el usuario que inició sesión.
 
-Abre la plantilla base (**/django-locallibrary-tutorial/catalog/templates/base_generic.html**) y agrega la línea "My Borrowed" a la barra lateral, en la posición que se muestra abajo.
+Abre la plantilla base (**/catalog/templates/base_generic.html**) y agrega la línea "My borrowed" a la barra lateral, en la posición que se muestra abajo.
 
 ```django
  <ul class="sidebar-nav">
@@ -688,7 +675,7 @@ Abre la plantilla base (**/django-locallibrary-tutorial/catalog/templates/base_g
    <li><a href="{% url 'my-borrowed' %}">Mis libros prestados</a></li>
 
    <li>
-     <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+     <form id="logout-form" method="post" action="{% url 'logout' %}">
        {% csrf_token %}
        <button type="submit" class="btn btn-link">Cerrar sesión</button>
      </form>
@@ -701,7 +688,7 @@ Abre la plantilla base (**/django-locallibrary-tutorial/catalog/templates/base_g
 
 ### ¿Cómo se ve?
 
-Cuando cualquier usuario inicia sesión, verá el enlace _My Borrowed_ (Mis libros prestados) en la barra lateral, y la lista de libros que se muestra abajo (¡el primer libro no tiene fecha de vencimiento, lo cual es un error que esperamos corregir en un tutorial posterior!).
+Cuando cualquier usuario inicia sesión, verá el enlace _My borrowed_ (Mis libros prestados) en la barra lateral, y la lista de libros que se muestra abajo (¡el primer libro no tiene fecha de vencimiento, lo cual es un error que esperamos corregir en un tutorial posterior!).
 
 ![Biblioteca: libros prestados por usuario](library_borrowed_by_user.png)
 
@@ -811,8 +798,8 @@ En nuestro próximo artículo, veremos cómo puedes usar los formularios de Djan
 
 ## Véase también
 
-- [User authentication in Django](https://docs.djangoproject.com/en/5.0/topics/auth/) (documentación de Django)
-- [Using the (default) Django authentication system](https://docs.djangoproject.com/en/5.0/topics/auth/default/) (documentación de Django)
-- [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/5.0/topics/class-based-views/intro/#decorating-class-based-views) (documentación de Django)
+- [User authentication in Django](https://docs.djangoproject.com/en/6.1/topics/auth/) (documentación de Django)
+- [Using the (default) Django authentication system](https://docs.djangoproject.com/en/6.1/topics/auth/default/) (documentación de Django)
+- [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/6.1/topics/class-based-views/intro/#decorating-class-based-views) (documentación de Django)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}
