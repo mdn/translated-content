@@ -11,7 +11,7 @@ A interface `File` provê informações sobre arquivos e permite ao JavaScript a
 
 São geralmente recuperados a partir de um objeto {{domxref("FileList")}} que é retornado como resultado da seleção, pelo usuário, de arquivos através do elemento {{ HTMLElement("input") }}, a partir do objeto {{domxref("DataTransfer")}} utilizado em operações de arrastar e soltar, ou a partir da API `mozGetAsFile()` em um {{ domxref("HTMLCanvasElement") }}. Em Gecko, códigos com privilégiios podem criar objetos File representando qualquer arquivo local sem a intereção do usuário (veja [Implementation notes](#implementation_notes) para mais informações.)
 
-Um objeto File é um tipo específico de {{domxref("Blob")}}, e podem ser utilizados em qualquer contexto que um Blob pode. Em particular, {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, e {{domxref("XMLHttpRequest", "", "send()")}} aceitam ambos, Blobs e Files.
+Um objeto File é um tipo específico de {{domxref("Blob")}}, e podem ser utilizados em qualquer contexto que um Blob pode. Em particular, {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, e {{domxref("XMLHttpRequest", "", "#send()")}} aceitam ambos, Blobs e Files.
 
 Veja [Using files from web applications](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications) (usando arquivos através de uma aplicação web) para mais informações e exemplos.
 
