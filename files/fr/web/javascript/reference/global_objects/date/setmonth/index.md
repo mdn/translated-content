@@ -3,7 +3,7 @@ title: "Date : méthode setMonth()"
 short-title: setMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 l10n:
-  sourceCommit: b3840f6234d24ade72a43171fd6489dd533aaf15
+  sourceCommit: 98972b1f827b7374e28aee591a73044ffd8fb758
 ---
 
 La méthode **`setMonth()`** des instances de {{JSxRef("Date")}} modifie le mois et/ou le jour du mois pour cette date selon l'heure locale.
@@ -39,7 +39,7 @@ setMonth(monthValue, dateValue)
 
 ### Valeur de retour
 
-Modifie l'objet {{JSxRef("Date")}} en place et retourne son nouveau [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide). Si un paramètre vaut `NaN` (ou d'autres valeurs qui sont [contraintes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre) en `NaN`, comme `undefined`), la date est définie sur [Date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) et `NaN` est retourné.
+Modifie l'objet {{JSxRef("Date")}} en place et retourne son nouvel [horodatage (<i lang="en">timestamp</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide). Si un paramètre vaut `NaN` (ou d'autres valeurs qui sont [contraintes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre) en `NaN`, comme `undefined`), la date est définie sur [Date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide) et `NaN` est retourné.
 
 ## Description
 
@@ -47,9 +47,9 @@ Si vous ne définissez pas le paramètre `dateValue`, la même valeur que celle 
 
 Si un paramètre que vous définissez est en dehors de la plage attendue, les autres paramètres et les informations de date dans l'objet {{JSxRef("Date")}} sont mises à jour en conséquence. Par exemple, si vous définissez 15 pour `monthValue`, l'année est incrémentée de 1, et 3 est utilisé pour le mois.
 
-Le jour du mois courant aura un impact sur le comportement de cette méthode. Conceptuellement, il ajoutera le nombre de jours donné par le jour du mois courant au premier jour du nouveau mois défini comme paramètre, pour retourner la nouvelle date. Par exemple, si la valeur courante est le 31 janvier 2016, appeler setMonth avec une valeur de 1 retournera le 2 mars 2016. Cela s'explique par le fait qu'en 2016, février avait 29 jours.
+Le jour du mois courant a un impact sur le comportement de cette méthode. Conceptuellement, il ajoute le nombre de jours donné par le jour du mois courant moins 1 au premier jour du nouveau mois défini comme paramètre, pour retourner la nouvelle date. Par exemple, si la valeur courante est le 31 janvier 2016, appeler setMonth avec une valeur de 1 retourne le 2 mars 2016. Cela s'explique par le fait qu'en 2016, février a 29 jours.
 
-Comme `setMonth()` fonctionne selon l'heure locale, franchir une transition d'heure d'été (DST) peut entraîner un temps écoulé différent de celui attendu. Par exemple, si le changement de mois franchit une transition d'avance du printemps (perte d'une heure), la différence de timestamps entre la nouvelle et l'ancienne date est inférieure d'une heure à la différence nominale de jours multipliée par 24 heures. À l'inverse, franchir une transition de recul de l'automne (gain d'une heure) ajoute une heure supplémentaire. Si vous devez ajuster la date d'une durée fixe, envisagez d'utiliser {{JSxRef("Date/setUTCMonth", "setUTCMonth()")}} ou {{JSxRef("Date/setTime", "setTime()")}}.
+Comme `setMonth()` fonctionne selon l'heure locale, franchir une transition d'heure d'été (DST) peut entraîner un temps écoulé différent de celui attendu. Par exemple, si le changement de mois franchit une transition d'avance du printemps (perte d'une heure), la différence d'horodatages entre la nouvelle et l'ancienne date est inférieure d'une heure à la différence nominale de jours multipliée par 24 heures. À l'inverse, franchir une transition de recul de l'automne (gain d'une heure) ajoute une heure supplémentaire. Si vous devez ajuster la date d'une durée fixe, envisagez d'utiliser {{JSxRef("Date/setUTCMonth", "setUTCMonth()")}} ou {{JSxRef("Date/setTime", "setTime()")}}.
 
 Si la nouvelle heure locale tombe dans une transition de décalage, l'heure exacte est déterminée en utilisant le même comportement que l'option [`disambiguation: "compatible"`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#ambiguïté_et_écarts_entre_lheure_locale_et_lheure_utc) de `Temporal`. C'est-à-dire, si l'heure locale correspond à deux instants, le plus tôt est choisi&nbsp;; si l'heure locale n'existe pas (il y a un écart), on avance de la durée de l'écart.
 

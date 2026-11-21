@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-La méthode **`valueOf()`** des instances de {{JSxRef("Date")}} retourne le nombre de millisecondes pour cette date depuis [l'époch](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), qui est définie comme le passage à minuit du 1er janvier 1970, UTC.
+La méthode **`valueOf()`** des instances de {{JSxRef("Date")}} retourne le nombre de millisecondes pour cette date depuis [l'epoch](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide), qui est définie comme le passage à minuit du 1er janvier 1970, UTC.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.valueOf()")}}
 
@@ -34,13 +34,13 @@ Aucun.
 
 ### Valeur de retour
 
-Un nombre représentant le [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), en millisecondes, de cette date. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+Un nombre représentant [l'horodatage (<i lang="en">timestamp</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide), en millisecondes, de cette date. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
 ## Description
 
 La méthode `valueOf()` fait partie du [protocole de contrainte de type](/fr/docs/Web/JavaScript/Guide/Data_structures#contraintes_de_type). Comme `Date` possède une méthode [`[Symbol.toPrimitive]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive), cette méthode a toujours la priorité sur `valueOf()` lorsqu'un objet `Date` est implicitement contraint en nombre. Cependant, `Date.prototype[Symbol.toPrimitive]()` appelle toujours `this.valueOf()` en interne.
 
-L'objet {{JSxRef("Date")}} surcharge la méthode {{JSxRef("Object/valueOf", "valueOf()")}} de {{JSxRef("Object")}}. `Date.prototype.valueOf()` retourne le timestamp de la date, ce qui est fonctionnellement équivalent à la méthode {{JSxRef("Date.prototype.getTime()")}}.
+L'objet {{JSxRef("Date")}} surcharge la méthode {{JSxRef("Object/valueOf", "valueOf()")}} de {{JSxRef("Object")}}. `Date.prototype.valueOf()` retourne l'horodatage de la date, ce qui est fonctionnellement équivalent à la méthode {{JSxRef("Date.prototype.getTime()")}}.
 
 ## Exemples
 

@@ -35,7 +35,7 @@ Aucun.
 
 ### Valeur de retour
 
-Un entier correspondant au jour de la semaine pour la date indiquée selon le temps universel&nbsp;: 0 pour dimanche, 1 pour lundi, 2 pour mardi, et ainsi de suite. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+Un entier correspondant au jour de la semaine pour la date indiquée selon le temps universel&nbsp;: 0 pour dimanche, 1 pour lundi, 2 pour mardi, et ainsi de suite. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
 ## Exemples
 

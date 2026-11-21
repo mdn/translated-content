@@ -30,7 +30,7 @@ Aucun.
 
 ### Valeur de retour
 
-Un nombre entre 0 et 999 indiquant le nombre de millisecondes pour la date indiquée, selon l'heure locale. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+Un nombre entre 0 et 999 indiquant le nombre de millisecondes pour la date indiquée, selon l'heure locale. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
 ## Exemples
 
