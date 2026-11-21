@@ -3,10 +3,12 @@ title: Propriété CSS `text-decoration-line`
 short-title: text-decoration-line
 slug: Web/CSS/Reference/Properties/text-decoration-line
 l10n:
-  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-decoration-line`** permet de définir le type de décoration appliquée au texte d'un élément, comme un soulignement ou une ligne au-dessus du texte.
+
+Lors de la définition de plusieurs propriétés de décoration de ligne en même temps, il peut être plus pratique d'utiliser la propriété raccourcie {{CSSxRef("text-decoration")}} à la place.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: text-decoration-line")}}
 
@@ -59,8 +61,6 @@ p {
   font: 1.5em sans-serif;
 }
 ```
-
-Lors de la définition de plusieurs propriétés de décoration de ligne en même temps, il peut être plus pratique d'utiliser la propriété raccourcie {{CSSxRef("text-decoration")}} à la place.
 
 ## Syntaxe
 
@@ -137,7 +137,7 @@ Cette propriété est définie soit comme `none`, soit comme une liste de mots-c
 }
 ```
 
-{{EmbedLiveSample("Exemple simple", , 90)}}
+{{EmbedLiveSample("Exemple simple",, 90)}}
 
 ### Exemple d'erreurs
 
@@ -162,7 +162,7 @@ Dans cet exemple, le premier paragraphe contient une faute d'orthographe et util
 }
 ```
 
-{{EmbedLiveSample("Exemple d'erreurs", , 90)}}
+{{EmbedLiveSample("Exemple d'erreurs",, 90)}}
 
 ## Spécifications
 

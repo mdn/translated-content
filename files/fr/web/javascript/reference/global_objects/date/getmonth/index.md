@@ -29,7 +29,7 @@ Aucun.
 
 ### Valeur de retour
 
-Un entier entre 0 et 11 selon le mois de la date indiquée et d'après l'heure locale (0 correspond à janvier, 1 à février, et ainsi de suite). Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+Un entier entre 0 et 11 selon le mois de la date indiquée et d'après l'heure locale (0 correspond à janvier, 1 à février, et ainsi de suite). Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
 ## Description
 

@@ -3,10 +3,10 @@ title: "Date : méthode statique parse()"
 short-title: parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 98972b1f827b7374e28aee591a73044ffd8fb758
 ---
 
-La méthode statique **`Date.parse()`** analyse la représentation sous forme de chaîne de caractères d'une date et renvoie l'[horodatage](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#le_format_epoch_les_horodatages_et_les_dates_invalides) correspondant.
+La méthode statique **`Date.parse()`** analyse la représentation sous forme de chaîne de caractères d'une date et retourne [l'horodatage (<i lang="en">timestamp</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#le_format_epoch_les_horodatages_et_les_dates_invalides) correspondant.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Date.parse()")}}
 
@@ -32,11 +32,11 @@ Date.parse(dateString)
 ### Paramètres
 
 - `dateString`
-  - : Une chaîne de caractères (`string`) au [format date-heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#format_de_chaîne_de_date_et_heure). Voir la référence liée pour les précautions concernant l'utilisation de différents formats.
+  - : Une chaîne de caractères (`string`) au [format date-heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#format_de_chaîne_de_caractères_de_date_et_heure). Voir la référence liée pour les précautions concernant l'utilisation de différents formats.
 
 ### Valeur de retour
 
-Un nombre représentant l'[horodatage (<i lang="en">timestamp</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) de la date donnée. Si `dateString` ne peut pas être analysé comme une date valide, {{JSxRef("NaN")}} est renvoyé.
+Un nombre représentant [l'horodatage](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide) de la date donnée. Si `dateString` ne peut pas être analysé comme une date valide, {{JSxRef("NaN")}} est retourné.
 
 ## Description
 
@@ -44,7 +44,7 @@ Cette fonction est utile pour définir des valeurs de date à partir de chaînes
 
 Les formats que `parse()` peut traiter ne sont pas explicitement spécifiés, mais il existe quelques {{Glossary("invariant", "invariants")}}&nbsp;:
 
-- Le [format de chaîne de caractères date-heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#format_de_chaîne_de_date_et_heure) (produit par {{JSxRef("Date/toISOString", "toISOString()")}}) doit être pris en charge.
+- Le [format de chaîne de caractères date-heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#format_de_chaîne_de_caractères_de_date_et_heure) (produit par {{JSxRef("Date/toISOString", "toISOString()")}}) doit être pris en charge.
 - Si `x` est un objet Date dont la valeur en millisecondes est zéro, alors `x.valueOf()` doit être égal à l'une des valeurs suivantes&nbsp;: `Date.parse(x.toString())`, `Date.parse(x.toUTCString())`, `Date.parse(x.toISOString())`. Cela signifie que les formats produits par {{JSxRef("Date/toString", "toString()")}} et {{JSxRef("Date/toUTCString", "toUTCString()")}} doivent aussi être pris en charge.
 - La spécification _n'exige pas_ la prise en charge du format produit par {{JSxRef("Date/toLocaleString", "toLocaleString()")}}. Cependant, les principaux moteurs essaient tous de prendre en charge le format `toLocaleString("en-US")`.
 
@@ -56,7 +56,7 @@ Comme `parse()` est une méthode statique de `Date`, vous l'utilisez toujours co
 
 ### Utiliser la méthode `Date.parse()`
 
-Les appels suivants renvoient tous `1546300800000`. Le premier impliquera l'heure UTC car il s'agit uniquement d'une date, et les autres spécifient explicitement le fuseau horaire UTC.
+Les appels suivants retournent tous `1546300800000`. Le premier implique l'heure UTC, car il s'agit uniquement d'une date, et les autres définissent explicitement le fuseau horaire UTC.
 
 ```js
 Date.parse("2019-01-01");
@@ -64,7 +64,7 @@ Date.parse("2019-01-01T00:00:00.000Z");
 Date.parse("2019-01-01T00:00:00.000+00:00");
 ```
 
-L'appel suivant, qui ne précise pas de fuseau horaire, sera interprété comme le 2019-01-01 à 00:00:00 dans le fuseau horaire local du système, car il contient à la fois une date et une heure.
+L'appel suivant, qui ne précise pas de fuseau horaire, est interprété comme le 2019-01-01 à 00:00:00 dans le fuseau horaire local du système, car il contient à la fois une date et une heure.
 
 ```js
 Date.parse("2019-01-01T00:00:00");
@@ -84,14 +84,14 @@ Date.parse("Thu, 01 Jan 1970 00:00:00 GMT");
 // 0 dans toutes les implémentations dans tous les fuseaux horaires
 ```
 
-### Chaînes de date non standard
+### Chaînes de caractères de date non standard
 
 > [!NOTE]
 > Cette section décrit des comportements spécifiques à chaque implémentation, qui peuvent varier selon les navigateurs ou leurs versions. Il ne s'agit pas d'un tableau de compatibilité exhaustif et vous devez toujours effectuer vos propres tests avant d'utiliser un format dans votre code.
 
-Les implémentations utilisent généralement le fuseau horaire local lorsque la chaîne de date n'est pas standard. Par cohérence, nous supposerons que l'environnement d'exécution utilise le fuseau horaire UTC, et sauf indication contraire, le résultat dépendra du fuseau horaire de l'appareil. [L'heure d'été (DST) du fuseau local peut aussi avoir un effet](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset#résultats_variés_dans_les_régions_appliquant_lheure_dété_dst).
+Les implémentations utilisent généralement le fuseau horaire local lorsque la chaîne de caractères de date n'est pas standard. Par cohérence, nous supposons que l'environnement d'exécution utilise le fuseau horaire UTC, et sauf indication contraire, le résultat dépend du fuseau horaire de l'appareil. [L'heure d'été (DST) du fuseau local peut aussi avoir un effet](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset#résultats_variés_dans_les_régions_appliquant_lheure_dété_dst).
 
-Voici d'autres exemples de chaînes de date non standard. Les navigateurs sont très tolérants lors de l'analyse des chaînes de date et peuvent ignorer toute partie d'une chaîne qu'ils ne parviennent pas à analyser. Pour des raisons de compatibilité, les navigateurs copient souvent le comportement les uns des autres, ce qui fait que ces schémas de gestion se propagent d'un navigateur à l'autre. Comme indiqué précédemment, les exemples suivants sont donnés à titre d'illustration uniquement et ne sont en aucun cas exhaustifs&nbsp;:
+Voici d'autres exemples de chaînes de caractères de date non standard. Les navigateurs sont très tolérants lors de l'analyse des chaînes de caractères de date et peuvent ignorer toute partie d'une chaîne de caractères qu'ils ne parviennent pas à analyser. Pour des raisons de compatibilité, les navigateurs copient souvent le comportement les uns des autres, ce qui fait que ces schémas de gestion se propagent d'un navigateur à l'autre. Comme indiqué précédemment, les exemples suivants sont donnés à titre d'illustration uniquement et ne sont en aucun cas exhaustifs&nbsp;:
 
 <table>
   <thead>
@@ -120,7 +120,7 @@ Voici d'autres exemples de chaînes de date non standard. Les navigateurs sont t
       <td colspan="3">-30641733102000 (01 janv. 0999)</td>
     </tr>
     <tr>
-      <td rowspan="4">Chaînes de date utilisant différents séparateurs</td>
+      <td rowspan="4">Chaînes de caractères de date utilisant différents séparateurs</td>
       <td><code>1970-01-01</code> (standard)</td>
       <td colspan="3">0 dans tous les fuseaux horaires</td>
     </tr>

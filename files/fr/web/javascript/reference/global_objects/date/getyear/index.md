@@ -20,7 +20,7 @@ Aucun.
 
 ### Valeur de retour
 
-Un entier représentant l'année pour la date indiquée selon l'heure locale, auquel on a soustrait 1900. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+Un entier représentant l'année pour la date indiquée selon l'heure locale, auquel on a soustrait 1900. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
 - Pour les années supérieures ou égales à 2000, la valeur est 100 ou plus. Par exemple, si l'année est 2026, `getYear()` retourne 126.
 - Pour les années comprises entre 1900 et 1999 inclus, la valeur retournée par `getYear()` est comprise entre 0 et 99. Par exemple, si l'année est 1976, `getYear()` retourne 76.

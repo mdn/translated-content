@@ -3,12 +3,14 @@ title: Propriété CSS `text-decoration-color`
 short-title: text-decoration-color
 slug: Web/CSS/Reference/Properties/text-decoration-color
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-decoration-color`** définit la couleur des décorations ajoutées au texte par {{CSSxRef("text-decoration-line")}}.
 
 La couleur s'applique aux décorations, telles que les soulignements, les lignes au-dessus, les lignes barrées et les lignes ondulées utilisées pour marquer les fautes d'orthographe, dans le cadre de la valeur de la propriété.
+
+CSS ne fournit pas de mécanisme spécifique pour définir une couleur unique pour chaque type de ligne. Cet effet peut néanmoins être obtenu en imbriquant des éléments, en appliquant un type de ligne différent à chaque élément (avec la propriété {{CSSxRef("text-decoration-line")}}), et en définissant la couleur de la ligne (avec `text-decoration-color`) pour chaque élément.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: text-decoration-color")}}
 
@@ -54,8 +56,6 @@ p {
 }
 ```
 
-CSS ne fournit pas de mécanisme spécifique pour définir une couleur unique pour chaque type de ligne. Cet effet peut néanmoins être obtenu en imbriquant des éléments, en appliquant un type de ligne différent à chaque élément (avec la propriété {{CSSxRef("text-decoration-line")}}), et en définissant la couleur de la ligne (avec `text-decoration-color`) pour chaque élément.
-
 ## Syntaxe
 
 ```css
@@ -83,7 +83,7 @@ Cette propriété est définie comme une valeur `<color>`&nbsp;:
 
 ## Accessibilité
 
-Il est important de s'assurer que le ratio de contraste entre la couleur du texte, le fond sur lequel le texte est placé et la ligne de décoration du texte est suffisamment élevé pour que les personnes ayant des déficiences visuelles puissent lire le contenu de la page. Le ratio de contraste des couleurs est déterminé en comparant la luminosité des valeurs de couleur du texte et du fond.
+Il est important de s'assurer que la proportion de contraste entre la couleur du texte, le fond sur lequel le texte est placé et la ligne de décoration du texte est suffisamment élevé pour que les personnes ayant des déficiences visuelles puissent lire le contenu de la page. La proportion de contraste des couleurs est déterminée en comparant la luminosité des valeurs de couleur du texte et du fond.
 
 La couleur seule ne doit pas être utilisée pour transmettre une signification. Par exemple, le changement de couleur du texte et de `text-decoration-color` seul ne suffit pas à indiquer qu'un lien a la sélection.
 

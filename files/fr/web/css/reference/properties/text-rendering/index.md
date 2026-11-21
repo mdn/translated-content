@@ -3,7 +3,7 @@ title: Propriété CSS `text-rendering`
 short-title: text-rendering
 slug: Web/CSS/Reference/Properties/text-rendering
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-rendering`** donne de l'information au moteur de rendu sur ce qu'il doit optimiser lors de l'affichage du texte.

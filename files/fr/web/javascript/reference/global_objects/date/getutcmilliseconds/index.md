@@ -29,9 +29,9 @@ Aucun.
 
 ### Valeur de retour
 
-Un entier, entre 0 et 999, représentant les millièmes de seconde pour la date indiquée selon le temps universel. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+Un entier, entre 0 et 999, représentant les millièmes de seconde pour la date indiquée selon le temps universel. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
-À ne pas confondre avec le timestamp. Pour obtenir le nombre total de millisecondes écoulées depuis l'époque, utilisez la méthode [`getTime()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime).
+À ne pas confondre avec l'horodatage. Pour obtenir le nombre total de millisecondes écoulées depuis l'époque, utilisez la méthode [`getTime()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime).
 
 ## Exemples
 

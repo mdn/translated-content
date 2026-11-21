@@ -3,7 +3,7 @@ title: Propriété CSS `timeline-scope`
 short-title: timeline-scope
 slug: Web/CSS/Reference/Properties/timeline-scope
 l10n:
-  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
+  sourceCommit: 2a3061b6905ba8a8fe2654e1a6a978bc614bfd66
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`timeline-scope`** modifie la portée d'une chronologie d'animation nommée.
@@ -29,14 +29,14 @@ timeline-scope: unset;
 
 ### Valeurs
 
-Les valeurs autorisées pour `timeline-scope` sont&nbsp;:
+Cette propriété est définie comme un mot-clé ou une liste séparée par des virgules de noms de chronologies personnalisées&nbsp;:
 
 - `none`
-  - : Il n'y a aucun changement dans la portée de la chronologie. C'est la valeur par défaut.
+  - : N'applique aucun changement à la portée de la chronologie. C'est la valeur par défaut.
 - `all`
-  - : Les noms de toutes les chronologies définies par les descendants sont dans la portée de cet élément et de ses descendants.
+  - : Définit la portée de sorte que tous les noms de chronologies définis sur l'élément ou dans son sous-arbre ne correspondent qu'aux éléments du même sous-arbre.
 - `<dashed-ident>`
-  - : Définit le nom d'une chronologie nommée existante (c'est-à-dire déclarée en utilisant {{CSSxRef("scroll-timeline-name")}} ou {{CSSxRef("view-timeline-name")}}) définie sur un élément descendant. Cela augmente la portée de la chronologie à l'élément actuel et à tous ses descendants.
+  - : Définit un ou plusieurs noms de chronologies séparés par des virgules qui sont déclarés en utilisant {{CSSxRef("scroll-timeline-name")}} ou {{CSSxRef("view-timeline-name")}}. Définit la portée de sorte que lorsque les valeurs `scroll-timeline-name` ou `view-timeline-name` définies sont définies sur l'élément ou dans son sous-arbre, elles ne correspondent qu'aux éléments du même sous-arbre.
 
 ## Description
 
@@ -76,7 +76,7 @@ Le HTML inclut un élément à animer et un élément à faire défiler&nbsp;:
 
 Une chronologie de défilement nommée `--mon-element-defilant` est définie en utilisant la propriété {{CSSxRef("scroll-timeline-name")}} sur un élément défilant. Ce nom de chronologie de défilement est utilisé à deux autres endroits&nbsp;: il est appliqué comme {{CSSxRef("animation-timeline")}} sur l'élément que nous voulons animer, et comme `timeline-scope` sur un ancêtre à la fois du défileur et de l'élément animé, augmentant ainsi la portée.
 
-Nous définissons la hauteur du `<body>` à `100vh` et disposons ses deux éléments enfants en deux colonnes égales en utilisant flexbox. Pour augmenter la portée de la chronologie depuis l'élément `<div class="scroller">` jusqu'à l'ensemble du `<body>`, nous définissons `timeline-scope: --mon-element-defilant` dessus. Ce faisant, la chronologie `--mon-element-defilant` peut être définie comme la chronologie de contrôle pour une animation définie sur le `<body>` ou tout élément imbriqué à l'intérieur.
+Nous définissons la hauteur du `<body>` à `100vh` et disposons ses deux éléments enfants en deux colonnes égales en utilisant les boîtes flexibles. Pour augmenter la portée de la chronologie depuis l'élément `<div class="scroller">` jusqu'à l'ensemble du `<body>`, nous définissons `timeline-scope: --mon-element-defilant` dessus. Ce faisant, la chronologie `--mon-element-defilant` peut être définie comme la chronologie de contrôle pour une animation définie sur le `<body>` ou tout élément imbriqué à l'intérieur.
 
 ```css
 body {
@@ -107,7 +107,7 @@ Nous définissons `--mon-element-defilant` comme {{CSSxRef("scroll-timeline-name
 }
 ```
 
-Ensuite, nous donnons à l'élément animé quelques styles rudimentaires et lui appliquons une animation en utilisant la propriété abrégée {{CSSxRef("animation")}}. Nous définissons la {{CSSxRef("animation-timeline")}} sur la chronologie de défilement nommée&nbsp;: `--mon-element-defilant`. Pour réitérer, animer l'élément en fonction de la progression du défilement de son élément cousin n'est possible que parce que nous avons défini `timeline-scope` sur un ancêtre commun&nbsp;; l'élément animé n'est **pas** un descendant de l'élément défilant.
+Ensuite, nous donnons à l'élément animé quelques styles rudimentaires et lui appliquons une animation en utilisant la propriété raccourcie {{CSSxRef("animation")}}. Nous définissons la {{CSSxRef("animation-timeline")}} sur la chronologie de défilement nommée&nbsp;: `--mon-element-defilant`. Pour réitérer, animer l'élément en fonction de la progression du défilement de son élément cousin n'est possible que parce que nous avons défini `timeline-scope` sur un ancêtre commun&nbsp;; l'élément animé n'est **pas** un descendant de l'élément défilant.
 
 ```css
 .box {

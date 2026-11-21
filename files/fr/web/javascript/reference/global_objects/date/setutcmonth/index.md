@@ -41,13 +41,13 @@ setUTCMonth(monthValue, dateValue)
 
 ### Valeur de retour
 
-Modifie l'objet {{JSxRef("Date")}} en place et retourne son nouveau [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide). Si un paramètre vaut `NaN` (ou d'autres valeurs qui sont [contraintes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre) en `NaN`, comme `undefined`), la date est définie sur [Date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) et `NaN` est retourné.
+Modifie l'objet {{JSxRef("Date")}} en place et retourne son nouvel [horodatage (<i lang="en">timestamp</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide). Si un paramètre vaut `NaN` (ou d'autres valeurs qui sont [contraintes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre) en `NaN`, comme `undefined`), la date est définie sur [Date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide) et `NaN` est retourné.
 
 ## Description
 
 Si vous ne définissez pas le paramètre `dateValue`, la valeur retournée par la méthode {{JSxRef("Date/getUTCDate", "getUTCDate()")}} est utilisée.
 
-Si un paramètre que vous définissez est en dehors de la plage attendue, `setUTCMonth()` tente de mettre à jour les informations de date dans l'objet {{JSxRef("Date")}} en conséquence. Par exemple, si vous utilisez 15 pour `monthValue`, l'année sera incrémentée de 1, et 3 sera utilisé pour le mois.
+Si un paramètre que vous définissez est en dehors de la plage attendue, `setUTCMonth()` tente de mettre à jour les informations de date dans l'objet {{JSxRef("Date")}} en conséquence. Par exemple, si vous utilisez 15 pour `monthValue`, l'année est incrémentée de 1, et 3 est utilisé pour le mois.
 
 ## Exemples
 

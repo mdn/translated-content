@@ -3,10 +3,12 @@ title: Propriété CSS `visibility`
 short-title: visibility
 slug: Web/CSS/Reference/Properties/visibility
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`visibility`** affiche ou masque un élément sans modifier la disposition d'un document. La propriété peut également masquer des lignes ou des colonnes dans un tableau ({{HTMLElement("table")}}).
+
+Pour cacher un élément _et le retirer de la disposition du document_, utilisez la propriété {{CSSxRef("display")}} avec la valeur `none` au lieu d'utiliser `visibility`.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: visibility")}}
 
@@ -54,8 +56,6 @@ visibility: collapse;
 }
 ```
 
-Pour cacher un élément _et le retirer de la disposition du document_, utilisez la propriété {{CSSxRef("display")}} avec la valeur `none` au lieu d'utiliser `visibility`.
-
 ## Syntaxe
 
 ```css
@@ -79,16 +79,16 @@ La propriété `visibility` est définie avec l'un des mots-clés suivants.
 - `visible`
   - : La valeur par défaut, la boîte est visible.
 - `hidden`
-  - : La boîte de l'élément est invisible (non dessinée), mais continue d'affecter la disposition comme d'habitude. Les descendants de l'élément seront visibles s'ils ont `visibility` défini sur `visible`. L'élément ne peut pas recevoir le focus (par exemple lors de la navigation à travers les [index de tabulation](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex)).
+  - : La boîte de l'élément est invisible (non dessinée), mais continue d'affecter la disposition comme d'habitude. Les descendants de l'élément sont visibles s'ils ont `visibility` défini sur `visible`. L'élément ne peut pas recevoir la sélection (par exemple lors de la navigation à travers les [index de tabulation](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex)).
 - `collapse`
   - : Le mot-clé `collapse` a des effets différents selon les éléments&nbsp;:
-    - Pour les lignes, colonnes, groupes de colonnes et groupes de lignes d'un {{HTMLElement("table")}}, les lignes ou colonnes sont masquées et l'espace qu'elles auraient occupé est supprimé (comme si `{{CSSxRef("display")}}: none` avait été appliqué à la colonne/ligne du tableau). Cependant, la taille des autres lignes et colonnes est toujours calculée comme si les cellules des lignes ou colonnes repliées étaient présentes. Cette valeur permet de retirer rapidement une ligne ou une colonne d'un tableau sans forcer le recalcul des largeurs et hauteurs pour l'ensemble du tableau.
-    - Les éléments flexibles repliés et les annotations ruby sont masqués, et l'espace qu'ils auraient occupé est supprimé.
+    - Pour les lignes, colonnes, groupes de colonnes et groupes de lignes d'un {{HTMLElement("table")}}, les lignes ou colonnes sont masquées et l'espace qu'elles ont occupé est supprimé (comme si `{{CSSxRef("display")}}: none` est appliqué à la colonne/ligne du tableau). Cependant, la taille des autres lignes et colonnes est toujours calculée comme si les cellules des lignes ou colonnes repliées sont présentes. Cette valeur permet de retirer rapidement une ligne ou une colonne d'un tableau sans forcer le re-calcul des largeurs et hauteurs pour l'ensemble du tableau.
+    - Les éléments flexibles repliés et les annotations ruby sont masqués, et l'espace qu'ils ont occupé est supprimé.
     - Pour les autres éléments, `collapse` est traité de la même manière que `hidden`.
 
 ## Accessibilité
 
-Utiliser la propriété `visibility` avec la valeur `hidden` retirera l'objet de [l'arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#api_daccessibilité). Les éléments ciblés, ainsi que leurs éléments descendants ne seront plus annoncés par les lecteurs d'écran.
+Utiliser la propriété `visibility` avec la valeur `hidden` retire l'objet de [l'arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#api_daccessibilité). Les éléments ciblés, ainsi que leurs éléments descendants ne sont plus annoncés par les lecteurs d'écran.
 
 ## Interpolation
 
@@ -97,7 +97,7 @@ Lorsqu'elle est animée, les valeurs de `visibility` sont interpolées entre _vi
 ## Notes
 
 - Le support de `visibility: collapse` est manquant ou partiellement incorrect dans certains navigateurs modernes. Il peut ne pas être correctement traité comme `visibility: hidden` sur des éléments autres que les lignes et colonnes de tableau.
-- Lorsqu'il est appliqué aux lignes de tableau, si le tableau contient des cellules (éléments HTML {{HTMLElement("td")}} et {{HTMLElement("th")}}) qui s'étendent à la fois sur des lignes visibles et repliées, la cellule peut s'afficher de manière inattendue. Si la cellule étendue est définie dans une ligne repliée, les navigateurs ne rendent pas la cellule du tableau, comme si les cellules des lignes suivantes étaient présentes avec `visibility: collapse` appliqué. Lorsque la cellule est définie dans une ligne visible et s'étend sur une ligne repliée, le contenu de la cellule n'est pas réorganisé, mais la présentation de la cellule elle-même varie selon le navigateur. La plupart des navigateurs réduisent la taille du bloc de la cellule de la taille du bloc de la ligne masquée. Cela signifie que le contenu peut être plus grand que la cellule dans la direction de la taille du bloc. Selon le navigateur, le contenu débordant est soit coupé, comme si `overflow: hidden` était défini, tandis que le contenu déborde dans la ligne suivante dans d'autres navigateurs comme si `overflow: visible` était défini. Dans d'autres navigateurs, la cellule est rendue comme si la ligne n'était pas repliée, toutes les autres cellules de la ligne étant masquées comme si `visibility: collapse` était défini sur les cellules individuelles plutôt que sur la ligne elle-même.
+- Lorsqu'il est appliqué aux lignes de tableau, si le tableau contient des cellules (éléments HTML {{HTMLElement("td")}} et {{HTMLElement("th")}}) qui s'étendent à la fois sur des lignes visibles et repliées, la cellule peut s'afficher de manière inattendue. Si la cellule étendue est définie dans une ligne repliée, les navigateurs ne rendent pas la cellule du tableau, comme si les cellules des lignes suivantes sont présentes avec `visibility: collapse` appliqué. Lorsque la cellule est définie dans une ligne visible et s'étend sur une ligne repliée, le contenu de la cellule n'est pas réorganisé, mais la présentation de la cellule elle-même varie selon le navigateur. La plupart des navigateurs réduisent la taille du bloc de la cellule de la taille du bloc de la ligne masquée. Cela signifie que le contenu peut être plus grand que la cellule dans la direction de la taille du bloc. Selon le navigateur, le contenu débordant est soit coupé, comme si `overflow: hidden` est défini, tandis que le contenu déborde dans la ligne suivante dans d'autres navigateurs comme si `overflow: visible` est défini. Dans d'autres navigateurs, la cellule est rendue comme si la ligne n'est pas repliée, toutes les autres cellules de la ligne étant masquées comme si `visibility: collapse` est défini sur les cellules individuelles plutôt que sur la ligne elle-même.
 - `visibility: collapse` peut modifier la disposition d'un tableau si le tableau contient des tableaux imbriqués dans les cellules qui sont repliées, sauf si `visibility: visible` est défini explicitement sur les tableaux imbriqués.
 
 ## Définition formelle

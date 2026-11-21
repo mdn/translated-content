@@ -29,7 +29,7 @@ Aucun.
 
 ### Valeur de retour
 
-Un entier, compris entre 0 et 23 qui indique l'heure de la date indiquée selon l'heure locale. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+Un entier, compris entre 0 et 23 qui indique l'heure de la date indiquée selon l'heure locale. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
 ## Exemples
 
