@@ -2,7 +2,7 @@
 title: クロスサイトリクエストフォージェリー (CSRF)
 slug: Web/Security/Attacks/CSRF
 l10n:
-  sourceCommit: 81bf621759d3a52fdf737c2d75f186a0073d1406
+  sourceCommit: dd70ed064388b0fac4338321f727c8840a508b64
 ---
 
 クロスサイトリクエストフォージェリー (CSRF) 攻撃では、攻撃者はユーザーやブラウザーを欺き、悪意のあるサイトから対象のサイトへ HTTP リクエストを送信させます。このリクエストにはユーザーの資格情報が記載されており、サーバーはユーザーが意図したものと誤認して、何らかの有害な行為を発生させます。
@@ -72,7 +72,7 @@ form.submit();
 
 `fetch()` のような JavaScript API の場合、トークンはクッキーに保存されるか、ページ内に埋め込まれることがあり、JavaScript がその値を抽出して、追加のヘッダーとして送信します。
 
-現行のウェブフレームワークは通常、CSRF トークンに標準で対応しています。例えば、[Django](https://www.djangoproject.com/) では、[`csrf_token`](https://docs.djangoproject.com/en/5.1/ref/csrf/) タグを使用してフォームを保護することができます。これにより、トークンを含む追加の非表示フォームフィールドが生成され、フレームワークがサーバー側でそのトークンを調べます。
+現行のウェブフレームワークは通常、CSRF トークンに標準で対応しています。例えば、[Django](https://www.djangoproject.com/) では、[`csrf_token`](https://docs.djangoproject.com/en/stable/ref/csrf/) タグを使用してフォームを保護することができます。これにより、トークンを含む追加の非表示フォームフィールドが生成され、フレームワークがサーバー側でそのトークンを調べます。
 
 この保護機能を活用するには、ウェブサイト内のどの場所で状態を変更する HTTP リクエストを使用しているかをすべて把握し、選択したフレームワークが提供する防御策を確実に実現する必要があります。
 
@@ -185,4 +185,5 @@ fetch("https://my-bank.example.org/transfer", {
 
 ## 関連情報
 
-- [Cross-Site Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html) - [owasp.org](https://owasp.org/)
+- [ローカルネットワークアクセス](/ja/docs/Web/Security/Defenses/Local_network_access)
+- [クロスサイトリクエストフォージェリー防止早見表](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)<sup>(英語)</sup> - [owasp.org](https://owasp.org/)
