@@ -3,7 +3,7 @@ title: Propriété CSS `text-overflow`
 short-title: text-overflow
 slug: Web/CSS/Reference/Properties/text-overflow
 l10n:
-  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
+  sourceCommit: 1a2a5b56a689b441ebf3be91b90f15746c5a5a01
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-overflow`** définit la façon dont le contenu débordant masqué est signalé aux utilisateur·ice·s.
@@ -93,7 +93,42 @@ white-space: nowrap;
 
 La propriété `text-overflow` affecte uniquement le contenu qui déborde d'un élément conteneur de bloc dans sa direction de progression _en incise_ (et non, par exemple, le texte qui déborde en bas d'une boîte).
 
-La propriété `text-overflow` peut être définie avec une ou deux valeurs. Si une seule valeur est fournie, elle définit le comportement du débordement à la fin de la ligne (l'extrémité droite pour un texte de gauche à droite, l'extrémité gauche pour un texte de droite à gauche). Si deux valeurs sont fournies, la première définit le comportement du débordement à l'extrémité gauche de la ligne, et la seconde le définit à son extrémité droite. La propriété accepte soit une valeur de mot-clé (`clip` ou `ellipsis`), soit une valeur de type `<string>`.
+La propriété `text-overflow` peut être définie avec une ou deux valeurs. Si une seule valeur est fournie, elle définit le comportement du débordement à la fin de la ligne (l'extrémité droite pour un texte de gauche à droite, l'extrémité gauche pour un texte de droite à gauche). Si deux valeurs sont fournies, la première définit le comportement du débordement à l'extrémité gauche de la ligne, et la seconde le définit à son extrémité droite.
+
+### Comportement de `ellipsis` comme `clip` pour les éléments modifiables
+
+Lorsque `text-overflow: ellipsis` est appliqué aux éléments modifiables tels que les éléments HTML {{HTMLElement("input")}} textuels, {{HTMLElement("textarea")}} et [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable), les navigateurs le considèrent généralement comme `text-overflow: clip`, tout le temps ou lorsque l'élément est sélectionné. Le comportement exact diffère selon les navigateurs&nbsp;; voir [la compatibilité des navigateurs](#compatibilité_des_navigateurs).
+
+Ce comportement garantit que le texte peut être parcouru et modifié, même en cas de débordement. Si le texte débordant reste couvert par une ellipse, il n'est ni visible ni modifiable.
+
+Vous pouvez voir le comportement dans l'exemple interactif suivant, auquel est appliqué ce CSS&nbsp;:
+
+```css live-sample___ellipsis-as-clip
+p[contenteditable],
+input,
+textarea {
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+```
+
+```html hidden live-sample___ellipsis-as-clip
+<p contenteditable>Paragraphe contenteditable. Le texte ici déborde.</p>
+
+<hr />
+
+<input type="text" value="Champ textuel. Le texte ici déborde." />
+
+<hr />
+
+<textarea>Zone de texte. Le texte ici déborde.</textarea>
+```
+
+{{EmbedLiveSample("ellipsis-as-clip", "100%", 200)}}
+
+Sélectionnez les différents éléments et essayez de modifier leur contenu textuel.
 
 ## Définition formelle
 

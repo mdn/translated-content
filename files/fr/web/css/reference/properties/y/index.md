@@ -3,10 +3,10 @@ title: Propriété CSS `y`
 short-title: y
 slug: Web/CSS/Reference/Properties/y
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`y`** définit la coordonnée de l'axe y du coin supérieur gauche de l'élément de forme SVG {{SVGElement("rect")}}, d'image {{SVGElement("image")}}, de fenêtre {{SVGElement("foreignObject")}} et de l'élément imbriqué {{SVGElement("svg")}} par rapport au plus proche `<svg>` présent dans le [système de coordonée](/fr/docs/Web/API/CSSOM_view_API/Coordinate_systems). S'il est présent, il remplace l'attribut {{SVGAttr("y")}}.
+La propriété [CSS](/fr/docs/Web/CSS) **`y`** définit la coordonnée de l'axe y du coin supérieur gauche de l'élément de forme SVG {{SVGElement("rect")}}, d'image {{SVGElement("image")}}, de fenêtre {{SVGElement("foreignObject")}} et de l'élément imbriqué {{SVGElement("svg")}} par rapport au plus proche `<svg>` présent dans le [système de coordonnée](/fr/docs/Web/API/CSSOM_view_API/Coordinate_systems). S'il est présent, il remplace l'attribut {{SVGAttr("y")}}.
 
 > [!NOTE]
 > La propriété `y` ne s'applique qu'aux éléments {{SVGElement("rect")}}, {{SVGElement("image")}}, {{SVGElement("foreignObject")}}, et {{SVGElement("svg")}} imbriqués dans un élément `<svg>`. Il n'a aucun effet sur les zones `<svg>` extérieures et ne s'applique pas aux autres éléments SVG ni aux éléments ou pseudo-éléments HTML.

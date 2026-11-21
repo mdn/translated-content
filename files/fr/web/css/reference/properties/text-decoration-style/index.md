@@ -3,7 +3,7 @@ title: Propriété CSS `text-decoration-style`
 short-title: text-decoration-style
 slug: Web/CSS/Reference/Properties/text-decoration-style
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 7484d45816002fbf082a59c5d95c38a1eb2b2e4b
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-decoration-style`** définit le style appliqué sur les lignes visées par {{CSSxRef("text-decoration-line")}}. Le style s'applique à toutes les lignes définies avec `text-decoration-line`.
@@ -103,6 +103,12 @@ text-decoration-style: unset;
 
 Le code suivant crée un soulignement ondulé rouge&nbsp;:
 
+#### HTML
+
+```html
+<p class="wavy">Et voilà le résultat.</p>
+```
+
 #### CSS
 
 ```css
@@ -111,12 +117,6 @@ Le code suivant crée un soulignement ondulé rouge&nbsp;:
   text-decoration-style: wavy;
   text-decoration-color: red;
 }
-```
-
-#### HTML
-
-```html
-<p class="wavy">Et voilà le résultat.</p>
 ```
 
 #### Résultat

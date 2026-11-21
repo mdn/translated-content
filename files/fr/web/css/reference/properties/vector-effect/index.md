@@ -3,7 +3,7 @@ title: Propriété CSS `vector-effect`
 short-title: vector-effect
 slug: Web/CSS/Reference/Properties/vector-effect
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`vector-effect`** supprime certains [effets de transformation](/fr/docs/Web/SVG/Reference/Attribute/transform) dans SVG, permettant ainsi des effets comme une route sur une carte restant de la même largeur quel que soit le zoom de la carte, ou permettant à une légende de diagramme de conserver sa position et sa taille indépendamment des autres transformations. Elle ne peut être utilisée qu'avec des éléments SVG qui acceptent l'attribut {{SVGAttr("vector-effect")}}. Lorsqu'elle est utilisée, la valeur CSS remplace toute valeur de l'attribut `vector-effect` de l'élément.

@@ -3,7 +3,7 @@ title: Propriété CSS `text-emphasis-color`
 short-title: text-emphasis-color
 slug: Web/CSS/Reference/Properties/text-emphasis-color
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 7484d45816002fbf082a59c5d95c38a1eb2b2e4b
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-emphasis-color`** définit la couleur utilisée pour dessiner les marques d'emphase. Celle-ci peut être définie grâce à la propriété raccourcie {{CSSxRef("text-emphasis")}}.
@@ -83,6 +83,14 @@ Cette propriété est définie comme une valeur `<color>`&nbsp;:
 
 ### Emphase avec une couleur et un caractère personnalisé
 
+#### HTML
+
+```html
+<p>Voici un exemple&nbsp;:</p>
+
+<em>Voici des marques d'emphase&nbsp;!</em>
+```
+
 #### CSS
 
 ```css
@@ -90,14 +98,6 @@ em {
   text-emphasis-color: green;
   text-emphasis-style: "*";
 }
-```
-
-#### HTML
-
-```html
-<p>Voici un exemple&nbsp;:</p>
-
-<em>Voici des marques d'emphase&nbsp;!</em>
 ```
 
 #### Résultat

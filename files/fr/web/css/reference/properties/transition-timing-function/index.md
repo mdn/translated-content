@@ -3,7 +3,7 @@ title: Propriété CSS `transition-timing-function`
 short-title: transition-timing-function
 slug: Web/CSS/Reference/Properties/transition-timing-function
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5d20ba73fde9de229a91dbdabe3be20966e95a65
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`transition-timing-function`** décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un [effet de transition](/fr/docs/Web/CSS/Guides/Transitions/Using) sont calculées.
@@ -131,7 +131,7 @@ transition-timing-function: unset;
 
 ## Accessibilité
 
-Certaines animations permettent de guider les utilisateur·ice·s vers les actions possibles et utiles, d'illustrer les relations qui existent entre les éléments d'interface et d'informer les utilisateur·ice·s quant aux actions qui se sont produites. Les animations réduisent ainsi la charge cognitive et améliorent la perception du changement.
+Certaines animations peuvent être utiles pour guider les utilisateur·ice·s afin qu'ils·elles comprennent les actions attendues, montrer les relations au sein de l'interface utilisateur et informer les utilisateur·ice·s des actions effectuées. Les animations peuvent aider à réduire la charge cognitive, prévenir l'aveuglement au changement et améliorer la mémorisation des relations spatiales. Toutefois, certaines animations peuvent être problématiques pour les personnes ayant des troubles cognitifs tels que le trouble déficitaire de l'attention avec ou sans hyperactivité (TDAH), et certains types de mouvements peuvent déclencher des troubles vestibulaires, l'épilepsie, la migraine ou la sensibilité scotopique.
 
 Prévoyez un mécanisme permettant de mettre en pause ou de désactiver l'animation, ainsi que d'utiliser la [requête média sur la réduction des mouvements](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) (ou l'équivalent [à l'indication du client de l'agent utilisateur](/fr/docs/Web/HTTP/Guides/Client_hints#indications_du_client_sur_lagent_utilisateur) {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) pour offrir une expérience adaptée aux utilisateur·ice·s ayant exprimé une préférence pour moins d'animations.
 
