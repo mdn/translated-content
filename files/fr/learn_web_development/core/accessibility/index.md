@@ -1,40 +1,56 @@
 ---
-title: Accessibilité
+title: L'accessibilité sur le web
+short-title: Accessibilité
 slug: Learn_web_development/Core/Accessibility
-original_slug: Learn/Accessibility
+l10n:
+  sourceCommit: 89e8e67d44039717f685a98d8b161f3d1ed1b233
 ---
 
-Apprendre le HTML, le CSS et le JavaScript est utile si vous voulez devenir développeur web, mais vos connaissances devront aller au delà de la simple utilisation des technologies — vous devrez les utiliser de manière responsable, de la bonne manière, de façon à maximiser l'audience de vos sites web et ne priver personne de leur usage. Pour y parvenir, vous devrez respecter les bonnes pratiques (lesquelles sont démontrées à travers les sujets du [HTML](/fr/docs/Learn_web_development/Core/Structuring_content), du [CSS](/fr/docs/Learn_web_development/Core/Styling_basics) et du [JavaScript](/fr/docs/Learn_web_development/Core/Scripting)), effectuer [des tests sur les différents navigateurs](/fr/docs/Learn_web_development/Extensions/Testing) et prendre l'accessibilité en considération dès le départ. Dans ce module, nous allons traiter de cette dernière en détail.
+{{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}
+
+L'accès au contenu web tel que les services publics, l'éducation, les sites de commerce électronique et le divertissement est un droit humain. Personne ne doit être exclu en raison d'un handicap, d'une couleur de peau, de la géographie ou d'autres caractéristiques humaines. Ce module traite des meilleures pratiques et techniques que vous devez apprendre pour rendre vos sites web aussi accessibles que possible.
 
 ## Prérequis
 
-Pour tirer le meilleur parti de ce module, il serait judicieux de parcourir les sections relatives à [HTML](/fr/docs/Learn_web_development/Core/Structuring_content), [CSS](/fr/docs/Learn_web_development/Core/Styling_basics) et [JavaScript](/fr/docs/Learn_web_development/Core/Scripting) en premier (au moins les deux premiers modules de chacune de ces sections) ou, peut-être encore mieux, de travailler les parties pertinentes du module d'accessibilité au fur et à mesure que vous travaillez les sujets technologiques connexes.
+Vous devez être familiarisé avec [HTML](/fr/docs/Learn_web_development/Core/Structuring_content), [CSS](/fr/docs/Learn_web_development/Core/Styling_basics) et [JavaScript](/fr/docs/Learn_web_development/Core/Scripting) avant de commencer ce module.
 
 > [!NOTE]
-> Si vous travaillez sur un ordinateur, une tablette ou un autre appareil sur lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer la plupart des exemples de code dans un programme de code en ligne tel que [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> Si vous travaillez sur un ordinateur, une tablette ou un autre appareil sur lequel vous ne pouvez pas créer de fichiers, vous pouvez essayer d'exécuter le code dans un éditeur en ligne tel que [CodePen <sup>(angl.)</sup>](https://codepen.io/) ou [JSFiddle <sup>(angl.)</sup>](https://jsfiddle.net/).
 
-## Guides
+## Tutoriels et défis
 
-- [Qu'est-ce que l'accessibilité ?](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
-  - : Cet article amorce le module avec un bon aperçu de ce qu'est réellement l'accessibilité – cela inclut les groupes de personnes que nous devons considérer et pourquoi, quels outils les différentes personnes utilisent pour interagir avec le Web et comment nous pouvons intégrer l'accessibilité dans le processus de développement web.
-- [HTML : une bonne base pour l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/HTML)
-  - : Une grande partie du contenu web peut être rendue accessible simplement lorsqu'on utilise les bons éléments HTML dans les bons cas. Cet article examine en détail comment HTML peut être utilisé pour assurer une accessibilité maximale.
-- [Meilleures pratiques d'accessibilité CSS et JavaScript](/fr/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript)
-  - : Lorsqu'ils sont utilisés correctement, CSS et JavaScript peuvent permettre des expériences web accessibles… mais ils peuvent considérablement nuire à l'accessibilité s'ils sont mal utilisés. Cet article décrit certaines pratiques exemplaires pour CSS et JavaScript qui doivent être prises en compte afin de s'assurer que le contenu, même complexe, soit le plus accessible possible.
-- [Principes de base du WAI-ARIA](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)
-  - : À la suite de l'article précédent, il est parfois compliqué de créer des contrôles complexes et accessible pour une interface utilisateur qui contient du HTML non sémantique et du contenu dynamique mis à jour grâce à JavaScript. WAI-ARIA est une technologie qui peut aider à résoudre de tels problèmes en ajoutant une sémantique supplémentaire que les navigateurs et les technologies d'assistance peuvent reconnaître et utiliser afin de permettre aux utilisateurs de savoir ce qui se passe. Nous allons montrer ici comment l'utiliser, à un niveau basique, pour améliorer l'accessibilité.
-- [Accessibilité pour les contenus multimédias](/fr/docs/Learn_web_development/Core/Accessibility/Multimedia)
-  - : Un autre type de contenu susceptible de créer des problèmes d'accessibilité est le multimédia : les contenus vidéo, audio et les image doivent être dotés de textes alternatifs appropriés afin qu'ils puissent être compris par les technologies d'assistance et leurs utilisateurs. Cet article montre comment.
+- [Qu'est-ce que l'accessibilité&nbsp;?](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
+  - : Cet article commence le module en donnant un bon aperçu de ce qu'est l'accessibilité — cela inclut les groupes de personnes que nous devons prendre en compte et pourquoi, les outils que différentes personnes utilisent pour interagir avec le web, et comment nous pouvons intégrer l'accessibilité dans notre flux de travail de développement web.
+- [Les outils d'accessibilité et la technologie d'assistance](/fr/docs/Learn_web_development/Core/Accessibility/Tooling)
+  - : Ensuite, nous nous tournons vers les outils d'accessibilité, en fournissant des informations sur les types d'outils que vous pouvez utiliser pour résoudre les problèmes d'accessibilité, et sur les technologies d'assistance utilisées par les personnes handicapées lorsqu'elles naviguent sur le web. Vous utilisez ces outils tout au long des articles suivants.
+- [HTML&nbsp;: Une bonne base pour l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/HTML)
+  - : Un grand nombre de contenus web peuvent être rendus accessibles simplement en s'assurant que les bons éléments HTML sont toujours utilisés à bon escient. Cet article examine en détail comment HTML peut être utilisé pour garantir une accessibilité maximale.
+- [Bonnes pratiques d'accessibilité pour CSS et JavaScript](/fr/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript)
+  - : CSS et JavaScript, lorsqu'ils sont utilisés correctement, ont également le potentiel de permettre des expériences web accessibles, mais s'ils sont mal utilisés, ils peuvent nuire considérablement à l'accessibilité. Cet article présente quelques bonnes pratiques pour CSS et JavaScript qui doivent être prises en compte afin de garantir que même le contenu complexe soit aussi accessible que possible.
+- [Bases de WAI-ARIA](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)
+  - : Suite à l'article précédent, il est parfois difficile de créer des contrôles d'interface utilisateur complexes impliquant du HTML non sémantique et du contenu dynamique mis à jour par JavaScript. WAI-ARIA est une technologie qui peut aider à résoudre ces problèmes en ajoutant des sémantiques supplémentaires que les navigateurs et les technologies d'assistance peuvent reconnaître et utiliser pour informer les utilisateur·ice·s de ce qui se passe. Ici, nous montrons comment l'utiliser à un niveau de base pour améliorer l'accessibilité.
+- [Multimédia accessible](/fr/docs/Learn_web_development/Core/Accessibility/Multimedia)
+  - : Une autre catégorie de contenu pouvant poser des problèmes d'accessibilité est le multimédia — le contenu vidéo, audio et image doit disposer d'alternatives textuelles appropriées afin qu'il puisse être compris par les technologies d'assistance et leurs utilisateur·ice·s. Cet article montre comment.
 - [Accessibilité mobile](/fr/docs/Learn_web_development/Core/Accessibility/Mobile)
-  - : On accède désormais au Web depuis son smartphone. Les plateformes iOS et Android possèdent des outils d'accessibilité à part entière. Il est tout aussi important de prendre en compte l'accessibilité de votre contenu web sur ces plateformes. Cet article examine les considérations d'accessibilité spécifiques au mobile.
+  - : L'accès au web sur les appareils mobiles étant très populaire, et les plateformes populaires telles qu'iOS et Android disposant d'outils d'accessibilité complets, il est important de prendre en compte l'accessibilité de votre contenu web sur ces plateformes. Cet article examine les considérations d'accessibilité spécifiques aux mobiles.
+- [Dépannage de l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/Accessibility_troubleshooting) <sup>Défi</sup>
+  - : Dans ce défi, nous vous présentons un site simple comportant plusieurs problèmes d'accessibilité que vous devez diagnostiquer et corriger.
 
-## Évaluations
+## Testez vos compétences
 
-- [Diagnostic et amélioration de l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/Accessibility_troubleshooting)
-  - : Dans ce module d'évaluation, nous vous présentons un site simple comportant un certain nombre de problèmes d'accessibilité que vous devez diagnostiquer et corriger.
+Vous trouvez des articles «&nbsp;Testez vos compétences&nbsp;» placés entre les articles de tutoriel pour vérifier si vous avez retenu les informations les plus importantes avant de passer à la suite. Si vous souhaitez tous les explorer ensemble, vous pouvez les trouver listés à [Testez vos compétences&nbsp;: Accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/Test_your_skills).
 
 ## Voir aussi
 
-- [Start Building Accessible Web Applications Today (en anglais)](https://egghead.io/courses/start-building-accessible-web-applications-today) — une excellente série de didacticiels vidéo de Marcy Sutton.
-- [Deque University resources (en anglais)](https://dequeuniversity.com/resources/) — comprend des exemples de code, des références pour les lecteurs d'écran et d'autres ressources utiles.
-- [Ressources relatives à WebAIM (en anglais)](https://www.webaim.org/resources/) — comprend des guides, des listes de vérification, des outils et bien plus encore.
+- [Commencez à créer des applications web accessibles dès aujourd'hui <sup>(angl.)</sup>](https://egghead.io/courses/start-building-accessible-web-applications-today)
+  - : Une excellente série de didacticiels vidéo par Marcy Sutton.
+- [Ressources de Deque University <sup>(angl.)</sup>](https://dequeuniversity.com/resources/)
+  - : Comprend des exemples de code, des références pour les lecteurs d'écran et d'autres ressources utiles.
+- [Ressources WebAIM <sup>(angl.)</sup>](https://webaim.org/resources/)
+  - : Comprend des guides, des listes de vérification, des outils et bien plus encore.
+- [Liste des outils d'évaluation de l'accessibilité web <sup>(angl.)</sup>](https://www.w3.org/WAI/ER/tools/)
+  - : Comprend une liste d'outils d'évaluation de l'accessibilité web.
+- [Apprendre le design web accessible <sup>(angl.)</sup>](https://scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>
+  - : Les cours [Scrimba <sup>(angl.)</sup>](https://scrimba.com/?via=mdn) _Apprendre le design web accessible_ enseignent comment écrire du HTML accessible en résolvant des défis de codage interactifs et en corrigeant un site web réel.
+
+{{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}
