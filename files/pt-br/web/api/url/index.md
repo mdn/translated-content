@@ -55,6 +55,8 @@ Se o seu navegador não tem suporte ao construtor {{domxref("URL.URL", "URL()")}
 
 ## Métodos estáticos
 
+- {{domxref("URL.canParse_static", "canParse()")}}
+  - : Retorna um booleano que indica se uma URL definida por uma string e, opcionalmente, uma URL base pode ser analisada e é válida.
 - {{domxref("URL.createObjectURL", "createObjectURL()")}}
   - : Retorna um {{jsxref("String")}} contendo uma única blob URL, isto é a URL com `blob:` com seu esquema, seguido de uma string com identificador único do objeto no navegador.
 - {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}
