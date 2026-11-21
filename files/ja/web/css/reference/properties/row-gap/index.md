@@ -3,10 +3,10 @@ title: "`row-gap` プロパティ"
 short-title: row-gap
 slug: Web/CSS/Reference/Properties/row-gap
 l10n:
-  sourceCommit: 04dfe418f2942ae739d41592c22fafa3679fc03c
+  sourceCommit: e57c161bccdd08db7e46922255e1dc3ea74058d4
 ---
 
-**`row-gap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組み、フレックスボックス、グリッドレイアウトにおける要素の行間の隙間（{{glossary("gutters", "溝")}}）の寸法を定義します。
+**`row-gap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組み、フレックスボックス、グリッドレイアウトにおける要素の行の隙間（{{glossary("gutters", "溝")}}）の寸法を定義します。
 
 {{InteractiveExample("CSS デモ: row-gap")}}
 
@@ -30,11 +30,11 @@ row-gap: 20px;
 <section class="default-example" id="default-example">
   <div class="example-container">
     <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
     </div>
   </div>
 </section>
@@ -94,7 +94,7 @@ row-gap: unset;
 
 ## 解説
 
-`row-gap` プロパティは、要素の行間の隙間の大きさを設定します。この隙間には、隙間の装飾として可視の区切り線を含めることができます。行間罫がある場合、その線は隙間の中央に表示されますが、隙間の大きさには影響しません。{{cssxref("row-rule")}} プロパティまたは {{cssxref("rule")}} 一括指定を使用すると、通常は「空きスペース」である隙間に装飾線を追加できます。
+`row-gap` プロパティは、要素内で行と行の間に設ける隙間の大きさを設定します。この隙間には、隙間の装飾として可視の区切り線を含めることができます。行間罫がある場合、その線は隙間の中央に表示されますが、隙間の大きさには影響しません。{{cssxref("row-rule")}} プロパティまたは {{cssxref("rule")}} 一括指定を使用すると、通常は「空きスペース」である隙間に装飾線を追加できます。
 
 [CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)で定義されているこのプロパティは、段組み、フレックスボックス、グリッドレイアウトで使用できます。`row-gap` と {{cssxref("column-gap")}} プロパティは、この順序で {{cssxref("gap")}} 一括指定プロパティを使って設定することもできます。`row-gap` は、[CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)に限定されていた `grid-row-gap` プロパティに置き換わるものです。現在、`grid-row-gap` は `row-gap` の別名です。
 
@@ -116,7 +116,7 @@ row-gap: unset;
 
 ### フレックスレイアウト
 
-この例では、`row-gap` プロパティを使って、フレックスアイテムの隣り合う行の間に垂直方向の隙間を作成します。また、行間罫の幅が `row-gap` のサイズに影響しないことも示しています。
+この例では、`row-gap` プロパティを使って、隣り合うフレックスアイテムの行の間に垂直方向の隙間を作成します。また、行間罫の幅が `row-gap` のサイズに影響しないことも示しています。
 
 #### HTML
 
@@ -190,7 +190,7 @@ row-gap: unset;
 
 {{cssxref("display")}} プロパティを `grid` に、{{cssxref("height")}} を `240px` に、{{cssxref("width")}} を `350px` に、{{cssxref("grid-template-rows")}} を `repeat(3, 1fr)` に設定して、幅 350px で 2 列 3 行のグリッドコンテナーを作成します。{{cssxref("grid-template-rows")}} プロパティで定義されているとおり、各行の高さは同じです。
 
-`row-gap` は `5%` に設定します。コンテナーの高さは `240px` なので、`5%` による行間の隙間の高さは `12px` です。残りの `216px` が 3 行に分けられるため、各行の高さは `72px` になります。
+`row-gap` は `5%` に設定します。コンテナーの高さは `240px` なので、`5%` による行の隙間の高さは `12px` です。残りの `216px` が 3 行に分けられるため、各行の高さは `72px` になります。
 
 ```css
 #grid {
@@ -244,6 +244,8 @@ body {
 - {{CSSxRef("row-rule")}}
 - {{CSSxRef("rule")}}
 - {{CSSxRef("gap")}}
+- [CSS 隙間と隙間装飾プロパティの概要](/ja/docs/Web/CSS/Guides/Gaps/Overview)
 - [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+- [CSS 隙間の罫線の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_rules)
 - [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#溝)
 - [CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)モジュール

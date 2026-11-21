@@ -3,18 +3,18 @@ title: CSS 行間罫と列間罫の定義
 short-title: 罫線の定義
 slug: Web/CSS/Guides/Gaps/Defining_rules
 l10n:
-  sourceCommit: a4ff34eef85ccb654c5c3af7974caba396e8adcf
+  sourceCommit: e57c161bccdd08db7e46922255e1dc3ea74058d4
 ---
 
-[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)、 [フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout) を作成する際、行と列の間にある溝の中央に装飾線、つまり「罫線」を追加することができます。すべての隙間、あるいは一部の隙間に罫線を表示したり、罫線の幅、色、インセットを完全にアニメーションさせたりすることが可能です。このガイドでは、これらの罫線の幅、色、スタイルを指定します。
+[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)レイアウトでは、行と列の間にある溝の中央に装飾線、つまり「罫線」を追加できます。すべての隙間、または一部の隙間に罫線を表示でき、罫線の幅、色、インセットはすべてアニメーション可能です。このガイドでは、罫線の幅、色、スタイルの指定方法を説明します。
 
 ## 概要
 
-[CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps#properties)モジュールでは、グリッド、フレックスボックス、段組みコンテナーの溝（隙間）の中に、コンテンツの背後に描画される線の外観を指定するいくつかのプロパティが定義されています。これらの線は、[ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model/Introduction)やレイアウトには影響を与えません。溝のサイズは {{cssxref("gap")}} プロパティによって定義され、デフォルト値は段組みコンテナーでは `1em`、それ以外のコンテキストでは `0` です。
+[CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps#プロパティ)モジュールでは、グリッド、フレックスボックス、段組みコンテナーの溝（隙間）の中に、コンテンツの背後に描画される線の外観を指定するいくつかのプロパティが定義されています。これらの線は、[ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model/Introduction)やレイアウトには影響を与えません。溝のサイズは {{cssxref("gap")}} プロパティによって定義され、デフォルト値は段組みコンテナーでは `1em`、それ以外のコンテキストでは `0` です。
 
 罫線が {{cssxref("gap")}} よりも幅が広い場合、コンテンツが隠れないように、コンテンツの背後に線が描画されます。それでも、コンテンツ、背景、罫線の[色のコントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)が十分であり、可読性を確保できることを確認する必要があります。
 
-{{glossary("gutters")}} や隙間を含むレイアウトにおいて、指定されたレイアウトコンテキスト内で隣接するボックス間の間隔を指定する方法の詳細については、[CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)を参照してください。
+{{glossary("gutters", "溝")}}や隙間を含むレイアウトにおいて、指定されたレイアウトコンテキスト内で隣接するボックス間の間隔を指定する方法の詳細については、[CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)を参照してください。
 
 罫線の色、線幅、線種の各プロパティはすべて、カンマ区切りの値のリストを受け入れるため、コンテナー内で隙間のさまざまな装飾を設定することができます。
 
@@ -90,7 +90,7 @@ div {
 {{cssxref("column-rule-color")}} プロパティは、列間に描画される線の色を指定し、{{cssxref("row-rule-color")}} プロパティは、行間に描画される線の色を定義し、{{cssxref("rule-color")}} プロパティは、`column-rule-color` と `row-rule-color` の両方を同じ値に設定します。これらのプロパティはすべて、カンマ区切りの値のリストとして指定し、以下の値を含めることができます。
 
 - {{cssxref("&lt;color&gt;")}}
-  - : 行の色を指定する有効な `<color>` の値。デフォルトは `currentcolor` です。
+  - : 罫線の色を指定する有効な `<color>` の値。デフォルトは `currentcolor` です。
 
 - `<repeat-line-color>`
   - : {{cssxref("repeat()")}} 関数。最初の引数として {{cssxref("&lt;integer&gt;")}} を、その後の引数として 1 つ以上の `<color>` 値を指定します。`1` 以上の値を持つ `<integer>` は、`<color>` 値のリストを何回繰り返すかを指定します。
@@ -138,7 +138,7 @@ div {
 
 黒い罫線は隙間の中央に配置されます。これは、1 本目の列の隙間で最も顕著であり、`20px` の隙間の中央に `10px` の線が引かれています。罫線はコンテンツの背後に描画されます。これは、`rule-width` が `gap` よりも大きい場合に最も顕著で、半透明のグリッドアイテム越しに線が表示されます。
 
-グリッドアイテムはすべて、黒いテキストと、半透明でほぼ白に近い背景色を持っています。コンテンツに {{cssxref("background-color")}} を指定することで、罫線がはみ出した場合でも、アクセシビリティ上の問題が発生しないように保証できます。コンテンツがアクセシブルであるためには、[十分なコントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)が背景（背景色や罫線の色）と、 テキストやその他の[重要な視覚情報](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)との間に確保されている必要があります。
+グリッドアイテムはすべて、黒いテキストと、半透明でほぼ白に近い背景色を持っています。コンテンツに {{cssxref("background-color")}} を指定すると、罫線がはみ出した場合でもアクセシビリティ上の問題を防ぐのに役立ちます。コンテンツのアクセシビリティを確保するには、背景（背景色または罫線の色）と、テキストやその他の[重要な視覚情報](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)<sup>(英語)</sup>との間に[十分なコントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)が必要です。
 
 ### 線種のプロパティ
 
@@ -270,7 +270,7 @@ div {
 
 ## 関連情報
 
-- [CSS 隙間の装飾プロパティの概要](/ja/docs/Web/CSS/Guides/Gaps/Overview)
+- [CSS 隙間と隙間装飾プロパティの概要](/ja/docs/Web/CSS/Guides/Gaps/Overview)
 - [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)モジュール
 - [CSS 境界とボックス装飾](/ja/docs/Web/CSS/Guides/Borders_and_box_decorations)モジュール

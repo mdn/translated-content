@@ -3,19 +3,19 @@ title: CSS 隙間
 short-title: 隙間
 slug: Web/CSS/Guides/Gaps
 l10n:
-  sourceCommit: f641d1e7c63d8300c9ff1c6a24158a80e1f24ab0
+  sourceCommit: e57c161bccdd08db7e46922255e1dc3ea74058d4
 ---
 
 **CSS 隙間**モジュールを使用すると、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)レイアウトにおいて、アイテム間の間隔（または「隙間」）を指定できます。[CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)モジュールでは、もともと段組みコンテナー内で段間を制御する間隔や段間罫が定義されていました。本モジュールは、隙間装飾と呼ばれるこれらの視覚的な区切り要素を拡張し、グリッドとフレックスボックスにも適用できるようにしています。
 
-{{cssxref("margin")}} や {{cssxref("padding")}} は個々のボックスの周囲の視覚的な余白を指定するものですが、このモジュールのプロパティを使用すると、{{glossary("gutters", "溝")}}や隙間を含むレイアウトにおいて、特定のレイアウトコンテキスト内の隣接するボックス間の空間を指定することができます。これは、最初や最後のボックスとコンテナーの端との間と、兄弟ボックス間の間隔が異なる場合に、特定のレイアウトコンテキスト内の隣接するボックス間の間隔を指定することができます。すべての隙間、または一部の隙間に罫線を表示させ、完全にアニメーション可能な罫線の幅、色、インセットを定義することができます。
+{{cssxref("margin")}} や {{cssxref("padding")}} は個々のボックスの周囲の視覚的な間隔を指定しますが、このモジュールのプロパティを使用すると、{{glossary("gutters", "溝")}}や隙間を含むレイアウトにおいて、最初または最後のボックスとコンテナーの端との間隔とは異なる、兄弟ボックス間の間隔を指定できます。すべての隙間、または一部の隙間に罫線を表示し、アニメーション可能な罫線の幅、色、インセットを定義できます。
 
 隙間の装飾は、1 つまたは複数の隙間装飾区間として隙間の内部に描画され、これらの区間は任意の 2 つの隣接するアイテムの間に生じます。
 すべての区間が描画されると、列間罫と行間罫はコンテナーの高さと幅全体に及びます。{{cssxref("rule-visibility-items")}} プロパティは、アイテムで占められていない領域の周囲に区間を描画するかどうかを定義します。{{cssxref("rule-break")}} プロパティは、行が隙間と交差した際に折り返すかどうかを決定し、{{cssxref("rule-inset")}} は、行が折り返された場合の区間の開始位置と終了位置を定義します。折り返されない場合、{{cssxref("rule-overlap")}} プロパティが線の描画順序を定義します。
 
 ## 隙間の実演
 
-この例では、2021 年の米国大統領就任式でアマンダ・ゴーマンが朗読した詩 _The Hill We Climb_ が、紙面の新聞記事と同様に、複数の段にまたがって表示されています。JavaScriptが有効になっている場合、コントロールを使用して {{cssxref("column-gap")}}、 {{cssxref("column-rule-color")}}、{{cssxref("column-rule-style")}}、{{cssxref("column-rule-width")}} といったプロパティのほか、推奨する段数や、タイトルと引用文をすべての段組みにまたがらせるかどうかを設定できます。
+この例では、2021 年の米国大統領就任式でアマンダ・ゴーマンが朗読した詩 _The Hill We Climb_ が、紙面の新聞記事と同様に、複数の段にまたがって表示されています。JavaScript が有効な場合、コントロールを使用して {{cssxref("column-gap")}}、{{cssxref("column-rule-color")}}、{{cssxref("column-rule-style")}}、{{cssxref("column-rule-width")}} といったプロパティに加えて、希望する段数やタイトルと引用文をすべての段にまたがらせるかどうかを設定できます。
 
 ```html hidden live-sample___multicol
 <article>
@@ -290,12 +290,12 @@ columnRuleColor.addEventListener("input", () => {
 
 function showAndHideMenu() {
   if (legendBtn.getAttribute("aria-expanded") === "true") {
-    // close it
+    // 閉じる
     legendBtn.setAttribute("aria-expanded", "false");
     legend.classList.add("closed");
     legend.classList.remove("open");
   } else {
-    // open it
+    // 開く
     legendBtn.setAttribute("aria-expanded", "true");
     legend.classList.remove("closed");
     legend.classList.add("open");
@@ -452,6 +452,8 @@ blockquote p::after {
 
 ## ガイド
 
+- [CSS 隙間の装飾プロパティの概要](/ja/docs/Web/CSS/Guides/Gaps/Overview)
+  - : CSS 隙間モジュールで導入された機能の概要。
 - [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
   - : グリッド、フレックスボックス、段組みレイアウトにおける隙間の理解と定義に関するガイド。パーセント値の処理方法についても記載します。
 - [CSS 隙間の罫線の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_rules)
