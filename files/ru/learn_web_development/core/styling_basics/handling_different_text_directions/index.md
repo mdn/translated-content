@@ -1,132 +1,344 @@
 ---
 title: Изменение направления текста
 slug: Learn_web_development/Core/Styling_basics/Handling_different_text_directions
+l10n:
+  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
+Многие свойства и значения, с которыми мы до сих пор сталкивались при изучении CSS, были привязаны к физическим измерениям экрана. Например, мы создаём рамки сверху, справа, снизу и слева от блока. Эти физические измерения очень хорошо ложатся на контент, который читают по горизонтали, и по умолчанию веб лучше поддерживает языки с письмом слева направо (например, английский или французский), чем языки с письмом справа налево (например, арабский).
 
-Многие свойства и значения, с которыми мы столкнулись до сих пор при изучении CSS, были привязаны к физическим размерам нашего экрана. Мы создаём границы, например, сверху, справа, снизу и слева от коробки.Эти физические размеры очень точно соответствуют контенту, который просматривается по горизонтали, и по умолчанию Интернет имеет тенденцию поддерживать языки с письмом слева направо (например, английский или французский) лучше, чем языки с письмом справа налево (например, арабский).
+Однако в последние годы CSS развивался, чтобы лучше поддерживать разные направления контента: не только справа налево, но и сверху вниз (как в японском). Эти разные направления называются **режимами письма**. По мере того как вы продвигаетесь в обучении и начинаете работать с макетами, понимание режимов письма будет очень полезно, поэтому мы познакомимся с ними уже сейчас.
 
-Однако в последние годы CSS развивался чтобы лучше поддерживать разную направленность контента, включая контент с направлением справа налево, а также контент сверху вниз (например, в японском языке) - эти разные направления называются режимами письма. По мере того, как вы продвигаетесь в обучении и начинаете работать с макетом, понимание режимов письма будет вам очень полезно, поэтому мы сейчас и познакомимся с ними.
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Необходимые условия:</th>
+      <td>
+        <a
+          href="/ru/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
+          >Установленное базовое программное обеспечение</a
+        >, базовые знания о
+        <a
+          href="/ru/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
+          >работе с файлами</a
+        >, основы HTML (изучите
+        <a href="/ru/docs/Learn_web_development/Core/Structuring_content"
+          >Введение в HTML</a
+        >) и представление о том, как работает CSS (изучите
+        <a href="/ru/docs/Learn_web_development/Core/Styling_basics">Основы стилизации CSS</a>).
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Цель:</th>
+      <td>Понять важность режимов письма для современного CSS.</td>
+    </tr>
+  </tbody>
+</table>
 
-| Prerequisites: | Basic computer literacy, [basic software installed](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), basic knowledge of [working with files](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)), and an idea of how CSS works (study [CSS first steps](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics).) |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:          | Понять важность режимов письма для современного CSS.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+## Что такое режимы письма?
 
-## Какие бывают режимы письма?
+Режим письма в CSS определяет, идёт ли текст по горизонтали или по вертикали. Свойство {{cssxref("writing-mode")}} позволяет переключаться с одного режима письма на другой. Для этого не обязательно работать с языком, использующим вертикальное письмо: вы можете менять режим письма отдельных частей макета в творческих целях.
 
-Режим письма в CSS определяет, идёт ли текст по горизонтали или по вертикали. Свойство {{cssxref ("writing-mode")}} позволяет нам переключаться из одного режима письма в другой. Для этого вам не обязательно работать на языке, который использует режим вертикального письма - вы также можете изменить режим письма частей вашего макета для творческих целей.
+В примере ниже заголовок отображается с использованием `writing-mode: vertical-rl`. Теперь текст идёт вертикально. Вертикальный текст часто используется в графическом дизайне и может быть способом придать вашему веб-дизайну более интересный вид.
 
-В приведённом ниже примере заголовок отображается с использованием `writing-mode: vertical-rl`. Теперь текст идёт вертикально. Вертикальный текст часто используется в графическом дизайне и может быть способом добавить более интересный вид вашему веб-дизайну.
+```html live-sample___simple-vertical
+<h1>Поиграйте с режимами письма</h1>
+```
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}
+```css live-sample___simple-vertical
+body {
+  font-family: sans-serif;
+  height: 300px;
+}
+h1 {
+  writing-mode: vertical-rl;
+  color: white;
+  background-color: black;
+  padding: 10px;
+}
+```
 
-Три возможных значения свойства [`writing-mode`](/ru/docs/Web/CSS/Reference/Properties/writing-mode):
+{{EmbedLiveSample("simple-vertical", "", "350px")}}
 
-- `horizontal-tb`: Направление потока блока сверху вниз. Предложения идут горизонтально.
-- `vertical-rl`: Направление потока блоков справа налево. Предложения идут вертикально.
-- `vertical-lr`: Направление потока блока слева направо. Предложения идут вертикально.
+Три возможных значения свойства {{cssxref("writing-mode")}}:
 
-Таким образом, свойство `writing-mode` на самом деле устанавливает направление, в котором элементы уровня блока отображаются на странице - сверху вниз, справа налево или слева направо. Это затем определяет направление движения текста в предложениях.
+- `horizontal-tb`: направление потока блоков сверху вниз. Предложения идут горизонтально.
+- `vertical-rl`: направление потока блоков справа налево. Предложения идут вертикально.
+- `vertical-lr`: направление потока блоков слева направо. Предложения идут вертикально.
 
-## Writing modes and block and inline layout
+Таким образом, свойство `writing-mode` на самом деле задаёт направление, в котором блочные элементы отображаются на странице: сверху вниз, справа налево или слева направо. Это, в свою очередь, определяет направление текста в предложениях.
 
-We have already discussed [block and inline layout](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model#block_and_inline_boxes), and the fact that some things display as block elements and others as inline elements. As we have seen described above, block and inline is tied to the writing mode of the document, and not the physical screen. Blocks are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.
+## Режимы письма и блочная и строчная раскладка
 
-If we look at an example this will become clearer. In this next example I have two boxes that contain a heading and a paragraph. The first uses `writing-mode: horizontal-tb`, a writing mode that is written horizontally and from the top of the page to the bottom. The second uses `writing-mode: vertical-rl`; this is a writing mode that is written vertically and from right to left.
+Мы уже обсуждали [блочную и строчную раскладку](/ru/docs/Web/CSS/Guides/Display/Block_and_inline_layout) и то, что одни элементы отображаются как блочные, а другие как строчные. Как мы увидели выше, блочность и строчность привязаны к режиму письма документа, а не к физическому экрану. Блоки отображаются сверху вниз по странице только в том случае, если используется режим письма с горизонтальным текстом, как в английском.
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/block-inline.html", '100%', 1200)}}
+На примере это станет понятнее. В следующем примере два блока, каждый с заголовком и абзацем. В первом используется `writing-mode: horizontal-tb`: режим письма, при котором текст пишется горизонтально и сверху вниз. Во втором используется `writing-mode: vertical-rl`: режим письма, при котором текст пишется вертикально и справа налево.
 
-When we switch the writing mode, we are changing which direction is block and which is inline. In a `horizontal-tb` writing mode the block direction runs from top to bottom; in a `vertical-rl` writing mode the block direction runs right-to-left horizontally. So the **block dimension** is always the direction blocks are displayed on the page in the writing mode in use. The **inline dimension** is always the direction a sentence flows.
+```html live-sample___block-inline
+<div class="wrapper">
+  <div class="box horizontal">
+    <h2>Заголовок</h2>
+    <p>Абзац, демонстрирующий режимы письма в CSS.</p>
+  </div>
+  <div class="box vertical">
+    <h2>Заголовок</h2>
+    <p>Абзац, демонстрирующий режимы письма в CSS.</p>
+  </div>
+</div>
+```
 
-This figure shows the two dimensions when in a horizontal writing mode.![Showing the block and inline axis for a horizontal writing mode.](horizontal-tb.png)
+```css live-sample___block-inline
+body {
+  font-family: sans-serif;
+  height: 300px;
+}
+.wrapper {
+  display: flex;
+}
 
-This figure shows the two dimensions in a vertical writing mode.
+.box {
+  border: 1px solid #cccccc;
+  padding: 0.5em;
+  margin: 10px;
+}
 
-![Showing the block and inline axis for a vertical writing mode.](vertical.png)
+.horizontal {
+  writing-mode: horizontal-tb;
+}
 
-Once you start to look at CSS layout, and in particular the newer layout methods, this idea of block and inline becomes very important. We will revisit it later on.
+.vertical {
+  writing-mode: vertical-rl;
+}
+```
 
-### Direction
+{{EmbedLiveSample("block-inline", "", "350px")}}
 
-In addition to writing mode we also have text direction. As mentioned above, some languages such as Arabic are written horizontally, but right-to-left. This is not something you are likely to use in a creative sense — if you simply want to line something up on the right there are other ways to do so — however it is important to understand this as part of the nature of CSS. The web is not just for languages that are displayed left-to-right!
+Переключая режим письма, мы меняем, какое направление считается блочным, а какое строчным. В режиме письма `horizontal-tb` блочное направление идёт сверху вниз; в режиме `vertical-rl` блочное направление идёт горизонтально справа налево. Итак, **блочное измерение** — это всегда направление, в котором блоки отображаются на странице в используемом режиме письма. **Строчное измерение** — это всегда направление, в котором идёт предложение.
 
-Due to the fact that writing mode and direction of text can change, newer CSS layout methods do not refer to left and right, and top and bottom. Instead they will talk about _start_ and _end_ along with this idea of inline and block. Don't worry too much about that right now, but keep these ideas in mind as you start to look at layout; you will find it really helpful in your understanding of CSS.
+На этом рисунке показаны оба измерения в горизонтальном режиме письма.![Блочная и строчная оси в горизонтальном режиме письма.](horizontal-tb.png)
 
-## Logical properties and values
+На этом рисунке показаны оба измерения в вертикальном режиме письма.
 
-The reason to talk about writing modes and direction at this point in your learning however, is because of the fact we have already looked at a lot of properties which are tied to the physical dimensions of the screen, and make most sense when in a horizontal writing mode.
+![Блочная и строчная оси в вертикальном режиме письма.](vertical.png)
 
-Let's take a look at our two boxes again — one with a `horizontal-tb` writing mode and one with `vertical-rl`. I have given both of these boxes a {{cssxref("width")}}. You can see that when the box is in the vertical writing mode, it still has a width, and this is causing the text to overflow.
+Когда вы начнёте изучать раскладку в CSS, и особенно новые методы раскладки, идея блочного и строчного направлений станет очень важной. Мы ещё вернёмся к ней позже.
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/width.html", '100%', 1200)}}
+### Направление
 
-What we really want in this scenario, is to essentially swap height and width along with the writing mode. When we're in a vertical writing mode we want the box to expand in the block dimension just like it does in the horizontal mode.
+Помимо режима письма есть ещё направление текста. Как упоминалось выше, некоторые языки, например арабский, пишутся горизонтально, но справа налево. Вряд ли вы будете использовать это в творческих целях — если вам просто нужно выровнять что-то по правому краю, есть другие способы, — но это важно понимать как часть природы CSS. Веб предназначен не только для языков, которые отображаются слева направо!
 
-To make this easier, CSS has recently developed a set of mapped properties. These essentially replace physical properties — things like `width` and `height` — with **logical**, or **flow relative** versions.
+Из-за того, что режим письма и направление текста могут меняться, новые методы раскладки в CSS не оперируют понятиями «слева» и «справа», «сверху» и «снизу». Вместо этого они говорят о _начале_ и _конце_ вместе с идеей строчного и блочного направлений. Не переживайте об этом сейчас, но держите эти идеи в голове, когда начнёте изучать раскладку: они очень помогут вам в понимании CSS.
 
-The property mapped to `width` when in a horizontal writing mode is called {{cssxref("inline-size")}} — it refers to the size in the inline dimension. The property for `height` is named {{cssxref("block-size")}} and is the size in the block dimension. You can see how this works in the example below where we have replaced `width` with `inline-size`.
+## Логические свойства и значения
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/inline-size.html", '100%', 1200)}}
+Мы говорим о режимах письма и направлении на этом этапе обучения потому, что уже рассмотрели много свойств, привязанных к физическим измерениям экрана, и они имеют больше смысла в горизонтальном режиме письма.
 
-### Logical margin, border, and padding properties
+Давайте снова посмотрим на наши два блока: один с режимом письма `horizontal-tb`, другой с `vertical-rl`. Обоим блокам задано свойство {{cssxref("width")}}. Как видно, когда блок находится в вертикальном режиме письма, у него по-прежнему есть ширина, и из-за этого текст переполняет блок.
 
-In the last two lessons we have learned about the CSS box model, and CSS borders. In the margin, border, and padding properties you will find many instances of physical properties, for example {{cssxref("margin-top")}}, {{cssxref("padding-left")}}, and {{cssxref("border-bottom")}}. In the same way that we have mappings for width and height there are mappings for these properties.
+```html live-sample___width
+<div class="wrapper">
+  <div class="box horizontal">
+    <h2>Заголовок</h2>
+    <p>Абзац, демонстрирующий режимы письма в CSS.</p>
+    <p>У этих блоков задана ширина.</p>
+  </div>
+  <div class="box vertical">
+    <h2>Заголовок</h2>
+    <p>Абзац, демонстрирующий режимы письма в CSS.</p>
+    <p>У этих блоков задана ширина.</p>
+  </div>
+</div>
+```
 
-The `margin-top` property is mapped to {{cssxref("margin-block-start")}} — this will always refer to the margin at the start of the block dimension.
+```css live-sample___width
+body {
+  font-family: sans-serif;
+  height: 300px;
+}
+.wrapper {
+  display: flex;
+}
 
-The {{cssxref("padding-left")}} property maps to {{cssxref("padding-inline-start")}}, the padding that is applied to the start of the inline direction. This will be where sentences start in that writing mode. The {{cssxref("border-bottom")}} property maps to {{cssxref("border-block-end")}}, which is the border at the end of the block dimension.
+.box {
+  border: 1px solid #cccccc;
+  padding: 0.5em;
+  margin: 10px;
+  width: 100px;
+}
 
-You can see a comparison between physical and logical properties below.
+.horizontal {
+  writing-mode: horizontal-tb;
+}
 
-**If you change the writing mode of the boxes by switching the `writing-mode` property on `.box` to `vertical-rl`, you will see how the physical properties stay tied to their physical direction, whereas the logical properties switch with the writing mode.**
+.vertical {
+  writing-mode: vertical-rl;
+}
+```
 
-**You can also see that the {{htmlelement("h2")}} has a black `border-bottom`. Can you work out how to make that bottom border always go below the text in both writing modes?**
+{{EmbedLiveSample("width", "", "350px")}}
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
+На самом деле в этой ситуации мы хотим, чтобы высота и ширина менялись местами вместе с режимом письма. В вертикальном режиме письма блок должен расширяться в блочном измерении так же, как он это делает в горизонтальном режиме.
 
-There are a huge number of properties when you consider all of the individual border longhands, and you can see all of the mapped properties on the MDN page for [Logical Properties and Values](/ru/docs/Web/CSS/CSS_logical_properties_and_values).
+Чтобы упростить это, в CSS недавно появился набор сопоставленных свойств. По сути, они заменяют физические свойства — такие как `width` и `height` — их **логическими**, или **относительными потоку**, версиями.
 
-### Logical values
+Свойство, соответствующее `width` в горизонтальном режиме письма, называется {{cssxref("inline-size")}}: оно задаёт размер в строчном измерении. Свойство для `height` называется {{cssxref("block-size")}} и задаёт размер в блочном измерении. Как это работает, видно в примере ниже, где мы заменили `width` на `inline-size`.
 
-We have so far looked at logical property names. There are also some properties that take physical values of `top`, `right`, `bottom`, and `left`. These values also have mappings, to logical values — `block-start`, `inline-end`, `block-end`, and `inline-start`.
+```html live-sample___inline-size
+<div class="wrapper">
+  <div class="box horizontal">
+    <h2>Заголовок</h2>
+    <p>Абзац, демонстрирующий режимы письма в CSS.</p>
+    <p>У этих блоков задан inline-size.</p>
+  </div>
+  <div class="box vertical">
+    <h2>Заголовок</h2>
+    <p>Абзац, демонстрирующий режимы письма в CSS.</p>
+    <p>У этих блоков задан inline-size.</p>
+  </div>
+</div>
+```
 
-For example, you can float an image left to cause text to wrap round the image. You could replace `left` with `inline-start` as shown in the example below.
+```css live-sample___inline-size
+.wrapper {
+  display: flex;
+}
 
-**Change the writing mode on this example to `vertical-rl` to see what happens to the image. Change `inline-start` to `inline-end` to change the float.**
+.box {
+  border: 1px solid #cccccc;
+  padding: 0.5em;
+  margin: 10px;
+  inline-size: 100px;
+}
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/float.html", '100%', 1200)}}
+.horizontal {
+  writing-mode: horizontal-tb;
+}
 
-Here we are also using logical margin values to ensure the margin is in the correct place no matter what the writing mode is.
+.vertical {
+  writing-mode: vertical-rl;
+}
+```
 
-### Should you use physical or logical properties?
+{{EmbedLiveSample("inline-size", "", "300px")}}
 
-The logical properties and values are newer than their physical equivalents, and therefore have only recently been implemented in browsers. You can check any property page on MDN to see how far back the browser support goes. If you are not using multiple writing modes then for now you might prefer to use the physical versions. However, ultimately we expect that people will transition to the logical versions for most things, as they make a lot of sense once you start also dealing with layout methods such as flexbox and grid.
+### Логические свойства внешних отступов, рамок и внутренних отступов
 
-## Summary
+В двух предыдущих уроках мы изучили блочную модель CSS и рамки CSS. Среди свойств внешних отступов, рамок и внутренних отступов вы найдёте много физических свойств, например {{cssxref("margin-top")}}, {{cssxref("padding-left")}} и {{cssxref("border-bottom")}}. Так же, как есть соответствия для ширины и высоты, есть соответствия и для этих свойств.
 
-The concepts explained in this lesson are becoming increasingly important in CSS. An understanding of the block and inline direction — and how text flow changes with a change in writing mode — will be very useful going forward. It will help you in understanding CSS even if you never use a writing mode other than a horizontal one.
+Свойству `margin-top` соответствует {{cssxref("margin-block-start")}}: оно всегда обозначает внешний отступ в начале блочного измерения.
 
-In the next module we will take a good look at overflow in CSS.
+Свойству {{cssxref("padding-left")}} соответствует {{cssxref("padding-inline-start")}}: внутренний отступ, применяемый в начале строчного направления. Это то место, где в данном режиме письма начинаются предложения. Свойству {{cssxref("border-bottom")}} соответствует {{cssxref("border-block-end")}}: рамка в конце блочного измерения.
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
+Ниже можно сравнить физические и логические свойства.
 
-## In this module
+Если вы измените режим письма блоков, переключив свойство `writing-mode` у `.box` на `vertical-rl`, то увидите, что физические свойства остаются привязанными к своему физическому направлению, тогда как логические свойства переключаются вместе с режимом письма.
 
-1. [Cascade and inheritance](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-2. [CSS selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-   - [Type, class, and ID selectors](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
-   - [Attribute selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
-   - [Pseudo-classes and pseudo-elements](/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
-   - [Combinators](/ru/docs/Learn_web_development/Core/Styling_basics/Combinators)
+Также обратите внимание, что у {{htmlelement("Heading_Elements", "h2")}} есть чёрная рамка `border-bottom`. Сможете ли вы придумать, как сделать так, чтобы эта нижняя рамка всегда располагалась под текстом в обоих режимах письма?
 
-3. [The box model](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model)
-4. [Backgrounds and borders](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
-5. [Handling different text directions](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
-6. [Overflowing content](/ru/docs/Learn_web_development/Core/Styling_basics/Overflow)
-7. [Values and units](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-8. [Sizing items in CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Sizing)
-9. [Images, media, and form elements](/ru/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)
-10. [Styling tables](/ru/docs/Learn_web_development/Core/Styling_basics/Tables)
-11. [Debugging CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)
-12. [Organizing your CSS](/ru/docs/Learn/CSS/Building_blocks/Organizing)
+```html live-sample___logical-mbp
+<div class="wrapper">
+  <div class="box physical">
+    <h2>Физические свойства</h2>
+    <p>Абзац, демонстрирующий логические свойства в CSS.</p>
+  </div>
+  <div class="box logical">
+    <h2>Логические свойства</h2>
+    <p>Абзац, демонстрирующий логические свойства в CSS.</p>
+  </div>
+</div>
+```
+
+```css live-sample___logical-mbp
+.wrapper {
+  display: flex;
+  border: 5px solid #cccccc;
+}
+
+.box {
+  margin-right: 30px;
+  inline-size: 200px;
+  writing-mode: horizontal-tb;
+}
+
+.logical {
+  margin-block-start: 20px;
+  padding-inline-end: 2em;
+  padding-block-start: 2px;
+  border-block-start: 5px solid pink;
+  border-inline-end: 10px dotted rebeccapurple;
+  border-block-end: 1em double orange;
+  border-inline-start: 1px solid black;
+}
+
+.physical {
+  margin-top: 20px;
+  padding-right: 2em;
+  padding-top: 2px;
+  border-top: 5px solid pink;
+  border-right: 10px dotted rebeccapurple;
+  border-bottom: 1em double orange;
+  border-left: 1px solid black;
+}
+
+h2 {
+  border-bottom: 5px solid black;
+}
+```
+
+{{EmbedLiveSample("logical-mbp", "", "200px")}}
+
+Если учесть все отдельные полные формы свойств рамок, таких свойств получается очень много. Все сопоставленные свойства можно посмотреть на странице MDN [Логические свойства и значения](/ru/docs/Web/CSS/Guides/Logical_properties_and_values).
+
+### Логические значения
+
+До сих пор мы рассматривали логические имена свойств. Есть также свойства, которые принимают физические значения `top`, `right`, `bottom` и `left`. У этих значений тоже есть соответствия среди логических значений: `block-start`, `inline-end`, `block-end` и `inline-start`.
+
+Например, вы можете обтекать изображение текстом, задав ему float влево. Вместо `left` можно использовать `inline-start`, как показано в примере ниже.
+
+Измените режим письма в этом примере на `vertical-rl`, чтобы увидеть, что произойдёт с изображением. Замените `inline-start` на `inline-end`, чтобы изменить сторону обтекания:
+
+```html live-sample___float
+<div class="wrapper">
+  <div class="box logical">
+    <img
+      alt="звезда"
+      src="https://mdn.github.io/shared-assets/images/examples/big-star.png" />
+    <p>
+      В этом блоке используются логические свойства. Изображению звезды задано
+      обтекание inline-start, а также внешние отступы inline-end и block-end.
+    </p>
+  </div>
+</div>
+```
+
+```css live-sample___float
+.wrapper {
+  display: flex;
+}
+
+.box {
+  margin: 10px;
+  padding: 0.5em;
+  border: 1px solid #cccccc;
+  inline-size: 200px;
+  writing-mode: horizontal-tb;
+}
+
+img {
+  float: inline-start;
+  margin-inline-end: 10px;
+  margin-block-end: 10px;
+}
+```
+
+{{EmbedLiveSample("float", "", "200px")}}
+
+Здесь мы также используем логические значения внешних отступов, чтобы отступ оказался в правильном месте независимо от режима письма.
+
+### Что использовать: физические или логические свойства?
+
+Логические свойства и значения появились позже своих физических эквивалентов и поэтому реализованы в браузерах сравнительно недавно. На странице любого свойства на MDN можно посмотреть, с какой версии его поддерживают браузеры. Если вы не используете несколько режимов письма, то пока можете предпочесть физические версии. Тем не менее мы ожидаем, что со временем люди перейдут на логические версии для большинства задач, поскольку они обретают особый смысл, когда вы начинаете работать с такими методами раскладки, как флексбоксы и гриды.
+
+## Итоги
+
+Понятия, объяснённые в этом уроке, становятся в CSS всё важнее. Понимание блочного и строчного направлений — и того, как меняется поток текста при смене режима письма — очень пригодится в дальнейшем. Оно поможет вам понимать CSS, даже если вы никогда не будете использовать никакой режим письма, кроме горизонтального.
