@@ -721,7 +721,7 @@ console.log(color instanceof ColorWithAlpha); // true
 
 ```js
 function incrementDay(date) {
-  return date.setDate(date.getDate() + 1);
+  return new Date(date.setDate(date.getDate() + 1));
 }
 const date = new Date(); // 2019-06-19
 const newDay = incrementDay(date);
