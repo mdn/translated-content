@@ -1,24 +1,25 @@
 ---
 title: "ToggleEvent: oldState プロパティ"
+short-title: oldState
 slug: Web/API/ToggleEvent/oldState
 l10n:
-  sourceCommit: 559c464755abf4ca999a21ce7f3cb1027143f68f
+  sourceCommit: 759102220c07fb140b3e06971cd5981d8f0f134f
 ---
 
-{{APIRef("Popover API")}}{{SeeCompatTable}}
+{{APIRef("Popover API")}}
 
-**`oldState`** は {{domxref("ToggleEvent")}} インターフェイスの読み取り専用プロパティで、この要素が遷移する前の状態を表す文字列です。
+**`oldState`** は {{domxref("ToggleEvent")}} インターフェイスの読み取り専用プロパティで、要素の遷移元の状態を表す文字列です。
 
 ## 値
 
-文字列です。取りうる値は `"open"`（ポップオーバーが表示されている）または `"closed"`（ポップオーバーが非表示になっている）です。
+文字列です。取りうる値は `"open"`（ポップオーバーが表示状態から非表示状態へ移行する）または `"closed"`（ポップオーバーが非表示状態から表示状態へ移行する）です。
 
 ## 例
 
 ```js
 const popover = document.getElementById("mypopover");
 
-// ...
+// …
 
 popover.addEventListener("beforetoggle", (event) => {
   if (event.oldState === "open") {
