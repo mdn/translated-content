@@ -3,12 +3,12 @@ title: "HTMLButtonElement: popoverTargetAction プロパティ"
 short-title: popoverTargetAction
 slug: Web/API/HTMLButtonElement/popoverTargetAction
 l10n:
-  sourceCommit: a4e0df90868c274842b083ad034eb60f57b76aae
+  sourceCommit: 847f754b374ed8928a270ab17672a1675802776f
 ---
 
 {{APIRef("Popover API")}}
 
-**`popoverTargetAction`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、この制御ボタンで制御されるポップオーバー要素で実行されるアクション（`"hide"`、`"show"`、`"toggle"` の何れか）を取得および設定します。
+**`popoverTargetAction`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、このボタンが制御するポップオーバー要素に対するアクション（`"hide"`、`"show"`、`"toggle"` のいずれか）を取得および設定します。
 
 これは HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性の値を反映します。
 
@@ -21,20 +21,20 @@ l10n:
 - `"show"`
   - : このボタンは非表示のポップオーバーを表示します。すでに表示中のポップオーバーを表示させようとした場合は、何も行われません。
 - `"toggle"`
-  - : このボタンはポップオーバーを表示と非表示の間でトグル切り替えします。ポップオーバーが非表示の場合は、表示されます。ポップオーバーが表示中の場合は、非表示になります。`popoverTargetAction` が設定されていない場合、`"toggle"` がこの制御ボタンで行われる既定のアクションになります。
+  - : このボタンはポップオーバーの表示と非表示を切り替えます。ポップオーバーが非表示の場合は表示され、表示中の場合は非表示になります。`popoverTargetAction` が設定されていない場合、`"toggle"` がこの制御ボタンで行われるデフォルトのアクションになります。
 
 ## 例
 
 ### 自動ポップオーバーにおけるポップオーバーの切り替え
 
-この例では、 `popoverTargetAction` プロパティに "toggle" 値を設定したポップオーバー API の基本的な使用例を示します。
-`popover` 属性は [`"auto"`](/ja/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) に設定されているので、ポップオーバーはポップオーバー領域の外側をクリックすることで閉じることができます("light-dismissed")。
+この例では、`popoverTargetAction` プロパティに `"toggle"` の値を設定した、ポップオーバー API の基本的な使用例を示します。
+`popover` 属性は [`"auto"`](/ja/docs/Web/API/Popover_API/Using#自動状態と「簡単な解除」) に設定されているので、ポップオーバー領域の外側をクリックすると、簡単な解除ができます。
 
 最初にポップオーバーの表示・非表示に使用する HTML 要素 `<button>` とポップオーバーになる `<div>` を定義します。
-この阿合、[`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性を `<button>` を設定したり、[`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性を `<div>` に設定したりはしません。プログラム的に行うからです。
+この場合、[`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性を `<button>` に設定したり、[`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性を `<div>` に設定したりはしません。プログラムで設定するからです。
 
 ```html
-<button id="toggleBtn">ポップオーバーのトグル切り替え</button>
+<button id="toggleBtn">ポップオーバーの切り替え</button>
 <div id="mypopover">これはポップオーバーの内容です。</div>
 ```
 
@@ -47,7 +47,7 @@ const toggleBtn = document.getElementById("toggleBtn");
 
 // ポップオーバー API に対応しているか確認
 function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+  return Object.hasOwn(HTMLElement.prototype, "popover");
 }
 ```
 
@@ -71,11 +71,11 @@ if (supportsPopover()) {
 ```
 
 > [!NOTE]
-> ポップオーバー要素は既定で非表示になりますが、要素が API に対応していない場合は「通常通り」表示されます。
+> ポップオーバー要素はデフォルトで非表示になりますが、要素が API に対応していない場合は「通常通り」表示されます。
 
 下記の例を試してみてください。
 ボタンを押すたびにポップオーバーを表示させたり非表示にしたりできます。
-`"auto"` ポップオーバーはポップオーバーテキストの範囲外を選択することで「簡単な解除」をすることもできます。
+`"auto"` ポップオーバーは、ポップオーバーのテキスト領域の外側をクリックして簡単に解除することもできます。
 
 {{EmbedLiveSample("Toggle popover action with an auto popover", "100%")}}
 
@@ -83,8 +83,8 @@ if (supportsPopover()) {
 
 この例では `popoverTargetAction` 属性の `"show"` と `"hide"` の値を使用する方法を示します。
 
-コードは前回の例とほぼ同じですが、2　つの `<button>` 要素があり、ポップオーバーが [`"manual"`](/ja/docs/Web/API/Popover_API/Using#手動のポップオーバー状態の使用) に設定されている点が異なります。
-`manual` ポップオーバーは明示的に閉じなければならず、ポップオーバー領域の外側を選択することで「簡単な解除」することはできません。
+コードは前回の例とほぼ同じですが、2 つの `<button>` 要素があり、ポップオーバーが [`"manual"`](/ja/docs/Web/API/Popover_API/Using#手動のポップオーバー状態の使用) に設定されている点が異なります。
+`manual` ポップオーバーは明示的に閉じなければならず、ポップオーバー領域の外側をクリックしても簡単な解除はできません。
 
 ```html
 <button id="showBtn">ポップオーバーを表示</button>
@@ -94,7 +94,7 @@ if (supportsPopover()) {
 
 ```js
 function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+  return Object.hasOwn(HTMLElement.prototype, "popover");
 }
 
 const popover = document.getElementById("mypopover");
@@ -121,7 +121,7 @@ if (supportsPopover()) {
 }
 ```
 
-ポップオーバーは、「ポップオーバーを表示」ボタンを選択することで表示させ、「ポップオーバーを隠す」ボタンを使用することで解除することができます。
+ポップオーバーは、「ポップオーバーを表示」ボタンを選択すると表示され、「ポップオーバーを非表示」ボタンを選択すると閉じます。
 
 {{EmbedLiveSample("Show/hide popover action with a manual popover", "100%")}}
 
