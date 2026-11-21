@@ -9,6 +9,3 @@ build/
 # Conflicting/orphaned files
 /files/**/conflicting/**/*.md
 /files/**/orphaned/**/*.md
-
-# XXX Ignored until https://github.com/prettier/prettier/issues/11828 is fixed
-/files/ru/web/javascript/guide/expressions_and_operators/index.md
