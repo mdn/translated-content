@@ -2,7 +2,7 @@
 title: パフォーマンス予算
 slug: Web/Performance/Guides/Performance_budgets
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: d93983dfe60b65633f67fffe04676c241ff92960
 ---
 
 パフォーマンス予算は、退行を防止するための制限です。これは、ファイル、ファイル形式、ページに読み込まれたすべてのファイル、特定の指標（例えば [Time to Interactive](/ja/docs/Glossary/Time_to_interactive)）、カスタム指標（例えば Time to Hero Element）、または一定期間にわたるしきい値に適用できます。
@@ -32,7 +32,7 @@ l10n:
 
 エラーレベルは上限の制限であり、この値を超える変更は悪影響を存在させ、顕著な問題を引き起こします。
 
-始めるためには、最初に、ユーザーが使用する端末と接続速度（例： 3G 接続の約 200 ドル相当の Android 端末）を複数の[ツール](/ja/docs/Learn_web_development/Extensions/Performance/Best_practices)を用いて測定する必要があります。これらの時点ベースの指標は、ファイルサイズの予算に対応させます。
+最初の手順として、複数の[ツール](/ja/docs/Learn_web_development/Extensions/Performance/Best_practices)を使い、ユーザーが利用している端末と接続速度（例：3G 接続の約 200 ドル相当の Android 端末）を測定します。これらの時間ベースの指標をファイルサイズの予算に換算します。
 
 直帰率を低減するための既定の基準値は、[Time to Interactive を 3G/4G 環境で 5 秒未満、その後の読み込みでは 2 秒未満に達成すること](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/)です。ただし、サイトの特定の目標やコンテンツによっては、他の指標に重点を置く選択も可能です。
 
@@ -45,7 +45,7 @@ l10n:
 開発中、新しい資産や変更された資産に対してチェックを実行するためのツールがいくつかあります。
 
 - モジュールバンドラー（例：[webpack](https://webpack.js.org/)）には、資産が指定された制限を超えた場合に通知する[パフォーマンス機能](https://webpack.js.org/configuration/performance/)が備わっています。
-- [Bundlesize](https://github.com/siddharthkp/bundlesize)は、継続的インテグレーション (CI) パイプライン内でファイルサイズを調べることができます。
+- [Bundlesize](https://github.com/siddharthkp/bundlesize)は、{{glossary("continuous integration", "継続的インテグレーション")}} (CI) パイプライン内でファイルサイズを調べることができます。
 
 ファイルサイズのチェックは退行に対する最初の防御線ですが、開発環境ではサードパーティ製スクリプトが不足している場合や、 [CDN](/ja/docs/Glossary/CDN) によって一般的に指定される最適化が適用されていない場合があるため、サイズを時間指標に対応させることは困難です。
 
