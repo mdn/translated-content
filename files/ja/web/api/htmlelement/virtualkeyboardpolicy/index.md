@@ -3,7 +3,7 @@ title: "HTMLElement: virtualKeyboardPolicy プロパティ"
 short-title: virtualKeyboardPolicy
 slug: Web/API/HTMLElement/virtualKeyboardPolicy
 l10n:
-  sourceCommit: c7e432ec4c970b0b63741101bacce148804138e4
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}
