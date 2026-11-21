@@ -1,8 +1,9 @@
 ---
 title: Element：firstElementChild 属性
+short-title: firstElementChild
 slug: Web/API/Element/firstElementChild
 l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
 {{ APIRef("DOM") }}
@@ -23,12 +24,12 @@ l10n:
   <li>Second (2)</li>
   <li>Third (3)</li>
 </ul>
+```
 
-<script>
-  const list = document.getElementById("list");
-  console.log(list.firstElementChild.textContent);
-  // 输出“First (1)”
-</script>
+```js
+const list = document.getElementById("list");
+console.log(list.firstElementChild.textContent);
+// 输出 "First (1)"
 ```
 
 ## 规范
