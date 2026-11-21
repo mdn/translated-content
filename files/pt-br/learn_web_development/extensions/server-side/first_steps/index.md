@@ -21,8 +21,8 @@ Antes de começarmos este módulo,você não precisa ter nenhum conhecimento de 
 Entretanto,você precisa saber como a web funciona.Nós recomendamos que você leia primeiro os seguintes tópicos:
 
 - [O que é um servidor?](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
-- [Qual o software eu preciso para construir um website?](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- [Como eu faço o upload de arquivos para um webserver?](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [Qual o software eu preciso para construir um website?](/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
+- [Como eu faço o upload de arquivos para um webserver?](/pt-BR/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 
 Com o entendimento básico disso, você estará pronto para trabalhar nos módulos desta seção.
 
