@@ -31,7 +31,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_dat
 4. [Домашняя страница](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page)
 5. [Страница списка книг](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
 6. [Страница списка экземпляров книг](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
-7. [Форматирование даты с момента использования](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
+7. [Форматирование даты с момента использования](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
 8. [Страница списка авторов и страница списка жанров](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
 9. [Страница сведений о жанре](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
 10. [Страница сведений о книге](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
