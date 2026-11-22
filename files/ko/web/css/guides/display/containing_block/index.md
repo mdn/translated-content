@@ -33,7 +33,7 @@ original_slug: Web/CSS/CSS_display/Containing_block
 4. `position` **속성이** `absolute` **나** `fixed` 인 경우, 다음 조건 중 하나를 만족하는 가장 가까운 조상의 내부 여백 영역이 컨테이닝 블록이 될 수도 있습니다.
    1. {{cssxref("transform")}}이나 {{cssxref("perspective")}} 속성이 `none`이 아님.
    2. {{cssxref("will-change")}} 속성이 `transform`이나 `perspective`임.
-   3. {{cssxref("filter")}} 속성이 `none`임. (Firefox에선 `will-change`가 `filter`일 때도 적용)
+   3. {{cssxref("filter")}} 속성이 `none`이 아님. (Firefox에선 `will-change`가 `filter`일 때도 적용)
    4. {{cssxref("contain")}} 속성이 `paint`임.
 
 > [!NOTE]

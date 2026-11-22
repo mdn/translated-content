@@ -3,7 +3,7 @@ title: Pour commencer avec le MDN Web Docs
 short-title: Pour commencer
 slug: MDN/Community/Getting_started
 l10n:
-  sourceCommit: da7287ff61b6ea4db7f9a5e07be11263b525b7d0
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
 
 Nous sommes une communauté ouverte de développeur·euse·s, rédacteur·ice·s techniques et apprenant·e·s qui construisent des ressources pour un Web meilleur, indépendamment de la marque, du navigateur ou de la plateforme.
@@ -72,5 +72,9 @@ Voici une liste de façons dont vous pouvez contribuer à MDN Web Docs&nbsp;:
 
 Lorsque vous contribuez, vous acceptez de rendre vos contributions disponibles sous la [licence Attribution-ShareAlike <sup>(angl.)</sup>](https://creativecommons.org/licenses/by-sa/4.0/) (ou une licence alternative déjà définie par la page que vous éditez).
 De plus, les exemples de code sont disponibles sous [Creative Commons CC-0 <sup>(angl.)</sup>](https://creativecommons.org/public-domain/cc0/) (une dédicace au domaine public).
+
+Vous êtes responsable de vos contributions. Vérifiez votre travail avant de l'envoyer et assurez-vous de pouvoir expliquer chaque modification.
+
+Assurez-vous que tout contenu est techniquement exact et que vous avez le droit de le publier sous ces conditions.
 
 Si vous avez des questions ou des préoccupations concernant quoi que ce soit discuté ici, veuillez [nous contacter](/fr/docs/MDN/Community/Communication_channels).

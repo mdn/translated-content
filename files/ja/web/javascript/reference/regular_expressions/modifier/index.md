@@ -2,7 +2,7 @@
 title: "修飾子: (?ims-ims:...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Modifier
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 288e644117c29285df2acf37a2ac97f57546a146
 ---
 
 **修飾子**は、正規表現の特定の部分の[フラグ](/ja/docs/Web/JavaScript/Reference/Regular_expressions#正規表現フラグ)設定を上書きします。これは、特定の正規表現構文要素の意味を変更するフラグを有効または無効にするために使用できます。これらのフラグは [`i`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase), [`m`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline), [`s`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll) です。
@@ -20,9 +20,9 @@ l10n:
 ### 引数
 
 - `flags1` {{optional_inline}}
-  - : 有効にするフラグの文字列です。 `i`、`m`、`s` を任意に組み合わせて含まれています。
+  - : 有効にするフラグの文字列です。`i`、`m`、`s` を任意に組み合わせて含まれています。
 - `flags2` {{optional_inline}}
-  - : 無効にするフラグの文字列です。`i`、`m`、`s` を任意に組み合わせることができますが、 `flags1` に含まれるフラグは含めることはできません。
+  - : 無効にするフラグの文字列です。`i`、`m`、`s` を任意に組み合わせることができますが、`flags1` に含まれるフラグは含めることはできません。
 - `pattern`
   - : [論理和](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)を含む、正規表現リテラルで使用できる何らかの文字で構成されるパターンです。
 
@@ -30,7 +30,7 @@ l10n:
 
 一部のフラグは、正規表現の構文要素の意味を変更します。
 
-- [`i`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) フラグは、すべての[リテラル文字](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)および[文字クラス](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)を暗黙的に小文字にして、正規表現が大文字と小文字を区別しないようにします。
+- [`i`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) フラグは、[リテラル文字](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)および[文字クラス](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)の大文字・小文字を正規化して、正規表現で大文字と小文字を区別しないようにします。
 - [`m`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline) フラグは、[入力境界アサーション](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion) `^` および `$` の動作を変更し、入力文字列の開始と終了に加えて、各行の開始と終了にも一致するようにします。
 - [`s`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll) フラグは、[ワイルドカード文字](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard) `.` の動作を変更し、改行文字を含むすべての文字に一致するようにします。
 

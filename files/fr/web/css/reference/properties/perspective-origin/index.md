@@ -3,10 +3,12 @@ title: Propriété CSS `perspective-origin`
 short-title: perspective-origin
 slug: Web/CSS/Reference/Properties/perspective-origin
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`perspective-origin`** détermine la position depuis laquelle le spectateur regarde le document. Elle est utilisée comme _point de fuite_ par la propriété {{CSSxRef("perspective")}}.
+
+Les propriétés **`perspective-origin`** et {{CSSxRef('perspective')}} sont à rattacher à l'élément parent de l'élément qu'on veut placer dans un espace 3D. En revanche, la fonction {{CSSxRef("transform-function/perspective", "perspective()")}} s'applique à même l'élément qu'on veut placer en 3D.
 
 {{InteractiveExample("Démonstrations CSS&nbsp;: perspective-origin")}}
 
@@ -98,8 +100,6 @@ perspective-origin: 500% 200%;
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
-
-Les propriétés **`perspective-origin`** et {{CSSxRef('perspective')}} sont à rattacher à l'élément parent de l'élément qu'on veut placer dans un espace 3D. En revanche, la fonction {{CSSxRef("transform-function/perspective", "perspective()")}} s'applique à même l'élément qu'on veut placer en 3D.
 
 ## Syntaxe
 

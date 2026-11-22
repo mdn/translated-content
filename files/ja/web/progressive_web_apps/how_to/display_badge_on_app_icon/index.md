@@ -2,10 +2,8 @@
 title: アプリアイコン上にバッジを表示する
 slug: Web/Progressive_web_apps/How_to/Display_badge_on_app_icon
 l10n:
-  sourceCommit: e03b13c7e157ec7b7bb02a6c7c4854b862195905
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
-
-{{PWASidebar}}
 
 モバイルおよびデスクトップのオペレーティングシステムのネイティブアプリケーションは、アプリアイコンの上部にバッジを表示し、ユーザーに新しいコンテンツが利用可能であることを通知できます。例えば、メールクライアントアプリケーションは、未読メッセージの総数をバッジに表示し、アプリケーションが実行中でない場合でもこの数を更新することができます。
 
@@ -22,7 +20,7 @@ l10n:
 アプリバッジは、 PWA がホストオペレーティングシステムにインストールされている場合のみ対応します。バッジは、アプリがインストールされた後に表示されるアプリアイコンにのみ表示されます。
 
 > [!NOTE]
-> この記事は、バッジ API の {{domxref("Navigator.setAppBadge()")}} および {{domxref("Navigator.clearAppBadge()")}} メソッドに焦点を当てており、 `Navigator.setClientBadge` および `Navigator.clearClientBadge` は無視します。これらのメソッドは[バッジ API 仕様書](https://w3c.github.io/badging/)（英語）にも定義されていますが、アプリケーションのアイコンではなく、文書にバッジを表示するために使用されるためです。
+> この記事では、バッジ API の {{domxref("Navigator.setAppBadge()")}} および {{domxref("Navigator.clearAppBadge()")}} メソッドを扱い、`Navigator.setClientBadge` および `Navigator.clearClientBadge` は取り上げません。これらのメソッドも[バッジ API 仕様書](https://w3c.github.io/badging/)（英語）で定義されていますが、アプリケーションのアイコンではなく、文書にバッジを表示するために使用されます。
 
 ### デスクトップの対応
 
@@ -44,9 +42,9 @@ l10n:
 
 ```js
 if (navigator.setAppBadge) {
-  // API に対応しており、使用できます。
+  // API に対応
 } else {
-  // API に対応しておらず、使用してはいけません。
+  // API 非対応
 }
 ```
 
@@ -66,7 +64,7 @@ Notification.requestPermission().then((result) => {
 
 ### バッジの使用は適度に
 
-通知と同様に、バッジは適度に使用することで、ユーザーをアプリに再エンゲージさせるとても効果的な手段となりえます。バッジは、ユーザーが知っておくべき重要な新しいコンテンツを通知する目的でのみ使用するようにしてください。
+通知と同様に、バッジは適度に使えば、ユーザーにアプリを再び使ってもらううえで非常に効果的です。ユーザーが知っておくべき重要な新しいコンテンツを知らせる目的に限って使用してください。
 
 ### リアルタイムでバッジを更新
 
@@ -116,7 +114,7 @@ if (navigator.clearAppBadge) {
 
 ## バックグラウンドでバッジを更新
 
-バッジは、ユーザーがアプリを使用していない際に、アプリへの再エンゲージメントを促進する有効な手段です。つまり、アプリは実行中でない場合でもバッジを更新できる必要があります。
+バッジは、ユーザーがアプリを使っていないときに、再び利用してもらうための有効な手段です。そのため、アプリが実行中でなくてもバッジを更新できる必要があります。
 
 PWA は、以下の仕組みを使用してバックグラウンドで更新し、バッジを表示、更新、非表示にできます。
 
@@ -152,7 +150,7 @@ self.addEventListener("push", (event) => {
 
 ## 関連情報
 
-- [How to create an app badge](https://web.dev/patterns/web-apps/badges/)
+- [How to create an app badge](https://web.dev/articles/web-apps/badges)
 - [Badging for app icons](https://developer.chrome.com/docs/capabilities/web-apis/badging-api)
-- [バッジと通知を使用してユーザーを再エンゲージメントする](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps-chromium/how-to/notifications-badges)
+- [バッジと通知を使用してユーザーを再エンゲージメントする](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps/how-to/notifications-badges)
 - [Codelab: Build a push notification server](https://web.dev/articles/push-notifications-server-codelab)

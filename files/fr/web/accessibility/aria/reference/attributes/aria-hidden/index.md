@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-hidden"
 short-title: aria-hidden
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-hidden
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 L'attribut `aria-hidden` indique un état d'élément déterminant s'il est exposé à une API d'accessibilité.
@@ -25,12 +25,12 @@ La présence de l'attribut `aria-hidden` masque le contenu aux technologies d'as
 > [!WARNING]
 > N'utilisez pas `aria-hidden="true"` sur des éléments pouvant recevoir la sélection.
 
-Le statut masqué d'un élément dépend de son rendu. Le rendu est généralement contrôlé par le CSS. Par exemple, un élément dont la propriété `display` est définie à `none` avec CSS n'est pas rendu. Un élément est considéré comme masqué si lui-même ou l'un de ses ancêtres n'est pas rendu ou a la valeur de son attribut `aria-hidden` définie à `true`. Notez qu'un élément et ses enfants ayant `aria-hidden="true"` resteront visibles, sauf s'ils sont également masqués par le CSS.
+Le statut masqué d'un élément dépend de son rendu. Le rendu est généralement contrôlé par le CSS. Par exemple, un élément dont la propriété `display` est définie à `none` avec CSS n'est pas rendu. Un élément est considéré comme masqué si lui-même ou l'un de ses ancêtres n'est pas rendu ou a la valeur de son attribut `aria-hidden` définie à `true`. Notez qu'un élément et ses enfants ayant `aria-hidden="true"` restent visibles, sauf s'ils sont également masqués par le CSS.
 
 Soyez prudent·e lorsque vous utilisez `aria-hidden` pour masquer du contenu visuellement rendu aux technologies d'assistance. Vous ne devez pas masquer du contenu visible sauf si cela améliore l'expérience des utilisateur·ice·s de technologies d'assistance en supprimant du contenu redondant ou superflu. Ce n'est que lorsque le sens et la fonctionnalité identiques ou équivalents sont exposés aux technologies d'assistance que la suppression de contenu visible de l'API d'accessibilité peut être envisagée.
 
 > [!NOTE]
-> Tenez compte de tous les handicaps lorsque vous masquez du contenu visuellement rendu aux technologies d'assistance. Tous les utilisateur·ice·s de technologies d'assistance ne sont pas malvoyant·e·s. Si le contenu visible ne correspond pas au contenu textuel dans l'API d'accessibilité, l'expérience utilisateur sera négativement impactée pour les utilisateur·ice·s voyant·e·s.
+> Tenez compte de tous les handicaps lorsque vous masquez du contenu visuellement rendu aux technologies d'assistance. Tous les utilisateur·ice·s de technologies d'assistance ne sont pas malvoyant·e·s. Si le contenu visible ne correspond pas au contenu textuel dans l'API d'accessibilité, l'expérience utilisateur est négativement impactée pour les utilisateur·ice·s voyant·e·s.
 
 En apparence, `aria-hidden="true"` et les rôles `presentation` et son synonyme `none` semblent similaires, mais leur intention est différente.
 
@@ -43,27 +43,14 @@ En apparence, `aria-hidden="true"` et les rôles `presentation` et son synonyme 
 - L'élément ou son ancêtre est masqué avec [`display: none`](/fr/docs/Web/CSS/Reference/Properties/display)
 - L'élément ou son ancêtre est masqué avec [`visibility: hidden`](/fr/docs/Web/CSS/Reference/Properties/visibility)
 
-Dans ces trois scénarios, l'attribut est inutile car l'élément a déjà été retiré de l'arbre d'accessibilité. Masquer visuellement les éléments avec `display` ou `visibility` masque le contenu à l'écran et aux technologies d'assistance.
+Dans ces trois scénarios, l'attribut est inutile, car l'élément a déjà été retiré de l'arbre d'accessibilité. Masquer visuellement les éléments avec `display` ou `visibility` masque le contenu à l'écran et aux technologies d'assistance.
 
-Utiliser `aria-hidden="false"` ne réexpose pas l'élément aux technologies d'assistance si l'un de ses parents définit `aria-hidden="true"`.
-
-## Exemple
-
-Ajouter `aria-hidden="true"` à l'icône masque le caractère de l'icône pour qu'il ne soit pas inclus dans le nom accessible.
-
-```html
-<button>
-  <span class="fa fa-tweet" aria-hidden="true"></span>
-  <span class="label"> Tweeter </span>
-</button>
-```
-
-Ici, nous avons un bouton avec [une icône Font Awesome <sup>(angl.)</sup>](https://fontawesome.com/). Nous masquons l'icône aux technologies d'assistance avec `aria-hidden="true"`, car exposer l'icône à ces technologies pourrait entraîner une redondance ou, si l'icône n'a pas le même contenu que le texte visible, une confusion.
+Utiliser `aria-hidden="false"` ne ré-expose pas l'élément aux technologies d'assistance si l'un de ses parents définit `aria-hidden="true"`.
 
 ## Valeurs
 
 - `false`
-  - : L'élément est exposé à l'API d'accessibilité comme s'il était rendu.
+  - : L'élément est exposé à l'API d'accessibilité comme s'il est rendu.
 - `true`
   - : L'élément est masqué à l'API d'accessibilité.
 - `undefined` (par défaut)
@@ -80,6 +67,19 @@ Ici, nous avons un bouton avec [une icône Font Awesome <sup>(angl.)</sup>](http
 
 Utilisé dans **TOUS** les rôles
 
+## Exemple
+
+Ajouter `aria-hidden="true"` à l'icône masque le caractère de l'icône pour qu'il ne soit pas inclus dans le nom accessible.
+
+```html
+<button>
+  <span class="fa fa-tweet" aria-hidden="true"></span>
+  <span class="label"> Tweeter </span>
+</button>
+```
+
+Ici, nous avons un bouton avec [une icône Font Awesome <sup>(angl.)</sup>](https://fontawesome.com/). Nous masquons l'icône aux technologies d'assistance avec `aria-hidden="true"`, car exposer l'icône à ces technologies peut entraîner une redondance ou, si l'icône n'a pas le même contenu que le texte visible, une confusion.
+
 ## Spécifications
 
 {{Specifications}}
@@ -90,5 +90,5 @@ Utilisé dans **TOUS** les rôles
 - L'attribut ARIA [`aria-modal`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
 - L'attribut ARIA [`aria-expanded`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
 - L'attribut HTML [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden)
-- La propriété CSS {{CSSxRef('display')}}
-- La propriété CSS {{CSSxRef('visibility')}}
+- La propriété CSS {{CSSxRef("display")}}
+- La propriété CSS {{CSSxRef("visibility")}}

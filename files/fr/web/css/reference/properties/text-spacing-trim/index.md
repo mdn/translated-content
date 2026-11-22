@@ -3,7 +3,7 @@ title: Propriété CSS `text-spacing-trim`
 short-title: text-spacing-trim
 slug: Web/CSS/Reference/Properties/text-spacing-trim
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: e976b4bf6b9e0c68b4321904560df47804d8cc48
 ---
 
 {{SeeCompatTable}}
@@ -61,8 +61,8 @@ De nombreux caractères de ponctuation CJK comportent un espacement interne au g
 
 Lorsque des paires de caractères de ponctuation sont adjacentes, l'espace entre eux est réduit selon les règles suivantes&nbsp;:
 
-- Définir un caractère de ponctuation ouvrant en pleine largeur comme demi-largeur si le caractère précédent est un caractère de ponctuation ouvrant en pleine largeur, un point médian en pleine largeur, un espace idéographique (U+3000), un caractère de ponctuation fermant en pleine largeur d'une taille de police équivalente ou supérieure, ou un caractère appartenant à [la catégorie Unicode générale "Open punctuation" Ps <sup>(angl.)</sup>](https://www.compart.com/en/unicode/category/Ps). Sinon, le définir en pleine largeur.
-- Définir un caractère de ponctuation fermant en pleine largeur comme demi-largeur si le caractère suivant est un caractère de ponctuation fermant en pleine largeur, un point médian en pleine largeur, un espace idéographique (U+3000), un caractère de ponctuation ouvrant en pleine largeur d'une taille de police supérieure, ou un caractère appartenant à [la catégorie Unicode générale "Close punctuation" (Pe) <sup>(angl.)</sup>](https://www.compart.com/en/unicode/category/Pe). Sinon, le définir en pleine largeur.
+- Définir un caractère de ponctuation ouvrant en pleine largeur comme demi-largeur si le caractère précédent est un caractère de ponctuation ouvrant en pleine largeur, un point médian en pleine largeur, un espace idéographique (U+3000), un caractère de ponctuation fermant en pleine largeur d'une taille de police équivalente ou supérieure, ou un caractère appartenant à [la catégorie Unicode générale "Open punctuation" Ps <sup>(angl.)</sup>](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5B%3APs%3A%5D). Sinon, le définir en pleine largeur.
+- Définir un caractère de ponctuation fermant en pleine largeur comme demi-largeur si le caractère suivant est un caractère de ponctuation fermant en pleine largeur, un point médian en pleine largeur, un espace idéographique (U+3000), un caractère de ponctuation ouvrant en pleine largeur d'une taille de police supérieure, ou un caractère appartenant à [la catégorie Unicode générale "Close punctuation" (Pe) <sup>(angl.)</sup>](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5B%3APe%3A%5D). Sinon, le définir en pleine largeur.
 
 ## Définition formelle
 

@@ -3,7 +3,7 @@ title: "ARIA : rôle radiogroup"
 short-title: radiogroup
 slug: Web/Accessibility/ARIA/Reference/Roles/radiogroup_role
 l10n:
-  sourceCommit: 705109e85b6c5a9142260c58a617ef295b3b1316
+  sourceCommit: b126460df717d910e92f311f0603800987ecebee
 ---
 
 Le rôle `radiogroup` représente un groupe de boutons `radio`.
@@ -27,7 +27,7 @@ Un nom accessible est fortement recommandé pour le rôle `radiogroup`, bien qu'
 - le rôle [`radio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
   - : Un des boutons sélectionnables d'un groupe, dans un `radiogroup`, où un seul bouton peut être sélectionné à la fois.
 - [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) / [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-  - : Fournit un nom accessible pour le `radiogroup` soit par une étiquette visible référencée par `aria-labelledby`, soit par une étiquette définie avec `aria-label`. Cela est fortement recommandé, bien qu'il ne soit pas requis par ARIA.
+  - : Fournit un nom accessible pour le `radiogroup` soit par une étiquette visible référencée par `aria-labelledby`, soit par une étiquette définie avec `aria-label`. C'est fortement recommandé, bien qu'il ne soit pas requis par ARIA.
 - [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
   - : Référence vers des éléments fournissant des informations supplémentaires sur le `radiogroup`.
 - [`aria-required`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
@@ -54,7 +54,7 @@ Les flèches sont utilisées pour naviguer entre les éléments d'une barre d'ou
 
 Les interactions utilisateur pour les `radiogroup` doivent reproduire celles d'un groupe de boutons radio HTML natifs avec le même nom. Les évènements clavier pour Tab, Espace et les flèches doivent être capturés. Les clics sur les éléments radio et leurs étiquettes associés doivent aussi être capturés. De plus, [la gestion de la sélection <sup>(angl.)</sup>](https://primer.style/accessibility/design-guidance/focus-management/) doit être assurée.
 
-En général, quitter un élément sélectionné amène à l'élément sélectionnable suivant dans l'ordre du DOM. Utiliser les flèches pour naviguer dans un groupe de boutons radio maintient la sélection dans le groupe, déplaçant la sélection vers le premier bouton radio lorsque <kbd>Flèche vers la droite</kbd> ou <kbd>Flèche vers le bas</kbd> est relâchée alors que la sélection était sur le dernier bouton, et vers le dernier bouton si <kbd>Flèche vers la gauche</kbd> ou <kbd>Flèche vers le haut</kbd> est relâchée alors que la sélection était sur le premier bouton. La gestion dynamique de [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) est une méthode pour gérer ces évènements.
+En général, quitter un élément sélectionné amène à l'élément sélectionnable suivant dans l'ordre du DOM. Utiliser les flèches pour naviguer dans un groupe de boutons radio maintient la sélection dans le groupe, déplaçant la sélection vers le premier bouton radio lorsque <kbd>Flèche vers la droite</kbd> ou <kbd>Flèche vers le bas</kbd> est relâchée alors que la sélection est sur le dernier bouton, et vers le dernier bouton si <kbd>Flèche vers la gauche</kbd> ou <kbd>Flèche vers le haut</kbd> est relâchée alors que la sélection est sur le premier bouton. La gestion dynamique de [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) est une méthode pour gérer ces évènements.
 
 ## Fonctionnalités CSS requises
 
@@ -145,7 +145,7 @@ Dans cet exemple avec {{HTMLElement("fieldset")}}, le rôle `radiogroup` n'est p
 - L'élément HTML {{HTMLElement("fieldset")}}
 - L'élément HTML `{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}` de bouton radio
 - [ARIA&nbsp;: rôle `radio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
-- [`aria-errormessage`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
-- [`aria-invalid`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
-- [`aria-readonly`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)
-- [`aria-required`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
+- L'attribut ARIA [`aria-errormessage`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
+- L'attribut ARIA [`aria-invalid`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
+- L'attribut ARIA [`aria-readonly`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)
+- L'attribut ARIA [`aria-required`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)

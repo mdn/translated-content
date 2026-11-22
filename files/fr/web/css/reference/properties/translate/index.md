@@ -3,7 +3,7 @@ title: Propriété CSS `translate`
 short-title: translate
 slug: Web/CSS/Reference/Properties/translate
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`translate`** permet de définir des opérations de décalage, individuellement et indépendamment de la propriété {{CSSxRef("transform")}}. Cela peut être utile pour la construction d'une interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformations à définir pour `transform`.
@@ -128,13 +128,13 @@ translate: unset;
 ### Valeurs
 
 - Une seule valeur de longueur/pourcentage ({{CSSxRef("&lt;length-percentage&gt;")}})
-  - : Une longueur ({{CSSxRef("&lt;length&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) qui définit une translation en deux dimensions. La translation est la même pour l'axe X et l'axe Y. C'est équivalent à la fonction `translate()` (translation en deux dimensions) avec une seule valeur.
+  - : Une longueur ({{CSSxRef("&lt;length&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) qui définit un déplacement en deux dimensions. Le déplacement est le même pour l'axe X et l'axe Y. C'est équivalent à la fonction `translate()` (déplacement en deux dimensions) avec une seule valeur.
 - Deux valeurs de longueur/pourcentage ({{CSSxRef("&lt;length-percentage&gt;")}})
-  - : Deux longueurs ({{CSSxRef("&lt;length&gt;")}}) ou pourcentages ({{CSSxRef("&lt;percentage&gt;")}}) qui définissent respectivement les composantes horizontale et verticale d'une translation en deux dimensions. C'est équivalent à la fonction `translate()` appelée avec ces deux arguments.
+  - : Deux longueurs ({{CSSxRef("&lt;length&gt;")}}) ou pourcentages ({{CSSxRef("&lt;percentage&gt;")}}) qui définissent respectivement les composantes horizontale et verticale d'un déplacement en deux dimensions. C'est équivalent à la fonction `translate()` appelée avec ces deux arguments.
 - Trois valeurs
-  - : Deux valeurs de longueur/pourcentage ({{CSSxRef("&lt;length-percentage&gt;")}}) et une longueur ({{CSSxRef("&lt;length&gt;")}}) qui définissent respectivement les composantes horizontale, verticale et en profondeur de la translation en trois dimensions. C'est équivalent à la fonction `translate3d()` appelée avec ces trois arguments.
+  - : Deux valeurs de longueur/pourcentage ({{CSSxRef("&lt;length-percentage&gt;")}}) et une longueur ({{CSSxRef("&lt;length&gt;")}}) qui définissent respectivement les composantes horizontale, verticale et en profondeur du déplacement en trois dimensions. C'est équivalent à la fonction `translate3d()` appelée avec ces trois arguments.
 - `none`
-  - : Cette valeur indique qu'aucune translation ne devrait être appliquée.
+  - : Cette valeur indique qu'aucun déplacement ne doit être appliqué.
 
 ## Définition formelle
 
@@ -150,7 +150,7 @@ translate: unset;
 
 Cet exemple montre comment utiliser la propriété `translate` pour déplacer un élément selon trois axes.
 La première boîte est déplacée le long de l'axe X et la deuxième boîte est déplacée le long des axes X et Y.
-La troisième boîte est déplacée le long des axes X, Y et Z et donne l'impression de se rapprocher du lecteur grâce à l'ajout de {{CSSxRef('perspective')}} à l'élément parent.
+La troisième boîte est déplacée le long des axes X, Y et Z et donne l'impression de se rapprocher du lecteur grâce à l'ajout de {{CSSxRef("perspective")}} à l'élément parent.
 
 #### HTML
 

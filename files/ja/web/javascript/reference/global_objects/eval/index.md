@@ -2,7 +2,7 @@
 title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
 l10n:
-  sourceCommit: 06f8ebf948372dfb6c3c22d26d4f672c99cd4e0d
+  sourceCommit: 0c3c464abb1422b0534a5e3f5e81e9bbae13544c
 ---
 
 > [!WARNING]
@@ -13,7 +13,7 @@ l10n:
 >
 > 情報については、[セキュリティの注意事項](#セキュリティの注意事項)をご覧ください。
 
-**`eval()`** 関数は、文字列として表現された JavaScript コードを評価します。ソースはスクリプトとして解釈されます。
+**`eval()`** 関数は、文字列で表された JavaScript コードを評価し、その完了値を返します。ソースはスクリプトとして構文解析されます。
 
 {{InteractiveExample("JavaScript デモ: eval()")}}
 
@@ -405,10 +405,10 @@ const policy = trustedTypes.createPolicy("script-policy", {
 次に、`policy` オブジェクトを使用して、安全性が保証されていない可能性のある入力文字列から `TrustedScript` オブジェクトを作成します。
 
 ```js
-// The potentially malicious string
+// 悪意のある可能性のある文字列
 const untrustedScript = "alert('Potentially evil code!');";
 
-// ポリシーを使用して TrustedScriptURL インスタンスを作成する
+// ポリシーを使って TrustedScript インスタンスを作成
 const trustedScript = policy.createScript(untrustedScript);
 ```
 

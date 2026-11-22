@@ -3,7 +3,7 @@ title: HTTP ヘッダー
 short-title: ヘッダー
 slug: Web/HTTP/Reference/Headers
 l10n:
-  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
+  sourceCommit: bd5271a96d814ed6876e974186c465f1b3959e07
 ---
 
 **HTTP ヘッダー**を使用すると、クライアントとサーバーは、リクエストまたはレスポンスのメッセージに追加情報を渡すことができます。
@@ -94,6 +94,8 @@ IANA レジストリーでは、[ステータスに関する情報](https://gith
   - : リクエストコンテンツネゴシエーションのレスポンスヘッダーで、サーバーが {{HTTPMethod("PATCH")}} リクエストで理解できる[メディア型](/ja/docs/Web/HTTP/Guides/MIME_types)を通知します。
 - {{HTTPHeader("Accept-Post")}}
   - : リクエストコンテンツネゴシエーションのレスポンスヘッダーで、サーバーが {{HTTPMethod("POST")}} リクエストで理解できる[メディア型](/ja/docs/Web/HTTP/Guides/MIME_types)を通知します。
+- {{HTTPHeader("Accept-Query")}}
+  - : リクエストコンテンツネゴシエーションのレスポンスヘッダーで、サーバーが {{HTTPMethod("QUERY")}} リクエストで理解できる[メディア型](/ja/docs/Web/HTTP/Guides/MIME_types)を通知します。
 
 ## 制御
 

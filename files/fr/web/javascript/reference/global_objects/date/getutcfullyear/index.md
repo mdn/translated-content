@@ -3,7 +3,7 @@ title: "Date : méthode getUTCFullYear()"
 short-title: getUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 98972b1f827b7374e28aee591a73044ffd8fb758
 ---
 
 La méthode **`getUTCFullYear()`** des instances de {{JSxRef("Date")}} retourne l'année de la date renseignée selon le temps universel (UTC).
@@ -33,11 +33,11 @@ Aucun.
 
 ### Valeur de retour
 
-Un entier représentant l'année pour la date indiquée selon le temps universel. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+Un entier représentant l'année pour la date indiquée selon le temps universel. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
 ## Description
 
-Contrairement à {{JSxRef("Date/getYear", "getYear()")}}, la valeur retournée par `getUTCFullYear()` est un nombre absolu. Pour les dates comprises entre les années 1000 et 9999, `getFullYear()` retourne un nombre à quatre chiffres, par exemple 1995. Utilisez cette fonction pour vous assurer qu'une année est conforme aux années postérieures à 2000.
+Contrairement à {{JSxRef("Date/getYear", "getYear()")}}, la valeur retournée par `getUTCFullYear()` est un nombre absolu. Pour les dates comprises entre les années 1000 et 9999, `getUTCFullYear()` retourne un nombre à quatre chiffres, par exemple 1995. Utilisez cette fonction pour vous assurer qu'une année est conforme aux années postérieures à 2000.
 
 ## Exemples
 

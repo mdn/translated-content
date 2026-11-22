@@ -3,7 +3,7 @@ title: "HTMLElement: inputMode プロパティ"
 short-title: inputMode
 slug: Web/API/HTMLElement/inputMode
 l10n:
-  sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -16,13 +16,13 @@ l10n:
 
 ## 値
 
-この属性は、以下の値の何れかを取ります。
+この属性は、以下の値のいずれかを取ります。
 
 - `decimal`
   - : 実数の入力キーボードで、数字とユーザーのロケールの小数点（普通は <kbd>.</kbd> または <kbd>,</kbd>）を含みます。
 - `email`
   - : メールアドレスの入力に最適化された仮想キーボードです。
-    通常、<kbd>@</kbd> 文字やその他の最適化が行われいます。
+    通常、<kbd>@</kbd> 文字を含むなどの最適化が行われています。
 - `none`
   - : 仮想キーボードはありません。ページが自分自身でキーボード入力制御を実装している場合に使用します。
 - `numeric`
@@ -37,11 +37,9 @@ l10n:
   - : ユーザーの現在のロケールに対応した標準入力キーボードです。
 - `url`
   - : URL の入力に最適化されたキーパッドです。
-    これは例えば、<kbd>/</kbd> キーがより目立つように持つことができるかもしれません。
+    例えば、<kbd>/</kbd> キーが目立つ場所に配置されています。
 
 この属性の使い方は、このプロパティを反映した HTML の [`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) 属性のページを参照してください。
-
-## 例
 
 ## 仕様書
 

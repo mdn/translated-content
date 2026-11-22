@@ -3,7 +3,7 @@ title: "Date : méthode toDateString()"
 short-title: toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 98972b1f827b7374e28aee591a73044ffd8fb758
 ---
 
 La méthode **`toDateString()`** des instances de {{JSxRef("Date")}} retourne une chaîne de caractères représentant la partie date de cette date, interprétée selon le fuseau horaire local.
@@ -33,7 +33,7 @@ Aucun.
 
 ### Valeur de retour
 
-Une chaîne de caractères représentant la partie date de la date donnée (voir la description pour le format). Retourne `"Invalid Date"` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+Une chaîne de caractères représentant la partie date de la date donnée (voir la description pour le format). Retourne `"Invalid Date"` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
 ## Description
 
@@ -41,7 +41,7 @@ Les instances de {{JSxRef("Date")}} représentent un point précis dans le temps
 
 1. Les trois premières lettres du nom du jour de la semaine
 2. Les trois premières lettres du nom du mois
-3. Le jour du mois sur deux chiffres, complété à gauche par un zéro si nécessaire
+3. Le jour du mois sur deux chiffres, complété à gauche avec un zéro si nécessaire
 4. L'année sur au moins quatre chiffres, complétée à gauche par des zéros si nécessaire. Peut avoir un signe négatif
 
 Par exemple&nbsp;: «&nbsp;Thu Jan 01 1970&nbsp;».

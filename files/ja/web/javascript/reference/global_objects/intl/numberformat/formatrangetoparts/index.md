@@ -3,10 +3,10 @@ title: Intl.NumberFormat.prototype.formatRangeToParts()
 short-title: formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
-**`formatRangeToParts()`** は {{jsxref("Intl.NumberFormat")}} インスタンスのメソッドで、ロケール固有のトークンを含むオブジェクトの {{jsxref("Array")}} を返します。このトークンを使用して、ロケール固有の部分を保持したまま、独自の文字列を構築することができます。これにより、ロケールを認識する数値文字列の書式化範囲を指定することが可能になります。
+**`formatRangeToParts()`** は {{jsxref("Intl.NumberFormat")}} インスタンスのメソッドで、ロケール固有のトークンを含むオブジェクトの {{jsxref("Array")}} を返します。このトークンを使用して、ロケール固有の部分を保持したまま、独自の文字列を構築することができます。これにより、数値の範囲を表す文字列をロケールに応じた独自の書式で表せます。
 
 ## 構文
 
@@ -23,7 +23,7 @@ formatRangeToParts(startRange, endRange)
 
 ### 返値
 
-書式化された範囲を部分的に含むオブジェクトの {{jsxref("Array")}} です。各オブジェクトには、`type`、`value`、`source` の 3 つのプロパティがあり、それぞれ文字列が設定されています。指定された順序で `value` を連結すると、{{jsxref("Intl/NumberFormat/formatRange", "formatRange()")}} と同じ文字列になります。`type` は、{{jsxref("Intl/NumberFormat/formatToParts", "formatToParts()")}} と同じ値、または追加の値 `"approximatelySign"` （下記参照）とすることができます。 `source` は、次のいずれかになります。
+書式化された範囲を部品に分けて表すオブジェクトの {{jsxref("Array")}} です。各オブジェクトには、`type`、`value`、`source` の 3 つのプロパティがあり、それぞれ文字列が設定されています。指定された順序で `value` を連結すると、{{jsxref("Intl/NumberFormat/formatRange", "formatRange()")}} と同じ文字列になります。`type` は、{{jsxref("Intl/NumberFormat/formatToParts", "formatToParts()")}} と同じ値、または追加の値 `"approximatelySign"` （下記参照）とすることができます。 `source` は、次のいずれかになります。
 
 - `startRange`
   - : トークンは先頭の数値の部分です。

@@ -3,14 +3,18 @@ title: "HTMLElement: editContext プロパティ"
 short-title: editContext
 slug: Web/API/HTMLElement/editContext
 l10n:
-  sourceCommit: c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
+  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
 ---
 
 {{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 **`editContext`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、要素に関連付けられた {{domxref("EditContext")}} オブジェクトを取得したり設定したりします。
 
-{{domxref("EditContext API", "", "", "nocode")}} を使用することで、{{glossary("Input Method Editor", "インプットメソッドエディター")}} (IME) の変換や絵文字ピッカー、その他のプラットフォーム固有の編集関連 UI サーフェスなど、高度なテキスト入力に対応したリッチテキストエディターをウェブ上で構築することができます。
+{{domxref("EditContext API", "編集コンテキスト API", "", "nocode")}} を使用することで、{{glossary("Input Method Editor", "インプットメソッドエディター")}} (IME) の変換や絵文字ピッカー、その他のプラットフォーム固有の編集関連 UI サーフェスなど、高度なテキスト入力に対応したリッチテキストエディターをウェブ上で構築することができます。
+
+## 値
+
+{{domxref("EditContext")}} オブジェクトまたは `null` です。
 
 ### 利用可能な要素
 
@@ -29,7 +33,7 @@ l10n:
 関連は 1 対 1 で行われます。
 
 - 要素は 1 つの `EditContext` インスタンスにのみ関連付けることができます。
-- 1　つの `EditContext` インスタンスは　1　つの要素にのみ関連付けることができます。
+- 1 つの `EditContext` インスタンスは 1 つの要素にのみ関連付けることができます。
 
 すでに関連付けられた `EditContext` インスタンスを別の要素に関連付けようとすると、 {{domxref("DOMException")}} が発生します。
 
@@ -39,13 +43,9 @@ l10n:
 
 ### ガベージコレクション
 
-`EditContext` インスタンスは、関連する要素が DOM から除去されても、他の参照する要素があれば、その関連する要素を維持し続けます。
+`EditContext` インスタンスが他から参照されている場合は、関連付けられた要素が DOM から除去されても、その要素を存続させます。
 
-要素が確実にガベージコレクションされるようにしたい場合は、要素の `editContext` プロパティをクリアして下さい。
-
-## 値
-
-{{domxref("EditContext")}} オブジェクトまたは `null` です。
+要素が確実にガベージコレクションされるようにしたい場合は、要素の `editContext` プロパティをクリアしてください。
 
 ## 例
 

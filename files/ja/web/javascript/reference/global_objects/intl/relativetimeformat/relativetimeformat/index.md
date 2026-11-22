@@ -3,7 +3,7 @@ title: Intl.RelativeTimeFormat() コンストラクター
 short-title: Intl.RelativeTimeFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat
 l10n:
-  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`Intl.RelativeTimeFormat()`** コンストラクターは、 {{jsxref("Intl.RelativeTimeFormat")}} オブジェクトを生成します。
@@ -33,9 +33,9 @@ new Intl.RelativeTimeFormat(locales, options)
 - `options` {{optional_inline}}
   - : 以下のプロパティを含むオブジェクト（取得される順に記載しています。すべてオプションです）。
     - `localeMatcher`
-  - : 使用するロケール照合アルゴリズムです。使用可能な値は `"lookup"` および `"best fit"` です。既定値は `"best fit"` です。このオプションについての情報は、[ロケールの識別とネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)を参照してください。
+  - : 使用するロケール照合アルゴリズムです。使用可能な値は `"lookup"` および `"best fit"` です。デフォルト値は `"best fit"` です。このオプションについての情報は、[ロケールの識別とネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)を参照してください。
     - `numberingSystem`
-      - : 数値の書式化に使用する記数法。たとえば、`"arab"`、`"hans"`、`"mathsans"`などが使用されます。対応している記数法の種類の一覧については、 [`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している記数法) を参照してください。このオプションは、Unicode 拡張キー `nu` を使用して設定することもできます。両方が指定されている場合、この `options` プロパティが優先されます。
+      - : 数値の書式化に使用する記数法。たとえば、`"arab"`、`"hanidec"`、`"mathsans"`などが使用されます。対応している記数法の種類の一覧については、 [`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している記数法) を参照してください。このオプションは、Unicode 拡張キー `nu` を使用して設定することもできます。両方が指定されている場合、この `options` プロパティが優先されます。
     - `style`
       - : 国際化されたメッセージの長さです。使用可能な値は次の通りです。
         - `"long"` (デフォルト値)
@@ -56,7 +56,7 @@ new Intl.RelativeTimeFormat(locales, options)
 
 ### 基本的な書式の使い方
 
-以下の例は、英語を使用した相対時間のフォーマッターの生成方法を示しています。
+以下の例は、日本語を使用した相対時間のフォーマッターの生成方法を示しています。
 
 ```js
 // 現在のロケールで、デフォルト値を明示的に指定した
@@ -67,10 +67,10 @@ const rtf = new Intl.RelativeTimeFormat("ja", {
 });
 
 // 負の値 (-1) を使った相対時間の書式
-rtf.format(-1, "day"); // "1 日後"
+rtf.format(-1, "day"); // "1 日前"
 
 // 正の値 (1) を使った相対時間の書式
-rtf.format(1, "day"); // "1 日前"
+rtf.format(1, "day"); // "1 日後"
 ```
 
 ### auto オプションの使用

@@ -3,12 +3,12 @@ title: '`<input type="color">` 属性値'
 short-title: <input type="color">
 slug: Web/HTML/Reference/Elements/input/color
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
 ---
 
 {{HTMLElement("input")}} 要素の **`color`** は、視覚的なカラーピッカーインターフェイスを使用したり、[CSS 色値](/ja/docs/Web/CSS/Reference/Values/color_value)の決められた形式でテキストフィールドに色を入力したりして、ユーザーが色を指定できるユーザーインターフェイス要素を提供します。
 
-この要素の外見は、ブラウザーやプラットフォームによって大きく異なります。基本的なテキストの入力フィールドで、入力された色情報が文字列の検証のみを行う入力フィールドであったり、プラットフォームの標準カラーピッカーや、独自のピッカーウィンドウを表示するなど、ブラウザーやプラットフォームにより大きく異なることがあります。
+この要素の表示は、ブラウザーやプラットフォームによって大きく異なる場合があります。単純なテキスト入力欄として表示され、入力された色が正しい形式かどうか自動的に検証される場合もあれば、プラットフォーム標準または独自のカラーピッカーウィンドウが表示される場合もあります。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
 
@@ -70,7 +70,7 @@ type が `color` の入力フィールドは、対応する属性の数が限ら
 
 ### デフォルト色の設定
 
-上記の例でデフォルト値を設定するように変更すると、カラーピッカーがあらかじめデフォルト色で塗りつぶされ、カラーピッカーも（もしあれば）その色がデフォルトになります。
+上記の例を変更してデフォルト値を設定すると、カラーピッカーの初期値がその色になり、カラーピッカーも（もしあれば）その色をデフォルトとして使用します。
 
 ```html
 <input type="color" value="#ff0000" />
@@ -89,9 +89,9 @@ type が `color` の入力フィールドは、対応する属性の数が限ら
 
 ### 色の変更の追跡
 
-ほかの {{HTMLElement("input")}} 型と同様に、{{domxref("Element/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} イベントで色の変化を検出することができます。`input` は `<input>` 要素で色が変更されるたびに実行されます。`change` イベントはユーザーがカラーピッカーを閉じたときに実行されます。どちらの場合も、新しい値は [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) で調べることができます。
+ほかの {{HTMLElement("input")}} 型と同様に、{{domxref("Element/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} イベントで色の変化を検出することができます。`input` イベントは `<input>` 要素で色が変更されるたびに発生します。`change` イベントはユーザーがカラーピッカーを閉じたときに発生します。どちらの場合も、新しい値は [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) で調べることができます。
 
-次の例は、色の変更をずっと監視します。
+次の例は、色の値の変化を監視します。
 
 ```js
 colorPicker.addEventListener("input", updateFirst);
@@ -106,7 +106,7 @@ function watchColorPicker(event) {
 
 ### 値の選択
 
-ブラウザーがカラーピッカーインターフェイスに対応していない場合、カラー入力の実装はテキストボックスとなり、値が正しい形式であることを確認するために、自動的に中身を検証することになります。この場合、{{domxref("HTMLInputElement.select", "select()")}}メソッドを使用して、現在編集フィールドに使用されているテキストを選択することができます。
+ブラウザーがカラーピッカーインターフェイスに対応していない場合、カラー入力はテキストボックスとして実装され、値が正しい形式かどうかが自動的に検証されます。この場合、{{domxref("HTMLInputElement.select", "select()")}} メソッドを使用して、編集フィールドに現在入力されているテキストを選択できます。
 
 ブラウザーがカラーピッカーなどを提供している場合、`select()` は何もしません。いずれの状況でもコードが動作するように気をつける必要があります。
 
@@ -171,7 +171,7 @@ function updateFirst(event) {
 }
 ```
 
-カラーピッカーが閉じられると、（ユーザーがカラーピッカーを再び開かない限り）値が再び変化することはないことを示す `change` イベントが要素に送られます。そのイベントを `updateAll()` 関数で処理し、 [`Event.target.value`](/ja/docs/Web/HTML/Reference/Elements/input#value) を使用して最終的に選択された色を取得します。
+カラーピッカーが閉じられると、（ユーザーが再び開かない限り）値は変化しないことを示す `change` イベントが要素で発生します。そのイベントを `updateAll()` 関数で処理し、[`Event.target.value`](/ja/docs/Web/HTML/Reference/Elements/input#value) を使用して最終的に選択された色を取得します。
 
 ```js
 function updateAll(event) {
@@ -196,7 +196,7 @@ function updateAll(event) {
     <tr>
       <td><strong><a href="#value">値</a></strong></td>
       <td>
-        小文字の 16 進数で {{cssxref("&lt;color&gt;")}} を定義する 7 文字の文字列
+        任意の表記法の CSS {{cssxref("&lt;color&gt;")}} 値
       </td>
     </tr>
     <tr>
@@ -215,21 +215,20 @@ function updateAll(event) {
     </tr>
     <tr>
       <td><strong>IDL 属性</strong></td>
-      <td><code>list</code> および <code>value</code></td>
+      <td>
+        <a href="/ja/docs/Web/API/HTMLInputElement/alpha"><code>alpha</code></a>、
+        <a href="/ja/docs/Web/API/HTMLInputElement/colorSpace"><code>colorSpace</code></a>、
+        <a href="/ja/docs/Web/API/HTMLInputElement/list"><code>list</code></a>、
+        <a href="/ja/docs/Web/API/HTMLInputElement/value"><code>value</code></a>
+      </td>
     </tr>
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
-    </tr>
-    <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
+      <td><a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
     </tr>
   </tbody>
 </table>

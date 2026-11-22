@@ -3,7 +3,7 @@ title: "HTMLElement: accessKey プロパティ"
 short-title: accessKey
 slug: Web/API/HTMLElement/accessKey
 l10n:
-  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("DOM")}}

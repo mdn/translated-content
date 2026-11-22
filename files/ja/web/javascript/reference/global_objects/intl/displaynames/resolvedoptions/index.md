@@ -3,7 +3,7 @@ title: Intl.DisplayNames.prototype.resolvedOptions()
 short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions
 l10n:
-  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`resolvedOptions()`** は {{jsxref("Intl.DisplayNames")}} インスタンスのメソッドで、現在の `DisplayNames` オブジェクトの初期化時に計算されたロケールとスタイルの書式オプションを反映したプロパティを持つ新しいオブジェクトを返します。
@@ -30,8 +30,8 @@ resolvedOptions()
   - : `options` 引数でこのプロパティに指定された値です。値は `"language"`、`"region"`、`"script"`、`"currency"`、`"calendar"`、`"dateTimeField"` のいずれかです。必須項目であるため、デフォルト値はありません。
 - `fallback`
   - : `options` 引数でこのプロパティに指定された値です。`"code"` または `"none"` のどちらかです。デフォルト値は `"code"` です。
-- `languageDisplay`
-  - : `options` 引数でこのプロパティに指定された値です。`"dialect"` または `"standard"` のいずれかです。デフォルトは `"dialect"` です。
+- `languageDisplay` {{optional_inline}}
+  - : `options` 引数でこのプロパティに指定された値です。`type` が `"language"` の場合にのみ存在します。値は `"dialect"` または `"standard"` のどちらかです。デフォルト値は `"dialect"` です。
 
 ## 例
 

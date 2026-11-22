@@ -3,15 +3,10 @@ title: Propriété CSS `text-box-trim`
 short-title: text-box-trim
 slug: Web/CSS/Reference/Properties/text-box-trim
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-box-trim`** définit quels bords supérieur et inférieur du contenu textuel doivent être supprimés du conteneur de bloc d'un élément de texte.
-
-L'espacement vertical varie selon les polices, ce qui rend la composition typographique cohérente historiquement difficile sur le web. La propriété `text-box-trim` — ainsi que sa propriété complémentaire {{CSSxRef("text-box-edge")}}, qui définit la quantité d'espace à supprimer — facilite l'obtention d'une composition typographique cohérente.
-
-> [!NOTE]
-> La propriété raccourcie {{CSSxRef("text-box")}} peut être utilisée pour définir les valeurs `text-box-trim` et `text-box-edge` dans une seule déclaration.
 
 ## Syntaxe
 
@@ -45,11 +40,17 @@ La valeur de la propriété `text-box-trim` peut être définie comme l'un des m
 
 ## Description
 
-La hauteur du contenu composé uniquement de texte est relative à la hauteur de la police. Dans les fichiers de polices numériques, la hauteur inclut tous les caractères, y compris les lettres majuscules, les hampes, les jambages, etc. Les différentes polices ont des hauteurs de ligne de base différentes, ce qui signifie que des lignes de texte avec la même valeur de `font-size` produiront des boîtes de ligne de hauteurs différentes, affectant l'apparence de l'espacement entre les lignes.
+La propriété `text-box-trim` définit quels bords supérieur et inférieur du contenu textuel doivent être supprimés du conteneur de bloc d'un élément de texte.
+
+L'espacement vertical varie selon les polices, ce qui rend la composition typographique cohérente historiquement difficile sur le web. La propriété `text-box-trim` — ainsi que sa propriété complémentaire {{CSSxRef("text-box-edge")}}, qui définit la quantité d'espace à supprimer — facilite l'obtention d'une composition typographique cohérente.
+
+La hauteur du contenu composé uniquement de texte est relative à la hauteur de la police. Dans les fichiers de polices numériques, la hauteur inclut tous les caractères, y compris les lettres majuscules, les hampes, les jambages, etc. Les différentes polices ont des hauteurs de ligne de base différentes, ce qui signifie que des lignes de texte avec la même valeur de `font-size` produisent des boîtes de ligne de hauteurs différentes, affectant l'apparence de l'espacement entre les lignes.
 
 La propriété `text-box-trim` permet de supprimer l'espace du bord supérieur et/ou du bord inférieur du conteneur de bloc d'un élément de texte, ce qui facilite le contrôle de l'espacement du texte dans la direction du bloc.
 
 La quantité réelle d'espace supprimée est définie à l'aide de la propriété {{CSSxRef("text-box-edge")}}. Par exemple, vous pouvez choisir de supprimer l'espace du bord supérieur en fonction des lettres majuscules ou des lettres minuscules, et du bord inférieur en fonction de la ligne de base de la police.
+
+La propriété `text-box-trim`, ainsi que la propriété {{CSSxRef("text-box-edge")}}, peut également être définie en utilisant la propriété raccourcie {{CSSxRef("text-box")}}.
 
 ## Définition formelle
 
@@ -292,4 +293,4 @@ Essayez de changer les valeurs des `<select>` pour voir l'effet qu'elles ont sur
 
 - Les propriétés {{CSSxRef("text-box")}}, {{CSSxRef("text-box-edge")}}
 - Le module [de disposition en incise CSS](/fr/docs/Web/CSS/Guides/Inline_layout)
-- [La propriété CSS text-box-trim <sup>(angl.)</sup>](https://developer.chrome.com/blog/css-text-box-trim) sur developer.chrome.com (2025)
+- [La propriété CSS `text-box-trim` <sup>(angl.)</sup>](https://developer.chrome.com/blog/css-text-box-trim) sur developer.chrome.com (2025)

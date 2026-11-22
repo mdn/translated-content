@@ -2,10 +2,13 @@
 title: "入力境界アサーション: ^, $"
 slug: Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion
 l10n:
-  sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
+  sourceCommit: 288e644117c29285df2acf37a2ac97f57546a146
 ---
 
-**入力境界アサーション**は、文字列の減殺の位置が入力境界であるかどうかを検査します。入力境界は文字列の先頭または末尾です。`m` フラグが設定された場合は、行の先頭または末尾です。
+**入力境界アサーション**は、文字列内の現在位置が入力境界であるかどうかを検査します。入力境界は文字列の先頭または末尾です。`m` フラグが設定された場合は、行の先頭または末尾です。
+
+> [!NOTE]
+> `m` モードで文字列全体の先頭や末尾に一致させるには、[バッファー境界アサーション](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion)の `\A` と `\z` を使用してください。
 
 ## 構文
 
@@ -20,15 +23,15 @@ $
 
 より正確には、`^` は左側の文字が文字列の範囲外であることを、`$` は右側の文字が文字列の範囲外であることを表明します。[`m`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline) フラグが設定されている場合、`^` は左の文字が[改行文字](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#改行文字)である場合にも一致し、`$` は右の文字が改行文字である場合にも一致します。
 
-`m` フラグが設定されていない限り、`^` と `$` のアサーションはパターンの境界に配置したときのみ意味を持ちます。その左右に他の文字があるとアサーションが発生しなくなるからです。
+`m` フラグが設定されていない場合、これらのアサーションが意味を持つのは、その位置の左側または右側に文字がない場合だけです。例えば、`f^o` は決して一致しません。`^` が文字列の先頭にあることと、その左側に文字があることは両立しないためです。
 
-`y` フラグはこれらのアサーションの意味を変えません。[アンカー粘着フラグ](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky#アンカーになる_sticky_フラグ)も参照してください。
+`y` フラグを使用しても、これらのアサーションが一致する位置は変わりません。[アンカー粘着フラグ](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky#アンカーになる_sticky_フラグ)も参照してください。
 
 ## 例
 
 ### 末尾のスラッシュの除去
 
-次の例は、URL 文字列から末尾のスラッシュを解除します。
+次の例は、URL 文字列から末尾のスラッシュを取り除きます。
 
 ```js
 function removeTrailingSlash(url) {
@@ -41,7 +44,7 @@ removeTrailingSlash("https://example.com/docs/"); // "https://example.com/docs"
 
 ### ファイル拡張子の照合
 
-次の例は、常に文字列の最後に来るファイル拡張子を照合することで、ファイル型を調べます。
+次の例は、常に文字列の最後に来るファイル拡張子を照合することで、ファイルの種類を調べます。
 
 ```js
 function isImage(filename) {
@@ -77,7 +80,7 @@ function toAssignment(key) {
   if (isValidIdentifier(key)) {
     return `globalThis.${key} = undefined;`;
   }
-  // JSON.stringify() escapes quotes and other special characters
+  // JSON.stringify() は引用符などの特殊文字をエスケープ
   return `globalThis[${JSON.stringify(key)}] = undefined;`;
 }
 
@@ -101,6 +104,7 @@ console.log(statements);
 
 - [アサーション](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)ガイド
 - [正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
+- [バッファー境界アサーション: `\A`, `\z`, `\Z`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion)
 - [単語境界アサーション: `\b`, `\B`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
 - [先読みアサーション: `(?=...)`, `(?!...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
 - [後読みアサーション: `(?<=...)`, `(?<!...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)

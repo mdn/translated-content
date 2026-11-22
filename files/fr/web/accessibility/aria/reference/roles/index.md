@@ -3,7 +3,7 @@ title: Rôles WAI-ARIA
 short-title: Rôles
 slug: Web/Accessibility/ARIA/Reference/Roles
 l10n:
-  sourceCommit: 4a39dedf2c57c6947339a63a8de0e18a7abe8e2c
+  sourceCommit: 370f1912b54d24bd7da541f8f2dd98c26d377121
 ---
 
 Les rôles ARIA fournissent une signification sémantique au contenu, permettant aux lecteurs d'écran et autres outils de présenter et de prendre en charge l'interaction avec un objet d'une manière cohérente avec les attentes utilisateur·ice·s pour ce type d'objet. Les rôles <abbr>ARIA</abbr> peuvent être utilisés pour décrire des éléments qui n'existent pas nativement en HTML ou qui existent mais qui n'ont pas encore une prise en charge complète par les navigateurs.
@@ -22,7 +22,7 @@ Il existe 6 catégories de rôles ARIA&nbsp;:
 
 ### 1. Rôles dans la structure des documents
 
-Les rôles de structure de document sont utilisés pour fournir une description structurelle d'une section de contenu. La plupart de ces rôles ne devraient plus être utilisés, car les navigateurs prennent désormais en charge des éléments HTML sémantiques ayant la même signification. Les rôles sans équivalents HTML, tels que les rôles `presentation`, `toolbar` et `tooltip`, fournissent des informations sur la structure du document aux technologies d'assistance comme les lecteurs d'écran puisque les balises HTML natives équivalentes ne sont pas disponibles.
+Les rôles de structure de document sont utilisés pour fournir une description structurelle d'une section de contenu. La plupart de ces rôles ne doivent plus être utilisés, car les navigateurs prennent désormais en charge des éléments HTML sémantiques ayant la même signification. Les rôles sans équivalents HTML, tels que les rôles `presentation`, `toolbar` et `tooltip`, fournissent des informations sur la structure du document aux technologies d'assistance comme les lecteurs d'écran puisque les balises HTML natives équivalentes ne sont pas disponibles.
 
 - [`toolbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role)
 - [`tooltip`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tooltip_role)
@@ -42,7 +42,7 @@ Pour la plupart des rôles de structure de document, des éléments HTML sémant
 - [`document`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/document_role)
 - [`figure`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/figure_role) (utilisez {{HTMLElement("figure")}} à la place)
 - [`group`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
-- [`heading`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role) (utilisez {{HTMLElement("Heading_Elements", "h1")}} jusqu'à {{HTMLElement("Heading_Elements", "h6")}})
+- [`heading`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role) (utilisez `{{HTMLElement("Heading_Elements", "&lt;h1&gt;")}}` jusqu'à `{{HTMLElement("Heading_Elements", "&lt;h6&gt;")}}`)
 - [`img`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) (utilisez {{HTMLElement("img")}} ou {{HTMLElement("picture")}} à la place)
 - [`list`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/list_role) (utilisez soit {{HTMLElement("ul")}} soit {{HTMLElement("ol")}} à la place)
 - [`listitem`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role) (utilisez {{HTMLElement("li")}} à la place)
@@ -71,6 +71,12 @@ Ceux-ci sont inclus pour complétude, mais dans la plupart des cas ils sont rare
 - [`superscript`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`time`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 
+Les rôles graphiques sont définis dans le [module WAI-ARIA Graphics <sup>(angl.)</sup>](https://w3c.github.io/graphics-aria/) et sont utilisés pour définir la structure et la signification sémantique du contenu graphique. Ils sont des sous-classes des rôles `document`, `group` et `img`.
+
+- [`graphics-document`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-document_role)
+- [`graphics-object`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-object_role)
+- [`graphics-symbol`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-symbol_role)
+
 ### 2. Rôles de composants
 
 Les rôles de composants sont utilisés pour définir des schémas interactifs courants. Comme pour les rôles de structure de document, certains rôles de composants ont la même sémantique que des éléments HTML natifs bien pris en charge, et doivent donc être évités. La différence clé est que les rôles de composants nécessitent généralement JavaScript pour l'interaction, tandis que les rôles de structure de document n'en nécessitent souvent pas.
@@ -87,7 +93,7 @@ Les rôles de composants sont utilisés pour définir des schémas interactifs c
 
 Évitez d'utiliser [`button`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/button_role), [`checkbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role), [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), [`link`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/link_role), [`menuitem`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role), [`menuitemcheckbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role), [`menuitemradio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role), [`option`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/option_role), [`progressbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role), [`radio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role) et [`textbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role), que nous avons inclus pour complétude. Pour la plupart, des équivalents sémantiques avec interactivité accessible sont disponibles et pris en charge. Voir la documentation individuelle de chaque rôle pour plus d'informations.
 
-#### Rôles de widgets composites
+#### Rôles de composants composites
 
 - [`combobox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
 - [`menu`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role)
@@ -125,7 +131,7 @@ Les rôles de régions dynamiques sont utilisés pour définir des éléments do
 
 ### 5. Rôles de fenêtre
 
-Les rôles de fenêtre définissent des sous-fenêtres dans la fenêtre du document principal, au sein de la même fenêtre, telles que les boîtes de dialogue modales&nbsp;:
+Les rôles de fenêtre définissent des sous-fenêtres dans la fenêtre du document principal, au sein de la même fenêtre, telles que les boîtes de dialogue bloquantes&nbsp;:
 
 - [`alertdialog`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
 - [`dialog`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)

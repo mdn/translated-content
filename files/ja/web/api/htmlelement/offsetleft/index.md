@@ -3,16 +3,16 @@ title: "HTMLElement: offsetLeft プロパティ"
 short-title: offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 7cd51a73ad94df604db79ccacbbe0513d0967650
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement.offsetLeft`** プロパティは読み取り専用で、現在の要素の*左上隅*が {{domxref("HTMLElement.offsetParent")}} ノード内で左へオフセットされるピクセル数を返します。
+**`offsetLeft`** は {{domxref("HTMLElement")}} インターフェイスの読み取り専用プロパティで、現在の要素の*左上隅*が {{domxref("HTMLElement.offsetParent")}} ノード内で左へオフセットされるピクセル数を返します。
 
-ブロックレベル要素では、 `offsetTop`, `offsetLeft`, `offsetWidth`, `offsetHeight` が `offsetParent` からの相対的な要素の境界ボックスを記述します。
+ブロックレベル要素では、`offsetTop`、`offsetLeft`、`offsetWidth`、`offsetHeight` は、`offsetParent` を基準とする要素の境界ボックスを表します。
 
-しかし、 (**span** などの) インラインレベル要素は行をまたいで折り返すことがあるので、 `offsetTop` および `offsetLeft` は*最初の*境界ボックス (その幅と高さを取得するには {{domxref("Element.getClientRects()")}} を使用) の位置を記述するのに対し、 `offsetWidth` および `offsetHeight` は*囲む*境界ボックス (位置を取得するには {{domxref("Element.getBoundingClientRect()")}} を使用) の寸法を記述します。したがって、 `offsetLeft`, `offsetTop`, `offsetWidth`, `offsetHeight` による左、上、幅、高さは折り返されたテキストの区間を囲むボックスにはなりません。
+しかし、`<span>` のようなインラインレベル要素は行をまたいで折り返すことがあります。この場合、`offsetTop` と `offsetLeft` は*最初の*境界ボックスの位置を表し（幅と高さを取得するには {{domxref("Element.getClientRects()")}} を使用）、`offsetWidth` と `offsetHeight` は*囲む*境界ボックスの寸法を表します（位置を取得するには {{domxref("Element.getBoundingClientRect()")}} を使用）。したがって、`offsetLeft`、`offsetTop`、`offsetWidth`、`offsetHeight` で得られる左、上、幅、高さは、テキストが折り返された `<span>` の境界ボックスにはなりません。
 
 ## 値
 
@@ -25,33 +25,47 @@ const colorTable = document.getElementById("t1");
 const tOLeft = colorTable.offsetLeft;
 
 if (tOLeft > 5) {
-  // large left offset: do something here
+  // 大きな左オフセットがある場合の処理
 }
 ```
 
-この例は、 div 内で折り返す「長い」文を青い境界線で表示し、 span の境界を記述すると考えられるものを赤いボックスで表示します。
+この例では、青い境界線を持つ div 内で折り返す「長い」文と、span の境界を表すと考えられる赤いボックスを示します。
 
-![Short span. という文があります。このテキストは青い境界の div に完全に収まっています。Long span that wraps within this div. という文があります。"long span that wraps" の部分は赤い境界のボックスに入っています。"within this div" の部分は青い境界の div の中に入っています。](offsetleft.jpg)
+![「短い span。」という文。このテキストは青い境界線の div 内に完全に収まっています。「この div 内で折り返す長い span。」という文。「この div 内で折り返す長い span」の部分は赤い境界線のボックス内にあり、「この div 内」の部分は青い境界線の div 内にあります。](offsetleft.jpg)
 
 ```html
-<div
-  style="width: 300px; border-color:blue; border-style:solid; border-width:1;">
-  <span>Short span. </span>
-  <span id="longspan">Long span that wraps within this div.</span>
+<div class="span-container">
+  <span>Short span.</span>
+  <span id="long-span">Long span that wraps within this div.</span>
 </div>
 
-<div
-  id="box"
-  style="position: absolute; border-color: red; border-width: 1; border-style: solid; z-index: 10"></div>
+<div id="box"></div>
+```
 
-<script>
-  const box = document.getElementById("box");
-  const longspan = document.getElementById("longspan");
-  box.style.left = longspan.offsetLeft + document.body.scrollLeft + "px";
-  box.style.top = longspan.offsetTop + document.body.scrollTop + "px";
-  box.style.width = longspan.offsetWidth + "px";
-  box.style.height = longspan.offsetHeight + "px";
-</script>
+```css
+.span-container {
+  width: 300px;
+  border-color: blue;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#box {
+  position: absolute;
+  border-color: red;
+  border-width: 1px;
+  border-style: solid;
+  z-index: 10;
+}
+```
+
+```js
+const box = document.getElementById("box");
+const longSpan = document.getElementById("long-span");
+box.style.left = `${longSpan.offsetLeft}${document.body.scrollLeft}px`;
+box.style.top = `${longSpan.offsetTop}${document.body.scrollTop}px`;
+box.style.width = `${longSpan.offsetWidth}px`;
+box.style.height = `${longSpan.offsetHeight}px`;
 ```
 
 ## 仕様書
@@ -64,4 +78,10 @@ if (tOLeft > 5) {
 
 ## 関連情報
 
-- {{domxref("HTMLElement.offsetParent")}}, {{domxref("HTMLElement.offsetTop")}}, {{domxref("HTMLElement.offsetWidth")}}, {{domxref("HTMLElement.offsetHeight")}}
+- [要素の寸法の決定](/ja/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("Element.clientLeft")}}
+- {{domxref("Element.scrollLeft")}}
+- {{domxref("HTMLElement.offsetHeight")}}
+- {{domxref("HTMLElement.offsetWidth")}}
+- {{domxref("HTMLElement.offsetTop")}}
+- {{domxref("Element.getBoundingClientRect()")}}

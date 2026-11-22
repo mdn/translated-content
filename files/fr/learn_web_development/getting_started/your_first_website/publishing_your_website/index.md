@@ -113,7 +113,7 @@ Pour en savoir plus, consultez [Bien démarrer avec GitHub Pages](https://docs.g
 
 - [Qu'est-ce qu'un serveur web](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [Comprendre les noms de domaine](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
-- [Combien ça coûte de faire quelque chose sur le Web&nbsp;?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
+- [Combien ça coûte de faire quelque chose sur le Web&nbsp;?](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 - [Déployer un site web <sup>(angl.)</sup>](https://www.codecademy.com/learn/deploy-a-website)&nbsp;: un bon tutoriel de Codecademy qui va un peu plus loin et qui montre quelques techniques supplémentaires.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}

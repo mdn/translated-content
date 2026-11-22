@@ -29,7 +29,7 @@ Aucun.
 
 ### Valeur de retour
 
-Une chaîne de caractères représentant la date indiquée en temps UTC (voir la description pour le format). Retourne `"Invalid Date"` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+Une chaîne de caractères représentant la date indiquée en temps UTC (voir la description pour le format). Retourne `"Invalid Date"` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
 ## Description
 

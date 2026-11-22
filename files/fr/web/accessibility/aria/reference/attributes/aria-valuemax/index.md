@@ -3,14 +3,14 @@ title: "ARIA : attribut aria-valuemax"
 short-title: aria-valuemax
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 L'attribut `aria-valuemax` définit la valeur maximale autorisée pour un composant de type plage.
 
 ## Description
 
-L'attribut `aria-valuemax` définit la valeur maximale autorisée pour les composants de type plage. Il est similaire à l'attribut `max` des éléments HTML {{HTMLElement('progress')}}, {{HTMLElement('meter')}} et {{HTMLElement('input')}} de type [`range`](/fr/docs/Web/HTML/Reference/Elements/input/range), [`number`](/fr/docs/Web/HTML/Reference/Elements/input/number) et tous les types date et heure.
+L'attribut `aria-valuemax` définit la valeur maximale autorisée pour les composants de type plage. Il est similaire à l'attribut `max` des éléments HTML {{HTMLElement("progress")}}, {{HTMLElement("meter")}} et {{HTMLElement("input")}} de type [`range`](/fr/docs/Web/HTML/Reference/Elements/input/range), [`number`](/fr/docs/Web/HTML/Reference/Elements/input/number) et tous les types date et heure.
 
 Lors de la création d'un rôle de type plage, y compris [`meter`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role), [`scrollbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role), [`slider`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role) et [`spinbutton`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role) sur un élément non sémantique, `aria-valuemax` permet de définir une valeur maximale supérieure à la valeur minimale et est un attribut requis pour `slider`, `scrollbar` et `spinbutton`.
 
@@ -18,21 +18,6 @@ Déclarer les valeurs minimale et maximale permet aux technologies d'assistance 
 
 > [!WARNING]
 > Le rôle [`range`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/range_role) ne doit **PAS** être utilisé car il est [«&nbsp;abstrait&nbsp;»](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles). L'attribut `aria-valuemax` est utilisé sur tous les sous-types de rôles de plage.
-
-## Exemple
-
-Le code ci-dessous montre un curseur avec une valeur maximale de 9.
-
-```html
-<div id="dimesLabel">Dimes</div>
-<div
-  role="slider"
-  aria-valuenow="0"
-  aria-valuemin="0"
-  aria-valuemax="9"
-  aria-labelledby="dimesLabel"
-  id="dimes"></div>
-```
 
 ## Valeurs
 
@@ -63,6 +48,21 @@ Hérité dans les rôles&nbsp;:
 - [`scrollbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
 - [`slider`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
 - [`spinbutton`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
+
+## Exemple
+
+Le code ci-dessous montre un curseur avec une valeur maximale de 9.
+
+```html
+<div id="dimesLabel">Dimes</div>
+<div
+  role="slider"
+  aria-valuenow="0"
+  aria-valuemin="0"
+  aria-valuemax="9"
+  aria-labelledby="dimesLabel"
+  id="dimes"></div>
+```
 
 ## Spécifications
 

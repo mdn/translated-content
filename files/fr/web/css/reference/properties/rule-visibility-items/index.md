@@ -3,12 +3,12 @@ title: Propriété CSS `rule-visibility-items`
 short-title: rule-visibility-items
 slug: Web/CSS/Reference/Properties/rule-visibility-items
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 {{SeeCompatTable}}
 
-La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`rule-visibility-items`** définit si les segments de règle sont peints dans les gouttières des lignes et des colonnes adjacentes aux zones vides.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`rule-visibility-items`** définit si les segments de règle sont peints dans les gouttières des rangées et des colonnes adjacentes aux zones vides.
 
 ## Propriétés constitutives
 
@@ -96,7 +96,7 @@ Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 ## Description
 
-La propriété `rule-visibility-items` définit si les segments de règle sont peints dans les gouttières adjacentes aux zones vides dans les gouttières entre les lignes et les colonnes des conteneurs [multi-lignes](/fr/docs/Web/CSS/Guides/Multicol_layout) et [grilles](/fr/docs/Web/CSS/Guides/Grid_layout) comportant plus d'une ligne ou d'une colonne.
+La propriété `rule-visibility-items` définit si les segments de règle sont peints dans les gouttières adjacentes aux zones vides dans les gouttières entre les rangées et les colonnes des conteneurs [multi-rangées](/fr/docs/Web/CSS/Guides/Multicol_layout) et [grilles](/fr/docs/Web/CSS/Guides/Grid_layout) comportant plus d'une rangée ou d'une colonne.
 
 La valeur est un mot-clé unique qui définit la même valeur pour les propriétés {{CSSxRef("column-rule-visibility-items")}} et {{CSSxRef("row-rule-visibility-items")}}.
 
@@ -131,9 +131,9 @@ Nous incluons une liste de duos sportifs dynamiques&nbsp;:
 
 #### CSS
 
-Nous définissons la liste ordonnée ({{HTMLElement("ol")}}) comme un conteneur de grille, créant 4 colonnes et 4 lignes en définissant à la fois les propriétés {{CSSxRef("grid-template-columns")}} et {{CSSxRef("grid-template-rows")}} sur `repeat(4, 1fr)`, et déplaçons le dernier élément vers la zone de grille en bas à droite à l'aide des propriétés {{CSSxRef("grid-column")}} et {{CSSxRef("grid-row")}}. Nous incluons un {{CSSxRef("gap")}} de `20px` pour fournir suffisamment d'espace entre les colonnes pour accueillir nos règles de `5px`. Nous définissons les règles de colonne sur `dashed` et les règles de ligne sur `solid`.
+Nous définissons la liste ordonnée ({{HTMLElement("ol")}}) comme un conteneur de grille, créant 4 colonnes et 4 rangées en définissant à la fois les propriétés {{CSSxRef("grid-template-columns")}} et {{CSSxRef("grid-template-rows")}} sur `repeat(4, 1fr)`, et déplaçons le dernier élément vers la zone de grille en bas à droite à l'aide des propriétés {{CSSxRef("grid-column")}} et {{CSSxRef("grid-row")}}. Nous incluons un {{CSSxRef("gap")}} de `20px` pour fournir suffisamment d'espace entre les colonnes pour accueillir nos règles de `5px`. Nous définissons les règles de colonne sur `dashed` et les règles de rangée sur `solid`.
 
-Enfin, nous définissons `rule-visibility-items` sur `between`, de sorte que les règles de ligne et de colonne ne sont peintes que si les deux zones de la grille adjacentes les contiennent un élément de la grille.
+Enfin, nous définissons `rule-visibility-items` sur `between`, de sorte que les règles de rangée et de colonne ne sont peintes que si les deux zones de la grille adjacentes les contiennent un élément de la grille.
 
 ```css
 ol {

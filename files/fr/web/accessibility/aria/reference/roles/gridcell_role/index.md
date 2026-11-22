@@ -3,7 +3,7 @@ title: "ARIA : rôle gridcell"
 short-title: gridcell
 slug: Web/Accessibility/ARIA/Reference/Roles/gridcell_role
 l10n:
-  sourceCommit: 96758f3d8ce1e5fbd9d58053bdef103eec1de108
+  sourceCommit: 7d55f113b5a05afe6ada6bb9b76bd3b0458f077d
 ---
 
 Le rôle `gridcell` est utilisé pour créer une cellule dans une [grille](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) ou un [arbre de grille](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role). Il est destiné à imiter la fonctionnalité de l'élément HTML {{HTMLElement("td")}} pour le regroupement d'informations de style tableau.
@@ -104,7 +104,7 @@ Dans un [arbre de grille](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegr
 - [`aria-rowindex`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex)
   - : Identifie la position d'un élément par rapport aux autres lignes du regroupement d'informations de style tableau.
 
-### Exemples
+## Exemples
 
 L'exemple suivant crée un regroupement d'informations de style tableau&nbsp;:
 

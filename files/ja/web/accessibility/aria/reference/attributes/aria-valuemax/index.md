@@ -1,8 +1,9 @@
 ---
-title: aria-valuemax
+title: "ARIA: aria-valuemax 属性"
+short-title: aria-valuemax
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax
 l10n:
-  sourceCommit: a90c5bb64149b34db5a004b479d3195490d1c5f5
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 `aria-valuemax` 属性は、範囲ウィジェットで許可される最大値を定義します。
@@ -17,21 +18,6 @@ l10n:
 
 > [!WARNING]
 > [`range`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/range_role) ロール自体は [「抽象ロール」](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#6._抽象ロール) であるため、**使用しないで**ください。`aria-valuemax` 属性は、`range` ロールの全てのサブタイプで使用されます。
-
-## 例
-
-以下のコードは、最大値が 9 のスライダーを示しています。
-
-```html
-<div id="dimesLabel">Dimes</div>
-<div
-  role="slider"
-  aria-valuenow="0"
-  aria-valuemin="0"
-  aria-valuemax="9"
-  aria-labelledby="dimesLabel"
-  id="dimes"></div>
-```
 
 ## 値
 
@@ -62,6 +48,21 @@ l10n:
 - [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
 - [`slider`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
 - [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
+
+## 例
+
+以下のコードは、最大値が 9 のスライダーを示しています。
+
+```html
+<div id="dimesLabel">ダイム</div>
+<div
+  role="slider"
+  aria-valuenow="0"
+  aria-valuemin="0"
+  aria-valuemax="9"
+  aria-labelledby="dimesLabel"
+  id="dimes"></div>
+```
 
 ## 仕様書
 

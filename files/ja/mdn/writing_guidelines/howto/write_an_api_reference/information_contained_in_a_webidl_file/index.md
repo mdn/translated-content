@@ -2,7 +2,7 @@
 title: WebIDL ファイルに含まれる情報
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
 l10n:
-  sourceCommit: c053b4b3bb0f34736e9f4402d4254830670af723
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 API についての記事を書くとき、情報源はたくさんあります。仕様書にはモデルと同様に何が実装されるべきかが記述され、実装には実際にブラウザーに置かれたものが記述されています。 WebIDL ファイルは、 API に関する情報のすべてではありませんが、多くの情報を提供する非常に凝縮された方法です。この記事では、 WebIDL 構文を理解するためのリファレンスを提供します。
@@ -25,7 +25,7 @@ WebIDL は[その仕様書](https://webidl.spec.whatwg.org/)で定義されて�
 
 - Gecko については、 Mozilla がその方言である WebIDL の[ドキュメント](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html) を作成しました。
 - Chromium については、 Google もその拡張機能を説明する[ドキュメント](https://www.chromium.org/blink/webidl/)を作成しました。
-- WebCore については、Apple もその方言に関する[ページ](https://trac.webkit.org/wiki/WebKitIDL)を公開しています。
+- WebCore については、Apple もその方言に関する[ページ](https://docs.webkit.org/Deep%20Dive/Architecture/JSWrappers.html)を公開しています。
 
 > [!NOTE]
 > ここでは、記事を書くときに最も役に立つ WebIDL のサブセットのみを説明します。実装者にとって便利なアノテーションは他にもたくさんあります。完全な概要を知るには、上記のリンク先の 4 つの記事を参照してください。
@@ -465,7 +465,7 @@ iterable<valueType>
 - `keys()` はキー、すなわち添字（`unsigned long`）の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。値イテレーターの場合、 `keys()` と `entries()` は等価です。
 - `forEach()` は、リストの各項目に対応するコールバック関数を実行します。
 
-このようなイテレーターは，`for (const p in object)` という構文を `for (const p in object.entries())` の省略形として使うことを可能にします。インターフェイスの説明の中に、このことに関する文を追加しています。
+このようなイテレーターを使うと、`for (const p in object)` という構文を `for (const p in object.entries())` の省略形として使えるようになります。インターフェイスの解説に、このことを説明する文を追加します。
 
 反復処理する対象の値は、以下のいずれかの方法で定義できます。
 
@@ -486,7 +486,7 @@ iterable<keyType, valueType>
 - `keys()` はキーの[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('FormData.keys()')}}
 - `forEach()` は、指定されたコールバック関数をリストの各項目に対して一度だけ実行します。例えば {{domxref('Headers.forEach()')}} を参照してください。
 
-このようなイテレーターを使うと，`for (const p in object)` という構文を， `for (const p in object.entries())` の省略形として使うことができます．インターフェイスの説明の中に、それに関する文を追加します。例: {{domxref('FormData')}}.
+このようなイテレーターを使うと、`for (const p in object)` という構文を `for (const p in object.entries())` の省略形として使えるようになります。インターフェイスの解説に、このことを説明する文を追加します。例: {{domxref('FormData')}}。
 
 反復処理する値のペアは、以下のいずれかの方法で定義します。
 

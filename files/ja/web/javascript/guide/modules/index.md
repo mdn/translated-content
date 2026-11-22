@@ -2,33 +2,155 @@
 title: JavaScript モジュール
 slug: Web/JavaScript/Guide/Modules
 l10n:
-  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
+  sourceCommit: 1dc2c39b38fcfe047ea29d33a3d97c01b2791539
 ---
 
 {{Previous("Web/JavaScript/Guide/Internationalization")}}
 
-本章では、JavaScript のモジュールを使い始めるために必要なことすべてを紹介します。
+このガイドでは、JavaScript のモジュール構文を使い始めるために必要なことをすべて紹介します。
 
-## モジュールの背景
+## モジュールの考え方
+
+モジュール内で使用できる構文を見る前に、まずモジュールとは何か、従来のスクリプトとどう異なるのか、なぜ必要なのかを概説します。
+
+### モジュールの背景
 
 JavaScript のプログラムはとても小さいものから始まりました。初期の用途は、必要に応じてウェブページにちょっとした対話的な機能を追加する独立したスクリプト処理がほとんどであったため、大きなスクリプトは通常必要ありませんでした。そして何年かが過ぎ、今や大量の JavaScript を持つ完全なアプリケーションをブラウザーで実行することはもちろん、JavaScript を他のコンテキスト（例えば [Node.js](/ja/docs/Glossary/Node.js)）で使うこともあります。
 
-複雑なプロジェクトでは、必要に応じて JavaScript プログラムを別個のモジュールに分割し、インポートできる仕組みが必要です。 Node.js は長年この機能を提供しており、モジュールの利用を可能にする JavaScript ライブラリーやフレームワークも数多くあります（例えば、他の [CommonJS](https://ja.wikipedia.org/wiki/CommonJS) や、[AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md) ベースのモジュールシステムである [RequireJS](https://requirejs.org/)、 [webpack](https://webpack.js.org/) や [Babel](https://babeljs.io/)）。
+複雑なプロジェクトでは、必要に応じてインポートできるコード単位であるモジュールに、JavaScript プログラムを分割する仕組みが必要です。Node.js は長年この機能を提供しており、モジュールを使用できる JavaScript ライブラリーやツールも数多くあります（例えば、[RequireJS](https://requirejs.org/)<sup>(英語)</sup> のような [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md)<sup>(英語)</sup> ローダー、[webpack](https://webpack.js.org/)<sup>(英語)</sup> のようなバンドラー、[Babel](https://babeljs.io/)<sup>(英語)</sup> のようなコンパイラー）。
 
-現行のブラウザーはすべて、トランスパイルを必要とせずにモジュール機能にネイティブで対応しています。これは良いことであるに違いありません。ブラウザーはモジュールの読み込みを最適化することができ、ライブラリーを使用してクライアント側で余分な処理や余分なラウンドトリップを行うよりも効率的です。しかし、 webpack のようなバンドラーが不要になるわけではありません。バンドラーは、コードを合理的なサイズの塊に分割する作業に依然として優れており、また、ミニファイ、デッドコードの排除、ツリーシェイクなどの最適化も可能です。
+現行のブラウザーはすべて、トランスパイルを必要とせずにモジュール機能にネイティブで対応しています。ブラウザーがライブラリーを使わずにモジュールの読み込みを自動的に処理できるため、余分なクライアント側の処理や通信を省けます。ただし、webpack のようなバンドラーが不要になるわけではありません。バンドラーはコードを適切なサイズのチャンクに分割でき、ミニファイ、デッドコードの除去、{{glossary("tree shaking", "ツリーシェイク")}}などの最適化も行えます。
 
-## 例の紹介
+### モジュールとは
 
-モジュールの使い方を紹介するために、GitHub 上に[一連の例](https://github.com/mdn/js-examples/tree/main/module-examples)を作りました。これらは、ウェブページに [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) 要素を追加し、そのキャンバス上にいくつかの異なる図形（と、それに関するレポート）を描画するモジュールの例です。
+JavaScript コードは、スクリプト（「クラシックスクリプト」や「従来のスクリプト」とも呼ばれます）またはモジュールとして評価できます。主な違いは 2 つあります。
 
-このような機能はあまり役に立ちませんが、モジュールの説明が明確になるように意図的に単純にしています。
+1. 構文解析時、モジュールはスクリプトと少し異なる構文で解析されます。モジュールは自動的に[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)になり、モジュール内でのみ {{jsxref("Statements/import", "import")}} 文と {{jsxref("Statements/export", "export")}} 文を使用できます。
+2. 実行時、モジュールはグローバルスコープではなく独自のスコープで実行されます。そのため、モジュールで宣言した変数、関数、クラスなどは、明示的にエクスポートして他のモジュールからインポート可能にするか、（ブラウザーの `window` など）グローバルオブジェクトに追加してグローバルに利用できるようにしない限り、モジュールの外から見えません。モジュール内で捕捉されなかったエラーは開発者ツールに表示されますが、JavaScript コンソールからモジュールスコープの変数にアクセスすることはできません。
+
+ウェブ上のモジュールにはほかにも違いがあります。詳しくは[ウェブでのモジュールの使用](/ja/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web)を参照してください。
+
+従来、スクリプトは次のようにウェブページに追加されていました。
+
+```html
+<head>
+  <script src="external-script.js"></script>
+</head>
+<body>
+  <!-- ページコンテンツ -->
+  <script src="external-script-2.js"></script>
+  <script>
+    // インラインスクリプト
+  </script>
+</body>
+```
+
+```js
+// -- external-script.js --
+function $() {
+  // …
+}
+// …
+```
+
+```js
+// -- external-script-2.js --
+$.ajax(/* … */);
+// …
+```
+
+![スクリプトがウェブページに追加される方法を示す図](script-loading.svg)
+
+特に重要なのは、ページに追加されたすべてのクラシックスクリプトが同じスコープ、つまりグローバルスコープで実行されることです。他の関数やブロック内にない変数は、ページ内の後続のどこからでもアクセスできます。これは便利な一方で危険でもあります。この図では、すべてのスクリプトがグローバルスコープにあるため、2 番目と 3 番目のスクリプトから、最初のスクリプトで宣言された `$` 変数にアクセスできます。
+
+この方法は非常に便利ですが、規模が大きくなると扱いにくくなります。
+
+- スコープの汚染や識別子の衝突が大きな問題になります。[jQuery](https://jquery.com/)<sup>(英語)</sup> や [Underscore](https://underscorejs.org/)<sup>(英語)</sup> のような一般的なライブラリーは、リスクを減らすために `$` や `_` のような特別な識別子を使いますが、多くのサードパーティライブラリーが `map`、`merge`、`debounce` などのよくある名前を取り合います。
+- すべての依存関係を作者が明示的に宣言して管理する必要があります。ライブラリー A がライブラリー B をインポートする場合、アプリケーションの作者が B を読み込む `<script>` 要素を追加し、A より先に読み込まれるようにしなければなりません。
+- 必要なときにライブラリーを読み込むのが困難です。ページを読み込むと、すべてが読み込まれて初期化されます。
+
+同じコードをモジュールで記述するとどうなるか考えてみましょう。最初のスクリプト `external-script.js` は、変数 `$` を他のスクリプトと共有しようとしています。先ほどはこの変数をグローバルスコープに置きましたが、モジュールではエクスポートして他のスクリプトにインポートできます。
+
+```html
+<head>
+  <script type="module" src="external-script-2.js"></script>
+  <script type="module">
+    import { $ } from "./external-script.js";
+    // インラインスクリプト
+  </script>
+</head>
+<body>
+  <!-- ページコンテンツ -->
+</body>
+```
+
+```js
+// -- external-script.js --
+function $() {
+  // …
+}
+// …
+export { $ };
+```
+
+```js
+// -- external-script-2.js --
+import { $ } from "./external-script.js";
+
+$.ajax(/* … */);
+// …
+```
+
+![モジュールがウェブページに追加される方法を示す図](module-loading.svg)
+
+スクリプトの場合、後続のコードがそれ以前のすべてのコードにアクセスできる_線形_な依存関係になります。一方、モジュールでは[依存関係グラフ](/ja/docs/Web/JavaScript/Guide/Modules/Module_graph)が形成され、各モジュールは依存するモジュールと、そこから必要とする変数を明示的に宣言します。
+
+前述のとおり、モジュールはスクリプトと異なる方法で構文解析されます。そのため、JavaScript エンジンはモジュールとスクリプトのどちらの構文解析規則を適用するかを知る必要があります。ホストは一般に[アウトオブバンドシグナリング機構](https://github.com/tc39/how-we-work/blob/main/terminology.md#out-of-band)<sup>(英語)</sup>を使ってこれを指定します。これは、コードの振る舞いをコード外の情報で設定する方法です（`"use strict"` でスクリプト内に解釈モードを宣言する[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)とは異なります）。その情報を指定する方法はいくつかあります。
+
+- モジュールを `<script>` タグから参照する場合は、`type="module"` 属性を使用できます。詳しくは[ウェブでのモジュールの使用](/ja/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web)も参照してください。
+- Node.js を使用する場合は、`.mjs` ファイル拡張子を使用するか、最も近い `package.json` ファイルに `"type": "module"` を追加できます。詳しくは[プラットフォームをまたぐモジュール](/ja/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms)も参照してください。
+- モジュールをワーカーとして使用する場合は、{{domxref("Worker/Worker", "Worker()")}} コンストラクターの呼び出し時に `type: "module"` を渡せます。
 
 > [!NOTE]
-> 使用例をダウンロードしてローカル実行する場合、ローカルのウェブサーバー上で実行する必要があります。
+> Node.js など一部のランタイムは、明示的な指定がない場合、モジュール以外では使用できない `import` / `export` のような構文がコードにあるかどうかに基づいて、モジュール種別を暗黙的に検出します。ブラウザーにはこの機能はありません。
 
-## 基本的な構造の例
+モジュールからもグローバル変数にアクセスできます。例えば、モジュールからクラシックスクリプトで宣言した変数を使用できます。
 
-最初の例 ([basic-modules](https://github.com/mdn/js-examples/tree/main/module-examples/basic-modules) を参照) は、次のようなファイル構造になっています。
+```html
+<script>
+  var text = "Hello";
+</script>
+<script type="module" src="render.js"></script>
+```
+
+```js
+// -- render.js --
+document.body.textContent = text;
+```
+
+### 余談 — .mjs と .js
+
+この記事ではモジュールファイルに `.js` の拡張子を使用していますが、他の資料では `.mjs` 拡張子を使用していることがあります。[V8 のドキュメント](https://v8.dev/features/modules#mjs)<sup>(英語)</sup>ではこれを推奨しています。その理由は次のとおりです。
+
+- HTML タグや `package.json` などの周辺情報を調べなくても、ファイル自体からモジュールかスクリプトかを判断できます。
+- ブラウザー以外では、`.mjs` をモジュールモードとして直接扱うことがほぼ一般的になっています。[Node.js](https://nodejs.org/api/esm.html#esm_enabling)<sup>(英語)</sup> のようなランタイムや [Babel](https://babeljs.io/docs/options#sourcetype)<sup>(英語)</sup> のようなビルドツールも対応しています。
+
+ブラウザーでは、拡張子の違いは見た目だけのものです。ウェブ上ではファイル拡張子は重要ではありません。JavaScript かどうかは [`Content-Type`](/ja/docs/Web/HTTP/Reference/Headers/Content-Type) ヘッダーで識別され、モジュールかどうかは `<script>` タグの `type="module"` 属性で識別されます。ブラウザーでモジュールを正しく動作させるには、サーバーが `text/javascript` などの JavaScript MIME タイプを含む `Content-Type` ヘッダーでファイルを提供する必要があります。そうしないと、"The server responded with a non-JavaScript MIME type" のような厳格な MIME タイプチェックエラーが発生し、ブラウザーは JavaScript を実行しません。
+
+この記事では `.js` を使用することにしました。主な利点は、`.js` 拡張子の方が `.mjs` より広く認識されていることです。`.mjs` の対応は進んでいますが、対応していないソフトウェアに遭遇する可能性があります。
+
+- ほとんどのサーバーは `.js` ファイルに正しい MIME タイプを自動的に設定しますが、`.mjs` ファイルには設定しないサーバーもあります。[GitHub Pages](https://pages.github.com/)<sup>(英語)</sup> や Node.js 用の [`http-server`](https://github.com/http-party/http-server#readme)<sup>(英語)</sup> など、`.mjs` ファイルを正しく提供するサーバーもあります。すでにそのような環境を使っている場合や、`.mjs` ファイルに正しい `Content-Type` を設定するようサーバーを構成できる場合は問題ありません。しかし、ファイルを提供するサーバーを管理していない場合や、ここでのようにファイルを公開する場合は、混乱を招くことがあります。
+- ファイル拡張子は HTTP サーバー以外にも、エディター、オペレーティングシステム、静的解析ツール、フォーマッターなど多くのツールで使用されます。`.mjs` はツール全般での対応が十分でない場合があります。例えば、オペレーティングシステムによっては認識できなかったり、ファイルを開くときに `.js` を暗黙的に追加するなど、別の形式に置き換えたりする場合があります。
+
+上記の問題に遭遇せず、通常の JavaScript ファイルに `.js` を使うのと区別するためにモジュールに `.mjs` を使いたい場合は、開発時に `.mjs` を使用し、ビルド時に `.js` に変換する方法もあります。
+
+## 使用例
+
+モジュールの使い方を紹介するために、GitHub 上に[簡単な例のセット](https://github.com/mdn/js-examples/tree/main/module-examples)を作成しました。これらは、ウェブページに [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) 要素を作成し、キャンバス上にさまざまな図形を描画して、その情報を報告するモジュールの例です。
+
+これらの例は単純ですが、モジュールの説明が明確になるよう意図的に単純にしています。
+
+最初の例 ([basic-modules](https://github.com/mdn/js-examples/tree/main/module-examples/basic-modules) を参照) のファイル構造は次のとおりです。
 
 ```plain
 index.html
@@ -39,45 +161,26 @@ modules/
 ```
 
 > [!NOTE]
-> このガイドの使用例のファイル構造は、全て基本的に同一ですので、上記のファイル構造をよく見ることになるでしょう。
+> このガイドの例はすべて、基本的に同じ構造になっています。
 
-modules ディレクトリーには、次の 2 つのモジュールがあります。
+`index.html` ファイルは DOM を宣言し、`main.js` モジュールを[適用](/ja/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web)するだけです。以降で示すコードはすべて `.js` ファイルのものです。
 
-- `canvas.js` — キャンバスの設定に関する次の関数を持ちます。
-  - `create()` — 指定された `width` と `height` を持つキャンバスを、指定された ID を持つラッパー [`<div>`](/ja/docs/Web/HTML/Reference/Elements/div) の中に作成し、そのラッパー div 自体を指定された親要素の中に追加します。返値は、キャンバスの 2D コンテキストとラッパーの ID を持つオブジェクトです。
-  - `createReportList()` — 順序なしリストを指定されたラッパー要素の中に作成し、これをレポートデータを出力するために使うことができます。返値は、リストの ID です。
+`modules` ディレクトリーにある 2 つのモジュールは次のとおりです。
 
-- `square.js` — 次のものを持ちます。
-  - `name` —文字列 'square' を内容とする定数です。
-  - `draw()` — 正方形を、指定されたキャンバス上に、指定された辺の長さ、位置、色を使って描画します。返値は、正方形の辺の長さ、位置、色を持つオブジェクトです。
-  - `reportArea()` — 指定された辺の長さを持つ正方形の面積を、指定されたレポート用のリストに書き出します。
-  - `reportPerimeter()` — 指定された辺の長さを持つ正方形の周囲の長さを、指定されたレポート用のリストに書き出します。
+- `canvas.js` — キャンバスの設定に関する関数を含みます。
+  - `create()` — 指定された `width` と `height` を持つキャンバスを、指定された ID を持つラッパー [`<div>`](/ja/docs/Web/HTML/Reference/Elements/div) 内に作成し、そのラッパー自体を指定された親要素に追加します。返値は、キャンバスの二次元コンテキストとラッパーの ID を含むオブジェクトです。
+  - `createReportList()` — 指定されたラッパー要素内に順序なしリストを作成し、レポートデータの出力に使えるようにします。返値はリストの ID です。
+- `square.js` — 次のものを含みます。
+  - `name` — 文字列 `"square"` を値とする定数です。
+  - `draw()` — 指定されたサイズ、位置、色で、指定されたキャンバス上に正方形を描画します。返値は正方形のサイズ、位置、色を含むオブジェクトです。
+  - `reportArea()` — 指定された辺の長さの正方形の面積を、指定されたレポート用リストに書き出します。
+  - `reportPerimeter()` — 指定された辺の長さの正方形の周囲の長さを、指定されたレポート用リストに書き出します。
 
-### 余談 — .mjs と .js
+これらの例をダウンロードしたら、[ローカルサーバーを起動](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)して `index.html` ファイルにアクセスしてください。
 
-この記事ではモジュールファイルに `.js` の拡張子を使用していますが、他の記事では `.mjs` という拡張子が使用されているのを目にすることがあるかもしれません。例えば、[V8 のドキュメント](https://v8.dev/features/modules#mjs)ではこれを推奨しています。理由は以下の通りです。
+## 名前付きエクスポート
 
-- どのファイルがモジュールで、どのファイルが通常の JavaScript であるかを明確にすることができます。
-- これにより、[Node.js](https://nodejs.org/api/esm.html#esm_enabling) のようなランタイムや [Babel](https://babeljs.io/docs/options#sourcetype) のようなビルドツールで、モジュールファイルがモジュールとして解析されるようになります。
-
-しかし、少なくとも今のところは `.js` を使い続けることにしました。ブラウザーでモジュールを正しく動作させるためには、サーバーが `Content-Type` ヘッダーで JavaScript の MIME タイプ、例えば `text/javascript` などを含めて提供していることを確認する必要があります。そうしないと、"The server responded with a non-JavaScript MIME type" のような厳格な MIME タイプチェックエラーが表示され、ブラウザーは JavaScript を実行しません。ほとんどのサーバーでは、`.js` ファイルにはすでに正しい MIME タイプが設定されていますが、`.mjs` ファイルにはまだ設定されていません。すでに `.mjs` ファイルを正しく提供しているサーバーには、[GitHub Pages](https://pages.github.com/) や Node.js の [`http-server`](https://github.com/http-party/http-server#readme) などがあります。
-
-これは、すでにそのような環境を使用している場合や、今はまだ使用していないが、何をしているか知っていてアクセスできる場合には問題ありません（つまり、`.mjs` ファイルに正しい [`Content-Type`](/ja/docs/Web/HTTP/Reference/Headers/Content-Type) を設定するようにサーバーを設定することができます）。しかし、あなたがファイルを提供しているサーバーを制御できない場合には、混乱を引き起こす可能性があります。
-
-この記事では学習と移植性を考慮して、`.js` を使用することにしました。
-
-通常の JavaScript ファイルに `.js` を使用するのと比較して、モジュールに `.mjs` を使用することの明確さを本当に重視しているが、上記の問題に直面したくない場合は、開発中に `.mjs` を使用し、ビルドステップで `.js` に変換することをおすすめします。
-
-また、次の点にも注意してください。
-
-- 一部のツールは `.mjs` に対応していないことがあります。
-- モジュールが指し示されているとき、それを示すために `<script type="module">` 属性を使用してください。
-
-## モジュール機能のエクスポート
-
-モジュールが持つ機能にアクセスするために最初に必要なことは、そのような機能をエクスポートすることです。これは {{jsxref("Statements/export", "export")}} 文を使って行います。
-
-最も簡単な使い方は、モジュール外部に公開したい項目の前に `export` をつけることです。
+スクリプトでは、最上位で宣言した変数は後続のスクリプトから暗黙的に利用できます。一方、他のモジュールから利用できるようにするには、変数を明示的に {{jsxref("Statements/export", "export")}} する必要があります。このキーワードは[宣言](/ja/docs/Web/JavaScript/Reference/Statements)（`var`、`let`、`const`、`function`、`class` など）の前に置けます。エクスポートするものは最上位にある必要があります。例えば、関数の中で `export` を使うことはできません。
 
 ```js
 export const name = "square";
@@ -90,47 +193,34 @@ export function draw(ctx, length, x, y, color) {
 }
 ```
 
-エクスポートできるものは、関数、`var`、`let`、`const`、および後述するクラスです。これらは最上位の階層にある必要があります。例えば、関数内で `export` を使うことはできません。
-
-エクスポートしたい全ての項目をエクスポートするより便利な方法は、モジュールファイルの末尾に単一の export 文を追加し、その後にエクスポートしたい機能のカンマ区切りリストを中かっこで囲んで続けることです。例えば次のようにします。
+モジュール内の別の場所で宣言済みのものをエクスポートするには、`export` の後にエクスポートする名前を中かっこで囲んだカンマ区切りのリストとして指定します。
 
 ```js
 export { name, draw, reportArea, reportPerimeter };
 ```
 
-## スクリプトへの機能のインポート
+## 名前付きインポート
 
-モジュールから何らかの機能をエクスポートした後は、それらを使えるようにするためにスクリプトにインポートする必要があります。その最も単純な方法は次のとおりです。
+モジュールから変数をエクスポートしたら、別のモジュールで使うためにインポートする必要があります。そのためには、{{jsxref("Statements/import", "import")}} 文の後に、インポートする名前を中かっこで囲んだカンマ区切りのリストとして記述します。その後に `from` キーワードとモジュール指定子を続けます。
 
 ```js
 import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
 ```
 
-{{jsxref("Statements/import", "import")}} 文の後ろに、中かっこで囲まれたインポートしたい機能のカンマ区切りリストを続け、その後ろに `from` キーワードと、モジュール指定子を続けます。
-
-モジュール指定子は、JavaScript 環境がモジュールファイルへのパスを解決できる文字列を提供します。
-ブラウザーでは、これはサイトルートからの相対パスとなり、`basic-modules` の例では `/js-examples/module-examples/basic-modules` となります。
-しかし、ここでは代わりにドット（`.`）構文を使用して、「現在の場所」を意味しており、その後に探そうとしているファイルへの相対パスを記述しています。相対パスの方が短いし、URL の移植性も高いので、この例はサイト階層の別の場所に移しても作業することができますから、絶対パス全体を毎回書き出すよりもずっとよいでしょう。
-
-そのため、次のようなパスは、
-
-```bash
-/js-examples/module-examples/basic-modules/modules/square.js
-```
-
-次のように書くことができます。
-
-```bash
-./modules/square.js
-```
-
-このような書き方の動作している例は [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/basic-modules/main.js) にあります。
+このようなコードは[`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/basic-modules/main.js)で確認できます。
 
 > [!NOTE]
-> モジュールシステムの中には、相対パスでも絶対パスでもなく、ファイル拡張子もない `modules/square` のようなモジュール指定を使用するものがあります。
-> このような指定子は、最初に[インポートマップ](#importing_modules_using_import_maps)を定義しておけば、ブラウザー環境でも使用できます。
+> モジュール指定子は、インポートする変数をエクスポートするモジュールを示す文字列です。ブラウザーでは通常、現在のモジュールの URL を基準とする URL です。これは {{HTMLElement("a")}} 要素の [`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性と同じように指定できます。例えば、上の例のモジュールが `https://example.com/basic-modules/main.js` で配信され、`square.js` が `https://example.com/basic-modules/modules/square.js` で配信されている場合、次の指定子はどれも同じです。
+>
+> ```plain
+> "https://example.com/basic-modules/modules/square.js"
+> "/basic-modules/modules/square.js"
+> "./modules/square.js"
+> ```
+>
+> ランタイム（ブラウザー、Node.js、バンドラーなど）によって、モジュール指定子の形式には異なる規則があります。詳しくは[ウェブでのモジュールの使用](/ja/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web)と[プラットフォームをまたぐモジュール](/ja/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms)を参照してください。
 
-スクリプトへ機能をインポートすると、同じファイル内で定義されているのと同じように使うことができます。次のコードは、`main.js` でインポートに続く部分です。
+機能をインポートすると、同じファイル内で宣言されているかのように使用できます。次のコードは、`main.js` のインポート文に続く部分です。
 
 ```js
 const myCanvas = create("myCanvas", document.body, 480, 320);
@@ -142,373 +232,49 @@ reportPerimeter(square.length, reportList);
 ```
 
 > [!NOTE]
-> インポートされた値は、エクスポートされた機能の読み取り専用ビューとなります。`const` 変数と同様に、インポートされた変数を再代入することはできませんが、オブジェクト値のプロパティを変更することは可能です。値を再代入することができるのは、その値をエクスポートしているモジュールだけです。例として、[`import` のリファレンス](/ja/docs/Web/JavaScript/Reference/Statements/import#imported_values_can_only_be_modified_by_the_exporter) を参照してください。
+> インポートした値は、エクスポートされた機能の読み取り専用ビューです。`const` 変数と同様に、インポートした変数を再代入することはできませんが、オブジェクトのプロパティは変更できます。値を再代入できるのは、その値をエクスポートしているモジュールだけです。例は [`import` のリファレンス](/ja/docs/Web/JavaScript/Reference/Statements/import#インポートした値はエクスポートしたモジュールだけが変更できる)を参照してください。
 
-## インポートマップを使用したモジュールのインポート
+## デフォルトエクスポートとインポート
 
-ブラウザーがモジュールをインポートするのに、絶対 URL か、文書のベース URL を使用して解決される相対 URL であるモジュール指定子を使用する方法は、前述したとおりです。
+ここまでの例では、変数を名前でエクスポートおよびインポートしました。エクスポート側とインポート側で名前を一致させる必要があります。名前付きエクスポートとインポートだけでもモジュールのコードを記述できます。しかし、CommonJS モジュールや JavaScript 以外のファイルなどの[非 ESM モジュール](/ja/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms)からインポートする場合、これらのシステムでは名前付きエクスポートを使いません。これらのシステムでは、各モジュールはちょうど 1 つの JavaScript 値に対応します。このようなモジュールを表すために、JavaScript はデフォルトエクスポートを提供します。デフォルトエクスポートにはほかにも用途があります。例えば、単一のクラスや関数など、1 つの主要な値を中心に構成されたモジュールでは、インポート側がエクスポート側でその値に付けられた名前を知らなくても、独自のローカル名を選べます。
 
-```js
-import { name as circleName } from "https://example.com/shapes/circle.js";
-import { name as squareName, draw } from "./shapes/square.js";
-```
-
-[インポートマップ](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap)により、モジュールをインポートするときに、モジュール指定子でほぼ全ての好きなテキストを代わりに指定することができます。このマップは、モジュールの URL が解決されたときにテキストを置き換える対応する値を提供します。
-
-例えば、下記のインポートマップの `imports` キーは、「モジュール指定マップ」JSON オブジェクトを定義し、プロパティ名をモジュール指定子として使用でき、ブラウザーがモジュール URL を解決する際に対応する値が代入されます。
-値は、絶対 URL または相対 URL でなければなりません。
-相対 URL は、インポートマップを含む文書の[ベース URL](/ja/docs/Web/HTML/Reference/Elements/base) を使用して絶対 URL アドレスに解決されます。
-
-```html
-<script type="importmap">
-  {
-    "imports": {
-      "shapes": "./shapes/square.js",
-      "shapes/square": "./modules/shapes/square.js",
-      "https://example.com/shapes/square.js": "./shapes/square.js",
-      "https://example.com/shapes/": "/shapes/square/",
-      "../shapes/square": "./shapes/square.js"
-    }
-  }
-</script>
-```
-
-インポートマップは `<script>` 要素の中の [JSON オブジェクト](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap#json_のインポートマップ表現) で、 `type` 属性を [`importmap`](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap) に設定して定義することができます。
-なお、インポートマップは文書内の特定の要素にのみ適用されることに注意してください。仕様では、ワーカーやワークレットのコンテキストでインポートマップを適用する方法についてはカバーされていません。 <!-- https://github.com/WICG/import-maps/issues/2 -->
-
-このマップで、上記のプロパティ名をモジュール指定子として使用することができるようになりました。
-モジュール指定子キーに末尾のスラッシュがない場合は、モジュール指定子キー全体が照合されて置換されます。
-例を説明すると、下記はモジュール名と一致し、URL を別のパスに再マップしています。
+名前付きエクスポートと異なり、デフォルトエクスポートには名前がありません。各モジュールがエクスポートできるデフォルト値は最大 1 つです。`const` や `function` などの_宣言_ではなく、_式_の前に `export default` を付けてエクスポートします。例えば、次の各例は個別に有効です。
 
 ```js
-// Bare module names as module specifiers
-import { name as squareNameOne } from "shapes";
-import { name as squareNameTwo } from "shapes/square";
-
-// Remap a URL to another URL
-import { name as squareNameThree } from "https://example.com/shapes/square.js";
-```
-
-モジュール指定子が末尾にスラッシュがある場合、値が同様にスラッシュを持つ必要があり、キーは「パス接頭辞」として照合されます。
-これにより、URL の全クラスを再マッピングすることができます。
-
-```js
-// Remap a URL as a prefix ( https://example.com/shapes/)
-import { name as squareNameFour } from "https://example.com/shapes/moduleshapes/square.js";
-```
-
-インポートマップ内の複数のキーがモジュール指定子を有効に一致することがあります。
-例えば、`shapes/circle/` というモジュール指定子は、`shapes/` と `shapes/circle/` というモジュール指定子キーと一致する可能性があります。
-この場合、ブラウザーは最も具体的な（最も長い）モジュール指定キーに一致するものを選択します。
-
-インポートマップは、（Node.js のように）素のモジュール名を使用してモジュールをインポートすることができ、ファイル拡張子の有無にかかわらず、パッケージからのインポートをシミュレートすることも可能です。
-上記では示していませんが、モジュールをインポートするスクリプトのパスに基づいて、特定のバージョンのライブラリーをインポートすることもできます。
-一般的に、これらは開発者がより人間に優しいインポートコードを書くことを可能にし、サイトで使用されるモジュールの異なるバージョンと依存関係を管理することを容易にします。
-これにより、ブラウザーとサーバーの両方で同じ JavaScript ライブラリーを使用するために必要な労力を縮小することができます。
-
-以下の節では、上記で説明した様々な機能について、さらに詳しく説明します。
-
-### 機能検出
-
-インポートマップに対応しているかどうかは、[`HTMLScriptElement.supports()`](/ja/docs/Web/API/HTMLScriptElement/supports_static) 静的メソッドを使用してチェックすることができます（これ自体は広く対応しています）。
-
-```js
-if (HTMLScriptElement.supports?.("importmap")) {
-  console.log("Browser supports import maps.");
-}
-```
-
-### モジュールの素の名前でのインポート
-
-Node.js のような一部の JavaScript 環境では、モジュール指定子に素の名前を使用することができます。
-これは、環境がモジュール名をファイルシステム内の標準的な場所に解決することができるため、動作します。
-例えば、 "square" モジュールをインポートするために、以下の構文を使用することができます。
-
-```js
-import { name, draw, reportArea, reportPerimeter } from "square";
-```
-
-ブラウザーで素の名前を使用するには、インポートマップが必要です。これは、ブラウザーがモジュール指定子を URL に解決するために必要な情報を提供します（JavaScript は、モジュールの場所に解決できないモジュール指定子をインポートしようとすると `TypeError` を発生します）。
-
-下記は `square` というモジュール指定子のキーを定義したマップですが、この場合、相対アドレスの値に割り当てられました。
-
-```html
-<script type="importmap">
-  {
-    "imports": {
-      "square": "./shapes/square.js"
-    }
-  }
-</script>
-```
-
-このマップにより、モジュールをインポートするときに素の名前を使用することができるようになりました。
-
-```js
-import { name as squareName, draw } from "square";
-```
-
-### モジュールのパスの再マッピング
-
-モジュール指定子マップの項目で、指定子キーとその関連値に末尾のフォワードスラッシュ (`/`) がある場合、パス接頭辞として使用することができます。
-これにより、インポート URL の集合全体を、ある場所から別の場所に再マッピングすることができます。
-また、Node の環境で見られるような「パッケージとモジュール」の作業をエミュレートするために使用することもできます。
-
-> [!NOTE]
-> 末尾の `/` は、モジュール指定子キーがモジュール指定子の一部として指定することができることを示します。
-> これが存在しない場合、ブラウザーはモジュール指定子キー全体にのみ一致します（置換します）。
-
-#### モジュールのパッケージ
-
-以下の JSON インポートマップ定義は、`lodash` を素の名前として、モジュール指定辞 `lodash/` をパス `/node_modules/lodash-es/` （文書のベース URL に解決）に割り当てたものです。
-
-```json
-{
-  "imports": {
-    "lodash": "/node_modules/lodash-es/lodash.js",
-    "lodash/": "/node_modules/lodash-es/"
-  }
-}
-```
-
-このマッピングを使用すると、素の名前を使用する「パッケージ」全体と、（パスマッピングを使用する）その中のモジュールの両方をインポートすることができます。
-
-```js
-import _ from "lodash";
-import fp from "lodash/fp.js";
-```
-
-上記の `fp` を `.js` というファイル拡張子なしでインポートすることは可能ですが、パスを使用するのではなく、`lodash/fp` というように、そのファイルに対して素のモジュール指定子キーを作成する必要があります。
-これは、1 つのモジュールだけなら妥当かもしれませんが、多くのモジュールをインポートしたい場合には、拡大縮小することになります。
-
-#### 一般的な URL 再マッピング
-
-モジュール指定キーはパスである必要はなく、絶対 URL（または `./`, `../`, `/` のような URL ライクな相対パス）であってもかまいません。
-これは、リソースへの絶対パスを持つモジュールを自分自身でローカルリソースと再マッピングしたい場合に有用な場合があります。
-
-```json
-{
-  "imports": {
-    "https://www.unpkg.com/moment/": "/node_modules/moment/"
-  }
-}
-```
-
-### バージョン管理のためのスコープ付きモジュール
-
-Node のような環境では、モジュールとその依存関係を管理するために npm のようなパッケージマネージャーを使用します。
-パッケージマネージャーは、各モジュールが他のモジュールやその依存関係から確実に区切られるようにします。
-その結果、複雑なアプリケーションでは、モジュールグラフの異なる部分に複数の異なるバージョンで同じモジュールを複数回記載することができますが、ユーザーはこの複雑さについて考える必要はありません。
-
-> [!NOTE]
-> 相対パスを使用してバージョン管理を行うこともできますが、この方法は他にも、自分のプロジェクトに特定の構造を強制し、素のモジュール名を使用することができないなどの点で劣ります。
-
-インポートマップも同様に、アプリケーションに複数のバージョンの依存関係を保有し、同じモジュール指定子を使用してそれらを参照することができます。
-これを実装するために `scopes` キーを使用します。このキーでは、インポートを実行するスクリプトのパスに応じて使用されるモジュール指定子マップを提供することができます。
-下記の例では、これを実演しています。
-
-```json
-{
-  "imports": {
-    "cool-module": "/node_modules/cool-module/index.js"
-  },
-  "scopes": {
-    "/node_modules/dependency/": {
-      "cool-module": "/node_modules/some/other/location/cool-module/index.js"
-    }
-  }
-}
-```
-
-このマッピングでは、 `/node_modules/dependency/` を格納した URL のスクリプトが `cool-module` をインポートしている場合、 `/node_modules/some/other/location/cool-module/index.js` にあるバージョンが使用されます。
-`imports` のマップは、スコープされたマップに一致するスコープがない場合、または一致するスコープに一致する指定するものが格納されていない場合に、予備として使用されます。例えば、`cool-module` がスコープパスに一致しないスクリプトからインポートされた場合、代わりに `imports` のモジュール指定子マップを使用し、 `/node_modules/cool-module/index.js` にあるバージョンにマッピングします。
-
-なお、スコープを選択するために使用されるパスは、アドレスの解決方法には影響しません。
-割り当てられたパスの値がスコープのパスと一致する必要はありませんし、相対パスは依然としてインポートマップを格納するスクリプトのベース URL に解決されます。
-
-モジュール指定子マップの場合と同様に、多くのスコープキーを保有することができ、これらには重複するパスが格納される可能性があります。
-複数のスコープがリファラーURLに一致する場合、最も固有のスコープパスが最初に（最も長いスコープキーが）指定子を指定しないか調べられます。
-ブラウザーは、一致する仕様がない場合、次に一致するほとんどのスコープパスにフォールバックし、さらにその先に進みます。
-一致するスコープのいずれにも一致する指定子がない場合、ブラウザーは `imports` キーのモジュール指定子マップに一致する指定子があるかどうかを調べます。
-
-### ハッシュ化されたファイル名の割り当てによるキャッシュの改善
-
-ウェブサイトで使用されるスクリプトファイルは、キャッシュを容易にするためにハッシュ化されたファイル名にすることがよくあります。
-この手法の欠点は、モジュールが変更された場合、そのハッシュ化されたファイル名を使用してそれをインポートするすべてのモジュールも更新/再生成する必要があることです。
-このため、潜在的に更新のカスケードが発生し、ネットワークリソースを浪費することになります。
-
-インポートマップは、この問題に対する便利な解決策を提供します。
-アプリケーションやスクリプトは、固有のハッシュ化されたファイル名ではなく、代わりにモジュール名（アドレス）のハッシュ化されていないバージョンに依存します。
-下記のようなインポートマップは、実際のスクリプトファイルへのマッピングを提供します。
-
-```json
-{
-  "imports": {
-    "main_script": "/node/srcs/application-fg7744e1b.js",
-    "dependency_script": "/node/srcs/dependency-3qn7e4b1q.js"
-  }
-}
-```
-
-もし `dependency_script` が変更された場合、ファイル名に格納されているハッシュも変更されます。この場合、モジュールの名前の変更を反映するためにインポート マップを更新するだけでよくなります。
-import 文の指定子は変わらないので、これに依存する JavaScript コードのソースを更新する必要はありません。
-
-## JavaScript 以外のリソースの読み込み
-
-統一されたモジュールアーキテクチャがもたらす魅力的な機能のひとつに、JavaScript以外のリソースをモジュールとして読み込む機能があります。例えば、 JSON を JavaScript オブジェクトとして、または CSS を {{domxref("CSSStyleSheet")}} オブジェクトとしてインポートすることができます。
-
-インポートするリソースの種類を明示的に宣言する必要があります。 既定では、ブラウザーはリソースが JavaScript であると想定し、解決されたリソースがそれ以外の場合にはエラーが発生します。 JSON、CSS、またはその他のリソースをインポートするには、[import 属性](/ja/docs/Web/JavaScript/Reference/Statements/import/with)構文を使用します。
-
-```js
-import colors from "./colors.json" with { type: "json" };
-import styles from "./styles.css" with { type: "css" };
-```
-
-ブラウザーはモジュール型の検証も行います。例えば、`./data.json` が JSON ファイルに解決されない場合は失敗します。これにより、データをインポートするだけで、誤ってコードが実行されないことを保証します。インポートが正常に完了すると、インポートした値を通常の JavaScript オブジェクトまたは `CSSStyleSheet` オブジェクトとして使用することができます。
-
-```js
-console.log(colors.map((color) => color.value));
-document.adoptedStyleSheets = [styles];
-```
-
-## HTML にモジュールを適用する
-
-次に `main.js` モジュールを HTML ページに適用する必要があります。これは少し重要な点に違いがありますが、通常のスクリプトをページに適用する方法ととてもよく似ています。
-
-最初に `type="module"` を [`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) 要素に含めることで、そのスクリプトがモジュールであることを宣言します。`main.js` をインポートするには、次のようにします。
-
-```html
-<script type="module" src="main.js"></script>
-```
-
-また、JavaScript コードを `<script>` 要素の本文内に配置することで、モジュールのスクリプトを HTML ファイルに直接埋め込むこともできます。
-
-```html
-<script type="module">
-  /* ここに JavaScript モジュールコード */
-</script>
-```
-
-`import` および `export` 文はモジュール内でのみ使用することができ、通常のスクリプトでは使用できません。 `<script>` 要素に `type="module"` 属性がなく、他のモジュールをインポートしようとした場合、エラーが発生します。例えば次のような場合です。
-
-```html example-bad
-<script>
-  import _ from "lodash"; // SyntaxError: import declarations may only appear at top level of a module
-  // …
-</script>
-<script src="a-module-using-import-statements.js"></script>
-<!-- SyntaxError: import declarations may only appear at top level of a module -->
-```
-
-通常、すべてのモジュールを個別のファイルで定義する必要があります。 HTML にインラインで宣言されたモジュールは、他のモジュールをインポートすることはできますが、それらがエクスポートする何らかの情報は、他のモジュールからアクセスすることはできません（URL を保有していないため）。
-
-> [!NOTE]
-> モジュールとその依存関係は [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素で [`rel="modulepreload"`](/ja/docs/Web/HTML/Reference/Attributes/rel/modulepreload) を指定することで、事前読み込みすることができます。
-> これにより、モジュールを使用する時点での読み込み時間を大幅に縮小することができます。
-
-## モジュールとクラシックスクリプトとのその他の違い
-
-- ローカルでテストしようとするときは注意してください。ローカルから（つまり `file://` URL を使って）HTML ファイルを読み込もうとすると、JavaScript モジュールのセキュリティ要件のために、CORS エラーが発生します。テストはサーバー経由で行う必要があります。
-- また、モジュール内部で定義されたスクリプトの動作は、クラシックスクリプト内部のものと異なるかもしれません。これは、モジュール内部では自動的に{{jsxref("Strict_mode", "厳格モード", "", 1)}}が使われるからです。
-- モジュールのスクリプトを読み込むときに `defer` 属性（[`<script>` の属性](/ja/docs/Web/HTML/Reference/Elements/script#属性) を参照）を使う必要はありません。モジュールは自動的に遅延実行されます。
-- モジュールは、複数の `<script>` タグで参照されていても一度しか実行されません。
-- 最後ですが重要なこととして明らかにしておきますが、モジュールの機能は単独のスクリプトのスコープにインポートされます。つまり、インポートされた機能はグローバルスコープから利用することはできません。それゆえ、インポートされた機能はインポートしたスクリプトの内部からしかアクセスできず、例えば JavaScript コンソールからはアクセスできません。文法エラーは開発者ツール上に表示されますが、使えることを期待するデバッグ技術の中には使えないものがあるでしょう。
-
-モジュールで定義した変数は、グローバルオブジェクトに明示的に割り当てられない限り、そのモジュールのスコープに属します。他にも、グローバル定義する変数は、モジュール内で利用できます。例えば、以下のコードが指定された場合は次のようになります。
-
-```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>ページの例</title>
-    <link rel="stylesheet" href="" />
-  </head>
-  <body>
-    <div id="main"></div>
-    <script>
-      // var 文はグローバル変数を作成する。
-      var text = "Hello";
-    </script>
-    <script type="module" src="./render.js"></script>
-  </body>
-</html>
-```
-
-```js
-/* render.js */
-document.getElementById("main").innerText = text;
-```
-
-グローバル変数 `text` と `document` はモジュール内で利用できるので、ページにはまだ `Hello` が表示されます。（この例から、モジュールは必ずしも import/export 文を必要としないことにも注意してください。必要なことは、エントリーポイントに `type="module"` があることだけです）。
-
-## デフォルトエクスポートと名前付きエクスポート
-
-これまでエクスポートした機能は、**名前付きエクスポート (named export)** というものです。それぞれの項目（関数、`const` など）は、エクスポート時にその名前を参照されて、インポート時にもその名前で参照されます。
-
-エクスポートの種類には、他に**デフォルトエクスポート (default export)** と呼ばれるものもあります。これは、モジュールがデフォルトの機能を簡単に持つことができるように設計されたもので、また JavaScript のモジュールが既存の CommonJS や AMD のモジュールシステムと相互運用できるようになります (Json Orendorff による [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) で上手く説明されています。"Default exports" で検索してみてください)。
-
-どのように動作するか説明するので、使用例をみてみましょう。basic-modules の `square.js` に、ランダムな色、大きさ、位置の正方形を描く `randomSquare()` という関数があります。この関数をデフォルトとしてエクスポートしたいので、ファイルの末尾に次の内容を書きます。
-
-```js
+// オブジェクトリテラルは式となる
+export default {
+  some: "object",
+};
+
+// 加算式となる
+export default 1 + 1;
+
+// 識別子も式となる
 export default randomSquare;
 ```
 
-中かっこがないことに注意してください。
+basic-modules の `square.js` では、最後の形式を使って、ランダムな色、大きさ、位置の正方形を描く `randomSquare()` 関数をエクスポートしています。中かっこがないことに注意してください。
 
-または、`export default` を関数に追加して、次のように匿名関数のように定義することもできます。
+特例として、関数とクラスは式ではなく宣言としてエクスポートでき、これらの宣言には名前を付けなくてもかまいません。そのため、宣言時に関数を直接デフォルトエクスポートすることもできます。
 
 ```js
-export default function (ctx) {
+export default function randomSquare(ctx) {
   // …
 }
 ```
 
-`main.js` では、次のようにしてデフォルトの関数をインポートします。
-
 ```js
+// -- main.js --
 import randomSquare from "./modules/square.js";
 ```
 
-インポートの時にも中かっこがないことに注意してください。これは、デフォルトエクスポートはモジュールごとにひとつしか作れず、`randomSquare` がそれであることがわかっているからです。上記は、基本的に次の簡略表現です。
+ここでも中かっこがありません。モジュールにはデフォルトエクスポートが 1 つしかないため、それが `randomSquare` だとわかっています。インポート名は任意で、エクスポート側の関数名と一致させる必要はありません。
 
-```js
-import { default as randomSquare } from "./modules/square.js";
-```
-
-> [!NOTE]
-> エクスポートされる項目の名前を変更するために使われる as 構文については、以下の [インポートやエクスポートの名前を変更する](#インポートやエクスポートの名前を変更する)の節で説明します。
+名前付きエクスポートとデフォルトエクスポートは、同じモジュールで併用できます。
 
 ## 名前の衝突を避ける
 
 これまでのところ、キャンバスに図形を描く私たちのモジュールは正常に動作しているようです。しかし、円や三角形など別の図形を描くモジュールを追加しようとしたらどうなるでしょう？ そのような図形にも `draw()` や `reportArea()` のような関数があるかもしれません。もし同じ名前を持つ異なる関数を同じトップレベルのモジュールファイルにインポートしようとすると、最終的に名前の衝突によるエラーが起きるでしょう。
-
-幸いなことに、これに対処する方法はいくつかあります。それらについて、次のセクションで見ていきましょう。
-
-## インポートやエクスポートの名前を変更する
-
-`import` 文や `export` 文の中かっこの中では、キーワード `as` と新しい名前を使うことで、トップレベルのモジュールでその機能を使うときの名前を変更することができます。
-
-例えば、次のどちらも同じ仕事をしますが、少し異なる方法で行います。
-
-```js
-// -- module.js --
-export { function1 as newFunctionName, function2 as anotherNewFunctionName };
-
-// -- main.js --
-import { newFunctionName, anotherNewFunctionName } from "./modules/module.js";
-```
-
-```js
-// -- module.js --
-export { function1, function2 };
-
-// -- main.js --
-import {
-  function1 as newFunctionName,
-  function2 as anotherNewFunctionName,
-} from "./modules/module.js";
-```
 
 実際の例を見てみましょう。[renaming](https://github.com/mdn/js-examples/tree/main/module-examples/renaming) ディレクトリーでは、前の使用例と同じモジュールを使っていますが、円や三角形を描画するためのモジュールである `circle.js` と `triangle.js` も追加しています。
 
@@ -527,6 +293,12 @@ import { name, draw, reportArea, reportPerimeter } from "./modules/triangle.js";
 ```
 
 すると、ブラウザーは "SyntaxError: redeclaration of import name" (構文エラー: インポート名の再宣言) (Firefox の場合) のようなエラーを発生させるでしょう。
+
+幸いなことに、これに対処する方法はいくつかあります。それらについて、次の節で見ていきましょう。
+
+### インポートやエクスポートの名前を変更する
+
+`import` 文や `export` 文の中かっこの中では、キーワード `as` と新しい名前を使うことで、トップレベルのモジュールでその機能を使うときの名前を変更することができます。
 
 そのため、それぞれが固有の名前を持つようにするために、次のようにインポートの名前を変える必要があります。
 
@@ -556,7 +328,7 @@ import {
 他の方法として、例えば次のようにすることで、モジュールファイル側でこの問題を解決することもできます。
 
 ```js
-// in square.js
+// -- square.js --
 export {
   name as squareName,
   draw as drawSquare,
@@ -566,7 +338,7 @@ export {
 ```
 
 ```js
-// in main.js
+// -- main.js --
 import {
   squareName,
   drawSquare,
@@ -575,9 +347,17 @@ import {
 } from "./modules/square.js";
 ```
 
-これも同じように機能します。どちらのスタイルを取るかはあなた次第ですが、モジュール側のコードはそのままにしてインポート側を変更する方が、間違いなく賢明です。これは、制御できないサードパーティーのモジュールからインポートするときには、特に意味があります。
+これも同じように機能します。どちらのスタイルを使うかは自由ですが、モジュール側のコードはそのままにしてインポート側を変更する方がよいでしょう。制御できないサードパーティ製モジュールからインポートする場合は特にそうです。
 
-## モジュールオブジェクトの作成
+デフォルトエクスポートにも同じ構文を使えます。エクスポート名 `default`（有効な識別子名ではなく、[予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)です）を指定します。`export default randomSquare;` とは異なり、この形式では式の値を取り込むのではなく、既存の_ライブバインディング_をエクスポートします。エクスポート側で `randomSquare` に別の値を再代入すると、インポート側にも新しい値が見えます。`export default function randomSquare() {}` のように名前付きのデフォルト関数宣言やクラス宣言を使った場合も、ライブバインディングがエクスポートされます。
+
+```js
+import { default as randomSquare } from "./modules/square.js";
+
+export { randomSquare as default };
+```
+
+### モジュール名前空間オブジェクトの作成
 
 上記のインポート方法は正常に動作しますが、少し使いづらく冗長です。よりよい方法は、モジュール内のそれぞれの機能を、モジュールオブジェクトの中にインポートすることです。その構文は次のとおりです。
 
@@ -618,7 +398,7 @@ Square.reportPerimeter(square.length, reportList);
 
 このように (必要な箇所にオブジェクトの名前を含むようにさえすれば) コードは以前と同じように書くことができ、そしてインポートはより簡潔になります。
 
-## モジュールとクラス
+### モジュールとクラス
 
 最初の方で触れましたが、クラスをエクスポートしたりインポートすることもできます。これがコード上で名前の衝突を避けるもう一つの方法で、もし自分のモジュールを既にオブジェクト指向のスタイルで書いているのであれば、特に便利です。
 
@@ -644,9 +424,8 @@ class Square {
 export { Square };
 ```
 
-[`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/classes/main.js) では、これを次のようにインポートします。
-
 ```js
+// -- main.js --
 import { Square } from "./modules/square.js";
 ```
 
@@ -661,14 +440,21 @@ square.reportPerimeter();
 
 ## モジュールの集約
 
-複数のモジュールをひとつに集約させたいと思うことがあるかもしれません。依存性の階層は複数になることがあり、いくつかあるサブモジュールをひとつの親モジュールにまとめて管理を単純化したいと思うかもしれません。これは、親モジュールで次の形式によるエクスポート構文を使うことで可能です。
+ここまでに複数のモジュールを作成しました。それぞれが似た機能を提供する場合、いくつかを使いたい人は個別にインポート宣言を書く必要があります。
 
 ```js
-export * from "x.js";
-export { name } from "x.js";
+import { Square } from "./modules/square.js";
+import { Circle } from "./modules/circle.js";
+import { Triangle } from "./modules/triangle.js";
 ```
 
-使用例は [module-aggregation](https://github.com/mdn/js-examples/tree/main/module-examples/module-aggregation) ディレクトリーを参照してください。この例 (クラスを使った以前の例を元にしています) には、`shapes.js` というモジュールが追加されています。これは `circle.js`、`square.js`、`triangle.js` の全ての機能をひとつに集約したものです。また、サブモジュールを `modules` ディレクトリーの中にある `shapes` というサブディレクトリーに移動させています。つまり、この例のモジュール構造は次のようなものです。
+ただ、これらすべてのエクスポートを同じモジュールにまとめられると、さらに便利です。そうすれば、利用側は必要なエクスポートがいくつあっても、1 つの `import` ですべて取得できます。
+
+```js
+import { Square, Circle, Triangle } from "./modules/shapes.js";
+```
+
+[module-aggregation](https://github.com/mdn/js-examples/tree/main/module-examples/module-aggregation) の例（クラスを使った前の例を基にしています）には、`circle.js`、`square.js`、`triangle.js` の機能を集約する `shapes.js` モジュールがあります。他のモジュールからのエクスポートを集約する以外の処理をしないため、このようなモジュールは「バレルモジュール」と呼ばれます。また、サブモジュールを `modules` ディレクトリー内の `shapes` サブディレクトリーに移動しています。この例のモジュール構造は次のとおりです。
 
 ```plain
 modules/
@@ -680,13 +466,16 @@ modules/
     triangle.js
 ```
 
-それぞれのサブモジュールでは、例えば次のような同じ形式のエクスポートが行われています。
-
 ```js
-export { Square };
+// -- shapes.js --
+import { Circle } from "./shapes/circle.js";
+import { Square } from "./shapes/square.js";
+import { Triangle } from "./shapes/triangle.js";
+
+export { Circle, Square, Triangle };
 ```
 
-その次は集約を行う部分です。[`shapes.js`](https://github.com/mdn/js-examples/blob/main/module-examples/module-aggregation/modules/shapes.js) の内部には次のような行があります。
+これにより、個々のサブモジュールからエクスポートしたものを `shapes.js` から利用できるようになります。ただし、エクスポートするだけのために `import` する必要はありません。`export ... from` 構文を使えば、1 行で直接インポートして再エクスポートできます。
 
 ```js
 export { Square } from "./shapes/square.js";
@@ -694,40 +483,88 @@ export { Triangle } from "./shapes/triangle.js";
 export { Circle } from "./shapes/circle.js";
 ```
 
-これらは、個々のサブモジュールのエクスポートを取得して、それらを　`shapes.js` モジュールから利用できるようにする効果があります。
-
 > [!NOTE]
-> `shapes.mjs` の中で参照されているエクスポートは、基本的にそのファイルを経由して転送されるだけで、ファイルの中には存在しません。そのため、同じファイルの中でそれらを使ったコードを書くことはできません。
+> `shapes.js` で参照されているエクスポートは、ファイルを経由して転送されるだけで、そのファイル自体には存在しません。そのため、同じファイル内にそれらを使うコードを書くことはできません。
 
-最後に `main.js` ファイルでは、全てのモジュールのクラスにアクセスするために、次のインポートを書き換えています。
+別の方法として、`shapes.js` を特殊な `export * from` 構文で置き換えることもできます。
 
 ```js
-import { Square } from "./modules/square.js";
-import { Circle } from "./modules/circle.js";
-import { Triangle } from "./modules/triangle.js";
+export * from "./shapes/square.js";
+export * from "./shapes/triangle.js";
+export * from "./shapes/circle.js";
 ```
 
-書き換え後は、次のような 1 行になります。
+この構文は、対象モジュールのすべてのエクスポート（デフォルト以外）を、現在のモジュールの名前付きエクスポートとして再エクスポートします。そのため、例えば `square.js` に別のエクスポートを追加しても、`shapes.js` を変更する必要はありません。ただし、`shapes.js` から `square.js` のすべてを再エクスポートしたい場合にだけ使ってください。そうしないと、意図せずほかのエクスポートまで公開するおそれがあります。
+
+ここまで紹介したほとんどの `import` 構文には、対応する `export ... from` 構文があります。例外は `import x from "mod"` のデフォルトインポートです。`export x from "mod"` という構文はなく、特別な `export { default } from "mod"` 構文を使います。
 
 ```js
-import { Square, Circle, Triangle } from "./modules/shapes.js";
+export { x } from "mod";
+export { x as v } from "mod";
+export * as ns from "mod";
+export { default } from "mod";
+```
+
+## 副作用のためのモジュールのインポート
+
+例えばポリフィルをインストールするなど、エクスポートをインポートせずにモジュールの初期化コードだけを実行したいことがあります。その場合は、モジュール指定子だけを指定してインポートします。
+
+```js
+import "./modules/polyfills.js";
+```
+
+詳しくは[`import` のリファレンス](/ja/docs/Web/JavaScript/Reference/Statements/import#副作用のためだけにモジュールをインポートする)を参照してください。
+
+## インポート宣言は巻き上げされる
+
+インポート宣言は[巻き上げ](/ja/docs/Glossary/Hoisting)されます。つまり、インポートした値はインポート宣言より前にあるモジュール内のコードからも利用できます。また、インポートしたモジュールの副作用は、インポート元のモジュールで残りのコードの実行が始まる前に発生します。
+
+例えば、`main.js` のコードの途中で `Canvas` をインポートしても動作します。
+
+```js
+// …
+const myCanvas = new Canvas("myCanvas", document.body, 480, 320);
+myCanvas.create();
+import { Canvas } from "./modules/canvas.js";
+myCanvas.createReportList();
+// …
+```
+
+ただし、依存関係を分析しやすくするため、すべてのインポートをコードの先頭に置くのがよい習慣です。
+
+## JSON モジュールのインポート
+
+ここまで、`export` 文でデータをエクスポートする JavaScript モジュールからインポートする方法を見てきました。ランタイム環境が解釈方法を認識していれば、他の言語で記述されたモジュールからも値をインポートできます。仕様では、JSON モジュールと[テキストモジュール](/ja/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text)という 2 種類のリソースも定義されています。ここでは、より一般的な JSON モジュールを見ていきます。
+
+JSON モジュールは独立した JSON ファイルです。インポートすると、構文解析された JSON 値を含むデフォルトエクスポートを 1 つ提供します。次のようにインポートします。
+
+```js
+import data from "./data.json" with { type: "json" };
+```
+
+末尾の `with { type: "json" }` に注目してください。これは、読み込んだファイルが JSON であることをランタイム環境に検証させる[インポート属性](/ja/docs/Web/JavaScript/Reference/Statements/import/with)です。インポート属性はコア言語では意味が定義されていないため、詳しくは[ウェブでのモジュールの使用](/ja/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#javascript_以外のリソースの読み込み)で説明します。`with { type: "json" }` を指定せずに JSON モジュールをインポートできる場合もあります。唯一の要件は、`with { type: "json" }` を指定した場合、読み込んだモジュールが JSON として構文解析されることです。どの環境でも動作するよう、インポートするモジュールの型は常に宣言するのがよい習慣です。
+
+テキストモジュールも同様に動作し、文字列を返します。
+
+```js
+import text from "./text.txt" with { type: "text" };
 ```
 
 ## 動的なモジュールの読み込み
 
-ブラウザーで利用できる JavaScript モジュールの最新機能は、動的なモジュールの読み込みです。これにより、全てを最初に読み込んでしまうのではなく、必要が生じたときにのみ動的にモジュールを読み込むことができます。これには明らかなパフォーマンス上の利点があります。どのように動作するのか、読んで見てみましょう。
+全てを最初に読み込んでしまうのではなく、必要が生じたときにのみ動的にモジュールを読み込むことができます。これには明らかなパフォーマンス上の利点があります。どのように動作するのか、読んで見てみましょう。
 
-この新しい機能により、[`import()`](/ja/docs/Web/JavaScript/Reference/Operators/import) を関数として呼び出し、そのときの引数としてモジュールへのパスを指定することができます。これは次のように {{jsxref("Promise")}} を返し、エクスポートにアクセスできるモジュールオブジェクト（[モジュールオブジェクトの作成](#モジュールオブジェクトの作成)を参照）を使って履行状態になります。
+[`import()`](/ja/docs/Web/JavaScript/Reference/Operators/import) 演算子には、引数としてモジュールへのパスを渡せます。これは {{jsxref("Promise")}} を返し、モジュール名前空間オブジェクト（[モジュール名前空間オブジェクトの作成](#モジュール名前空間オブジェクトの作成)を参照）で履行されます。このオブジェクトから、そのモジュールのエクスポートにアクセスできます。
 
 ```js
 import("./modules/myModule.js").then((module) => {
-  // モジュールを使って何かをする。
+  // モジュールを使った処理
 });
 ```
 
 > [!NOTE]
 > 動的インポートは、ブラウザーのメインスレッド、共有ワーカー、専用ワーカーで許可されています。
-> しかし、サービスワーカーやワークレットで `import()` を呼び出すと、例外が発生します。
+> ただし、サービスワーカーやワークレットで `import()` を呼び出すと、返されたプロミスは拒否されます。
 
 <!-- https://whatpr.org/html/6395/webappapis.html#hostimportmoduledynamically(referencingscriptormodule,-specifier,-promisecapability) -->
 
@@ -761,23 +598,24 @@ squareBtn.addEventListener("click", () => {
 });
 ```
 
-なお、履行されたプロミスはモジュールオブジェクトを返すので、クラスはそのオブジェクトのサブフィーチャーとなり、これでコンストラクターには `Module.Square( /* ... */ )` のように `Module.` を先頭に付けてアクセスする必要があります。
+なお、履行されたプロミスはモジュールオブジェクトを返すので、クラスはそのオブジェクトのサブ機能となり、これでコンストラクターには `Module.Square( /* … */ )` のように `Module.` を先頭に付けてアクセスする必要があります。
 
 動的インポートのもう一つの利点は、スクリプト環境であっても常に利用できるということです。したがって、HTMLに既存の `<script>` タグがあり、そのタグに `type="module"` がない場合でも、モジュールとして配布されているコードを動的にインポートして再利用することができます。
 
 ```html
 <script>
   import("./modules/square.js").then((module) => {
-    // モジュールで何かを行う
+    // モジュールを使った処理
   });
-  // 他にも、グローバルスコープで処理をするコードで、まだモジュールにリファクタリングする準備が整っていないコードもあります。
+  // グローバルスコープで動作する、
+  // まだモジュール化する段階にない他のコード
   var btn = document.querySelector(".square");
 </script>
 ```
 
 ## 最上位の await
 
-最上位の await は、モジュール内で利用できる機能です。つまり、`await` キーワードを使用することができます。これは、モジュールが大きな[非同期関数](/ja/docs/Learn_web_development/Extensions/Async_JS/Introducing)として動作できるようにするもので、親モジュールで使用する前にコードを評価できますが、兄弟モジュールの読み込みをブロックすることはしません。
+最上位の `await` はモジュールで利用できる機能で、非同期関数の外でも最上位で `await` キーワードを使用できます。これによりモジュールは大きな[非同期関数](/ja/docs/Learn_web_development/Extensions/Async_JS/Introducing)のように動作し、依存するモジュールが実行される前に非同期処理を完了できます。一方、その処理に依存しない兄弟モジュールの評価はブロックしません。
 
 例を見ていきましょう。この節で記述するすべてのファイルとコードは [`top-level-await`](https://github.com/mdn/js-examples/tree/main/module-examples/top-level-await) ディレクトリーにあり、前回までの例から拡張されています。
 
@@ -793,22 +631,23 @@ squareBtn.addEventListener("click", () => {
 }
 ```
 
-次に、[`getColors.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/getColors.js) というモジュールを作成します。このモジュールは読み取りリクエストを使って [`colors.json`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/data/colors.json) ファイルを読み込み、そのデータをオブジェクトとして返すようにします。
+次に、[`getColors.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/getColors.js) というモジュールを作成します。このモジュールは `fetch` リクエストを使って [`colors.json`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/data/colors.json) ファイルを読み込み、そのデータをオブジェクトとして返します。
 
 ```js
-// 読み取りリクエスト
-const colors = fetch("../data/colors.json").then((response) => response.json());
+// fetch リクエスト
+const colors = fetch(
+  "https://mdn.github.io/js-examples/module-examples/top-level-await/data/colors.json",
+).then((response) => response.json());
 
 export default await colors;
 ```
 
 ここで最後のエクスポート行に注目してください。
 
-キーワード `await` を、定数 `colors` を指定したエクスポートの前に使用しています。これは、このモジュールを含む他のモジュールは、`colors` がダウンロードされ、解釈されるまで待ってから使用することを意味しています。
-
-このモジュールを [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/main.js) ファイルに含めてみましょう。
+エクスポートする定数 `colors` の前に `await` を使っています。このモジュールをインポートする他のモジュールは、`colors` がダウンロードされ、構文解析されるまで待ってから使用します。
 
 ```js
+// -- main.js --
 import colors from "./modules/getColors.js";
 import { Canvas } from "./modules/canvas.js";
 
@@ -848,166 +687,48 @@ const triangle = new Module.Triangle(
 );
 ```
 
-これは [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/main.js) 内のコードが [`getColors.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/getColors.js) 内のコードを実行するまで実行されないので有益です。しかし、他のモジュールが読み込まれるのをブロックすることはありません。例えば、[`canvas.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/canvas.js) モジュールは、`colors` が読み込まれている間、読み込みを継続します。
+これにより、[`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/main.js) のコードは [`getColors.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/getColors.js) のコードが完了するまで実行されません。ただし、依存していないモジュールの評価は停止しません。例えば、`colors` の取得中も [`canvas.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/canvas.js) は評価されます。
 
-## インポート宣言は巻き上げされる
+最上位の `await` を使うと、無視できない影響が生じます。これは、[モジュールグラフ](/ja/docs/Web/JavaScript/Guide/Modules/Module_graph)の一部が非同期でしか評価できなくなるためです。詳しくは[モジュールグラフの理解](/ja/docs/Web/JavaScript/Guide/Modules/Module_graph#最上位の_await_と非同期評価)を参照してください。
 
-インポート宣言が[巻き上げが行われます](/ja/docs/Glossary/Hoisting)。この場合、インポートされた値は、宣言した場所よりも前にモジュールのコードで利用できるということ、そして、インポートされたモジュールの副作用は、モジュールの残りのコードが実行し始める前に生じるということです。
+## モジュールのメタデータ
 
-例えば、`main.js` でコードの途中で `Canvas` をインポートしても、これは動作します。
+スクリプトはグローバルコンテキストで実行されるため、{{domxref("Window.document")}} や {{domxref("Window.location")}} などのグローバル変数を使って環境に関する情報を取得できます。各モジュールにも独自の実行コンテキストがあり、モジュール固有の [`import.meta`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta) オブジェクトからアクセスできます。このオブジェクトのプロパティはホスト環境で定義され、コア言語の仕様では定義されません。ブラウザーについては[ウェブでのモジュールの使用](/ja/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#import.meta_オブジェクト)、Node.js やバンドラーなどについては[プラットフォームをまたぐモジュール](/ja/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms)を参照してください。
 
-```js
-// …
-const myCanvas = new Canvas("myCanvas", document.body, 480, 320);
-myCanvas.create();
-import { Canvas } from "./modules/canvas.js";
-myCanvas.createReportList();
-// …
-```
-
-それでも、コードの一番上にインポートをすべて配置することは良い習慣とされており、依存関係の分析が容易になります。
-
-## 循環インポート
-
-モジュールは他のモジュールをインポートすることができ、それらのモジュールは他のモジュールをインポートすることができ、といった具合に、モジュールは他のモジュールをインポートすることができます。これは「依存グラフ」と呼ばれる[有向グラフ](https://ja.wikipedia.org/wiki/グラフ理論#有向グラフ)を形成します。理想的な世界では、このグラフは[循環しません](https://ja.wikipedia.org/wiki/有向非巡回グラフ)。この場合、深さ優先探索を使用してグラフを評価することができます。
-
-しかし、循環はしばしば避けられません。モジュール `a` がモジュール `b` をインポートしている場合、`b` が直接または間接的に `a` に依存していると、循環インポートが発生します。
+例えば、ブラウザー、Node.js、バンドラーなど、ウェブに似た環境の多くでは、`import.meta.url` にモジュールの URL が格納されます。これを使って、モジュールを基準とするリソースの場所を解決できます。
 
 ```js
-// -- a.js --
-import { b } from "./b.js";
-
-// -- b.js --
-import { a } from "./a.js";
-
-// Cycle:
-// a.js ───> b.js
-//  ^         │
-//  └─────────┘
+// -- modules/getColors.js --
+const colorsURL = new URL("../data/colors.json", import.meta.url);
 ```
 
-循環インポートは常に失敗するわけではありません。インポートされた変数の値は、その変数を実際に使用する際にのみ取得され（したがって、[ライブバインディング](/ja/docs/Web/JavaScript/Reference/Statements/import#インポートした値はエクスポートしたモジュールだけが変更できる)が可能になります）、その時点において変数が未初期化の状態である場合にのみ、 [`ReferenceError`](/ja/docs/Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init) が発生します。
+これにより、別のディレクトリーにあるページやモジュールから `getColors.js` がインポートされた場合でも、リソースの URL を `getColors.js` 基準にできます。
 
-```js
-// -- a.js --
-import { b } from "./b.js";
+## 言語とホストの責任
 
-setTimeout(() => {
-  console.log(b); // 1
-}, 10);
+この記事では、ECMAScript 仕様で定義されているモジュールを紹介してきました。JavaScript モジュールはホスト環境と密接に関係し、さまざまな入出力条件、アーキテクチャー、開発上の要件に適応する必要があります。そのため、コア言語で定義されるのは次の内容です。
 
-export const a = 2;
+- モジュール機能の構文。例えば、[`import`](/ja/docs/Web/JavaScript/Reference/Statements/import) 文と [`export`](/ja/docs/Web/JavaScript/Reference/Statements/export) 文、[`import.meta`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta)、[`import()`](/ja/docs/Web/JavaScript/Reference/Operators/import) 式です。
+- 循環の検出を含む、[モジュールグラフ](/ja/docs/Web/JavaScript/Guide/Modules/Module_graph)の構築、リンク、評価。
+- [モジュール名前空間オブジェクト](#モジュール名前空間オブジェクトの作成)の形状。
 
-// -- b.js --
-import { a } from "./a.js";
+一方、コア言語では次の内容は定義されません。
 
-setTimeout(() => {
-  console.log(a); // 2
-}, 10);
+- 「ファイル」という概念。各モジュールは慣例として個別のファイルに置かれますが、メモリー内のオブジェクト、動的に取得した文字列など、JavaScript の値として表現できるものでもかまいません。
+- モジュール指定子の文字列の構造。URL、ファイルパスなど、ホストが認識する識別子を使用できます。
+- `import.meta` のプロパティ。`import.meta.url` を含むすべてのプロパティはホストで定義されます。
+- モジュールの読み込み処理。ホスト環境がモジュールを取得し、JSON モジュールなど言語側の要件に従って[インポート属性](/ja/docs/Web/JavaScript/Reference/Statements/import/with)を適用します。
 
-export const b = 1;
-```
-
-この例では、`a` と `b` の両方が非同期で使用されています。そのため、モジュールが評価される時点では、 `b` も `a` も実際に読み込まれることはなく、残りのコードは通常通り実行され、 2 つの `export` 宣言により `a` と `b` の値が生成されます。その後、タイムアウト後に `a` と `b` の両方が利用できるようになり、 2 つの `console.log` 文も通常通り実行されます。
-
-コードを変更して `a` を同期的に使用すると、モジュール評価は失敗します。
-
-```js
-// -- a.js (entry module) --
-import { b } from "./b.js";
-
-export const a = 2;
-
-// -- b.js --
-import { a } from "./a.js";
-
-console.log(a); // ReferenceError: Cannot access 'a' before initialization
-export const b = 1;
-```
-
-これは、JavaScript で `a.js` を評価する際、`a.js` の依存関係である `b.js` を最初の段階で評価する必要があるためです。しかし、`b.js` は `a` を使用しており、`a` はまだ利用できません。
-
-一方、コードを変更して `b` を同期的に、`a` を非同期的に使用するようにすると、モジュール評価は成功します。
-
-```js
-// -- a.js (entry module) --
-import { b } from "./b.js";
-
-console.log(b); // 1
-export const a = 2;
-
-// -- b.js --
-import { a } from "./a.js";
-
-setTimeout(() => {
-  console.log(a); // 2
-}, 10);
-export const b = 1;
-```
-
-これは、 `b.js` の評価が正常に完了するため、 `a.js` が評価される際に `b` の値が利用できるためです。
-
-自分のプロジェクトでは、循環インポートは通常避けるべきです。なぜなら、コードにエラーの可能性が生じるからです。一般的な循環除去テクニックには、以下のようなものがあります。
-
-- 2 つのモジュールを 1 つに統合する。
-- 共有コードを 3 つ目のモジュールに移す。
-- あるモジュールから他のモジュールにコードを移す。
-
-しかし、ライブラリーが互いに依存している場合にも循環インポートが発生することがあり、修正するのはより困難です。
-
-## 「同型」モジュールの作成
-
-モジュールの導入により、JavaScript の環境では、コードをモジュール方式で配布し、再利用することが奨励されています。しかし、それは必ずしも JavaScript コードの一部がすべての環境で実行できることを意味しているわけではありません。例えば、ユーザーのパスワードの SHA ハッシュを生成するモジュールを開発したとします。ブラウザーのフロントエンドで使用することはできますか？ Node.js サーバーで使用することはできますか？答えは、「場合による」です。
-
-前回示したように、モジュールは依然としてグローバル変数にアクセスすることができます。モジュールが `window` のようなグローバルを参照する場合、ブラウザーでは実行できますが、Node.js サーバーでは `window` が利用できないため、エラーが発生します。同様に、コードが機能するために `process` へのアクセスを必要とする場合、それは Node.js でしか使用できません。
-
-モジュールの再利用性を最大化するために、コードを「同型」にする、つまり、どのランタイムでも同じ挙動を示すようにすることがよく推奨されます。これは、一般的に3つの方法で達成されます。
-
-- モジュールを「コア」と「バインディング」に分割します。「コア」では、ハッシュを計算するような純粋な JavaScript のロジックに焦点を当て、DOM、ネットワーク、ファイルシステムへのアクセスは一切行わず、ユーティリティ関数を公開します。「バインディング」では、グローバルコンテキストからの読み書きができるようにします。例えば、「ブラウザーバインディング」では入力ボックスから、「Node バインディング」では `process.env` から値を読み込むことができますが、どちらの配置から読み込んだ値も同じコア関数に接続し、同じように処理されることにします。コアはどの環境でもインポートして同じように使用することができ、通常軽量であるバインディングだけをプラットフォームに固有であるようにします。
-- 特定のグローバルが使用される前に存在するかどうかを検出します。例えば、`typeof window === "undefined"` と判定された場合、おそらく Node.js 環境であるため、DOM を読むべきではないことが分かります。
-
-  ```js
-  // myModule.js
-  let password;
-  if (typeof process !== "undefined") {
-    // Node.js で実行中。 `process.env` から読み出す
-    password = process.env.PASSWORD;
-  } else if (typeof window !== "undefined") {
-    // ブラウザーで実行中。入力ボックスから読み出す
-    password = document.getElementById("password").value;
-  }
-  ```
-
-  これは、2 つの分岐が実際に同じ動作（「同型」）で終わるのであれば、環境設定としては好ましいものです。同じ機能を提供することが不可能な場合、あるいは、未使用の部分が多いまま大量のコードを読み込む必要がある場合は、代わりに異なる「バインディング」を使用するのがよいでしょう。
-
-- 足りない機能の代替を提供するために、ポリフィルを使用します。例えば、Node.js で v18 以降しか対応していない [`fetch`](/ja/docs/Web/API/Fetch_API) 関数を使用したい場合、 [`node-fetch`](https://www.npmjs.com/package/node-fetch) が提供するような同様の API を使用することができます。動的インポートによって条件付きで行うことができます。
-
-  ```js
-  // myModule.js
-  if (typeof fetch === "undefined") {
-    // We are running in Node.js; use node-fetch
-    globalThis.fetch = (await import("node-fetch")).default;
-  }
-  // …
-  ```
-
-  [`globalThis`](/ja/docs/Web/JavaScript/Reference/Global_Objects/globalThis) 変数は、どの環境でも利用できるグローバルオブジェクトで、モジュール内でグローバル変数を読み込んだり作成したりしたい場合に有益です。
-
-これらの実践は、モジュールに固有のものではありません。それでも、コードの再利用性やモジュール化の流れから、使用可能な限り多くの人に楽しんでもらえるように、コードをクロスプラットフォームにすることが推奨されています。Node.js のようなランタイムも、ウェブとの相互運用性を高めるために、使用可能な範囲で積極的にウェブ API を実装しています。
-
-## トラブルシューティング
-
-これらは、モジュールの動作に問題があるときに助けになるかもしれないヒントです。もし他にあれば自由にリストに追加してください。
-
-- 前に説明したので繰り返しになりますが、`.mjs` ファイルは `text/javascript` という MIME タイプ（または JavaScript 互換であるそれ以外のタイプ、ただし `text/javascript` を推奨）で読み込まれる必要があり、そうでなければ厳密な MIME タイプチェックによって "The server responded with a non-JavaScript MIME type" （サーバーが非 JavaScript の MIME タイプを返しました）のようなエラーが発生するでしょう。
-- HTML ファイルをローカルから（例えば `file://` の URL を使って）読み込もうとすると、JavaScript モジュールのセキュリティ要件によって CORS エラーが発生するでしょう。動作検証はサーバー経由で行う必要があります。GitHub は `.mjs` ファイルを正しい MIME 型で返すため理想的です。
-- `.mjs` は比較的新しい拡張子であり、OS によってはそれを認識しないか、何か別のものに置き換えようとしてしまうかもしれません。例えば macOS は、通知することなく `.mjs` ファイルに `.js` を追加して自動的に拡張子を隠すことがわかりました。そのため、実際にやってくるファイルは全て `x.mjs.js` のようなものでした。ファイル拡張子を自動的に隠すことをオフにして、`.mjs` を受け入れるように設定すると問題は無くなります。
+実際には、ブラウザー、Node.js、Deno などのランタイム環境が同じ機能を実装することが多く、コードのプラットフォーム間の互換性が高まっています。このガイドではブラウザーで実行する例を扱いますが、すべての環境に適用できる基本概念に焦点を当てています。[ウェブでのモジュールの使用](/ja/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web)では、特にモジュール指定子など、ブラウザーでのモジュール読み込みについて説明します。[プラットフォームをまたぐモジュール](/ja/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms)では、他の環境との統合について詳しく説明します。
 
 ## 関連情報
 
-- [JavaScript modules](https://v8.dev/features/modules) - v8.dev (2018)
-- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) - hacks.mozilla.org (2018)
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) - hacks.mozilla.org (2015)
-- [Exploring JS, Ch.16: Modules](https://exploringjs.com/es6/ch_modules.html) - Dr. Axel Rauschmayer
+- [ウェブでのモジュールの使用](/ja/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web)
+- [モジュールグラフの理解](/ja/docs/Web/JavaScript/Guide/Modules/Module_graph)
+- [プラットフォームをまたぐモジュール](/ja/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms)
+- [JavaScript modules](https://v8.dev/features/modules)<sup>(英語)</sup> - v8.dev (2018)
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)<sup>(英語)</sup> - hacks.mozilla.org (2018)
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)<sup>(英語)</sup> - hacks.mozilla.org (2015)
+- [Exploring JS, Ch.16: Modules](https://exploringjs.com/es6/ch_modules.html)<sup>(英語)</sup> - Dr. Axel Rauschmayer
 
 {{Previous("Web/JavaScript/Guide/Internationalization")}}

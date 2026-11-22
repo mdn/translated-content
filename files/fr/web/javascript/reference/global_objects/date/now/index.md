@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-La méthode statique **`Date.now()`** retourne le nombre de millisecondes écoulées depuis [l'époque](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), qui est défini comme minuit au début du 1er janvier 1970, UTC.
+La méthode statique **`Date.now()`** retourne le nombre de millisecondes écoulées depuis [l'époque](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide), qui est défini comme minuit au début du 1er janvier 1970, UTC.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Date.now()")}}
 
@@ -37,7 +37,7 @@ Aucun.
 
 ### Valeur de retour
 
-Un nombre représentant le [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), en millisecondes, de l'heure actuelle.
+Un nombre représentant [l'horodatage (<i lang="en">timestamp</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide), en millisecondes, de l'heure actuelle.
 
 ## Description
 

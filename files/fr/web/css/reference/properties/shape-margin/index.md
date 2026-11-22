@@ -3,10 +3,12 @@ title: Propriété CSS `shape-margin`
 short-title: shape-margin
 slug: Web/CSS/Reference/Properties/shape-margin
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`shape-margin`** définit la marge autour d'une forme CSS créée avec {{CSSxRef("shape-outside")}}.
+
+La marge permet d'ajuster la distance entre le contour de la forme (**l'élément flottant**) et le contenu autour.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: shape-margin")}}
 
@@ -59,8 +61,6 @@ shape-margin: 5%;
   shape-outside: circle(50%);
 }
 ```
-
-La marge permet d'ajuster la distance entre le contour de la forme (**l'élément flottant**) et le contenu autour.
 
 ## Syntaxe
 

@@ -3,10 +3,10 @@ title: "Date : méthode getTime()"
 short-title: getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 l10n:
-  sourceCommit: 0abb70602b0b3b11a2909c417a03e10eabd607a8
+  sourceCommit: 98972b1f827b7374e28aee591a73044ffd8fb758
 ---
 
-La méthode **`getTime()`** des instances de {{JSxRef("Date")}} retourne le nombre de millisecondes écoulées depuis [l'epoch](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), défini comme le début du 1er janvier 1970 à minuit UTC.
+La méthode **`getTime()`** des instances de {{JSxRef("Date")}} retourne le nombre de millisecondes écoulées depuis [l'epoch](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide), défini comme le début du 1er janvier 1970 à minuit UTC.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.getTime()", "shorter")}}
 
@@ -30,11 +30,11 @@ Aucun.
 
 ### Valeur de retour
 
-Un nombre représentant le [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), en millisecondes, de cette date. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+Un nombre représentant [l'horodatage (<i lang="en">timestamp</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide), en millisecondes, de cette date. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
 ## Description
 
-Les objets `Date` sont fondamentalement représentés par un [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), et cette méthode permet de récupérer ce timestamp. Vous pouvez utiliser cette méthode pour affecter une date et une heure à un autre objet {{JSxRef("Date")}}. Cette méthode est fonctionnellement équivalente à la méthode {{JSxRef("Date/valueOf", "valueOf()")}}.
+Les objets `Date` sont fondamentalement représentés par un [horodatage](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide), et cette méthode permet de récupérer ce horodatage. Vous pouvez utiliser cette méthode pour affecter une date et une heure à un autre objet {{JSxRef("Date")}}. Cette méthode est fonctionnellement équivalente à la méthode {{JSxRef("Date/valueOf", "valueOf()")}}.
 
 ## Exemples
 

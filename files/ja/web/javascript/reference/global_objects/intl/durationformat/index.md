@@ -2,7 +2,7 @@
 title: Intl.DurationFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat
 l10n:
-  sourceCommit: c43e46090257fbfd33c4dd5cac0cdbd1d5d1c274
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`Intl.DurationFormat`** オブジェクトにより、言語を考慮した経過時間の書式化ができます。
@@ -29,7 +29,7 @@ l10n:
 ## インスタンスメソッド
 
 - {{jsxref("Intl/DurationFormat/format", "Intl.DurationFormat.prototype.format()")}}
-  - : この `DurationFormat` オブジェクトのロケールおよび書式化オプションに従って経過時間を書式化するゲッター関数です。
+  - : この `DurationFormat` オブジェクトのロケールおよび書式化オプションに従って、経過時間を書式化します。
 - {{jsxref("Intl/DurationFormat/formatToParts", "Intl.DurationFormat.prototype.formatToParts()")}}
   - : 書式化された経過時間の各部分を表すオブジェクトの配列 ({{jsxref("Array")}}) を返します。
 - {{jsxref("Intl/DurationFormat/resolvedOptions", "Intl.DurationFormat.prototype.resolvedOptions()")}}

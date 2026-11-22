@@ -3,10 +3,12 @@ title: Propriété CSS `transition`
 short-title: transition
 slug: Web/CSS/Reference/Properties/transition
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`transition`** permet de définir les propriétés {{CSSxRef("transition-property")}}, {{CSSxRef("transition-duration")}}, {{CSSxRef("transition-timing-function")}}, {{CSSxRef("transition-delay")}} et {{CSSxRef("transition-behavior")}}.
+
+Elle permet de définir la transition entre deux états d'un élément. Les différents états peuvent être définis à l'aide [de pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) telles que {{CSSxRef(":hover")}} ou {{CSSxRef(":active")}} ou être définis dynamiquement avec JavaScript.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: transition")}}
 
@@ -59,8 +61,6 @@ transition: all 1s ease-out;
   margin-right: 40%;
 }
 ```
-
-Elle permet de définir la transition entre deux états d'un élément. Les différents états peuvent être définis à l'aide [de pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) telles que {{CSSxRef(":hover")}} ou {{CSSxRef(":active")}} ou être définis dynamiquement avec JavaScript.
 
 ## Syntaxe
 

@@ -3,7 +3,7 @@ title: Propriété CSS `transform`
 short-title: transform
 slug: Web/CSS/Reference/Properties/transform
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`transform`** permet de faire pivoter, redimensionner, incliner ou déplacer un élément.

@@ -3,10 +3,12 @@ title: Propriété CSS `min-height`
 short-title: min-height
 slug: Web/CSS/Reference/Properties/min-height
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`min-height`** est utilisée afin de définir la hauteur minimale d'un élément. Elle empêche ainsi que la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de la propriété {{CSSxRef("height")}} devienne inférieure à la valeur définie pour `min-height`.
+
+La hauteur de l'élément est définie sur la valeur de `min-height` chaque fois que `min-height` est supérieure à {{CSSxRef("max-height")}} ou {{CSSxRef("height")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: min-height")}}
 
@@ -30,7 +32,7 @@ min-height: 10px;
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
     Ceci est une boîte où vous pouvez changer la hauteur minimale.<br />
-    Si le contenu dépasse le minimum, la boîte s'agrandira à la hauteur
+    Si le contenu dépasse le minimum, la boîte s'agrandit à la hauteur
     nécessaire pour le contenu.
   </div>
 </section>
@@ -45,8 +47,6 @@ min-height: 10px;
   color: white;
 }
 ```
-
-La hauteur de l'élément est définie sur la valeur de `min-height` chaque fois que `min-height` est supérieure à {{CSSxRef("max-height")}} ou {{CSSxRef("height")}}.
 
 ## Syntaxe
 
@@ -81,7 +81,7 @@ min-height: unset;
 - {{CSSxRef("&lt;percentage&gt;")}}
   - : Définit la hauteur minimale (`min-height`) comme un pourcentage de la hauteur du bloc englobant.
 - `auto`
-  - : Le navigateur calculera et sélectionnera une hauteur minimale (`min-height`) pour l'élément défini.
+  - : Le navigateur calcule et sélectionne une hauteur minimale (`min-height`) pour l'élément défini.
 - {{CSSxRef("max-content")}}
   - : La hauteur minimale (`min-height`) intrinsèque préférée.
 - {{CSSxRef("min-content")}}

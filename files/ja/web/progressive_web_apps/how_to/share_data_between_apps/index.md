@@ -2,20 +2,18 @@
 title: アプリ間でデータを共有する
 slug: Web/Progressive_web_apps/How_to/Share_data_between_apps
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 26f9fbee05fb92b584d44fba4359e86796484aa6
 ---
 
-{{PWASidebar}}
+アプリ間のデータ共有とは、あるアプリが同じ端末上の別のアプリに情報やデータを渡す機能です。アプリ同士が互いを認識していなくてもデータを共有できるため、ユーザーにとって便利です。
 
-アプリケーションの共有とは、あるアプリケーションが、同じ端末上の別のアプリケーションに情報やデータを渡す機能です。この機能により、ユーザーは、アプリケーションが相互に認識していなくても、 2 つのアプリケーション間で情報を共有することができるため、とても便利です。
-
-例えば、モバイル端末では、写真アプリから、画像を受け入れる別のアプリケーション（メールアプリケーションなど）に写真や動画を共有することができます。この共有パターンは、 2 つのアプリケーションがインストールされているオペレーティングシステム (OS) によって調整されています。
+例えば、モバイル端末では、写真アプリから、画像を受け入れる別のアプリ（メールアプリなど）に写真や動画を共有できます。この共有の流れは、両方のアプリがインストールされているオペレーティングシステム (OS) によって仲介されます。
 
 1. ユーザーが写真の共有を開始すると、写真アプリケーションは、選択した画像のデータ準備を行い、それをオペレーティングシステムに渡します。
 2. オペレーティングシステムは、共有画像データを処理できるアプリケーションのリストを選択し、ユーザーに表示します。
 3. ユーザーが対象アプリケーションのいずれかを選択すると、オペレーティングシステムは共有画像を使用してそのアプリケーションを起動します。
 
-[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps) (PWA) も、同じ OS オーケストレーションパターンを使用して情報を共有する機能を備えています。PWA は、データの共有と共有データの受け入れの両方を行うことができます。
+[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps) (PWA) も、同じ OS による仲介の仕組みを使って情報を共有できます。PWA は、データの共有と共有データの受信の両方に対応できます。
 
 PWA を構築する場合、共有データを受け入れることで、 PWA がより親しみやすく、ユーザーの端末に自然に統合されたものになります。
 
@@ -77,14 +75,14 @@ async function shareData(data) {
 次の例は、アプリ内のボタンがクリックされたときにリンクとテキストを共有する方法を示しています。この例で使用されている `canBrowserShareData` 関数は、「[対応の確認](#対応の確認)」で説明されていますので、ここでは繰り返しません。
 
 ```js
-// DOM からボタンを取得します。ボタンはこれで非表示になります。
+// 初期状態では非表示の共有ボタンを取得
 const button = document.querySelector("#share");
 
 if (canBrowserShareData({ text: "text", url: "https://example.com" })) {
   // ボタンを表示
   button.style.display = "inline";
 
-  // ボタンをクリックしたイベントを待ち受けして、データを共有します。
+  // クリック時にデータを共有
   button.addEventListener("click", async () => {
     try {
       await navigator.share({
@@ -110,26 +108,26 @@ function canBrowserShareFiles() {
     return false;
   }
 
-  // ファイルで検査用のデータを作成し、ブラウザーが共有に対応しているかどうかを調べます。
+  // ファイルを含むテストデータを作成し、共有対応を確認
   const testFile = new File(["foo"], "foo.txt", { type: "text/plain" });
   const data = { files: [testFile] };
 
   return navigator.canShare(data);
 }
 
-// DOM からボタンを取得します。ボタンはこれで非表示になります。
+// 初期状態では非表示の共有ボタンを取得
 const button = document.querySelector("#share");
 
 if (canBrowserShareFiles()) {
-  // このブラウザーはファイルの共有に対応しています。ボタンを表示します
+  // ファイル共有に対応している場合はボタンを表示
   button.style.display = "inline";
 
-  // ボタンがクリックされるのを待ち受けし、ファイルを共有します。
+  // クリック時にファイルを共有
   button.addEventListener("click", async () => {
     try {
-      // 共有するファイルを取得します。
-      // この関数は、File オブジェクトを返す必要があります。
-      // これはおそらく動的に作成するか、 IndexedDB から取得します。
+      // 共有ファイルを取得
+      // File オブジェクトを返す
+      // 動的に作成するか、IndexedDB から取得
       const file = await getTheFileToShare();
 
       await navigator.share({
@@ -200,7 +198,7 @@ const sharedLink = url.searchParams.get("link");
 
 ### 共有されたファイルの処理
 
-前の例では、テキストデータは `GET` リクエストとして処理されました。しかし、ファイルを処理するには、 [`POST`](/ja/docs/Web/HTTP/Reference/Methods/POST) リクエストを `multipart/form-data` [エンコード方式](/ja/docs/Web/API/HTMLFormElement/enctype)を使用する必要があります。
+前の例では、テキストデータを `GET` リクエストとして処理しました。しかし、ファイルを処理するには、[`POST`](/ja/docs/Web/HTTP/Reference/Methods/POST) リクエストを使用し、`multipart/form-data` [エンコード方式](/ja/docs/Web/API/HTMLFormElement/enctype)を指定する必要があります。
 
 次のコードスニペットは、 PWA がさまざまな種類の共有ファイルを受け入れるように構成する方法を示しています。
 
@@ -250,7 +248,7 @@ const sharedLink = url.searchParams.get("link");
 // service-worker.js
 
 self.addEventListener("fetch", (event) => {
-  // このイベントリスナーは、 POST リクエストが /share-file-handler に送信された時だけ使用します。
+  // POST リクエストが /share-file-handler に送信された場合のみ処理
   const url = new URL(event.request.url);
   if (
     event.request.method !== "POST" ||
@@ -261,25 +259,25 @@ self.addEventListener("fetch", (event) => {
 
   event.respondWith(
     (async () => {
-      // 送信されたフォームからデータを取得します。
+      // 送信フォームのデータを取得
       const formData = await event.request.formData();
 
-      // 送信されたファイルを取得します。
+      // 送信ファイルを取得
       const textFiles = formData.getAll("textFiles");
       const htmlFiles = formData.getAll("htmlFiles");
       const imageFiles = formData.getAll("images");
 
-      // ファイルをフロントエンドアプリに送信してください。
+      // ファイルをフロントエンドへ送信
       sendFilesToFrontend(textFiles, htmlFiles, imageFiles);
 
-      // インポートされたファイルを表示する URL にユーザーをリダイレクトします。
+      // インポートしたファイルの表示 URL へリダイレクト
       return Response.redirect("/display-new-files", 303);
     })(),
   );
 });
 ```
 
-このサンプルコードでは、共有ファイルがフォームデータから抽出され、ユーザーは別のページにリダイレクトされます。抽出されたファイルの処理方法は、サービスワーカーのコードを使用して、ご自由に決定してください。たとえば、 {{domxref("Worker.postMessage()")}} メソッドを使用してアプリのメイン JavaScript コードに送信したり、サービスワーカーとアプリのメイン JavaScript コードの両方からアクセスできる [Indexed DB](/ja/docs/Web/API/IndexedDB_API) データベースに保存したりすることができます。
+このサンプルコードでは、共有ファイルがフォームデータから抽出され、ユーザーは別のページにリダイレクトされます。抽出したファイルの処理方法は、サービスワーカーのコード内で自由に決められます。例えば、{{domxref("Worker.postMessage()")}} メソッドを使用してアプリのメイン JavaScript コードに送信したり、サービスワーカーとメイン JavaScript コードの両方からアクセスできる [IndexedDB](/ja/docs/Web/API/IndexedDB_API) データベースに保存したりできます。
 
 詳細については、 `share_target` ウェブアプリのマニフェストメンバーページにある、[共有ファイルの受信](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/share_target#receiving_shared_files)の例をご覧ください。
 
@@ -289,4 +287,4 @@ self.addEventListener("fetch", (event) => {
 - [`share_target` マニフェストメンバー](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/share_target)
 - [Integrate with the OS sharing UI with the Web Share API](https://web.dev/articles/web-share) (web.dev)
 - [Web Share Target API を使用して共有データを受信する](https://developer.chrome.com/docs/capabilities/web-apis/web-share-target) (developer.chrome.com)
-- [他のアプリとコンテンツを共有する](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps-chromium/how-to/share) (microsoft.com)
+- [他のアプリとコンテンツを共有する](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps/how-to/share) (microsoft.com)

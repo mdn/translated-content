@@ -3,10 +3,8 @@ title: Propriété CSS `object-view-box`
 short-title: object-view-box
 slug: Web/CSS/Reference/Properties/object-view-box
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 25abd448c8a088e9f333360dea0adbe8143e6b86
 ---
-
-{{SeeCompatTable}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`object-view-box`** définit un rectangle comme zone visible (<i lang="en">viewbox</i>) à l'intérieur d'un {{Glossary("replaced elements", "élément remplacé")}}, permettant de zoomer ou de déplacer le contenu de l'élément remplacé. Elle fonctionne de manière similaire à l'attribut SVG {{SVGAttr("viewBox")}}.
 
@@ -92,9 +90,9 @@ object-view-box: unset;
 
 ## Description
 
-La propriété `object-view-box` peut être utilisée pour recadrer ou redimensionner des {{Glossary("replaced elements", "éléments remplacés")}}, y compris des images et des vidéos. Elle fonctionne en affichant une section du contenu de l'élément remplacé dans l'espace disponible réservé à cet élément. La section de l'élément remplacé qui est affichée est définie par la valeur de la propriété. L'espace réservé disponible est déterminé par la {{Glossary("extrinsic size", "taille extrinsèque")}} par défaut de l'élément. La sous-section du contenu affichée peut être présentée en zoom avant, en zoom arrière ou à sa taille originale, tout en maintenant le {{Glossary("aspect ratio", "rapport d'aspect")}} intrinsèque du contenu.
+La propriété `object-view-box` peut être utilisée pour recadrer ou redimensionner des {{Glossary("replaced elements", "éléments remplacés")}}, y compris des images et des vidéos. Elle fonctionne en affichant une section du contenu de l'élément remplacé dans l'espace disponible réservé à cet élément. La section de l'élément remplacé qui est affichée est définie par la valeur de la propriété. L'espace réservé disponible est déterminé par la {{Glossary("extrinsic size", "taille extrinsèque")}} par défaut de l'élément. La sous-section du contenu affichée peut être présentée en zoom avant, en zoom arrière ou à sa taille originale, tout en maintenant la {{Glossary("aspect ratio", "rapport d'aspect")}} intrinsèque du contenu.
 
-La valeur de la propriété est un `<basic-shape-rect>`, l'une des fonctions {{CSSxRef("basic-shape")}} limitées à la définition d'une forme rectangulaire. Par exemple, la valeur peut être une fonction {{CSSxRef("basic-shape/xywh","xywh()")}} :
+La valeur de la propriété est un `<basic-shape-rect>`, l'une des fonctions {{CSSxRef("basic-shape")}} limitées à la définition d'une forme rectangulaire. Par exemple, la valeur peut être une fonction {{CSSxRef("basic-shape/xywh","xywh()")}}&nbsp;:
 
 ```css
 img {
@@ -102,7 +100,7 @@ img {
 }
 ```
 
-Dans ce cas, le coin supérieur gauche de la section de l'image qui sera affichée est à `410px` du bord gauche et à `0` du bord supérieur, comme défini par les paramètres de coordonnées x et y. La taille de la section de l'image originale qui sera affichée est de `400px` de large par `150px` de haut&nbsp;; les composants `w` et `h` de la fonction. Cette section de 400x150 de l'image sera affichée dans l'espace qui était réservé à l'image elle-même lors de la mise en page de la page. Que la section du contenu affichée soit à sa taille intrinsèque originale, zoomée ou dézoomée dépend de si la vue de boîte est de 400px x 150px, plus petite ou plus grande que la taille de l'élément image, respectivement.
+Dans ce cas, le coin supérieur gauche de la section de l'image qui est affichée est à `410px` du bord gauche et à `0` du bord supérieur, comme défini par les paramètres de coordonnées x et y. La taille de la section de l'image originale qui est affichée est de `400px` de large par `150px` de haut&nbsp;; les composants `w` et `h` de la fonction. Cette section de 400x150 de l'image est affichée dans l'espace qui est réservé à l'image elle-même lors de la mise en page de la page. Que la section du contenu affichée soit à sa taille intrinsèque originale, zoomée ou dézoomée dépend de si la vue de boîte est de 400px x 150px, plus petite ou plus grande que la taille de l'élément image, respectivement.
 
 ![L'image du léopard recadrée à l'aide de la propriété object-view-box, avec une vue de boîte de 400px par 150px affichant une section non mise à l'échelle de l'image](https://mdn.github.io/shared-assets/images/diagrams/css/object-view-box/object-view-box_xywh.jpg)
 

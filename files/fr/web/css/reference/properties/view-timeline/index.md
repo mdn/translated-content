@@ -3,7 +3,7 @@ title: Propriété CSS `view-timeline`
 short-title: view-timeline
 slug: Web/CSS/Reference/Properties/view-timeline
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 7d55f113b5a05afe6ada6bb9b76bd3b0458f077d
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`view-timeline`** définit le nom, l'axe et les valeurs d'encart d'une [chronologie de progression de la vue nommée](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#chronologie_de_progression_de_la_vue_nommée).
@@ -50,7 +50,7 @@ view-timeline: unset;
 - `<view-timeline-axis>`
   - : Voir {{CSSxRef("view-timeline-axis")}}. La valeur par défaut est `block`.
 
-### Description
+## Description
 
 La propriété raccourcie `view-timeline` définit une _chronologie de progression de la vue nommée_, qui progresse en fonction des changements de visibilité d'un élément (le _sujet_) à l'intérieur d'un élément défilable (<i lang="en">scroller</i>). La propriété `view-timeline` est définie sur le sujet. Si l'élément scroller ne déborde pas de son conteneur dans la dimension de l'axe ou si le débordement est masqué ou coupé, aucune chronologie de progression de défilement n'est créée.
 

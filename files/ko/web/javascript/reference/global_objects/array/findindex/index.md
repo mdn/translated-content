@@ -3,7 +3,7 @@ title: Array.prototype.findIndex()
 short-title: findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 l10n:
-  sourceCommit: 4074fc09b07902a560b9b321c1f966452b5afc7c
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 {{JSRef}}
@@ -16,11 +16,11 @@ l10n:
 {{InteractiveExample("JavaScript Demo: Array.prototype.findIndex()", "shorter")}}
 
 ```js interactive-example
-const array1 = [5, 12, 8, 130, 44];
+const array = [5, 12, 8, 130, 44];
 
 const isLargeNumber = (element) => element > 13;
 
-console.log(array1.findIndex(isLargeNumber));
+console.log(array.findIndex(isLargeNumber));
 // Expected output: 3
 ```
 
@@ -63,12 +63,15 @@ findIndex(callbackFn, thisArg)
 다음 예제에서는 배열에서 소수인 첫번째 요소의 인덱스를 찾습니다. 소수가 없으면 -1을 반환합니다.
 
 ```js
-function isPrime(element) {
-  if (element % 2 === 0 || element < 2) {
+function isPrime(n) {
+  if (n < 2) {
     return false;
   }
-  for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
-    if (element % factor === 0) {
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
@@ -78,6 +81,9 @@ function isPrime(element) {
 console.log([4, 6, 8, 9, 12].findIndex(isPrime)); // -1, 찾을 수 없음
 console.log([4, 6, 7, 9, 12].findIndex(isPrime)); // 2 (array[2] is 7)
 ```
+
+> [!NOTE]
+> 이 `isPrime()` 구현은 설명을 위한 것입니다. 실제 애플리케이션에서는 반복 계산을 피하기 위해 [에라토스테네스의 체](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)와 같이 {{Glossary("Memoization", "메모이제이션")}}을 적극적으로 활용하는 알고리즘을 사용하는 것이 좋습니다.
 
 ### callbackFn의 세 번째 인수 사용하기
 
@@ -132,7 +138,8 @@ console.log(
 
 ## 같이 보기
 
-- [`core-js`에서의 `Array.prototype.findIndex` 폴리필](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js`에서의 `Array.prototype.findIndex` 폴리필](https://core-js.io/docs/features/ecmascript/array)
+- [`Array.prototype.findIndex`의 es-shims 폴리필](https://www.npmjs.com/package/array.prototype.findindex)
 - [인덱스 기반 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections) 안내서
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}

@@ -3,7 +3,7 @@ title: "Date : méthode toString()"
 short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 98972b1f827b7374e28aee591a73044ffd8fb758
 ---
 
 La méthode **`toString()`** des instances de {{JSxRef("Date")}} retourne une chaîne de caractères représentant cette date interprétée dans le fuseau horaire local.
@@ -30,7 +30,7 @@ Aucun.
 
 ### Valeur de retour
 
-Une chaîne de caractères représentant la date indiquée (voir la description pour le format). Retourne `"Invalid Date"` si la date est [non valide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+Une chaîne de caractères représentant la date indiquée (voir la description pour le format). Retourne `"Invalid Date"` si la date est [non valide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
 ## Description
 
@@ -38,7 +38,7 @@ La méthode `toString()` fait partie du [protocole de contrainte de type](/fr/do
 
 L'objet {{JSxRef("Date")}} remplace la méthode {{JSxRef("Object/toString", "toString()")}} de {{JSxRef("Object")}}. `Date.prototype.toString()` retourne une chaîne de caractères représentant la date interprétée dans le fuseau horaire local, contenant à la fois la date et l'heure — elle concatène la représentation textuelle définie dans {{JSxRef("Date/toDateString", "toDateString()")}} et {{JSxRef("Date/toTimeString", "toTimeString()")}}, en ajoutant un espace entre les deux. Par exemple&nbsp;: «&nbsp;Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)&nbsp;».
 
-`Date.prototype.toString()` doit être appelée sur des instances de {{JSxRef("Date")}}. Si la valeur de `this` n'hérite pas de `Date.prototype`, une {{JSxRef("TypeError")}} est levée.
+`Date.prototype.toString()` doit être appelée sur des instances de {{JSxRef("Date")}}. Si la valeur de `this` n'est pas une instance de `Date`, une {{JSxRef("TypeError")}} est levée.
 
 - Pour obtenir uniquement la partie _date_, utiliser {{JSxRef("Date/toDateString", "toDateString()")}}.
 - Pour obtenir uniquement la partie _heure_, utiliser {{JSxRef("Date/toTimeString", "toTimeString()")}}.

@@ -3,7 +3,7 @@ title: "HTMLElement: contentEditable プロパティ"
 short-title: contentEditable
 slug: Web/API/HTMLElement/contentEditable
 l10n:
-  sourceCommit: 61f855f3f8155a2dc1ddb5671bdac032f11ecee7
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("HTML DOM")}}
@@ -12,9 +12,9 @@ l10n:
 
 これは列挙属性で、次の値を設定できます。
 
-- '`true`' は、要素の内容が編集可能 (`contenteditable`) であることを示します。
-- '`false`' は、要素が編集できないことを示します。
-- '`plaintext-only`' は要素の生のテキストは編集可能ですが、リッチテキストの書式は編集できないことを示します。
+- `"true"` は、要素の内容が編集可能 (`contenteditable`) であることを示します。
+- `"false"` は、要素が編集できないことを示します。
+- `"plaintext-only"` は要素の生のテキストは編集可能ですが、リッチテキストの書式は編集できないことを示します。
 
 {{domxref("HTMLElement.isContentEditable")}} プロパティを使用すると、このプロパティの計算済みの論理値をテストできます。
 

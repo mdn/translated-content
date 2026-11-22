@@ -3,7 +3,7 @@ title: "ARIA : rôle contentinfo"
 short-title: contentinfo
 slug: Web/Accessibility/ARIA/Reference/Roles/contentinfo_role
 l10n:
-  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
+  sourceCommit: b126460df717d910e92f311f0603800987ecebee
 ---
 
 Le rôle `contentinfo` définit un pied de page, contenant des informations d'identification telles que des informations sur le droit d'auteur·ice, des liens de navigation et des déclarations de confidentialité, que l'on trouve sur chaque document d'un site. Cette section est communément appelée pied de page.
@@ -31,7 +31,7 @@ Le rôle `contentinfo` est [un repère](/fr/docs/Web/Accessibility/ARIA/Referenc
 Chaque page ne doit inclure qu'un seul repère `contentinfo`, créé soit en utilisant l'élément {{HTMLElement("footer")}} soit en déclarant `role="contentinfo"`. Les repères `contentinfo` présents dans un contenu intégré avec {{HTMLElement("iframe")}} ne comptent pas dans cette limite.
 
 > [!NOTE]
-> L'utilisation de l'élément {{HTMLElement("footer")}} communique automatiquement qu'une section a un rôle de `contentinfo`. Les développeur·euse·s devraient toujours préférer utiliser le bon élément HTML sémantique plutôt que d'utiliser ARIA, en s'assurant de {{HTMLElement("footer#accessibilité", "tester les problèmes connus")}} dans VoiceOver.
+> L'utilisation de l'élément {{HTMLElement("footer")}} communique automatiquement qu'une section a un rôle de `contentinfo`. Les développeur·euse·s doivent toujours préférer utiliser le bon élément HTML sémantique plutôt que d'utiliser ARIA, en s'assurant de {{HTMLElement("footer#accessibilité", "tester les problèmes connus")}} dans VoiceOver.
 
 ## Exemples
 
