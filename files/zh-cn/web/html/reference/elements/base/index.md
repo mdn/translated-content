@@ -1,75 +1,51 @@
 ---
-title: <base>：文档根 URL 元素
+title: "`<base>` HTML 文档基础 URL 元素"
+short-title: <base>
 slug: Web/HTML/Reference/Elements/base
+l10n:
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-**HTML \<base> 元素** 指定用于一个文档中包含的所有相对 URL 的根 URL。一份中只能有一个 \<base> 元素。
+**`<base>`** [HTML](/zh-CN/docs/Web/HTML) 元素指定用于文档中所有*相对* URL 的基础 URL。文档中只能有一个 `<base>` 元素。
 
-一个文档的基本 URL，可以通过使用 {{domxref('document.baseURI')}} 的 JS 脚本查询。如果文档不包含 `<base>` 元素，`baseURI` 默认为 {{domxref("document.location.href")}}。
-
-<table class="properties">
- <tbody>
-  <tr>
-   <th><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容类别</a></th>
-   <td>元数据内容。</td>
-  </tr>
-  <tr>
-   <th>合法的内容</th>
-   <td>无，它是一个{{Glossary("empty element")}}</td>
-  </tr>
-  <tr>
-   <th><dfn>标签省略</dfn></th>
-   <td>该标签不能有结束标签。</td>
-  </tr>
-  <tr>
-   <th>合法的父级</th>
-   <td>任何不带有任何其他 {{HTMLElement("base")}} 元素的{{HTMLElement("head")}} 元素</td>
-  </tr>
-  <tr>
-   <th>合法的 ARIA 角色</th>
-   <td>无</td>
-  </tr>
-  <tr>
-   <th>DOM 接口</th>
-   <td>{{domxref("HTMLBaseElement")}}</td>
-  </tr>
- </tbody>
-</table>
+脚本可以通过 {{domxref('Node.baseURI')}} 访问文档所使用的基础 URL。如果文档中没有 `<base>` 元素，则 `baseURI` 默认为 {{domxref("location.href")}}。
 
 ## 属性
 
-该标签包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+该元素的属性包括[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
-如果指定了以下任一属性，这个元素**必须**在其他任何属性是 URL 的元素之前。例如：{{HTMLElement("link")}} 的 `href` 属性。
+> [!WARNING]
+> `<base>` 元素必须具有 `href` 属性、`target` 属性或同时具有两者。
+> 如果指定了其中至少一个属性，则 `<base>` 元素**必须**位于属性值为 URL 的其他元素之前，例如 {{HTMLElement("link")}} 的 `href` 属性。
 
 - `href`
-  - : 用于文档中相对 URL 地址的基础 URL。允许绝对和相对 URL。
+  - : 用于文档中相对 URL 的基础 URL。允许使用绝对 URL 和相对 URL。不允许使用 [`data:`](/zh-CN/docs/Web/URI/Reference/Schemes/data) 和 [`javascript:`](/zh-CN/docs/Web/URI/Reference/Schemes/javascript) URL。
 - `target`
-  - : 默认浏览上下文的关键字或作者定义的名称，当没有明确目标的链接 {{HTMLElement("a")}} 或表单 {{HTMLElement("form")}} 导致导航被激活时显示其结果。该属性值定位到*浏览上下文*（例如选项卡，窗口或内联框 {{HTMLElement("iframe")}}）。以下的关键字指定特殊的意思：
-    - `_self`: 载入结果到当前浏览上下文中。（该值是元素的默认值）。
-    - `_blank`: 载入结果到一个新的未命名的浏览上下文。
-    - `_parent`: 载入结果到父级浏览上下文（如果当前页是内联框）。如果没有父级结构，该选项的行为和`_self`一样。
-    - `_top`: 载入结果到顶级浏览上下文（该浏览上下文是当前上下文的最顶级上下文）。如果没有父级，该选项的行为和\_self 一样。
+  - : 作为默认{{Glossary("browsing context", "浏览上下文")}}的**关键字**或**作者定义的名称**，用于显示从没有显式 `target` 属性的 {{HTMLElement("a")}}、{{HTMLElement("area")}} 或 {{HTMLElement("form")}} 元素导航到的结果。以下关键字具有特殊含义：
+    - `_self`（默认）：在当前浏览上下文中显示结果。
+    - `_blank`：在新的未命名浏览上下文中显示结果。
+    - `_parent`：如果当前页面位于框架内，则在当前浏览上下文的父级浏览上下文中显示结果。如果没有父级，则行为与 `_self` 相同。
+    - `_top`：在最顶层的浏览上下文（即作为当前浏览上下文的祖先且没有父级的浏览上下文）中显示结果。如果没有父级，则行为与 `_self` 相同。
 
 ## 使用说明
 
-### 多个 `<base>` 元素
+### 多个 \<base> 元素
 
-如果指定了多个 `<base>` 元素，只会使用第一个 `href` 和 `target` 值，其余都会被忽略。
+如果使用了多个 `<base>` 元素，则只会遵循第一个 `href` 和第一个 `target`，其他所有元素都会被忽略。
 
-### 页内锚
+### 页面内锚点
 
-指向文档中某个片段的链接，例如 `<a href="#some-id">` 用 `<base>` 解析，触发对带有附加片段的基本 URL 的 HTTP 请求。
+指向文档中片段的链接（例如 `<a href="#some-id">`）会使用 `<base>` 进行解析，从而触发附加该片段的、指向基础 URL 的 HTTP 请求。
 
-例如：给定 `<base href="https://example.com">`
+例如，给定 `<base href="https://example.com/">` 和以下链接：`<a href="#anchor">To anchor</a>`。该链接指向 `https://example.com/#anchor`。
 
-以及此链接 `<a href="#anchor">Anker</a>`
+### target 不能包含 ASCII 换行符、制表符或 <
 
-链接指向 `https://example.com/#anchor`
+如果 [`target`](#target) 属性包含 ASCII 换行符、制表符或 `<` 字符，则该值会被重置为 `_blank`。这是为了防止悬空标记注入攻击（dangling markup injection），这是一种无需脚本的攻击：将未闭合的 `target` 属性注入页面，从而捕获其后的任何文本，直到浏览器遇到可闭合该属性的字符。
 
 ### Open Graph
 
-[Open Graph](https://ogp.me) 标签不接受 `<base>`，并且应该始终具有完整的绝对 URL。例如：
+[Open Graph](https://ogp.me/) 标签不识别 `<base>`，并且应始终使用完整的绝对 URL。例如：
 
 ```html
 <meta property="og:image" content="https://example.com/thumbnail.jpg" />
@@ -78,10 +54,51 @@ slug: Web/HTML/Reference/Elements/base
 ## 示例
 
 ```html
-<base href="http://www.example.com/" />
+<base href="https://www.example.com/" />
 <base target="_blank" />
-<base target="_top" href="http://www.example.com/" />
+<base target="_top" href="https://example.com/" />
 ```
+
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a>
+      </th>
+      <td>元数据内容。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>无；它是一个{{Glossary("void element", "空元素")}}。</td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>必须有开始标签，且不能有结束标签。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        不包含另一个 <code>&lt;base&gt;</code> 元素的 {{HTMLElement("head")}}。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐含的 ARIA 角色</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">没有对应的角色</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>不允许任何 <code>role</code></td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLBaseElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 
