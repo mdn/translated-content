@@ -2,37 +2,15 @@
 title: color
 slug: Web/SVG/Reference/Attribute/color
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`color`** 属性は、間接的な値の候補である `currentColor` を {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, {{SVGAttr("lighting-color")}} の各属性に与えるために使用します。
 
 > [!NOTE]
-> プレゼンテーション属性として、`color` は CSS プロパティとして使用できます。詳しい情報は [CSS 色](/ja/docs/Web/CSS/Reference/Properties/color) を参照してください。
+> プレゼンテーション属性であるため、 `color` には対応する CSS プロパティの {{cssxref("color")}} があります。両方が指定された場合、 CSS プロパティの方が優先されます。
 
-プレゼンテーション属性として、任意の要素に適用することができますが、上記のように SVG 要素には直接影響を与えません。
-
-## 使用上のメモ
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        <code><a href="/ja/docs/Web/CSS/Reference/Values/color_value">&#x3C;color></a></code>
-        | <code>inherit</code>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td>ユーザーエージェントによる</td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
+技術的には、`color` は任意の要素に適用できますが、SVG 要素には直接影響しません。
 
 ## 例
 
@@ -60,6 +38,28 @@ svg {
 ```
 
 {{EmbedLiveSample("Example", "100%", "110")}}
+
+## 使用上のメモ
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <code><a href="/ja/docs/Web/CSS/Reference/Values/color_value">&#x3C;color></a></code>
+        | <code>inherit</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">デフォルト値</th>
+      <td>ユーザーエージェントによる</td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

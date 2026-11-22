@@ -2,7 +2,7 @@
 title: color-interpolation
 slug: Web/SVG/Reference/Attribute/color-interpolation
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`color-interpolation`** 属性は、グラデーションの補間、色のアニメーション、アルファ合成に用いる色空間を指定します。
@@ -10,7 +10,7 @@ l10n:
 > [!NOTE]
 > フィルター効果については、{{SVGAttr("color-interpolation-filters")}} プロパティで用いる色空間を制御します。
 
-color-interpolation プロパティは、色の操作を sRGB 色空間で行うか (光のエネルギーがリニアな) linearized RGB 色空間で行うかを選択します。適切な色空間を選択したら、コンポーネント単位での補間を行います。
+`color-interpolation` プロパティは、色の操作を sRGB 色空間で行うか、光エネルギーに対して線形の RGB 色空間で行うかを選択します。適切な色空間を選択すると、各成分単位で補間が行われます。
 
 子要素が背景と混合されるときは、混合の種類は親要素の `color-interpolation` の値ではなく、子要素の `color-interpolation` プロパティの値によって決まります。{{SVGAttr("href")}} または廃止された {{SVGAttr("xlink:href")}} 属性で他のグラデーションを参照しているグラデーションでは、{{SVGAttr("fill")}} または {{SVGAttr("stroke")}} プロパティで直接参照されているグラデーション要素のプロパティの値を用います。色をアニメーションするときは、アニメーションが行われる要素の `color-interpolation` プロパティの値に従って色の補間を行います。
 
@@ -27,13 +27,11 @@ color-interpolation プロパティは、色の操作を sRGB 色空間で行う
 - {{SVGElement("ellipse")}}
 - {{SVGElement("foreignObject")}}
 - {{SVGElement("g")}}
-- {{SVGElement("glyph")}}
 - {{SVGElement("image")}}
 - {{SVGElement("line")}}
 - {{SVGElement("linearGradient")}}
 - {{SVGElement("marker")}}
 - {{SVGElement("mask")}}
-- {{SVGElement("missing-glyph")}}
 - {{SVGElement("path")}}
 - {{SVGElement("pattern")}}
 - {{SVGElement("polygon")}}
@@ -47,32 +45,6 @@ color-interpolation プロパティは、色の操作を sRGB 色空間で行う
 - {{SVGElement("textPath")}}
 - {{SVGElement("tspan")}}
 - {{SVGElement("use")}}
-
-## 使用上のメモ
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td><code>auto</code> | <code>sRGB</code> | <code>linearRGB</code></td>
-    </tr>
-    <tr>
-      <th scope="row">デフォルト値</th>
-      <td><code>sRGB</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可 (離散)</td>
-    </tr>
-  </tbody>
-</table>
-
-- `auto`
-  - : ユーザーエージェントが色の補間用に `sRGB` または `linearRGB` 空間を選択してよいことを表します。この値は、作成者が色の補間を特定の色空間で行うことを要求していないことを表します。
-- `sRGB`
-  - : 色の補間を sRGB 色空間で行うべきであることを表します。
-- `linearRGB`
-  - : 色の補間を [sRGB の仕様書](https://webstore.iec.ch/en/publication/6169)に記述されている通りのリニア RGB 色空間で行うべきであることを表します。
 
 ## 例
 
@@ -189,6 +161,32 @@ svg {
 ```
 
 {{EmbedLiveSample("Example", "100%", "280")}}
+
+## 使用上のメモ
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td><code>auto</code> | <code>sRGB</code> | <code>linearRGB</code></td>
+    </tr>
+    <tr>
+      <th scope="row">デフォルト値</th>
+      <td><code>sRGB</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>可 (離散)</td>
+    </tr>
+  </tbody>
+</table>
+
+- `auto`
+  - : ユーザーエージェントが色の補間用に `sRGB` または `linearRGB` 空間を選択してよいことを表します。この値は、作成者が色の補間を特定の色空間で行うことを要求していないことを表します。
+- `sRGB`
+  - : 色の補間を sRGB 色空間で行うべきであることを表します。
+- `linearRGB`
+  - : 色の補間を [sRGB の仕様書](https://webstore.iec.ch/en/publication/6169)に記述されている通りのリニア RGB 色空間で行うべきであることを表します。
 
 ## 仕様書
 

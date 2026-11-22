@@ -2,10 +2,10 @@
 title: alignment-baseline
 slug: Web/SVG/Reference/Attribute/alignment-baseline
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
-**`alignment-baseline`** 属性は、要素が親要素に対して配置される方法を指定します。このプロパティは、要素と親要素の対応するベースラインのどれを揃えるかを指定します。例えば、ローマ体のテキストでフォントサイズが変わった場合でも、アルファベットのベースラインを一定にすることができます。既定値は `alignment-baseline` プロパティの計算値と同じ名前の値となります。
+**`alignment-baseline`** 属性は、要素が親要素に対して配置される方法を指定します。このプロパティは、要素と親要素の対応するベースラインのどれを揃えるかを指定します。例えば、ローマ体のテキストでフォントサイズが変わった場合でも、{{glossary("Baseline/Typography", "アルファベットのベースライン")}}を一定にすることができます。デフォルトでは、`alignment-baseline` プロパティの計算値と同じ名前のベースラインになります。
 
 > [!NOTE]
 > プレゼンテーション属性であるため、 `alignment-baseline` には対応する CSS プロパティ {{cssxref("alignment-baseline")}} があります。両方が指定された場合、 CSS プロパティの方が優先されます。
@@ -15,6 +15,49 @@ l10n:
 - {{SVGElement("tspan")}}
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
+
+## 例
+
+```html
+<svg
+  width="300"
+  height="120"
+  viewBox="0 0 300 120"
+  xmlns="http://www.w3.org/2000/svg">
+  <!-- アンカーを可視化 -->
+  <path
+    d="M60,10 L60,110
+              M30,10 L300,10
+              M30,65 L300,65
+              M30,110 L300,110
+              "
+    stroke="grey" />
+
+  <!-- アンカーの動作 -->
+  <text alignment-baseline="hanging" x="60" y="10">ぶら下がり</text>
+
+  <text alignment-baseline="middle" x="60" y="65">中央</text>
+
+  <text alignment-baseline="baseline" x="60" y="110">ベースライン</text>
+
+  <!-- アンカーを可視化 -->
+  <circle cx="60" cy="10" r="3" fill="red" />
+  <circle cx="60" cy="65" r="3" fill="red" />
+  <circle cx="60" cy="110" r="3" fill="red" />
+
+  <style>
+    <![CDATA[
+      text {
+        font: bold 36px Verdana, Helvetica, Arial, sans-serif;
+      }
+    ]]>
+  </style>
+</svg>
+```
+
+{{EmbedLiveSample("Example")}}
+
+他の要素（{{SVGElement("text")}} など）におけるオブジェクトの配置については、 {{SVGAttr("dominant-baseline")}} を参照してください。
 
 ## 使用上のメモ
 
@@ -86,50 +129,7 @@ l10n:
 - `bottom`
   - : 配置されたサブツリーの底辺を行ボックスの底辺に揃えます。
 
-SVG 2 では、このプロパティの定義にいくつかの変更が加えられました。具体的な変更点としては、`auto`、`before-edge`、`after-edge` の値が除去されました。後方互換性を維持するために、`text-before-edge` は `text-top` に、 `text-after-edge` は `text-bottom` に割り当てられる可能性があります。 `text-before-edge` および `text-after-edge` は、 vertical-align プロパティと併用しないようにしましょう。
-
-## 例
-
-```html
-<svg
-  width="300"
-  height="120"
-  viewBox="0 0 300 120"
-  xmlns="http://www.w3.org/2000/svg">
-  <!-- Materialization of anchors -->
-  <path
-    d="M60,10 L60,110
-              M30,10 L300,10
-              M30,65 L300,65
-              M30,110 L300,110
-              "
-    stroke="grey" />
-
-  <!-- Anchors in action -->
-  <text alignment-baseline="hanging" x="60" y="10">ぶら下がり</text>
-
-  <text alignment-baseline="middle" x="60" y="65">中央</text>
-
-  <text alignment-baseline="baseline" x="60" y="110">ベースライン</text>
-
-  <!-- Materialization of anchors -->
-  <circle cx="60" cy="10" r="3" fill="red" />
-  <circle cx="60" cy="65" r="3" fill="red" />
-  <circle cx="60" cy="110" r="3" fill="red" />
-
-  <style>
-    <![CDATA[
-      text {
-        font: bold 36px Verdana, Helvetica, Arial, sans-serif;
-      }
-    ]]>
-  </style>
-</svg>
-```
-
-{{EmbedLiveSample("Example")}}
-
-他の要素（{{SVGElement("text")}} など）におけるオブジェクトの配置については、 {{SVGAttr("dominant-baseline")}} を参照してください。
+SVG 2 では、このプロパティの定義にいくつかの変更が加えられました。具体的な変更点としては、`auto`、`before-edge`、`after-edge` の値が除去されました。後方互換性を維持するために、`text-before-edge` は `text-top` に、 `text-after-edge` は `text-bottom` に割り当てられる可能性があります。 `text-before-edge` および `text-after-edge` は、 {{cssxref("vertical-align")}} プロパティと併用しないようにしましょう。
 
 ## 仕様書
 
