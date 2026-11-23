@@ -9,11 +9,9 @@ l10n:
 {{APIRef("HTML DOM")}}
 
 > [!WARNING]
-> 此属性表示脚本元素的文本内容，根据脚本类型的不同，这些内容可能是可执行的。
-> 这类 API 被称为[注入汇聚点](/zh-CN/docs/Web/API/Trusted_Types_API#概念和用法)，并且可能是[跨站脚本（XSS）](/zh-CN/docs/Web/Security/Attacks/XSS) 攻击的载体。
+> 此属性表示脚本元素的文本内容，根据脚本类型的不同，这些内容可能是可执行的。这类 API 被称为[注入汇点](/zh-CN/docs/Web/API/Trusted_Types_API#概念和用法)，并且可能是[跨站脚本（XSS）](/zh-CN/docs/Web/Security/Attacks/XSS) 攻击的载体。
 >
-> 你可以通过始终赋值 {{domxref("TrustedScript")}} 对象而不是字符串，并[强制执行可信类型](/zh-CN/docs/Web/API/Trusted_Types_API#使用_csp_强制执行可信类型)来缓解此风险。
-> 更多信息请参阅[安全考量](#安全考量)。
+> 你可以通过始终赋值 {{domxref("TrustedScript")}} 对象而不是字符串，并[强制执行可信类型](/zh-CN/docs/Web/API/Trusted_Types_API#使用_csp_强制执行可信类型)来缓解此风险。更多信息请参阅[安全考量](#安全考量)。
 
 {{domxref("HTMLScriptElement")}} 接口的 **`text`** 属性表示 {{HTMLElement("script")}} 元素的内联文本内容。
 它的行为与 {{domxref("HTMLScriptElement.textContent","textContent")}} 和 {{domxref("HTMLScriptElement.innerText","innerText")}} 属性相同。
