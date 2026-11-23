@@ -2,7 +2,7 @@
 title: Window
 slug: Web/API/Window
 l10n:
-  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
+  sourceCommit: 85577061e99da7082b48263fa19f9b1ef4187eda
 ---
 
 {{APIRef("HTML DOM")}}
@@ -49,7 +49,7 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : 指定ウィンドウにある文書への参照を返します。
 - {{domxref("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 現在の文書コンテキストの[ピクチャインピクチャ](/ja/docs/Web/API/Document_Picture-in-Picture_API)ウィンドウへの参照を返します。
-- {{domxref("Window.fence")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("Window.fence")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : 現在の文書コンテキストの {{domxref("Fence")}} オブジェクトインスタンスを返します。{{htmlelement("fencedframe")}} 内に埋め込まれた文書でのみ利用できます。
 - {{domxref("Window.frameElement")}} {{ReadOnlyInline}}
   - : ウィンドウが埋め込まれた要素を返します。ウィンドウが埋め込まれていない場合は、 null を返します。
@@ -114,9 +114,9 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
 - {{domxref("Window.screen")}} {{ReadOnlyInline}}
   - : ウィンドウに関連付けられた screen オブジェクトへの参照を返します。
 - {{domxref("Window.screenX")}} および {{domxref("Window.screenLeft")}} {{ReadOnlyInline}}
-  - : どちらのプロパティも、ユーザーのブラウザーのビューポートの左端から画面の左端までの水平方向の距離を返します。
+  - : どちらのプロパティも、ユーザーのブラウザーウィンドウの左端から画面の左端までの水平方向の距離を返します。
 - {{domxref("Window.screenY")}} および {{domxref("Window.screenTop")}} {{ReadOnlyInline}}
-  - : どちらのプロパティも、ユーザーのブラウザーのビューポートの上端から画面の上端までの垂直方向の距離を返します。
+  - : どちらのプロパティも、ユーザーのブラウザーウィンドウの上端から画面の上端までの垂直方向の距離を返します。
 - {{domxref("Window.scrollbars")}} {{ReadOnlyInline}}
   - : ウィンドウ内で表示 / 非表示の切り替え (トグル) が可能な、 scrollbars オブジェクトを返す
 - {{domxref("Window.scrollMaxX")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
@@ -129,7 +129,7 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : 文書が現在垂直にスクロールされているピクセル数を返します。
 - {{domxref("Window.self")}} {{ReadOnlyInline}}
   - : window オブジェクト自身へのオブジェクト参照を返す
-- {{domxref("Window.sessionStorage")}}
+- {{domxref("Window.sessionStorage")}} {{ReadOnlyInline}}
   - : 生成元のオリジンからのみアクセスが可能なデータを保存するために使用する、セッションストレージへの参照を返します。
 - {{domxref("Window.sharedStorage")}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{deprecated_inline}} {{non-standard_inline}}
   - : 現在のオリジンの {{domxref("WindowSharedStorage")}} オブジェクトを返します。これは[共有ストレージ API](/ja/docs/Web/API/Shared_Storage_API) を使用して共有ストレージにデータを書き込むためのメインエントリーポイントです。
@@ -283,8 +283,8 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : ウェブサイトやアプリが自分自身で使用するためにサンドボックス化されたファイルシステムにアクセスすることができます。
 - {{domxref("Window.setImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : ブラウザーで他の高負荷なタスクが完了した後に、関数を実行します。
-- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}} {{deprecated_inline}}
-  - : ユーザーがウィンドウをリサイズできるかを切り替えます。
+- {{domxref("Window.setResizable()")}}
+  - : 何もしません（ノープ）。Netscape 4.x との後方互換性のために残されています。
 - {{domxref("Window.webkitConvertPointFromNodeToPage()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : ノードの座標系からページの座標系へ {{domxref("WebKitPoint")}} を変換します。
 - {{domxref("Window.webkitConvertPointFromPageToNode()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
@@ -322,9 +322,8 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
 ### フォーカスイベント
 
 - {{domxref("Window/blur_event", "blur")}}
-  - : 要素がフォーカスを失ったときに発生します。
+  - : ウィンドウがフォーカスを失ったときに発生します。
 - {{domxref("Window/focus_event", "focus")}}
-  - : 要素がフォーカスを得たときに発生します。
 
 ### ゲームパッドイベント
 
