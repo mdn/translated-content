@@ -2,7 +2,7 @@
 title: メディアフラグメント
 slug: Web/URI/Reference/Fragment/Media_fragments
 l10n:
-  sourceCommit: 93eb85aec36d1a929ac8dfc7dbf1ed297992608f
+  sourceCommit: 465d0f2adc0dd98c6122a8e6fc2c6b32ecce0b0c
 ---
 
 **メディアフラグメント**はメディアファイル（例えば[動画](/ja/docs/Web/HTML/Reference/Elements/video)や [SVG](/ja/docs/Web/SVG) など）の URL に付与して、表示したいメディアの一部分、特定の時間の区間や特定の範囲を示します。
