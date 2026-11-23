@@ -3,7 +3,7 @@ title: URI クエリー
 short-title: クエリー
 slug: Web/URI/Reference/Query
 l10n:
-  sourceCommit: 466ca1db767535c1aa9984b4e6c0db41b3a53475
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 URI の**クエリー**は、[パス](/ja/docs/Web/URI/Reference/Path)の後に続く部分です。
@@ -15,7 +15,7 @@ URI の**クエリー**は、[パス](/ja/docs/Web/URI/Reference/Path)の後に�
 ?query
 ```
 
-- `fragment`
+- `query`
   - : [フラグメント](/ja/docs/Web/URI/Reference/Fragment)を開始する `#` 文字を除く、任意の文字のシーケンス。
     クエリーの正確な書式は、リソース自体によって定義されます。
 
