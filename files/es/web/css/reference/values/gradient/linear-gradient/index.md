@@ -98,7 +98,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 
 ## Descripción
 
-Como con cualquier gradiente, un gradiente lineal [no tiene dimensiones intrínsecas](/es/docs/Web/CSS/Reference/Values/image#description); es decir, no tiene un tamaño natural o preferido, ni una proporción preferida. Su tamaño concreto coincidirá con el tamaño del elemento al que se aplica.
+Como con cualquier gradiente, un gradiente lineal [no tiene dimensiones intrínsecas](/es/docs/Web/CSS/Reference/Values/image#descripci%C3%B3n); es decir, no tiene un tamaño natural o preferido, ni una proporción preferida. Su tamaño concreto coincidirá con el tamaño del elemento al que se aplica.
 
 Para crear un gradiente lineal que se repita para llenar su contenedor, use la función {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} en su lugar.
 
