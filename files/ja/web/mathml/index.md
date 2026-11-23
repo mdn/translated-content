@@ -53,7 +53,7 @@ l10n:
 
 以下のデモでは、ウェブコンテンツにおいて、次第に複雑さを増していく数学的概念を表示させています。
 
-- [ピタゴラスの定理の証明](/ja/docs/Web/MathML/Guides/Proving_the_Pythagorean_theorem)
+- [ピタゴラスの定理の証明](/ja/docs/Web/MathML/Guides/Proving_the_pythagorean_theorem)
   - : ピタゴラスの定理の証明を示す簡単な例です。
 - [二次方程式の解の公式を導く](/ja/docs/Web/MathML/Guides/Deriving_the_quadratic_formula)
   - : 二次方程式の解の公式の導出の概要を説明します。
