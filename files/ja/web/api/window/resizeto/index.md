@@ -1,16 +1,19 @@
 ---
-title: Window.resizeTo()
+title: "Window: resizeTo() メソッド"
+short-title: resizeTo()
 slug: Web/API/Window/resizeTo
+l10n:
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 **`Window.resizeTo()`** メソッドは、ウィンドウのサイズを動的に変更します。
 
 ## 構文
 
-```js
-resizeTo(width, height);
+```js-nolint
+resizeTo(width, height)
 ```
 
 ### 引数
@@ -26,7 +29,8 @@ resizeTo(width, height);
 
 ## 例
 
-この関数は、利用可能な画面の 1/4 を占めるようにウィンドウをリサイズします。 {{domxref("Screen.availWidth")}} および {{domxref("Screen.availHeight")}} プロパティを参照してください。
+この関数は、利用可能な画面の 1/4 を占めるようにウィンドウをリサイズします。
+{{domxref("Screen.availWidth")}} および {{domxref("Screen.availHeight")}} プロパティを参照してください。
 
 ```js
 function quarter() {
@@ -42,7 +46,13 @@ function quarter() {
 
 {{Compat}}
 
-注: **`window.open()`** によって作成されていないウィンドウまたはタブのサイズを変更することはできません。また、ウィンドウに複数のタブがある場合、サイズを変更することはできません。
+メモ: **`window.open()`** によって作成されていないウィンドウまたはタブのサイズは変更できません。
+また、ウィンドウに複数のタブがある場合は、サイズを変更できません。
+
+> [!NOTE]
+> この関数によってウィンドウが同期的にリサイズされるとは限りません。
+> モバイルなどの一部の環境では、ウィンドウがリサイズされない場合があります。
+> ウィンドウがリサイズされたか、リサイズされた時期を確認するには、{{domxref("Window/resize_event", "resize")}} イベントを待ち受けることができます。
 
 ## 関連情報
 
