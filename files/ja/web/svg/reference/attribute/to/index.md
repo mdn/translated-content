@@ -2,7 +2,7 @@
 title: to
 slug: Web/SVG/Reference/Attribute/to
 l10n:
-  sourceCommit: ab279632b84d201ae9ddd3db3981bf0b01573371
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`to`** 属性は、アニメーション中に変化する属性の最終値を示します。
@@ -15,32 +15,6 @@ l10n:
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("set")}}
-
-## 例
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="100" height="100">
-    <animate
-      attributeType="XML"
-      attributeName="width"
-      fill="freeze"
-      from="100"
-      to="150"
-      dur="3s" />
-  </rect>
-</svg>
-```
-
-{{EmbedLiveSample("Example", "200", "200")}}
 
 ## animate, animateMotion, animateTransform
 
@@ -89,6 +63,32 @@ svg {
 </table>
 
 この属性の具体的なデータ型は、アニメーションの対象となる属性の値によって異なります。
+
+## 例
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="100" height="100">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      fill="freeze"
+      from="100"
+      to="150"
+      dur="3s" />
+  </rect>
+</svg>
+```
+
+{{EmbedLiveSample("Example", "200", "200")}}
 
 ## 仕様書
 

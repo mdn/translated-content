@@ -2,14 +2,14 @@
 title: type
 slug: Web/SVG/Reference/Attribute/type
 l10n:
-  sourceCommit: d35e3fd4bc6b80049899b45d74ed71dc996adfc7
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 `type` 属性は汎用的な属性であり、使用されるコンテキストによって意味が異なります。
 
 - {{SVGElement("animateTransform")}} 要素では、これは時間経過に伴う値の変化を伴う座標変換の型を定義するものです。
 - {{SVGElement("feColorMatrix")}} 要素では、これは行列演算の種類を示しています。キーワード `matrix` は、5x4 の完全な行列が指定されることを示しています。その他のキーワードは、完全な行列を指定することなく、よく使用されている色操作を実行することができる便利な近道を表します。
-- {{SVGElement("feFuncR")}}、{{SVGElement("feFuncG")}}、{{SVGElement("feFuncB")}}、{{SVGElement("feFuncA")}} の各要素では、成分の変換関数の種類を示します。
+- {{SVGElement("feFuncR")}}、{{SVGElement("feFuncG")}}、{{SVGElement("feFuncB")}}、{{SVGElement("feFuncA")}} の各要素では、色成分の変換関数の種類を示します。
 - {{SVGElement("feTurbulence")}} 要素では、これはフィルタープリミティブがノイズ関数を実行すべきか、それとも乱流関数を実行すべきかを示します。
 - {{SVGElement("style")}} および {{SVGElement("script")}} 要素については、その要素のコンテンツタイプを定義します。
 
@@ -25,7 +25,7 @@ l10n:
 - {{SVGElement("script")}}
 - {{SVGElement("style")}}
 
-## 使用コンテキスト
+## 使用上のメモ
 
 ### &lt;animateTransform&gt; 要素の場合
 
@@ -183,11 +183,11 @@ SVG 要素: {{SVGElement("style")}}, {{SVGElement("script")}}
       <th scope="row">規格文書</th>
       <td>
         <a
-          href="https://svgwg.org/svg2-draft/interact.html#ScriptElementTypeAttribute"
+          href="https://w3c.github.io/svgwg/svg2-draft/interact.html#ScriptElementTypeAttribute"
           rel="external"
           >Scalable Vector Graphics (SVG) 2</a
         ><br /><a
-          href="https://svgwg.org/svg2-draft/styling.html#StyleElementTypeAttribute"
+          href="https://w3c.github.io/svgwg/svg2-draft/styling.html#StyleElementTypeAttribute"
           rel="external"
           >Scalable Vector Graphics (SVG) 2</a
         >

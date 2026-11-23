@@ -2,7 +2,7 @@
 title: height
 slug: Web/SVG/Reference/Attribute/height
 l10n:
-  sourceCommit: d35e3fd4bc6b80049899b45d74ed71dc996adfc7
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`height`** 属性は、ユーザー座標系における要素の垂直方向の寸法を定義します。
@@ -34,27 +34,6 @@ l10n:
 - {{SVGElement('rect')}}
 - {{SVGElement('svg')}}
 - {{SVGElement('use')}}
-
-## 例
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- With a height of 0 or less, nothing will be rendered -->
-  <rect y="0" x="0" width="90" height="0" />
-  <rect y="0" x="100" width="90" height="60" />
-  <rect y="0" x="200" width="90" height="100%" />
-</svg>
-```
-
-{{EmbedLiveSample("Example", '100%', 200)}}
 
 ## feBlend
 
@@ -850,6 +829,27 @@ svg {
 
 > [!NOTE]
 > SVG2 から `height` は幾何プロパティであり、この属性は使用される要素の CSS プロパティとしても使用することができます。
+
+## 例
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 高さが 0 以下の場合、何も描画されません -->
+  <rect y="0" x="0" width="90" height="0" />
+  <rect y="0" x="100" width="90" height="60" />
+  <rect y="0" x="200" width="90" height="100%" />
+</svg>
+```
+
+{{EmbedLiveSample("Example", '100%', 200)}}
 
 ## 仕様書
 

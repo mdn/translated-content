@@ -2,7 +2,7 @@
 title: path
 slug: Web/SVG/Reference/Attribute/path
 l10n:
-  sourceCommit: d559e66723de93ce6c59eb5d22a29afca7265c2a
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`path`** 属性には 2 つの異なる意味があります。テキストの文字がレンダリングされるテキストパスを定義する場合と、参照された要素がアニメーションされるモーションパスを定義する場合です。
@@ -11,35 +11,6 @@ l10n:
 
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("textPath")}}
-
-## 例
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path
-    id="MyPath"
-    fill="none"
-    stroke="silver"
-    d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" />
-
-  <text>
-    <textPath
-      path="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50">
-      Quick brown fox jumps over the lazy dog.
-    </textPath>
-  </text>
-</svg>
-```
-
-{{EmbedLiveSample("例", "420", "220")}}
 
 ## animateMotion
 
@@ -88,6 +59,35 @@ svg {
 
 - `<path-data>`
   - : この値は、`<text>` 要素のグリフが配置されるテキストパスを定義します。使用可能なコマンドの詳細については、[`d` 属性の説明](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド)を参照してください。
+
+## 例
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path
+    id="MyPath"
+    fill="none"
+    stroke="silver"
+    d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" />
+
+  <text>
+    <textPath
+      path="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50">
+      素早い茶色の狐がのんびりした犬を飛び越える。
+    </textPath>
+  </text>
+</svg>
+```
+
+{{EmbedLiveSample("Example", "420", "220")}}
 
 ## 仕様書
 
