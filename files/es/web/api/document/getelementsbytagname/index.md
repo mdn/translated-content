@@ -15,7 +15,7 @@ Devuelve una lista de elementos con un nombre determinado. Se busca en todo el d
 elements = document.getElementsByTagName(name);
 ```
 
-- `elements` es una lista 'viva' (`NodeList`) de los elementos encontrados en el orden en que han aparecido en el árbol.
+- `elements` es una {{domxref("HTMLCollection")}} viva de elementos encontrados en el orden en que aparecen en el árbol.
 - `name` es una cadena que representa el nombre de los elementos. La cadena especial "\*" representa a todos los elementos.
 
 ### Ejemplo
