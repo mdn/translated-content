@@ -52,7 +52,7 @@ toString(radix)
 
 `toString()` メソッドは、その `this` 値が `BigInt` プリミティブまたはラッパーオブジェクトである必要があります。他の `this` 値に対しては、長整数値への強制変換を試みることなく {{jsxref("TypeError")}} が発生します。
 
-`BigInt` には [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) メソッドがないため、JavaScript は `BigInt` オブジェクトが文字列のコンテキストで使用される際に自動的に `toString()` メソッドを呼び出します。メソッドを持たないため、JavaScript は `BigInt` _オブジェクト_ が文字列を期待するコンテキスト（[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)など）で使用される際に、自動的に `toString()` メソッドを呼び出します。ただし、BigInt のプリミティブ値は、文字列への[型変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)を行う際に `toString()` メソッドを参照しません。代わりに、最初の `toString()` 実装と同じアルゴリズムを用いて直接変換されます。
+`BigInt` には [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) メソッドがないため、JavaScript は `BigInt` オブジェクトが文字列のコンテキストで使用される際に自動的に `toString()` メソッドを呼び出します。メソッドを持たないため、JavaScript は `BigInt` _オブジェクト_ が文字列を期待するコンテキスト（[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)など）で使用される際に、自動的に `toString()` メソッドを呼び出します。ただし、BigInt のプリミティブ値は、文字列への[強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)を行う際に `toString()` メソッドを参照しません。代わりに、最初の `toString()` 実装と同じアルゴリズムを用いて直接強制変換されます。
 
 ```js
 BigInt.prototype.toString = () => "Overridden";

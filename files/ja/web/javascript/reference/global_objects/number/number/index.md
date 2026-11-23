@@ -25,9 +25,9 @@ Number(value)
 
 ### 返値
 
-`Number()` が関数として（[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new)）呼び出された場合、[引数を数値プリミティブに変換します](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)。特に、[長整数 (BigInt)](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt) の値は例外が発生させずに数値へ変換します。 `value` が存在しない場合は `0` になります。
+`Number()` が関数として（[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) なしで）呼び出された場合、[引数を数値プリミティブに強制変換します](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)。特に、[長整数 (BigInt)](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt) の値は例外を発生させずに数値へ強制変換します。`value` が存在しない場合は `0` になります。
 
-`Number()` がコンストラクターとして（[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きで）呼び出された場合は、上記の型変換処理を行ったうえで、 {{jsxref("Number")}} オブジェクトにラッピングして返します。これはプリミティブでは**ありません**。
+`Number()` がコンストラクターとして（[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きで）呼び出された場合は、上記の強制変換処理を行ったうえで、{{jsxref("Number")}} オブジェクトにラッピングして返します。これはプリミティブでは**ありません**。
 
 > [!WARNING]
 > コンストラクターとして `Number` を使用することはほとんどないはずです。

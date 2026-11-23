@@ -19,12 +19,12 @@ slice(start, end)
 ### 引数
 
 - `start` {{optional_inline}}
-  - : 取り出す範囲の先頭の 0 から始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)。
+  - : 取り出す範囲の先頭の 0 から始まるインデックスで、整数に[強制変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)。
     - 負のインデックスを指定すると、バッファーの末尾から前にカウントします。 `-buffer.length <= start < 0` の場合、 `start + buffer.length` が使用されます。
     - `start < -buffer.length` または `start` が省略された場合、 `0` が使用されます。
     - `start >= buffer.length` の場合、空のバッファーが返されます。
 - `end` {{optional_inline}}
-  - : 取り出す範囲の末尾の 0 から始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)。 `slice()` はここまでを取り出しますが、 `end` の位置は含めません。
+  - : 取り出す範囲の末尾の 0 から始まるインデックスで、整数に[強制変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)。 `slice()` はここまでを取り出しますが、 `end` の位置は含めません。
     - 負のインデックスを指定すると、バッファーの末尾から前にカウントします。 `-buffer.length <= end < 0` の場合、 `end + buffer.length` が使用されます。
     - `end < -buffer.length` の場合、 `0` が使用されます。
     - `end >= buffer.length` または `end` が省略されたか `undefined` の場合、 `buffer.length` が使用され、末尾までのすべての要素が抽出されます。

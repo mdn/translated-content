@@ -36,7 +36,7 @@ Number.parseInt(string, radix)
 ### 引数
 
 - `string`
-  - : 解釈する値で、[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)。先頭の{{glossary("whitespace", "ホワイトスペース")}}は無視されます。
+  - : 解釈する値で、[文字列に強制変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)。先頭の{{glossary("whitespace", "ホワイトスペース")}}は無視されます。
 - `radix` {{optional_inline}}
   - : `2` から `36` までの整数で、 `string` の*基数*（数学的記数法の底）を表します。
 

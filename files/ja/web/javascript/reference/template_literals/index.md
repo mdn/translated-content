@@ -27,7 +27,7 @@ tagFunction`string text ${expression} string text`
 - `string text`
   - : テンプレートリテラルに含まれる文字列テキストです。ほとんどの文字はそのまま使用できますが、[改行](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#改行文字)やその他の[ホワイトスペース文字](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#ホワイトスペース)も含まれます。ただし、[タグ関数](#タグ付きテンプレートとエスケープシーケンス)を使用しない限り、無効なエスケープシーケンスは構文エラーの原因となります。
 - `expression`
-  - : 現在の位置に挿入される式で、その値は文字列に変換されるか、 `tagFunction` に渡されます。
+  - : 現在の位置に挿入される式で、その値は文字列に強制変換されるか、 `tagFunction` に渡されます。
 - `tagFunction`
   - : 指定された場合、テンプレート文字列の配列と置換式とともに呼び出され、返値がテンプレートリテラルの値となります。[タグ付きテンプレート](#タグ付きテンプレート)を参照してください。
 
@@ -105,7 +105,7 @@ not ${2 * a + b}.`);
 // not 20."
 ```
 
-2 つの構文には軽微な違いがあることに注意してください。 テンプレートリテラルは、[その式を直接文字列に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)しますが、加算ではまずオペランドをプリミティブに変換します。 詳細は、 [`+` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition)のリファレンスページをご覧ください。
+2 つの構文には軽微な違いがあることに注意してください。 テンプレートリテラルは、その式を直接文字列に[強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)しますが、加算ではまずオペランドをプリミティブに強制変換します。 詳細は、 [`+` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition)のリファレンスページをご覧ください。
 
 ### 入れ子のテンプレート
 
