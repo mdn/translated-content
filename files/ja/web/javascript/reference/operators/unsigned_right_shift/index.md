@@ -2,10 +2,10 @@
 title: 符号なし右シフト演算子 (>>>)
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
-**符号なし右シフト演算子 (`>>>`)** は、 1 つ目のオペランドを指定されたビット数だけ右にずらしたバイナリー表現を持つ、数値または長整数を返します。右にずらしてあふれたビットは破棄され、 0 のビットが左からずれて入ります。この演算は「ゼロ埋め右シフト」とも呼ばれます。符号ビットが `0` になるため、結果の数値は常に正の値となるからです。符号なし右シフトは[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の値を受け入れません。
+**符号なし右シフト演算子 (`>>>`)** は、1 つ目のオペランドを指定されたビット数だけ右にずらした数値を返します。右にずらしてあふれたビットは破棄され、左から `0` のビットが入ります。この演算は「ゼロ埋め右シフト」とも呼ばれます。符号ビットが `0` になるため、結果は負の数になりません。符号なし右シフトは[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の値を受け入れません。
 
 {{InteractiveExample("JavaScript デモ: 符号なし右シフト演算子 (>>>)", "shorter")}}
 
@@ -26,6 +26,17 @@ console.log(c >>> b); //  00111111111111111111111111111110
 ```js-nolint
 x >>> y
 ```
+
+### 引数
+
+- `x`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 10（ビットシフト）以上の式です。その値は[符号なし 32 ビット整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#固定長数値への変換)に強制変換されます。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 11（加算）以上の式です。その値は[符号なし 32 ビット整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#固定長数値への変換)に強制変換されます。シフト量は下位 5 ビットで決まります。
+
+### 返値
+
+シフト量だけ右にシフトし、左側にゼロを入れた `x` を表す符号なし 32 ビット整数です。
 
 ## 解説
 

@@ -2,7 +2,7 @@
 title: delete
 slug: Web/JavaScript/Reference/Operators/delete
 l10n:
-  sourceCommit: 03d5115691a7a9fa3df3b6ebd20a0c7eed213252
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **`delete`** 演算子は、オブジェクトからプロパティを除去します。プロパティの値がオブジェクトであり、そのオブジェクトへの参照がこれ以上存在しない場合、そのプロパティが保持するオブジェクトは最終的に自動的に解放されます。
@@ -27,19 +27,13 @@ console.log(employee.firstName);
 ## 構文
 
 ```js-nolint
-delete object.property
-delete object[property]
+delete expression
 ```
-
-> [!NOTE]
-> `delete` 演算子の次の式は、より幅広い構文が許容されますが、意味のある動作をもたらすのは上記の方法のみです。
 
 ### 引数
 
-- `object`
-  - : オブジェクト名、またはオブジェクトとして評価される式です。
-- `property`
-  - : 削除するプロパティです。
+- `expression`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 14 （前置演算子）以上の式です。ただし、[以下の制限](#解説)があります。一般に、意味のある動作をもたらすのは[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)だけです。
 
 ### 返値
 

@@ -2,7 +2,7 @@
 title: 加算代入演算子 (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **加算代入 (`+=`)** 演算子は、 2 つのオペランドの[加算](/ja/docs/Web/JavaScript/Reference/Operators/Addition)（数値の加算または文字列の結合のどちらか）を実行し、左オペランドへ結果を代入します。
@@ -25,6 +25,17 @@ console.log((b += " world")); // 結合
 ```js-nolint
 x += y
 ```
+
+### 引数
+
+- `x`
+  - : 有効な代入対象です。例えば、[識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)や[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)などが該当します。現在の値は文字列、長整数、数値のいずれかに強制変換されます。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 2 （代入）以上の式です。その値は文字列、長整数、数値のいずれかに強制変換されます。
+
+### 返値
+
+`x` の元の値を使って [`x + y`](/ja/docs/Web/JavaScript/Reference/Operators/Addition) を計算した結果として得られる文字列、長整数、または数値です。
 
 ## 解説
 

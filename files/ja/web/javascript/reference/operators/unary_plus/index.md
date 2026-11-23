@@ -2,10 +2,10 @@
 title: 単項プラス演算子 (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
-**単項プラス演算子 (`+`)** は、オペランドの前に置かれ、そのオペランドを評価し、それが数値以外の場合は[数値へ変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)しようとします。
+**単項プラス演算子 (`+`)** は、オペランドの前に置かれ、そのオペランドを評価します。オペランドが数値でない場合は、[数値に強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)しようとします。
 
 {{InteractiveExample("JavaScript デモ: 単項プラス演算子 (+)", "taller")}}
 
@@ -38,11 +38,20 @@ console.log(+"hello");
 +x
 ```
 
+### 引数
+
+- `x`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 14（前置演算子）以上の式です。
+
+### 返値
+
+数値に[強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)された `x` の値です。
+
 ## 解説
 
 単項マイナス (`-`) も非数値を数値に変換できますが、単項プラスは数値に対して他の演算を行わないため、非数値を数値に変換する最も高速で好ましい方法です。
 
-単項プラス演算子は、数値を期待するほとんどの組み込みメソッドで使用される通常の[数値の型変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)と全く同じ段階を踏みます。整数や浮動小数点の文字列表現、および非文字列値である `true`、`false`、`null` を変換することができます。 10 進数および 16 進数（`0x`接頭辞付き）形式の整数に対応しています。負の数値も対応しています（ただし 16 進数は除く）。特定の値を解釈できない場合、{{jsxref("NaN")}} と評価されます。数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の両方で動作する他の算術演算子とは異なり、長整数値に対して `+` 演算子を使用すると {{jsxref("TypeError")}} が発生します。
+単項プラス演算子は、数値を期待するほとんどの組み込みメソッドで使われる通常の[数値への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)と同じ手順を実行します。整数や浮動小数点数の文字列表現に加えて、`true`、`false`、`null` などの文字列以外の値も数値に変換できます。10 進数と 16 進数（`0x` 接頭辞付き）の形式の整数に対応しています。負の数値にも対応しています（ただし、16 進数は除きます）。値を数値に変換できない場合、{{jsxref("NaN")}} になります。数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の両方で動作する他の算術演算子とは異なり、長整数値に対して `+` 演算子を使うと {{jsxref("TypeError")}} が発生します。
 
 ## 例
 

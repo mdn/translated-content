@@ -2,7 +2,7 @@
 title: super
 slug: Web/JavaScript/Reference/Operators/super
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **`super`** キーワードは、オブジェクトリテラルやクラスの [[Prototype]] 上のプロパティにアクセスしたり、スーパークラスのコンストラクターを呼び出したりするために使用されます。
@@ -59,6 +59,21 @@ super.propertyOnParent
 super[expression]
 ```
 
+### 引数
+
+- `arg1`, `arg2`, …, `argN`
+  - : スーパークラスのコンストラクターに渡す各引数は、[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使った引数、または[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 2（代入）以上の式にできます。
+- `propertyOnParent`
+  - : アクセスするプロパティの[識別子名](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)です。
+- `expression`
+  - : 優先順位を問いません。その値はプロパティキー（[文字列](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)またはシンボル）に強制変換されます。
+
+### 返値
+
+`super()` 呼び出しは、派生コンストラクター内で `this` となるオブジェクトを返します。
+
+プロパティアクセス形式では、プロトタイプチェーン上の指定されたプロパティへの参照が生成されます。この参照では、現在の `this` がレシーバーとして使われます。
+
 ## 解説
 
 `super` キーワードは、「関数呼び出し」（`super(...args)`）と「プロパティ参照」として（`super.prop` および `super[expr]`）の 2 つの方法で使用できます。
@@ -108,12 +123,11 @@ class Rectangle {
 
 class Square extends Rectangle {
   constructor(length) {
-    // ここでは、親クラスのコンストラクターを呼び出し、指定された長さを
-    // Rectangle の 幅と高さとして渡します。
+    // 指定された長さを Rectangle の幅と高さに使う
     super(length, length);
 
-    // メモ: 'this' を使う前に super() を呼び出さなければなりません。
-    // でないと ReferenceError が発生します。
+    // this を使う前に super() を呼び出す
+    // 先に使うと ReferenceError が発生
     this.name = "Square";
   }
 }
@@ -180,7 +194,7 @@ class Base {
 }
 class Derived extends Base {
   delete() {
-    delete super.foo; // this is bad
+    delete super.foo; // 使用できない
   }
 }
 
@@ -284,10 +298,10 @@ const e = new Extended();
 // インスタンス継承のリセット
 Object.setPrototypeOf(Extended.prototype, AnotherBase.prototype);
 console.log(e.getX()); // プロトタイプチェーンが変更されたため、"1" ではなく "2" をログ出力
-console.log(Extended.staticGetX()); // ここでも "3" とログ出力します。静的部分をまだ変更していないため
-// 静的継承のリセット
+console.log(Extended.staticGetX()); // 静的部分はまだ変更していないため、"3" のまま
+// 静的継承をリセット
 Object.setPrototypeOf(Extended, AnotherBase);
-console.log(Extended.staticGetX()); // "4" とログ出力されるようになる
+console.log(Extended.staticGetX()); // "4" が出力される
 ```
 
 ### super からのメソッド呼び出し
@@ -344,16 +358,14 @@ b2.setX.call(null); // TypeError: Cannot assign to read only property 'x' of obj
 ただし、`super.x = 1` は依然としてプロトタイプオブジェクトのプロパティ記述子を参照するので、書き込み不可のプロパティは上書きできず、セッターが呼び出されます。
 
 ```js
-class X {
-  constructor() {
-    // 書き込み不可のプロパティを作成
-    Object.defineProperty(this, "prop", {
-      configurable: true,
-      writable: false,
-      value: 1,
-    });
-  }
-}
+class X {}
+
+// 書き込み不可のプロパティを作成
+Object.defineProperty(X.prototype, "prop", {
+  configurable: true,
+  writable: false,
+  value: 1,
+});
 
 class Y extends X {
   constructor() {
