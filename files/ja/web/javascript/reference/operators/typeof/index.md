@@ -2,7 +2,7 @@
 title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
 l10n:
-  sourceCommit: d19713a0df638c5a46deecd8b8075d27146c7bea
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **`typeof`** 演算子は、オペランドの値の型を示す文字列を返します。
@@ -32,11 +32,11 @@ typeof operand
 ### 引数
 
 - `operand`
-  - : 型を返すオブジェクトまたは[プリミティブ](/ja/docs/Glossary/Primitive)型を表す式です。
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 14（前置演算子）以上の式で、型を返す対象となるオブジェクトまたは[プリミティブ](/ja/docs/Glossary/Primitive)を表します。
 
-## 解説
+### 返値
 
-以下は `typeof` が返す可能性がある値の一覧です。型とプリミティブの詳細については、[JavaScript のデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)のページも参照してください。
+`operand` の型を示す文字列です。
 
 | 型                                                                                                                                                                                              | 結果                              |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
@@ -52,6 +52,8 @@ typeof operand
 
 この値のリストは網羅的なものです。仕様を遵守するエンジンは、掲載されている値以外を生成する（または過去には生成していた）ことは報告されていません。
 
+型とプリミティブの詳細については、[JavaScript のデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)のページも参照してください。
+
 ## 例
 
 ### 基本的な使い方
@@ -64,8 +66,8 @@ typeof 42 === "number";
 typeof Math.LN2 === "number";
 typeof Infinity === "number";
 typeof NaN === "number"; // "Not-A-Number" であるにもかかわらず。
-typeof Number("1") === "number"; // Number は数値に型強制できない値を含めて、
-typeof Number("shoe") === "number"; // あらゆるものを数字に解釈します。
+typeof Number("1") === "number"; // Number は数値に変換できない値も含め、
+typeof Number("shoe") === "number"; // あらゆる値を数値に変換しようとします。
 
 typeof 42n === "bigint";
 
@@ -121,13 +123,13 @@ typeof Math.sin === "function";
 typeof null === "object";
 ```
 
-JavaScript の最初の実装では、JavaScript の値は型タグと値で表現されていました。オブジェクトの型タグは `0` で、`null` は NULL ポインター (ほとんどのプラットフォームで `0x00`) として表されていました。その結果、`null` はタグの型として `0` を持っていたため、`typeof` の返値は `"object"` です。([リファレンス](https://2ality.com/2013/10/typeof-null.html))
+JavaScript の最初の実装では、JavaScript の値は型タグと値で表現されていました。オブジェクトの型タグは `0` で、`null` は NULL ポインター (ほとんどのプラットフォームで `0x00`) として表されていました。その結果、`null` はタグの型として `0` を持っていたため、`typeof` の返値は `"object"` です。（[リファレンス](https://2ality.com/2013/10/typeof-null.html)<sup>(英語)</sup>）
 
-ECMAScript の修正案が (オプトインを使用して) 提案されましたが、[却下されました](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null)。それは `typeof null === "null"` という結果になるものでした。
+ECMAScript の修正案が（オプトインを使用して）提案されましたが、[却下されました](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null)<sup>(英語)</sup>。それは `typeof null === "null"` という結果になるものでした。
 
 ### new 演算子の使用
 
-[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) で呼び出されるコンストラクター関数はすべて、プリミティブ型以外の値を返します（"object" または "function"）。 ほとんどはオブジェクトを返しますが、特記すべき例外として、[`Function`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) は関数を返します。
+[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) で呼び出されるコンストラクター関数はすべて、プリミティブ型以外の値（"object" または "function"）を返します。ほとんどはオブジェクトを返しますが、特記すべき例外として、[`Function`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) は関数を返します。
 
 ```js
 const str = new String("String");
@@ -161,7 +163,7 @@ typeof (someData + " foo"); // "string"
 typeof undeclaredVariable; // "undefined"
 ```
 
-しかし、`typeof` を同じブロック内の字句宣言（{{jsxref("Statements/let", "let")}}、{{jsxref("Statements/const", "const")}}、{{jsxref("Statements/using", "using")}}、{{jsxref("Statements/await_using", "await using")}}、[`class`](/ja/docs/Web/JavaScript/Reference/Statements/class)）の前に使用すると、{{jsxref("ReferenceError")}} が発生します。 ブロックスコープの変数は、ブロックの開始から初期化が処理されるまでの間、一時的なデッドゾーンにあり、その間にアクセスするとエラーが発生します。ブロックスコープ内の変数は、ブロックの開始から初期化が処理されるまで「[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)」にあり、その間にアクセスされるとエラーが発生します。
+しかし、`typeof` を同じブロック内の字句宣言（{{jsxref("Statements/let", "let")}}、{{jsxref("Statements/const", "const")}}、{{jsxref("Statements/using", "using")}}、{{jsxref("Statements/await_using", "await using")}}、[`class`](/ja/docs/Web/JavaScript/Reference/Statements/class)）より前に使用すると、{{jsxref("ReferenceError")}} が発生します。ブロックスコープの変数は、ブロックの開始から初期化されるまで[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)にあり、その間にアクセスするとエラーが発生します。
 
 ```js example-bad
 typeof newLetVariable; // ReferenceError
@@ -219,7 +221,7 @@ function type(value) {
 
   // コンストラクターの名前。例えば、`Array`、`GeneratorFunction`、
   // `Number`、`String`、`Boolean`、`MyCustomClass`。
-  const className = value.constructor.name;
+  const className = value.constructor?.name;
   if (typeof className === "string" && className !== "") {
     return className;
   }
@@ -243,4 +245,4 @@ function type(value) {
 ## 関連情報
 
 - {{jsxref("instanceof")}}
-- [`document.all` willful violation of the standard](https://github.com/tc39/ecma262/issues/668)
+- [`document.all` willful violation of the standard](https://github.com/tc39/ecma262/issues/668)<sup>(英語)</sup>

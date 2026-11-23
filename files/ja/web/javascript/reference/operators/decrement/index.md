@@ -2,7 +2,7 @@
 title: デクリメント演算子 (--)
 slug: Web/JavaScript/Reference/Operators/Decrement
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **デクリメント演算子 (`--`)** は、オペランドをデクリメント（1 を減算）し、演算子が置かれている場所次第で、デクリメントの前または後の値を返します。
@@ -30,9 +30,18 @@ x--
 --x
 ```
 
+### 引数
+
+- `x`
+  - : [識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)や[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)などの有効な代入対象です。現在の値は[数値または長整数](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)に強制変換されます。
+
+### 返値
+
+数値または長整数です。後置形式 (`x--`) はデクリメント前の数値を返し、前置形式 (`--x`) はデクリメント後の値を返します。
+
 ## 解説
 
-`--` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。最初に[オペランドを数値の値に変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値変換)し、その型を検査します。オペランドが長整数になった場合、長整数のデクリメントを実行し、そうでない場合は数値のデクリメントを実行します。
+`--` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。最初に[オペランドを数値に強制変換し](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)、その型を検査します。オペランドが長整数になった場合、長整数のデクリメントを実行し、そうでない場合は数値のデクリメントを実行します。
 
 演算子をオペランドの後ろに付けて後置演算子として使用した場合（例えば `x--`）、デクリメント演算子はデクリメントを行い、デクリメント前の値を返します。
 

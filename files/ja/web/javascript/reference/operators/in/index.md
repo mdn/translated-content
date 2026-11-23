@@ -1,13 +1,13 @@
 ---
-title: in 演算子
+title: in
 slug: Web/JavaScript/Reference/Operators/in
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **`in`** 演算子は、指定されたプロパティが指定されたオブジェクトにある場合に `true` を返します。
 
-`in`演算子は他のコレクション内の値を検索するために使用することはできません。配列内に特定の値が存在するかどうかを検査するには、 {{jsxref("Array.prototype.includes()")}} を使用してください。 集合の場合は、 {{jsxref("Set.prototype.has()")}} を使用してください。
+`in` 演算子は他のコレクション内の値を検索するために使用することはできません。配列内に特定の値が存在するかどうかを検査するには、 {{jsxref("Array.prototype.includes()")}} を使用してください。 集合の場合は、 {{jsxref("Set.prototype.has()")}} を使用してください。
 
 {{InteractiveExample("JavaScript デモ: in 演算子")}}
 
@@ -36,9 +36,15 @@ prop in object
 ### 引数
 
 - `prop`
-  - : プロパティ名または配列のインデックスを表す文字列式またはシンボルです（シンボルではない場合は、[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への変換)）。[プライベート要素の識別子](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)である場合もあります。
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 9 （関係演算子）以上の式です。その値はプロパティキー（[文字列](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)またはシンボル）に強制変換されます。
+- `#prop`
+  - : [プライベート要素の識別子](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)で、外側のクラスで宣言されているものです。
 - `object`
-  - : オブジェクト（またはそのプロトタイプチェーン）に、指定された名前 (`prop`) のプロパティが含まれているかどうかを確認するオブジェクト。
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 10 （ビットシフト）以上で、チェック対象のオブジェクトに評価される式です。
+
+### 返値
+
+`object` が指定されたプロパティを持つかどうかを示す論理値です。プロパティは `object` 自体またはそのプロトタイプチェーン上に存在します。`#prop in object` の形式では、`object` 自体が指定されたプライベート要素を持つかどうかを検査します。
 
 ### 例外
 
@@ -55,7 +61,7 @@ prop in object
 
 これは特別な構文です。 `in` 演算子の左辺は式ではなくプロパティ識別子ですが、引用符で囲まれていません（囲むと文字列プロパティとなり、プライベート要素ではなくなるため）。
 
-現在のクラスと無関係なオブジェクトのプライベート要素にアクセスすると、`undefined`を返すのではなく {{jsxref("TypeError")}} が発生するため、この構文により以下のように短縮できます。
+現在のクラスと無関係なオブジェクトのプライベート要素にアクセスすると、`undefined` を返すのではなく {{jsxref("TypeError")}} が発生するため、この構文により以下のように短縮できます。
 
 ```js
 class C {
@@ -263,8 +269,8 @@ class Person {
     this.#age = age;
   }
   static [Symbol.hasInstance](o) {
-    // Testing `this` to prevent false-positives when
-    // calling `instanceof SubclassOfPerson`
+    // `instanceof SubclassOfPerson` の誤検知を防ぐため、`this` を検査
+    // サブクラスで呼び出した場合
     return this === Person && #age in o;
   }
   ageDifference(other) {

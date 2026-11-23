@@ -2,7 +2,7 @@
 title: class 式
 slug: Web/JavaScript/Reference/Operators/class
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **`class`** キーワードを使用すると、式内でクラスを定義することができます。
@@ -39,6 +39,17 @@ class name {
 
 > [!NOTE]
 > [式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement) は、[`class` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/class) との曖昧さを避けるため、キーワード `class` で始めてはなりません。`class` キーワードは、文を受け入れないコンテキストで現れた場合にのみ、式を開始します。
+
+### 引数
+
+- `name` {{optional_inline}}
+  - : クラス名です。クラス本体内では、この名前を使用してクラスを参照できます。
+- `class body`
+  - : 中括弧で囲まれた[クラス要素](/ja/docs/Web/JavaScript/Reference/Classes#クラス本体)です。
+
+### 返値
+
+クラスのコンストラクター関数です。
 
 ## 解説
 

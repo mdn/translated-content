@@ -2,10 +2,11 @@
 title: 厳密等価演算子 (===)
 slug: Web/JavaScript/Reference/Operators/Strict_equality
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
-**厳密等価演算子 (`===`)** は、 2 つのオペランドが等しいことを検査し、論理値で結果を返します。[等価](/ja/docs/Web/JavaScript/Reference/Operators/Equality)演算子とは異なり、厳密等価演算子はオペランドの型が異なる場合、常に異なるものと判断します。
+**厳密等価演算子 (`===`)** は、2 つのオペランドが等しいかを検査し、論理値を返します。
+[等価](/ja/docs/Web/JavaScript/Reference/Operators/Equality)演算子とは異なり、厳密等価演算子はオペランドの型が異なる場合、常に異なるものと判断します。
 
 {{InteractiveExample("JavaScript デモ: 厳密等価演算子 (===)")}}
 
@@ -29,16 +30,27 @@ console.log(0 === false);
 x === y
 ```
 
+### 引数
+
+- `x`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 8（等価性演算子）以上の式です。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 9（関係演算子）以上の式です。
+
+### 返値
+
+`x` と `y` が[厳密な等価性](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#による厳密な等価性)に従って等しい場合は `true`、そうでない場合は `false` です。
+
 ## 解説
 
-厳密等価演算子 (`===` および `!==`) は、 [IsStrictlyEqual](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#による厳密な等価性) の意味を提供します。
+厳密等価演算子 (`===` および `!==`) は、[IsStrictlyEqual](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#による厳密な等価性)の意味論に従います。
 
 - オペランドの型が異なる場合は、 `false` を返します。
 - 両方のオペランドがオブジェクトである場合、同じオブジェクトを指している場合に限り `true` を返します。
 - 両方のオペランドが `null` または両方のオペランドが `undefined` であった場合は `true` を返します。
 - どちらかのオペランドが `NaN` であった場合は `false` を返します。
 - それ以外の場合は、2 つのオペランドの値を比較します。
-  - 数値型は同じ値の数値である必要があります。 `+0` と `-0` は同じ値と見なされます。
+  - 数値の場合は、同じ数値でなければなりません。`+0` と `-0` は同じ値と見なされます。
   - 文字列型は同じ文字が同じ順序で並んでいる必要があります。
   - 論理型は両方が `true` であるか両方が `false` である必要があります。
 

@@ -2,7 +2,7 @@
 title: async function 式
 slug: Web/JavaScript/Reference/Operators/async_function
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **`async function`** キーワードは、式の中で非同期関数を定義するために使用できます。
@@ -45,9 +45,13 @@ async function name(param0, param1, /* …, */ paramN) {
 - `statements` {{optional_inline}}
   - : 関数本体を構成する文です。
 
+### 返値
+
+{{jsxref("AsyncFunction")}} オブジェクトです。
+
 ## 解説
 
-`async function` 式は [`async function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function)とよく似ており、構文もほとんど同じです。async `function` 式と `async function` 宣言の主な違いは、`async function` 式が*関数名*を省略して*無名*関数を生成することができる点です。`async function` 式は、定義後直ちに実行される [IIFE](/ja/docs/Glossary/IIFE)（即時実行関数式）として使用することもでき、[最上位の await](/ja/docs/Web/JavaScript/Guide/Modules#最上位の_await) を模倣することができます。詳細は[関数](/ja/docs/Web/JavaScript/Reference/Functions)の章を見てください。
+`async function` 式は [`async function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function)とよく似ており、構文もほとんど同じです。`async function` 式と `async function` 宣言の主な違いは、`async function` 式では関数名を省略して無名関数を作成できることです。`async function` 式は、定義後すぐに実行される [IIFE](/ja/docs/Glossary/IIFE)（即時実行関数式）としても使用できます。これにより、[最上位の await](/ja/docs/Web/JavaScript/Guide/Modules#最上位の_await) を模倣できます。詳細は[関数](/ja/docs/Web/JavaScript/Reference/Functions)の章を参照してください。
 
 ## 例
 
@@ -85,11 +89,11 @@ add(10).then((v) => {
 
 ### 非同期 IIFE
 
-`async` の [IIFE](/ja/docs/Glossary/IIFE) を使用すると、 [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) および [`for...await`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) を、[最上位の await](/ja/docs/Web/JavaScript/Reference/Operators/await#最上位の_await) が利用できないコンテキストで使用することができます。ここでは、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用して IIFE を定義していますが、 `async function` 式も使用できます。
+`async` の [IIFE](/ja/docs/Glossary/IIFE) を使用すると、[`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) および [`for await...of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) を、[最上位の await](/ja/docs/Web/JavaScript/Reference/Operators/await#最上位の_await) が利用できないコンテキストで使用できます。ここでは[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用して IIFE を定義していますが、`async function` 式も使用できます。
 
 ```js
 const getFileStream = async (url) => {
-  // implementation
+  // 実装
 };
 
 (async () => {
