@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/text-align
 original_slug: Web/CSS/text-align
 ---
 
-[CSS](/ko/docs/Web/CSS) **`text-align`** 속성은 블록 요소나 표의 칸 상자의 가로 정렬을 설정합니다. 즉 {{cssxref("vertical-align")}}과 동일하나 세로가 아닌 가로 방향으로 동작합니다.
+[CSS](/ko/docs/Web/CSS) **`text-align`** 속성은 블록 요소나 표 셀 내부에 있는 인라인 수준 콘텐츠의 가로 정렬을 설정합니다. 즉 {{cssxref("vertical-align")}}과 동일하나 세로가 아닌 가로 방향으로 동작합니다.
 
 {{InteractiveExample("CSS Demo: text-align")}}
 
