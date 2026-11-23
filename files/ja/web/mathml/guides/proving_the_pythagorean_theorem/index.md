@@ -1,7 +1,7 @@
 ---
 title: ピタゴラスの定理の証明
 short-title: ピタゴラスの定理
-slug: Web/MathML/Guides/Proving_the_pythagorean_theorem
+slug: Web/MathML/Guides/Proving_the_Pythagorean_theorem
 l10n:
   sourceCommit: c263f06fa14ed56153e345006bb459c9df014b98
 ---
