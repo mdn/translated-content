@@ -2,7 +2,7 @@
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
 **`String`** オブジェクトは文字の並びを表したり操作したりするために使用されます。
@@ -104,8 +104,8 @@ JavaScript では、 `String` オブジェクトと{{Glossary("Primitive", "プ�
 
 ```js
 const strPrim = "foo"; // リテラルは文字列プリミティブ
-const strPrim2 = String(1); // 文字列プリミティブ "1" に変換
-const strPrim3 = String(true); // 文字列プリミティブ "true" に変換
+const strPrim2 = String(1); // 文字列プリミティブ "1" に強制変換
+const strPrim3 = String(true); // 文字列プリミティブ "true" に強制変換
 const strObj = new String(strPrim); // new を付けて String を呼び出すと文字列ラッパーオブジェクトを返す
 
 console.log(typeof strPrim); // "string"
@@ -134,9 +134,9 @@ console.log(eval(s2)); // 文字列の "2 + 2" を返す
 console.log(eval(s2.valueOf())); // 数値の 4 を返す
 ```
 
-### 文字列変換
+### 文字列への強制変換
 
-文字列を期待する組み込み操作の多くは、最初に引数を文字列に変換します（これが `String` オブジェクトが文字列プリミティブと同じように動作する主な理由です）。[処理](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tostring)は以下のように要約できます。
+文字列を期待する組み込み操作の多くは、最初に引数を文字列に強制変換します（これが `String` オブジェクトが文字列プリミティブと同じように動作する主な理由です）。[処理](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tostring)は以下のように要約できます。
 
 - 文字列はそのまま返します。
 - [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) は `"undefined"` なります。
@@ -145,13 +145,13 @@ console.log(eval(s2.valueOf())); // 数値の 4 を返す
 - 数値は [`toString(10)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) と同じアルゴリズムで変換されます。
 - [長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)は [`toString(10)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) と同じアルゴリズムで変換されます。
 - [シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)は {{jsxref("TypeError")}} が発生します。
-- オブジェクトは最初に[プリミティブに変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ変換)され、これは [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) を（`"string"` をヒントとして）呼び出すことで行われ、次に `toString()`、そして `valueOf()` メソッドがこの順序で呼び出されます。結果のプリミティブはそれから文字列に変換されます。
+- オブジェクトは最初に[プリミティブに変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブへの強制変換)され、これは [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) を（`"string"` をヒントとして）呼び出すことで行われ、次に `toString()`、そして `valueOf()` メソッドがこの順序で呼び出されます。結果のプリミティブはそれから文字列に変換されます。
 
 JavaScript でほぼ同じ効果を得る方法はいくつかあります。
 
-- [テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals): `` `${x}` `` は埋め込まれた式に対して、上記で説明した文字列変換と同じ手順を踏みます。
+- [テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals): `` `${x}` `` は埋め込まれた式に対して、上記で説明した文字列への強制変換と同じ手順を踏みます。
 - [`String()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/String) 関数: `String(x)` は `x` を変換するのに同じアルゴリズムを使用しますが、[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)でも {{jsxref("TypeError")}} が発生せず、`"Symbol(description)"` の形で `description` にそのシンボルの[説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description)が入ったものを返します。
-- [`+` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition): `"" + x` はオペランドを文字列ではなくプリミティブに変換します。一部のオブジェクトでは、通常の文字列変換とは完全に異なる動作をします。詳しくは[リファレンスページ](/ja/docs/Web/JavaScript/Reference/Operators/Addition)を参照してください。
+- [`+` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition): `"" + x` はオペランドを文字列ではなくプリミティブに強制変換します。一部のオブジェクトでは、通常の文字列への強制変換とは完全に異なる動作をします。詳しくは[リファレンスページ](/ja/docs/Web/JavaScript/Reference/Operators/Addition)を参照してください。
 
 用途によっては `` `${x}` `` （組み込みの動作を模倣するため）または `String(x)`（エラーを発生させずにシンボル値を処理するため）を使用したいかもしれませんが、 `"" + x` は使用しないでください。
 
