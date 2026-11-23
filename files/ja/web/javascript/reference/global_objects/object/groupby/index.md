@@ -42,7 +42,7 @@ Object.groupBy(items, callbackFn)
 - `items`
   - : 要素がグループ化される[反復可能な要素](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)（{{jsxref("Array")}} など）。
 - `callbackFn`
-  - : 反復可能な各要素に対して実行される関数。これは、現在の要素のグループを示すプロパティのキー（文字列または[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)）に変換できる値を返す必要があります。この関数は以下の引数で呼び出されます。
+  - : 反復可能な各要素に対して実行される関数。これは、現在の要素のグループを示すプロパティのキー（文字列または[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)）に強制変換できる値を返す必要があります。この関数は以下の引数で呼び出されます。
     - `element`
       - : 現在処理中の要素。
     - `index`
@@ -54,7 +54,7 @@ Object.groupBy(items, callbackFn)
 
 ## 解説
 
-`Object.groupBy()` は、指定された `callbackFn` 関数を反復可能な要素ごとに 1 回呼び出します。コールバック関数は、関連付けられた要素のグループを示す文字列またはシンボル（どちらの型でもない値は[文字列変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)されます）を返す必要があります。 `callbackFn` が返す値は、`Object.groupBy()` が返すオブジェクトのキーとして使用されます。各キーには、コールバックが同じ値を返したすべての要素を含む連想配列があります。
+`Object.groupBy()` は、指定された `callbackFn` 関数を反復可能な要素ごとに 1 回呼び出します。コールバック関数は、関連付けられた要素のグループを示す文字列またはシンボル（どちらの型でもない値は文字列に[強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)されます）を返す必要があります。 `callbackFn` が返す値は、`Object.groupBy()` が返すオブジェクトのキーとして使用されます。各キーには、コールバックが同じ値を返したすべての要素を含む連想配列があります。
 
 返されたオブジェクトの要素と元の反復可能な要素は同じです（{{Glossary("deep copy", "ディープコピー")}}ではありません）。要素の内部構造を変更すると、反復可能な要素と返されたオブジェクトの両方に反映されます。
 

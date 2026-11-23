@@ -181,7 +181,7 @@ const myCar = {
 };
 ```
 
-JavaScript の変数と同様に、プロパティ名は大文字と小文字が区別されます。プロパティ名は文字列またはシンボルのみです。シンボルでない限り、すべてのキーは[文字列に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)されます。[配列の添字](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#配列の添字)は、実際には、文字列キーに整数が格納されたプロパティです。
+JavaScript の変数と同様に、プロパティ名は大文字と小文字が区別されます。プロパティ名は文字列またはシンボルのみです。シンボルでない限り、すべてのキーは[文字列に強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)されます。[配列の添字](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#配列の添字)は、実際には、文字列キーに整数が格納されたプロパティです。
 
 ### プロパティのアクセス
 

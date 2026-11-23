@@ -13,7 +13,7 @@ l10n:
 
 論理値は一般に条件分岐の検査、例えば {{jsxref("Statements/if...else", "if...else")}} や {{jsxref("Statements/while", "while")}} 文の条件、[条件演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator) (`? :`)、 {{jsxref("Array.prototype.filter()")}} の述語の返値などに使用されます。
 
-JavaScript では、論理値への明示的な変換はほとんど必要ありません。 JavaScript は論理値のコンテキストにおいて自動的に変換を行うため、値が[真値であるかどうか](#論理値への変換)に基づいて、任意の値を論理値として使用することができます。また、自分のコードでは、`if (condition)` や `if (!condition)` を `if (condition === true)` や `if (condition === false)` の代わりに使用するよう推奨します。これにより、この規約の利点を活かすことができます。ただし、条件を表す値が常に論理値であることを確認することで、コードの意図を明確にすることができます。
+JavaScript では、論理値への明示的な変換はほとんど必要ありません。JavaScript は論理値のコンテキストで自動的に強制変換を行うため、値が[真値であるかどうか](#論理値への強制変換)に基づいて、任意の値を論理値として使用することができます。また、自分のコードでは、`if (condition)` や `if (!condition)` を `if (condition === true)` や `if (condition === false)` の代わりに使用するよう推奨します。これにより、この規約の利点を活かすことができます。ただし、条件を表す値が常に論理値であることを確認することで、コードの意図を明確にすることができます。
 
 ```js
 // 良い例:
@@ -44,7 +44,7 @@ const good2 = !!expression;
 const bad = new Boolean(expression); // これを使用しない
 ```
 
-これは、すべてのオブジェクトが（`Boolean` オブジェクトで `false` をラップしているものであっても）{{glossary("truthy", "真値")}}であり、条件文などの場面では `true` と評価されるためです。（詳細は下記の[論理型への変換](#論理型への変換)の節を参照。）
+これは、すべてのオブジェクトが（`Boolean` オブジェクトで `false` をラップしているものであっても）{{glossary("truthy", "真値")}}であり、条件文などの場面では `true` と評価されるためです。（詳細は下記の[論理値への強制変換](#論理値への強制変換)の節を参照。）
 
 ```js
 if (new Boolean(true)) {
@@ -64,27 +64,27 @@ const s = Boolean(myString); // s は true
 > [!WARNING]
 > コンストラクターとして `Boolean` を使うことは滅多にありません。
 
-### 論理型への変換
+### 論理値への強制変換
 
-論理値を期待する多くの組み込み演算は、まず引数を論理値に型変換します。[この処理](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toboolean)は次のように要約されます。
+論理値を期待する多くの組み込み演算は、まず引数を論理値に強制変換します。[この処理](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toboolean)は次のように要約されます。
 
 - 論理値はそのまま返されます。
-- [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) は `false` に変換されます。
-- [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) は `false` に変換されます。
-- `0`, `-0`, `NaN` は `false` に、それ以外の数値は `true` に変換されます。
-- `0n` は `false` に、その他の [`BigInt`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt) は `true` に変換されます。
+- [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) は `false` に強制変換されます。
+- [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) は `false` に強制変換されます。
+- `0`, `-0`, `NaN` は `false` に、それ以外の数値は `true` に強制変換されます。
+- `0n` は `false` に、その他の [`BigInt`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt) は `true` に強制変換されます。
 - [`Symbol`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) は `true` になります。
 - すべてのオブジェクトは `true` になります。
 
 > [!NOTE]
-> 古い動作により、 [`document.all`](/ja/docs/Web/API/Document/all) はオブジェクトであるにもかかわらず、論理値に変換されると `false` になります。このプロパティは古く標準外であるため、使用しないでください。
+> 古い動作により、 [`document.all`](/ja/docs/Web/API/Document/all) はオブジェクトであるにもかかわらず、論理値に強制変換されると `false` になります。このプロパティは古く標準外であるため、使用しないでください。
 
 > [!NOTE]
-> [文字列への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)や[数値への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)などの他の型変換とは異なり、論理型への変換は[オブジェクトからプリミティブに変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ変換)しようとするわけではありません。
+> [文字列への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)や[数値への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)などの他の型強制変換とは異なり、論理値への強制変換は[オブジェクトをプリミティブに強制変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ変換)しようとするわけではありません。
 
 言い換えれば、 `false` に強制される値はほんの一握りで、これらは[偽値 (falsy)](/ja/docs/Glossary/Falsy) と呼ばれる値です。それ以外の値は[真値 (truthy)](/ja/docs/Glossary/Truthy) と呼ばれます。値が真値であるかどうかは、論理演算子や条件文と共に使われるとき、あるいはあらゆる論理型の文脈で使われるときに重要です。
 
-JavaScript で型変換と同じ効果を得るには、 2 つの方法があります。
+JavaScript で論理値への強制変換と同じ効果を得るには、 2 つの方法があります。
 
 - [二重否定](/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT#二重否定_!!): `!!x` は `x` を 2 回否定し、上記と同じアルゴリズムで `x` を論理値に変換します。
 - [`Boolean()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/Boolean)関数、つまり `Boolean(x)` は上記と同じアルゴリズムを用いて `x` を論理値に変換します。
@@ -102,10 +102,10 @@ if ([] == false) {
 // [] == false
 ```
 
-`[]` は真値ですが、`false` と緩い等価です。すべてのオブジェクトは真値であるため、`[]` も真値です。しかし、プリミティブである `false` と比較する場合、 `[]` も {{jsxref("Array.prototype.toString()")}} によって `""` というプリミティブに変換されます。文字列と論理値を比較すると、どちらも[数値に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)され、どちらも `0` になるので、`[] == false` は `true` となります。一般に、偽値であることと `== false` は次のようなケースで異なります。
+`[]` は真値ですが、`false` と緩い等価です。すべてのオブジェクトは真値であるため、`[]` も真値です。しかし、プリミティブである `false` と比較する場合、 `[]` も {{jsxref("Array.prototype.toString()")}} によって `""` というプリミティブに強制変換されます。文字列と論理値を比較すると、どちらも数値に[強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)され、どちらも `0` になるので、`[] == false` は `true` となります。一般に、偽値であることと `== false` は次のようなケースで異なります。
 
 - `NaN`, `undefined`, `null` は偽値ですが、 `false` と緩い等価ではありません。
-- `"0"`（および `""` ではないが [0 に型変換される](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) 他の文字列リテラル）は真値ですが、`false` と緩い等価です。
+- `"0"`（および `""` ではないが [0 に強制変換される](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換) 他の文字列リテラル）は真値ですが、`false` と緩い等価です。
 - オブジェクトは常に真値ですが、そのプリミティブ表現は `false` と緩い等価になる可能性があります。
 
 真値の値が `true` と緩い等価になる可能性はさらに低いです。すべての値は真値か偽値のどちらかですが、ほとんどの値は `true` と `false` のどちらとも緩い等価ではありません。

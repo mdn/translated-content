@@ -76,7 +76,7 @@ eval(new String("2 + 2")); // "2 + 2" を含む String オブジェクトを返�
 eval("2 + 2"); // 4 を返す
 ```
 
-一般的な方法でこの課題をうまく回避するには、`eval()` に渡す前に、自分で[引数を文字列に変換する](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ことができます。
+一般的な方法でこの課題をうまく回避するには、`eval()` に渡す前に、自分で引数を[文字列に強制変換する](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)ことができます。
 
 ```js
 const expression = new String("2 + 2");
