@@ -19,15 +19,15 @@ foo = "bar"; // foo は文字列型になった
 foo = true; // foo は論理型になった
 ```
 
-JavaScriptは[弱い型付け](https://en.wikipedia.org/wiki/Strong_and_weak_typing)の言語でもあります。これは、処理に不一致の型が含まれる場合、型エラーを発生させるのではなく、暗黙の型変換を可能にすることを意味しています。
+JavaScript は[弱い型付け](https://en.wikipedia.org/wiki/Strong_and_weak_typing)の言語でもあります。これは、処理に不一致の型が含まれる場合、型エラーを発生させるのではなく、暗黙の型変換を可能にすることを意味しています。
 
 ```js
 const foo = 42; // foo は数値型
-const result = foo + "1"; // JavaScript は、foo を文字列に変換し、他のオペランドと連結することができます
+const result = foo + "1"; // JavaScript は foo を文字列に強制変換してから、もう一方のオペランドと連結
 console.log(result); // 421
 ```
 
-暗黙の型変換はとても便利ですが、想定外の変換が発生したり、想定外の方向（例えば、文字列から数値ではなく、数値から文字列）で変換が発生したりすると、微妙なバグを作成する可能性があります。[シンボル](#シンボル型)と[長整数](#長整数型)については、JavaScript は意図的に特定の暗黙の型変換を禁止してきました。
+暗黙の強制変換はとても便利ですが、想定外の変換が発生したり、想定外の方向（例えば、文字列から数値ではなく、数値から文字列）で変換が発生したりすると、微妙なバグを作成する可能性があります。[シンボル](#シンボル型)と[長整数](#長整数型)については、JavaScript は意図的に特定の暗黙の型変換を禁止してきました。
 
 ## プリミティブ値
 
@@ -122,7 +122,7 @@ Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // true。両方と
 
 長整数型は、整数型と同じように `+`, `*`, `-`, `**`, `%` などの演算子を使用することができます。唯一使えないものは [`>>>`](/ja/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift) です。長整数型は数値型と数学的な値が同じであっても[厳密等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)にはなりませんが、[等価](/ja/docs/Web/JavaScript/Reference/Operators/Equality)にはなります。
 
-長整数値は、常に複数の値より正確であるわけでも、常に正確でないわけでもありません。長整数は小数値を表すことはできませんが、大きな整数をより正確に表すことができるからです。どちらの種類も他の種類を内包しておらず、相互に置換可能なものではありません。算術式で長整数値を通常の数値と混合した場合、または、[暗黙的に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)しようとした場合、 {{jsxref("TypeError")}} が発生します。
+長整数値は、常に複数の値より正確であるわけでも、常に正確でないわけでもありません。長整数は小数値を表すことはできませんが、大きな整数をより正確に表すことができるからです。どちらの種類も他の種類を内包しておらず、相互に置換可能なものではありません。算術式で長整数値を通常の数値と混合した場合、または、[暗黙の強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)を試みた場合、 {{jsxref("TypeError")}} が発生します。
 
 ### 文字列型
 
@@ -224,19 +224,19 @@ JSON (**J**ava**S**cript **O**bject **N**otation) は JavaScript から派生し
 
 JavaScript には組み込みオブジェクトの標準ライブラリーがあります。オブジェクトの詳細については、[リファレンス](/ja/docs/Web/JavaScript/Reference/Global_Objects)を参照してください。
 
-## 型変換
+## 型の強制変換
 
-前述のように、JavaScript は[弱い型付け](#動的かつ弱い型付け)言語です。つまり、ある型の値を使用する際に、別の型が期待される場合でも、言語が適切な型に変換してくれる場合が多いのです。そのために、JavaScript では、いくつかの変換ルールを定義しています。
+前述のように、JavaScript は[弱い型付け](#動的かつ弱い型付け)言語です。つまり、ある型の値を使用する際に、別の型が期待される場合でも、言語が適切な型に変換してくれる場合が多いのです。そのために、JavaScript では、いくつかの強制変換ルールを定義しています。
 
-### プリミティブ変換
+### プリミティブへの強制変換
 
-[プリミティブ変換](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toprimitive)処理は、プリミティブ値が期待されるものの、実際の入力する種類に強い希望がない場合に使用します。[文字列](#文字列型)、[数値](#数値型)、[長整数](#長整数型)が同じように受け入れられる場合がほとんどです。例を示します。
+[プリミティブへの強制変換](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toprimitive)処理は、プリミティブ値が必要で、具体的にどの型であるべきかに特に指定がない場合に使用されます。[文字列](#文字列型)、[数値](#数値型)、[長整数](#長整数型)が同じように受け入れられる場合がほとんどです。例を示します。
 
 - [`Date()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) コンストラクターは、`Date` インスタンスでない引数を 1 つ受け取ります。文字列は日付文字列を表し、数値はタイムスタンプを表します。
 - [`+`](/ja/docs/Web/JavaScript/Reference/Operators/Addition) 演算子は、一方のオペランドが文字列の場合、文字列の連結を行い、それ以外の場合は数値の加算を行います。
-- [`==`](/ja/docs/Web/JavaScript/Reference/Operators/Equality) 演算子は、オペランドの一方がプリミティブで、もう一方がオブジェクトの場合、オブジェクトは入力する種類が決まっていないプリミティブ値に変換されます。
+- [`==`](/ja/docs/Web/JavaScript/Reference/Operators/Equality) 演算子は、オペランドの一方がプリミティブで、もう一方がオブジェクトの場合、オブジェクトは特定の型が優先されていないプリミティブ値に強制変換されます。
 
-この操作は、値が既にプリミティブである場合、変換を行いません。オブジェクトは、その [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) （`"default"` をヒントとして）、`valueOf()`、`toString()` の順にメソッドが呼び出されてプリミティブに変換されます。プリミティブ変換では `toString()` の前に `valueOf()` が呼び出されますが、これは[数値変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値変換)の動作と同様であり、[文字列変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)とは異なっていることに注意ください。
+この操作は、値が既にプリミティブである場合、変換を行いません。オブジェクトは、その [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) （`"default"` をヒントとして）、`valueOf()`、`toString()` の順にメソッドが呼び出されてプリミティブに強制変換されます。プリミティブへの変換では `toString()` の前に `valueOf()` が呼び出されますが、これは[数値型への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)の動作と同様であり、[文字列への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)とは異なっていることに注意してください。
 
 `[Symbol.toPrimitive]()` メソッドは、存在する場合、プリミティブを返す必要があります。オブジェクトを返すと {{jsxref("TypeError")}} になります。`valueOf()` と `toString()` については、一方がオブジェクトを返す場合、その返値は無視され、代わりにもう一方の返値が使用されます。どちらも存在しなかった場合、またはどちらもプリミティブ値を返さなかった場合は {{jsxref("TypeError")}} が発生します。例として、以下のコードで説明します。
 
@@ -246,25 +246,25 @@ console.log({} + []); // "[object Object]"
 
 `{}` にも `[]` にも `[Symbol.toPrimitive]()` メソッドはありません。`{}` と `[]` は両方とも `valueOf()` を {{jsxref("Object.prototype.valueOf")}} から継承しており、これはオブジェクト自体を返します。返値がオブジェクトなので、これは無視されます。従って、代わりに `toString()` が呼び出されます。 [`{}.toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) は `"[object Object]"` を返し、一方 [`[].toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) っは `""` を返すので、結果はこれらを結合した `"[object Object]"` となります。
 
-プリミティブ型に変換する場合は、常に `[Symbol.toPrimitive]()` メソッドが優先されます。プリミティブ型の変換は、一般に `valueOf()` が優先的に呼び出されるため、数値の変換と同じように振る舞います。しかし、独自の `[Symbol.toPrimitive]()` メソッドを持つオブジェクトは、任意のプリミティブ型を返すことができます。組み込みオブジェクトの中で、{{jsxref("Date")}} と {{jsxref("Symbol")}} オブジェクトのみが、`[Symbol.toPrimitive]()` メソッドを上書きします。[`Date.prototype[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) は `"default"` ヒントを `"string"` であるかのように扱い、[`Symbol. prototype[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive) はヒントを無視し、常にシンボルを返します。
+プリミティブ型への変換では、常に `[Symbol.toPrimitive]()` メソッドが優先されます。プリミティブへの変換は一般に、`valueOf()` が優先的に呼び出されるため、数値への変換と同じように振る舞います。しかし、独自の `[Symbol.toPrimitive]()` メソッドを持つオブジェクトは、任意のプリミティブ型を返すことができます。組み込みオブジェクトの中で、{{jsxref("Date")}} と {{jsxref("Symbol")}} オブジェクトのみが、`[Symbol.toPrimitive]()` メソッドを上書きします。[`Date.prototype[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) は `"default"` ヒントを `"string"` であるかのように扱い、[`Symbol. prototype[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive) はヒントを無視し、常にシンボルを返します。
 
-### 数値変換
+### 数値への強制変換
 
-数値の型には[数値型](#数値型)と[長整数型](#長整数型)の 2 種類があります。言語が数値か長整数かを具体的に指定する場合もあります（{{jsxref("Array.prototype.slice()")}} は添字が数値でなければならないなど）。他にも、どちらかを許容し、オペランドの種類によって異なる処理を行う場合もあります。他にも暗黙の変換を許さない厳密な強制処理については、[数値型への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値型への変換)や[長整数型への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt#長整数型への変換)を参照して下さい。
+数値の型には[数値型](#数値型)と[長整数型](#長整数型)の 2 種類があります。言語が数値か長整数かを具体的に指定する場合もあります（{{jsxref("Array.prototype.slice()")}} は添字が数値でなければならないなど）。一方で、どちらの型も受け入れ、オペランドの型に応じて異なる処理を行う場合もあります。暗黙の型変換を許さない厳密な強制変換処理については、[数値型への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)や[長整数への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt#長整数への強制変換)を参照してください。
 
-数値変換は、[数値変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値型への変換)とほぼ同じですが、長整数の場合は {{jsxref("TypeError")}} を発生させずにそのまま返す点が異なります。すべての算術演算子は、数値型と長整数型の両方がオーバーロードされているため、数値変換が行わわれます。唯一の例外は[単項プラス](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus)で、これは常に数値型への変換を行います。
+数値への強制変換は、[数値型への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)とほぼ同じですが、長整数の場合は {{jsxref("TypeError")}} を発生させずにそのまま返す点が異なります。数値への強制変換は、数値と長整数の両方がオーバーロードされているすべての算術演算子で行われます。唯一の例外は[単項プラス](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus)で、これは常に数値型への強制変換を行います。
 
-### その他の変換
+### その他の強制変換
 
-すべてのデータ型には、Null、Undefined、シンボルを除き、それぞれの変換処理があります。詳しくは、[文字列への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)、[論理型への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion)、[オブジェクトへの変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion)を参照してください。
+Null、Undefined、シンボルを除くすべてのデータ型には、それぞれの強制変換処理があります。詳しくは、[文字列への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)、[論理値への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean#論理型への変換)、[オブジェクトへの強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#オブジェクト変換)を参照してください。
 
 お気づきかもしれませんが、オブジェクトをプリミティブに変換する経路は 3 つあります。
 
-- [プリミティブ変換](#プリミティブ変換): `[Symbol.toPrimitive]("default")` → `valueOf()` → `toString()`
-- [数値変換](#数値変換)、[数値型への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)、[長整数型への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_の変換): `[Symbol.toPrimitive]("number")` → `valueOf()` → `toString()`
-- [文字列変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion): `[Symbol.toPrimitive]("string")` → `toString()` → `valueOf()`
+- [プリミティブへの強制変換](#プリミティブへの強制変換): `[Symbol.toPrimitive]("default")` → `valueOf()` → `toString()`
+- [数値への強制変換](#数値への強制変換)、[数値型への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)、[長整数への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt#長整数への強制変換): `[Symbol.toPrimitive]("number")` → `valueOf()` → `toString()`
+- [文字列への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換): `[Symbol.toPrimitive]("string")` → `toString()` → `valueOf()`
 
-すべての場合において、`[Symbol.toPrimitive]()` が存在する場合は、呼び出し可能でプリミティブを返す必要があり、`valueOf` や `toString` が呼び出し可能でないかオブジェクトを返さない場合は無視されます。この処理の終わりには、成功すれば結果がプリミティブであることが保証されます。結果として得られるプリミティブは、コンテキストに応じてさらなる変換が行われることがあります。
+すべての場合において、`[Symbol.toPrimitive]()` が存在する場合は、呼び出し可能でプリミティブを返す必要があり、`valueOf` や `toString` が呼び出し可能でないかオブジェクトを返さない場合は無視されます。この処理の終わりには、成功すれば結果がプリミティブであることが保証されます。その後、結果のプリミティブにはコンテキストに応じた強制変換が行われることがあります。
 
 ## 関連情報
 
