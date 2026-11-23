@@ -3,7 +3,7 @@ title: "javascript: URL"
 short-title: "javascript:"
 slug: Web/URI/Reference/Schemes/javascript
 l10n:
-  sourceCommit: 466ca1db767535c1aa9984b4e6c0db41b3a53475
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 > [!WARNING]
@@ -141,4 +141,4 @@ document.body.textContent = "Hello, world!";
 
 - [URI](/ja/docs/Web/URI)
 - [コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/Guides/CSP)
-- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
+- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes)<sup>(英語)</sup>
