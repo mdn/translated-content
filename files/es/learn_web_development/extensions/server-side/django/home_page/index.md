@@ -133,16 +133,16 @@ Pega las siguientes líneas al final del archivo:
 from .models import Book, Author, BookInstance, Genre
 
 def index(request):
-    """View function for home page of site."""
+    """Función de vista para la página de inicio del sitio."""
 
-    # Generate counts of some of the main objects
+    # Genera los conteos de algunos de los objetos principales
     num_books = Book.objects.all().count()
     num_instances = BookInstance.objects.all().count()
 
-    # Available books
+    # Libros disponibles
     num_instances_available = BookInstance.objects.filter(status__exact=BookInstance.LoanStatus.AVAILABLE).count()
 
-    # The 'all()' is implied by default.
+    # El 'all()' está implícito de forma predeterminada.
     num_authors = Author.objects.count()
 
     context = {
@@ -152,7 +152,7 @@ def index(request):
         'num_authors': num_authors,
     }
 
-    # Render the HTML template index.html with the data in the context variable
+    # Renderiza la plantilla HTML index.html con los datos en la variable de contexto.
     return render(request, 'index.html', context=context)
 ```
 
@@ -203,10 +203,10 @@ Puedes dejar los bloques vacíos, o incluir contenido predeterminado para usar a
   </head>
   <body>
     {% block sidebar %}
-      <!-- insert default navigation text for every page -->
+      <!-- inserta el texto de navegación predeterminado para cada página -->
     {% endblock %}
     {% block content %}
-      <!-- default content text (typically empty) -->
+      <!-- texto de contenido predeterminado (normalmente vacío) -->
     {% endblock %}
   </body>
 </html>
@@ -220,9 +220,9 @@ Por ejemplo, el siguiente fragmento de código muestra cómo usar la etiqueta de
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Local Library Home</h1>
+  <h1>Inicio de la biblioteca local</h1>
   <p>
-    Welcome to LocalLibrary, a website developed by
+    Te damos la bienvenida a LocalLibrary, un sitio web desarrollado por
     <em>Mozilla Developer Network</em>!
   </p>
 {% endblock %}
@@ -250,7 +250,7 @@ Crea un nuevo archivo **base_generic.html** en **/catalog/templates/** y pega el
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous">
-    <!-- Add additional CSS in static file -->
+    <!-- Agrega CSS adicional en un archivo estático -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
   </head>
@@ -294,23 +294,23 @@ Este código extiende nuestra plantilla base en la primera línea, y luego reemp
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Local Library Home</h1>
+  <h1>Inicio de la biblioteca local</h1>
   <p>
-    Welcome to LocalLibrary, a website developed by
+    Te damos la bienvenida a LocalLibrary, un sitio web desarrollado por
     <em>Mozilla Developer Network</em>!
   </p>
-  <h2>Dynamic content</h2>
-  <p>The library has the following record counts:</p>
+  <h2>Contenido dinámico</h2>
+  <p>La biblioteca tiene los siguientes conteos de registros:</p>
   <ul>
-    <li><strong>Books:</strong> \{{ num_books }}</li>
-    <li><strong>Copies:</strong> \{{ num_instances }}</li>
-    <li><strong>Copies available:</strong> \{{ num_instances_available }}</li>
-    <li><strong>Authors:</strong> \{{ num_authors }}</li>
+    <li><strong>Libros:</strong> \{{ num_books }}</li>
+    <li><strong>Copias:</strong> \{{ num_instances }}</li>
+    <li><strong>Copias disponibles:</strong> \{{ num_instances_available }}</li>
+    <li><strong>Autores:</strong> \{{ num_authors }}</li>
   </ul>
 {% endblock %}
 ```
 
-En la sección _Dynamic content_ declaramos marcadores de posición (_variables de plantilla_) para la información de la vista que queremos incluir.
+En la sección _Contenido dinámico_ declaramos marcadores de posición (_variables de plantilla_) para la información de la vista que queremos incluir.
 Las variables se encierran entre llaves dobles.
 
 > [!NOTE]
@@ -337,7 +337,7 @@ Es probable que tu proyecto use recursos estáticos, incluyendo JavaScript, CSS 
 Dentro de la plantilla, primero llamas a la etiqueta de plantilla `load` especificando "static" para añadir la biblioteca de plantillas, como se muestra en el ejemplo de código de abajo. Luego puedes usar la etiqueta de plantilla `static` y especificar la URL relativa del archivo que necesitas.
 
 ```django
-<!-- Add additional CSS in static file -->
+<!-- Agrega CSS adicional en un archivo estático -->
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 ```
