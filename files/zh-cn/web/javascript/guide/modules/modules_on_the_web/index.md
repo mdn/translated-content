@@ -153,7 +153,7 @@ import { name as squareNameThree } from "https://example.com/shapes/square.js";
 
 ```js
 if (HTMLScriptElement.supports?.("importmap")) {
-  console.log("Browser supports import maps.");
+  console.log("浏览器支持导入映射。");
 }
 ```
 
