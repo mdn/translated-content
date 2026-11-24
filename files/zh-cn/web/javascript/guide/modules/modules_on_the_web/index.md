@@ -447,7 +447,7 @@ export async function setUser(name) {
 }
 ```
 
-在窗口中，直接传给 `fetch()` 的相对 URL（例如 `fetch("../api/set-user")`）是相对于文档的基准 URL 解析的，而不是相对于包含该调用的 JavaScript 模块。显式构造 URL 可以让资源位置不依赖于导入该模块的页面。
+在 window 中，直接传给 `fetch()` 的相对 URL（例如 `fetch("../api/set-user")`）是相对于文档的基准 URL 解析的，而不是相对于包含该调用的 JavaScript 模块。显式构造 URL 可以让资源位置不依赖于导入该模块的页面。
 
 要使用宿主的模块解析规则解析模块说明符，请使用 [`import.meta.resolve()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import.meta/resolve)。例如，在定义了 `"shapes"` 的导入映射的浏览器中，`import.meta.resolve("shapes")` 会返回其解析后的 URL。与 `import()` 不同，这会在不加载或求值模块的情况下解析说明符。
 
