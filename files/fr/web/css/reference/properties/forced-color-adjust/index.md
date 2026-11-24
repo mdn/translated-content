@@ -52,7 +52,7 @@ Cette propriété ne doit pas être utilisée que pour faire des modifications q
 
 Dans l'exemple ci-dessous, la première boîte utilise le jeu de couleur définit par l'utilisateur·ice. Par exemple, dans le mode à forts contrastes sombre de Windows, cela donne du texte blanc sur fond noir. La seconde boîte conserve quant à elle les couleurs du site définies par la classe `.box`.
 
-En utilisant la fonctionnalité média {{CSSxRef("@media/forced-colors", "forced-colors")}}, vous pouvez ajouter n'importe qu'elle autre optimisation pour le mode de couleurs forcées aux côtés de la propriété `forced-color-adjust`.
+En utilisant la caractéristique média {{CSSxRef("@media/forced-colors", "forced-colors")}}, vous pouvez ajouter n'importe qu'elle autre optimisation pour le mode de couleurs forcées aux côtés de la propriété `forced-color-adjust`.
 
 #### CSS
 
