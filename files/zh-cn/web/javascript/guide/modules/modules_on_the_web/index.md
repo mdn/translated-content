@@ -442,7 +442,7 @@ export async function setUser(name) {
     body: JSON.stringify({ name }),
   });
   if (!response.ok) {
-    throw new Error(`Unable to set user: ${response.status}`);
+    throw new Error(`无法设置用户：${response.status}`);
   }
 }
 ```
