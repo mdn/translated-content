@@ -383,10 +383,10 @@ class Book(models.Model):
         return reverse('book-detail', args=[str(self.id)])
 ```
 
+El género es un `ManyToManyField`, de modo que un libro puede tener varios géneros y un género puede tener muchos libros. El autor se declara como `ForeignKey`, de modo que cada libro solo tendrá un autor, pero un autor puede tener muchos libros (¡en la práctica un libro podría tener varios autores, pero no en esta implementación!)
+
 La `class Meta` establece el orden predeterminado de los libros por título y, después, por autor.
 Ordenar por un campo `ForeignKey` como `author` usa el orden predeterminado del modelo relacionado (que estableceremos por apellido y luego por nombre cuando definamos el [modelo Author](#modelo_author)).
-
-El género es un `ManyToManyField`, de modo que un libro puede tener varios géneros y un género puede tener muchos libros. El autor se declara como `ForeignKey`, de modo que cada libro solo tendrá un autor, pero un autor puede tener muchos libros (¡en la práctica un libro podría tener varios autores, pero no en esta implementación!)
 
 En ambos tipos de campo, la clase del modelo relacionado se declara como el primer parámetro sin nombre, usando la clase del modelo o una cadena que contiene el nombre del modelo relacionado. ¡Debes usar el nombre del modelo como cadena si la clase asociada aún no se ha definido en este archivo antes de que se haga referencia a ella! Los otros parámetros de interés en el campo `author` son `null=True`, que permite que la base de datos almacene un valor `Null` si no se selecciona ningún autor, y `on_delete=models.RESTRICT`, que evitará que se elimine el autor asociado del libro si algún libro hace referencia a él.
 
