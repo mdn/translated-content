@@ -2,7 +2,7 @@
 title: Introduction au développement de jeux vidéo
 slug: Games/Introduction
 l10n:
-  sourceCommit: 21addd31954b2629ab3e186dacdf7edca813dc7d
+  sourceCommit: b25798255cfb773885c94557b74179400ac7153d
 ---
 
 Le web moderne est rapidement devenu une plateforme viable non seulement pour créer des jeux époustouflants et de haute qualité, mais aussi pour les distribuer. Cet article vous présente les avantages d'utiliser le Web comme plateforme de jeu, ainsi que les technologies qui le rendent possible.
@@ -97,7 +97,7 @@ Pour les passionné·e·s de technologie, plongeons dans les API que le Web met 
 - [L'API Fetch](/fr/docs/Web/API/Fetch_API)
   - : Envoyer et recevoir toutes sortes de données depuis un serveur Web, comme télécharger de nouveaux niveaux de jeu et des éléments graphiques ou transmettre des informations de statut de jeu non temps réel.
 - [L'API Full Screen](/fr/docs/Web/API/Fullscreen_API)
-  - : Cette API simple permet à votre jeu de prendre le contrôle de tout l'écran, immergeant ainsi le joueur dans l'action.
+  - : Cette API simple permet à votre jeu de prendre le contrôle de tout l'écran, immergeant ainsi le·la joueur·euse dans l'action.
 - [L'API Gamepad](/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
   - : Si vous souhaitez que vos utilisateur·ice·s puissent utiliser des manettes ou d'autres contrôleurs pour votre jeu, vous avez besoin de cette API.
 - [HTML](/fr/docs/Web/HTML) et [CSS](/fr/docs/Web/CSS)
@@ -105,9 +105,9 @@ Pour les passionné·e·s de technologie, plongeons dans les API que le Web met 
 - [HTML audio](/fr/docs/Web/HTML/Reference/Elements/audio)
   - : L'élément HTML {{HTMLElement("audio")}} permet de jouer facilement des effets sonores simples et de la musique. Si vos besoins sont plus avancés, consultez [l'API Web Audio](/fr/docs/Web/API/Web_Audio_API) pour une vraie puissance de traitement audio&nbsp;!
 - [IndexedDB](/fr/docs/Web/API/IndexedDB_API)
-  - : Une API de stockage de données puissante pour maintenir les données utilisateur sur leur propre ordinateur ou appareil. Une excellente façon de sauvegarder l'état du jeu et d'autres informations localement, pour éviter de devoir les télécharger à chaque fois. Utile aussi pour rendre votre jeu jouable même lorsque l'utilisateur·ice n'est pas connecté·e au Web (par exemple lors d'un long vol en avion).
+  - : Une API de stockage de données puissante pour maintenir les données utilisateur·ice·s sur leur propre ordinateur ou appareil. Une excellente façon de sauvegarder l'état du jeu et d'autres informations localement, pour éviter de devoir les télécharger à chaque fois. Utile aussi pour rendre votre jeu jouable même lorsque l'utilisateur·ice n'est pas connecté·e au Web (par exemple lors d'un long vol en avion).
 - [JavaScript](/fr/docs/Web/JavaScript)
-  - : JavaScript, le langage de programmation utilisé sur le Web, est extrêmement rapide dans les navigateurs modernes et ne cesse de s'améliorer. Utilisez sa puissance pour écrire le code de votre jeu, ou explorez des technologies comme [Emscripten <sup>(angl.)</sup>](https://github.com/emscripten-core/emscripten/wiki) ou [Asm.js <sup>(angl.)</sup>](https://asmjs.org/spec/latest/) pour porter facilement vos jeux existants.
+  - : JavaScript, le langage de programmation utilisé sur le Web, est extrêmement rapide dans les navigateurs modernes et ne cesse de s'améliorer. Utilisez sa puissance pour écrire le code de votre jeu, ou explorez des technologies comme [Emscripten <sup>(angl.)</sup>](https://github.com/emscripten-core/emscripten/wiki) ou [Asm.js <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Asm.js) pour porter facilement vos jeux existants.
 - [L'API Pointer Lock](/fr/docs/Web/API/Pointer_Lock_API)
   - : L'API Pointer Lock permet de verrouiller la souris ou tout autre dispositif de pointage dans l'interface de votre jeu, de sorte qu'au lieu d'une position absolue du curseur, vous recevez des deltas de coordonnées qui vous donnent des mesures plus précises de ce que fait l'utilisateur·ice, et empêchent d'envoyer accidentellement des entrées ailleurs, ce qui peut faire manquer des actions importantes.
 - [SVG](/fr/docs/Web/SVG) (Scalable Vector Graphics)

@@ -2,7 +2,7 @@
 title: Scripts d'arrière-plan
 slug: Mozilla/Add-ons/WebExtensions/Background_scripts
 l10n:
-  sourceCommit: 8adfa9f21be15f90b5ee73dbfb9bc441038ac55d
+  sourceCommit: 7b9d2e318ce7478530f4f31bdc24e36fcc6c41fa
 ---
 
 Les scripts d'arrière-plan ou une page d'arrière-plan vous permettent de surveiller et de réagir aux évènements dans le navigateur, tels que la navigation vers une nouvelle page, la suppression d'un signet ou la fermeture d'un onglet.
@@ -18,7 +18,7 @@ Les scripts d'arrière-plan ou une page d'arrière-plan sont&nbsp;:
 > - les scripts d'arrière-plan persistants en cours d'exécution au moment du plantage sont rechargés automatiquement.
 > - les scripts d'arrière-plan non persistants (également appelés «&nbsp;pages d'évènements&nbsp;») en cours d'exécution au moment du plantage ne sont pas rechargés. Cependant, ils sont redémarrés automatiquement lorsque Firefox appelle l'un de leurs écouteurs d'évènements de l'API WebExtensions.
 > - les pages d'extension chargées dans des onglets au moment du plantage ne sont pas restaurées automatiquement. Un message d'avertissement dans chaque onglet informe l'utilisateur·ice que la page a planté et lui permet de fermer ou de restaurer l'onglet.
->   ![La fenêtre du navigateur affichant le message à l'utilisateur·ice indiquant qu'une page a planté avec les options pour fermer ou redémarrer l'onglet](your-tab-crashed-screenshot.png)
+>   ![Firefox affichant le message qu'un onglet a planté avec les options pour fermer ou restaurer l'onglet](your-tab-crashed-screenshot.png)
 >   Vous pouvez tester cette condition en ouvrant un nouvel onglet et en naviguant vers `about:crashextensions`, ce qui déclenche silencieusement un plantage du processus de l'extension.
 
 Dans le Manifest V2, les scripts d'arrière-plan ou une page peuvent être persistants ou non persistants. Les scripts d'arrière-plan non persistants sont recommandés, car ils réduisent le coût en ressources de votre extension. Dans le Manifest V3, seuls les scripts d'arrière-plan non persistants ou une page sont pris en charge.
@@ -312,8 +312,8 @@ browser.runtime.onMessage.addListener(async (message, sender) => {
 });
 ```
 
-Le précédent exemple [envoie une réponse asynchrone en utilisant une promesse](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#envoyer_une_réponse_asynchrone_en_utilisant_une_promesse), ce qui n'est pas pris en charge dans Chrome tant que le [bogue 1185241 de Chrome <sup>(angl.)</sup>](https://crbug.com/1185241) n'est pas résolu.
-Une alternative multi-navigateurs consiste à [retourner true et utiliser `sendResponse`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#envoyer_une_réponse_asynchrone_en_utilisant_sendresponse).
+Le précédent exemple [envoie une réponse asynchrone en utilisant une promesse](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#envoyer_une_réponse_asynchrone_en_utilisant_une_promesse), ce qui est pris en charge dans Chrome à partir de Chrome 148, ou Chrome 152 pour les extensions qui incluent une page DevTools.
+Pour les versions antérieures de Chrome, [retourner true et utiliser `sendResponse`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#envoyer_une_réponse_asynchrone_en_utilisant_sendresponse).
 
 ```js
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {

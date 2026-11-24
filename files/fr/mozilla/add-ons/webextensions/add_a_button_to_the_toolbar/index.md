@@ -2,7 +2,7 @@
 title: Ajouter un bouton à la barre d'outils
 slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 l10n:
-  sourceCommit: 5310a5bff0e1f3e2dfafa44bc2aadbb39e1c4673
+  sourceCommit: 3116241f515352d336d2edb460cebfe99d43aea7
 ---
 
 Les boutons de la barre d'outils sont l'un des principaux composants de l'interface utilisateur disponibles pour les extensions. Les boutons de la barre d'outils se trouvent dans la barre d'outils principale du navigateur et contiennent une icône. Lorsque l'utilisateur·ice clique sur l'icône, une des deux choses peut arriver&nbsp;:
@@ -83,9 +83,9 @@ button/
     manifest.json
 ```
 
-Maintenant [installer la WebExtension <sup>(angl.)</sup>](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) et cliquez sur le bouton&nbsp;:
+Maintenant [installer la WebExtension <sup>(angl.)</sup>](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/). Dans la barre d'outils, cliquez sur le bouton des extensions (icône de puzzle) et localisez l'extension. Cliquez sur le menu à 3 points de l'extension et sélectionnez **Épingler à la barre d'outils**. Maintenant, cliquez sur le bouton dans la barre d'outils&nbsp;:
 
-![Le bouton de la barre d'outils ajouté par l'extension](toolbar_button.png)
+![Le bouton de la barre d'outils ajouté par l'extension, mis en évidence](toolbar_button.png)
 
 ## Ajout d'une fenêtre intrusive
 
@@ -188,9 +188,9 @@ button/
     manifest.json
 ```
 
-Maintenant [rechargez l'extension <sup>(angl.)</sup>](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading-a-temporary-extension), cliquez à nouveau sur le bouton, puis essayez de cliquer sur les options proposées dans la fenêtre intrusive&nbsp;:
+Maintenant [rechargez l'extension <sup>(angl.)</sup>](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading-a-temporary-extension), cliquez à nouveau sur le bouton pour ouvrir la fenêtre intrusive&nbsp;:
 
-![Le bouton de la barre d'outils ajouté par l'extension, avec une fenêtre intrusive](toolbar_button_with_popup.png)
+![Le bouton de la barre d'outils ajouté par l'extension, avec sa fenêtre intrusive ouverte, mis en évidence](toolbar_button_with_popup.png)
 
 ## Actions de page
 

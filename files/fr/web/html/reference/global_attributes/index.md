@@ -2,7 +2,7 @@
 title: Attributs universels
 slug: Web/HTML/Reference/Global_attributes
 l10n:
-  sourceCommit: f398f522d05bb8bfe739ac2417b00712b7888494
+  sourceCommit: 4d218f9fdff30e8e01a26402b9f9615c9527ccf6
 ---
 
 Les **attributs universels** sont des attributs communs à l'ensemble des éléments HTML. Ces attributs peuvent donc être ajoutés sur tous les éléments (dans certains cas, les attributs n'ont aucun effet).
@@ -30,6 +30,10 @@ En plus des attributs universels HTML, il existe également les attributs univer
   - : Indique qu'un élément est sélectionné au chargement de la page, ou dès que l'élément HTML {{HTMLElement("dialog")}} auquel il appartient est affiché. Cet attribut est un booléen, initialement à false.
 - [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class)
   - : Une liste de classes séparées par des espaces pour l'élément. Les classes permettent au CSS et à JavaScript de sélectionner et d'accéder à des éléments spécifiques avec les [sélecteurs de classe](/fr/docs/Web/CSS/Reference/Selectors/Class_selectors) ou des fonctions comme la méthode {{DOMxRef("Document.getElementsByClassName()")}}.
+- [`containertiming`](/fr/docs/Web/HTML/Reference/Global_attributes/containertiming) {{Experimental_Inline}}
+  - : Une chaîne de caractères qui marque l'élément comme racine de conteneur à observer par les objets {{DOMxRef("PerformanceObserver")}} utilisant le type `"container"`&nbsp;; sa valeur identifie le conteneur.
+- [`containertimingignore`](/fr/docs/Web/HTML/Reference/Global_attributes/containertimingignore) {{Experimental_Inline}}
+  - : Un attribut booléen qui exclut l'élément et ses descendants de la contribution au minutage de tout élément ancêtre marqué avec `containertiming`.
 - [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable)
   - : Un attribut {{Glossary("Enumerated", "énuméré")}} qui indique si l'élément est éditable par l'utilisateur·ice. Si c'est le cas, le navigateur modifie son interface pour permettre l'édition. L'attribut doit prendre l'une des valeurs suivantes&nbsp;:
     - `true` ou la chaîne de caractères vide, ce qui indique que l'élément est éditable&nbsp;;

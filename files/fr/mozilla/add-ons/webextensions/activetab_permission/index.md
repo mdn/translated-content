@@ -2,7 +2,7 @@
 title: Permission activeTab
 slug: Mozilla/Add-ons/WebExtensions/activeTab_permission
 l10n:
-  sourceCommit: 8adfa9f21be15f90b5ee73dbfb9bc441038ac55d
+  sourceCommit: 02f40534e1bbe121c49f8c045c5a16120f0b02f7
 ---
 
 La permission `activeTab` donne à une extension un accès temporaire à l'onglet sur lequel un·e utilisateur·ice travaille. Elle est accordée en réponse à une [action de l'utilisateur·ice](/fr/docs/Mozilla/Add-ons/WebExtensions/User_actions) explicite, comme le clic sur le bouton de la barre d'outils de l'extension. L'accès est limité à cet onglet et dure jusqu'à ce que l'utilisateur·ice navigue ailleurs.
@@ -212,10 +212,10 @@ Firefox, Safari et les navigateurs basés sur Chromium, y compris Chrome et Edge
 
 Ceci dit, l'accès accordé par les navigateurs avec `activeTab` diffère&nbsp;:
 
-- Firefox et Safari n'accordent l'accès qu'à l'onglet actif.
-- Chrome accorde les permissions d'hôte dérivées de l'URL de l'onglet.
+- Firefox accorde l'accès uniquement à l'onglet actif.
+- Chrome et Safari accordent les permissions d'hôte dérivées de l'URL de l'onglet.
 
-La logique de Chrome peut fournir plus d'accès que celle de Firefox, par exemple&nbsp;:
+Chrome et Safari peuvent fournir plus d'accès que Firefox, par exemple&nbsp;:
 
 - Un autre onglet avec la même origine peut être scripté dans Chrome, mais pas dans Firefox.
 - Un script d'extension (comme un script d'arrière-plan ou un script de fenêtre intrusive) peut effectuer une requête inter-origine vers l'URL de l'onglet dans Chrome, mais pas dans Firefox.

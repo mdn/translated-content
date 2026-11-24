@@ -2,7 +2,7 @@
 title: Arrière-plans et bordures
 slug: Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 l10n:
-  sourceCommit: b7e9f482c51817d3a885e26092f8219fd0d9d278
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing", "Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}
@@ -118,7 +118,7 @@ La propriété {{CSSxRef("background-repeat")}} permet de contrôler le comporte
 - `space` — répète autant de fois que possible, en ajoutant de l'espace entre les images si de l'espace supplémentaire est disponible.
 - `round` — similaire à `space`, mais étire les images pour remplir tout espace supplémentaire
 
-Essayez ces valeurs dans l'exemple ci-dessous. Nous avons défini la valeur sur `no-repeat` afin que vous ne voyiez qu'une seule étoile. Essayez les différentes valeurs pour voir leurs effets.
+Essayez ces valeurs dans l'exemple ci-dessous. Nous avons défini la valeur sur `no-repeat` afin que vous ne voyez qu'une seule étoile. Essayez les différentes valeurs pour voir leurs effets.
 
 ```html live-sample___repeat
 <div class="boite"></div>
@@ -385,7 +385,7 @@ Une autre option pour les arrière-plans consiste à définir la façon dont ils
 
 La propriété {{CSSxRef("background-attachment")}} n'a d'effet que lorsqu'il y a du contenu à faire défiler. Nous avons donc créé une démonstration pour montrer les différences entre ces trois valeurs&nbsp;:
 
-```html hidden live-sample___background-atachment
+```html hidden live-sample___background-attachment
 <section>
   <article class="scroll">
     <p>
@@ -420,7 +420,7 @@ La propriété {{CSSxRef("background-attachment")}} n'a d'effet que lorsqu'il y 
 </section>
 ```
 
-```css hidden live-sample___background-atachment
+```css hidden live-sample___background-attachment
 html,
 body {
   margin: 0;
