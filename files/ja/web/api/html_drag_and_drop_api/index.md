@@ -2,7 +2,7 @@
 title: HTML ドラッグ＆ドロップ API
 slug: Web/API/HTML_Drag_and_Drop_API
 l10n:
-  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
+  sourceCommit: 3385bda58637833eedc9b8dc41a2804e653208a7
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -40,10 +40,10 @@ HTML ドラッグ＆ドロップ では [DOM イベントモデル](/ja/docs/Web
 | イベント                                                | 発生する条件                                                                                                    |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | {{domxref('HTMLElement/dragstart_event', 'dragstart')}} | [ドラッグ可能なアイテム](#draggable_items)のドラッグが開始されたとき。                                          |
-| {{domxref('HTMLElement/drag_event', 'drag')}}           | ドラッグ可能なアイテムがドラッグされているとき、数百ミリ秒ごとに。                                              |
+| {{domxref('HTMLElement/drag_event', 'drag')}}           | ドラッグ可能なアイテムがドラッグされているとき（繰り返し発生）。                                                |
 | {{domxref('HTMLElement/dragenter_event', 'dragenter')}} | その要素に入ってきたドラッグ可能なアイテムがあるとき。                                                          |
 | {{domxref('HTMLElement/dragleave_event', 'dragleave')}} | その要素から出ていくドラッグ可能なアイテムがあるとき。                                                          |
-| {{domxref('HTMLElement/dragover_event', 'dragover')}}   | その要素の上をドラッグ可能なアイテムがドラッグされているとき、数百ミリ秒ごとに。                                |
+| {{domxref('HTMLElement/dragover_event', 'dragover')}}   | その要素の上をドラッグ可能なアイテムがドラッグされているとき（繰り返し発生）。                                  |
 | {{domxref('HTMLElement/drop_event', 'drop')}}           | その要素が[ドロップターゲット](#ドロップターゲット)であり、ドラッグ可能なアイテムがその上にドロップされたとき。 |
 | {{domxref('HTMLElement/dragend_event', 'dragend')}}     | ドラッグ可能なアイテムのドラッグが終了されたとき。                                                              |
 
