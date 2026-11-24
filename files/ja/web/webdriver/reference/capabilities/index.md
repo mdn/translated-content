@@ -3,7 +3,7 @@ title: WebDriver のキャパビリティ
 short-title: キャパビリティ
 slug: Web/WebDriver/Reference/Capabilities
 l10n:
-  sourceCommit: fbf733732bf531a1be40a0c646bcbc4b31618476
+  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
 ---
 
 WebDriver classic のキャパビリティは、[セッション](/ja/docs/Web/WebDriver)が提供する機能を伝えるために使用されます。クライアントはまた、[新しいセッションの作成](/ja/docs/Web/WebDriver/Reference/Classic/Commands/NewSession)時に、ドライバーが満たすべき機能を定義するためにもキャパビリティが使用できます。
@@ -144,5 +144,5 @@ Selenium クライアントの多くは、新しいセッションを設定す�
 
 ## 関連情報
 
-- [New Session](/ja/docs/Web/WebDriver/Reference/Commands/NewSession) コマンド
-- [Delete Session](/ja/docs/Web/WebDriver/Reference/Commands/NewSession) コマンド
+- [New Session](/ja/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) コマンド
+- [Delete Session](/ja/docs/Web/WebDriver/Reference/Classic/Commands/DeleteSession) コマンド
