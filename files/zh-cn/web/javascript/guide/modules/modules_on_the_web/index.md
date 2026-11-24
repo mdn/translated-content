@@ -85,7 +85,7 @@ import { name } from "./module.js";
 import { name } from "https://example.com/js/modules/module.js";
 ```
 
-浏览器会向该 URL 发送 HTTP 请求，如果服务器返回成功响应且 `Content-Type: text/javascript`，模块加载过程就会继续。
+浏览器会向该 URL 发送 HTTP 请求，如果服务器返回成功响应且包含 `Content-Type: text/javascript` 标头，模块加载过程就会继续。
 
 > [!NOTE]
 > 有一种流行的说法是“ESM 要求模块说明符中包含文件扩展名”。这既对也不对。JavaScript 运行时不会为你*添加*扩展名。如果你写 `import { name } from "https://example.com/modules/module";`，浏览器仍会向该 URL 发送请求，不带 `.js` 扩展名。如果该请求成功返回 JavaScript 内容，模块仍会照常加载。唯一的问题是服务器通常会把不带扩展名的请求理解为对 HTML 文件的请求，因此你几乎总是需要额外配置才能让它为该请求提供 JavaScript 文件。
