@@ -2,7 +2,7 @@
 title: ドラッグ操作
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 l10n:
-  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
+  sourceCommit: 3385bda58637833eedc9b8dc41a2804e653208a7
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -12,7 +12,7 @@ l10n:
 大まかに言うと、ドラッグ＆ドロップ操作における可能性のある手順は以下の通りです。
 
 - ユーザーがソースノード上で[ドラッグを開始](#ドラッグの開始)します。 {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントがソースノード上で発生します。このイベントにおいて、ソースノードはドラッグ操作のコンテキストを準備します。これにはドラッグデータ、フィードバック画像、および許可されたドロップ効果が含まれます。
-- ユーザーは[アイテムをドラッグして移動させます](#要素上のドラッグとドロップターゲットの特定)。新しい要素に移動するたびに、その要素上で {{domxref("HTMLElement/dragenter_event", "dragenter")}} イベントが発生し、前の要素上で {{domxref("HTMLElement/dragleave_event", "dragleave")}} イベントが発生します。数百ミリ秒ごとに、ドラッグが現在行われている要素に対して {{domxref("HTMLElement/dragover_event", "dragover")}} イベントが発生し、ソースノードに対して {{domxref("HTMLElement/drag_event", "drag")}} イベントが発生します。
+- ユーザーは[アイテムをドラッグして移動させます](#要素上のドラッグとドロップターゲットの特定)。新しい要素に移動するたびに、その要素上で {{domxref("HTMLElement/dragenter_event", "dragenter")}} イベントが発生し、前の要素上で {{domxref("HTMLElement/dragleave_event", "dragleave")}} イベントが発生します。ドラッグ中のアイテムが現在入っている要素上では {{domxref("HTMLElement/dragover_event", "dragover")}} イベントが繰り返し発生し、ソースノード上では {{domxref("HTMLElement/drag_event", "drag")}} イベントが繰り返し発生します。
 - ドラッグが有効なドロップターゲットに入ります。ドロップターゲットは、有効なドロップターゲットであることを示すため、`dragover` イベントをキャンセルします。何らかの形の[ドロップフィードバック](#ドロップのフィードバック)により、ユーザーに期待されるドロップ効果が示されます。
 - ユーザーが[ドロップを実行します](#ドロップの実行)。ドロップターゲット上で {{domxref("HTMLElement/drop_event", "drop")}} イベントが発生します。このイベント内で、ターゲットノードはドラッグデータを読み取ります。
 - [ドラッグ操作が終了します](#ドラッグの終了)。ソースノード上で {{domxref("HTMLElement/dragend_event", "dragend")}} イベントが発生します。このイベントは、ドロップが成功したかどうかにかかわらず発生します。
@@ -85,7 +85,7 @@ draggableElement.addEventListener("dragstart", (event) => {
 
 > [!NOTE] > `dragleave` イベントは、常に `dragenter` イベントの後に発生します。したがって、概念的には、この 2 つのイベントの間では、ターゲットは新しい要素に入ったものの、まだ前の要素から出ていない状態となります。
 
-数百ミリ秒ごとに、2 つのイベントが発生します。ソースノードでの {{domxref("HTMLElement/drag_event", "drag")}} イベントと、ドラッグが現在行われている要素での {{domxref("HTMLElement/dragover_event", "dragover")}} イベントです。ウェブページやアプリケーションの大部分の領域は、データをドロップする有効な場所ではありません。そのため、要素はデフォルトで、その上で発生したドロップをすべて無視します。要素は、`dragover` イベントをキャンセルすることで、自らを有効なドロップターゲットに指定することができます。要素が {{HTMLElement("textarea")}} や [`<input type="text">`](/ja/docs/Web/HTML/Reference/Elements/input/text) などの編集可能なテキストフィールドであり、かつデータストアに `text/plain` のアイテムが 1 つ含まれている場合、その要素は `dragover` をキャンセルすることなく、デフォルトで有効なドロップターゲットとなります。
+ドラッグ中は、ソースノード上で {{domxref("HTMLElement/drag_event", "drag")}} イベントが繰り返し発生し、ドラッグ中のアイテムが現在入っている要素上で {{domxref("HTMLElement/dragover_event", "dragover")}} イベントが繰り返し発生します。ウェブページやアプリケーションの大部分の領域は、データをドロップする有効な場所ではありません。そのため、要素はデフォルトで、その上で発生したドロップをすべて無視します。要素は、`dragover` イベントをキャンセルすることで、自らを有効なドロップターゲットに指定することができます。要素が {{HTMLElement("textarea")}} や [`<input type="text">`](/ja/docs/Web/HTML/Reference/Elements/input/text) などの編集可能なテキストフィールドであり、かつデータストアに `text/plain` のアイテムが 1 つ含まれている場合、その要素は `dragover` をキャンセルすることなく、デフォルトで有効なドロップターゲットとなります。
 
 ```html
 <div id="drop-target">
