@@ -3,7 +3,7 @@ title: "Tutorial de Django Parte 11: Desplegando Django a producción"
 short-title: "11: Despliegue"
 slug: Learn_web_development/Extensions/Server-side/Django/Deployment
 l10n:
-  sourceCommit: 483ce811e1ea52cb2d9d2a5af0c4d1c4d591ea4a
+  sourceCommit: d0d002817fbb057e80a4f7b8670b09cc80250516
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
@@ -88,7 +88,7 @@ Algunas de las cosas a tener en cuenta al elegir un host:
 La buena noticia cuando estás empezando es que existen bastantes sitios que ofrecen entornos de computación "gratuitos" pensados para evaluación y pruebas.
 Suelen ser entornos bastante limitados/restringidos en recursos, y debes tener en cuenta que pueden caducar después de un periodo introductorio o tener otras restricciones.
 Sin embargo, son ideales para probar sitios de poco tráfico en un entorno alojado, y pueden facilitar una migración sencilla a recursos de pago cuando tu sitio empiece a tener más actividad.
-Entre las opciones populares en esta categoría están [Vultr Cloud Compute](https://blogs.vultr.com/new-free-tier-plan), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/linux/), entre otros.
+Entre las opciones populares en esta categoría están [Vultr Cloud Compute](https://blogs.vultr.com/new-free-tier-plan), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/linux/), entre otros.
 
 La mayoría de los proveedores también ofrecen un nivel "básico" pensado para sitios de producción pequeños, que proporciona niveles de capacidad de computación más útiles y con menos limitaciones.
 [Railway](https://railway.com/), [Heroku](https://www.heroku.com/) y [DigitalOcean](https://www.digitalocean.com/) son ejemplos de proveedores de hosting populares que tienen un nivel básico de computación relativamente económico (en el rango de 5 a 10 USD al mes).
@@ -128,12 +128,10 @@ A continuación abre **/locallibrary/settings.py** e inserta el siguiente códig
 import os
 from dotenv import load_dotenv
 
-env_path = os.path.join(BASE_DIR, ".env")
-if os.path.exists(env_path):
-    load_dotenv(env_path)
+load_dotenv(BASE_DIR / ".env")
 ```
 
-Esto carga el archivo `.env` desde la raíz de la aplicación web.
+Esto carga el archivo `.env` desde la raíz de la aplicación web, si el archivo existe.
 Las variables definidas como `KEY=VALUE` en el archivo se importan cuando la clave se usa en `os.environ.get('<KEY>'', '<VALOR_POR_DEFECTO>')`, si está definida.
 
 > [!NOTE]
@@ -167,11 +165,16 @@ Puedes establecer la variable de entorno en "False" en Linux ejecutando el sigui
 export DJANGO_DEBUG=False
 ```
 
-En [Lista de verificación de despliegue](https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/) (documentación de Django) encontrarás una lista completa de las configuraciones que podrías querer cambiar. También puedes listar algunas de ellas usando el siguiente comando de terminal:
+En [Lista de verificación de despliegue](https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/) (documentación de Django) encontrarás una lista completa de las configuraciones que podrías querer cambiar. También puedes listar algunas de ellas usando el siguiente comando de terminal:
 
-```python
+```bash
 python3 manage.py check --deploy
 ```
+
+> [!NOTE]
+> Este comando informa de un error (`mail.E001`) porque el ajuste `MAILERS` que creó `startproject` usa el backend de correo de consola, el que usamos para [probar el restablecimiento de contraseña](/es/docs/Learn_web_development/Extensions/Server-side/Django/Authentication#probando_las_nuevas_páginas_de_autenticación).
+> Este backend escribe los correos en la salida estándar (la terminal durante el desarrollo, o el registro del servidor una vez desplegado) en lugar de enviarlos.
+> En un sitio real lo reemplazarías por un backend de correo de producción, como SMTP, algo que está fuera del alcance de este tutorial.
 
 ### Gunicorn
 
@@ -179,7 +182,7 @@ python3 manage.py check --deploy
 
 Aunque no necesitamos _Gunicorn_ para servir nuestra aplicación LocalLibrary durante el desarrollo, lo instalaremos localmente para que forme parte de nuestros [requisitos](#requisitos) cuando se despliegue la aplicación.
 
-Primero asegúrate de estar en el entorno virtual de Python que se creó cuando [configuraste el entorno de desarrollo](/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment) (usa el comando `workon [nombre-del-entorno-virtual]`).
+Primero asegúrate de estar en el entorno virtual de Python que se creó cuando [configuraste el entorno de desarrollo](/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment) (actívalo con `source my_django_environment/bin/activate` en Linux/macOS, o con `my_django_environment\Scripts\activate.bat` en Windows).
 Luego instala _Gunicorn_ localmente en la línea de comandos usando _pip_:
 
 ```bash
@@ -197,7 +200,7 @@ En este caso usaremos una base de datos Postgres también alojada en Railway, pe
 
 La información de conexión a la base de datos se suministrará a Django mediante una variable de entorno llamada `DATABASE_URL`.
 En lugar de codificar esta información directamente en Django, usaremos el paquete [dj-database-url](https://pypi.org/project/dj-database-url/) para analizar la variable de entorno `DATABASE_URL` y convertirla automáticamente al formato de configuración que espera Django.
-Además de instalar el paquete _dj-database-url_, también necesitaremos instalar [psycopg2](https://www.psycopg.org/), ya que Django lo necesita para interactuar con bases de datos Postgres.
+Además de instalar el paquete _dj-database-url_, también necesitaremos instalar [psycopg3](https://www.psycopg.org/psycopg3/), ya que Django lo necesita para interactuar con bases de datos Postgres.
 
 #### dj-database-url
 
@@ -227,23 +230,23 @@ if 'DATABASE_URL' in os.environ:
 Django usará ahora la configuración de base de datos de `DATABASE_URL` si la variable de entorno está definida; en caso contrario usará la base de datos SQLite predeterminada.
 El valor `conn_max_age=500` hace que la conexión sea persistente, lo cual es mucho más eficiente que recrear la conexión en cada ciclo de solicitud (esto es opcional y se puede eliminar si es necesario).
 
-#### psycopg2
+#### psycopg
 
-<!-- Django 4.2 now supports Psycopg (3) : https://docs.djangoproject.com/en/5.0/releases/4.2/#psycopg-3-support
-  But didn't work on Railway!
-  Try again to update in next release.
--->
-
-Django necesita _psycopg2_ para trabajar con bases de datos Postgres.
+Django necesita _psycopg_ (versión 3) para trabajar con bases de datos Postgres.
 Instálalo localmente para que forme parte de nuestros [requisitos](#requisitos) para que Railway lo configure en el servidor remoto:
 
 ```bash
-pip3 install psycopg2-binary
+pip3 install "psycopg[binary]"
 ```
+
+La opción `[binary]` instala una versión de _psycopg_ que incluye las bibliotecas cliente de Postgres, así que no necesitas instalarlas por separado.
+
+> [!NOTE]
+> Django también admite la biblioteca _psycopg2_, más antigua, pero recomienda _psycopg_ (versión 3) e indica que es probable que el soporte para _psycopg2_ se elimine en el futuro.
 
 Ten en cuenta que Django usará la base de datos SQLite durante el desarrollo por defecto, a menos que se establezca `DATABASE_URL`.
 Puedes cambiar completamente a Postgres y usar la misma base de datos alojada tanto para desarrollo como para producción estableciendo la misma variable de entorno en tu entorno de desarrollo (Railway facilita usar el mismo entorno para producción y desarrollo).
-Alternativamente, también puedes instalar y usar una [base de datos Postgres autoalojada](https://www.psycopg.org/docs/install.html) en tu ordenador local.
+Alternativamente, también puedes instalar y usar una [base de datos Postgres autoalojada](https://www.postgresql.org/download/) en tu ordenador local.
 
 ### Sirviendo archivos estáticos en producción
 
@@ -280,7 +283,7 @@ Aunque no causará ningún problema, puedes eliminar la referencia duplicada ant
 
 ```python
 # Archivos estáticos (CSS, JavaScript, imágenes)
-# https://docs.djangoproject.com/en/5.0/howto/static-files/
+# https://docs.djangoproject.com/en/6.1/howto/static-files/
 
 # La ruta absoluta al directorio donde collectstatic recopilará los archivos estáticos para el despliegue.
 STATIC_ROOT = BASE_DIR / 'staticfiles'
@@ -332,12 +335,16 @@ Simplemente añade lo siguiente al final de **/locallibrary/settings.py**:
 # Servicio de archivos estáticos.
 # https://whitenoise.readthedocs.io/en/stable/django.html#add-compression-and-caching-support
 STORAGES = {
-    # ...
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
 ```
+
+El ajuste `STORAGES` reemplaza la configuración de almacenamiento predeterminada de Django, así que necesitamos incluir el almacenamiento `"default"` (que se usa para los archivos que suben los usuarios) además del almacenamiento `"staticfiles"` que queremos cambiar.
 
 No necesitas hacer nada más para configurar _WhiteNoise_, porque por defecto usa la configuración de tu proyecto para `STATIC_ROOT` y `STATIC_URL`.
 
@@ -354,13 +361,13 @@ Después de instalar todas las dependencias anteriores, tu archivo **requirement
 Elimina cualquier otra dependencia no listada abajo, a menos que la hayas añadido explícitamente para esta aplicación.
 
 ```plain
-Django==5.0.2
-dj-database-url==2.1.0
-gunicorn==21.2.0
-psycopg2-binary==2.9.9
-wheel==0.38.1
-whitenoise==6.6.0
-python-dotenv==1.0.1
+Django==6.1.1
+dj-database-url==3.1.2
+gunicorn==26.2.0
+psycopg==3.3.6
+psycopg-binary==3.3.6
+whitenoise==6.12.0
+python-dotenv==1.2.3
 ```
 
 ### Actualiza tu repositorio de la aplicación en GitHub
@@ -456,15 +463,17 @@ También configuraremos la base de datos predeterminada y recopilaremos los arch
    ![Imagen de la pantalla de gestión de consolas de PythonAnywhere](python_anywhere_start_bash_console.png)
 
    Ten en cuenta que cualquier consola que crees se guarda para que la reutilices más tarde, junto con todo su historial.
-   La flecha verde de arriba muestra que esta cuenta tiene una consola que podríamos haber abierto en su lugar.
+   La flecha verde de la captura muestra que esta cuenta tiene una consola existente que podríamos haber abierto en su lugar.
 
-3. En la consola, introduce el siguiente comando para crear un entorno virtual de Python 3.10 llamado "env_local_library" para instalar las dependencias de la librería local.
+3. Las consolas de PythonAnywhere traen _virtualenvwrapper_ preinstalado.
+   El campo "Virtualenv" de la pestaña _Web_ de PythonAnywhere (que configuramos en [Configura la aplicación web](#configura_la_aplicación_web)) espera un entorno creado con su comando `mkvirtualenv`, así que lo usaremos en lugar del módulo `venv` que se explicó en [Puesta en marcha de un entorno de desarrollo Django](/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment).
+
+   Introduce el siguiente comando para crear un entorno virtual de Python 3.13 llamado "env_local_library" para instalar las dependencias de la librería local.
 
    ```bash
-   mkvirtualenv --python=python3.10 env_local_library
+   mkvirtualenv --python=python3.13 env_local_library
    ```
 
-   Este es exactamente el mismo proceso que se explicó en [Puesta en marcha de un entorno de desarrollo Django](/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment).
    Podríamos haberle puesto cualquier otro nombre al entorno, y podemos desactivarlo y reactivarlo usando los siguientes comandos:
 
    ```bash
@@ -481,7 +490,7 @@ También configuraremos la base de datos predeterminada y recopilaremos los arch
    Introduce el siguiente comando para clonar el código fuente de tu librería en una carpeta con el nombre adecuado (tendrás que reemplazar los valores del nombre de usuario por el tuyo):
 
    ```bash
-   git clone https://github.com/<github_username>/django-locallibrary-tutorial.git <your_pythonanywhere_username>.pythonanywhere.com
+   git clone https://github.com/<github_username>/django_local_library.git <your_pythonanywhere_username>.pythonanywhere.com
 
    # Navegar a la nueva carpeta
    cd <your_pythonanywhere_username>.pythonanywhere.com
@@ -539,7 +548,7 @@ Después de obtener el código fuente de la librería local e instalar las depen
    La configuración manual nos da control total sobre cómo se configura el entorno.
    Esto no importa demasiado ahora, pero sí importaría si estuviéramos alojando varios sitios, potencialmente con diferentes versiones de Python y/o Django.
 
-4. En la pantalla _Select a Python version_ selecciona **3.10**
+4. En la pantalla _Select a Python version_ selecciona **3.13**
 
    ![Aviso de PythonAnywhere para seleccionar la versión de Python de la aplicación web](python_anywhere_web_add_select_python_version.png)
 
@@ -589,8 +598,10 @@ Después de obtener el código fuente de la librería local e instalar las depen
 
    ![Sección Static files de la pestaña Web de PythonAnywhere](python_anywhere_web_static_files.png)
 
-   Selecciona el enlace **Enter URL** e introduce `\static_files\`.
-   Esta es la `STATIC_URL` en la [configuración de la aplicación](#settings.py_2), y refleja la ubicación donde se copiaron los archivos cuando ejecutamos `collectstatic` en la sección anterior.
+   Selecciona el enlace **Enter URL** e introduce `/static/`.
+   Esta es la `STATIC_URL` en la [configuración de la aplicación](#settings.py_2).
+   Luego selecciona el enlace **Enter path** e introduce `/home/<your_pythonanywhere_username>/<your_pythonanywhere_username>.pythonanywhere.com/staticfiles`.
+   Esta es la carpeta `STATIC_ROOT` donde se copiaron los archivos cuando ejecutamos `collectstatic` en la sección anterior.
 
 9. Cerca de la parte superior de la pestaña _Web_ selecciona el botón **Reload** para reiniciar el sitio.
    Luego selecciona el enlace de la URL del sitio para lanzar el sitio en vivo:
@@ -608,7 +619,7 @@ Este es un error de seguridad de Django que se produce porque nuestro código fu
 > Este tipo de información de depuración es muy útil cuando estás configurando el proyecto, pero supone un riesgo de seguridad en un sitio desplegado.
 > En la siguiente sección te mostraremos cómo desactivar este nivel de registro en el sitio en vivo usando [variables de entorno](#usando_variables_de_entorno_en_pythonanywhere).
 
-Abre **/locallibrary/settings.py** en tu proyecto de GitHub y cambia la configuración [ALLOWED_HOSTS](https://docs.djangoproject.com/en/5.0/ref/settings/#allowed-hosts) para incluir la URL de tu sitio de PythonAnywhere:
+Abre **/locallibrary/settings.py** en tu proyecto de GitHub y cambia la configuración [ALLOWED_HOSTS](https://docs.djangoproject.com/en/6.1/ref/settings/#allowed-hosts) para incluir la URL de tu sitio de PythonAnywhere:
 
 ```python
 ## Por ejemplo, para una URL de sitio en 'hamishwillee.pythonanywhere.com'
@@ -620,11 +631,11 @@ ALLOWED_HOSTS = ['hamishwillee.pythonanywhere.com', '127.0.0.1']
 # ALLOWED_HOSTS = ['.pythonanywhere.com','127.0.0.1']
 ```
 
-Dado que la aplicación usa protección CSRF, también necesitarás establecer la clave [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/5.0/ref/settings/#csrf-trusted-origins).
+Dado que la aplicación usa protección CSRF, también necesitarás establecer la clave [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/6.1/ref/settings/#csrf-trusted-origins).
 Abre **/locallibrary/settings.py** y añade una línea como la de abajo:
 
 ```python
-## Por ejemplo, para una URL de sitio en 'web-production-3640.up.railway.app'
+## Por ejemplo, para una URL de sitio en 'hamishwillee.pythonanywhere.com'
 ## (reemplaza la cadena de abajo con la URL de tu propio sitio):
 CSRF_TRUSTED_ORIGINS = ['https://hamishwillee.pythonanywhere.com']
 
@@ -760,7 +771,7 @@ El archivo **runtime.txt**, si se define, le indica a Railway qué versión de P
 Crea el archivo en la raíz del repositorio y añade el siguiente texto:
 
 ```plain
-python-3.10.2
+python-3.14.7
 ```
 
 > [!NOTE]
@@ -779,7 +790,7 @@ python3 manage.py runserver
 A continuación, vamos a hacer `push` de los cambios a GitHub.
 En la terminal (después de haber navegado a nuestro repositorio local), introduce los siguientes comandos:
 
-```python
+```bash
 git checkout -b railway_changes
 git add -A
 git commit -m "Se añadieron archivos y cambios necesarios para el despliegue"
@@ -812,7 +823,7 @@ Selecciona **Deploy from GitHub repo**.
 ![Pantalla del sitio de Railway - desplegar](railway_new_project_button_deploy_github_repo.png)
 
 Se muestran todos los proyectos de los repositorios de GitHub que compartiste con Railway durante la configuración.
-Selecciona tu repositorio de GitHub para la librería local: `<user-name>/django-locallibrary-tutorial`.
+Selecciona tu repositorio de GitHub para la librería local: `<user-name>/django_local_library`.
 
 ![Pantalla del sitio de Railway mostrando un diálogo para elegir un repositorio de GitHub existente o elegir uno nuevo](railway_new_project_button_deploy_github_selectrepo.png)
 
@@ -838,7 +849,7 @@ Este es un error de seguridad de Django que se produce porque nuestro código fu
 > Este tipo de información de depuración es muy útil cuando estás configurando el proyecto, pero supone un riesgo de seguridad en un sitio desplegado.
 > Te mostraremos cómo desactivarlo una vez que el sitio esté en funcionamiento.
 
-Abre **/locallibrary/settings.py** en tu proyecto de GitHub y cambia la configuración [ALLOWED_HOSTS](https://docs.djangoproject.com/en/5.0/ref/settings/#allowed-hosts) para incluir la URL de tu sitio de Railway:
+Abre **/locallibrary/settings.py** en tu proyecto de GitHub y cambia la configuración [ALLOWED_HOSTS](https://docs.djangoproject.com/en/6.1/ref/settings/#allowed-hosts) para incluir la URL de tu sitio de Railway:
 
 ```python
 ## Por ejemplo, para una URL de sitio en 'web-production-3640.up.railway.app'
@@ -847,10 +858,10 @@ ALLOWED_HOSTS = ['web-production-3640.up.railway.app', '127.0.0.1']
 
 # Durante el desarrollo, puedes establecer en su lugar solo la URL base
 # (podrías decidir cambiar el sitio unas cuantas veces).
-# ALLOWED_HOSTS = ['.railway.com','127.0.0.1']
+# ALLOWED_HOSTS = ['.railway.app','127.0.0.1']
 ```
 
-Dado que la aplicación usa protección CSRF, también necesitarás establecer la clave [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/5.0/ref/settings/#csrf-trusted-origins).
+Dado que la aplicación usa protección CSRF, también necesitarás establecer la clave [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/6.1/ref/settings/#csrf-trusted-origins).
 Abre **/locallibrary/settings.py** y añade una línea como la de abajo:
 
 ```python
@@ -984,7 +995,7 @@ El cliente de Railway proporciona el comando logs para mostrar el final de los r
 railway logs
 ```
 
-Si necesitas más información de la que esto puede ofrecer, tendrás que empezar a investigar el [registro (logging) de Django](https://docs.djangoproject.com/en/5.0/topics/logging/).
+Si necesitas más información de la que esto puede ofrecer, tendrás que empezar a investigar el [registro (logging) de Django](https://docs.djangoproject.com/en/6.1/topics/logging/).
 
 ## Resumen
 
@@ -994,12 +1005,12 @@ El siguiente paso es leer nuestros últimos artículos, y luego completar la tar
 
 ## Véase también
 
-- [Deploying Django](https://docs.djangoproject.com/en/5.0/howto/deployment/) (documentación de Django)
-  - [Deployment checklist](https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/) (documentación de Django)
-  - [Deploying static files](https://docs.djangoproject.com/en/5.0/howto/static-files/deployment/) (documentación de Django)
-  - [How to deploy with WSGI](https://docs.djangoproject.com/en/5.0/howto/deployment/wsgi/) (documentación de Django)
-  - [How to use Django with Apache and mod_wsgi](https://docs.djangoproject.com/en/5.0/howto/deployment/wsgi/modwsgi/) (documentación de Django)
-  - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/5.0/howto/deployment/wsgi/gunicorn/) (documentación de Django)
+- [Deploying Django](https://docs.djangoproject.com/en/6.1/howto/deployment/) (documentación de Django)
+  - [Deployment checklist](https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/) (documentación de Django)
+  - [Deploying static files](https://docs.djangoproject.com/en/6.1/howto/static-files/deployment/) (documentación de Django)
+  - [How to deploy with WSGI](https://docs.djangoproject.com/en/6.1/howto/deployment/wsgi/) (documentación de Django)
+  - [How to use Django with Apache and mod_wsgi](https://docs.djangoproject.com/en/6.1/howto/deployment/wsgi/modwsgi/) (documentación de Django)
+  - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/6.1/howto/deployment/wsgi/gunicorn/) (documentación de Django)
 
 - Documentación de Railway
   - [CLI](https://docs.railway.com/cli)
