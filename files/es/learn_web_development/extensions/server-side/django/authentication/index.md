@@ -665,7 +665,7 @@ Con el servidor de desarrollo en ejecución, ahora deberías poder ver la lista 
 
 El último paso es agregar un enlace a esta nueva página en la barra lateral. Lo pondremos en la misma sección donde mostramos otra información para el usuario que inició sesión.
 
-Abre la plantilla base (**/catalog/templates/base_generic.html**) y agrega la línea "My borrowed" a la barra lateral, en la posición que se muestra abajo.
+Abre la plantilla base (**/catalog/templates/base_generic.html**) y agrega la línea "Mis libros prestados" a la barra lateral, en la posición que se muestra abajo.
 
 ```django
  <ul class="sidebar-nav">
@@ -688,7 +688,7 @@ Abre la plantilla base (**/catalog/templates/base_generic.html**) y agrega la l�
 
 ### ¿Cómo se ve?
 
-Cuando cualquier usuario inicia sesión, verá el enlace _My borrowed_ (Mis libros prestados) en la barra lateral, y la lista de libros que se muestra abajo (¡el primer libro no tiene fecha de vencimiento, lo cual es un error que esperamos corregir en un tutorial posterior!).
+Cuando cualquier usuario inicia sesión, verá el enlace _Mis libros prestados_ en la barra lateral, y la lista de libros que se muestra abajo (¡el primer libro no tiene fecha de vencimiento, lo cual es un error que esperamos corregir en un tutorial posterior!).
 
 ![Biblioteca: libros prestados por usuario](library_borrowed_by_user.png)
 
