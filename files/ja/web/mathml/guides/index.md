@@ -17,7 +17,7 @@ l10n:
 
 ガイドを補う例として、次のページでは MathML を実際の導出や証明にどのように利用できるかを紹介します。
 
-- [ピタゴラスの定理の証明](/ja/docs/Web/MathML/Guides/Proving_the_pythagorean_theorem)
+- [ピタゴラスの定理の証明](/ja/docs/Web/MathML/Guides/Proving_the_Pythagorean_theorem)
   - : [ピタゴラスの定理](https://en.wikipedia.org/wiki/Pythagorean_theorem)<sup>(英語)</sup>の証明を、MathML を使って各段階を視覚的に構成しながら概説します。
 - [二次方程式の解の公式を導く](/ja/docs/Web/MathML/Guides/Deriving_the_quadratic_formula)
   - : MathML を使って各変形を示しながら、二次方程式の解の公式の導出を概説します。
