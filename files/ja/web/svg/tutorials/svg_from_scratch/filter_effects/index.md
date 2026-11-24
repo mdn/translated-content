@@ -2,7 +2,7 @@
 title: フィルター効果
 slug: Web/SVG/Tutorials/SVG_from_scratch/Filter_effects
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 5fbc600ce5903c85daac8ec7408527a2b2ea81da
 ---
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG", "Web/SVG/Tutorials/SVG_from_scratch/Using_fonts") }}
@@ -16,11 +16,7 @@ l10n:
 フィルターは {{SVGElement('filter')}} 要素で定義され、 SVG ファイルの `<defs>` セクションに置かなければなりません。フィルタータグの間には*プリミティブ*のリストがあり、前の操作（ぼかし、照明効果の追加など）の上に構築される基本的な操作です。作成したフィルターをグラフィック要素に適用するには、 {{SVGAttr('filter')}} 属性を設定します。
 
 ```html
-<svg
-  width="250"
-  viewBox="0 0 200 85"
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1">
+<svg width="250" viewBox="0 0 200 85" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Filter declaration -->
     <filter
@@ -92,7 +88,7 @@ l10n:
 <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
 ```
 
-{{SVGElement('feGaussianBlur')}} は `in` "SourceAlpha" を受け取ります。これは元のグラフィックのアルファチャンネルで、 4 のぼかしを適用します。その結果を "blur" という名前の一時的なバッファーに格納します．
+{{SVGElement('feGaussianBlur')}} は `in` "SourceAlpha" を受け取ります。これは元のグラフィックのアルファチャンネルで、4 のぼかしを適用します。その結果を "blur" という名前の一時的なバッファーに格納します。
 
 ### ステップ 2
 
@@ -106,7 +102,7 @@ l10n:
 
 ```html
 <feSpecularLighting
-  in="offsetBlur"
+  in="blur"
   surfaceScale="5"
   specularConstant=".75"
   specularExponent="20"
@@ -116,7 +112,7 @@ l10n:
 </feSpecularLighting>
 ```
 
-{{SVGelement('feSpecularLighting')}} は `in` "offsetBlur" を受け取り、照明効果を生成し、バッファー "specOut" に `result` を格納します。
+{{SVGElement('feSpecularLighting')}} は `in` "blur" を受け取り、照明効果を生成し、バッファー "specOut" に `result` を格納します。
 
 ### ステップ 4
 

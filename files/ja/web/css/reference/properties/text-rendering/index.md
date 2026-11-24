@@ -1,9 +1,9 @@
 ---
-title: "`text-rendering` プロパティ (CSS)"
+title: "`text-rendering` プロパティ"
 short-title: text-rendering
 slug: Web/CSS/Reference/Properties/text-rendering
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 **`text-rendering`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストを描画するときの最適化方法に関する情報をレンダリングエンジンに提供します。
@@ -140,7 +140,7 @@ p {
 
 #### 結果
 
-{{ EmbedLiveSample('optimizeSpeed_vs_optimizeLegibility') }}
+{{ EmbedLiveSample('optimizespeed_vs._optimizelegibility') }}
 
 ## 仕様書
 
