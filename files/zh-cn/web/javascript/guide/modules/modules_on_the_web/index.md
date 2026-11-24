@@ -49,8 +49,7 @@ l10n:
 通过 [`integrity`](/zh-CN/docs/Web/HTML/Reference/Attributes/integrity) 属性实现的[子资源完整性](/zh-CN/docs/Web/Security/Defenses/Subresource_Integrity)对模块脚本同样有效，但该属性只覆盖入口模块。其依赖项的完整性元数据可以通过导入映射的 `integrity` 键提供。
 
 > [!NOTE]
-> 可以通过在 [`<link>`](/zh-CN/docs/Web/HTML/Reference/Elements/link) 元素中指定 [`rel="modulepreload"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/modulepreload) 来预加载模块及其依赖项。
-> 当这些模块被使用时，这可以显著减少加载时间。
+> 可以通过在 [`<link>`](/zh-CN/docs/Web/HTML/Reference/Elements/link) 元素中指定 [`rel="modulepreload"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/modulepreload) 来预加载模块及其依赖项。当这些模块被使用时，这可以显著减少加载时间。
 
 如果你已经熟悉传统的 `<script>` 元素，还需要注意以下更多行为差异：
 
