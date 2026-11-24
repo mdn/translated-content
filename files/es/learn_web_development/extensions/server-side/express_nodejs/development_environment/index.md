@@ -1,9 +1,8 @@
 ---
 title: Configuración de un entorno de desarrollo de Node
-short-title: Configuración del entorno de desarrollo
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment
 l10n:
-  sourceCommit: 6d363614de8a40c33d1afe92e4e846b75beea986
+  sourceCommit: d775e1249487f1a7ab9a8a031c70ca71bc892d63
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
@@ -13,7 +12,7 @@ Ahora que ya sabes para qué sirve [Express](/es/docs/Learn_web_development/Exte
 <table>
   <tbody>
     <tr>
-      <th scope="row">Requisitos previos:</th>
+      <th scope="row">Prerrequisitos:</th>
       <td>
         Saber cómo abrir una terminal / línea de comandos. Saber cómo instalar paquetes de software en el sistema operativo de tu computadora de desarrollo.
       </td>
@@ -31,16 +30,16 @@ _Node_ y _Express_ hacen que sea muy fácil preparar tu computadora para empezar
 
 ### ¿Qué es el entorno de desarrollo de Express?
 
-El entorno de desarrollo de _Express_ incluye una instalación de _Node.js_, el _gestor de paquetes npm_ y (opcionalmente) el _generador de aplicaciones de Express_ en tu computadora local.
+El entorno de desarrollo de _Express_ incluye una instalación de _Node.js_ y el _gestor de paquetes npm_ en tu computadora local.
 
 _Node_ y el gestor de paquetes _npm_ se instalan juntos a partir de paquetes binarios preparados, instaladores, gestores de paquetes del sistema operativo o desde el código fuente (como se muestra en las siguientes secciones). Luego, _Express_ se instala mediante npm como una dependencia de cada una de tus aplicaciones web _Express_ (junto con otras bibliotecas, como motores de plantillas, controladores de bases de datos, middleware de autenticación, middleware para servir archivos estáticos, etc.).
 
-_npm_ también se puede usar para instalar (de forma global) el _generador de aplicaciones de Express_, una herramienta práctica para crear el esqueleto de aplicaciones web _Express_ que siguen el [patrón MVC](/es/docs/Glossary/MVC). El generador de aplicaciones es opcional, porque no _necesitas_ usar esta herramienta para crear aplicaciones que usen Express, ni para construir aplicaciones Express que tengan el mismo diseño arquitectónico o las mismas dependencias. Sin embargo, lo usaremos porque hace que empezar sea mucho más fácil y promueve una estructura de aplicación modular.
+Para el tutorial de la Biblioteca Local, construiremos un proyecto que sigue el [patrón MVC](/es/docs/Glossary/MVC), usando una estructura de aplicación modular que podremos ampliar según sea necesario.
 
 > [!NOTE]
 > A diferencia de otros frameworks web, el entorno de desarrollo no incluye un servidor web de desarrollo independiente. ¡En _Node_/_Express_, una aplicación web crea y ejecuta su propio servidor web!
 
-Existen otras herramientas periféricas que forman parte de un entorno de desarrollo típico, entre ellas los [editores de texto](/es/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors) o los IDE para editar código, y las herramientas de gestión de control de versiones como [Git](https://git-scm.com/) para gestionar de forma segura las distintas versiones de tu código. Damos por hecho que ya tienes instaladas este tipo de herramientas (en particular, un editor de texto).
+Existen otras herramientas periféricas que forman parte de un entorno de desarrollo típico, entre ellas los [editores de código](/es/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors) y las herramientas de gestión de control de versiones como [Git](https://git-scm.com/) para gestionar de forma segura las distintas versiones de tu código. Damos por hecho que ya tienes instaladas este tipo de herramientas (en particular, un editor de código).
 
 ### ¿Qué sistemas operativos son compatibles?
 
@@ -72,20 +71,19 @@ Para que esto sea más fácil, primero instalaremos un gestor de versiones de No
 ### Windows
 
 Existen varios gestores de versiones de Node para Windows.
-Aquí usaremos [nvm-windows](https://github.com/coreybutler/nvm-windows), que goza de gran reconocimiento entre los desarrolladores de Node.
+Aquí usaremos [nvm-windows](https://github.com/nvm-windows/nvm), que goza de gran reconocimiento entre los desarrolladores de Node.
 
-Instala la versión más reciente usando el instalador que prefieras desde la página de [nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases).
+Instala la versión más reciente usando el instalador que prefieras desde la página de [nvm-windows/releases](https://github.com/nvm-windows/nvm/releases).
 Después de instalar `nvm-windows`, abre un símbolo del sistema (o PowerShell) e ingresa el siguiente comando para descargar la versión LTS más reciente de Node.js y npm:
 
 ```bash
 nvm install lts
 ```
 
-En el momento de escribir esto, la versión LTS de Node.js es la 22.17.0.
-Puedes establecerla como la _versión actual_ a usar con el siguiente comando:
+Ejecuta `nvm list` para ver las versiones instaladas. Para este tutorial, elige Node.js 24 o posterior. Establécela como la _versión actual_ con el comando de abajo, reemplazando `<version>` por la versión que instalaste:
 
 ```bash
-nvm use 22.17.0
+nvm use <version>
 ```
 
 > [!NOTE]
@@ -105,12 +103,10 @@ Después de instalar `nvm`, abre una terminal e ingresa el siguiente comando par
 nvm install --lts
 ```
 
-En el momento de escribir esto, la versión LTS de Node.js es la 22.17.0.
-El comando `nvm list` muestra el conjunto de versiones descargadas y la versión actual.
-Puedes establecer una versión específica como la _versión actual_ con el siguiente comando (igual que con `nvm-windows`)
+El comando `nvm list` muestra las versiones instaladas y la versión actual. Para este tutorial, elige Node.js 24 o posterior. Establécela como la _versión actual_ con el comando de abajo, reemplazando `<version>` por la versión que instalaste:
 
 ```bash
-nvm use 22.17.0
+nvm use <version>
 ```
 
 Usa el comando `nvm --help` para conocer otras opciones de línea de comandos.
@@ -123,59 +119,17 @@ Una buena forma de hacerlo es usar el comando "version" en tu terminal/símbolo 
 
 ```bash
 > node -v
-v22.17.0
+v24.0.0
 ```
 
 El gestor de paquetes _npm_ de _Node.js_ también debería haberse instalado, y se puede probar de la misma manera:
 
 ```bash
 > npm -v
-10.9.2
+11.3.0
 ```
 
-Como una prueba un poco más interesante, vamos a crear un servidor "node puro" muy básico que imprima "Hello World" en el navegador cuando visites la URL correcta en tu navegador:
-
-1. Copia el siguiente texto en un archivo llamado **hellonode.js**. Esto usa funciones puras de Node (nada de Express):
-
-   ```js
-   // Cargar el módulo HTTP
-   const http = require("http");
-
-   const hostname = "127.0.0.1";
-   const port = 3000;
-
-   // Crear el servidor HTTP y escuchar solicitudes en el puerto 3000
-   const server = http.createServer((req, res) => {
-     // Establecer el encabezado HTTP de la respuesta con el estado HTTP y el tipo de contenido
-     res.statusCode = 200;
-     res.setHeader("Content-Type", "text/plain");
-     res.end("Hello World\n");
-   });
-
-   // Escuchar solicitudes en el puerto 3000 y, como función de retorno de llamada, registrar el puerto en el que se está escuchando
-   server.listen(port, hostname, () => {
-     console.log(`Server running at http://${hostname}:${port}/`);
-   });
-   ```
-
-   El código importa el módulo "http" y lo usa para crear un servidor (`createServer()`) que escucha solicitudes HTTP en el puerto 3000. Luego, el script imprime en la consola un mensaje con la URL del navegador que puedes usar para probar el servidor. La función `createServer()` recibe como argumento una función de retorno de llamada que se invocará cuando se reciba una solicitud HTTP; esta devuelve una respuesta con un código de estado HTTP 200 ("OK") y el texto plano "Hello World".
-
-   > [!NOTE]
-   > ¡No te preocupes si todavía no entiendes exactamente qué hace este código! ¡Explicaremos nuestro código con más detalle en cuanto empecemos a usar Express!
-
-2. Inicia el servidor accediendo, desde tu símbolo del sistema, al mismo directorio que tu archivo `hellonode.js`, y ejecutando `node` junto con el nombre del script, así:
-
-   ```bash
-   node hellonode.js
-   ```
-
-   Una vez que el servidor se inicia, verás una salida en la consola que indica la dirección IP en la que se está ejecutando el servidor:
-
-   ```plain
-   Server running at http://127.0.0.1:3000/
-   ```
-
-3. Ve a la URL `http://127.0.0.1:3000`. Si todo funciona correctamente, el navegador debería mostrar el texto "Hello World".
+Los números de versión pueden diferir de los mostrados arriba. Con ambos comandos funcionando, puedes configurar el proyecto de la Biblioteca Local.
 
 ## Uso de npm
 
@@ -183,268 +137,214 @@ Además del propio _Node_, [npm](https://docs.npmjs.com/) es la herramienta más
 `npm` se usa para obtener los paquetes (bibliotecas de JavaScript) que una aplicación necesita para el desarrollo, las pruebas o la producción, y también se puede usar para ejecutar pruebas y herramientas empleadas en el proceso de desarrollo.
 
 > [!NOTE]
-> Desde la perspectiva de Node, _Express_ es solo otro paquete que necesitas instalar con npm y luego incluir mediante `require` en tu propio código.
+> Desde la perspectiva de Node, _Express_ es solo otro paquete que necesitas instalar con npm y luego importar en tu propio código.
 
 Puedes usar npm manualmente para obtener cada paquete necesario por separado. Sin embargo, normalmente gestionamos las dependencias mediante un archivo de definición de texto plano llamado [package.json](https://docs.npmjs.com/files/package.json/). Este archivo enumera todas las dependencias de un "paquete" de JavaScript en particular, incluidos el nombre del paquete, la versión, la descripción, el archivo inicial a ejecutar, las dependencias de producción, las dependencias de desarrollo, las versiones de _Node_ con las que puede funcionar, etc. El archivo **package.json** debería contener todo lo que npm necesita para obtener y ejecutar tu aplicación (si estuvieras escribiendo una biblioteca reutilizable, podrías usar esta definición para subir tu paquete al repositorio de npm y ponerlo a disposición de otros usuarios).
 
-### Agregar dependencias
+### Creación del proyecto
 
-Los siguientes pasos muestran cómo puedes usar npm para descargar un paquete, guardarlo en las dependencias del proyecto y luego incluirlo en una aplicación Node.
+En esta sección crearemos el proyecto de la Biblioteca Local. Al final de este artículo tendrás listos la configuración del paquete y sus dependencias. Añadiremos el código de la aplicación en [Creación de un sitio web esqueleto](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website).
 
-> [!NOTE]
-> Aquí mostramos las instrucciones para obtener e instalar el paquete _Express_. Más adelante veremos cómo este paquete, y otros, ya vienen especificados para nosotros al usar el _generador de aplicaciones de Express_. Esta sección se incluye porque es útil para entender cómo funciona npm y qué es lo que crea el generador de aplicaciones.
-
-1. Primero, crea un directorio para tu nueva aplicación y accede a él:
+1. Crea un directorio para la aplicación y entra en él:
 
    ```bash
-   mkdir myapp
-   cd myapp
+   mkdir express-locallibrary-tutorial
+   cd express-locallibrary-tutorial
    ```
 
-2. Usa el comando `init` de npm para crear un archivo **package.json** para tu aplicación. Este comando te pedirá varios datos, como el nombre y la versión de tu aplicación y el nombre del archivo de entrada inicial (por defecto, **index.js**). Por ahora, simplemente acepta los valores predeterminados:
+2. Usa el comando `init` de npm para crear un archivo **package.json** configurado para módulos ES:
 
    ```bash
-   npm init
+   npm init --yes --init-type=module
    ```
 
-   Si muestras el archivo **package.json** (`cat package.json`), verás los valores predeterminados que aceptaste, terminando con la licencia.
+   La opción [`--init-type=module`](https://docs.npmjs.com/cli/commands/npm-init/#init-type) establece `"type": "module"` en lugar del valor predeterminado `"type": "commonjs"`.
+
+3. Abre **package.json** en tu editor de texto. npm crea un archivo como el siguiente, usando el nombre del directorio como el nombre del paquete:
 
    ```json
    {
-     "name": "myapp",
-     "version": "1.0.0",
-     "main": "index.js",
-     "scripts": {
-       "test": "echo \"Error: no test specified\" && exit 1"
-     },
-     "author": "",
-     "license": "ISC",
-     "description": ""
-   }
-   ```
-
-3. Ahora instala Express en el directorio `myapp` y guárdalo en la lista de dependencias de tu archivo **package.json**:
-
-   ```bash
-   npm install express
-   ```
-
-   La sección de dependencias de tu **package.json** ahora aparecerá al final del archivo **package.json** e incluirá _Express_.
-
-   ```json
-   {
-     "name": "myapp",
+     "name": "express-locallibrary-tutorial",
      "version": "1.0.0",
      "description": "",
      "main": "index.js",
      "scripts": {
        "test": "echo \"Error: no test specified\" && exit 1"
      },
+     "keywords": [],
      "author": "",
      "license": "ISC",
-     "dependencies": {
-       "express": "^5.1.0"
+     "type": "module"
+   }
+   ```
+
+4. Añade `"private": true` y un campo `engines` en el nivel superior de **package.json**, junto a `name` y `version`:
+
+   ```json
+   {
+     "private": true,
+     "engines": {
+       "node": ">=24.0.0"
      }
    }
    ```
 
-4. Para usar la biblioteca Express, llama a la función `require()` en tu archivo **index.js** para incluirla en tu aplicación.
-   Crea este archivo ahora, en la raíz del directorio de la aplicación "myapp", y dale el siguiente contenido:
+   Establecer `private` en `true` evita la publicación accidental en el registro de npm. El campo `engines` declara la versión mínima de Node.js compatible. Mantén los campos generados por ahora; reemplazaremos `scripts` más abajo.
 
-   ```js
-   const express = require("express");
+5. Elimina los siguientes campos, que solo son útiles si vas a publicar en el registro de npm: `description`, `main`, `keywords`, `author`, `license`.
 
-   const app = express();
-   const port = 3000;
+### Agregar dependencias
 
-   app.get("/", (req, res) => {
-     res.send("Hello World!");
-   });
-
-   app.listen(port, () => {
-     console.log(`Example app listening on port ${port}!`);
-   });
-   ```
-
-   Este código muestra una aplicación web Express mínima de tipo "HelloWorld".
-   Esto importa el módulo "express" mediante `require()` y lo usa para crear un servidor (`app`) que escucha solicitudes HTTP en el puerto 3000 e imprime en la consola un mensaje que explica qué URL del navegador puedes usar para probar el servidor.
-   La función `app.get()` solo responde a las solicitudes HTTP `GET` con la ruta URL especificada ('/'), en este caso llamando a una función que envía nuestro mensaje _Hello World!_.
-
-   > [!NOTE]
-   > Las comillas invertidas (backticks) en `` `Example app listening on port ${port}!` `` nos permiten interpolar el valor de `$port` en la cadena.
-
-5. Puedes iniciar el servidor ejecutando node con el script en tu símbolo del sistema:
-
-   ```bash
-   node index.js
-   ```
-
-   Verás la siguiente salida en la consola:
-
-   ```plain
-   Example app listening on port 3000
-   ```
-
-6. Ve a la URL `http://localhost:3000/`.
-   Si todo funciona correctamente, el navegador debería mostrar el texto "Hello World!".
-
-### Dependencias de desarrollo
-
-Si una dependencia solo se usa durante el desarrollo, deberías guardarla como una "dependencia de desarrollo" (para que los usuarios de tu paquete no tengan que instalarla en producción). Por ejemplo, para usar la popular herramienta de linting de JavaScript [ESLint](https://eslint.org/), ejecutarías npm de la siguiente manera:
+Instala los paquetes que necesita el proyecto desde dentro del directorio **express-locallibrary-tutorial**:
 
 ```bash
-npm install eslint --save-dev
+npm install debug express http-errors morgan pug
 ```
 
-La siguiente entrada se agregaría entonces al **package.json** de tu aplicación:
+Cada uno de estos paquetes cumple una función en la aplicación:
 
-```json
-{
-  "devDependencies": {
-    "eslint": "^9.30.1"
-  }
-}
-```
+- `debug` muestra mensajes de diagnóstico cuando se habilita mediante la variable de entorno `DEBUG`.
+- `express` proporciona el framework web.
+- `http-errors` crea errores HTTP, como un 404 para una ruta desconocida.
+- `morgan` registra las solicitudes HTTP.
+- `pug` renderiza HTML a partir de plantillas.
+
+El comando [`npm install`](https://docs.npmjs.com/cli/commands/npm-install/) descarga estos paquetes y sus dependencias en **node_modules**, los agrega a `dependencies` en **package.json** y crea **package-lock.json** para registrar las versiones resueltas. Conserva ambos archivos de paquete en el control de versiones para que otros desarrolladores puedan instalar las dependencias del proyecto. Cuando ya existe un archivo de bloqueo (lockfile), `npm ci` instala exactamente las versiones registradas en él.
 
 > [!NOTE]
-> Los "[linters](<https://en.wikipedia.org/wiki/Lint_(software)>)" son herramientas que realizan un análisis estático del software para detectar y reportar el cumplimiento (o incumplimiento) de un determinado conjunto de buenas prácticas de programación.
+> Es buena idea actualizar regularmente a las versiones compatibles más recientes de tus bibliotecas de dependencias; esto incluso puede hacerse de forma automática o semiautomática como parte de una configuración de {{glossary("continuous integration", "integración continua")}}.
+>
+> Normalmente las actualizaciones de versión menor y de parche mantienen la compatibilidad.
+> Cuando instalas un paquete, npm registra su versión en **package.json** con un prefijo `^` (por ejemplo, `"express": "^5.2.1"`).
+> Esto te permite actualizar a la versión `minor.patch` compatible más reciente ejecutando:
+>
+> ```bash
+> npm update --save
+> ```
+>
+> Las versiones mayores cambian la compatibilidad.
+> Para esas actualizaciones tendremos que actualizar manualmente **package.json** y el código que usa la biblioteca, y volver a probar el proyecto a fondo.
+
+Instalaremos paquetes adicionales, como el driver de base de datos, cuando los necesitemos más adelante en el tutorial. Para una introducción más amplia a las herramientas de desarrollo y su configuración, consulta [Introducing a complete toolchain](/es/docs/Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain).
 
 ### Ejecución de tareas
 
-Además de definir y obtener dependencias, también puedes definir scripts _con nombre_ en tus archivos **package.json** y usar npm para ejecutarlos con el comando [run-script](https://docs.npmjs.com/cli/commands/npm-run/). Este enfoque se usa comúnmente para automatizar la ejecución de pruebas y partes del proceso de desarrollo o compilación (por ejemplo, ejecutar herramientas para minificar JavaScript, reducir imágenes, hacer LINT/analizar tu código, etc.).
-
-> [!NOTE]
-> Los ejecutores de tareas como [Gulp](https://gulpjs.com/) y [Grunt](https://gruntjs.com/) también se pueden usar para ejecutar pruebas y otras herramientas externas.
-
-Por ejemplo, para definir un script que ejecute la dependencia de desarrollo _eslint_ que especificamos en la sección anterior, podríamos agregar el siguiente bloque de scripts a nuestro archivo **package.json** (suponiendo que el código fuente de nuestra aplicación está en una carpeta `/src/js`):
+Además de definir dependencias, puedes definir scripts con nombre en **package.json** y usar npm para ejecutarlos. Reemplaza el objeto `scripts` generado, incluido su comando `test` de marcador de posición, con estos comandos:
 
 ```json
 {
   "scripts": {
-    // …
-    "lint": "eslint src/js"
-    // …
+    "start": "node server.js",
+    "devstart": "node --watch server.js"
   }
 }
 ```
 
-Para explicarlo un poco más, `eslint src/js` es un comando que podríamos ingresar en nuestra terminal/línea de comandos para ejecutar `eslint` sobre los archivos JavaScript contenidos en el directorio `src/js` dentro del directorio de nuestra aplicación. Incluir lo anterior en el archivo package.json de nuestra aplicación proporciona un atajo para este comando: `lint`.
+El script `start` ejecuta el punto de entrada de la aplicación, **server.js**. El script `devstart` usa el modo de observación (`--watch`) de Node para reiniciar el servidor cuando cambia un archivo JavaScript importado. Probaremos ambos comandos con un servidor mínimo a continuación.
 
-Entonces podríamos ejecutar _eslint_ usando npm así:
-
-```bash
-npm run-script lint
-# O (usando el alias)
-npm run lint
-```
-
-Puede que este ejemplo no parezca más corto que el comando original, pero puedes incluir comandos mucho más largos dentro de tus scripts de npm, incluidas cadenas de varios comandos. Podrías definir un único script de npm que ejecute todas tus pruebas de una sola vez.
-
-## Instalación del generador de aplicaciones Express
-
-La herramienta [generador de aplicaciones de Express](https://expressjs.com/en/starter/generator.html) genera el "esqueleto" de una aplicación Express. Instala el generador usando npm de la siguiente manera:
-
-```bash
-npm install express-generator -g
-```
-
-> [!NOTE]
-> Es posible que necesites anteponer `sudo` a esta línea en Ubuntu o macOS. El indicador `-g` instala la herramienta de forma global para que puedas ejecutarla desde cualquier lugar.
-
-Para crear una aplicación _Express_ llamada "helloworld" con la configuración predeterminada, ve al lugar donde quieras crearla y ejecuta la aplicación de la siguiente manera:
-
-```bash
-express helloworld
-```
-
-> [!NOTE]
-> A menos que estés usando una versión antigua de Node.js (< 8.2.0), como alternativa podrías omitir la instalación y ejecutar express-generator con [npx](https://github.com/npm/npx#readme).
-> Esto tiene el mismo efecto que instalar y luego ejecutar `express-generator`, pero sin instalar el paquete en tu sistema:
->
-> ```bash
-> npx express-generator helloworld
-> ```
-
-También puedes especificar la biblioteca de plantillas a usar y varias otras configuraciones.
-Usa el comando `help` para ver todas las opciones:
-
-```bash
-express --help
-```
-
-El generador creará la nueva aplicación Express en una subcarpeta de tu ubicación actual, mostrando el progreso de la construcción en la consola.
-Al finalizar, la herramienta mostrará los comandos que debes ingresar para instalar las dependencias de Node y ejecutar la aplicación.
-
-La nueva aplicación tendrá un archivo **package.json** en su directorio raíz.
-Puedes abrirlo para ver qué dependencias están instaladas, incluidas Express y la biblioteca de plantillas Jade:
+Tu **package.json** debería verse ahora así. Los números de versión de las dependencias pueden ser más recientes, dependiendo de cuándo instales los paquetes.
 
 ```json
 {
-  "name": "helloworld",
-  "version": "0.0.0",
-  "private": true,
+  "name": "express-locallibrary-tutorial",
+  "version": "1.0.0",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node server.js",
+    "devstart": "node --watch server.js"
+  },
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=24.0.0"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.1"
+    "debug": "^4.4.3",
+    "express": "^5.2.1",
+    "http-errors": "^2.0.1",
+    "morgan": "^1.12.0",
+    "pug": "^3.0.4"
   }
 }
 ```
 
-Instala todas las dependencias para la aplicación helloworld usando npm de la siguiente manera:
+### Probar un servidor mínimo
 
-```bash
-cd helloworld
-npm install
+Para comprobar que tu entorno y los scripts de npm funcionan, crea un archivo llamado **server.js** junto a **package.json** con el siguiente contenido:
+
+```js
+import express from "express";
+
+const app = express();
+const port = 3000;
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}/`);
+});
 ```
 
-Luego ejecuta la aplicación (los comandos son ligeramente diferentes para Windows y Linux/macOS), como se muestra a continuación:
+Esto importa Express y crea una aplicación. El método `app.get()` responde a las solicitudes a `/` con el texto "Hello World!", y `app.listen()` inicia el servidor en el puerto 3000. Node trata **server.js** como un módulo ES porque establecimos `"type": "module"` en **package.json**.
 
-```bash
-# Ejecutar helloworld en Windows con el símbolo del sistema
-SET DEBUG=helloworld:* & npm start
+1. En el directorio de tu proyecto, inicia el servidor usando el script de npm:
 
-# Ejecutar helloworld en Windows con PowerShell
-SET DEBUG=helloworld:* | npm start
+   ```bash
+   npm start
+   ```
 
-# Ejecutar helloworld en Linux/macOS
-DEBUG=helloworld:* npm start
+   Deberías ver el siguiente mensaje en la terminal:
+
+   ```plain
+   Server running at http://localhost:3000/
+   ```
+
+2. Abre `http://localhost:3000/` en tu navegador. Deberías ver "Hello World!".
+3. Detén el servidor con **Ctrl+C**, y luego inícialo en modo de observación:
+
+   ```bash
+   npm run devstart
+   ```
+
+4. Cambia el mensaje en `res.send()` a "Hello again!" y guarda **server.js**. Node reinicia el servidor automáticamente. Recarga la página para ver el mensaje actualizado.
+5. Detén el servidor con **Ctrl+C** y elimina este archivo temporal **server.js**. Añadiremos el servidor y los archivos de la aplicación del proyecto en el capítulo del sitio web esqueleto. Conserva los scripts de npm; también ejecutarán ese servidor.
+
+### Ignorar archivos generados y locales
+
+Crea un archivo llamado **.gitignore** junto a **package.json** con el siguiente contenido:
+
+```plain
+node_modules/
+*.log
+.env
 ```
 
-El comando DEBUG genera registros útiles, lo que da como resultado una salida como la siguiente:
+Esto mantiene las dependencias instaladas, los archivos de registro y la configuración del entorno local fuera del control de versiones. Las dependencias pueden volver a instalarse a partir de los archivos de paquete.
 
-```bash
->SET DEBUG=helloworld:* & npm start
+El directorio de tu proyecto debería contener ahora:
 
-> helloworld@0.0.0 start D:\GitHub\express-tests\helloworld
-> node ./bin/www
-
-  helloworld:server Listening on port 3000 +0ms
+```plain
+express-locallibrary-tutorial
+├── .gitignore
+├── node_modules
+│   └── [A lot of installed dependency files]
+├── package-lock.json
+└── package.json
 ```
 
-Abre un navegador y ve a `http://localhost:3000/` para ver la página de bienvenida predeterminada de Express.
-
-![Express - Generated App Default Screen](express_default_screen.png)
-
-Hablaremos más sobre la aplicación generada cuando lleguemos al artículo sobre cómo generar una aplicación esqueleto.
+Este es un buen punto de partida para nuestro tutorial. Añadiremos los archivos reales de la aplicación, como archivos JavaScript, plantillas y hojas de estilos, cuando lleguemos al capítulo [Sitio web esqueleto](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website).
 
 ## Resumen
 
-Ahora tienes un entorno de desarrollo de Node en funcionamiento en tu computadora, que puedes usar para crear aplicaciones web Express. También has visto cómo se puede usar npm para importar Express en una aplicación, y cómo puedes crear aplicaciones usando la herramienta generador de aplicaciones de Express y luego ejecutarlas.
+Ahora tienes un entorno de desarrollo de Node y la configuración del paquete, dependencias y scripts de npm del proyecto de la Biblioteca Local. Has comprobado la configuración con un servidor Express mínimo y el proyecto está listo para los archivos de la aplicación que añadiremos en el tutorial.
 
 En el próximo artículo empezaremos a trabajar en un tutorial para construir una aplicación web completa usando este entorno y las herramientas asociadas.
 
 ## Véase también
 
-- La página de [Downloads](https://nodejs.org/en/download) (nodejs.org)
-- [Installing Express](https://expressjs.com/en/starter/installing.html) (expressjs.com)
-- [Express Application Generator](https://expressjs.com/en/starter/generator.html) (expressjs.com)
+- Página de [Downloads](https://nodejs.org/en/download) (nodejs.org)
+- [Installing Express](https://expressjs.com/en/starter/installing/) (expressjs.com)
 - [Using Node.js with Windows subsystem for Linux](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/) (docs.microsoft.com)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
