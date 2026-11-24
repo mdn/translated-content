@@ -3,27 +3,10 @@ title: "Attribut HTML universel : `popover`"
 short-title: popover
 slug: Web/HTML/Reference/Global_attributes/popover
 l10n:
-  sourceCommit: 58290795d9f78c91933e092053bb6439bde56651
+  sourceCommit: d16355b5ec024c990cff93dc36232c95d944bfce
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`popover`** permet de désigner un élément qui est affiché par-dessus le contenu actuel.
-
-## Valeur
-
-L'attribut `popover` peut prendre l'un des valeurs suivantes&nbsp;:
-
-- `"auto"`
-  - : Les fenêtres contextuelles [`auto`](/fr/docs/Web/API/Popover_API/Using#létat_automatique_et_la_fermeture_légère) peuvent être «&nbsp;fermée de façon légère&nbsp;» — cela signifie que vous pouvez masquer la fenêtre contextuelle (<i lang="en">popover</i> en anglais) en cliquant en dehors de celle-ci ou en appuyant sur la touche <kbd>Esc</kbd>. L'affichage d'une fenêtre contextuelle `auto` ferme généralement les autres fenêtre contextuelles `auto` déjà affichés, sauf s'ils sont imbriqués.
-
-    > [!NOTE]
-    > Définir une valeur vide pour `popover` — `popover` ou `popover=""` — équivaut à définir `popover="auto"`.
-
-- `"hint"`
-  - : Les fenêtres contextuelles [`hint`](/fr/docs/Web/API/Popover_API/Using#utiliser_létat_«_hint_»_des_fenêtres_contextuelles) ne ferment pas les fenêtre contextuelles `auto` lorsqu'elles sont affichées, mais ferment les autres fenêtre contextuelles `hint` qui ne sont pas leurs ancêtres dans la [pile des indices](/fr/docs/Web/API/Popover_API/Using#règles_dinteractions_ouvertfermé_de_la_fenêtre_contextuelle).
-    Elles peuvent être fermées de manière légère et répondent aux demandes de fermeture.
-
-- `"manual"`
-  - : Les fenêtres contextuelles [`manual`](/fr/docs/Web/API/Popover_API/Using#létat_manuel_des_fenêtres_contextuelles) ne peuvent pas être «&nbsp;fermées de façon légère&nbsp;» et ne se ferment pas automatiquement. Les fenêtre contextuelles doivent être affichés et fermés explicitement à l'aide de boutons déclaratifs `show`/`hide`/`toggle` ou de JavaScript. Plusieurs fenêtre contextuelles `manual` indépendants peuvent être affichés simultanément.
 
 ## Description
 
@@ -44,6 +27,23 @@ Les fenêtres contextuelles [`hint`](/fr/docs/Web/API/Popover_API/Using#utiliser
 En général, les fenêtres contextuelles `hint` sont affichées et masquées en réponse à des évènements JavaScript autres que les clics, tels que [`mouseover`](/fr/docs/Web/API/Element/mouseover_event)/[`mouseout`](/fr/docs/Web/API/Element/mouseout_event) et [`focus`](/fr/docs/Web/API/Element/focus_event)/[`blur`](/fr/docs/Web/API/Element/blur_event). Cliquer sur un bouton pour ouvrir une fenêtre contextuelle `hint` fait fermer légèrement une fenêtre contextuelle `auto` ouverte.
 
 Pour des informations détaillées sur l'utilisation, voir la page de destination de {{DOMxRef("Popover API", "l'API Popover", "", "nocode")}}.
+
+## Valeur
+
+L'attribut `popover` peut prendre l'un des valeurs suivantes&nbsp;:
+
+- `"auto"`
+  - : Les fenêtres contextuelles [`auto`](/fr/docs/Web/API/Popover_API/Using#létat_automatique_et_la_fermeture_légère) peuvent être «&nbsp;fermée de façon légère&nbsp;» — cela signifie que vous pouvez masquer la fenêtre contextuelle (<i lang="en">popover</i> en anglais) en cliquant en dehors de celle-ci ou en appuyant sur la touche <kbd>Esc</kbd>. L'affichage d'une fenêtre contextuelle `auto` ferme généralement les autres fenêtre contextuelles `auto` déjà affichés, sauf s'ils sont imbriqués.
+
+    > [!NOTE]
+    > Définir une valeur vide pour `popover` — `popover` ou `popover=""` — équivaut à définir `popover="auto"`.
+
+- `"hint"`
+  - : Les fenêtres contextuelles [`hint`](/fr/docs/Web/API/Popover_API/Using#utiliser_létat_«_hint_»_des_fenêtres_contextuelles) ne ferment pas les fenêtre contextuelles `auto` lorsqu'elles sont affichées, mais ferment les autres fenêtre contextuelles `hint` qui ne sont pas leurs ancêtres dans la [pile des indices](/fr/docs/Web/API/Popover_API/Using#règles_dinteractions_ouvertfermé_de_la_fenêtre_contextuelle).
+    Elles peuvent être fermées de manière légère et répondent aux demandes de fermeture.
+
+- `"manual"`
+  - : Les fenêtres contextuelles [`manual`](/fr/docs/Web/API/Popover_API/Using#létat_manuel_des_fenêtres_contextuelles) ne peuvent pas être «&nbsp;fermées de façon légère&nbsp;» et ne se ferment pas automatiquement. Les fenêtre contextuelles doivent être affichés et fermés explicitement à l'aide de boutons déclaratifs `show`/`hide`/`toggle` ou de JavaScript. Plusieurs fenêtre contextuelles `manual` indépendants peuvent être affichés simultanément.
 
 ## Exemples
 

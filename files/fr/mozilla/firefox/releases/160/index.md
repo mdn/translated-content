@@ -3,7 +3,7 @@ title: Firefox 160 note de version pour les développeurs
 short-title: Firefox 160
 slug: Mozilla/Firefox/Releases/160
 l10n:
-  sourceCommit: df256997a92b09d7ec4f76702d99850582a56869
+  sourceCommit: 5b678632840c829c7f0ac157372e46cfcb60bc91
 ---
 
 Cet article présente les informations concernant les changements de Firefox 160 qui concernent les développeur·euse·s.
@@ -57,7 +57,6 @@ Pas de changements notables.
 - Correction du champ `context` dans l'évènement `script.message` pour retourner un identifiant de contexte de navigation correct lors de l'envoi de l'évènement depuis un script de préchargement déclenché par `window.open`. ([bogue Firefox 2079905 <sup>(angl.)</sup>](https://bugzil.la/2079905)).
 - Correction de la gestion des en-têtes de réponse `Set-Cookie` afin que les valeurs séparées par `\n` apparaissent désormais comme des entrées individuelles au lieu d'une seule valeur fusionnée. Cela s'applique également à d'autres en-têtes «&nbsp;fusionnés par saut de ligne&nbsp;»&nbsp;: `proxy-authenticate` et `www-authenticate`. ([bogue Firefox 1940389 <sup>(angl.)</sup>](https://bugzil.la/1940389)).
 - La surveillance des évènements réseau a été mise à jour pour cesser de calculer les détails de sécurité inutilisés, ce qui peut avoir des impacts visibles sur les performances, par exemple lors du chargement d'une page. ([bogue Firefox 2075175 <sup>(angl.)</sup>](https://bugzil.la/2075175)).
-- Mise à jour des commandes `script.evaluate` et `script.callFunction` pour cesser d'effacer un indicateur d'activation utilisateur préexistant lorsqu'elles sont appelées avec `userActivation: false`. ([bogue Firefox 2084107 <sup>(angl.)</sup>](https://bugzil.la/2084107)).
 
 ## Changements pour les développeur·euse·s d'extensions
 

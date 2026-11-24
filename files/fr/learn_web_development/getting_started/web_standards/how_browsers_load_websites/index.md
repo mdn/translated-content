@@ -2,7 +2,7 @@
 title: Comment les navigateurs chargent les sites web
 slug: Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites
 l10n:
-  sourceCommit: cab1109a0c225299a9fb2b3402bcd4a1931b8ab7
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}
@@ -74,7 +74,7 @@ P
 
 Dans cet arbre DOM, le nœud correspondant à l'élément `<p>` est un parent. Ses enfants incluent un nœud de texte et les trois nœuds correspondant aux éléments `<span>`. Les nœuds `SPAN` sont aussi des parents, avec des nœuds de texte comme enfants. Quand le navigateur affiche cet arbre DOM, il s'affiche ainsi&nbsp;:
 
-{{EmbedLiveSample('Traitement du HTML', '100%', 55)}}
+{{EmbedLiveSample("Traitement du HTML", "100%", 55)}}
 
 ```css hidden
 p {
@@ -122,7 +122,7 @@ La seule règle disponible dans le CSS utilise le sélecteur `span`, donc le nav
 
 Le résultat mis à jour est le suivant&nbsp;:
 
-{{EmbedLiveSample('Analyse du CSS et rendu de la page', '100%', 90)}}
+{{EmbedLiveSample("Analyse du CSS et rendu de la page", "100%", 90)}}
 
 ## Gestion du JavaScript
 
@@ -160,13 +160,13 @@ Vous n'avez pas besoin de comprendre exactement comment fonctionne ce JavaScript
 
 Le résultat final est le suivant&nbsp;:
 
-{{EmbedLiveSample('Gestion du JavaScript', '100%', 90)}}
+{{EmbedLiveSample("Gestion du JavaScript", "100%", 90)}}
 
 ## Quelles autres étapes de rendu existent ?
 
-Plusieurs autres opérations se produisent lors du rendu d'une page, mais nous ne les aborderons pas toutes ici. Un point notable à mentionner est qu'un arbre d'accessibilité est construit, à partir du DOM, pour que les technologies d'assistance (par exemple les lecteurs d'écran) puissent s'y connecter, ce qui permet aux personnes qui ne peuvent pas voir le contenu affiché d'interagir avec celui-ci.
+Plusieurs autres opérations se produisent lors du rendu d'une page, mais nous ne les abordons pas toutes ici. Un point notable à mentionner est qu'un arbre d'accessibilité est construit, à partir du DOM, pour que les technologies d'assistance (par exemple les lecteurs d'écran) puissent s'y connecter, ce qui permet aux personnes qui ne peuvent pas voir le contenu affiché d'interagir avec celui-ci.
 
-Vous en apprendrez davantage à ce sujet plus tard, dans notre module [Accessibilité](/fr/docs/Learn_web_development/Core/Accessibility).
+Vous en apprenez davantage à ce sujet plus tard, dans notre module [Accessibilité](/fr/docs/Learn_web_development/Core/Accessibility).
 
 ## Le navigateur : un environnement de programmation hostile _et_ formidable
 
@@ -179,7 +179,7 @@ Les navigateurs modernes ont tendance à implémenter les standards web de faço
 - Pour commencer, il est conçu pour l'accès universel. L'état de base du web est accessible et interconnecté. Certains de ces principes sont plus difficiles à atteindre dans d'autres environnements.
 - La distribution d'applications sur le web est simple et puissante. Vous n'avez pas besoin de faire passer vos utilisateur·ice·s par un processus d'installation compliqué&nbsp;: il suffit de leur donner une adresse web et c'est parti.
 - Les mises à jour d'applications sont généralement simples. Dans de nombreux cas, les visiteur·euse·s voient la nouvelle version d'une application en rechargeant simplement l'onglet du navigateur. Vous n'avez pas à vous soucier de leur faire télécharger et installer régulièrement des mises à jour.
-- La communauté web est dynamique et solidaire. Comme nous le verrons plus loin dans notre article [Recherche et apprentissage](/fr/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning), il existe de nombreux endroits où demander de l'aide et d'excellentes ressources pour apprendre.
+- La communauté web est dynamique et solidaire. Comme nous le voyons plus loin dans notre article [Recherche et apprentissage](/fr/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning), il existe de nombreux endroits où demander de l'aide et d'excellentes ressources pour apprendre.
 
 ## Voir aussi
 

@@ -3,7 +3,7 @@ title: "Attribut HTML : `step`"
 short-title: step
 slug: Web/HTML/Reference/Attributes/step
 l10n:
-  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
+  sourceCommit: d16355b5ec024c990cff93dc36232c95d944bfce
 ---
 
 L'attribut **`step`** est un nombre qui définit la granularité à laquelle la valeur doit adhérer ou le mot-clé `any`. Il est valide pour les types d'entrée numériques, y compris les types `{{HTMLElement("input/date", "date")}}`, `{{HTMLElement("input/month", "month")}}`, `{{HTMLElement("input/week", "week")}}`, `{{HTMLElement("input/time", "time")}}`, `{{HTMLElement("input/datetime-local", "datetime-local")}}`, `{{HTMLElement("input/number", "number")}}` et `{{HTMLElement("input/range", "range")}}`.
@@ -73,10 +73,14 @@ Seules les valeurs qui sont un nombre entier d'incréments à partir de la base 
   </tbody>
 </table>
 
-Si `step` est omis, tout entier est valide mais les nombres à virgule comme `4.2` ne le sont pas car `step` a pour valeur par défaut `1`. Pour que `4.2` soit valide&nbsp;:
+Si `step` est omis, tout entier est valide mais les nombres à virgule comme `4.2` ne le sont pas, car `step` a pour valeur par défaut `1`. Pour que `4.2` soit valide&nbsp;:
 
 - soit `step` doit être défini à `any`, `0.1` ou `0.2`&nbsp;;
 - soit la valeur de `min` doit être un nombre se terminant par `.2`, comme `0.2`, `1.2` ou `-5.2`.
+
+## Problèmes d'accessibilité
+
+Fournissez des instructions pour aider les utilisateur·ice·s à comprendre comment remplir le formulaire et utiliser les contrôles individuels du formulaire. Indiquez toute entrée obligatoire et facultative, les formats de données et toute autre information pertinente. Lorsque vous utilisez l'attribut `min`, assurez-vous que cette exigence minimale est comprise par l'utilisateur·ice. Fournir des instructions dans l'élément HTML {{HTMLElement("label")}} peut être suffisant. Si vous fournissez des instructions en dehors des étiquettes, ce qui permet un positionnement et une conception plus souples, envisagez d'utiliser [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) ou [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
 ## Exemples
 
@@ -98,18 +102,14 @@ Nous définissons ensuite un champ avec une valeur minimale de 1,2 et une valeur
 <input id="myNumber" name="myNumber" type="number" step="2" min="1.2" />
 ```
 
-Les valeurs valides comprennent `1,2`, `3,2`, `5,2`, `7,2`, `9,2`, `11,2`, et ainsi de suite. Les nombres entiers et les nombres pairs suivis de `.2` ne sont pas valides. Comme nous avons inclus une valeur non valide, les navigateurs qui prennent en charge cette valeur l'afficheront comme non valide. Le compteur de nombres, s'il est présent, n'affichera que les valeurs flottantes valides de `1.2` et plus.
+Les valeurs valides comprennent `1,2`, `3,2`, `5,2`, `7,2`, `9,2`, `11,2`, et ainsi de suite. Les nombres entiers et les nombres pairs suivis de `.2` ne sont pas valides. Comme nous avons inclus une valeur non valide, les navigateurs qui prennent en charge cette valeur l'affichent comme non valide. Le compteur de nombres, s'il est présent, n'affiche que les valeurs flottantes valides de `1.2` et plus.
 
 {{EmbedLiveSample("L'impact de `min` sur l'étape", "100%", 55)}}
 
 > [!NOTE]
-> Lorsque les données saisies par l'utilisateur·ice ne respectent pas la configuration indiquée par l'incrément, la valeur est considérée comme non valide dans la validation des contraintes et correspondra aux pseudoclasses {{CSSxRef(":invalid")}} et {{CSSxRef(":out-of-range")}}.
+> Lorsque les données saisies par l'utilisateur·ice ne respectent pas la configuration indiquée par l'incrément, la valeur est considérée comme non valide dans la validation des contraintes et correspond aux pseudoclasses {{CSSxRef(":invalid")}} et {{CSSxRef(":out-of-range")}}.
 
 Voir [Validation côté client](/fr/docs/Web/HTML/Guides/Constraint_validation) et {{DOMxRef("ValidityState.stepMismatch", "stepMismatch")}} pour plus d'informations.
-
-## Problèmes d'accessibilité
-
-Fournissez des instructions pour aider les utilisateur·ice·s à comprendre comment remplir le formulaire et utiliser les contrôles individuels du formulaire. Indiquez toute entrée obligatoire et facultative, les formats de données et toute autre information pertinente. Lorsque vous utilisez l'attribut `min`, assurez-vous que cette exigence minimale est comprise par l'utilisateur·ice. Fournir des instructions dans l'élément HTML {{HTMLElement("label")}} peut être suffisant. Si vous fournissez des instructions en dehors des étiquettes, ce qui permet un positionnement et une conception plus souples, envisagez d'utiliser [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) ou [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
 ## Spécifications
 

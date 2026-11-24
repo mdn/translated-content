@@ -102,14 +102,14 @@ scale(sx, sy)
 
 ## Accessibilité
 
-Les animations de mise à l'échelle ou de zoom posent des problèmes d'accessibilité, car elles déclenchent fréquemment certains types de migraines. Si vous devez inclure de telles animations sur votre site, vous devriez fournir un contrôle permettant aux utilisateur·ices de les désactiver, de préférence à l'échelle du site.
+Les animations de mise à l'échelle ou de zoom posent des problèmes d'accessibilité, car elles déclenchent fréquemment certains types de migraines. Si vous devez inclure de telles animations sur votre site, vous devez fournir un contrôle permettant aux utilisateur·ice·s de les désactiver, de préférence à l'échelle du site.
 
-Pensez aussi à utiliser la fonctionnalité média {{CSSxRef("@media/prefers-reduced-motion", "prefers-reduced-motion")}} — servez-vous-en pour écrire une [requête média](/fr/docs/Web/CSS/Guides/Media_queries) qui désactivera les animations si l'utilisateur·ice a activé la réduction des animations dans ses préférences système.
+Pensez aussi à utiliser la caractéristique média {{CSSxRef("@media/prefers-reduced-motion", "prefers-reduced-motion")}} — servez-vous-en pour écrire une [requête média](/fr/docs/Web/CSS/Guides/Media_queries) qui désactive les animations si l'utilisateur·ice a activé la réduction des animations dans ses préférences système.
 
 Pour en savoir plus&nbsp;:
 
 - [MDN Comprendre le WCAG, explications de la directive 2.3](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#règle_2.3_—_crises_et_réactions_physiques_ne_concevez_pas_de_contenu_susceptible_de_provoquer_des_crises_ou_des_réactions_physiques)
-- [Comprendre le critère de succès 2.3.3&nbsp;| W3C Understanding WCAG 2.1 <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
+- [Comprendre le critère de succès 2.3.3&nbsp;| Comprendre les WCAG 2.1 du W3C <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
 ## Exemples
 

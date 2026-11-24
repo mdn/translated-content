@@ -2,7 +2,7 @@
 title: Créer un champ de briques
 slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field
 l10n:
-  sourceCommit: 69937a446786abf5a58d4214b4192597d0b3cdc6
+  sourceCommit: edc9ab5479d1253d9edd93bfe90dd1d100605c26
 ---
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win")}}

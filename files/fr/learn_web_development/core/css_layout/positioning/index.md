@@ -2,7 +2,7 @@
 title: Le positionnement
 slug: Learn_web_development/Core/CSS_layout/Positioning
 l10n:
-  sourceCommit: 1b7c3c1e03f14c3878e4d8518b0f1a89bedfdc9c
+  sourceCommit: 1a2a5b56a689b441ebf3be91b90f15746c5a5a01
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Floats", "Learn_web_development/Core/CSS_layout/Test_your_skills/Position", "Learn_web_development/Core/CSS_layout")}}
@@ -41,7 +41,7 @@ Le positionnement permet de sortir les éléments du flux normal de la compositi
 Nous vous invitons à réaliser les exercices suivants sur votre ordinateur local. Pour commencer, créez un nouveau fichier HTML sur votre système local et ajoutez-y le contenu suivant&nbsp;:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
@@ -205,7 +205,7 @@ Si vous sauvegardez et actualisez à ce stade, vous ne voyez aucun changement da
 
 ### Présentation de `top`, `bottom`, `left` et `right`
 
-{{CSSxRef("top")}}, {{CSSxRef("bottom")}}, {{CSSxRef("left")}} et {{CSSxRef("right")}} sont utilisés conjointement à {{cssxref("position")}} pour définir exactement là où placer l'élément positionné. Pour le tester, ajoutez les déclarations suivantes à la règle `.positionne` dans le CSS&nbsp;:
+{{CSSxRef("top")}}, {{CSSxRef("bottom")}}, {{CSSxRef("left")}} et {{CSSxRef("right")}} sont utilisés conjointement à {{CSSxRef("position")}} pour définir exactement là où placer l'élément positionné. Pour le tester, ajoutez les déclarations suivantes à la règle `.positionne` dans le CSS&nbsp;:
 
 ```css live-sample___relative
 .positionne {
@@ -257,7 +257,7 @@ Si vous enregistrez et actualisez maintenant, vous voyez ce résultat&nbsp;:
 
 {{EmbedLiveSample("relative", "100%", 500)}}
 
-Cool, n'est-ce pas&nbsp;? Oui, mais ce n'est probablement pas ce à quoi vous vous attendiez. Pourquoi le déplacement s'est‑il effectué vers le bas et à droite si nous avons défini `top` (haut) et `left` (gauche)&nbsp;? Même si cela peut paraître illogique, c'est la façon dont fonctionne le positionnement relatif. Songez à une force invisible poussant le côté défini de l'élément à positionner, le déplaçant ainsi dans la direction opposée. Par exemple, si nous spécifions `top: 30px;`, une force pousse le haut de la boîte, entraînant son déplacement vers le bas de `30px`.
+Cool, n'est-ce pas&nbsp;? Oui, mais ce n'est probablement pas ce à quoi vous vous attendiez. Pourquoi le déplacement s'est‑il effectué vers le bas et à droite si nous avons défini `top` (haut) et `left` (gauche)&nbsp;? Même si cela peut paraître illogique, c'est la façon dont fonctionne le positionnement relatif. Songez à une force invisible poussant le côté défini de l'élément à positionner, le déplaçant ainsi dans la direction opposée. Par exemple, si nous définissons `top: 30px;`, une force pousse le haut de la boîte, entraînant son déplacement vers le bas de `30px`.
 
 ## Positionnement absolu
 
@@ -276,7 +276,7 @@ Modifions la déclaration de `position` dans le code&nbsp;:
 }
 ```
 
-Si vous enregistrez et actualisez maintenant, vous verrez quelque chose comme ceci apparaître&nbsp;:
+Si vous enregistrez et actualisez maintenant, vous voyez quelque chose comme ceci apparaître&nbsp;:
 
 ```html hidden live-sample___absolute
 <h1>Positionnement absolu</h1>
@@ -314,7 +314,7 @@ Si vous enregistrez et actualisez maintenant, vous verrez quelque chose comme ce
 
 {{EmbedLiveSample("absolute", "100%", 450)}}
 
-Tout d'abord, notez que l'emplacement où l'élément à positionner aurait dû se trouver dans le cours normal de la mise en page du document ne s'y trouve plus. Le premier élément et le troisième sont l'un à côté de l'autre comme si le second n'existe plus&nbsp;! Dans un sens, c'est le cas. Un élément positionné de manière absolue ne fait plus partie du cours normal de la mise en page. Il se trouve maintenant sur un plan qui lui est propre, séparé de tout le reste. C'est très utile&nbsp;: cela signifie que nous pouvons créer une fonctionnalité d'interface graphique isolée qui n'interfère pas avec la position des autres éléments sur la page. Par exemple, des fenêtres intrusives (<i lang="en">popup</i> en anglais), des menus de contrôle, des panneaux déroulants (<i lang="en">rollover panels</i>), des fonctionnalités d'interface utilisateur que l'on peut glisser et déposer n'importe où sur la page, et bien plus encore.
+Tout d'abord, notez que l'emplacement où l'élément à positionner doit se trouver dans le cours normal de la mise en page du document ne s'y trouve plus. Le premier élément et le troisième sont l'un à côté de l'autre comme si le second n'existe plus&nbsp;! Dans un sens, c'est le cas. Un élément positionné de manière absolue ne fait plus partie du cours normal de la mise en page. Il se trouve maintenant sur un plan qui lui est propre, séparé de tout le reste. C'est très utile&nbsp;: cela signifie que nous pouvons créer une fonctionnalité d'interface graphique isolée qui n'interfère pas avec la position des autres éléments sur la page. Par exemple, des fenêtres intrusives (<i lang="en">popup</i> en anglais), des menus de contrôle, des panneaux déroulants (<i lang="en">rollover panels</i>), des fonctionnalités d'interface utilisateur que l'on peut glisser et déposer n'importe où sur la page, et bien plus encore.
 
 Ensuite, notez que la position de l'élément a changé. {{CSSxRef("top")}}, {{CSSxRef("bottom")}}, {{CSSxRef("left")}} et {{CSSxRef("right")}} se comportent différemment avec le positionnement absolu. Au lieu de positionner l'élément en fonction de sa position relative dans la mise en page du document, ils définissent la distance à laquelle l'élément doit se situer par rapport aux côtés de l'élément contenant. Dans ce cas, nous indiquons que l'élément à positionner de manière absolue doit se placer à 30px du haut et à 30px de la gauche de «&nbsp;l'élément conteneur&nbsp;» (il s'agit dans ce cas, l'élément conteneur est le bloc conteneur initial, voir la section ci-dessous pour plus d'informations).
 
@@ -410,7 +410,7 @@ span {
 
 ### Introduction au `z-index`
 
-Tout ce positionnement absolu est amusant, mais il y a autre chose que nous n'avons pas encore considéré&nbsp;: quand les éléments se chevauchent, comment est déterminé l'élément apparaissant au-dessus d'un autre&nbsp;? Dans les exemples vus jusqu'à présent, nous n'avions qu'un seul élément à positionner dans le contexte&nbsp;; il apparaissait en haut, car les éléments positionnés l'emportent sur les éléments non positionnés. Qu'en est‑il lorsqu'il y en a plus d'un&nbsp;?
+Tout ce positionnement absolu est amusant, mais il y a autre chose que nous n'avons pas encore considéré&nbsp;: quand les éléments se chevauchent, comment est déterminé l'élément apparaissant au-dessus d'un autre&nbsp;? Dans les exemples vus jusqu'à présent, nous n'avions qu'un seul élément à positionner dans le contexte&nbsp;; il apparait en haut, car les éléments positionnés l'emportent sur les éléments non positionnés. Qu'en est‑il lorsqu'il y en a plus d'un&nbsp;?
 
 Ajoutez le code suivant à la CSS, pour faire en sorte que le premier paragraphe soit aussi en positionnement absolu&nbsp;:
 
@@ -425,7 +425,7 @@ p:nth-of-type(1) {
 
 À ce stade, vous voyez le premier paragraphe coloré en vert, déplacé hors du cours normal des documents et positionné un peu au-dessus de l'endroit où il se trouve à l'origine. Il est également empilé sous le paragraphe `.positionne` original, là où les deux se chevauchent. C'est parce que le paragraphe `.positionne` est le deuxième paragraphe dans l'ordre du code source HTML&nbsp;; les éléments positionnés en dernier dans l'ordre du code source l'emportent sur les éléments positionnés plus en amont dans l'ordre du code source.
 
-Est‑il possible de changer l'ordre d'empilement&nbsp;? Oui, vous le pouvez avec la propriété {{CSSxRef("z-index")}}. «&nbsp;<i lang="en">z-index</i>&nbsp;» est une référence à l'axe **z**. Vous vous souvenez peut-être de points précédents du cours où nous avions discuté des pages Web en utilisant des coordonnées horizontales (axe x pour les abscisses) et verticales (axe y pour les ordonnées) pour déterminer le positionnement de choses comme les images de fond et les décalages d'ombres portées. `(0,0)` est en haut à gauche de la page (ou de l'élément), et les axes x et y vont respectivement vers la droite et vers le bas de la page (pour les langues s'écrivant de gauche à droite, en tout cas).
+Est‑il possible de changer l'ordre d'empilement&nbsp;? Oui, vous le pouvez avec la propriété {{CSSxRef("z-index")}}. «&nbsp;<i lang="en">z-index</i>&nbsp;» est une référence à l'axe **z**. Vous vous souvenez peut-être de points précédents du cours où nous avons discuté des pages Web en utilisant des coordonnées horizontales (axe x pour les abscisses) et verticales (axe y pour les ordonnées) pour déterminer le positionnement de choses comme les images de fond et les décalages d'ombres portées. `(0,0)` est en haut à gauche de la page (ou de l'élément), et les axes x et y vont respectivement vers la droite et vers le bas de la page (pour les langues s'écrivant de gauche à droite, en tout cas).
 
 Les pages web ont aussi un axe z&nbsp;: une ligne imaginaire qui va de la surface de votre écran, vers votre visage. Les valeurs de {{CSSxRef("z-index")}} affectent l'emplacement des éléments positionnés sur cet axe&nbsp;; les valeurs positives les déplacent vers le haut de la pile, et les valeurs négatives les déplacent vers le bas de la pile. Par défaut, la propriété `z-index` des éléments positionnés vaut `auto`, qui est effectivement 0.
 
@@ -590,7 +590,7 @@ p:nth-of-type(1) {
 
 ## Positionnement adhérent
 
-Il existe une autre valeur de position appelée `position: sticky`, qui est un peu plus récente que les autres. Il s'agit en fait d'un hybride entre la position relative et la position fixe. Elle permet à un élément positionné de se comporter comme s'il était positionné de manière relative jusqu'à ce qu'il atteigne un certain seuil de défilement (par exemple, à 10px du haut de la fenêtre d'affichage), après quoi il devient fixe.
+Il existe une autre valeur de position appelée `position: sticky`, qui est un peu plus récente que les autres. Il s'agit en fait d'un hybride entre la position relative et la position fixe. Elle permet à un élément positionné de se comporter comme s'il est positionné de manière relative jusqu'à ce qu'il atteigne un certain seuil de défilement (par exemple, à 10px du haut de la fenêtre d'affichage), après quoi il devient fixe.
 
 ### Exemple simple
 

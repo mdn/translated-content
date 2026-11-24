@@ -14,7 +14,7 @@ Firefox 155 est sorti le [1er septembre 2026 <sup>(angl.)</sup>](https://whattra
 ### Outils de développement
 
 - Les boutons d'émulation des fonctionnalités média dans la [vue Règles <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html) sont désormais regroupés dans un panneau d'émulation dédié, qui s'ouvre en utilisant le bouton `@`.
-  Le panneau ajoute également l'émulation de la fonctionnalité média {{CSSxRef("@media/prefers-reduced-motion", "prefers-reduced-motion")}}.
+  Le panneau ajoute également l'émulation de la caractéristique média {{CSSxRef("@media/prefers-reduced-motion", "prefers-reduced-motion")}}.
   ([bogue Firefox 1692434 <sup>(angl.)</sup>](https://bugzil.la/1692434) et [bogue Firefox 1477920 <sup>(angl.)</sup>](https://bugzil.la/1477920)).
 - [L'observateur JSON <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) ouvre désormais les documents [JSON Lines <sup>(angl.)</sup>](https://jsonlines.org/) (NDJSON), qui sont servis en tant que `application/jsonl`, `application/jsonlines`, `application/x-ndjson` ou `text/jsonl`, ou qui ont une extension de fichier `.jsonl`.
   Chaque ligne est analysée séparément dans sa propre entrée repliable, étiquetée avec le numéro de ligne dont elle provient, et une ligne qui échoue à être analysée est signalée en incise sans affecter le reste du document.

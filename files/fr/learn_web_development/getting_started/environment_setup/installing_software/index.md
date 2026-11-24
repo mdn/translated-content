@@ -3,7 +3,7 @@ title: Installation des outils de base
 short-title: Installation des outils
 slug: Learn_web_development/Getting_started/Environment_setup/Installing_software
 l10n:
-  sourceCommit: afcdfa050626bb7eb05ee693df8997020db9ff2e
+  sourceCommit: d50a52075711e21da27bce5ee24f6334b56cf0f3
 ---
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}
@@ -61,7 +61,7 @@ La plupart des navigateurs modernes installent les mises à jour automatiquement
 
 ### Quels navigateurs installer
 
-Pour l'instant, vous devez installer quelques navigateurs de bureau et mobiles/alternatifs pour tester votre code. Installez des navigateurs basés sur au moins deux moteurs de rendu différents (par exemple Chromium et Gecko), afin de ne pas tester uniquement sur des navigateurs utilisant le même moteur de rendu. C'est important, car votre code peut contenir des bugs qui n'affectent qu'un seul moteur de rendu.
+Pour l'instant, vous devez installer quelques navigateurs de bureau et mobiles/alternatifs pour tester votre code. Installez des navigateurs basés sur au moins deux moteurs de rendu différents (par exemple Chromium et Gecko), afin de ne pas tester uniquement sur des navigateurs utilisant le même moteur de rendu. C'est important, car votre code peut contenir des bogues qui n'affectent qu'un seul moteur de rendu.
 
 Les navigateurs basés sur WebKit ne sont pas disponibles pour les systèmes d'exploitation Windows, Linux et Android. Si vous souhaitez tester votre code sur les trois principaux moteurs de rendu et que votre ordinateur est sous Windows, vous devez accéder à un appareil de test macOS ou iOS ou utiliser une solution logicielle telle qu'une machine virtuelle ou une plateforme de test. Vous n'avez pas besoin de vous inquiéter de tests complets à ce stade — reconnaître que vous devez tester votre code sur différents moteurs de rendu et obtenir un peu de pratique est suffisant pour l'instant.
 
@@ -105,7 +105,7 @@ La plupart de ces applications proposent des versions d'essai ou des modes gratu
 
 ## Outils de gestion de versions
 
-Les outils de **gestion de versions** permettent aux développeur·euse·s de gérer les fichiers sur des serveurs, de collaborer sur un projet, de partager du code et d'éviter les conflits d'édition. Actuellement, [Git](https://git-scm.com/) est le système de gestion de versions le plus populaire, avec des plateformes comme [GitHub](https://github.com/) ou [GitLab](https://about.gitlab.com/).
+Les outils de **gestion de versions** permettent aux développeur·euse·s de gérer les fichiers sur des serveurs, de collaborer sur un projet, de partager du code et d'éviter les conflits d'édition. Actuellement, [Git <sup>(angl.)</sup>](https://git-scm.com/) est le système de gestion de versions le plus populaire, avec des plateformes comme [GitHub](https://github.com/) ou [GitLab](https://about.gitlab.com/).
 
 Même si ces outils sont essentiels en équipe, vous n'avez pas à vous en préoccuper pour l'instant. Un module dédié à la [gestion de versions](/fr/docs/Learn_web_development/Core/Version_control) est prévu à la fin de la série des modules de base.
 
@@ -113,8 +113,8 @@ Même si ces outils sont essentiels en équipe, vous n'avez pas à vous en préo
 
 Une fois votre site ou application terminé·e (en local ou sur un serveur de développement), vous voulez le/la mettre en ligne sur un serveur web distant pour que vos utilisateur·ice·s puissent y accéder avec une adresse web&nbsp;!
 
-Il existe plusieurs façons de faire cela&nbsp;: acheter un hébergement et utiliser une [application SFTP](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#sftp), utiliser un service comme [GitHub Pages](https://pages.github.com/) ou [Netlify](https://www.netlify.com/), ou encore partager rapidement une démonstration avec [CodePen](https://codepen.io/) ou [JSFiddle](https://jsfiddle.net/).
+Il existe plusieurs façons de faire cela&nbsp;: acheter un hébergement et utiliser un [client (S)FTP](/fr/docs/Glossary/FTP), utiliser un service comme [GitHub Pages <sup>(angl.)</sup>](https://pages.github.com/) ou [Netlify <sup>(angl.)</sup>](https://www.netlify.com/), ou encore partager rapidement une démonstration avec [CodePen <sup>(angl.)</sup>](https://codepen.io/) ou [JSFiddle <sup>(angl.)</sup>](https://jsfiddle.net/).
 
-Cette liste peut sembler impressionnante, mais ne vous inquiétez pas — vous n'avez pas besoin de tout savoir sur la publication de sites pour l'instant. Nous abordons ce sujet à plusieurs reprises dans le cours. Vous avez bientôt l'occasion de le pratiquer dans notre module [Votre premier site web](/fr/docs/Learn_web_development/Getting_started/Your_first_website).
+Cette liste peut sembler impressionnante, mais ne vous inquiétez pas — vous n'avez pas besoin de tout savoir sur la publication de sites pour l'instant. Nous abordons ce sujet à plusieurs reprises dans le cours. Vous avez bientôt l'occasion de le pratiquer dans notre module [Votre premier site web](/fr/docs/Learn_web_development/Getting_started/Your_first_website), et en particulier dans l'article [Publier votre site web](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website).
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}

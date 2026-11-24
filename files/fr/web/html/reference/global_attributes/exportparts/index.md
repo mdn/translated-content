@@ -3,7 +3,7 @@ title: "Attribut HTML universel : `exportparts`"
 short-title: exportparts
 slug: Web/HTML/Reference/Global_attributes/exportparts
 l10n:
-  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
+  sourceCommit: 7484d45816002fbf082a59c5d95c38a1eb2b2e4b
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`exportparts`** permet de sélectionner et de mettre en forme des éléments présents dans des {{Glossary("shadow tree", "arbres d'ombre")}} imbriqués, en exportant leurs noms de `part`.
@@ -12,7 +12,7 @@ L'arbre d'ombre est une structure isolée où les identifiants, classes et style
 
 L'attribut universel [`part`](/fr/docs/Web/HTML/Reference/Global_attributes/part) rend un élément d'arbre d'ombre visible pour son DOM parent. Un nom de `part` est utilisé comme paramètre du pseudo-élément {{CSSxRef("::part", "::part()")}}. De cette façon, vous pouvez appliquer des styles CSS à des éléments dans l'arbre d'ombre depuis l'extérieur. Cependant, le pseudo-élément `::part()` n'est visible que pour le DOM parent. Cela signifie que lorsqu'un arbre d'ombre est imbriqué, les parties ne sont pas visibles pour les ancêtres autres que le parent direct. L'attribut `exportparts` résout cette limitation.
 
-L'attribut `exportparts` permet de rendre visibles les parties d'un arbre d'ombre en dehors du shadow DOM. Ce concept est appelé «&nbsp;exportation&nbsp;». L'attribut `exportparts` est placé sur _l'hôte d'ombre_ (<i lang="en">shadow host</i> en anglais), c'est-à-dire l'élément auquel _l'arbre d'ombre_ (<i lang="en">shadow tree</i> en anglais) est attaché. La valeur de cet attribut est une liste de noms de `part` séparés par des virgules, présents dans l'arbre d'ombre. Ces noms sont rendus disponibles pour les DOM extérieurs à la structure courante.
+L'attribut `exportparts` permet de rendre visibles les parties d'un arbre d'ombre en dehors du DOM d'ombre. Ce concept est appelé «&nbsp;exportation&nbsp;». L'attribut `exportparts` est placé sur _l'hôte d'ombre_ (<i lang="en">shadow host</i> en anglais), c'est-à-dire l'élément auquel _l'arbre d'ombre_ (<i lang="en">shadow tree</i> en anglais) est attaché. La valeur de cet attribut est une liste de noms de `part` séparés par des virgules, présents dans l'arbre d'ombre. Ces noms sont rendus disponibles pour les DOM extérieurs à la structure courante.
 
 ```html
 <template id="ancestor-component">
@@ -20,7 +20,7 @@ L'attribut `exportparts` permet de rendre visibles les parties d'un arbre d'ombr
 </template>
 ```
 
-Lorsque vous exportez un `part`, vous avez la possibilité d'attribuer un nom différent à la partie, comme illustré dans l'extrait ci-dessous. La valeur de l'attribut `exportparts` est en réalité une liste de correspondances de noms de parties, séparées par des virgules. Ainsi, l'attribut `exportparts` dans l'exemple de code ci-dessus équivaut à `exportparts="part1:part1, part2:part2, part5:part5"`, ce qui indique que chaque `part` est exporté avec le même nom. Dans chaque correspondance, la première chaîne indique le nom de la partie dans l'arbre d'ombre, et la seconde chaîne indique le nom sous lequel la partie sera exposée à l'extérieur.
+Lorsque vous exportez un `part`, vous avez la possibilité d'attribuer un nom différent à la partie, comme illustré dans l'extrait ci-dessous. La valeur de l'attribut `exportparts` est en réalité une liste de correspondances de noms de parties, séparées par des virgules. Ainsi, l'attribut `exportparts` dans l'exemple de code ci-dessus équivaut à `exportparts="part1:part1, part2:part2, part5:part5"`, ce qui indique que chaque `part` est exporté avec le même nom. Dans chaque correspondance, la première chaîne de caractères indique le nom de la partie dans l'arbre d'ombre, et la seconde chaîne de caractères indique le nom sous lequel la partie est exposée à l'extérieur.
 
 ```html
 <template id="ancestor-component">
@@ -37,7 +37,7 @@ Pour montrer comment `exportparts` est utilisé pour cibler des parties au sein 
 
 #### HTML
 
-Commencez par créer un composant de carte que nous envelopperons ensuite dans un autre composant. Nous utilisons également le nouvel élément créé, en remplissant les slots avec du texte simple comme contenu.
+Commencez par créer un composant de carte que nous enveloppons ensuite dans un autre composant. Nous utilisons également le nouvel élément créé, en remplissant les emplacements avec du texte simple comme contenu.
 
 ```html
 <template id="card-component-template">
@@ -97,7 +97,7 @@ Nous stylons des parties de l'arbre d'ombre du `<card-component>` en utilisant l
 
 ### Composant imbriqué
 
-En poursuivant l'exemple du `<card-component>`, nous créons un composant imbriqué en enveloppant le `<card-component>` dans un autre composant&nbsp;; ici, le composant `<card-wrapper>`. Nous exportons ensuite, avec l'attribut `exportparts`, les parties du composant imbriqué que nous souhaitons rendre stylables depuis l'extérieur de son arbre d'ombre.
+En poursuivant l'exemple du `<card-component>`, nous créons un composant imbriqué en enveloppant le `<card-component>` dans un autre composant&nbsp;; ici, le composant `<card-wrapper>`. Nous exportons ensuite, avec l'attribut `exportparts`, les parties du composant imbriqué que nous souhaitons rendre mis en forme depuis l'extérieur de son arbre d'ombre.
 
 #### HTML
 
@@ -219,11 +219,11 @@ Notez que `footer` n'est pas en gras lorsqu'il est imbriqué, car nous ne l'avon
 
 ### Exposer des parties mappées
 
-Pour renommer des parts exportées, incluez une liste séparée par des virgules de mappings, chaque mapping contenant le nom original et le nom exporté séparés par deux-points (`:`)&nbsp;:
+Pour renommer des parts exportées, incluez une liste séparée par des virgules d'associations, chaque association contenant le nom original et le nom exporté séparés par deux-points (`:`)&nbsp;:
 
 #### HTML
 
-Nous mettons à jour le composant `<card-wrapper>` précédent avec la syntaxe de remappage (en omettant `body` de la liste des parts exportées)&nbsp;:
+Nous mettons à jour le composant `<card-wrapper>` précédent avec la syntaxe de ré-association (en omettant `body` de la liste des parts exportées)&nbsp;:
 
 ```html hidden
 <template id="card-component-template">
@@ -292,7 +292,7 @@ customElements.define(
 
 #### CSS
 
-Lors du ciblage des parts du `<card-component>` depuis l'intérieur du `<card-wrapper>`, on ne peut styliser que les parts exportées avec leurs noms exposés&nbsp;:
+Lors du ciblage des parts du `<card-component>` depuis l'intérieur du `<card-wrapper>`, nous ne pouvons mettre en forme que les parts exportées avec leurs noms exposés&nbsp;:
 
 ```css
 /* sélectionne le nom des parties exportées */
@@ -326,5 +326,5 @@ Lors du ciblage des parts du `<card-component>` depuis l'intérieur du `<card-wr
 - La pseudo-classe CSS {{CSSxRef(":host")}}
 - L'interface API {{DOMxRef("ShadowRoot")}}
 - La propriété API {{DOMxRef("Element.part")}}
-- [Utilisation des templates et des slots](/fr/docs/Web/API/Web_components/Using_templates_and_slots)
+- [Utilisation des templates et des emplacements](/fr/docs/Web/API/Web_components/Using_templates_and_slots)
 - Le guide [de la portée CSS](/fr/docs/Web/CSS/Guides/Scoping)

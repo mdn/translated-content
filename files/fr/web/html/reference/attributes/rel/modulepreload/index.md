@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `rel="modulepreload"`
 short-title: modulepreload
 slug: Web/HTML/Reference/Attributes/rel/modulepreload
 l10n:
-  sourceCommit: fc7c0c6df803d5ce26e7b2a72725a7d021ed0694
+  sourceCommit: 696a0436bb4dd20eb4d30ac3f1d4fc5140d1eee9
 ---
 
 Le mot-clé **`modulepreload`** pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel) de l'élément HTML {{HTMLElement("link")}} offre un moyen déclaratif de précharger un [module JavaScript](/fr/docs/Web/JavaScript/Guide/Modules), de l'analyser, de le compiler et de le stocker dans la carte des modules du document pour une exécution ultérieure.
@@ -27,11 +27,11 @@ Un {{DOMxRef("Event/Event", "Event")}} nommé «&nbsp;error&nbsp;» est déclenc
 Un navigateur _peut_ également choisir de récupérer automatiquement les dépendances du module.
 Notez qu'il s'agit d'une optimisation propre à chaque navigateur — la seule façon de garantir que tous les navigateurs préchargent les dépendances d'un module est de les définir individuellement&nbsp;!
 De plus, les évènements nommés `load` ou `error` sont déclenchés immédiatement après le succès ou l'échec du chargement des ressources _définies_.
-Si les dépendances sont récupérées automatiquement, aucun évènement supplémentaire n'est déclenché dans le thread principal (mais il est possible de surveiller les requêtes dans un service worker ou sur le serveur).
+Si les dépendances sont récupérées automatiquement, aucun évènement supplémentaire n'est déclenché dans le processus principal (mais il est possible de surveiller les requêtes dans un service worker ou sur le serveur).
 
 ## Exemples
 
-Considérez l'exemple [basic-modules <sup>(angl.)</sup>](https://github.com/mdn/js-examples/tree/main/module-examples/basic-modules) ([version en ligne <sup>(angl.)</sup>](https://mdn.github.io/js-examples/module-examples/basic-modules/)), présenté dans le guide [Modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules#structure_de_lexemple).
+Considérez l'exemple [basic-modules <sup>(angl.)</sup>](https://github.com/mdn/js-examples/tree/main/module-examples/basic-modules) ([version en ligne <sup>(angl.)</sup>](https://mdn.github.io/js-examples/module-examples/basic-modules/)), présenté dans le guide [Modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules#travailler_avec_des_exemples).
 
 La structure de fichiers est la suivante, avec le module principal `main.js` qui importe statiquement deux modules dépendants `modules/canvas.js` et `modules/square.js` avec [l'instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import).
 
