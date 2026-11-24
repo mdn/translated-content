@@ -65,7 +65,7 @@ someElement.setHTMLUnsafe(untrustedString, { sanitizer });
 - {{domxref('SanitizerConfig')}} は、許可される要素や属性、およびコメントやデータ属性の許可・省略を示す論理値のプロパティなどを定義する配列を含む辞書オブジェクトです。
 
   冗長性や曖昧さを縮小するため、具体的な構成では、利用可能な構成オプションの一部のみを指定することができます。
-  許可される構成のサブセットについては、下記[許可と除去の設定](#許可と除去の設定)の節にまとめられており、詳細については[有効な構成](/ja/docs/Web/API/SanitizerConfig#valid_configuration)で説明されています。
+  許可される構成のサブセットについては、下記[許可と除去の設定](#許可と除去の設定)の節にまとめられており、詳細については[有効な構成](/ja/docs/Web/API/SanitizerConfig#有効な設定)で説明されています。
 
 - {{domxref('Sanitizer')}} は、本質的に {{domxref('SanitizerConfig')}} をラップしたもので、設定を直感的に変更し、その有効性を確実に実現するためのメソッドを提供します。
 
@@ -102,7 +102,7 @@ someElement.setHTMLUnsafe(untrustedString, { sanitizer });
 
 許可設定では、オプションで、`elements` 配列内の各要素に対する属性を許可するか、除去するかを指定できます。
 これらの local 属性に対する許可設定は、グローバルな `attributes` または `removedAttributes` が定義されているかどうかによって異なります。
-[有効な設定](/ja/docs/Web/API/SanitizerConfig#valid_configuration)の節に、制限事項の概要がまとめられています。
+[有効な設定](/ja/docs/Web/API/SanitizerConfig#有効な設定)の節に、制限事項の概要がまとめられています。
 
 一般的に、「許可設定」は要素と属性の双方にとってより安全です。なぜなら、危険である、あるいは将来的に危険と見なされる可能性があるすべての項目を列挙するのではなく、安全であると分かっている必要な要素や属性をリストアップするからです。
 空の設定オブジェクトを指定した場合、空の許可設定が使用されます。
