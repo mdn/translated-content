@@ -3,7 +3,7 @@ title: CSS テキスト
 short-title: テキスト
 slug: Web/CSS/Guides/Text
 l10n:
-  sourceCommit: 93b85a5bc2b4589d93185263fd2c14381c36f821
+  sourceCommit: 2f5d0e19eb706f36f837b84855f581f4bd087d15
 ---
 
 **CSS テキスト** (CSS text) モジュールは、改行、文字揃え、配置、ホワイトスペースの処理、テキスト変換などのテキスト操作の実行方法を定義します。
@@ -15,6 +15,7 @@ l10n:
 - {{cssxref("hanging-punctuation")}}
 - {{cssxref("hyphenate-character")}}
 - {{cssxref("hyphenate-limit-chars")}}
+- {{cssxref("hyphenate-limit-lines")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("letter-spacing")}}
 - {{cssxref("line-break")}}
@@ -22,6 +23,7 @@ l10n:
 - {{cssxref("tab-size")}}
 - {{cssxref("text-align")}}
 - {{cssxref("text-align-last")}}
+- {{cssxref("text-fit")}}
 - {{cssxref("text-indent")}}
 - {{cssxref("text-justify")}}
 - {{cssxref("text-autospace")}}
@@ -35,7 +37,7 @@ l10n:
 - {{cssxref("word-break")}}
 - {{cssxref("word-spacing")}}
 
-仕様書では `hyphenate-limit-last`, `hyphenate-limit-lines`, `hyphenate-limit-zone`, `line-padding`, `text-align-all`, `text-group-align`, `text-spacing`, `white-space-trim`, `word-space-transform`, `wrap-after`, `wrap-before`, `wrap-inside` の各プロパティも定義していますが、まだどのブラウザーも対応していません。
+仕様書では `hyphenate-limit-last`, `hyphenate-limit-zone`, `line-padding`, `text-align-all`, `text-group-align`, `text-spacing`, `word-space-transform`, `wrap-after`, `wrap-before` の各プロパティも定義していますが、まだどのブラウザーも対応していません。
 
 ## ガイド
 

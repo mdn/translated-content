@@ -2,7 +2,7 @@
 title: テキストの分割と折り返し
 slug: Web/CSS/Guides/Text/Wrapping_breaking_text
 l10n:
-  sourceCommit: 32bdfdb82cf91ce9942b694286dec62be2cc20aa
+  sourceCommit: 2f5d0e19eb706f36f837b84855f581f4bd087d15
 ---
 
 このガイドは CSS で管理することができるテキストのオーバーフローの様々な方法を説明します。
@@ -185,13 +185,13 @@ CSS はこのようにあふれて表示させますが、これは他の方法�
 
 また、 {{cssxref("hyphenate-character")}} プロパティを使用して、その言語の行末の既定のハイフネーション文字（ハイフネーション改行の前）の代わりに、任意の文字列を使用することもできます。 `auto` の値にすると、現在のコンテンツ言語の組版の慣例に従って、単語の途中の改行をマークする正しい値を選択します。
 
-CSS では、さらにハイフネーションの制御が可能です。 {{cssxref("hyphenate-limit-chars")}} プロパティを使用すると、ハイフネーションを許可する単語の最小の長さや、ハイフンの前後の最小文字数も設定できます。
+CSS では、さらにハイフネーションを制御できます。 {{cssxref("hyphenate-limit-chars")}} プロパティを使用すると、ハイフネーションを許可する単語の最小の長さや、ハイフンの前後の最小文字数を設定できます。また、 {{cssxref("hyphenate-limit-lines")}} プロパティを使用すると、ハイフネーションされた単語で終わる行が連続する数を制限できます。
 
 ## `<wbr>` 要素
 
-長い文字列を区切りたい場所がわかっている場合は、HTMLの {{HTMLElement("wbr")}} 要素を挿入することも可能です。これは、ページ上に長い URL を表示する場合などに便利です。このプロパティを追加することで、文字列を読みやすい場所で改行することができます。
+長い文字列のどこで改行できるようにしたいかがわかっている場合は、HTML の {{HTMLElement("wbr")}} 要素を使用することもできます。{{HTMLElement("wbr")}} 要素は改行機会を設けます。単語が行からはみ出す場合は、その位置で折り返されます。これにより、長い URL など、文字列内の意味のある区切りを保つことができます。
 
-以下の例では、 {{HTMLElement("wbr")}} の位置でテキストが改行されています。
+以下の例では、ブラウザーは {{HTMLElement("wbr")}} の位置でテキストを改行することがあります。
 
 ```html live-sample___wbr
 <div class="box">
@@ -220,4 +220,5 @@ CSS では、さらにハイフネーションの制御が可能です。 {{cssx
 - CSS の {{cssxref("hyphens")}} プロパティ
 - CSS の {{cssxref("hyphenate-character")}} プロパティ
 - CSS の {{cssxref("hyphenate-limit-chars")}} プロパティ
+- CSS の {{cssxref("hyphenate-limit-lines")}} プロパティ
 - [Overflow and Data Loss in CSS](https://www.smashingmagazine.com/2019/09/overflow-data-loss-css/)
