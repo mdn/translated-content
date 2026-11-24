@@ -30,8 +30,7 @@ l10n:
 
 {{domxref("HTMLScriptElement")}} 接口的 **`text`** 属性表示 {{HTMLElement("script")}} 元素内部的文本内容。
 
-对于可执行的脚本（即 {{domxref('HTMLScriptElement/type','type')}} 表明其为模块或经典脚本的脚本），此文本就是内联的可执行代码。
-对于其他类型，它可能表示导入映射、推测规则或其他类型的数据块。
+对于可执行的脚本（即 {{domxref('HTMLScriptElement/type','type')}} 表明其为模块或经典脚本的脚本），此文本就是内联的可执行代码。对于其他类型，它可能表示导入映射、推测规则或其他类型的数据块。
 
 注意，如果设置了 {{domxref('HTMLScriptElement/src','src')}} 属性，那么 `text` 属性的内容会被忽略。
 
