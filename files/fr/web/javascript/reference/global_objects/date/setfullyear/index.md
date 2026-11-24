@@ -3,7 +3,7 @@ title: "Date : méthode setFullYear()"
 short-title: setFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 l10n:
-  sourceCommit: b3840f6234d24ade72a43171fd6489dd533aaf15
+  sourceCommit: 98972b1f827b7374e28aee591a73044ffd8fb758
 ---
 
 La méthode **`setFullYear()`** des instances de {{JSxRef("Date")}} modifie l'année, le mois et/ou le jour du mois pour cette date selon l'heure locale.

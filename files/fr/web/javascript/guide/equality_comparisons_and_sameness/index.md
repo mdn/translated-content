@@ -2,7 +2,7 @@
 title: Comparaisons d'égalité et de similitude
 slug: Web/JavaScript/Guide/Equality_comparisons_and_sameness
 l10n:
-  sourceCommit: b7c5617fc1d8eb00c6884a708983da21ad61b228
+  sourceCommit: 99cfd882b48968c7678dba22b6da00643614503b
 ---
 
 JavaScript fournit trois opérations permettant de comparer des valeurs&nbsp;:
@@ -149,7 +149,7 @@ L'égalité de même valeur zéro seule diffère de l'égalité stricte en consi
 
 Les personnes comparent souvent le double égal et le triple égal en affirmant que l'un est une version «&nbsp;améliorée&nbsp;» de l'autre. Par exemple, on peut dire que le double égal est une version étendue du triple égal, car le premier fait tout ce que fait le second, mais avec une conversion de type sur ses opérandes — par exemple, `6 == "6"`. À l'inverse, on peut affirmer que le double égal est la référence, et que le triple égal en est une version améliorée, car il exige que les deux opérandes soient du même type, ajoutant ainsi une contrainte supplémentaire.
 
-Cependant, cette façon de penser implique que les comparaisons d'égalité forment un «&nbsp;spectre&nbsp;» unidimensionnel où «&nbsp;totalement strict&nbsp;» se situe à une extrémité et «&nbsp;totalement souple&nbsp;» à l'autre. Ce modèle ne tient pas la route avec {{JSxRef("Object.is()")}}, car celui-ci n'est ni «&nbsp;plus faible&nbsp;» que le double égal, ni «&nbsp;plus strict&nbsp;» que le triple égal, et ne se situe pas non plus entre les deux (c'est-à-dire à la fois plus strict que le double égal, mais plus faible que le triple égal). Nous pouvons voir dans le tableau de comparaison de l'égalité ci-dessous que cela est dû à la manière dont {{JSxRef("Object.is()")}} traite {{JSxRef("NaN")}}. Notez que si `Object.is(NaN, NaN)` donne `false`, on _peut_ dire qu'il se situe sur le spectre «&nbsp;faible/strict&nbsp;» en tant que forme encore plus stricte du triple égal, qui fait la distinction entre `-0` et `+0`. Cependant, la gestion de {{JSxRef("NaN")}} signifie que ce n'est pas le cas. Malheureusement, {{JSxRef("Object.is()")}} doit être considéré en fonction de ses caractéristiques spécifiques, plutôt qu'en fonction de son caractère «&nbsp;faible&nbsp;» ou «&nbsp;strict&nbsp;» par rapport aux opérateurs d'égalité.
+Cependant, cette façon de penser implique que les comparaisons d'égalité forment un «&nbsp;spectre&nbsp;» unidimensionnel où «&nbsp;totalement strict&nbsp;» se situe à une extrémité et «&nbsp;totalement souple&nbsp;» à l'autre. Ce modèle ne tient pas la route avec {{JSxRef("Object.is()")}}, car celui-ci n'est ni «&nbsp;plus faible&nbsp;» que le double égal, ni «&nbsp;plus strict&nbsp;» que le triple égal, et ne se situe pas non plus entre les deux (c'est-à-dire à la fois plus strict que le double égal, mais plus faible que le triple égal). Nous pouvons voir dans le tableau de comparaison de l'égalité ci-dessous que c'est dû à la manière dont {{JSxRef("Object.is()")}} traite {{JSxRef("NaN")}}. Notez que si `Object.is(NaN, NaN)` donne `false`, on _peut_ dire qu'il se situe sur le spectre «&nbsp;faible/strict&nbsp;» en tant que forme encore plus stricte du triple égal, qui fait la distinction entre `-0` et `+0`. Cependant, la gestion de {{JSxRef("NaN")}} signifie que ce n'est pas le cas. Malheureusement, {{JSxRef("Object.is()")}} doit être considéré en fonction de ses caractéristiques spécifiques, plutôt qu'en fonction de son caractère «&nbsp;faible&nbsp;» ou «&nbsp;strict&nbsp;» par rapport aux opérateurs d'égalité.
 
 | x                    | y                    | `==`       | `===`      | `Object.is` | `SameValueZero` |
 | -------------------- | -------------------- | ---------- | ---------- | ----------- | --------------- |
@@ -206,7 +206,7 @@ Se fier à {{JSxRef("Object.is")}} lorsque le signe des zéros n'est pas pris en
 
 ### Mise en garde : `Object.is()` et `NaN`
 
-La spécification de {{JSxRef("Object.is")}} considère toutes les instances de {{JSxRef("NaN")}} comme le même objet. Cependant, comme les [tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays) sont disponibles, nous pouvons avoir des représentations en virgule flottante distinctes de `NaN` qui ne se comportent pas de manière identique dans tous les contextes. Par exemple&nbsp;:
+{{JSxRef("Object.is()")}} considère toutes les instances de {{JSxRef("NaN")}} comme la même valeur. Cependant, comme les [tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays) sont disponibles, nous pouvons avoir des représentations en virgule flottante distinctes de `NaN` qui ne se comportent pas de manière identique dans tous les contextes. Par exemple&nbsp;:
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
