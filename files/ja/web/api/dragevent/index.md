@@ -2,33 +2,33 @@
 title: DragEvent
 slug: Web/API/DragEvent
 l10n:
-  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
+  sourceCommit: f74ea09f0510e670be74f76dc86d6e17e063d063
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
-**`DragEvent`** インターフェイスは、ドラッグ＆ドロップ操作を表す [DOM イベント](/ja/docs/Web/API/Event)です。ユーザーはタッチ面でポインティングデバイス（マウスなど）を置くことによりドラッグを開始して、ポインターを新たな場所（別の DOM 要素など）にドラッグします。アプリケーションは独自の方法で、ドラッグ＆ドロップの操作を自由に解釈できます。
+**`DragEvent`** インターフェイスは、ドラッグ＆ドロップ操作を表す [DOM イベント](/ja/docs/Web/API/Event)です。ユーザーは、ポインティングデバイス（マウスなど）をタッチ面に置いてポインターを動かし、新しい場所（別の DOM 要素など）へドラッグを開始します。アプリケーションは独自の方法で、ドラッグ＆ドロップ操作を解釈できます。
 
 このインターフェイスは、{{domxref("MouseEvent")}} および {{domxref("Event")}} からプロパティを継承しています。
 
 {{InheritanceDiagram}}
-
-## インスタンスプロパティ
-
-- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
-  - : ドラッグ＆ドロップ操作で動かされているデータです。
 
 ## コンストラクター
 
 このインターフェイスにはコンストラクターがありますが、役に立つ DataTransfer オブジェクトをスクリプトから作成することはできません。これは {{domxref("DataTransfer")}} オブジェクトに、ドラッグ＆ドロップ中にブラウザーによって調整される処理やセキュリティのモデルがあるためです。
 
 - {{domxref("DragEvent.DragEvent", "DragEvent()")}}
-  - : 合成された信頼されてない DragEvent を作成します。
+  - : 合成された、信頼されていない DragEvent を作成します。
+
+## インスタンスプロパティ
+
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : ドラッグ＆ドロップ操作で転送されるデータです。
 
 ## イベントの種類
 
 - {{domxref("HTMLElement/drag_event", "drag")}}
-  - : このイベントは、要素や選択テキストのドラッグが開始されているときに発生します。
+  - : このイベントは、要素や選択テキストをドラッグしている間に繰り返し発生します。発生頻度はブラウザー、オペレーティングシステム、ポインターの動きによって異なるため、間隔が一定であることを前提にしないでください。
 - {{domxref("HTMLElement/dragend_event", "dragend")}}
   - : このイベントは、（マウスボタンを離したり、Esc キーを押下したりして）ドラッグ操作が終了したときに発生します。
 - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
@@ -36,7 +36,7 @@ l10n:
 - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - : このイベントは、ドラッグされた要素や選択テキストが有効なドロップ先から出たときに発生します。
 - {{domxref("HTMLElement/dragover_event", "dragover")}}
-  - : このイベントは、要素や選択テキストが有効なドロップ先の上をドラッグされたときに発生します（マウスが動いていない場合は 50 ミリ秒ごとに、それ以外は 5 ミリ秒ごと（遅い動作）か 1 ミリ秒ごと（速い動作）の間隔です。この発生パターンは {{domxref("Element/mouseover_event", "mouseover")}} とは異なります）。
+  - : このイベントは、要素や選択テキストをドロップ先の候補の上でドラッグしている間に繰り返し発生します。発生頻度はブラウザー、オペレーティングシステム、ポインターの動きによって異なるため、間隔が一定であることを前提にしないでください。
 - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - : このイベントは、ユーザーが要素や選択テキストのドラッグを開始したときに発生します。
 - {{domxref("HTMLElement/drop_event", "drop")}}
