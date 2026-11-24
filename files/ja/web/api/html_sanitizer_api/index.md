@@ -2,7 +2,7 @@
 title: HTML 無害化 API
 slug: Web/API/HTML_Sanitizer_API
 l10n:
-  sourceCommit: 8a74d8feac267c1ddc37a4a8bc61e9aa8db75b12
+  sourceCommit: 933235fa4b0934142d7e235df41887dc48d2230f
 ---
 
 {{DefaultAPISidebar("HTML Sanitizer API")}}
@@ -30,7 +30,7 @@ HTML 無害化 API では、{{domxref("Element")}} や {{domxref("ShadowRoot")}}
   - : {{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}, {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
 
 すべてのメソッドは、挿入する HTML と、オプションの {{domxref("Sanitizer")}} または {{domxref("SanitizerConfig")}} を引数として取ります。
-サニタイザーオブジェクトは、挿入前に入力からフィルタリングされる HTML エンティティを定義します。
+サニタイザーオブジェクトは、挿入前に入力から除去する HTML エンティティを定義します。
 {{domxref('Element')}} メソッドはコンテキストを意識しており、さらに、HTML 仕様で対象要素内にできない要素をすべて削除します。
 
 安全なメソッドは、常に XSS の危険性がある要素や属性を除去します。
@@ -100,8 +100,8 @@ someElement.setHTMLUnsafe(untrustedString, { sanitizer });
 | (すべて)                      | `attributes` + `removeAttributes` | ❌     |
 | -                             | -                                 | ✔️     |
 
-許可設定では、オプションで、`elements` 配列内の各要素に対する属性を許可するか、および／または除去するかを指定できます。
-これらのlocal 属性に対する許可設定は、グローバルな `attributes` または `removedAttributes` が定義されているかどうかによって異なります。
+許可設定では、オプションで、`elements` 配列内の各要素に対する属性を許可するか、除去するかを指定できます。
+これらの local 属性に対する許可設定は、グローバルな `attributes` または `removedAttributes` が定義されているかどうかによって異なります。
 [有効な設定](/ja/docs/Web/API/SanitizerConfig#valid_configuration)の節に、制限事項の概要がまとめられています。
 
 一般的に、「許可設定」は要素と属性の双方にとってより安全です。なぜなら、危険である、あるいは将来的に危険と見なされる可能性があるすべての項目を列挙するのではなく、安全であると分かっている必要な要素や属性をリストアップするからです。
@@ -145,7 +145,7 @@ sanitizer.allowAttribute("onclick");
 
 「除去設定」では、除去したい HTML 要素と属性を指定します。他の要素や属性は、サニタイザーによって許可されます（ただし、安全なサニタイザーメソッドを使用している場合や、その要素がコンテキストで許可されていない場合は、ブロックされることがあります）。
 
-除去設定は、[`removeElements`](/ja/docs/Web/API/SanitizerConfig#removeelements) や [`removeAttributes`](/ja/docs/Web/API/SanitizerConfig#removeattributes) の配列（`elements` や `attributes` の配列ではありません）を含む {{domxreg("SanitizerConfig")}} を使用して作成します。
+除去設定は、[`removeElements`](/ja/docs/Web/API/SanitizerConfig#removeelements) や [`removeAttributes`](/ja/docs/Web/API/SanitizerConfig#removeattributes) の配列（`elements` や `attributes` の配列ではありません）を含む {{domxref("SanitizerConfig")}} を使用して作成します。
 
 例えば、次のような `Sanitizer` の設定では、前回コードで許可されていたのと同じ要素が除去されます。
 
@@ -204,7 +204,7 @@ XSS 対策済みのベースライン設定では、入力を XSS 対策済み�
 - {{htmlelement("embed")}}, {{htmlelement("frame")}}, {{htmlelement("iframe")}}, {{htmlelement("object")}}, {{htmlelement("script")}}, {{SVGElement("use")}}
 - `onafterprint` や `onbeforeinput` といった具合に、すべてのイベントハンドラーのコンテンツ属性です。
 
-この設定は、{{domxref("Element.setHTML()")}} およびそれ以外にも[安全な無害化メソッド](#sanitization_methods)に自動的に適用され、渡されたサニタイザーによって許可された場合でも、XSS に対して安全でない要素が出力から確実に除去されるように実現します。
+この設定は、{{domxref("Element.setHTML()")}} およびそれ以外にも[安全な無害化メソッド](#無害化メソッド)に自動的に適用され、渡されたサニタイザーによって許可された場合でも、XSS に対して安全でない要素が出力から確実に除去されるように実現します。
 同時に、{{domxref("Sanitizer")}} インスタンスに対して {{domxref("Sanitizer/removeUnsafe","removeUnsafe")}} を呼び出すことで、この設定を適用し、XSS 対策を行うことも可能です。
 
 #### デフォルトの無害化設定
@@ -237,7 +237,7 @@ XSS 対策済みのベースライン設定では、入力を XSS 対策済み�
 
 この場合、変換関数の動作はウェブサイトのポリシー（安全でないメソッドの使用をすべて拒否するといったもの）に依存することに注意してください。
 
-### サードパーティの無害化ライブラリー
+### サードパーティ製の無害化ライブラリー
 
 無害化 API が登場する以前は、開発者は通常、[DOMPurify](https://github.com/cure53/DOMPurify) などのサードパーティー製ライブラリーを使用して入力文字列をフィルタリングしていました。これらは、信頼型の変換関数から呼び出されることもありました。
 
@@ -252,7 +252,7 @@ XSS 対策済みのベースライン設定では、入力を XSS 対策済み�
     これは、HTML 文字列を DOM や Document に挿入するメソッドで使用されます。
 - {{domxref('SanitizerConfig')}}
   - : サニタイザーの設定を定義する辞書です。
-    これは {{domxref("Sanitizer')}} と同じ場所で使用できますが、使用や再利用の効率は劣る可能性があります。
+    これは {{domxref('Sanitizer')}} と同じ場所で使用できますが、使用や再利用の効率は劣る可能性があります。
 
 ## 他のインターフェイスへの拡張
 
@@ -279,7 +279,7 @@ XSS 対策済みのベースライン設定では、入力を XSS 対策済み�
     その後、そのサブツリーは、その要素のサブツリーとして DOM に挿入されます。
 - {{domxref('ShadowRoot.setHTMLUnsafe()')}}
   - : HTML 文字列をノードのサブツリーとして構文解析します。
-    その後、サニタイザーで許可されていない要素や属性をすべて削除します。サニタイザーが指定されていない場合は、すべての要素をすることができる。
+    その後、サニタイザーで許可されていない要素や属性をすべて削除します。サニタイザーが指定されていない場合は、すべての要素を許可します。
     その後、そのサブツリーは `ShadowRoot` のサブツリーとして挿入されます。
 - {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}
   - : HTML の文字列をノードのサブツリーとして構文解析します。
