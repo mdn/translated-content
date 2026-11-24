@@ -3,7 +3,7 @@ title: CSS プロパティ
 short-title: プロパティ
 slug: Web/CSS/Reference/Properties
 l10n:
-  sourceCommit: 26e03490d14803dc2ae8b85ec5c0c2b26d6b50d1
+  sourceCommit: 2f5d0e19eb706f36f837b84855f581f4bd087d15
 ---
 
 [CSS](/ja/docs/Web/CSS) **プロパティ**は、 [CSS 宣言](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_の宣言)で使用される引数で、選択した要素の特定の側面をスタイル設定するために使用します。
@@ -308,6 +308,7 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 - {{CSSxRef("height")}}
 - {{CSSxRef("hyphenate-character")}}
 - {{CSSxRef("hyphenate-limit-chars")}}
+- {{CSSxRef("hyphenate-limit-lines")}}
 - {{CSSxRef("hyphens")}}
 - {{CSSxRef("image-orientation")}}
 - {{CSSxRef("image-rendering")}}
@@ -443,6 +444,7 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 - {{CSSxRef("page-break-inside")}}
 - {{CSSxRef("page")}}
 - {{CSSxRef("paint-order")}}
+- {{CSSxRef("path-length")}}
 - {{CSSxRef("perspective-origin")}}
 - {{CSSxRef("perspective")}}
 - {{CSSxRef("place-content")}} （一括指定）
