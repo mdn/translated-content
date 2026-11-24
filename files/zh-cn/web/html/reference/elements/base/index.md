@@ -15,8 +15,7 @@ l10n:
 该元素的属性包括[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 > [!WARNING]
-> `<base>` 元素必须具有 `href` 属性、`target` 属性或同时具有两者。
-> 如果指定了其中至少一个属性，则 `<base>` 元素**必须**位于属性值为 URL 的其他元素之前，例如 {{HTMLElement("link")}} 的 `href` 属性。
+> `<base>` 元素必须具有 `href` 属性、`target` 属性或同时具有两者。如果指定了其中至少一个属性，则 `<base>` 元素**必须**位于属性值为 URL 的其他元素之前，例如 {{HTMLElement("link")}} 的 `href` 属性。
 
 - `href`
   - : 用于文档中相对 URL 的基础 URL。允许使用绝对 URL 和相对 URL。不允许使用 [`data:`](/zh-CN/docs/Web/URI/Reference/Schemes/data) 和 [`javascript:`](/zh-CN/docs/Web/URI/Reference/Schemes/javascript) URL。
