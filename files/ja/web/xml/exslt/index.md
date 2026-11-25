@@ -36,9 +36,9 @@ EXSLT Common パッケージは、XSLT の機能を拡張する基本的な関�
 - [`exsl:node-set()`](/ja/docs/Web/XML/EXSLT/Reference/exsl/node-set)
 - [`exsl:object-type()`](/ja/docs/Web/XML/EXSLT/Reference/exsl/object-type)
 
-### Math
+### 数学
 
-EXSLT の Math パッケージは、数値を扱ったり、ノードを比較したりするための関数を提供します。Math パッケージの名前空間は `http://exslt.org/math` です。
+EXSLT の数学パッケージは、数値を扱ったり、ノードを比較したりするための関数を提供します。数学パッケージの名前空間は `http://exslt.org/math` です。
 
 #### 関数
 
@@ -59,9 +59,9 @@ EXSLT 正規表現パッケージの名前空間は `http://exslt.org/regular-ex
 - [`regexp:replace()`](/ja/docs/Web/XML/EXSLT/Reference/regexp/replace)
 - [`regexp:test()`](/ja/docs/Web/XML/EXSLT/Reference/regexp/test)
 
-### セット
+### 集合
 
-EXSLT セットパッケージは、集合の操作ができる関数を提供します。これらの関数の名前空間は `http://exslt.org/sets` です。
+EXSLT 集合パッケージは、集合の操作ができる関数を提供します。これらの関数の名前空間は `http://exslt.org/sets` です。
 
 #### 関数
 
