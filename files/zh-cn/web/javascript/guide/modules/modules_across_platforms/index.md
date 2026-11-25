@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 1dc2c39b38fcfe047ea29d33a3d97c01b2791539
 ---
 
-MDN 聚焦于浏览器中的 JavaScript，但大多数开发者也会使用 Node、Deno 或 Bun 等其他运行时。虽然很容易假设[web 上的规则](/zh-CN/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web)适用于所有地方，但这些环境（以及打包器、类型检查器等许多工具）在解析和解释模块时各有各的规则。我们不会尝试记录非浏览器环境的每个细节，但本节提供了一个跨平台思考模块的心智模型，以及编写可移植模块代码的实用指南。
+MDN 聚焦于浏览器中的 JavaScript，但大多数开发者也会使用 Node、Deno 或 Bun 等其他运行时。虽然很容易假设 [web 上的规则](/zh-CN/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web)适用于所有地方，但这些环境（以及打包器、类型检查器等许多工具）在解析和解释模块时各有各的规则。我们不会尝试记录非浏览器环境的每个细节，但本节提供了一个跨平台思考模块的心智模型，以及编写可移植模块代码的实用指南。
 
 ## 其他模块格式
 
@@ -147,7 +147,7 @@ const text = await readFile(new URL("./data.txt", import.meta.url), "utf8");
 const wordCounts = _.countBy(_.words(text));
 ```
 
-使用 ESM 还是 CJS 的说明符解析规则，取决于导入方式，而不是目标模块。`require` 使用 CJS 模块说明符（包括在 ES 模块中由 `createRequire` 创建的那些），`import` 使用 ESM 说明符（包括 CJS 模块中的动态导入）。
+使用 ESM 还是 CJS 的说明符解析规则，取决于导入方式，而不是目标模块。`require`（包括在 ES 模块中由 `createRequire` 创建的那些）使用 CJS 模块说明符，而 `import`（包括 CJS 模块中的动态导入）使用 ESM 说明符。
 
 Node 的说明符解析还提供了一些额外特性，例如通过 `package.json` 中的 `"imports"` 实现导入别名。加载规则和 API 请参阅 [Node.js 的 ES 模块文档](https://nodejs.org/api/esm.html)。
 
@@ -175,7 +175,7 @@ import("./module-with-top-level-await.mjs").then((mod) => {
 });
 ```
 
-唯一的限制是 `require()` 无法加载使用[顶层 `await`](/zh-CN/docs/Web/JavaScript/Guide/Modules#顶层_await)的模块图：
+唯一的限制是 `require()` 无法加载使用[顶层 `await`](/zh-CN/docs/Web/JavaScript/Guide/Modules#顶层_await) 的模块图：
 
 ```js example-bad
 const mod = require("./module-with-top-level-await.mjs");
@@ -296,7 +296,7 @@ function area(side) {
 
 转译器的目标是：如果目标模块和导入模块都经过转译，就让你尽可能感觉像是在编写原生 ESM。具体来说，大多数转译器不会总是把 `import rectangle from "./rectangle";` 转换为加载整个 `module.exports` 对象。在上面的输出代码中，注意 `__esModule` 标记。该标记表明这个 CJS 模块是通过转译 ESM 语法产生的。大多数转译器会把默认导入编译为：如果存在该标记，则读取 `module.exports.default`（即转译后的 `export default` 声明所导出的值），否则读取 `module.exports`。
 
-缺点是，如果只有一侧经过转译，而另一侧在 Node 的原生 ESM 中运行，你可能突然会遇到粗糙的边缘（如 [ESM/CJS 互操作](#esmcjs_互操作)中所述）。例如，转译后的 `export default` 无法再在原生 ESM 中用默认导入来导入。
+缺点是，如果只有一侧经过转译，而另一侧在 Node 的原生 ESM 中运行，你可能突然会遇到不顺畅之处（如 [ESM/CJS 互操作](#esmcjs_互操作)中所述）。例如，转译后的 `export default` 无法再在原生 ESM 中用默认导入来导入。
 
 你需要阅读所用转译器的文档或进行实验，以了解不同种类的 `import` 和 `export` 声明如何被转译的具体规则。
 
@@ -518,7 +518,7 @@ export function area(side: number): number;
 
 模块的引入鼓励 JavaScript 生态以模块化方式分发和复用代码。然而，这并不一定意味着某段 JavaScript 代码可以在每个环境中运行。假设你发现了一个为用户密码生成 SHA 哈希的模块。你能在浏览器前端使用它吗？能在 Node.js 服务器上使用它吗？答案是：视情况而定。
 
-模块仍然可以访问全局变量，正如[什么是模块？](/zh-CN/docs/Web/JavaScript/Guide/Modules)中所展示的。如果模块引用了 `window` 这样的全局变量，它可以在浏览器中运行，但在 Node.js 服务器上会抛出错误，因为那里没有 `window`。同样，如果代码需要访问 `process` 才能工作，那它只能在 Node.js 中使用。
+模块仍然可以访问全局变量，正如[模块与经典脚本的其他不同](/zh-CN/docs/Web/JavaScript/Guide/Modules#模块与经典脚本的其他不同)中所展示的。如果模块引用了 `window` 这样的全局变量，它可以在浏览器中运行，但在 Node.js 服务器上会抛出错误，因为那里没有 `window`。同样，如果代码需要访问 `process` 才能工作，那它只能在 Node.js 中使用。
 
 为了最大限度地提高模块的可复用性，通常建议让代码“同构”——即让它在每个运行时中表现一致。这通常通过三种方式实现：
 
