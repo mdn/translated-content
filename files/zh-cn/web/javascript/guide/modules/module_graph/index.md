@@ -41,7 +41,7 @@ export function greet(name, localeName = config.defaultLocale) {
   } else if (locale.language === "fr") {
     log(`Bonjour, ${name} !`);
   } else {
-    throw new Error(`Sorry, I don't speak ${locale}.`);
+    throw new Error(`抱歉，我不会说 ${locale}。`);
   }
 }
 ```
@@ -247,7 +247,7 @@ export default {
   defaultLocale: "en-US",
 };
 
-throw new Error("Configuration unavailable");
+throw new Error("配置不可用");
 ```
 
 我们还在 `main.js` 现有导入之前再加一个依赖，只是为了展示某个模块成功完成求值的情况。
@@ -264,7 +264,7 @@ throw new Error("Configuration unavailable");
 
 ## 循环导入
 
-模块依赖图在链接和求值时会各用深度优先搜索（DFS）遍历两次（加载可以并发地以不确定的顺序遍历各分支，而循环对它的影响并不比普通的共享依赖更大）。这种策略对无环依赖图很有效，就像上面给出的示例。即使两个模块导入同一个模块，问题也很小——总有一个明确的“终点”（`config.js` 和 `logger.js`），可以从那里往回推进。我们只需要注意不要链接或求值同一模块两次。
+模块依赖图会在链接和求值过程中分别用深度优先搜索（DFS）遍历一次（加载可以并发地以不确定的顺序遍历各分支，而循环对它的影响并不比普通的共享依赖更大）。这种策略对无环依赖图很有效，就像上面给出的示例。即使两个模块导入同一个模块，问题也很小——总有一个明确的“终点”（`config.js` 和 `logger.js`），可以从那里往回推进。我们只需要注意不要链接或求值同一模块两次。
 
 然而，循环往往是不可避免的。如果模块 `a` 导入模块 `b`，而 `b` 直接或间接依赖 `a`，就产生了循环导入。例如，考虑最简单的双模块循环：
 
@@ -386,11 +386,11 @@ export function isEven(n) {
 }
 ```
 
-即使没有异步等待，`a.js` 中的 `isOdd` 绑定在链接期间、`a.js` 的主体运行之前就已用其函数对象初始化。这些模块只导出函数声明，且其函数不读取任何在模块求值期间初始化的状态，因此它们可以安全地相互调用。读取未初始化的 `let`、`const` 或 `class` 绑定仍会抛出异常，即使该绑定对某个导出函数所在的模块来说是私有的。
+即使没有异步等待，`a.js` 中的 `isOdd` 绑定在链接期间、`a.js` 的主体运行之前就已用其函数对象初始化。这些模块只导出函数声明，且其函数不读取任何在模块求值期间初始化的状态，因此它们可以安全地相互调用。读取未初始化的 `let`、`const` 或 `class` 绑定仍会抛出异常，即使该绑定是某个导出函数所在模块的私有绑定。
 
 ### 循环导入的错误
 
-当出现链接或求值错误时，问题会变得更复杂。假设我们在上面双模块循环中 `export const a = 2;` 之后加上 `throw new Error("Evaluation failed");`。朴素的遍历会在执行 `a.js` 之前就把 `b.js` 标记为成功求值，而 `a.js` 随后抛出异常：
+当出现链接或求值错误时，问题会变得更复杂。假设我们在上面双模块循环中 `export const a = 2;` 之后加上 `throw new Error("求值失败");`。朴素的遍历会在执行 `a.js` 之前就把 `b.js` 标记为成功求值，而 `a.js` 随后抛出异常：
 
 ![朴素的遍历会在 a.js 抛出异常之前把 b.js 标记为已求值。一个红色圆圈问号对 b.js 的成功状态表示质疑。](module-cycle-error.svg)
 
@@ -426,7 +426,7 @@ export function isEven(n) {
 // -- config.js --
 const response = await fetch("https://example.com/config.json");
 if (!response.ok) {
-  throw new Error(`Failed to fetch configuration: ${response.status}`);
+  throw new Error(`获取配置失败：${response.status}`);
 }
 export default await response.json();
 ```
@@ -504,7 +504,7 @@ import "./setup.js";
 console.log(globalThis.appLocale); // "en-US"
 ```
 
-如果 `setup.js` 和 `display.js` 是按这个顺序排列的两个独立 `<script type="module">` 元素的入口点，也会出现同样的问题。显式导入可以确保在这种情况下 `display.js` 也会等待 setup。
+如果 `setup.js` 和 `display.js` 是按这个顺序排列的两个独立 `<script type="module">` 元素的入口点，也会出现同样的问题。显式导入可以确保在这种情况下 `display.js` 也会等待 `setup.js`。
 
 ### 处理带顶层 await 的循环
 
@@ -512,7 +512,7 @@ console.log(globalThis.appLocale); // "en-US"
 
 ![一个异步模块图：a.js 导入 b.js 和 c.js；b.js 导入 d.js；c.js 导入 d.js 和 e.js；d.js 导入 a.js。每个模块都包含顶层 await。](module-async-cycle.svg)
 
-模块 `a.js`、`b.js`、`c.js` 和 `d.js` 构成一个 SCC。引擎先访问 `a.js`、`b.js` 和 `d.js`。当遇到 `d.js` 对 `a.js` 的导入时，它像之前一样跳出循环。此时 `a.js` 尚未被记录为等待异步完成，因此这条边不会让 `d.js` 等待 `a.js`。`d.js` 开始执行。接着引擎通过 `c.js` 访问另一个分支，发现 `d.js` 处于待定状态，于是开始执行 `e.js`。
+模块 `a.js`、`b.js`、`c.js` 和 `d.js` 构成一个 SCC。引擎先访问 `a.js`、`b.js` 和 `d.js`。当遇到 `d.js` 对 `a.js` 的导入时，它像之前一样跳出循环。此时 `a.js` 尚未被记录为等待异步完成，因此这条边不会让 `d.js` 等待 `a.js`。`d.js` 开始执行。接着引擎通过 `c.js` 访问另一个分支，发现 `d.js` 仍处于进行中状态，于是开始执行 `e.js`。
 
 假设异步操作按以下顺序完成：
 
@@ -548,7 +548,7 @@ await promise;
 
 如果从 `a.js` 开始求值，它会等待 `b.js` 完成后才执行主体。但 `b.js` 等待的 promise 只有通过 `a.js` 中对 `resolve()` 的调用才能兑现。两者都无法完成求值。模块算法不会自动拒绝这些 promise 来打破死锁。
 
-上面的例子看起来可能有些刻意。更现实的情况是等待一个依赖当前模块的模块的动态导入。
+上面的例子看起来可能有些刻意。更现实的情况是：你等待一个动态导入，而该导入的模块依赖当前模块。
 
 ```js
 // -- a.js --
