@@ -2,10 +2,8 @@
 title: Selector (セレクター) (CSS)
 slug: Glossary/CSS_Selector
 l10n:
-  sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
-
-{{GlossarySidebar}}
 
 **CSS セレクター**は CSS のルールの一部で、文書中のどの要素がルールと一致するかを記述します。一致した要素にはルールで指定されたスタイルが適用されます。
 
@@ -28,9 +26,9 @@ div.warning {
 
 #customized {
   font:
-    16px Lucida Grande,
-    Arial,
-    Helvetica,
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
