@@ -378,7 +378,7 @@ function getInstantWithLocalTimeInZone(
       }
       return possibilities[0].getTimeZoneTransition("next").toInstant();
   }
-  throw new RangeError(`invalid disambiguation ${disambiguation}`);
+  throw new RangeError(`无效的消歧模式 ${disambiguation}`);
 }
 
 const nonexistentGermanWallTime =
@@ -621,7 +621,7 @@ new Chart(ctx, {
     labels: graphLabels,
     datasets: [
       {
-        label: "Fill level",
+        label: "液位",
         data: graphPoints,
       },
     ],
@@ -629,7 +629,7 @@ new Chart(ctx, {
   options: {
     title: {
       display: true,
-      text: "Stockholm storage tank",
+      text: "斯德哥尔摩储罐",
     },
     scales: {
       yAxes: [
@@ -667,8 +667,8 @@ new Chart(ctx, {
 .time-5,
 .time-22,
 .time-23 {
-  background-color: #ef9a9a; /* red lighten-3 */
-  border-color: #e57373; /* red lighten-2 */
+  background-color: #ef9a9a; /* 浅红 3 */
+  border-color: #e57373; /* 浅红 2 */
   border-style: solid;
   border-width: 0 1px;
 }
@@ -678,8 +678,8 @@ new Chart(ctx, {
 .time-19,
 .time-20,
 .time-21 {
-  background-color: #fff59d; /* yellow lighten-3 */
-  border-color: #ffd54f; /* amber lighten-2 */
+  background-color: #fff59d; /* 浅黄 3 */
+  border-color: #ffd54f; /* 浅琥珀 2 */
   border-style: solid;
   border-width: 0 1px;
 }
@@ -693,8 +693,8 @@ new Chart(ctx, {
 .time-15,
 .time-16,
 .time-17 {
-  background-color: #a5d6a7; /* green lighten-3 */
-  border-color: #81c784; /* green lighten-2 */
+  background-color: #a5d6a7; /* 浅绿 3 */
+  border-color: #81c784; /* 浅绿 2 */
   border-style: solid;
   border-width: 0 1px;
 }
@@ -727,10 +727,10 @@ new Chart(ctx, {
 const browserCalendar = new Intl.DateTimeFormat().resolvedOptions().calendar;
 const now = Temporal.Now.zonedDateTimeISO().withCalendar(browserCalendar);
 const timeZones = [
-  { name: "Here", tz: now.timeZoneId },
-  { name: "New York", tz: "America/New_York" },
-  { name: "London", tz: "Europe/London" },
-  { name: "Tokyo", tz: "Asia/Tokyo" },
+  { name: "本地", tz: now.timeZoneId },
+  { name: "纽约", tz: "America/New_York" },
+  { name: "伦敦", tz: "Europe/London" },
+  { name: "东京", tz: "Asia/Tokyo" },
 ];
 
 // 表格从本地时间的午夜开始
@@ -781,10 +781,10 @@ timeZones.forEach(({ name, tz }) => {
 ```html
 <form>
   <label>
-    Enter future date:
+    输入未来日期：
     <input type="date" name="future-date" />
   </label>
-  <button>Submit</button>
+  <button>提交</button>
 </form>
 
 <div id="future-date-results"></div>
@@ -812,12 +812,11 @@ document.querySelector("form").addEventListener("submit", (event) => {
   const dayString = until.toLocaleString();
   const results = document.getElementById("future-date-results");
   results.innerHTML = `
-    <p>From and including: <strong>${today.toLocaleString()}</strong></p>
-    <p>To but not including: <strong>${futureDate.toLocaleString()}</strong></p>
-    <h4>Result: ${dayString}</h4>
-    <p>It is ${dayString} from the start date to the end date, but not
-    including the end date.</p>
-    <p>Or ${untilMonths.toLocaleString()} excluding the end date.</p>
+    <p>起始日期（含）：<strong>${today.toLocaleString()}</strong></p>
+    <p>结束日期（不含）：<strong>${futureDate.toLocaleString()}</strong></p>
+    <h4>结果：${dayString}</h4>
+    <p>从起始日期到结束日期（不含结束日期）共 ${dayString}。</p>
+    <p>或不计结束日期，共 ${untilMonths.toLocaleString()}。</p>
   `;
 });
 ```
@@ -850,7 +849,7 @@ console.log(`${result2}`); // 'PT240M'
 const duration = Temporal.Now.instant().until(
   Temporal.Instant.from("2020-04-01T13:00-07:00[America/Los_Angeles]"),
 );
-`It's ${duration.abs().toLocaleString()} ${duration.sign < 0 ? "since" : "until"} the TC39 Temporal presentation`;
+`距离 TC39 Temporal 演讲${duration.sign < 0 ? "已过去" : "还有"} ${duration.abs().toLocaleString()}`;
 ```
 
 ### 时区中的下一次偏移变更
