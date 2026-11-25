@@ -29,7 +29,7 @@ JavaScript 语言规范并未提供用于创建代理、获取对另一个代理
 const worker = new Worker("./worker.js", { type: "module" });
 ```
 
-父代理可以是一个窗口，也可以是另一个 worker。例如，要在浏览器中运行此示例，你可以在 HTML 文件中引用 `main.js`：
+父代理可以是一个 window，也可以是另一个 worker。例如，要在浏览器中运行此示例，你可以在 HTML 文件中引用 `main.js`：
 
 ```html
 <script src="main.js" type="module"></script>
@@ -66,7 +66,7 @@ const port = await new Promise((resolve, reject) => {
     (e) => {
       const port = e.data.hereIsYourPort;
       if (!(port instanceof MessagePort)) {
-        reject(new Error("I'm expecting a dedicated port"));
+        reject(new Error("我期望的是一个专用端口"));
         return;
       }
       resolve(port);
@@ -103,14 +103,14 @@ const secretNumber = 63;
 
 port1.addEventListener("message", (e) => {
   const workerGuess = e.data;
-  console.log("Worker guessed:", workerGuess);
+  console.log("worker 猜测：", workerGuess);
   if (workerGuess < secretNumber) {
-    port1.postMessage("Too low");
+    port1.postMessage("太小");
   } else if (workerGuess > secretNumber) {
-    port1.postMessage("Too high");
+    port1.postMessage("太大");
   } else {
-    port1.postMessage("Correct");
-    console.log("Worker successfully guessed the secret number!");
+    port1.postMessage("正确");
+    console.log("worker 成功猜出了秘密数字！");
   }
 });
 ```
@@ -127,19 +127,17 @@ let lastGuess = Math.floor((low + high) / 2);
 port.postMessage(lastGuess);
 port.addEventListener("message", (e) => {
   const feedback = e.data;
-  if (feedback === "Correct") {
-    console.log("Yay");
+  if (feedback === "正确") {
+    console.log("好耶！");
     return;
   }
-  if (feedback === "Too low") {
+  if (feedback === "太小") {
     low = lastGuess + 1;
-  } else if (feedback === "Too high") {
+  } else if (feedback === "太大") {
     high = lastGuess - 1;
   }
   if (low > high) {
-    throw new Error(
-      "Sorry, the feedback from main.js is inconsistent and I suspect main is cheating",
-    );
+    throw new Error("抱歉，来自 main.js 的反馈前后不一致，我怀疑 main 在作弊");
   }
   lastGuess = Math.floor((low + high) / 2);
   port.postMessage(lastGuess);
@@ -150,22 +148,26 @@ port.start();
 
 如果在浏览器中运行，worker 和主线程都会输出到同一个开发者工具控制台，因此你会看到如下输出：
 
+<!-- autocorrect-disable -->
+
 ```plain
-Worker guessed: 50                              main.js
-Worker guessed: 75                              main.js
-Worker guessed: 62                              main.js
-Worker guessed: 68                              main.js
-Worker guessed: 65                              main.js
-Worker guessed: 63                              main.js
-Worker successfully guessed the secret number!  main.js
-Yay                                             worker.js
+worker 猜测： 50                                main.js
+worker 猜测： 75                                main.js
+worker 猜测： 62                                main.js
+worker 猜测： 68                                main.js
+worker 猜测： 65                                main.js
+worker 猜测： 63                                main.js
+worker 成功猜出了秘密数字！                     main.js
+好耶！                                          worker.js
 ```
+
+<!-- autocorrect-enable -->
 
 ### 通过复制或转移发送消息
 
 你可以向 `postMessage` 传递许多种 JavaScript 值。在猜数字示例中，我们传递数字作为猜测、字符串作为反馈，以及对象作为 `MessagePort`。默认情况下，每个代理都有自己的[内存空间](/zh-CN/docs/Web/JavaScript/Reference/Execution_model#代理执行模型)，因此当对象从一个堆发送到另一个堆时，会在目标堆中创建它的副本。复制使用[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)，该算法只支持固定的数据类型集合。当你尝试复制不受支持的对象时，会抛出 {{domxref("DOMException")}}。
 
-![两个代理，一个 HTML 页面和一个 worker，各自包含一个带有一个对象的堆。标有 postMessage() 的箭头从页面堆中的对象指向 worker 堆中的对象。](message-copy-diagram.svg)
+![两个代理（一个 HTML 页面和一个 worker）各自包含一个堆，堆中有一个对象。标有 postMessage() 的箭头从页面的堆中的对象指向 worker 的堆中的对象。](message-copy-diagram.svg)
 
 复制对象使发送方和接收方可以独立操作该对象而互不影响。缺点是该对象会在接收方的作用域中重新构造，这意味着：
 
@@ -174,7 +176,7 @@ Yay                                             worker.js
 
 为了解决这些问题，你可以改为*转移*对象，而不是复制。转移对象在目标域中构造它时使用略有不同的算法，并在源域中将其标记为*已分离*。源对象仍然存在，但其被转移的资源现在可以通过目标域中的新对象访问：
 
-![一个 HTML 页面和一个 worker 各自包含一个堆。页面堆中的原对象是灰色的、带有虚线边框，并标记为“已分离”。标有“Transfer”的箭头指向 worker 堆中的绿色对象。](message-transfer-diagram.svg)
+![一个 HTML 页面和一个 worker 各自包含一个堆。页面的堆中的原对象是灰色的、带有虚线边框，并标记为“已分离”。标有“转移”的箭头指向 worker 的堆中的绿色对象。](message-transfer-diagram.svg)
 
 要转移对象，你仍然把它（或包含它的其他对象）传给 `postMessage()`。`postMessage()` 的第二个参数接收消息中应当转移而非复制的对象列表。这就解释了猜数字游戏中的下面这行代码：
 
@@ -208,11 +210,11 @@ console.log(buffer2.byteLength); // 1024
 
 除了复制和转移之外，还有第三种数据传递模型：_共享_。在共享模式下，双方持有共享同一底层内存的对象。内存共享仅适用于 {{jsxref("SharedArrayBuffer")}} 对象。发送方和接收方仍然持有不同的 `SharedArrayBuffer` 对象实例，但它们是指向同一段内存的指针，一侧的修改对另一侧可见。
 
-![一个 HTML 页面和一个 worker 各自包含一个带有 SharedArrayBuffer 对象的堆。标有“Sharing”的虚线双向箭头连接这两个对象，它们指向同一底层内存。](message-sharing-diagram.svg)
+![一个 HTML 页面和一个 worker 各自包含一个堆，堆中有一个 SharedArrayBuffer 对象。标有“共享”的虚线双向箭头连接这两个对象，它们指向同一底层内存。](message-sharing-diagram.svg)
 
 ### 启用共享内存
 
-内存共享本身并不危险；然而，它可以用来实现高精度时钟（这里不展开细节），而后者被揭示可用于 [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>) 攻击。为此，浏览器将共享内存的访问限制为仅[跨源隔离](/zh-CN/docs/Web/API/Window/crossOriginIsolated)的网站。
+内存共享本身并不危险；然而，它可以用来实现高精度时钟（这里不展开细节），而后者被发现可用于 [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>) 攻击。为此，浏览器将共享内存的访问限制为仅[跨源隔离](/zh-CN/docs/Web/API/Window/crossOriginIsolated)的网站。
 
 > [!NOTE]
 > 如果你使用的是 Node.js 来完成本教程（这意味着你一直将前面的示例适配为 Node 特有的 API），可以忽略本节，因为共享内存在 Node.js 中默认可用。
@@ -231,7 +233,7 @@ console.log(window.crossOriginIsolated); // true
 console.log("SharedArrayBuffer" in window); // true
 ```
 
-现在你可以共享内存了，但仅限于一个[代理集群](/zh-CN/docs/Web/JavaScript/Reference/Execution_model#代理集群与内存共享)内——即使代理之间建立了消息通道，你也无法与集群之外的代理共享内存。一个窗口及其专用 worker 位于同一集群，因此我们的示例可以正常工作。
+现在你可以共享内存了，但仅限于一个[代理集群](/zh-CN/docs/Web/JavaScript/Reference/Execution_model#代理集群与内存共享)内——即使代理之间建立了消息通道，你也无法与集群之外的代理共享内存。一个 window 及其专用 worker 位于同一集群，因此我们的示例可以正常工作。
 
 ### 使用共享缓冲区
 
@@ -298,12 +300,12 @@ const { port, sab } = await new Promise((resolve, reject) => {
     (e) => {
       const port = e.data.hereIsYourPort;
       if (!(port instanceof MessagePort)) {
-        reject(new Error("I'm expecting a dedicated port"));
+        reject(new Error("我期望的是一个专用端口"));
         return;
       }
       const sab = e.data.andHereIsOurSAB;
       if (!(sab instanceof SharedArrayBuffer)) {
-        reject(new Error("I'm expecting a shared array buffer"));
+        reject(new Error("我期望的是一个共享数组缓冲区"));
         return;
       }
       resolve({ port, sab });
@@ -313,7 +315,7 @@ const { port, sab } = await new Promise((resolve, reject) => {
 });
 ```
 
-要验证这套设置是否有效，可以尝试通过消息协调一次简短的写 - 读交换。worker 立即更新 `SharedArrayBuffer` 并向主线程发送一条消息。主线程收到该消息后读取新值。稍后我们会讨论更高效的通信方式。
+要验证这套设置是否有效，可以尝试通过消息协调一次简短的写入—读取交换。worker 立即更新 `SharedArrayBuffer` 并向主线程发送一条消息。主线程收到该消息后读取新值。稍后我们会讨论更高效的通信方式。
 
 ```js
 // -- main.js --
@@ -328,7 +330,7 @@ port1.addEventListener("message", (e) => {
 // -- worker.js --
 const int8 = new Int8Array(sab);
 int8[0] = 63;
-port.postMessage("I've modified the memory. Please check");
+port.postMessage("我已修改内存，请检查");
 ```
 
 ## 使用 Atomics 访问共享内存
@@ -342,7 +344,7 @@ port.postMessage("I've modified the memory. Please check");
 
 基于事件的协调的问题在于事件是异步的：步骤 2 和 3 之间的时间取决于浏览器的事件循环。在这种情况下，你完全可以直接来回传递值而不依赖共享内存。共享内存的优势恰恰在于你可以（在大多数情况下）同步通信，而不必把作业队列让给其他异步任务。
 
-在单个代理中，[运行至完毕](/zh-CN/docs/Web/JavaScript/Reference/Execution_model#运行至完毕)语义确保了多个同步作业之间良好的效果顺序：
+在单个代理中，[运行至完毕](/zh-CN/docs/Web/JavaScript/Reference/Execution_model#“运行至完毕”)语义确保了多个同步作业之间良好的效果顺序：
 
 ```js
 const promise = Promise.resolve();
@@ -413,14 +415,14 @@ port.postMessage("finished");
 // -- main.js --
 const a = new Int32Array(sab);
 a[0] = 63;
-console.log("Main:", a[1]);
+console.log("主线程：", a[1]);
 ```
 
 ```js
 // -- worker.js --
 const a = new Int32Array(sab);
 a[1] = 15;
-console.log("Worker:", a[0]);
+console.log("worker 线程：", a[0]);
 ```
 
 理论上，无论这些操作如何排序，只要每个代理按顺序执行自己的代码，至少有一条日志必须非 `0`（试着列出这四条语句所有可能的顺序，约束条件是 `a[0] = 63` 在 `console.log(a[1])` 之前，`a[1] = 15` 在 `console.log(a[0])` 之前！）。然而在现实中，两条日志可能都打印 0。这可能是由以下顺序造成的：
@@ -439,14 +441,14 @@ console.log("Worker:", a[0]);
 // -- main.js --
 const a = new Int32Array(sab);
 Atomics.store(a, 0, 63);
-console.log("Main:", Atomics.load(a, 1));
+console.log("主线程：", Atomics.load(a, 1));
 ```
 
 ```js
 // -- worker.js --
 const a = new Int32Array(sab);
 Atomics.store(a, 1, 15);
-console.log("Worker:", Atomics.load(a, 0));
+console.log("worker 线程：", Atomics.load(a, 0));
 ```
 
 在这里，虽然其中一条日志仍可能显示 `0`（例如因为主线程的 `load` 发生在 worker 的 `store` 之前），但可以保证两者绝不会同时为 `0`。
@@ -514,7 +516,7 @@ for (let n = 0; n < 10_000_000; n++) {
 port.postMessage("finished");
 ```
 
-与之前的数据竞争示例相比，唯一的区别是我们把两处 `i[0] += 1` 语句都替换成了 `Atomics.add(i, 0, 1)`。但现在，它不仅具有与 `load`/`store` 相同的“顺序一致”保证，每个读取 - 修改 - 写入序列块也被保证是原子的，因此有两个原子块，它们可以自由排序但绝不会交错：
+与之前的数据竞争示例相比，唯一的区别是我们把两处 `i[0] += 1` 语句都替换成了 `Atomics.add(i, 0, 1)`。但现在，它不仅具有与 `load`/`store` 相同的“顺序一致”保证，每个读取—修改—写入序列块也被保证是原子的，因此有两个原子块，它们可以自由排序但绝不会交错：
 
 1. 原子块：
    1. `main.js` 把 `i[0]` 读为 `currentI`
@@ -566,7 +568,7 @@ function atomicMultiply(array, index, multiplier) {
 }
 ```
 
-这个函数在循环中自旋。每次它都尝试写入 `oldValue * multiplier`，前提是在其原子块执行期间该索引处的值仍是 `oldValue`。如果值已改变，就用新的 `oldValue` 重试。
+这个函数在循环中自旋。每次它都尝试写入 `oldValue * multiplier`，前提是在执行其原子块时该索引处的值仍是 `oldValue`。如果值已改变，就用新的 `oldValue` 重试。
 
 还有一个无条件的交换方法 {{jsxref("Atomics.exchange()")}}。该方法可替代以下序列：
 
@@ -576,7 +578,7 @@ array[index] = newValue;
 return oldValue;
 ```
 
-当你想要重置某些内存，同时获取重置时的值时，可以使用该方法。例如，它可以用于时钟：
+当你想要重置某些内存，同时获取重置时的值时，可以使用该方法。例如，它可以用于实现时钟：
 
 ```js
 // -- worker.js --
@@ -595,7 +597,7 @@ const ticksSinceLastCheck = Atomics.exchange(a, 0, 0);
 
 ## 等待和通知
 
-在上面的示例中，凡是代理等待另一个代理完成操作的地方，我们都使用了无限循环，例如 `while (Atomics.load(a, 1) !== 1);`。这称为[忙等待](https://en.wikipedia.org/wiki/Busy_waiting)。本质上，它会阻塞整个线程执行其他作业，直到其他某个线程写入它期望的值。你可以在 `while` 循环中调用 {{jsxref("Atomics.pause()")}} 来稍微提高效率。该方法可能会告诉 CPU 分配更少的资源，因为它只是在等待而并没有真正进行计算，同时又不要求 CPU 立即让出给其他线程。
+在上面的示例中，凡是代理等待另一个代理完成操作的地方，我们都使用了无限循环，例如 `while (Atomics.load(a, 1) !== 1);`。这称为[忙等待](https://en.wikipedia.org/wiki/Busy_waiting)。本质上，它会阻塞整个线程执行其他作业，直到其他某个线程写入它期望的值。你可以在 `while` 循环中调用 {{jsxref("Atomics.pause()")}} 来稍微提高效率。该方法可能会告诉 CPU 分配更少的资源，因为它只是在等待而并没有真正进行计算，同时又不要求立即把 CPU 让给其他线程。
 
 ```js
 // -- worker.js --
@@ -754,7 +756,7 @@ try {
 
 ### 自旋锁
 
-在上面的示例中，等待锁的代理会进入休眠，并需要其他代理通过 `unlock()` 通知它。这在竞争激烈时很高效，因为锁可能不会很快获得，最好把 CPU 让给不需要该锁的其他进程。但在竞争不激烈时，比起在等待时直接占用 CPU，让线程被调度进出的开销更大。
+在上面的示例中，等待锁的代理会进入休眠，并需要其他代理通过 `unlock()` 通知它。这在竞争激烈时很高效，因为锁可能不会很快获得，最好把 CPU 让给不需要该锁的其他进程。但在竞争不激烈时，与在等待时直接占用 CPU 相比，把线程调度进和调度出 CPU 会带来额外开销。
 
 *自旋锁*使用忙等待，而不是让竞争者休眠。要把前面的互斥量改造成自旋锁，只需把它的函数替换为：
 
@@ -789,7 +791,7 @@ const permits = new Int32Array(sab);
 permits[0] = 3;
 ```
 
-每个 worker 都创建该缓冲区自己的视图，并使用以下函数：
+每个 worker 各自创建该缓冲区的视图，并使用以下函数：
 
 ```js
 const permits = new Int32Array(sab);
@@ -917,7 +919,7 @@ function atomicMultiply(array, index, multiplier) {
 
 这里没有显式的锁。代理并不主动强制临界区；它只是反复重试读写序列，直到期间没有竞争者为止。这使无竞争的情况尽可能快，但在竞争激烈时可能会重试很多次。
 
-### 生产者–消费者交接
+### 生产者—消费者交接
 
 两个线程需要访问同一内存的常见情形是：一个是*生产者*，另一个是*消费者*。使用普通的锁时，每次两个代理都要竞争同一把锁；如果数据尚未就绪（例如生产者发现消费者还没读取，或消费者发现生产者还没写入；你还需要单独的就绪标志来跟踪这一点），该代理就会重新休眠，让另一个代理获取锁；这很低效。*交接*模式让两个代理轮流执行，把锁和就绪标志合并到同一个协议中。
 
@@ -965,7 +967,7 @@ console.log(consume()); // 63
 console.log(consume()); // 64
 ```
 
-该协议依赖于恰好有一个生产者和一个消费者。如果有多个生产者，两个代理可能都看到空槽并互相覆盖数据，因此你仍然需要在生产者之间使用互斥量。消费者也是如此。不过，相比在所有生产者和消费者之间共享一把锁，这仍是一种改进：它让控制权在*生产者组*和消费者组之间无竞争地交替。
+该协议依赖于恰好有一个生产者和一个消费者。如果有多个生产者，两个代理可能都看到空槽并互相覆盖数据，因此你仍然需要在生产者之间使用互斥量。消费者也是如此。不过，相比在所有生产者和消费者之间共享一把锁，这仍是一种改进：它让控制权在*生产者组*和*消费者组*之间无竞争地交替。
 
 ## 使用共享内存的猜数字游戏
 
@@ -1001,7 +1003,7 @@ while (true) {
   }
 
   const workerGuess = shared[1];
-  console.log("Worker guessed:", workerGuess);
+  console.log("worker 猜测：", workerGuess);
   const feedback =
     workerGuess < secretNumber ? -1 : workerGuess > secretNumber ? 1 : 0;
 
@@ -1010,7 +1012,7 @@ while (true) {
   Atomics.notify(shared, 0, 1);
 
   if (feedback === 0) {
-    console.log("Worker successfully guessed the secret number!");
+    console.log("worker 成功猜出了秘密数字！");
     break;
   }
 }
@@ -1042,7 +1044,7 @@ while (true) {
 
   const feedback = shared[1];
   if (feedback === 0) {
-    console.log("Yay");
+    console.log("好耶！");
     break;
   }
   if (feedback === -1) {
@@ -1051,9 +1053,7 @@ while (true) {
     high = lastGuess - 1;
   }
   if (low > high) {
-    throw new Error(
-      "Sorry, the feedback from main.js is inconsistent and I suspect main is cheating",
-    );
+    throw new Error("抱歉，来自 main.js 的反馈前后不一致，我怀疑 main 在作弊");
   }
 }
 ```
