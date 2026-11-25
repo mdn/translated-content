@@ -316,6 +316,7 @@ https://example.com
     │   └── node_modules
     │       └── lodash  <-- v3；包 A 会使用这个版本
     └── package-b
+```
 
 要在不重写源代码的情况下直接把这个 `node_modules` 部署到网站，你必须让导入映射把 `package-a` 内模块的 `lodash` 说明符解析到与 `package-b` 不同的地址。你可以用 `scopes` 对象来实现，如下所示：
 
