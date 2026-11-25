@@ -20,16 +20,16 @@ l10n:
 
 ```html
 <ul id="list">
-  <li>First (1)</li>
-  <li>Second (2)</li>
-  <li>Third (3)</li>
+  <li>第一（1）</li>
+  <li>第二（2）</li>
+  <li>第三（3）</li>
 </ul>
 ```
 
 ```js
 const list = document.getElementById("list");
 console.log(list.lastElementChild.textContent);
-// 输出 "Third (3)"
+// 输出“第三（3）”
 ```
 
 ## 规范
