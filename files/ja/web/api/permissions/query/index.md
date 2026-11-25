@@ -1,13 +1,20 @@
 ---
-title: Permissions.query()
+title: "Permissions: query() メソッド"
+short-title: query()
 slug: Web/API/Permissions/query
 l10n:
-  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
+  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
 ---
 
-{{APIRef("Permissions API")}}
+{{APIRef("Permissions API")}}{{AvailableInWorkers}}
 
-**`Permissions.query()`** は {{domxref("Permissions")}} インターフェイスのメソッドで、グローバルスコープに対するユーザーの権限の状態を返します。
+**`query()`** は {{domxref("Permissions")}} インターフェイスのメソッドで、グローバルスコープにおけるユーザー権限の状態を返します。
+
+ユーザー権限の名前は、それぞれの機能の仕様書で定義されています。
+ブラウザーのバージョンごとに対応している権限は、{{domxref("Permissions")}} インターフェイスの[互換性データ](/ja/docs/Web/API/Permissions#ブラウザーの互換性)に一覧表示されています。
+関連するソースコードも確認できます（[Firefox の値](https://searchfox.org/firefox-main/source/dom/webidl/Permissions.webidl#10)、[Chromium の値](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl)、[WebKit の値](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl)）。
+
+それぞれの権限によって制限される API は、[権限 API で照会できる API](/ja/docs/Web/API/Permissions_API#権限_API_で照会できる_API) に一覧表示されています。この一覧は[権限 API](/ja/docs/Web/API/Permissions_API) の概要記事にあります。
 
 ## 構文
 
@@ -18,19 +25,19 @@ query(permissionDescriptor)
 ### 引数
 
 - `permissionDescriptor`
-  - : 名前と値のペアのカンマ区切りリストで構成される、`query` 操作のオプションを設定するオブジェクト。 利用可能なオプションは次のとおりです。
+  - : `query` 操作のオプションを設定するオブジェクトです。この記述子で利用できるオプションは、権限の種類によって異なります。
+
+    すべての権限には名前があります。
     - `name`
-      - : 権限を照会したい API の名前です。対応している値の集合はブラウザーごとに異なります。 Firefox の値は[こちら](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10)、 Chromium の値は[こちら](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl)、 WebKit の値は[こちら](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl)にあります。
-    - `userVisibleOnly`
-      - : （Push のみ。 Firefox は対応していません。 下記のブラウザーの互換性の節を参照してください）すべてのメッセージについて通知を表示するか、サイレントプッシュ通知を送信できるかを示します。 既定値は `false` です。
-    - `sysex` （Midi のみ）
-      - : システムエクスクルーシブメッセージが必要か受信するかどうかを示します。 既定値は `false` です。
+      - : 照会する API の権限名を含む文字列です。例えば、`camera`、`bluetooth`、`microphone`、`geolocation` です（より詳しい一覧は {{domxref("Permissions")}} インターフェイスの[互換性データ](/ja/docs/Web/API/Permissions#ブラウザーの互換性)を参照してください）。ブラウザーがその権限名に対応していない場合、返される {{jsxref("Promise")}} は {{jsxref("TypeError")}} で拒否されます。
 
-> [!NOTE]
-> Firefox 44 以降、[通知](/ja/docs/Web/API/Notifications_API)と[プッシュ](/ja/docs/Web/API/Push_API)の権限が統合されました。 （例えば、ユーザーによって、関連する権限のダイアログにより）権限が与えられた場合、 `navigator.permissions.query()` は `notifications` と `push` の両方に対して `true` を返します。
+    `push` 権限では、次のオプションも指定できます。
+    - `userVisibleOnly` {{optional_inline}}
+      - : （Push のみ。Firefox は未対応です。下記の「ブラウザーの互換性」節を参照してください）すべてのメッセージについて通知を表示するか、サイレントプッシュ通知を送信できるかを示します。デフォルトは `false` です。
 
-> [!NOTE]
-> `persistent-storage` 権限は、[ストレージ API](https://storage.spec.whatwg.org/) のとおりに、オリジンがそのストレージとして永続的ボックス（すなわち永続的ストレージ（[persistent storage](https://storage.spec.whatwg.org/#persistence)））を使用することを許可します。
+    `midi` 権限では、次のオプションも指定できます。
+    - `sysex` {{optional_inline}}
+      - : システムエクスクルーシブメッセージが必要か、または受信するかどうかを示します。デフォルトは `false` です。
 
 ### 返値
 
@@ -38,24 +45,16 @@ query(permissionDescriptor)
 
 ### 例外
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">例外</th>
-      <th scope="col">説明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TypeError</code></td>
-      <td>
-        <code>PermissionDescriptor</code> 情報の取得が何らかの理由で失敗したか、その権限が存在しないか、現在対応していない（例えば <code>midi</code> や <code>userVisibleOnly<code> 付きの <code>push<code> など）。
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : 関連付けられた文書が完全にアクティブでない閲覧コンテキストで `query()` メソッドが呼び出された場合に発生します。
+- {{jsxref("TypeError")}}
+  - : `PermissionDescriptor` 情報の取得が何らかの理由で失敗した場合、またはその権限が存在しないか、ユーザーエージェントに対応していない場合に発生します。
 
 ## 例
+
+### 位置情報の権限に応じたニュースの表示
+
+この例では、`geolocation` 権限が許可されていれば現在地に関連するニュースを表示し、そうでなければ位置情報へのアクセスを許可するようユーザーに促す方法を示します。
 
 ```js
 navigator.permissions.query({ name: "geolocation" }).then((result) => {
@@ -64,9 +63,96 @@ navigator.permissions.query({ name: "geolocation" }).then((result) => {
   } else if (result.state === "prompt") {
     showButtonToEnableLocalNews();
   }
-  // 権限が拒否された場合は何もしないでください。
+  // 権限が拒否されている場合は何もしない
 });
 ```
+
+### さまざまな権限への対応状況のテスト
+
+この例では、それぞれの権限を照会した結果を示します。
+
+このコードは `navigator.permissions.query()` を使用して各権限を照会し、権限の状態またはその権限がブラウザーで未対応であることを記録します。
+対応していない権限では返される `Promise` が拒否されるため、`query()` は `try...catch` ブロック内で呼び出しています。
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+```css hidden
+#log {
+  height: 320px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js
+// 権限の配列
+const permissions = [
+  "accelerometer",
+  "accessibility-events",
+  "ambient-light-sensor",
+  "background-sync",
+  "camera",
+  "clipboard-read",
+  "clipboard-write",
+  "geolocation",
+  "gyroscope",
+  "local-fonts",
+  "magnetometer",
+  "microphone",
+  "midi",
+  "notifications",
+  "payment-handler",
+  "persistent-storage",
+  "push",
+  "screen-wake-lock",
+  "storage-access",
+  "top-level-storage-access",
+  "window-management",
+];
+
+processPermissions();
+
+// 権限を反復処理して結果を記録
+async function processPermissions() {
+  for (const permission of permissions) {
+    const result = await getPermission(permission);
+    log(result);
+  }
+}
+
+// try...catch ブロックで単一の権限を照会して結果を返す
+async function getPermission(permission) {
+  try {
+    let result;
+    if (permission === "top-level-storage-access") {
+      result = await navigator.permissions.query({
+        name: permission,
+        requestedOrigin: window.location.origin,
+      });
+    } else {
+      result = await navigator.permissions.query({ name: permission });
+    }
+    return `${permission}: ${result.state}`;
+  } catch (error) {
+    return `${permission} (not supported)`;
+  }
+}
+```
+
+以下に、コードを実行したときのログを示します。
+
+{{EmbedLiveSample('さまざまな権限への対応状況のテスト',"100%", "370px")}}
 
 ## 仕様書
 
