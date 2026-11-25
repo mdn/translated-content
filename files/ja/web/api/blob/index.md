@@ -41,6 +41,8 @@ Blob が表現することができるデータは必ずしも JavaScript ネイ
   - : `Blob` の内容を読み込むために使用できる {{DOMxRef("ReadableStream")}} を返します。
 - {{DOMxRef("Blob.text()")}}
   - : UTF-8 テキストとして解釈された Blob の内容全体を含む文字列で解決するプロミスを返します。
+- {{domxref("Blob.textStream()")}} {{experimental_inline}}
+  - : この `Blob` の内容を UTF-8 のチャンクとして読み込める {{domxref("ReadableStream")}} を返します。
 
 ## 例
 
