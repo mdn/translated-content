@@ -3,10 +3,10 @@ title: Propriété CSS `outline`
 short-title: outline
 slug: Web/CSS/Reference/Properties/outline
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: d1cf7346516383565b51a125c064ae3d5d893526
 ---
 
-La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`outline`** définit la plupart des propriétés de contour dans une seule déclaration.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`outline`** définit le style, la couleur et l'épaisseur du contour d'un élément.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: outline")}}
 
@@ -78,12 +78,9 @@ outline: revert-layer;
 outline: unset;
 ```
 
-La propriété `outline` peut être définie avec une, deux ou trois valeurs parmi celles listées ci-après. L'ordre de ces valeurs n'a pas d'importance. Comme pour toutes les propriétés raccourcies, toutes les sous-valeurs omises sont définies avec [leur valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale).
-
-> [!NOTE]
-> Le contour est invisible pour de nombreux éléments si son style n'est pas défini. En effet, le style par défaut est `none`. Une exception notable est les éléments `input`, qui reçoivent un style par défaut par les navigateurs.
-
 ### Valeurs
+
+Cette propriété est définie comme une, deux ou trois valeurs parmi celles listées ci-après&nbsp;:
 
 - `<'outline-width'>`
   - : Une valeur de type {{CSSxRef("&lt;line-width&gt;")}} définissant l'épaisseur du contour. Par défaut, elle est `medium` si elle est absente. Voir {{CSSxRef("outline-width")}}.
@@ -93,6 +90,10 @@ La propriété `outline` peut être définie avec une, deux ou trois valeurs par
   - : Définit la couleur du contour. Par défaut, elle est `invert` pour les navigateurs qui le supportent, `currentColor` pour les autres. Voir {{CSSxRef("outline-color")}}.
 
 ## Description
+
+La propriété `outline` peut être définie avec une, deux ou trois valeurs parmi celles listées ci-après. L'ordre de ces valeurs n'a pas d'importance. Comme pour toutes les propriétés raccourcies, toutes les sous-valeurs omises sont définies avec [leur valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale).
+
+Le contour est invisible pour de nombreux éléments si son style n'est pas défini. En effet, le style par défaut est `none`. Une exception notable est les éléments `input`, qui reçoivent un style par défaut par les navigateurs.
 
 Le contour est une ligne à l'extérieur de la [bordure](/fr/docs/Web/CSS/Reference/Properties/border) de l'élément. Contrairement aux autres zones de la boîte, les contours n'occupent pas d'espace, ils n'affectent donc pas la mise en page du document.
 

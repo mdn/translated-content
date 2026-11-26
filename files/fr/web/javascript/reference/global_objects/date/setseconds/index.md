@@ -3,7 +3,7 @@ title: "Date : méthode setSeconds()"
 short-title: setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 l10n:
-  sourceCommit: 5ed8a617221499f2255e55634ce2122c942eb610
+  sourceCommit: 98972b1f827b7374e28aee591a73044ffd8fb758
 ---
 
 La méthode **`setSeconds()`** des instances de {{JSxRef("Date")}} définit les secondes pour la date, selon l'heure locale.
@@ -39,7 +39,7 @@ setSeconds(secondsValue, msValue)
 
 ### Valeur de retour
 
-Modifie l'objet {{JSxRef("Date")}} en place et retourne son nouveau [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide). Si un paramètre vaut `NaN` (ou d'autres valeurs qui sont [contraintes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre) en `NaN`, comme `undefined`), la date est définie sur [Date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) et `NaN` est retourné.
+Modifie l'objet {{JSxRef("Date")}} en place et retourne son nouvel [horodatage (<i lang="en">timestamp</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide). Si un paramètre vaut `NaN` (ou d'autres valeurs qui sont [contraintes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre) en `NaN`, comme `undefined`), la date est définie sur [Date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide) et `NaN` est retourné.
 
 ## Description
 

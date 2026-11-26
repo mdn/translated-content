@@ -3,19 +3,19 @@ title: "ARIA : attribut aria-valuenow"
 short-title: aria-valuenow
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 L'attribut `aria-valuenow` définit la valeur actuelle pour un composant de type plage (`range`).
 
 ## Description
 
-L'attribut `aria-valuenow` définit la valeur actuelle pour les composants de type plage. Il est similaire à l'attribut `value` des éléments HTML {{HTMLElement('progress')}}, {{HTMLElement('meter')}} et {{HTMLElement('input')}} de type [`range`](/fr/docs/Web/HTML/Reference/Elements/input/range), [`number`](/fr/docs/Web/HTML/Reference/Elements/input/number) et tous les types date et heure.
+L'attribut `aria-valuenow` définit la valeur actuelle pour les composants de type plage. Il est similaire à l'attribut `value` des éléments HTML {{HTMLElement("progress")}}, {{HTMLElement("meter")}} et {{HTMLElement("input")}} de type [`range`](/fr/docs/Web/HTML/Reference/Elements/input/range), [`number`](/fr/docs/Web/HTML/Reference/Elements/input/number) et tous les types date et heure.
 
 Lors de la création d'un rôle de type plage, y compris [`meter`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role), [`scrollbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role), [`slider`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role) et [`spinbutton`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role) sur un élément non sémantique, `aria-valuenow` permet de définir une valeur numérique actuelle comprise entre la valeur minimale et la valeur maximale. Les valeurs minimale et maximale sont définies avec [`aria-valuemin`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) et [`aria-valuemax`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax).
 
 > [!WARNING]
-> Le rôle [`range`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/range_role) ne doit **PAS** être utilisé car il est [«&nbsp;abstrait&nbsp;»](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles). L'attribut `aria-valuenow` est utilisé sur tous les sous-types de rôles de plage.
+> Le rôle [`range`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/range_role) ne doit **PAS** être utilisé, car il est [«&nbsp;abstrait&nbsp;»](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles). L'attribut `aria-valuenow` est utilisé sur tous les sous-types de rôles de plage.
 
 ```html
 <p id="birthyearLabel">Quelle est votre année de naissance&nbsp;?</p>
@@ -53,31 +53,7 @@ Lorsqu'il est utilisé avec des curseurs (<i lang="en">sliders</i> en anglais) e
 
 Lorsqu'il est utilisé avec une barre de progression (<i lang="en">progressbar</i> en anglais) ou une barre de défilement (<i lang="en">scrollbar</i> en anglais), les technologies d'assistance annoncent la valeur comme un pourcentage. Lorsque `aria-valuemin` et `aria-valuemax` sont tous deux définis, la valeur en pourcentage est calculée comme une position sur la plage. Sinon, la valeur réelle est annoncée comme un pourcentage.
 
-Lorsque la valeur à annoncer, qu'il s'agisse de la valeur réelle ou de la valeur en pourcentage, peut ne pas être claire pour les utilisateur·ice·s, l'attribut [`aria-valuetext`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) doit être utilisé pour fournir une représentation compréhensible de la valeur. Lorsqu'elle est définie, la chaîne `valuetext` est annoncée à la place de la valeur numérique `valuenow`. Par exemple, si un curseur représente les jours de la semaine, donc que le `aria-valuenow` du jour de la semaine est un nombre, la propriété `aria-valuetext` doit être définie sur une chaîne qui rend la valeur du curseur compréhensible, comme «&nbsp;lundi&nbsp;».
-
-## Exemples
-
-```html
-<p id="temperatureLabel">Température du four</p>
-<div
-  role="meter"
-  id="temperature"
-  aria-valuenow="205"
-  aria-valuemin="70"
-  aria-valuemax="250"
-  aria-labelledby="temperatureLabel">
-  <div class="meter-color" aria-hidden="true"></div>
-</div>
-```
-
-La première règle de l'utilisation d'ARIA est&nbsp;: «&nbsp;si vous pouvez utiliser une fonctionnalité native avec la sémantique et le comportement requis déjà intégrés, au lieu de détourner un élément et d'**ajouter** un rôle, un état ou une propriété ARIA pour le rendre accessible, alors faites-le.&nbsp;»
-
-```html
-<label for="temperature">Température du four</label>
-<input type="range" id="temperature" value="205" min="70" max="250" step="5" />
-```
-
-Si l'on utilise la sémantique HTML native avec un {{HTMLElement('input')}}, on bénéficie gratuitement du style et de la sémantique.
+Lorsque la valeur à annoncer, qu'il s'agisse de la valeur réelle ou de la valeur en pourcentage, peut ne pas être claire pour les utilisateur·ice·s, l'attribut [`aria-valuetext`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) doit être utilisé pour fournir une représentation compréhensible de la valeur. Lorsqu'elle est définie, la chaîne de caractères `valuetext` est annoncée à la place de la valeur numérique `valuenow`. Par exemple, si un curseur représente les jours de la semaine, donc que le `aria-valuenow` du jour de la semaine est un nombre, la propriété `aria-valuetext` doit être définie sur une chaîne de caractères qui rend la valeur du curseur compréhensible, comme «&nbsp;lundi&nbsp;».
 
 ## Valeurs
 
@@ -108,6 +84,30 @@ Hérité dans les rôles&nbsp;:
 - [`scrollbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
 - [`slider`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
 - [`spinbutton`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
+
+## Exemples
+
+```html
+<p id="temperatureLabel">Température du four</p>
+<div
+  role="meter"
+  id="temperature"
+  aria-valuenow="205"
+  aria-valuemin="70"
+  aria-valuemax="250"
+  aria-labelledby="temperatureLabel">
+  <div class="meter-color" aria-hidden="true"></div>
+</div>
+```
+
+La première règle de l'utilisation d'ARIA est&nbsp;: «&nbsp;si vous pouvez utiliser une fonctionnalité native avec la sémantique et le comportement requis déjà intégrés, au lieu de détourner un élément et **d'ajouter** un rôle, un état ou une propriété ARIA pour le rendre accessible, alors faites-le.&nbsp;»
+
+```html
+<label for="temperature">Température du four</label>
+<input type="range" id="temperature" value="205" min="70" max="250" step="5" />
+```
+
+Si l'on utilise la sémantique HTML native avec un {{HTMLElement('input')}}, on bénéficie gratuitement du style et de la sémantique.
 
 ## Spécifications
 

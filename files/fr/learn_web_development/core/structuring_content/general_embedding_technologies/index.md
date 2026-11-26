@@ -3,7 +3,7 @@ title: Des objets aux cadres intégrés — les technologies d'intégration
 short-title: Technologies d'intégration
 slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
 l10n:
-  sourceCommit: 456c370394c0cd8869feb60c4e9926f35422beaf
+  sourceCommit: d50a52075711e21da27bce5ee24f6334b56cf0f3
 ---
 
 Les développeur·euse·s pensent généralement à intégrer des médias tels que des images, des vidéos et de l'audio dans des pages web. Dans cet article, nous faisons un pas de côté en examinant certains éléments qui permettent d'intégrer une grande variété de types de contenus dans vos pages web&nbsp;: les éléments {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} et {{HTMLElement("object")}}. Ces éléments permettent d'intégrer des ressources externes telles que d'autres pages Web et des fichiers PDF.
@@ -133,16 +133,11 @@ Si le contenu est sous licence, vous devez respecter les conditions de la licenc
 
 #### Utiliser HTTPS
 
-{{Glossary("HTTPS")}} est la version chiffrée de {{Glossary("HTTP")}}. Vous devez servir vos sites web en utilisant HTTPS dès que possible&nbsp;:
+{{Glossary("HTTPS")}} est la version chiffrée de {{Glossary("HTTP")}}, ce qui réduit le risque que le contenu soit lu ou modifié pendant son transfert.
 
-1. HTTPS réduit le risque que le contenu distant ait été altéré pendant le transit.
-2. HTTPS empêche le contenu intégré d'accéder au contenu de votre document parent, et inversement.
+De nos jours, tout le contenu doit être diffusé en HTTPS — les navigateurs affichent de plus en plus souvent des avertissements lorsque le contenu est diffusé en HTTP, les sous-ressources HTTP ne se chargent pas dans les pages HTTPS et de nombreuses fonctionnalités du Web nécessitent HTTPS pour fonctionner. Pour activer HTTPS sur votre site, vous devez installer un certificat de sécurité. La plupart des hébergeurs proposent HTTPS par défaut, vous n'avez donc pas besoin de configurer vous-même un certificat.
 
-Activer HTTPS sur votre site nécessite l'installation d'un certificat de sécurité spécial. De nombreux hébergeurs proposent l'hébergement avec HTTPS activé sans que vous ayez besoin de faire la moindre configuration pour mettre en place un certificat. Mais si vous devez configurer vous-même la prise en charge de HTTPS pour votre site, [Let's Encrypt <sup>(angl.)</sup>](https://letsencrypt.org/) fournit des outils et des instructions que vous pouvez utiliser pour créer et installer automatiquement le certificat nécessaire — avec une prise en charge intégrée pour les serveurs web les plus utilisés, y compris le serveur web Apache, Nginx et d'autres. Les outils Let's Encrypt sont conçus pour rendre le processus aussi simple que possible, il n'y a donc vraiment aucune bonne raison d'éviter de les utiliser ou d'autres moyens disponibles pour activer HTTPS sur votre site.
-
-> [!NOTE]
-> [GitHub Pages](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) permet de servir du contenu en HTTPS par défaut.
-> Si vous utilisez un autre hébergeur, vous devez vérifier le support qu'il propose pour servir du contenu avec HTTPS.
+Si vous devez configurer vous-même la prise en charge de HTTPS pour votre site, [Let's Encrypt <sup>(angl.)</sup>](https://letsencrypt.org/) fournit des outils et des instructions pour créer et installer automatiquement le certificat nécessaire — avec la prise en charge de nombreux serveurs web, notamment Apache, Nginx et d'autres. Les outils de Let's Encrypt sont conçus pour rendre le processus aussi simple que possible.
 
 #### Toujours utiliser l'attribut `sandbox`
 
@@ -176,7 +171,7 @@ Si vous devez intégrer du contenu de plugin, voici le minimum d'informations do
     </tr>
     <tr>
       <td>
-        <em>Type </em>{{Glossary("MIME type", "de média")}} exact du contenu intégré
+        <em>Type</em> {{Glossary("MIME type", "de média")}} exact du contenu intégré
       </td>
       <td><a href="/fr/docs/Web/HTML/Reference/Elements/embed#type"><code>type</code></a></td>
       <td><a href="/fr/docs/Web/HTML/Reference/Elements/object#type"><code>type</code></a></td>

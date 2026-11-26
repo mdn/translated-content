@@ -3,7 +3,7 @@ title: "HTMLElement: nonce プロパティ"
 short-title: nonce
 slug: Web/API/HTMLElement/nonce
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("HTML DOM")}}

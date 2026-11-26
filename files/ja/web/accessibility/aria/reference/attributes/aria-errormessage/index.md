@@ -1,37 +1,69 @@
 ---
-title: aria-errormessage
+title: "ARIA: aria-errormessage 属性"
+short-title: aria-errormessage
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage
-original_slug: Web/Accessibility/ARIA/Attributes/aria-errormessage
 l10n:
-  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
-{{AccessibilitySidebar}}
-
-オブジェクトの `aria-errormessage` 属性は、そのオブジェクトのエラーメッセージを表示する要素を特定します。
+オブジェクトの `aria-errormessage` 属性は、そのオブジェクトのエラーメッセージを提供する要素（1 つまたは複数）を特定します。
 
 ## 解説
 
-ユーザーが作成したエラーがある場合、その存在を知らせ、修正する方法を指示したいものです。 2 つの属性を使用する必要があります。 [`aria-invalid="true"`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid) を設定してオブジェクトがエラー状態であることを定義し、そして、 `aria-errormessage` 属性を追加し、その値としてそのオブジェクトのエラーメッセージテキストを格納する要素の `id` を指定します。
+ユーザーの操作によってエラーが生じた場合は、そのことをユーザーに知らせ、修正方法を伝える必要があります。使用する属性は 2 つです。まず [`aria-invalid="true"`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid) を設定してオブジェクトがエラー状態であることを示し、次に `aria-errormessage` 属性を追加します。その値には、オブジェクトのエラーメッセージのテキストを含む要素の `id`、または複数の要素の `id` を空白区切りで並べたリストを指定します。
 
-`aria-errormessage` 属性は、オブジェクトの値が有効でない場合、すなわち [`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid) が `true` に設定されている場合にのみ使用しましょう。
-オブジェクトが有効で `aria-errormessage` 属性を記載する場合は、参照する要素が非表示であり、そこに含まれるメッセージには関連がないことを確認してください。
+`aria-errormessage` 属性を使用するのは、オブジェクトの値が無効である場合、つまり [`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid) が `true` に設定されている場合に限ります。オブジェクトが有効であるにもかかわらず `aria-errormessage` 属性を含める場合は、参照先の要素を非表示にしてください。そこに含まれるメッセージは無関係だからです。
 
-`aria-errormessage` が関連する場合、参照する要素はユーザーがエラーメッセージを見たり聞いたりできるように可視でなければなりません。
+`aria-errormessage` が関連する場合は、ユーザーがエラーメッセージを見たり聞いたりできるよう、参照先の要素を表示する必要があります。
 
-多くの場合、エラーメッセージを持つ要素は [ARIA ライブ領域](/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions)であることが望まれます。例えば、ユーザーが無効な値を指定した後にエラーメッセージが表示される場合などです。エラーメッセージは、何が間違っているかを記述し、オブジェクトを有効にするために何が必要かをユーザーに通知する必要があります。 ARIA ライブ領域としてエラーメッセージを追加することは、エラーメッセージが他の方法でユーザーに伝えられなくても、エラーメッセージのコンテンツからユーザーが好ましいことを支援技術に知らせます。
+エラーメッセージを含む要素は、多くの場合 [ARIA ライブ領域](/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions)にするとよいでしょう。例えば、ユーザーが無効な値を入力した後にエラーメッセージを表示する場合です。エラーメッセージでは、何が誤っているかを説明し、オブジェクトを有効にするために必要な操作をユーザーに伝えてください。エラーメッセージを ARIA ライブ領域にすると、通常の方法ではユーザーに伝えられない場合でも、ユーザーがその内容から情報を得られる可能性があることを支援技術に知らせます。
 
-失敗が視覚的に明らかで、エラーの明示的な説明が必要な場合は、目に見えるエラーメッセージを記載し、 `aria-errormessage` 属性で不正なオブジェクトにリンクしてください。
+失敗が視覚的に明らかで、エラーの明示的な説明が必要な場合は、エラーメッセージを表示し、`aria-errormessage` 属性で無効なオブジェクトに関連付けてください。
+
+## 値
+
+- ID 参照リスト
+  - : 現在の要素のエラーメッセージを含む要素の `id`、またはそのような `id` を空白区切りで並べたリストです。
+
+## 関連インターフェイス
+
+- {{domxref("Element.ariaErrorMessageElements")}}
+  - : `ariaErrorMessageElements` プロパティは各要素のインターフェイスの一部です。その値は、`aria-errormessage` 属性の `id` 参照を反映する {{domxref("Element")}} のサブクラスのインスタンスの配列です ([いくつかの注意点があります](/ja/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references))。
+- {{domxref("ElementInternals.ariaErrorMessageElements")}}
+  - : `ariaErrorMessageElements` プロパティは各カスタム要素のインターフェイスの一部です。その値は、`aria-errormessage` 属性の `id` 参照を反映する {{domxref("Element")}} のサブクラスのインスタンスの配列です ([いくつかの注意点があります](/ja/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references))。
+
+## 関連付けられたロール
+
+次のロールで使用されます。
+
+- [`application`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
+- [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
+- [`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
+- [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [`listbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
+- [`radiogroup`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)
+- [`slider`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
+- [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
+- [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
+- [`tree`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
+
+次のロールにも継承されます。
+
+- [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
+- [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
+- [`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
+- [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
 
 ## 例
 
-いくつかのスタイルを作成します。
+次のスタイルを作成します。
 
-1. すべてのエラーメッセージを非表示にします。
-2. 不正なオブジェクトを不正な外観にします。
-3. 不正なオブジェクトの後に来る兄弟要素のエラーメッセージを表示させます。
+1. すべてのエラーメッセージを非表示にする。
+2. 無効なオブジェクトがそうと分かる外観にする。
+3. 無効なオブジェクトの後に兄弟要素として置かれたエラーメッセージを表示する。
 
-`aria-invalid="true"` を使用して、不正なオブジェクトを識別します。
+`aria-invalid="true"` を使用して、無効なオブジェクトを特定します。
 
 ```css
 .errormessage {
@@ -47,7 +79,7 @@ l10n:
 }
 ```
 
-オブジェクトが不正な場合は、 JavaScript を使用して `aria-invalid="true"` を追加します。上記の CSS は、不正なオブジェクト以下の `.errormessage` が見えるようにします。
+オブジェクトが無効な場合は、JavaScript を使用して `aria-invalid="true"` を追加します。上記の CSS は、無効なオブジェクトの後にある `.errormessage` を表示します。
 
 ```html
 <p>
@@ -59,40 +91,12 @@ l10n:
     aria-invalid="true"
     aria-errormessage="err1" />
   <span id="err1" class="errormessage"
-    >有効なメールアドレスを入力してください</span
+    >エラー: 有効なメールアドレスを入力してください</span
   >
 </p>
 ```
 
-有効から不正になったとき、この例での JavaScript の変更は、メール入力オブジェクトの `aria-invalid` への更新だけでした。エラーメッセージは入力に従うことで、アクセシビリティツリー上で可視化され利用できるようになるため、この例を単純に保つことができます。また、 [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) プロパティを適用したり、 [`alert`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role) のようなライブ領域のロールを使用することもできました。
-
-## 値
-
-- `id` reference
-  - : 現在の要素のエラーメッセージを格納する要素の `id` の値。
-
-## 関連するロール
-
-使用しているロール:
-
-- [`application`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
-- [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
-- [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-- [`listbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
-- [`radiogroup`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)
-- [`slider`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
-- [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
-- [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
-- [`tree`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
-
-継承しているロール:
-
-- [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-- [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
-- [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
-- [`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
-- [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
+対象が有効から無効に変わった際、この例ではメール入力要素の `aria-invalid` を更新するだけで済みました。エラーメッセージは入力欄の後に配置され、表示されるとアクセシビリティツリーからも利用できるため、例をシンプルに保てます。`aria-live` プロパティを適用したり、[`alert`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role) のようなライブ領域のロールを使用したりする方法もあります。
 
 ## 仕様書
 
@@ -100,7 +104,6 @@ l10n:
 
 ## 関連情報
 
-- HTML の [`invalid`](/ja/docs/Web/HTML/Global_attributes/invalid) 属性
 - CSS の {{CSSxref(':invalid')}} 擬似クラス
 - [`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
 - [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)

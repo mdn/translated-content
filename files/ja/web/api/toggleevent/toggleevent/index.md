@@ -1,11 +1,12 @@
 ---
 title: "ToggleEvent: ToggleEvent() コンストラクター"
+short-title: ToggleEvent()
 slug: Web/API/ToggleEvent/ToggleEvent
 l10n:
-  sourceCommit: 559c464755abf4ca999a21ce7f3cb1027143f68f
+  sourceCommit: 81407b5d512b0429332fda450aa39340493f390d
 ---
 
-{{APIRef("Popover API")}}{{SeeCompatTable}}
+{{APIRef("Popover API")}}
 
 **`ToggleEvent()`** コンストラクターは、新しい {{domxref("ToggleEvent")}} オブジェクトを生成します。
 
@@ -18,28 +19,33 @@ new ToggleEvent(type, init)
 ### 引数
 
 - `type`
-  - : 文字列で、イベントの方を表します。`ToggleEvent` の場合、これは常に `toggleevent` です。
-- `init`
-  - : 以下のプロパティを持つオブジェクトです。
-    - `newState`
-      - : 文字列で、この要素が遷移した後の状態を表します。取りうる値は `"open"` および `"closed"` です。
-    - `oldState`
-      - : 文字列で、この要素が遷移する前の状態を表します。取りうる値は `"open"` および `"closed"` です。
+  - : イベントの種類を表す文字列です。`ToggleEvent` の場合、常に `beforetoggle` または `toggle` です。
+- `init` {{optional_inline}}
+  - : 次のプロパティを含むオブジェクトです。
+    - `newState` {{optional_inline}}
+      - : 文字列で、要素が遷移する先の状態を表します。任意の値を取れますが、ブラウザーが発生させるイベントでは `"open"` または `"closed"` に設定されます。デフォルト値は `""` です。
+    - `oldState` {{optional_inline}}
+      - : 文字列で、要素が遷移する前の状態を表します。任意の値を取れますが、ブラウザーが発生させるイベントでは `"open"` または `"closed"` に設定されます。デフォルト値は `""` です。
+    - `source` {{optional_inline}}
+      - : 切り替えを開始した HTML のポップオーバー制御要素を表す {{domxref("Element")}} です。デフォルト値は `null` です。
 
 ## 例
 
-開発者がこのコンストラクタを手動で使用することはないでしょう。関連するイベントが発行された結果、ハンドラーが呼び出されると、新しい `ToggleEvent` オブジェクトが生成されます。
+通常、このコンストラクターを手動で使用することはありません。関連するイベントが発生した結果としてハンドラーが呼び出されると、新しい `ToggleEvent` オブジェクトが生成されます。
 
-例えば次の通りです。
+例を示します。
 
 ```js
 const popover = document.getElementById("mypopover");
 
-// ...
+// …
 
 popover.addEventListener("beforetoggle", (event) => {
   if (event.newState === "open") {
     console.log("Popover is being shown");
+    if (event.source) {
+      console.log("Initiated by:", event.source);
+    }
   } else {
     console.log("Popover is being hidden");
   }

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
-La méthode **`toTemporalInstant()`** des instances de {{JSxRef("Date")}} retourne un nouvel objet {{JSxRef("Temporal.Instant")}} avec les même valeurs en {{JSxRef("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} que la date [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+La méthode **`toTemporalInstant()`** des instances de {{JSxRef("Date")}} retourne un nouvel objet {{JSxRef("Temporal.Instant")}} avec les même valeurs en {{JSxRef("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} que la date [de l'horodatage (<i lang="en">timestamp</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
 Utilisez cette méthode pour convertir des valeurs `Date` héritées en objets de l'API `Temporal`, puis convertissez-les en d'autres classes {{JSxRef("Temporal")}} si nécessaire.
 
@@ -27,7 +27,7 @@ Un nouvel objet {{JSxRef("Temporal.Instant")}} ayant la même valeur de {{JSxRef
 ### Exceptions
 
 - {{JSxRef("RangeError")}}
-  - : Levée si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) (son horodatage est `NaN`).
+  - : Levée si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide) (son horodatage est `NaN`).
 
 ## Exemples
 

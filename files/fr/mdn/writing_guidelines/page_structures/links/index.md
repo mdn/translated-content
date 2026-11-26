@@ -2,7 +2,7 @@
 title: Macros de liens
 slug: MDN/Writing_guidelines/Page_structures/Links
 l10n:
-  sourceCommit: abc914f085fb9913c41c4cd4453da432e9d4e761
+  sourceCommit: c37d4a5c0a0e464242d54ee7378d8adb2c9c5a4f
 ---
 
 MDN propose de nombreuses macros pour créer des liens toujours à jour vers le contenu MDN. Ce guide présente les macros de renvoi croisé MDN que vous pouvez utiliser pour inclure un lien unique vers une autre page ou une liste de liens vers toutes les sous-pages d'un document.
@@ -75,7 +75,7 @@ Par exemple&nbsp;:
 - `\{{CSSxRef("pow")}}` crée un lien vers la page de la fonction à `Web/CSS/Reference/Values/pow`.
 - `\{{CSSxRef("<color>")}}` crée un lien vers la page du type de données à `Web/CSS/Reference/Values/color_value`.
 
-Tout comme la macro `HTMLElement`, la macro `CSSxRef` ajoute le style approprié au texte du lien en fonction du type de fonctionnalité. Ainsi, `\{{CSSxRef("acos")}}` ajoute des crochets angulaires au texte du lien résultant comme dans {{CSSxRef("acos")}}.
+Tout comme la macro `HTMLElement`, la macro `CSSxRef` ajoute le style approprié au texte du lien en fonction du type de fonctionnalité. Ainsi, `\{{CSSxRef("acos")}}` ajoute des parenthèses au texte du lien résultant comme dans {{CSSxRef("acos")}}.
 
 Quelques autres comportements de la macro `CSSxRef` méritent d'être notés&nbsp;:
 

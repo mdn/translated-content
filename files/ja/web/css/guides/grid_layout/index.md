@@ -3,16 +3,16 @@ title: CSS グリッドレイアウト
 short-title: グリッドレイアウト
 slug: Web/CSS/Guides/Grid_layout
 l10n:
-  sourceCommit: b02c4fe0f8c485fa3fd0af10005310aaecef64ca
+  sourceCommit: 04dfe418f2942ae739d41592c22fafa3679fc03c
 ---
 
-**CSS グリッドレイアウト**モジュールは、ページを大きな領域に分割することや、 HTML のプリミティブから構成されたコントロールの部品間の、寸法、位置、レイヤーに関する関係を定義することに優れています。
+**CSS グリッドレイアウト**モジュールは、ページを大きな領域に分割したり、HTML のプリミティブから構成されるコントロールの各部品について、寸法、位置、レイヤーに関する関係を定義したりするのに優れています。
 
-表と同様に、グリッドレイアウトによって要素を列と行に整列させることができます。しかし、 CSS グリッドを使用すると、表で実現するよりもより複雑なレイアウトが可能で、あるいは簡単に実現できます。例えば、グリッドのコンテナー内にある子要素は、 CSS の位置指定された要素と同様に自分自身の位置を決めることができるので、実際に重ね合わせてレイヤーになるように配置することができます。
+表と同様に、グリッドレイアウトによって要素を列と行に整列させることができます。しかし、CSS グリッドでは、表では実現できないレイアウトや、表よりも簡単に実現できるレイアウトを数多く作成できます。例えば、グリッドコンテナー内の子要素は、CSS の位置指定された要素と同様に自分自身の位置を決められるため、実際に重ね合わせてレイヤーになるように配置できます。
 
 ## グリッドレイアウトの実演
 
-次の例では、最小値 100 ピクセル、最大値 auto で作成された列を含む、3 つの行を表示します。要素は線ベースの配置に従ってグリッド上に配置されます。
+次の例では、3 列のグリッドを示します。新しい行は、最小の高さが 100 ピクセル、最大の高さが `auto` となるように作成されます。要素は線ベースの配置に従ってグリッド上に配置されます。
 
 ```html hidden
 <div class="wrapper">
@@ -74,7 +74,7 @@ l10n:
 
 {{EmbedLiveSample("Grid_layout_in_action", "100%", "460")}}
 
-この例では、グリッドの作成に {{cssxref("display")}}、{{cssxref("grid-template-columns")}}、{{cssxref("grid-template-rows")}}、{{cssxref("gap")}} を使用し、グリッド内のアイテムの位置指定に {{cssxref("grid-column")}} と {{cssxref("grid-row")}} を使用しています。使用されている HTML と CSS を表示・編集するには、例の右上にある 'Play' をクリックしてください。
+このサンプルアニメーションでは、グリッドの作成に {{cssxref("display")}}、{{cssxref("grid-template-columns")}}、{{cssxref("grid-template-rows")}}、{{cssxref("gap")}} を使用し、グリッド内のアイテムの位置指定に {{cssxref("grid-column")}} と {{cssxref("grid-row")}} を使用しています。使用されている HTML と CSS を表示・編集するには、例の右上にある "Play" をクリックしてください。
 
 ## リファレンス
 
@@ -102,7 +102,7 @@ l10n:
 - {{cssxref("minmax()")}}
 - {{cssxref("fit-content()")}}
 
-### データ型
+### データ型と値
 
 - {{CSSxRef("&lt;flex&gt;")}} （`fr` 単位）
 
@@ -160,6 +160,9 @@ l10n:
 - [グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
   - : グリッドレイアウトにおけるボックス配置の動作です。
 
+- [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+  - : グリッド、フレックスボックス、段組みレイアウトでの隙間の定義方法と、パーセント値の解決方法について説明します。
+
 ## 関連機能
 
 [CSS 表示方法](/ja/docs/Web/CSS/Guides/Display)モジュール
@@ -181,9 +184,19 @@ l10n:
 
 [CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)モジュール
 
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
-- {{cssxref("row-gap")}}
+- {{cssxref("gap")}} 一括指定
+  - {{cssxref("column-gap")}}
+  - {{cssxref("row-gap")}}
+- {{cssxref("rule")}} 一括指定
+  - {{cssxref("column-rule")}}
+  - {{cssxref("row-rule")}}
+- {{cssxref("rule-break")}}
+- {{cssxref("rule-color")}}
+- {{cssxref("rule-inset")}}
+- {{cssxref("rule-overlap")}}
+- {{cssxref("rule-style")}}
+- {{cssxref("rule-visibility-items")}}
+- {{cssxref("rule-width")}}
 
 [CSS ボックスサイズ指定](/ja/docs/Web/CSS/Guides/Box_sizing)モジュール
 

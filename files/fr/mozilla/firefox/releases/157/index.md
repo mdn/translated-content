@@ -3,7 +3,7 @@ title: Firefox 157 note de version pour les développeurs
 short-title: Firefox 157
 slug: Mozilla/Firefox/Releases/157
 l10n:
-  sourceCommit: 892eb917bee599a9d6cae7d33ed783129dbb39b3
+  sourceCommit: bd4e1a75486ccdf2d36aef41c63d22ec5536b6a6
 ---
 
 Cet article présente les informations concernant les changements de Firefox 157 qui concernent les développeur·euse·s.

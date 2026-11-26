@@ -3,7 +3,7 @@ title: Propriété CSS `ry`
 short-title: ry
 slug: Web/CSS/Reference/Properties/ry
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: b94f607de0017642074f3466e20cbd9017a1b150
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`ry`** définit le rayon de l'axe y, ou vertical, d'une {{SVGElement("ellipse")}} SVG et la courbure verticale des coins d'un rectangle {{SVGElement("rect")}} SVG. Si elle est présente, elle remplace l'attribut {{SVGAttr("ry")}} de la forme.
@@ -58,7 +58,7 @@ Cet exemple montre comment créer des rectangles avec des coins arrondis en appl
 
 #### HTML
 
-Nous incluons une image SVG avec quatre éléments `<rect>`&nbsp;; tous les rectangles sont identiques sauf pour la valeur de leur attribut {{SVGAttr("x")}}, qui les positionne le long de l'axe x.
+Nous incluons une image SVG avec cinq éléments `<rect>`&nbsp;; tous les rectangles sont identiques sauf pour la valeur de leur attribut {{SVGAttr("x")}}, qui les positionne le long de l'axe x.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -104,7 +104,7 @@ rect:nth-of-type(5) {
 
 {{EmbedLiveSample("Créer des coins arrondis", 300, 180)}}
 
-Le premier rectangle utilise la valeur par défaut `auto`&nbsp;; comme toutes les valeurs `rx` de cet exemple utilisent également `auto` par défaut, la valeur utilisée de `ry` est `0`. Les rectangles rouge et bleu ont des coins arrondis de `10px` et `2em`, respectivement. Comme la fenêtre SVG par défaut est de 300px par 150px, la valeur de `5%` du rectangle orange crée un rayon de `7,5px`. Le rectangle vert a `ry: 80%` défini. Cependant, comme la valeur de `ry` n'est jamais supérieure à `50%` de la hauteur du rectangle, l'effet est comme si `ry: 50%; rx: 50%` était défini.
+Le premier rectangle utilise la valeur par défaut `auto`&nbsp;; comme toutes les valeurs `rx` de cet exemple utilisent également `auto` par défaut, la valeur utilisée de `ry` est `0`. Les rectangles rouge et bleu ont des coins arrondis de `10px` et `2em`, respectivement. Comme la fenêtre SVG par défaut est de 300px par 150px, la valeur de `5%` du rectangle orange crée un rayon de `7,5px`. Le rectangle vert a `ry: 80%` défini. Cependant, comme la valeur de `ry` n'est jamais supérieure à `50%` de la hauteur du rectangle, l'effet est comme si `ry: 50%; rx: 50%` est défini.
 
 ### Définir le rayon vertical d'une ellipse
 
@@ -141,7 +141,7 @@ ellipse:first-of-type {
 
 {{EmbedLiveSample("Définir le rayon vertical d'une ellipse", 300, 180)}}
 
-Le rayon vertical de l'ellipse mise en forme est de `80px`, comme défini dans la valeur de la propriété CSS `ry`. Le rayon vertical de l'ellipse non mise en forme est de `20px`, qui était défini par l'attribut `ry`.
+Le rayon vertical de l'ellipse mise en forme est de `80px`, comme défini dans la valeur de la propriété CSS `ry`. Le rayon vertical de l'ellipse non mise en forme est de `20px`, qui est défini par l'attribut `ry`.
 
 ### Valeurs en pourcentage du rayon vertical d'une ellipse
 
@@ -178,7 +178,7 @@ ellipse:first-of-type {
 
 {{EmbedLiveSample("Valeurs en pourcentage du rayon vertical d'une ellipse", 300, 180)}}
 
-Lorsque vous utilisez des valeurs en pourcentage pour `ry`, les valeurs sont relatives à la hauteur de la fenêtre SVG. Ici, la taille du rayon vertical de l'ellipse stylée est de `30%` de la hauteur de la fenêtre SVG actuelle. Comme la hauteur par défaut est de `150px`, la valeur de `ry` est de `45px`, ce qui rend l'ellipse haute de `90px`.
+Lorsque vous utilisez des valeurs en pourcentage pour `ry`, les valeurs sont relatives à la hauteur de la fenêtre SVG. Ici, la taille du rayon vertical de l'ellipse mise en forme est de `30%` de la hauteur de la fenêtre SVG actuelle. Comme la hauteur par défaut est de `150px`, la valeur de `ry` est de `45px`, ce qui rend l'ellipse haute de `90px`.
 
 ## Spécifications
 

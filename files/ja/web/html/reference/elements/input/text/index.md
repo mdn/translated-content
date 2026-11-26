@@ -3,7 +3,7 @@ title: '`<input type="text">` 属性値'
 short-title: <input type="text">
 slug: Web/HTML/Reference/Elements/input/text
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 {{HTMLElement("input")}} 要素の **`text`** 型は、基本的な単一行のテキスト入力欄を生成します。
@@ -122,41 +122,31 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 ### 基本的な例
 
 ```html
-<form>
-  <div>
-    <label for="uname">ユーザー名を選んでください: </label>
-    <input type="text" id="uname" name="name" />
-  </div>
-  <div>
-    <button>送信</button>
-  </div>
-</form>
+<div>
+  <label for="uname">ユーザー名を選んでください: </label>
+  <input type="text" id="uname" name="name" />
+</div>
 ```
 
 これは次のように表示されます。
 
 {{EmbedLiveSample("Basic_example", 600, 80)}}
 
-送信されると、サーバーに送信される名前と値の組のデータは `name=Chris` になります（送信前に入力値として "Chris" が入力された場合）。 [`name`](/ja/docs/Web/HTML/Reference/Elements/input#name) 属性を {{HTMLElement("input")}} 要素に付け忘れてはいけません。さもないと、テキスト入力欄の値が送信されるデータに含まれなくなります。
+この入力欄をフォームに含めて送信すると、サーバーに送信されるデータの名前と値の組は `name=Chris` になります（送信前に入力値として "Chris" が入力された場合）。[`name`](/ja/docs/Web/HTML/Reference/Elements/input#name) 属性を {{HTMLElement("input")}} 要素に指定することを忘れないでください。そうしないと、テキスト入力欄の値が送信データに含まれません。
 
 ### プレイスホルダーの設定
 
 [`placeholder`](/ja/docs/Web/HTML/Reference/Elements/input#placeholder) 属性を使用して、テキスト入力欄の内部に有用なプレイスホルダーを提供することで、何を入力すればよいかのヒントを提供することができます。次の例を見てください。
 
 ```html-nolint
-<form>
-  <div>
-    <label for="uname">ユーザー名を選んでください: </label>
-    <input
-      type="text"
-      id="uname"
-      name="name"
-      placeholder="小文字で一語で" />
-  </div>
-  <div>
-    <button>送信</button>
-  </div>
-</form>
+<div>
+  <label for="uname">ユーザー名を選んでください: </label>
+  <input
+    type="text"
+    id="uname"
+    name="name"
+    placeholder="小文字で一語で" />
+</div>
 ```
 
 プレイスホルダーがどう表示されるかを以下で確認できます。
@@ -170,20 +160,15 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 入力ボックスの物理的な寸法は、 [`size`](/ja/docs/Web/HTML/Reference/Elements/input#size) 属性を使って制御することができます。これによって、テキスト入力欄が一度に表示できる文字数を指定することができます。これは要素の幅に影響し、幅をピクセル数ではなく文字数で指定することができます。例えば、この例の中では、入力欄は30文字の幅です。
 
 ```html
-<form>
-  <div>
-    <label for="uname">ユーザー名を選んでください: </label>
-    <input
-      type="text"
-      id="uname"
-      name="name"
-      placeholder="小文字で一語で"
-      size="30" />
-  </div>
-  <div>
-    <button>送信</button>
-  </div>
-</form>
+<div>
+  <label for="uname">ユーザー名を選んでください: </label>
+  <input
+    type="text"
+    id="uname"
+    name="name"
+    placeholder="小文字で一語で"
+    size="30" />
+</div>
 ```
 
 {{EmbedLiveSample('Physical_input_element_size', 600, 80)}}
@@ -241,6 +226,12 @@ input:valid + span::after {
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 div {
   margin-bottom: 10px;
@@ -292,6 +283,12 @@ input:valid + span::after {
     <button>送信</button>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden
@@ -347,6 +344,12 @@ input:valid + span::after {
     <button>送信</button>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden
@@ -423,14 +426,6 @@ input:valid + span::after {
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>

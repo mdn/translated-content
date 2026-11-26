@@ -3,7 +3,7 @@ title: Intl.NumberFormat() コンストラクター
 short-title: Intl.NumberFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
 l10n:
-  sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`Intl.NumberFormat()`** コンストラクターは、言語に依存した数値の書式化ができる {{jsxref("Intl.NumberFormat")}} オブジェクトを生成します。
@@ -69,11 +69,11 @@ Intl.NumberFormat(locales, options)
 #### ロケールオプション
 
 - `localeMatcher`
-  - : 使用するロケール照合アルゴリズムです。使用可能な値は `"lookup"` および `"best fit"` です。既定値は `"best fit"` です。
+  - : 使用するロケール照合アルゴリズムです。使用可能な値は `"lookup"` および `"best fit"` です。デフォルト値は `"best fit"` です。
     このオプションについての情報は、[ロケールの識別とネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)を参照してください。
 
 - `numberingSystem`
-  - : 数値の書式化に使用する記数法。たとえば、`"arab"`、`"hans"`、`"mathsans"`などが使用されます。対応している記数法の種類の一覧については、 [`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している記数法) を参照してください。デフォルト値はロケールによります。このオプションは、Unicode 拡張キー `nu` を使用して設定することもできます。両方が指定されている場合、この `options` プロパティが優先されます。
+  - : 数値の書式化に使用する記数法。たとえば、`"arab"`、`"hanidec"`、`"mathsans"`などが使用されます。対応している記数法の種類の一覧については、 [`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している記数法) を参照してください。デフォルト値はロケールによります。このオプションは、Unicode 拡張キー `nu` を使用して設定することもできます。両方が指定されている場合、この `options` プロパティが優先されます。
 
 #### スタイルオプション
 
@@ -81,7 +81,7 @@ Intl.NumberFormat(locales, options)
 
 - `style`
   - : 使用する書式化スタイルです。
-    - `"decimal"` （既定値）
+    - `"decimal"` （デフォルト値）
       - : ふつうの数値の書式化に使用します。
     - `"currency"`
       - : 通貨の書式化に使用します。
@@ -90,7 +90,7 @@ Intl.NumberFormat(locales, options)
     - `"unit"`
       - : 単位の書式化に使用します。
 - `currency`
-  - : 通貨の書式で使用するための通貨です。使用可能な値は ISO 4217 通貨コードであり、例えば米ドルは `"USD"`、ユーロは `"EUR"`、日本円には `"JPY"` です。 — [`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している通貨識別子) を参照してください。既定値はありません。 `style` が `"currency"` である場合、 `currency` プロパティを提供する必要があります。これは大文字に正規化されます。
+  - : 通貨の書式で使用するための通貨です。使用可能な値は ISO 4217 通貨コードであり、例えば米ドルは `"USD"`、ユーロは `"EUR"`、日本円には `"JPY"` です。 — [`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している通貨識別子) を参照してください。デフォルト値はありません。 `style` が `"currency"` である場合、 `currency` プロパティを提供する必要があります。これは大文字に正規化されます。
 - `currencyDisplay`
   - : 通貨の書式で通貨を表示する方法です。
     - `"code"`
@@ -103,12 +103,12 @@ Intl.NumberFormat(locales, options)
       - : ローカライズされた通貨名、例えば `"dollar"` などです。
 
 - `currencySign`
-  - : 多くのロケールでは、会計の書式はマイナス記号を追加する代わりに数値を括弧で囲みます。指定可能な値は `"standard"` と `"accounting"` です。既定値は `"standard"` です。
+  - : 多くのロケールでは、会計の書式はマイナス記号を追加する代わりに数値を括弧で囲みます。指定可能な値は `"standard"` と `"accounting"` です。デフォルト値は `"standard"` です。
 - `unit`
-  - : `unit` の書式化で使用する単位です。使用可能な値は [`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している単位識別子) に書かれています。一組の単純な単位を "-per-" で結合し、複合単位を作り出すことができます。既定値はありません。 `style` が `"unit"` である場合、 `unit` プロパティを指定する必要があります。
+  - : `unit` の書式化で使用する単位です。使用可能な値は [`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している単位識別子) に書かれています。一組の単純な単位を "-per-" で結合し、複合単位を作り出すことができます。デフォルト値はありません。 `style` が `"unit"` である場合、 `unit` プロパティを指定する必要があります。
 - `unitDisplay`
   - : `unit` の書式化で使用する単位の書式化スタイルです。利用可能な値は次の通りです。
-    - `"short"` （既定値）
+    - `"short"` （デフォルト値）
       - : 例: `16 l`
     - `"narrow"`
       - : 例: `16l`
@@ -120,31 +120,31 @@ Intl.NumberFormat(locales, options)
 次のプロパティは {{jsxref("Intl.PluralRules")}} にも対応しています。
 
 - `minimumIntegerDigits`
-  - : 使用する整数の桁数の最小値。この数値よりも整数の桁数が少ない場合は、書式化時に左側に 0 が（指定した長さに）埋め込まれます。使用可能な値は `1` から `21` までで、既定値は `1` です。
+  - : 使用する整数の桁数の最小値。この数値よりも整数の桁数が少ない場合は、書式化時に左側に 0 が（指定した長さに）埋め込まれます。使用可能な値は `1` から `21` までで、デフォルト値は `1` です。
 - `minimumFractionDigits`
-  - : 小数部に使用する最小桁数です。使用可能な値は `0` から `100` までです。既定値は、通常の数値とパーセント形式では `0` であり、通貨形式では [ISO 4217 通貨コードリスト](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml)で提供されている副単位の桁数です (このリストで情報が提供されていない場合は 2 です)。この既定値がいつ適用されるかについては、 [SignificantDigits/FractionDigits の既定値](#significantdigitsfractiondigits_の既定値)を参照してください。
+  - : 小数部に使用する最小桁数です。使用可能な値は `0` から `100` までです。デフォルト値は、通常の数値とパーセント形式では `0` であり、通貨形式では [ISO 4217 通貨コードリスト](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml)で提供されている副単位の桁数です (このリストで情報が提供されていない場合は 2 です)。このデフォルト値がいつ適用されるかについては、 [SignificantDigits/FractionDigits のデフォルト値](#significantdigitsfractiondigits_のデフォルト値)を参照してください。
 - `maximumFractionDigits`
-  - : 小数部に使用する最大桁数です。使用可能な値は 0 から 20 までです。既定値は、通常の数値では `minimumFractionDigits` と 3 の大きい方、通貨形式では `minimumFractionDigits` と [ISO 4217 通貨コードリスト](https://www.currency-iso.org/en/home/tables/table-a1.html)で提供されている副単位の桁数です (このリストで情報が提供されていない場合は 2)、パーセント形式の場合は `minimumFractionDigits` と 0 の大きい方です。この既定値がいつ適用されるかについては、 [SignificantDigits/FractionDigits の既定値](#significantdigitsfractiondigits_の既定値)を参照してください。
+  - : 小数部に使用する最大桁数です。使用可能な値は 0 から 100 までです。デフォルト値は、通常の数値では `minimumFractionDigits` と 3 の大きい方、通貨形式では `minimumFractionDigits` と [ISO 4217 通貨コードリスト](https://www.currency-iso.org/en/home/tables/table-a1.html)で提供されている副単位の桁数です (このリストで情報が提供されていない場合は 2)、パーセント形式の場合は `minimumFractionDigits` と 0 の大きい方です。このデフォルト値がいつ適用されるかについては、 [SignificantDigits/FractionDigits のデフォルト値](#significantdigitsfractiondigits_のデフォルト値)を参照してください。
 - `minimumSignificantDigits`
-  - : 使用する最小有効桁数です。使用可能な値は 1 から 21 までです。既定値は 1 です。この既定値がいつ適用されるかについては、 [SignificantDigits/FractionDigits の既定値](#significantdigitsfractiondigits_の既定値)を参照してください。
+  - : 使用する最小有効桁数です。使用可能な値は 1 から 21 までです。デフォルト値は 1 です。このデフォルト値がいつ適用されるかについては、 [SignificantDigits/FractionDigits のデフォルト値](#significantdigitsfractiondigits_のデフォルト値)を参照してください。
 - `maximumSignificantDigits`
-  - : 使用する最大有効桁数です。使用可能な値は 1 から 21 までです。既定値は 1 です。この既定値がいつ適用されるかについては、 [SignificantDigits/FractionDigits の既定値](#significantdigitsfractiondigits_の既定値)を参照してください。
+  - : 使用する最大有効桁数です。使用可能な値は 1 から 21 までです。デフォルト値は 21 です。このデフォルト値がいつ適用されるかについては、 [SignificantDigits/FractionDigits のデフォルト値](#significantdigitsfractiondigits_のデフォルト値)を参照してください。
 - `roundingPriority`
   - : 丸め衝突を解決する方法を指定します。 "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) と "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maximumsignificantdigits)) が両方指定されている場合に使用します。
     使用可能な値は次のとおりです。
-    - `"auto"` （既定値）
+    - `"auto"` （デフォルト値）
       - : 有効数字のプロパティの結果が使用されます。
     - `"morePrecision"`
       - : より精度が向上するプロパティの結果が使用されます。
     - `"lessPrecision"`
       - : より精度が低下するプロパティの結果が使用されます。
 
-    値が `"auto"` の場合、 `notation` が `"compact"` であり、 4 つの "FractionDigits"/"SignificantDigits" オプションがいずれも設定されていない場合あ、 `"morePrecision"` に正規化されます。
+    値が `"auto"` の場合、 `notation` が `"compact"` であり、 4 つの "FractionDigits"/"SignificantDigits" オプションがいずれも設定されていない場合は、 `"morePrecision"` に正規化されます。
 
-    なお、値が `auto` 以外の場合、 [`maximumSignificantDigits`](#minimumsignificantdigits) と [`maximumFractionDigits`](#maximumfractiondigits) からより正確な結果が計算されます (最小有効桁数および最小小数点桁数の設定は無視されます)。
+    なお、値が `auto` 以外の場合、 [`maximumSignificantDigits`](#maximumsignificantdigits) と [`maximumFractionDigits`](#maximumfractiondigits) からより正確な結果が計算されます (最小有効桁数および最小小数点桁数の設定は無視されます)。
 
 - `roundingIncrement`
-  - : 丸めを行うべき増加量を、計算された丸め量に対して相対的に示します。使用可能な値は、`1`、`2`、`5`、`10`、`20`、`25`、`50`、`100`、`200`、`250`、`500`、`1000`、`2000`、`2500`、`5000` です。既定値は `1` です。有効桁数丸めや、`auto` 以外の `roundingPriority` の設定と混在することはできません。
+  - : 丸めを行うべき増加量を、計算された丸め量に対して相対的に示します。使用可能な値は、`1`、`2`、`5`、`10`、`20`、`25`、`50`、`100`、`200`、`250`、`500`、`1000`、`2000`、`2500`、`5000` です。デフォルト値は `1` です。有効桁数丸めや、`auto` 以外の `roundingPriority` の設定と混在することはできません。
 
 - `roundingMode`
   - : 小数点以下の桁数を丸める方法。使用可能な値は次のとおりです。
@@ -160,7 +160,7 @@ Intl.NumberFormat(locales, options)
       - : +∞ に向かって丸めます。増分の半分より大きい値は `"ceil"` のように（+∞ に向かって）丸め、増分の半分未満の値は `"floor"` のように（-∞ に向かって）丸めます。増分の半分では、値は `"ceil"` のように丸めます。
     - `"halfFloor"`
       - : -∞ に向かって丸めます。増分の半分より大きい値は `"ceil"` のように（+∞ に向かって）丸め、増分の半分未満の値は `"floor"` のように（-∞ に向かって）丸めます。増分の半分では、値は `"floor"` のように丸めます。
-    - `"halfExpand"` （既定値）
+    - `"halfExpand"` （デフォルト値）
       - : 0 より離れる方向に丸めます。増分の半分より大きい値は `"expand"` のように（0 から遠い方に）丸め、増分の半分未満の値は `"trunc"` のように（0 に向かって）丸めます。増分の半分では、値は `"expand"` のように丸めます。
     - `"halfTrunc"`
       - : 0 に向かって丸めます。増分の半分より大きい値は `"expand"` のように（0 から遠い方に）丸め、増分の半分未満の値は `"trunc"` のように（0 に向かって）丸めます。増分の半分では、値は `"trunc"` のように丸めます。
@@ -172,14 +172,14 @@ Intl.NumberFormat(locales, options)
 
 - `trailingZeroDisplay`
   - : 整数の末尾の 0 の表示方法に関する方針です。使用可能な値は次のとおりです。
-    - `"auto"` （既定値）
+    - `"auto"` （デフォルト値）
       - : `minimumFractionDigits` と `minimumSignificantDigits` に応じて、末尾のゼロを保持します。
     - `"stripIfInteger"`
       - : 小数部分がすべて 0 の場合、小数部分を削除します。小数部分が 0 以外の場合、これは `"auto"` と同じです。
 
-##### SignificantDigits/FractionDigits の既定値
+##### SignificantDigits/FractionDigits のデフォルト値
 
-前述の 4 つのオプション（`FractionDigits` および `SignificantDigits` のオプション）については、その既定値について述べましたが、これらの既定値は無条件に適用されるわけではありません。これらは、プロパティが実際に使用される場合にのみ適用されます。これは、[`roundingPriority`](#roundingpriority) および [`notation`](#notation) の設定によって異なります。仕様上、次のように設定されています。
+前述の 4 つのオプション（`FractionDigits` および `SignificantDigits` のオプション）については、そのデフォルト値について述べましたが、これらのデフォルト値は無条件に適用されるわけではありません。これらは、プロパティが実際に使用される場合にのみ適用されます。これは、[`roundingPriority`](#roundingpriority) および [`notation`](#notation) の設定によって異なります。仕様上、次のように設定されています。
 
 - `roundingPriority` が `"auto"` 以外の場合、4 つのオプションがすべて適用されます。
 - `roundingPriority` が `"auto"` で、少なくとも 1 つの `SignificantDigits` オプションが設定されている場合、 `SignificantDigits` オプションが適用され、 `FractionDigits` オプションは無視されます。
@@ -190,16 +190,16 @@ Intl.NumberFormat(locales, options)
 
 - `notation`
   - : 数値の表示に使用する書式化です。使用可能な値は次のとおりです。
-    - `"standard"` （既定値）
+    - `"standard"` （デフォルト値）
       - : 通常の数値の書式です。
     - `"scientific"`
       - : 書式化された数値の桁数を返します。
     - `"engineering"`
       - : 3 で割ることができる場合に 10 のべき乗を返します。
     - `"compact"`
-      - : 指数表記を表す文字列です。既定値は "short" の形式を使用したものです。
+      - : 指数表記を表す文字列です。デフォルト値は "short" の形式を使用したものです。
 - `compactDisplay`
-  - : `notation` が `"compact"` の場合のみ使用されます。 `"short"` (既定値) または `"long"` のどちらかを取ります。
+  - : `notation` が `"compact"` の場合のみ使用されます。 `"short"` (デフォルト値) または `"long"` のどちらかを取ります。
 - `useGrouping`
   - : 千の桁区切り文字や、千/万/億の桁区切り文字などの、グループ化区切り文字を使用するかどうか。
     - `"always"`
@@ -213,11 +213,11 @@ Intl.NumberFormat(locales, options)
     - `false`
       - : グループ化区切り文字を表示しません。
 
-    `notation` が `"compact"` の場合、既定値は `"min2"` です。それ以外の場合は `"auto"` です。文字列値 `"true"` および `"false"` は受け入れられますが、常に既定値に変換されます。
+    `notation` が `"compact"` の場合、デフォルト値は `"min2"` です。それ以外の場合は `"auto"` です。文字列値 `"true"` および `"false"` は受け入れられますが、常にデフォルト値に変換されます。
 
 - `signDisplay`
   - : 数値の符号を表示する場面。使用可能な値は次の通りです。
-    - `"auto"` （既定値）
+    - `"auto"` （デフォルト値）
       - : 負のゼロを含め、負の数のみ符号を表示します。
     - `"always"`
       - : 常に符号を表示します。
@@ -262,18 +262,21 @@ console.log(Object.getOwnPropertyDescriptors(formatter));
 
 - {{jsxref("RangeError")}}
   - : 次のいずれかの場合に発生します。
-    - 列挙値（`style`、`units`、`currency` といった値）を取るプロパティが、不正な値に設定されている。
-    - `maximumFractionDigits` と `minimumFractionDigits` の両方が設定されており、異なる値に設定されている。
-      さまざまな書式設定オプションによっては、これらのプロパティに既定値が指定されている場合があることに注意してください。
-      したがって、プロパティの 1 つだけを設定した場合でも、このエラーを取得する可能性があります。
+    - 列挙値（`style`、`unit`、`currency` など）を取るプロパティに、不正な値が設定されている。
+    - `minimumFractionDigits` が `maximumFractionDigits` を超えている。
+    - `roundingIncrement` が `1` 以外で、`maximumFractionDigits` と `minimumFractionDigits` の値が異なる。
+      書式設定オプションによっては、これらのプロパティにデフォルト値が設定される場合があります。
+      そのため、プロパティの一方だけを指定した場合でも、このエラーが発生することがあります。
 - {{jsxref("TypeError")}}
-  - : `options.style` プロパティが "unit" または "currency" に設定されており、対応するプロパティ `options.unit` または `options.currency` に値が設定されていない場合に発生します。
+  - : 次のいずれかの場合に発生します。
+    - `options.style` プロパティが `"unit"` または `"currency"` に設定されており、対応するプロパティ `options.unit` または `options.currency` に値が設定されていない。
+    - `roundingIncrement` が `1` 以外で、有効桁数による丸め、または `"auto"` 以外の `roundingPriority` と併用されている。
 
 ## 例
 
 ### 基本的な使用
 
-特定のロケールなしで使用すると、既定のロケール、既定のオプションで整形された文字列が返されます。
+特定のロケールなしで使用すると、デフォルトのロケール、デフォルトのオプションで整形された文字列が返されます。
 
 ```js
 const amount = 3500;
@@ -317,7 +320,7 @@ new Intl.NumberFormat("en-US", {
 
 ### 通貨の書式化
 
-`style` が `'currency'` であった場合、 `currency` プロパティを提供する必要があります。オプションで、 `currencyDisplay` および `currencySign` が単位の書式化を制御します。
+`style` が `'currency'` であった場合、 `currency` プロパティを提供する必要があります。オプションで、 `currencyDisplay` および `currencySign` が通貨の書式化を制御します。
 
 ```js
 const amount = -3500;
@@ -458,11 +461,11 @@ console.log(
 ```
 
 > [!WARNING]
-> 既定値には注意してください。コードで指定していない場合でも、書式化に影響を与える可能性があるためです。
-> 既定の最大桁数は、通常値では `3`、通貨では `2` であり、それ以外にも、あらかじめ定義された型によって異なる値を持つことがあります。
+> デフォルト値には注意してください。コードで指定していない場合でも、書式化に影響を与える可能性があるためです。
+> デフォルトの最大桁数は、通常値では `3`、通貨では `2` であり、それ以外にも、あらかじめ定義された型によって異なる値を持つことがあります。
 
 上記の書式化された値は、最大桁数を指定していないにもかかわらず、3 桁に丸められています。
-これは、`minimumFractionDigits` を指定すると、`maximumFractionDigits` の既定値が設定されるためです。その逆も同様です。`maximumFractionDigits` および `minimumFractionDigits` の既定値は、それぞれ `3` および `0` です。
+これは、`minimumFractionDigits` を指定すると、`maximumFractionDigits` のデフォルト値が設定されるためです。その逆も同様です。`maximumFractionDigits` および `minimumFractionDigits` のデフォルト値は、それぞれ `3` および `0` です。
 
 フォーマッターを検査するには、[`resolvedOptions()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) を使用することができます。
 
@@ -541,9 +544,9 @@ console.log(
 ```
 
 > [!WARNING]
-> 書式化に影響を与える可能性があるため、既定値には注意してください。
-> 1 つの `SignificantDigits` プロパティのみを使用する場合、その対応するプロパティには、既定値が自動的に適用されます。
-> 既定の最大有効桁数と最小有効桁数は、それぞれ 21 と 1 です。
+> 書式化に影響を与える可能性があるため、デフォルト値には注意してください。
+> 1 つの `SignificantDigits` プロパティのみを使用する場合、その対応するプロパティには、デフォルト値が自動的に適用されます。
+> デフォルトの最大有効桁数と最小有効桁数は、それぞれ 21 と 1 です。
 
 #### 有効桁数と小数点以下の桁数を同時に指定
 
@@ -551,7 +554,7 @@ console.log(
 両方を同時に使用すると、競合が発生する可能性があります。
 
 これらの競合は、[`roundingPriority`](#roundingpriority) プロパティを使用して解決されます。
-既定では、この値は `"auto"` であり、[`minimumSignificantDigits`](#minimumsignificantdigits) または [`maximumSignificantDigits`](#minimumsignificantdigits) のいずれかが指定されている場合、小数点以下の桁数および整数桁のプロパティは無視されることを意味しています。
+デフォルトでは、この値は `"auto"` であり、[`minimumSignificantDigits`](#minimumsignificantdigits) または [`maximumSignificantDigits`](#maximumsignificantdigits) のいずれかが指定されている場合、小数部の桁数に関するプロパティは無視されることを意味しています。
 
 例えば、以下のコードは、`4.33145` の値を `maximumFractionDigits: 3`、次に `maximumSignificantDigits: 2`、そして最後に両方に対応して書式化します。
 両方に対応する値は、`maximumSignificantDigits` で設定された値です。
@@ -619,7 +622,7 @@ const maxFracNF = new Intl.NumberFormat("en", {
   maximumFractionDigits: 3,
 });
 console.log(`maximumFractionDigits:3 - ${maxFracNF.format(1.23456)}`);
-// "maximumFractionDigits:2 - 1.235"
+// "maximumFractionDigits:3 - 1.235"
 
 const maxSigNS = new Intl.NumberFormat("en", {
   maximumSignificantDigits: 3,
@@ -673,7 +676,7 @@ console.log(`morePrecision - ${bothMore.format(1)}`);
 // "morePrecision - 1.0"
 ```
 
-これは、計算には「最大精度」の値のみが使用され、`maximumSignificantDigits` の既定値が `maximumFractionDigits` よりもはるかに大きいからです。
+これは、計算には「最大精度」の値のみが使用され、`maximumSignificantDigits` のデフォルト値が `maximumFractionDigits` よりもはるかに大きいからです。
 
 > [!NOTE]
 > 作業部会は、フォーマッターが、指定された小数点以下の桁数と有効桁数を使用して結果を個別に評価する（最小値と最大値の両方を考慮して）ようにアルゴリズムを変更することを提案しました。
@@ -685,7 +688,7 @@ console.log(`morePrecision - ${bothMore.format(1)}`);
 値の小数点以下の桁数がコンストラクターのオプションで指定された数を超える場合、書式化された値を指定された小数点以下の桁数に丸めます。
 値を丸める方法は、[`roundingMode`](#roundingmode) プロパティによって決まります。
 
-数値フォーマッターは、既定では `halfExpand` 丸めを使用します。これは、増分の半分ごとに値を「ゼロから離れる方向」に丸めます（言い換えれば、値の振れ幅が切り上げられます）。
+数値フォーマッターは、デフォルトでは `halfExpand` 丸めを使用します。これは、増分の半分ごとに値を「ゼロから離れる方向」に丸めます（言い換えれば、値の振れ幅が切り上げられます）。
 
 正の値の場合、除去される小数点以下の桁が次の増分（またはその半分の点）に近い場合、残りの小数点以下の桁は切り上げられます。それ以外の場合は切り捨てられます。
 これを下記に示します。2.23 を 2 桁の有効数字に丸めると、2.23 は増分の半分 2.25 未満であるため、2.2 に切り捨てられます。一方、2.25 以上の値は 2.3 に切り上げられます。

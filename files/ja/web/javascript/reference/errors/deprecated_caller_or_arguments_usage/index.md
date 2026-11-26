@@ -1,54 +1,50 @@
 ---
-title: "ReferenceError: deprecated caller or arguments usage"
+title: "TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed"
 slug: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
-
-JavaScript の [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)独自の例外 "deprecated caller or arguments usage" は、非推奨の {{jsxref("Function.caller")}} または {{jsxref("Function.arguments")}} プロパティが使用されたときに発生します。
+JavaScript の [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ発生する例外 "'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them" は、非推奨の {{jsxref("Functions/arguments/callee", "arguments.callee")}}、{{jsxref("Function.prototype.caller")}}、または {{jsxref("Function.prototype.arguments")}} プロパティが使用されたときに発生します。
 
 ## エラーメッセージ
 
-```js
-TypeError: 'arguments', 'callee' and 'caller' are restricted function properties and cannot be accessed in this context (Edge)
-Warning: ReferenceError: deprecated caller usage (Firefox)
-Warning: ReferenceError: deprecated arguments usage (Firefox)
-TypeError: 'callee' and 'caller' cannot be accessed in strict mode. (Safari)
+```plain
+TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them (V8-based & Firefox)
+TypeError: 'arguments', 'callee', and 'caller' cannot be accessed in this context. (Safari)
 ```
 
-## エラーの種類
+## エラー型
 
-strict モードでのみ、{{jsxref("ReferenceError")}} の警告が発生します。 JavaScript の実行は、停止しません。
+{{jsxref("TypeError")}} です。[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ発生します。
 
 ## エラーの原因
 
-[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) で、 {{jsxref("Function.caller")}} または {{jsxref("Function.arguments")}} が使われていますが、それらは使用すべきではありません。呼び出し元を漏洩させること、標準外であること、最適化が困難になること、性能に悪影響を与える機能であるため、非推奨になりました。
+[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で、{{jsxref("Functions/arguments/callee", "arguments.callee")}}、{{jsxref("Function.prototype.caller")}}、または {{jsxref("Function.prototype.arguments")}} プロパティが使用されていますが、これらは使うべきではありません。関数の呼び出し元が漏洩し、標準化されておらず、最適化が難しく、パフォーマンスに悪影響を及ぼす可能性があるため、非推奨です。
 
 ## 例
 
-### 非推奨の `function.caller` または `arguments.callee.caller`
+### 非推奨の `function.caller` または `arguments.callee`
 
-{{jsxref("Function.caller")}} と [`arguments.callee.caller`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee) は非推奨です (詳細は参照記事を見てください)。
+{{jsxref("Function.prototype.caller")}} と [`arguments.callee`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee) は非推奨です（詳しくは各リファレンス記事を参照してください）。
 
 ```js example-bad
 "use strict";
 
 function myFunc() {
-  if (myFunc.caller == null) {
+  if (myFunc.caller === null) {
     return "The function was called from the top!";
-  } else {
-    return "This function's caller was " + myFunc.caller;
   }
+  return `This function's caller was ${myFunc.caller}`;
 }
 
 myFunc();
-// Warning: ReferenceError: deprecated caller usage
-// "The function was called from the top!"
+// TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
 ```
 
-### `Function.arguments`
+### `Function.prototype.arguments`
 
-{{jsxref("Function.arguments")}} は非推奨です (詳細は参照記事を見てください)。
+{{jsxref("Function.prototype.arguments")}} は非推奨です（詳しくはリファレンス記事を参照してください）。
 
 ```js example-bad
 "use strict";
@@ -58,22 +54,23 @@ function f(n) {
 }
 
 function g(n) {
-  console.log("before: " + g.arguments[0]);
+  console.log(`before: ${g.arguments[0]}`);
   if (n > 0) {
     f(n);
   }
-  console.log("after: " + g.arguments[0]);
+  console.log(`after: ${g.arguments[0]}`);
 }
 
 f(2);
 
-console.log("returned: " + g.arguments);
-// Warning: ReferenceError: deprecated arguments usage
+console.log(`returned: ${g.arguments}`);
+// TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
 ```
 
 ## 関連情報
 
 - [非推奨の機能、廃止された機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
-- [Strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)
-- {{jsxref("Function.arguments")}}
-- {{jsxref("Function.caller")}} と [`arguments.callee.caller`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+- [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)
+- {{jsxref("Function.prototype.arguments")}}
+- {{jsxref("Function.prototype.caller")}}
+- [`arguments.callee`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee)

@@ -3,7 +3,7 @@ title: Propriété CSS `mask`
 short-title: mask
 slug: Web/CSS/Reference/Properties/mask
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 3f221b9845703eb21db70cdc321f843d5c1c072b
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`mask`** applique un masque à un élément (partiellement ou totalement) en masquant ou en rognant une zone définie de l'image. Il s'agit d'une propriété raccourcie pour toutes les propriétés [`mask-*`](#propriétés_constitutives). La propriété accepte une ou plusieurs valeurs séparées par des virgules, où chaque valeur correspond à un [`<mask-layer>`](#mask-layer).
@@ -20,6 +20,17 @@ Cette propriété est une propriété raccourcie pour les propriétés CSS suiva
 - {{CSSxRef("mask-position")}}
 - {{CSSxRef("mask-repeat")}}
 - {{CSSxRef("mask-size")}}
+
+### Sous-propriétés qui sont uniquement réinitialisées
+
+Cette propriété réinitialise les propriétés CSS suivantes à leurs valeurs initiales&nbsp;:
+
+- {{CSSxRef("mask-border-mode")}}
+- {{CSSxRef("mask-border-outset")}}
+- {{CSSxRef("mask-border-repeat")}}
+- {{CSSxRef("mask-border-slice")}}
+- {{CSSxRef("mask-border-source")}}
+- {{CSSxRef("mask-border-width")}}
 
 ## Syntaxe
 

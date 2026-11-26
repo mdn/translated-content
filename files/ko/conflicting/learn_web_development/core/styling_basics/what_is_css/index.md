@@ -40,7 +40,7 @@ l10n:
 > 브라우저는 CSS에 대해 이야기 할 때, 우리가 생각하는 주요 유형의 사용자 에이전트 이지만, 유일한 사용자 에이전트는 아닙니다.
 > HTML 및 CSS 문서를 인쇄할 PDF로 변환하는 것과 같은 사용 가능한 다른 사용자 에이전트가 있습니다.
 
-CSS 는 매우 기본적인 텍스트 문서 스타일링에 사용될 수 있습니다 — 예를 들어, 제목 및 링크의 [색상](/ko/docs/Web/CSS/Reference/Values/color_value)과 [크기](/ko/docs/Web/CSS/Reference/Properties/font-size) 변경. 또한, 레이아웃을 만드는 데 사용 할 수 있습니다 — 예를 들어, [단일 텍스트 열을 변환](/ko/docs/Web/CSS/Layout_cookbook/Column_layouts) (기본 콘텐츠 영역과 관련 정보에 대한 사이드 바가 있는 레이아웃으로) 하는 등 레이아웃을 만드는 데 사용 할 수 있습니다. [애니메이션](/ko/docs/Web/CSS/CSS_animations) 과 같은 효과에도 사용 할 수 있습니다. 구체적인 예는 이 단락의 링크를 살펴보세요.
+CSS 는 매우 기본적인 텍스트 문서 스타일링에 사용될 수 있습니다 — 예를 들어, 제목 및 링크의 [색상](/ko/docs/Web/CSS/Reference/Values/color_value)과 [크기](/ko/docs/Web/CSS/Reference/Properties/font-size) 변경. 또한, 레이아웃을 만드는 데 사용 할 수 있습니다 — 예를 들어, [단일 텍스트 열을 변환](/ko/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts) (기본 콘텐츠 영역과 관련 정보에 대한 사이드 바가 있는 레이아웃으로) 하는 등 레이아웃을 만드는 데 사용 할 수 있습니다. [애니메이션](/ko/docs/Web/CSS/CSS_animations) 과 같은 효과에도 사용 할 수 있습니다. 구체적인 예는 이 단락의 링크를 살펴보세요.
 
 ## CSS 구문
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-La méthode **`setTime()`** des instances de {{JSxRef("Date")}} modifie le [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) pour cette date, c'est-à-dire le nombre de millisecondes écoulées depuis [l'epoch](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), définie comme minuit au début du 1er janvier 1970, UTC.
+La méthode **`setTime()`** des instances de {{JSxRef("Date")}} modifie [l'horodatage (<i lang="en">timestamp</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide) pour cette date, c'est-à-dire le nombre de millisecondes écoulées depuis [l'epoch](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide), définie comme minuit au début du 1er janvier 1970, UTC.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.setTime()", "taller")}}
 
@@ -35,11 +35,11 @@ setTime(timeValue)
 ### Paramètres
 
 - `timeValue`
-  - : Un entier représentant le nouveau timestamp — le nombre de millisecondes écoulées depuis minuit au début du 1er janvier 1970, UTC.
+  - : Un entier représentant le nouvel horodatage — le nombre de millisecondes écoulées depuis minuit au début du 1er janvier 1970, UTC.
 
 ### Valeur de retour
 
-Modifie l'objet {{JSxRef("Date")}} en place et retourne son nouveau [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide). Si `timeValue` vaut `NaN` (ou d'autres valeurs qui sont [contraintes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre) en `NaN`, comme `undefined`), la date est définie sur [Date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) et `NaN` est retourné.
+Modifie l'objet {{JSxRef("Date")}} en place et retourne son nouvel [horodatage](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide). Si `timeValue` vaut `NaN` (ou d'autres valeurs qui sont [contraintes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre) en `NaN`, comme `undefined`), la date est définie sur [Date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide) et `NaN` est retourné.
 
 ## Description
 

@@ -3,7 +3,7 @@ title: "ServiceWorkerRegistration: active プロパティ"
 short-title: active
 slug: Web/API/ServiceWorkerRegistration/active
 l10n:
-  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
+  sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
 ---
 
 {{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}

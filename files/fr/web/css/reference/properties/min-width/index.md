@@ -3,10 +3,12 @@ title: Propriété CSS `min-width`
 short-title: min-width
 slug: Web/CSS/Reference/Properties/min-width
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`min-width`** est utilisée pour définir la largeur minimale d'un élément donné. Elle empêche [la valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de la propriété {{CSSxRef("width")}} de devenir inférieure à la valeur définie par `min-width`.
+
+La largeur de l'élément est la valeur de la propriété `min-width` si celle-ci est supérieure à {{CSSxRef("max-width")}} ou à {{CSSxRef("width")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: min-width")}}
 
@@ -44,8 +46,6 @@ min-width: 40ch;
   color: white;
 }
 ```
-
-La largeur de l'élément sera la valeur de la propriété `min-width` si celle-ci est supérieure à {{CSSxRef("max-width")}} ou à {{CSSxRef("width")}}.
 
 ## Syntaxe
 

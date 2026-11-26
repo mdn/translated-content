@@ -1,33 +1,33 @@
 ---
 title: "Warning: -file- is being assigned a //# sourceMappingURL, but already has one"
 slug: Web/JavaScript/Reference/Errors/Already_has_pragma
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
-
-JavaScript の警告 "-file- is being assigned a //# sourceMappingURL, but already has one." は、ある JavaScript ソースに対してソースマップが 2 回以上指定されている場合に発生します。
+JavaScript の警告 "-file- is being assigned a //# sourceMappingURL, but already has one." は、ある JavaScript ソースに対してソースマップが複数回指定されたときに発生します。
 
 ## エラーメッセージ
 
-```html
+```plain
 Warning: -file- is being assigned a //# sourceMappingURL, but already has one.
 ```
 
-## エラーの種類
+## エラー型
 
-警告です。 JavaScript の実行が停止されることはありません。
+警告です。JavaScript の実行は停止しません。
 
 ## エラーの原因
 
-JavaScript ソースに対して、ソースマップが複数回指定されています。
+JavaScript のソースに対して、ソースマップが複数回指定されています。
 
-より効率的にサーバーから配信するため、しばしば JavaScript ソースの結合や縮小が行われます。 [ソースマップ](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)を使用すると、デバッガーは実行されているコードと元のソースファイルを対応付けできます。ソースマップを割り当てるには、コメントを使用するか JavaScript ファイルにヘッダーを設定するかの 2 つの方法があります。
+JavaScript のソースは、サーバーから効率よく配信できるように、しばしば結合・最小化されます。[ソースマップ](https://developer.chrome.com/blog/sourcemaps/)<sup>(英語)</sup>を使うと、デバッガーは実行中のコードを元のソースファイルに対応付けできます。ソースマップの指定方法には、コメントを使う方法と、JavaScript ファイルにヘッダーを設定する方法があります。
 
 ## 例
 
-### ソースマップの設定
+### ソースマップの指定
 
-ファイル内でコメントを使用してソースマップを設定します。
+ファイル内のコメントでソースマップを指定します。
 
 ```js example-good
 //# sourceMappingURL=http://example.com/path/to/your/sourcemap.map
@@ -35,11 +35,11 @@ JavaScript ソースに対して、ソースマップが複数回指定されて
 
 あるいは、JavaScript ファイルにヘッダーを設定することもできます。
 
-```js example-good
+```http example-good
 X-SourceMap: /path/to/file.js.map
 ```
 
 ## 関連情報
 
-- [ソースマップを使用する – Firefox ツールドキュメント](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
-- [Introduction to source maps – HTML5 rocks](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
+- Firefox ソースドキュメントの[ソースマップの使用](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)<sup>(英語)</sup>
+- [JavaScript ソースマップの概要](https://developer.chrome.com/blog/sourcemaps/)<sup>(英語)</sup> (developer.chrome.com、2012 年)

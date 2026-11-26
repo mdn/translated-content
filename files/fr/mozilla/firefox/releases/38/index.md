@@ -3,7 +3,7 @@ title: Firefox 38 note de version pour les développeurs
 short-title: Firefox 38
 slug: Mozilla/Firefox/Releases/38
 l10n:
-  sourceCommit: 690498c3dbaebcf8b9a21220fbb23d192a30a225
+  sourceCommit: 2eb88572e8e972bb87a446f17a4a9a23de0108b5
 ---
 
 Firefox 38 a été publié le 12 mai 2015. Cet article répertorie les principaux changements utiles non seulement pour les développeur·euse·s web, mais aussi pour les développeur·euse·s Firefox et Gecko ainsi que pour les développeur·euse·s d'extensions.
@@ -80,7 +80,7 @@ Points forts&nbsp;:
 - Les constantes de {{DOMxRef("KeyboardEvent.location")}}, `DOM_KEY_LOCATION_MOBILE` et `DOM_KEY_LOCATION_JOYSTICK`, ont été supprimées, car elles ont été retirées de la spécification DOM Level 3 ([bogue Firefox 936313 <sup>(angl.)</sup>](https://bugzil.la/936313)).
 - {{DOMxRef("KeyboardEvent.code")}} est désormais disponible&nbsp;; auparavant, elle n'était disponible que dans les versions préliminaires. ([bogue Firefox 1126673 <sup>(angl.)</sup>](https://bugzil.la/1126673))
 - {{DOMxRef("KeyboardEvent.code")}} prend désormais en charge les touches spéciales des claviers Sun sous Linux, Android et Firefox OS. ([bogue Firefox 1020139 <sup>(angl.)</sup>](https://bugzil.la/1020139))
-- Le constructeur {{DOMxRef("TextEncoder.TextEncoder", "TextEncoder()")}} a été modifié pour correspondre à la spécification&nbsp;: lorsqu'un paramètre invalide est passé, une {{DOMxRef("DOMException")}} `RangeError` est désormais levée, plutôt qu'une {{JSxRef("TypeError")}} erronée ([bogue Firefox 1125766 <sup>(angl.)</sup>](https://bugzil.la/1125766)).
+- Le constructeur {{DOMxRef("TextEncoder.TextEncoder", "TextEncoder()")}} a été modifié pour correspondre à la spécification&nbsp;: lorsqu'un paramètre invalide est passé, une {{JSxRef("RangeError")}} est désormais levée, plutôt qu'une {{JSxRef("TypeError")}} erronée ([bogue Firefox 1125766 <sup>(angl.)</sup>](https://bugzil.la/1125766)).
 - L'API User Timing, ajoutant {{DOMxRef("Performance.mark()")}}, {{DOMxRef("Performance.clearMarks()")}}, {{DOMxRef("Performance.measure()")}} et {{DOMxRef("Performance.clearMeasures()")}}, a été implémentée ([bogue Firefox 782751 <sup>(angl.)</sup>](https://bugzil.la/782751)).
 - La version préfixée de {{DOMxRef("Window.indexedDB")}}, `mozIndexedDB`, a été supprimée ([bogue Firefox 975699 <sup>(angl.)</sup>](https://bugzil.la/975699)).
 - L'évènement {{DOMxRef("Document/DOMContentLoaded_event", "DOMContentLoaded")}} n'est plus annulable ([bogue Firefox 1134559 <sup>(angl.)</sup>](https://bugzil.la/1134559)).

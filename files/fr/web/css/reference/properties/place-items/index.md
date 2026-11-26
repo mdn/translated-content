@@ -3,10 +3,10 @@ title: Propriété CSS `place-items`
 short-title: place-items
 slug: Web/CSS/Reference/Properties/place-items
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 6354422058e438a2599e4eab71eaec8eb40850fa
 ---
 
-La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`place-items`** permet d'aligner les éléments à la fois dans les directions bloc et en incise (<i lang="en">inline</i> en anglais). Elle définit les valeurs des propriétés {{CSSxRef("align-items")}} et {{CSSxRef("justify-items")}}. Si la deuxième valeur n'est pas définie, la première valeur est également utilisée pour elle.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`place-items`** aligne les éléments à la fois dans les directions bloc et en incise (<i lang="en">inline</i> en anglais).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: place-items")}}
 
@@ -92,10 +92,18 @@ place-items: unset;
 
 ### Valeurs
 
-L'une des formes suivantes&nbsp;:
+Cette propriété est définie avec une ou deux valeurs séparées par des espaces des types suivants, dans l'ordre indiqué&nbsp;:
 
-- Une seule valeur {{CSSxRef("align-items")}}, utilisée pour définir l'alignement dans les directions bloc et en incise.
-- Une valeur {{CSSxRef("align-items")}}, qui définit l'alignement dans la direction bloc, suivie d'une valeur {{CSSxRef("justify-items")}}, qui définit l'alignement dans la direction en incise.
+- {{CSSxRef("align-items")}}
+  - : Définit l'alignement dans la direction bloc.
+- {{CSSxRef("justify-items")}} {{Optional_Inline}}
+  - : Définit l'alignement dans la direction en incise. Si elle est omise, la valeur de `align-items` est utilisée.
+
+## Description
+
+La propriété raccourcie `place-items` définit {{CSSxRef("align-items")}} et {{CSSxRef("justify-items")}} dans une seule déclaration, alignant les éléments à la fois dans les directions bloc et en incise.
+
+Si une seule valeur est fournie, cette valeur est utilisée pour définir l'alignement dans les directions bloc et en incise. Si deux valeurs sont fournies, la première valeur est la valeur de {{CSSxRef("align-items")}}, définissant l'alignement dans la direction bloc, et la deuxième valeur est la valeur de {{CSSxRef("justify-items")}}, définissant l'alignement dans la direction en incise.
 
 ## Définition formelle
 
@@ -109,7 +117,7 @@ L'une des formes suivantes&nbsp;:
 
 ### Placer les éléments dans un conteneur flexible
 
-Dans un conteneur flex, {{CSSxRef("justify-self")}} ou {{CSSxRef("justify-items")}} ne s'appliquent pas, car sur l'axe principal, les éléments sont traités comme un groupe. Par conséquent, la deuxième valeur est ignorée.
+Dans un conteneur flexibles, {{CSSxRef("justify-self")}} ou {{CSSxRef("justify-items")}} ne s'appliquent pas, car sur l'axe principal, les éléments sont traités comme un groupe. Par conséquent, la deuxième valeur est ignorée.
 
 ```css hidden
 div > div {

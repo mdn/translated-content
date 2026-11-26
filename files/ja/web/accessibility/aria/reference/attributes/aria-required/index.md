@@ -1,15 +1,16 @@
 ---
-title: aria-required
+title: "ARIA: aria-required 属性"
+short-title: aria-required
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-required
 l10n:
-  sourceCommit: a90c5bb64149b34db5a004b479d3195490d1c5f5
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 `aria-required` 属性は、フォームを送信する前に要素にユーザー入力が必要であることを示します。
 
 ## 解説
 
-セマンティック HTML {{htmlelement("input")}}、{{htmlelement("select")}}、または {{htmlelement("textarea")}} に値が必要な場合は、[`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を適用する必要があります。 HTML の `required` 属性は、必要なフォームコントロールに有効な値がない限りフォームの送信を無効にしますが、支援技術を使用してナビゲートするユーザーが、どのセマンティックフォームコントロールに有効なコンテンツが必要であるかを理解できるようにもします。
+セマンティック HTML {{htmlelement("input")}}、{{htmlelement("select")}}、{{htmlelement("textarea")}} に値が必要な場合は、[`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を適用する必要があります。 HTML の `required` 属性は、必要なフォームコントロールに有効な値がない限りフォームの送信を無効にしますが、支援技術を使用してナビゲートするユーザーが、どのセマンティックフォームコントロールに有効なコンテンツが必要であるかを理解できるようにもします。
 
 [ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) が [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role) の {{HTMLElement('div')}} など、非セマンティック要素を使用してフォームコントロールを作成する場合、フォームを送信するには要素にユーザー入力が必要であることを支援技術に示すために、`aria-required` 属性を `true` の値で含める必要があります。`aria-required` 属性は HTML フォーム要素で使用できます。これは ARIA ロールが割り当てられている要素に限定されません。
 
@@ -18,38 +19,12 @@ l10n:
 > [!NOTE]
 > ARIA はアクセシビリティツリーのみを変更し、支援技術がコンテンツをユーザーに提示する方法を変更します。ARIA は要素の機能や動作については何も変更しません。セマンティック HTML 要素を本来の目的やデフォルトの機能に使用しない場合は、JavaScript を使用して動作、フォーカス、ARIA の状態を管理する必要があります。
 
-CSS の {{CSSXRef(':required')}} および {{CSSXRef(':optional')}} 疑似クラスは、それぞれ必須か任意かに基づいて、{{htmlelement("input")}}、{{htmlelement("select")}}、および {{htmlelement("textarea")}} 要素をマッチさせます。非セマンティック要素をフォームコントロールとして使用する場合、この CSS 疑似クラスセレクターの利点は得られません。ただし、属性が存在する場合は、`[aria-required="true"]` もしくは `[aria-required="false"]` の属性セレクターを使用できます。
+CSS の {{CSSXRef(':required')}} および {{CSSXRef(':optional')}} 擬似クラスは、それぞれ必須か任意かに基づいて、{{htmlelement("input")}}、{{htmlelement("select")}}、および {{htmlelement("textarea")}} 要素に一致します。非セマンティック要素をフォームコントロールとして使用する場合、この CSS 擬似クラスセレクターの利点は得られません。ただし、属性が存在する場合は、`[aria-required="true"]` もしくは `[aria-required="false"]` の属性セレクターを使用できます。
 
 フォームに必須のフォーム要素と任意のフォーム要素の両方が含まれている場合、必須の要素は、意味を伝えるために色だけに頼らない処理を使用して視覚的に示す必要があります。通常は、説明的なテキストやアイコンが使用されます。
 
 > [!NOTE]
 > どの要素が必須であるかは、全てのユーザーにとって明らかである必要があります。フォームコントロールが必須であることを視覚的な提示で一貫して目に見える形で示していることを確認してください。色だけでは情報を伝達するのに十分ではないことに注意してください。
-
-## 例
-
-属性は、フォームコントロールロールに追加する必要があります。ユーザーが電子メールアドレスを [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) に入力する必要がある場合は textbox に `aria-required="true"` を含めます。
-
-```html
-<div id="tbLabel">Email Address *</div>
-<div
-  role="textbox"
-  contenteditable
-  aria-labelledby="tblabel"
-  aria-required="true"
-  id="email1"></div>
-```
-
-> [!NOTE]
-> フィールドのラベルに既に「必須」という単語が含まれている場合は、`aria-required` 属性を省略することをお勧めします。これにより、スクリーンリーダーが「必須」という用語を 2 回読み上げるのを回避できます。
-
-この例では、テキストボックスにコンテンツがない場合、フォームが送信されないように JavaScript を使用する必要があります。
-
-これは、JavaScript を必要とせずにセマンティックに記述できます:
-
-```html
-<label for="email1">Email Address (required)</label>
-<input type="email" id="email1" required />
-```
 
 ## 値
 
@@ -85,6 +60,32 @@ CSS の {{CSSXRef(':required')}} および {{CSSXRef(':optional')}} 疑似クラ
 - [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
 - [`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
 - [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
+
+## 例
+
+属性は、フォームコントロールのロールに追加する必要があります。ユーザーにメールアドレスを [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) に入力してもらう場合は、そのテキストボックスに `aria-required="true"` を含めます。
+
+```html
+<div id="tbLabel">メールアドレス *</div>
+<div
+  role="textbox"
+  contenteditable
+  aria-labelledby="tblabel"
+  aria-required="true"
+  id="email1"></div>
+```
+
+> [!NOTE]
+> フィールドのラベルにすでに「必須」という単語が含まれている場合は、`aria-required` 属性を省略することをお勧めします。これにより、スクリーンリーダーが「必須」を 2 回読み上げるのを避けられます。
+
+この例では、テキストボックスに内容がない場合にフォームが送信されないよう、JavaScript を使う必要があります。
+
+JavaScript を使わず、意味的に適切な HTML で記述することもできます。
+
+```html
+<label for="email1">メールアドレス (必須)</label>
+<input type="email" id="email1" required />
+```
 
 ## 仕様書
 

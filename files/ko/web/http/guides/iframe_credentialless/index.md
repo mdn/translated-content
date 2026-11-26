@@ -66,10 +66,6 @@ nonce는 동일한 최상위 문서의 하위 문서인 모든 무인증 iframe�
 
 만약 `<iframe>`에 `credentialless`가 설정되어 있다면, 해당 `<iframe>`에 내장된 자식 `<iframe>`에도 `credentialless` 설정이 상속됩니다.
 
-## 실시간 데모
-
-[https://anonymous-iframe.glitch.me/](https://anonymous-iframe.glitch.me/) 데모를 사용하여 무인증 IFrame의 작동 방식을 확인할 수 있습니다.
-
 ## 명세서
 
 {{Specifications}}

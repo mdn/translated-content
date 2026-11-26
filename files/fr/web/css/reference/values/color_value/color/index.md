@@ -8,7 +8,7 @@ l10n:
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`color()`** permet de définir une couleur dans un {{Glossary("color space", "espace colorimétrique")}} particulier, au lieu de l'espace colorimétrique sRGB implicite utilisé par la plupart des autres fonctions de couleur.
 
-Vous pouvez détecter la prise en charge d'un espace colorimétrique particulier avec la fonctionnalité média CSS [`color-gamut`](/fr/docs/Web/CSS/Reference/At-rules/@media/color-gamut).
+Vous pouvez détecter la prise en charge d'un espace colorimétrique particulier avec la caractéristique média CSS [`color-gamut`](/fr/docs/Web/CSS/Reference/At-rules/@media/color-gamut).
 
 ## Syntaxe
 
@@ -388,5 +388,5 @@ Le résultat est le suivant&nbsp;:
 - [Utiliser les couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors)
 - [Outil de conversion de format de couleur](/fr/docs/Web/CSS/Guides/Colors/Color_format_converter)
 - Le module [des couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
-- Fonctionnalité média [`color-gamut`](/fr/docs/Web/CSS/Reference/At-rules/@media/color-gamut)
+- Caractéristique média [`color-gamut`](/fr/docs/Web/CSS/Reference/At-rules/@media/color-gamut)
 - [Large gamme de couleurs en CSS avec Display-p3 <sup>(angl.)</sup>](https://webkit.org/blog/10042/wide-gamut-color-in-css-with-display-p3/)

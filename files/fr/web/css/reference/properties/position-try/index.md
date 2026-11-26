@@ -3,7 +3,7 @@ title: Propriété CSS `position-try`
 short-title: position-try
 slug: Web/CSS/Reference/Properties/position-try
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 6354422058e438a2599e4eab71eaec8eb40850fa
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`position-try`** correspond aux propriétés {{CSSxRef("position-try-order")}} et {{CSSxRef("position-try-fallbacks")}}.
@@ -50,9 +50,20 @@ position-try: unset;
 
 ### Valeurs
 
-Voir {{CSSxRef("position-try-order")}} et {{CSSxRef("position-try-fallbacks")}} pour la description des valeurs.
+Cette propriété est définie par l'une ou les deux valeurs suivantes&nbsp;:
 
-Le raccourci `position-try` peut définir des valeurs pour `position-try-fallbacks`, ou `position-try-order` et `position-try-fallbacks`, dans cet ordre. Si `position-try-order` est omis, il est défini sur la valeur initiale de la propriété, qui est `normal`, ce qui signifie que les options de repli de `position-try` sont essayées dans l'ordre dans lequel elles apparaissent dans la propriété.
+- {{CSSxRef("position-try-order")}} {{Optional_Inline}}
+  - : Un mot-clé qui définit l'ordre de priorité des options de repli d'essai de positionnement. Si vous l'omettez, la valeur par défaut est `normal`.
+- {{CSSxRef("position-try-fallbacks")}}
+  - : Le mot-clé `none`, ou une liste de valeurs `<position-area>`, d'options `<try-tactic>` et de positions personnalisées, séparées par des virgules.
+
+## Description
+
+La propriété raccourcie `position-try` permet de définir les propriétés {{CSSxRef("position-try-order")}} et {{CSSxRef("position-try-fallbacks")}} dans une seule déclaration. Elle définit `position-try-order` et `position-try-fallbacks`, dans cet ordre. Si vous omettez la composante `position-try-order`, sa valeur par défaut est `normal`.
+
+`position-try-fallbacks` est une liste, séparée par des virgules, d'une ou plusieurs options de repli pour l'essai de positionnement des éléments positionnés par rapport à une ancre associée. Lorsque l'élément déborde autrement de son bloc englobant modifié par les propriétés d'encart, le navigateur essaie de placer l'élément positionné à ces différentes positions de repli, dans l'ordre indiqué, et s'arrête dès qu'il trouve une valeur qui évite le débordement de son conteneur ou de la zone d'affichage.
+
+`position-try-order` définit la priorité des options `position-try-fallbacks` appliquées à un élément positionné par rapport à une ancre lors de son premier affichage, selon l'option qui crée le plus d'espace autour de l'élément dans la direction donnée. Si vous l'omettez, cette propriété prend sa valeur initiale, `normal`, ce qui signifie que les options de repli d'essai de positionnement sont testées dans l'ordre où elles apparaissent dans la propriété.
 
 ## Définition formelle
 

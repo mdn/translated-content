@@ -3,7 +3,7 @@ title: Propriété CSS `text-emphasis`
 short-title: text-emphasis
 slug: Web/CSS/Reference/Properties/text-emphasis
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 7484d45816002fbf082a59c5d95c38a1eb2b2e4b
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`text-emphasis`** applique des marques d'emphase au texte (sauf les espaces et les caractères de contrôle). C'est une propriété raccourcie pour {{CSSxRef("text-emphasis-style")}} et {{CSSxRef("text-emphasis-color")}}.
@@ -118,18 +118,18 @@ text-emphasis: unset;
 
 Cet exemple montre un titre avec des triangles utilisés pour mettre en évidence chaque caractère.
 
+#### HTML
+
+```html
+<h2>Ceci est important&nbsp;!</h2>
+```
+
 #### CSS
 
 ```css
 h2 {
   text-emphasis: triangle #dd5555;
 }
-```
-
-#### HTML
-
-```html
-<h2>Ceci est important&nbsp;!</h2>
 ```
 
 #### Résultat

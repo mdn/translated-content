@@ -2,7 +2,7 @@
 title: HTMLElement
 slug: Web/API/HTMLElement
 l10n:
-  sourceCommit: 34055723f9d2bbadfa8b0f0d27102e3adcedbd58
+  sourceCommit: 4d218f9fdff30e8e01a26402b9f9615c9527ccf6
 ---
 
 {{APIRef("HTML DOM")}}
@@ -24,12 +24,18 @@ _親である {{DOMxRef("Element")}} から継承したプロパティもあり�
 - {{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
   - : {{DOMxRef("StylePropertyMap")}} で、その要素の [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性の宣言を表します。
 - {{domxref("HTMLElement.autocapitalize")}}
-  - : ユーザー入力に対する要素の大文字小文字の動作を表す文字列。有効な値は `none`、`off`、`on`、`characters`、`words`、`sentences`　です。
+  - : ユーザー入力に対する要素の大文字小文字の動作を表す文字列。有効な値は `none`、`off`、`on`、`characters`、`words`、`sentences` です。
 - {{domxref("HTMLElement.autofocus")}}
   - : 論理値で、HTML の [`autofocus`](/ja/docs/Web/HTML/Reference/Elements/select#autofocus) グローバル属性を反映し、ページが読み込まれたとき、または {{htmlelement("dialog")}} 要素やポップオーバー属性が設定されている要素内の要素に指定した場合、ダイアログやポップオーバーが表示されたときに、コントロールにフォーカスを当てるかどうかを示します。
 - {{domxref("HTMLElement.autocorrect")}}
   - : ユーザーが入力したテキストを自動的に修正すべきかどうかを表します。
     これは HTML の [`autocorrect`](/ja/docs/Web/HTML/Reference/Global_attributes/autocorrect) グローバル属性を反映します。
+- {{domxref("HTMLElement.containerTiming")}} {{Experimental_Inline}}
+  - : この要素を {{domxref("PerformanceContainerTiming")}} API による観測対象のコンテナールートとしてマークする文字列です。
+    これは HTML の [`containertiming`](/ja/docs/Web/HTML/Reference/Global_attributes/containertiming) グローバル属性を反映します。
+- {{domxref("HTMLElement.containerTimingIgnore")}} {{Experimental_Inline}}
+  - : 祖先のコンテナールートのタイミング計測への寄与から、この要素とその子孫を除外する論理値です。
+    これは HTML の [`containertimingignore`](/ja/docs/Web/HTML/Reference/Global_attributes/containertimingignore) グローバル属性を反映します。
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : 文字列で、 `true` の場合は要素が編集可能、`false` の場合は編集不可であることを表します。
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
@@ -115,37 +121,46 @@ _親である {{DOMxRef("Element")}} から継承したメソッドもありま�
 _親である {{DOMxRef("Element")}} から継承したイベントもあります。_
 
 - {{DOMxRef("HTMLElement/change_event", "change")}}
-  - : {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} のいずれかの要素の `value` が変更され、ユーザーが確定したときに発行されます。{{domxref("Element/input_event", "input")}} イベントとは異なり、`change` イベントは要素の `value` が変更されるたびに発行されるわけではありません。
+  - : {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} のいずれかの要素の `value` が変更され、ユーザーが確定したときに発生します。{{domxref("Element/input_event", "input")}} イベントとは異なり、`change` イベントは要素の `value` が変更されるたびに発生するわけではありません。
 - {{domxref("HTMLElement/command_event", "command")}}
   - : {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} および {{domxref("HTMLButtonElement.command", "command")}} の値が有効な{{domxref("HTMLButtonElement", "ボタン")}}によって制御される要素上で、ボタンが操作されるたびに（例えば、クリックされるたびに）発生します。
 - {{DOMxRef("HTMLElement/error_event", "error")}}
-  - : リソースの読み込みに失敗した、または使用することができない場合に発行されます。
+  - : リソースの読み込みに失敗した、または使用することができない場合に発生します。
 - {{DOMxRef("HTMLElement/load_event", "load")}}
-  - : リソースが正常に読み込まれたときに、リソースを保持する要素に対して発行されます。
+  - : リソースが正常に読み込まれたときに、リソースを保持する要素に対して発生します。
 
 ### ドラッグ＆ドロップイベント
 
 - {{DOMxRef("HTMLElement/drag_event", "drag")}}
-  - : このイベントは、要素やテキスト選択がドラッグされたときに発行されます。
+  - : このイベントは、要素またはテキスト選択がドラッグされている間、繰り返し発生します。
+    発生頻度はブラウザー、オペレーティングシステム、ポインターの動きによって異なるため、固定の間隔を前提にしないでください。
 - {{DOMxRef("HTMLElement/dragend_event", "dragend")}}
-  - : このイベントは、ドラッグ操作が（マウスボタンを離すか、エスケープキーを押すかして）終わったときに発行されます。
+  - : このイベントは、ドラッグ操作が（マウスボタンを離すか、エスケープキーを押すかして）終わったときに発生します。
 - {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}}
-  - : このイベントは、ドラッグされた要素やテキスト選択が有効なドロップ対象に入ると発行されます。
+  - : このイベントは、ドラッグされた要素やテキスト選択が有効なドロップ対象に入ると発生します。
 - {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}}
-  - : このイベントは、ドラッグされた要素やテキスト選択が有効なドロップ対象から外れたときに発行されます。
+  - : このイベントは、ドラッグされた要素やテキスト選択が有効なドロップ対象から外れたときに発生します。
 - {{DOMxRef("HTMLElement/dragover_event", "dragover")}}
-  - : このイベントは、要素またはテキスト選択がドラッグされ、マウスポインターが有効なドロップ対象の上にあるとき（マウスが移動していないときは 50 ミリ秒ごと、移動中およそ 5 ミリ秒（移動が遅いとき）から 1 ミリ秒（移動が速いとき）の間に発生します。この発行パターンは {{domxref("Element/mouseover_event", "mouseover")}} とは異なります。）
+  - : このイベントは、要素またはテキスト選択をドロップ先の候補の上でドラッグしている間、繰り返し発生します。
+    発生頻度はブラウザー、オペレーティングシステム、ポインターの動きによって異なるため、固定の間隔を前提にしないでください。
 - {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}}
-  - : このイベントは、ユーザーが要素やテキスト選択のドラッグを始めるには発行されます。
+  - : このイベントは、ユーザーが要素やテキスト選択のドラッグを開始したときに発生します。
 - {{DOMxRef("HTMLElement/drop_event", "drop")}}
-  - : このイベントは、要素またはテキスト選択が有効なドロップ対象にドロップされたときに発行されます。
+  - : このイベントは、要素またはテキスト選択が有効なドロップ対象にドロップされたときに発生します。
+
+### 関心インボーカーイベント
+
+- {{domxref("HTMLElement.interest_event", "interest")}} {{experimental_inline}} {{non-standard_inline}}
+  - : 関心インボーカーの[対象要素](/ja/docs/Web/API/Popover_API/Using_interest_invokers)で、関心が示されたときに発生します。これに応答するコードを実行できます。
+- {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} {{experimental_inline}} {{non-standard_inline}}
+  - : 関心インボーカーの対象要素で、関心が失われたときに発生します。これに応答するコードを実行できます。
 
 ### トグルイベント
 
 - {{DOMxRef("HTMLElement/beforetoggle_event", "beforetoggle")}}
-  - : この要素が[ポップオーバー](/ja/docs/Web/API/Popover_API)または {{htmlelement("dialog")}} である場合、非表示または表示される前に発行されます。
+  - : この要素が[ポップオーバー](/ja/docs/Web/API/Popover_API)または {{htmlelement("dialog")}} である場合、非表示または表示される前に発生します。
 - {{DOMxRef("HTMLElement/toggle_event", "toggle")}}
-  - : この要素が[ポップオーバー](/ja/docs/Web/API/Popover_API)、{{htmlelement("dialog")}}、{{htmlelement("details")}} のいずれかである場合、非表示または表示された直後に発行されます。
+  - : この要素が[ポップオーバー](/ja/docs/Web/API/Popover_API)、{{htmlelement("dialog")}}、{{htmlelement("details")}} のいずれかである場合、非表示または表示された直後に発生します。
 
 ## 仕様書
 

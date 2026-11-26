@@ -2,7 +2,7 @@
 title: Ce sur quoi nous écrivons
 slug: MDN/Writing_guidelines/What_we_write
 l10n:
-  sourceCommit: de5b264fa7bf6bb49811bf79f8f28f10835bfb79
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
 
 MDN contient une documentation sur le Web, _neutre_ pour les différents navigateurs, pour permettre aux développeur·euse·s d'écrire du code «&nbsp;agnostique&nbsp;» aux différents navigateurs. Dans cet article, vous pouvez trouver des informations pour savoir si un sujet ou un type de contenu a sa place pour être inclus dans MDN.
@@ -13,7 +13,7 @@ Cette section décrit les règles mises en place par l'équipe MDN employée par
 
 ### Pertinence
 
-Tout le contenu présent sur MDN doit être pertinent pour la section dans laquelle il apparaît. Les publicités et autres contenus indésirables ne sont pas acceptés. Les personnes qui tentent d'ajouter ce type de contenu à plusieurs reprises peuvent être bannies de MDN à la discrétion de l'équipe MDN employée par Mozilla.
+Tout le contenu présent sur MDN doit être pertinent pour la section dans laquelle il apparaît. Les publicités et autres contenus indésirables ne sont pas acceptés. La publication répétée (publicité commerciale) et tout autre contenu non pertinent ne sont jamais acceptés sur le site. Il en va de même pour le contenu de faible qualité, comme le texte généré qui répète ce qui est déjà sur la page ou qui n'a pas été vérifié pour son exactitude. Les contributeur·rice·s qui continuent à essayer d'envoyer ce type de contenu peuvent être bannis de MDN à la discrétion de l'équipe MDN employée par Mozilla.
 
 Les liens sortants vers des sites commerciaux qui sont pertinents pour le sujet sont jugés au cas par cas. La valeur ajoutée pour aider les équipes de développement web doit surpasser le bénéfice commercial du site cible.
 
@@ -27,6 +27,11 @@ Les articles de MDN doivent respecter [une neutralité de point de vue](https://
 ### Sujets web ouverts
 
 Les technologies web documentées sur MDN doivent être définies de façon ouverte et implémentées par au moins un moteur de rendu. Les variations quant à la prise en charge des différents navigateurs sont documentées dans la section [de compatibilité des navigateurs](/fr/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) d'un article.
+
+### Responsabilité
+
+Vous êtes responsable de tout le contenu que vous envoyez, y compris les suggestions et les brouillons.
+Une personne doit examiner chaque contribution avant qu'elle ne soit envoyée, quels que soient les outils utilisés pour la créer.
 
 ## Suggestion de contenus
 

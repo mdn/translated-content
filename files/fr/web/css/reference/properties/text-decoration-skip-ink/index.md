@@ -3,10 +3,12 @@ title: Propriété CSS `text-decoration-skip-ink`
 short-title: text-decoration-skip-ink
 slug: Web/CSS/Reference/Properties/text-decoration-skip-ink
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-decoration-skip-ink`** définit comment les lignes au-dessus et en dessous du texte sont dessinées lorsqu'elles passent sur les jambages et hampes des glyphes.
+
+`text-decoration-skip-ink` ne fait pas partie de la propriété abrégée {{CSSxRef("text-decoration")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: text-decoration-skip-ink")}}
 
@@ -34,8 +36,6 @@ p {
   text-decoration: underline;
 }
 ```
-
-`text-decoration-skip-ink` ne fait pas partie de la propriété abrégée {{CSSxRef("text-decoration")}}.
 
 ## Syntaxe
 

@@ -3,7 +3,7 @@ title: "`pattern` 属性"
 short-title: pattern
 slug: Web/HTML/Reference/Attributes/pattern
 l10n:
-  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 **`pattern`** 属性は、フォームコントロールの値が一致すべき[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)を指定します。`null` 以外の値が `pattern` 値によって設定された制約に適合しない場合、{{domxref('ValidityState')}} オブジェクトの読み取り専用の {{domxref('ValidityState.patternMismatch','patternMismatch')}} プロパティが真になります。
@@ -142,6 +142,12 @@ input:invalid {
     <button>送信</button>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden

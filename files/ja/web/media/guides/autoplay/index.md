@@ -2,7 +2,7 @@
 title: メディアおよびウェブオーディオ API の自動再生ガイド
 slug: Web/Media/Guides/Autoplay
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: f4c221962681b1472cd57da60379ad7825fe5081
 ---
 
 ページが読み込まれると、すぐに音声（または音声トラックを含む動画）の再生を自動的に開始されることは、ユーザーにとって歓迎されない驚きです。 メディアの自動再生は便利な目的に役立ちますが、注意して必要なときにだけ使用してください。 ユーザーがこれを制御できるようにするために、ブラウザーは多くの場合、さまざまな形式の自動再生のブロック (autoplay blocking) を提供します。 このガイドでは、さまざまなメディアおよびウェブオーディオ API (Web Audio API) の自動再生機能について説明します。自動再生の使用方法と自動再生のブロックを適切に処理するためのブラウザーの操作方法の簡単な概要を含みます。
@@ -11,7 +11,7 @@ l10n:
 
 ## 自動再生と自動再生のブロック
 
-**自動再生** (**autoplay**) という用語は、ユーザーが再生の開始を明確に要求しなくても音声の再生を開始させる機能を意味します。 これには、メディアの自動再生のための HTML 属性の使用と、ユーザー入力を処理するコンテキストの外で再生を開始するための JavaScript コードのユーザーの両方が含まれます。
+**自動再生** (**autoplay**) という用語は、ユーザーが再生の開始を明確に要求しなくてもメディアの再生を開始させる機能を意味します。これには、メディアを自動再生するための HTML 属性の使用と、ユーザー入力を処理するコンテキスト外で JavaScript コードを使って再生を開始することの両方が含まれます。
 
 つまり、次の両方が自動再生のふるまいと見なされるため、ブラウザーの自動再生のブロックのポリシーに従います。
 
@@ -91,7 +91,7 @@ if (navigator.getAutoplayPolicy("mediaelement") === "allowed") {
   video.muted = true;
 } else if (navigator.getAutoplayPolicy("mediaelement") === "disallowed") {
   // 既定のプレースホルダー画像を設定
-  video.poster = "http://example.com/poster_image_url";
+  video.poster = "https://example.com/poster_image_url";
 }
 ```
 
@@ -106,7 +106,7 @@ if (navigator.getAutoplayPolicy(video) === "allowed") {
   video.muted = true;
 } else if (navigator.getAutoplayPolicy(video) === "disallowed") {
   // 既定のプレースホルダー画像を設定
-  video.poster = "http://example.com/poster_image_url";
+  video.poster = "https://example.com/poster_image_url";
 }
 ```
 
@@ -134,7 +134,7 @@ if (navigator.getAutoplayPolicy(video) === "allowed") {
 
 ```js
 const video = document.getElementById("video");
-video.addEventListener("play", handleFirstPlay, false);
+video.addEventListener("play", handleFirstPlay);
 
 let hasPlayed = false;
 function handleFirstPlay(event) {

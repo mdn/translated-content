@@ -3,7 +3,7 @@ title: Propriété CSS `position-anchor`
 short-title: position-anchor
 slug: Web/CSS/Reference/Properties/position-anchor
 l10n:
-  sourceCommit: 31086145b865d6c5c2fec3ba700fd424d57fdf42
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`position-anchor`** définit le nom de l'ancre de **l'élément d'ancrage** pour un élément positionné.
@@ -57,6 +57,8 @@ S'il y a plusieurs éléments d'ancrage avec le même nom d'ancrage listé dans 
 Pour annuler une association précédemment établie entre un élément positionné et un élément d'ancrage, vous pouvez définir la valeur de `position-anchor` de l'élément positionné sur `none`.
 
 Pour attacher un élément positionné à son ancre, il doit être placé par rapport à un élément d'ancrage en utilisant une fonctionnalité de positionnement d'ancrage, telle que la fonction {{CSSxRef("anchor()")}} (définie comme valeur sur les {{Glossary("inset properties", "propriétés d'encart")}}) ou la propriété {{CSSxRef("position-area")}}.
+
+Lors du positionnement d'éléments par rapport à des [ancres implicites](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#associer_implicitement_une_ancre) en utilisant `anchor()`, définissez `position-anchor: auto` sur l'élément positionné par rapport à l'ancre pour opter pour l'association implicite. Voir [Positionnement de l'ancre de la fenêtre contextuelle](/fr/docs/Web/API/Popover_API/Using#positionnement_dancrage_des_fenêtres_contextuelles) pour plus d'informations.
 
 Si l'ancre associée est masquée, par exemple avec {{CSSxRef("display", "display: none")}} ou {{CSSxRef("visibility", "visibility: hidden")}}, ou si elle fait partie des [contenus ignorés](/fr/docs/Web/CSS/Guides/Containment/Using#ignorer_son_contenu) d'un autre élément en raison de la définition de {{CSSxRef("content-visibility", "content-visibility: hidden")}} sur celui-ci, l'élément positionné par rapport à l'ancre n'est pas affiché.
 

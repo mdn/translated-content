@@ -3,7 +3,7 @@ title: Intl.NumberFormat.prototype.formatRange()
 short-title: formatRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`formatRange()`** は {{jsxref("Intl.NumberFormat")}} インスタンスのメソッドで、この `Intl.NumberFormat` オブジェクトのロケールおよび書式設定オプションに従って、数値の範囲を書式化します。
@@ -34,13 +34,13 @@ formatRange(startRange, endRange)
 
 ## 解説
 
-`formatRange` ゲッター関数は、呼び出された {{jsxref("Intl.NumberFormat")}} オブジェクトのロケールおよび書式化オプションに従って、数値の範囲を文字列に書式化します。
+`formatRange` メソッドは、呼び出された {{jsxref("Intl.NumberFormat")}} オブジェクトのロケールおよび書式化オプションに従って、数値の範囲を文字列に書式化します。
 
 ## 例
 
 ### formatRange の使用
 
-通貨値の範囲を書式化するには、`formatRange` ゲッター関数を使用します。
+通貨値の範囲を書式化するには、`formatRange` メソッドを使用します。
 
 ```js
 const nf = new Intl.NumberFormat("en-US", {

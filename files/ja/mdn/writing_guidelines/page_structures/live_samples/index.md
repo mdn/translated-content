@@ -3,7 +3,7 @@ title: ライブサンプル (EmbedLiveSample)
 short-title: ライブサンプル
 slug: MDN/Writing_guidelines/Page_structures/Live_samples
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 7484d45816002fbf082a59c5d95c38a1eb2b2e4b
 ---
 
 MDN は、記事中のコードブロックを「ライブサンプル」として表示することに対応しており、読者はウェブページで見ていくようなコードとその出力結果の両方を見ることができます。
@@ -344,7 +344,7 @@ el.onclick = function () {
 
 `height` 引数を使用すると、ライブサンプル出力が含まれている `<iframe>` 要素のサイズを指定することができます。
 
-```html
+```html live-sample___iframe_size
 <p>Just some simple text here.</p>
 ```
 
@@ -405,6 +405,16 @@ toggleBtn.addEventListener("click", () => {
 <pre id="log"></pre>
 ```
 
+#### CSS
+
+CSS はログ出力要素の高さを設定します。
+
+```css
+#log {
+  height: 20px;
+}
+```
+
 #### JavaScript
 
 次にログ出力する関数 `log()` を定義します。
@@ -418,16 +428,6 @@ function log(text) {
 ```
 
 ログ要素のコンテンツは `innerText` プロパティを使用して設定されることに注意してください。これは、ログ出力されたテキストが HTML に解釈されない（悪意のあるコードが埋め込まれる可能性がある）ため、`innerHTML` を使用するよりも安全です。
-
-#### CSS
-
-CSS はログ出力要素の高さを設定します。
-
-```css
-#log {
-  height: 20px;
-}
-```
 
 #### テストコードをログ出力
 
@@ -474,6 +474,20 @@ incrementButton.addEventListener("click", () => {
 <pre id="log"></pre>
 ```
 
+#### CSS
+
+CSS は、要素のコンテンツがあふれた場合にスクロールバーを追加し、ログ出力する要素の高さを設定し、境界線を追加します。
+なお、下の JavaScript は、あふれた場合、新しいログテキストを追加するとテキストがスクロールして表示されることを保証します。
+
+```css
+#log {
+  height: 100px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
 #### JavaScript
 
 次にログ出力する関数 `log()` を定義します。
@@ -489,20 +503,6 @@ function log(text) {
 ```
 
 前回の例と同様に、 `innerHTML` を使用するよりも悪意のあるコードの影響を受けにくいため、 `innerText` プロパティを使用してコンテンツを設定します。
-
-#### CSS
-
-CSS は、要素のコンテンツがあふれた場合にスクロールバーを追加し、ログ出力する要素の高さを設定し、境界線を追加します。
-なお、上の JavaScript は、あふれた場合、新しいログテキストを追加するとテキストがスクロールして表示されることを保証します。
-
-```css
-#log {
-  height: 100px;
-  overflow: scroll;
-  padding: 0.5rem;
-  border: 1px solid black;
-}
-```
 
 #### テストコードをログ出力
 

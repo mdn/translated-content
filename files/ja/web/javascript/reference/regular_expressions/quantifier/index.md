@@ -2,7 +2,7 @@
 title: "数量詞: *, +, ?, {n}, {n,}, {n,m}"
 slug: Web/JavaScript/Reference/Regular_expressions/Quantifier
 l10n:
-  sourceCommit: 0f6daa30cf89c66d37700c51b8a12e660fee29d9
+  sourceCommit: 288e644117c29285df2acf37a2ac97f57546a146
 ---
 
 **数量詞**は、[アトム](/ja/docs/Web/JavaScript/Reference/Regular_expressions#アトム)を指定した回数繰り返します。数量詞は適用するアトムの後に配置します。
@@ -82,7 +82,7 @@ re.test("a{1, 3}"); // true
 /[ab]*/.exec("aba"); // ['aba']
 ```
 
-数量詞は既定では貪欲です。つまり、最大値に達するまで、あるいはそれ以上一致させることができなくなるまで、可能な限り何度でも照合しようとします。数量詞の後に `?` を付けることで、貪欲でない数量詞にすることができます。この場合、数量詞はできる限り一致回数を少なくさせようとし、残りのパターンをこの回数で一致させることができなくなった場合のみ、それ以上の回数を照合しようとします。
+数量詞はデフォルトでは貪欲です。つまり、最大値に達するまで、あるいはそれ以上一致させることができなくなるまで、可能な限り何度でも照合しようとします。数量詞の後に `?` を付けることで、貪欲でない数量詞にすることができます。この場合、数量詞はできる限り一致回数を少なくさせようとし、残りのパターンをこの回数で一致させることができなくなった場合のみ、それ以上の回数を照合しようとします。
 
 ```js
 /a*/.exec("aaa"); // ['aaa']; 入力全体が消費される
@@ -104,9 +104,9 @@ re.test("a{1, 3}"); // true
 
 この例では、最初の `[ab]+` は貪欲に "abb" に一致しますが、`[abc]c` は残りのパターン ("c") に一致することができないので、数量詞は "ab" だけに一致するように縮小されます。
 
-貪欲な数量詞は、無限個の空文字列と一致することを避けます。 照合する文字数が最小値に達し、その位置のアトムで消費される文字がなくなると、 数量詞は照合を停止します。 これが `/(a*)*/.exec("b")` が無限ループにならない理由です。
+貪欲な数量詞は、無限個の空文字列と一致することを避けます。照合回数が最小値に達し、その位置のアトムで消費される文字がなくなると、数量詞は照合を停止します。これが `/(a*)*/.exec("b")` が無限ループにならない理由です。
 
-貪欲な数量詞は可能な限り多くの回数の照合をしようとします。例えば、`/(aa|aabaac|ba)*/.exec("aabaac")` は `"aabaac"` の代わりに `"aa"` と `:ba"` に一致します。
+貪欲な数量詞は可能な限り多くの回数を照合しようとしますが、一致する長さを最大化するわけではありません。例えば、`/(aa|aabaac|ba)*/.exec("aabaac")` は `"aabaac"` ではなく、まず `"aa"`、次に `"ba"` に一致します。
 
 数量詞は単一のアトムに適用されます。長いパターンや論理和を量化したい場合は、[グループ化](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)する必要があります。 数量詞は[アサーション](/ja/docs/Web/JavaScript/Reference/Regular_expressions#アサーション)には適用できません。
 
@@ -114,10 +114,10 @@ re.test("a{1, 3}"); // true
 /^*/; // SyntaxError: Invalid regular expression: nothing to repeat
 ```
 
-[Unicode 対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)では、[先読みアサーション](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)は量化できます。これは[ウェブの互換性のための非推奨構文](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)であり、頼ってはいけません。
+[Unicode 非対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)では、[先読みアサーション](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)は量化できます。これは[ウェブの互換性のための非推奨構文](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)であり、頼ってはいけません。
 
 ```js
-/(?=a)?b/.test("b"); // true; 先読みが 0 回一致
+/(?=a)?b/.test("b"); // true。先読みの一致回数は 0 回
 ```
 
 ## 例
@@ -128,7 +128,7 @@ re.test("a{1, 3}"); // true
 
 ```js
 function stripTags(str) {
-  return str.replace(/<.+?>/g, "");
+  return str.replace(/<.+?>/gs, "");
 }
 
 stripTags("<p><em>lorem</em> <strong>ipsum</strong></p>"); // 'lorem ipsum'
@@ -147,13 +147,13 @@ stripTags("<p><em>lorem</em> <strong>ipsum</strong></p>"); // 'lorem ipsum'
 > [!WARNING]
 > これはデモのためのもので、属性値の中に `>` がある場合は正しく扱えません。代わりに適切な HTML サニタイザー、たとえば [HTML サニタイザー API](/ja/docs/Web/API/HTML_Sanitizer_API) などを使用してください。
 
-### Markdown の段落の位置を指定
+### Markdown の段落数を数える
 
 Markdown では、段落は 1 つ以上の空白行で区切られます。次の例では、2 つ以上の改行と照合することで、文字列内のすべての段落を数えます。
 
 ```js
 function countParagraphs(str) {
-  return str.match(/(?:\r?\n){2,}/g).length + 1;
+  return (str.match(/(?:\r?\n){2,}/g)?.length ?? 0) + 1;
 }
 
 countParagraphs(`

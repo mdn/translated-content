@@ -173,9 +173,9 @@ Les propriétés {{CSSxRef("animation-range-start")}} et {{CSSxRef("animation-ra
 - `layout.css.scroll-driven-animations.enabled`
   - : Définir sur `true` pour activer.
 
-### Fonctionnalité média `prefers-reduced-transparency`
+### Caractéristique média `prefers-reduced-transparency`
 
-La fonctionnalité média CSS {{CSSxRef("@media/prefers-reduced-transparency")}} permet de détecter si un·e utilisateur·ice a activé l'option pour minimiser la quantité d'effets de calques transparents ou translucides sur son appareil. (Voir [le bogue Firefox 1736914 <sup>(angl.)</sup>](https://bugzil.la/1736914) pour plus de détails.)
+La caractéristique média CSS {{CSSxRef("@media/prefers-reduced-transparency")}} permet de détecter si un·e utilisateur·ice a activé l'option pour minimiser la quantité d'effets de calques transparents ou translucides sur son appareil. (Voir [le bogue Firefox 1736914 <sup>(angl.)</sup>](https://bugzil.la/1736914) pour plus de détails.)
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
@@ -187,9 +187,9 @@ La fonctionnalité média CSS {{CSSxRef("@media/prefers-reduced-transparency")}}
 - `layout.css.prefers-reduced-transparency.enabled`
   - : Définir sur `true` pour activer.
 
-### Fonctionnalité média `inverted-colors`
+### Caractéristique média `inverted-colors`
 
-La fonctionnalité média CSS {{CSSxRef("@media/inverted-colors")}} permet de détecter si un agent utilisateur ou le système d'exploitation sous-jacent inverse les couleurs.
+La caractéristique média CSS {{CSSxRef("@media/inverted-colors")}} permet de détecter si un agent utilisateur ou le système d'exploitation sous-jacent inverse les couleurs.
 Voir [le bogue Firefox 1794628 <sup>(angl.)</sup>](https://bugzil.la/1794628) pour plus de détails.
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |

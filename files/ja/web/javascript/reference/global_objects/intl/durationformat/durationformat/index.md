@@ -3,7 +3,7 @@ title: Intl.DurationFormat() コンストラクター
 short-title: Intl.DurationFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/DurationFormat
 l10n:
-  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`Intl.DurationFormat()`** コンストラクターは、 {{jsxref("Intl.DurationFormat")}} オブジェクトを生成します。
@@ -22,7 +22,7 @@ new Intl.DurationFormat(locales, options)
 ### 引数
 
 - `locales` {{optional_inline}}
-  - : {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}または {{jsxref("Intl.Locale")}} インスタンスを持つ文字列、あるいはそのようなロケール識別子の配列。 `undefined` が渡された場合、または指定されたロケール識別子がどれも対応していない場合は、ランタイムの既定のロケールが使われます。 `locales` 引数の一般的な形式および解釈については、[Intl メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
+  - : {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}または {{jsxref("Intl.Locale")}} インスタンスを持つ文字列、あるいはそのようなロケール識別子の配列。 `undefined` が渡された場合、または指定されたロケール識別子がどれも対応していない場合は、ランタイムのデフォルトのロケールが使われます。 `locales` 引数の一般的な形式および解釈については、[Intl メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
 
     次の Unicode 拡張キーが使用できます。
     - `nu`
@@ -35,75 +35,75 @@ new Intl.DurationFormat(locales, options)
     - `localeMatcher`
       - : 使用するロケール照合アルゴリズムです。利用可能な値は、`"lookup"` と `"best fit"` です。デフォルト値は `"best fit"` です。このオプションについての情報は、[ロケール識別子とネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)を参照してください。
     - `numberingSystem`
-      - : 数値の書式化に使用する記数法。たとえば `"arab"`, `"hans"`, `"mathsans"` などです。対応している記数法の型については、[`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している記数法) を参照してください。デフォルト値はロケール依存です。このオプションは、Unicode の `nu` 拡張キーでも設定できます。両方が指定された場合、この `options` プロパティが優先されます。
+      - : 数値の書式化に使用する記数法。たとえば `"arab"`, `"hanidec"`, `"mathsans"` などです。対応している記数法の型については、[`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している記数法) を参照してください。デフォルト値はロケール依存です。このオプションは、Unicode の `nu` 拡張キーでも設定できます。両方が指定された場合、この `options` プロパティが優先されます。
     - `style`
-      - : 書式化される経過時間のスタイル。この値は、他のすべての単位オプションの既定値として使用され、経過時間単位のリストを連結する場合の {{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat()")}} の `style` オプションにも対応します。利用可能な値は次のとおりです。
+      - : 書式化される経過時間のスタイル。この値は、他のすべての単位オプションのデフォルト値として使用され、経過時間単位のリストを連結する場合の {{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat()")}} の `style` オプションにも対応します。利用可能な値は次のとおりです。
         - `"long"`
           - : 例: 1 hour and 50 minutes
-        - `"short"` (既定値)
+        - `"short"` (デフォルト値)
           - : 例: 1 hr, 50 min
         - `"narrow"`
           - : 例: 1h 50m
         - `"digital"`
           - : 例: 1:50:00
     - `years`
-      - : 書式化される年のスタイル。使用可能な値は `"long"`, `"short"`, `"narrow"`です。既定値は `options.style` ですが、 `"digital"` の場合は `"short"` です。
+      - : 書式化される年のスタイル。使用可能な値は `"long"`, `"short"`, `"narrow"`です。デフォルト値は `options.style` ですが、 `"digital"` の場合は `"short"` です。
     - `yearsDisplay`
-      - : 年を常に表示するか、 0 以外の場合にのみ表示するか。使用可能な値は `"always"` と `"auto"` です。既定値は、 `years` が指定されていない場合は`"auto"`、指定されている場合は `"always"` です。
+      - : 年を常に表示するか、 0 以外の場合にのみ表示するか。使用可能な値は `"always"` と `"auto"` です。デフォルト値は、 `years` が指定されていない場合は`"auto"`、指定されている場合は `"always"` です。
     - `months`
-      - : 書式化される月のスタイル。使用可能な値は `"long"`, `"short"`, `"narrow"`です。既定値は `options.style` ですが、 `"digital"` の場合は `"short"` です。
+      - : 書式化される月のスタイル。使用可能な値は `"long"`, `"short"`, `"narrow"`です。デフォルト値は `options.style` ですが、 `"digital"` の場合は `"short"` です。
     - `monthsDisplay`
-      - : 月を常に表示するか、 0 以外の場合にのみ表示するか。使用可能な値は `"always"` と `"auto"` です。既定値は、 `months` が指定されていない場合は`"auto"`、指定されている場合は `"always"` です。
+      - : 月を常に表示するか、 0 以外の場合にのみ表示するか。使用可能な値は `"always"` と `"auto"` です。デフォルト値は、 `months` が指定されていない場合は`"auto"`、指定されている場合は `"always"` です。
     - `weeks`
-      - : 書式化される週のスタイル。使用可能な値は `"long"`, `"short"`, `"narrow"`です。既定値は `options.style` ですが、 `"digital"` の場合は `"short"` です。
+      - : 書式化される週のスタイル。使用可能な値は `"long"`, `"short"`, `"narrow"`です。デフォルト値は `options.style` ですが、 `"digital"` の場合は `"short"` です。
     - `weeksDisplay`
-      - : 週を常に表示するか、 0 以外の場合にのみ表示するか。使用可能な値は `"always"` と `"auto"` です。既定値は、 `weeks` が指定されていない場合は`"auto"`、指定されている場合は `"always"` です。
+      - : 週を常に表示するか、 0 以外の場合にのみ表示するか。使用可能な値は `"always"` と `"auto"` です。デフォルト値は、 `weeks` が指定されていない場合は`"auto"`、指定されている場合は `"always"` です。
     - `days`
-      - : 書式化される日のスタイル。使用可能な値は `"long"`, `"short"`, `"narrow"`です。既定値は `options.style` ですが、 `"digital"` の場合は `"short"` です。
+      - : 書式化される日のスタイル。使用可能な値は `"long"`, `"short"`, `"narrow"`です。デフォルト値は `options.style` ですが、 `"digital"` の場合は `"short"` です。
     - `daysDisplay`
-      - : 日を常に表示するか、 0 以外の場合にのみ表示するか。使用可能な値は `"always"` と `"auto"` です。既定値は、 `days` が指定されていない場合は`"auto"`、指定されている場合は `"always"` です。
+      - : 日を常に表示するか、 0 以外の場合にのみ表示するか。使用可能な値は `"always"` と `"auto"` です。デフォルト値は、 `days` が指定されていない場合は`"auto"`、指定されている場合は `"always"` です。
     - `hours`
-      - : 書式化される時間のスタイル。使用可能な値は `"long"`, `"short"`, `"narrow"`, `"numeric"`, `"2-digit"` です。既定値は `options.style` ですが、 `"digital"` の場合は `"numeric"` です。
+      - : 書式化される時間のスタイル。使用可能な値は `"long"`, `"short"`, `"narrow"`, `"numeric"`, `"2-digit"` です。デフォルト値は `options.style` ですが、 `"digital"` の場合は `"numeric"` です。
     - `hoursDisplay`
-      - : 時間を常に表示するか、 0 以外の場合にのみ表示するか。使用可能な値は `"always"` と `"auto"` です。既定値は、 `hours` が指定されておらず、 `options.style` が `"digital"` でない場合は `"auto"`、そうでない場合は `"always"` です。
+      - : 時間を常に表示するか、 0 以外の場合にのみ表示するか。使用可能な値は `"always"` と `"auto"` です。デフォルト値は、 `hours` が指定されておらず、 `options.style` が `"digital"` でない場合は `"auto"`、そうでない場合は `"always"` です。
     - `minutes`
       - : 書式化される分のスタイル。
-        - `hours` が `"numeric"` または `"2-digit"` の場合、使用可能な値は `"numeric"` および `"2-digit"` であり、 `"numeric"` は `"2-digit"` に正規化されます。既定は `"numeric"` です。
-        - それ以外の場合、使用可能な値は `"long"`, `"short"`, `"narrow"`, `"numeric"`, `"2-digit"` です。既定値は、 `options.style` ですが、 `"digital"` の場合は `"numeric"` です。
+        - `hours` が `"numeric"` または `"2-digit"` の場合、使用可能な値は `"numeric"` および `"2-digit"` であり、 `"numeric"` は `"2-digit"` に正規化されます。デフォルトは `"numeric"` です。
+        - それ以外の場合、使用可能な値は `"long"`, `"short"`, `"narrow"`, `"numeric"`, `"2-digit"` です。デフォルト値は、 `options.style` ですが、 `"digital"` の場合は `"numeric"` です。
     - `minutesDisplay`
-      - : 分を常に表示するか、 0 以外の場合にのみ表示するか。使用可能な値は `"always"` と `"auto"` です。既定値は、 `minutes` が指定されておらず、 `options.style` が `"digital"` でない場合は `"auto"`、そうでない場合は `"always"` です。
+      - : 分を常に表示するか、 0 以外の場合にのみ表示するか。使用可能な値は `"always"` と `"auto"` です。デフォルト値は、 `minutes` が指定されておらず、 `options.style` が `"digital"` でない場合は `"auto"`、そうでない場合は `"always"` です。
     - `seconds`
       - : 書式化される秒のスタイル。
-        - `minutes` が `"numeric"` または `"2-digit"` の場合、使用可能な値は `"numeric"` および `"2-digit"` であり、 `"numeric"` は `"2-digit"` に正規化されます。既定は `"numeric"` です。
-        - それ以外の場合、使用可能な値は `"long"`, `"short"`, `"narrow"`, `"numeric"`, `"2-digit"` です。既定値は、 `options.style` ですが、 `"digital"` の場合は `"numeric"` です。
+        - `minutes` が `"numeric"` または `"2-digit"` の場合、使用可能な値は `"numeric"` および `"2-digit"` であり、 `"numeric"` は `"2-digit"` に正規化されます。デフォルトは `"numeric"` です。
+        - それ以外の場合、使用可能な値は `"long"`, `"short"`, `"narrow"`, `"numeric"`, `"2-digit"` です。デフォルト値は、 `options.style` ですが、 `"digital"` の場合は `"numeric"` です。
     - `secondsDisplay`
-      - : 秒を常に表示するか、 0 以外の場合にのみ表示するか。使用可能な値は `"always"` と `"auto"` です。既定値は、 `seconds` が指定されておらず、 `options.style` が `"digital"` でない場合は `"auto"`、そうでない場合は `"always"` です。
+      - : 秒を常に表示するか、 0 以外の場合にのみ表示するか。使用可能な値は `"always"` と `"auto"` です。デフォルト値は、 `seconds` が指定されておらず、 `options.style` が `"digital"` でない場合は `"auto"`、そうでない場合は `"always"` です。
     - `milliseconds`
       - : 書式化されるミリ秒のスタイル。
-        - `seconds` が `"numeric"` または `"2-digit"` の場合、使用可能な値は `"numeric"` のみです。既定は `"numeric"` です。
-        - それ以外の場合、使用可能な値は `"long"`, `"short"`, `"narrow"`, `"numeric"` です。既定値は、 `options.style` ですが、 `"digital"` の場合は `"numeric"` です。
+        - `seconds` が `"numeric"` または `"2-digit"` の場合、使用可能な値は `"numeric"` のみです。デフォルトは `"numeric"` です。
+        - それ以外の場合、使用可能な値は `"long"`, `"short"`, `"narrow"`, `"numeric"` です。デフォルト値は、 `options.style` ですが、 `"digital"` の場合は `"numeric"` です。
     - `millisecondsDisplay`
       - : ミリ秒を常に表示するか、 0 以外の場合にのみ表示するか。
-        - `seconds` が `"numeric"` または `"2-digit"` の場合、使用可能な値は `"auto"` のみです。 `milliseconds` が指定されていない場合の既定値は `"auto"` です。
-        - それ以外の場合、使用可能な値は `"always"` および `"auto"` です。既定値は、 `milliseconds` が指定されていない場合は `"auto"` であり、そうでなければ `"always"` です。
+        - `seconds` が `"numeric"` または `"2-digit"` の場合、使用可能な値は `"auto"` のみです。 `milliseconds` が指定されていない場合のデフォルト値は `"auto"` です。
+        - それ以外の場合、使用可能な値は `"always"` および `"auto"` です。デフォルト値は、 `milliseconds` が指定されていない場合は `"auto"` であり、そうでなければ `"always"` です。
     - `microseconds`
       - : 書式化されるマイクロ秒のスタイル。
-        - `milliseconds` が `"numeric"` の場合、使用可能な値は `"numeric"` のみです。既定は `"numeric"` です。
-        - それ以外の場合、使用可能な値は `"long"`, `"short"`, `"narrow"`, `"numeric"` です。既定値は、 `options.style` ですが、 `"digital"` の場合は `"numeric"` です。
+        - `milliseconds` が `"numeric"` の場合、使用可能な値は `"numeric"` のみです。デフォルトは `"numeric"` です。
+        - それ以外の場合、使用可能な値は `"long"`, `"short"`, `"narrow"`, `"numeric"` です。デフォルト値は、 `options.style` ですが、 `"digital"` の場合は `"numeric"` です。
     - `microsecondsDisplay`
       - : マイクロ秒を常に表示するか、 0 以外の場合にのみ表示するか。
-        - `milliseconds` が `"numeric"` または `"2-digit"` の場合、使用可能な値は `"auto"` のみです。 `microseconds` が指定されていない場合の既定値は `"auto"` です。
-        - それ以外の場合、使用可能な値は `"always"` および `"auto"` です。既定値は、 `microseconds` が指定されていない場合は `"auto"` であり、そうでなければ `"always"` です。
+        - `milliseconds` が `"numeric"` または `"2-digit"` の場合、使用可能な値は `"auto"` のみです。 `microseconds` が指定されていない場合のデフォルト値は `"auto"` です。
+        - それ以外の場合、使用可能な値は `"always"` および `"auto"` です。デフォルト値は、 `microseconds` が指定されていない場合は `"auto"` であり、そうでなければ `"always"` です。
     - `nanoseconds`
       - : 書式化されるナノ秒のスタイル。
-        - `microseconds` が `"numeric"` の場合、使用可能な値は `"numeric"` のみです。既定は `"numeric"` です。
-        - それ以外の場合、使用可能な値は `"long"`, `"short"`, `"narrow"`, `"numeric"` です。既定値は、 `options.style` ですが、 `"digital"` の場合は `"numeric"` です。
+        - `microseconds` が `"numeric"` の場合、使用可能な値は `"numeric"` のみです。デフォルトは `"numeric"` です。
+        - それ以外の場合、使用可能な値は `"long"`, `"short"`, `"narrow"`, `"numeric"` です。デフォルト値は、 `options.style` ですが、 `"digital"` の場合は `"numeric"` です。
     - `nanosecondsDisplay`
       - : ナノ秒を常に表示するか、 0 以外の場合にのみ表示するか。
-        - `microseconds` が `"numeric"` または `"2-digit"` の場合、使用可能な値は `"auto"` のみです。 `nanoseconds` が指定されていない場合の既定値は `"auto"` です。
-        - それ以外の場合、使用可能な値は `"always"` および `"auto"` です。既定値は、 `nanoseconds` が指定されていない場合は `"auto"` であり、そうでなければ `"always"` です。
+        - `microseconds` が `"numeric"` または `"2-digit"` の場合、使用可能な値は `"auto"` のみです。 `nanoseconds` が指定されていない場合のデフォルト値は `"auto"` です。
+        - それ以外の場合、使用可能な値は `"always"` および `"auto"` です。デフォルト値は、 `nanoseconds` が指定されていない場合は `"auto"` であり、そうでなければ `"always"` です。
     - `fractionalDigits`
-      - : 出力に表示する小数点以下の秒の桁の数。使用可能な値は `0` から `9` までで、既定は `undefined` （必要なだけ小数点以下の桁を含める）です。
+      - : 出力に表示する小数点以下の秒の桁の数。使用可能な値は `0` から `9` までで、デフォルトは `undefined` （必要なだけ小数点以下の桁を含める）です。
 
 ### 例外
 
@@ -129,7 +129,7 @@ new Intl.DurationFormat(locales, options)
 時間区分で `"long"`, `"short"`, `"narrow"` のいずれかのスタイルを使用する場合、次のオプションも使用されます。
 
 - `style`: `"long"`, `"short"`, `"narrow"` のいずれかが指定されている場合は `"unit"`、それ以外の場合は `undefined`
-- `unit`: 現在書式化されている単位（`"years"`, `"days"`, `"nanoseconds"`, など）
+- `unit`: 現在書式化されている単位（`"year"`, `"day"`, `"nanosecond"`, など）
 - `unitDisplay`: 時間区分のスタイルの設定値（`"long"`, `"short"`, `"narrow"` のいずれか）
 
 ## 例

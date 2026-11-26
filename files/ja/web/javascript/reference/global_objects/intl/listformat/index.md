@@ -2,7 +2,7 @@
 title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`Intl.ListFormat`** オブジェクトにより、言語を考慮したリストの書式化ができます。
@@ -104,7 +104,7 @@ console.log(
 // [ { "type": "element", "value": "Motorcycle" },
 //   { "type": "literal", "value": ", " },
 //   { "type": "element", "value": "Bus" },
-//   { "type": "literal", "value": ", and " },
+//   { "type": "literal", "value": " and " },
 //   { "type": "element", "value": "Car" } ];
 ```
 

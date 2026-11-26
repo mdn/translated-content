@@ -23,7 +23,7 @@ original_slug: Learn/Getting_started_with_the_web/Publishing_your_website
 
 많은 전문적인 웹사이트들은 이 방법으로 온라인에 진출합니다.
 
-게다가, 여러분은 서버로 웹사이트 파일들을 실제로 전송하기 위한 파일 전송 프로토콜 (FTP) 프로그램 (자세한 내용은 [얼마나 드나요: 소프트웨어](/ko/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#software) 에서 확인하세요) 이 필요할 것입니다. FTP 프로그램은 아주 다양합니다, 하지만 일반적으로 호스팅 회사에 의해 제공된 정보 (예로 사용자 이름, 비밀번호, 호스트 이름) 를 사용해 여러분의 웹서버에 로그인을 해야 합니다. 그러면 프로그램은 여러분의 로컬 파일들과 웹 서버의 파일을 두 창에서 보여주므로, 그것들을 외부로 전송하거나 다시 돌려 놓을 수 있습니다:
+게다가, 여러분은 서버로 웹사이트 파일들을 실제로 전송하기 위한 파일 전송 프로토콜 (FTP) 프로그램 (자세한 내용은 [얼마나 드나요: 소프트웨어](/ko/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#software) 에서 확인하세요) 이 필요할 것입니다. FTP 프로그램은 아주 다양합니다, 하지만 일반적으로 호스팅 회사에 의해 제공된 정보 (예로 사용자 이름, 비밀번호, 호스트 이름) 를 사용해 여러분의 웹서버에 로그인을 해야 합니다. 그러면 프로그램은 여러분의 로컬 파일들과 웹 서버의 파일을 두 창에서 보여주므로, 그것들을 외부로 전송하거나 다시 돌려 놓을 수 있습니다:
 
 ![](ftp.jpg)
 
@@ -38,7 +38,7 @@ original_slug: Learn/Getting_started_with_the_web/Publishing_your_website
 
 어떤 도구들은 여러분이 여러분의 웹사이트를 온라인에 출판할 수 있게 해줍니다:
 
-- [GitHub](https://github.com/) 은 "소셜 코딩" 사이트입니다. 여러분이 [Git](http://git-scm.com/) **버전 관리 시스템** 안에 저장을 위한 코드 저장소를 업로드하게 해줍니다. 코드 프로젝트에서 협업할 수 있고, 기본적으로 시스템은 오픈 소스가 됩니다, 이 것은 세상의 누구든 여러분의 GitHub 코드를 찾아볼 수 있다는 말입니다, 사용하세요, 이것으로부터 배우세요, 그리고 개선하세요. 여러분으 다른 사람들의 코드에도 마찬가지로 작업 할 수 있습니다! 이건 참여하기에 아주 중요하고 유용한 커뮤니티입니다, 그리고 Git/GitHub 은 아주 유명한 [버전 관리 시스템](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) 입니다 — 대부분의 기술 회사들은 현재 이것을 그들의 작업흐름에서 사용하고 있습니다. GitHub 은 웹에서 존재하는 웹사이트 코드를 전시할 수 있도록 해주는 [GitHub pages](https://pages.github.com/) 라는 아주 유용한 특징을 갖습니다.
+- [GitHub](https://github.com/) 은 "소셜 코딩" 사이트입니다. 여러분이 [Git](https://git-scm.com/) **버전 관리 시스템** 안에 저장을 위한 코드 저장소를 업로드하게 해줍니다. 코드 프로젝트에서 협업할 수 있고, 기본적으로 시스템은 오픈 소스가 됩니다, 이것은 세상의 누구든 여러분의 GitHub 코드를 찾아볼 수 있다는 말입니다, 사용하세요, 이것으로부터 배우세요, 그리고 개선하세요. 여러분은 다른 사람들의 코드에도 마찬가지로 작업할 수 있습니다! 이건 참여하기에 아주 중요하고 유용한 커뮤니티입니다, 그리고 Git/GitHub 은 아주 유명한 [버전 관리 시스템](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) 입니다 — 대부분의 기술 회사들은 현재 이것을 그들의 작업흐름에서 사용하고 있습니다. GitHub 은 웹에서 존재하는 웹사이트 코드를 전시할 수 있도록 해주는 [GitHub Pages](https://pages.github.com/) 라는 아주 유용한 특징을 갖습니다.
 - [Dropbox](https://www.dropbox.com/) 는 웹에 여러분의 파일들을 저장하고 어떤 컴퓨터에서든 사용가능하게 해주는 파일 저장 시스템입니다. 인터넷 접속이 되는 누구든 여러분이 공개적으로 접근가능하게 해둔 Dropbox 폴더에 접근할 수 있습니다. 만약 그 폴더가 웹사이트 파일을 포함한다면, 자동적으로 웹사이트로써 제공될 것입니다. 더 많은 정보는 [Dropbox 로 웹사이트 관리하기](http://www.dropboxwiki.com/tips-and-tricks/host-websites-with-dropbox) 를 확인하세요.
 
 대부분의 호스팅과 다르게, 많은 도구들은 일반적으로 무료이지만, 여러분은 제한된 기능들만 사용할 수 있습니다.
@@ -145,7 +145,7 @@ _another commit_ 대신에 여러분이 막 변경했던 것을 설명할 수 �
 
 - [웹 서버는 무엇일까요](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [도메인 이름 이해하기](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
-- [웹에서 무언가를 하기 위한 비용은 얼마나 들까요](/ko/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
+- [웹에서 무언가를 하기 위한 비용은 얼마나 들까요](/ko/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 - [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website): A nice tutorial from Codecademy that goes a bit further and shows some additional techniques.
 - Scott Murray 의 [Cheap or free static web hosting](http://alignedleft.com/resources/cheap-web-hosting) 에는 이용가능한 서비스를 위한 유용한 정보가 있습니다.
 

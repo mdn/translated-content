@@ -2,7 +2,7 @@
 title: Intl.PluralRules
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`Intl.PluralRules`** オブジェクトで、複数形が影響する書式や言語ルールが使用できます。
@@ -57,7 +57,7 @@ l10n:
 ## インスタンスメソッド
 
 - {{jsxref("Intl/PluralRules/resolvedOptions", "Intl.PluralRules.prototype.resolvedOptions()")}}
-  - : オブジェクトの初期化時に計算されたロケールや書式化のオプションを反映したプロパティを持つ、新しいオブジェクトを返します。
+  - : オブジェクトの初期化時に計算されたロケールや複数形に関するオプションを反映したプロパティを持つ、新しいオブジェクトを返します。
 - {{jsxref("Intl/PluralRules/select", "Intl.PluralRules.prototype.select()")}}
   - : ロケールを考慮した書式化に使用する複数形を示す文字列を返します。
 - {{jsxref("Intl/PluralRules/selectRange", "Intl.PluralRules.prototype.selectRange()")}}

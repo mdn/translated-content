@@ -3,7 +3,7 @@ title: "HTMLElement: hidden プロパティ"
 short-title: hidden
 slug: Web/API/HTMLElement/hidden
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 6ef7bc04d63cf8b512bdbea149a6cb875cc063e3
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -19,28 +19,30 @@ l10n:
 - `false`
   - : この要素は非表示ではありません。これはこの属性の既定値です。
 - `"until-found"`
-  - : この要素は _hidden until found_ で、隠されているが、ページ内検索で見つかったり、フラグメントナビゲーションで到達したりすると表示されることを意味します。
+  - : この要素は見つかるまで非表示で、ページ内検索で見つかったり、フラグメントナビゲーションで到達したりすると表示されます。
 
-この属性の使い方の詳細は、このプロパティが反映する HTML の [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性のページを参照してください。
+この属性の使い方の詳細は、このプロパティが反映する [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性のページを参照してください。
 
 ## 例
 
-ここでは、非表示のブロックを使用して、ユーザーが珍しい要求に同意した後に表示されるお礼のメッセージを含める例を示します。
+ここでは、非表示のブロックを使用して、ユーザーが変わった依頼に同意した後に表示されるお礼のメッセージを含める例を示します。
 
 ### HTML
 
-この HTML には 2 つのパネルがあります。1 つはようこそパネルで、ユーザーに素晴らしいことを尋ね、もう一方はフォローアップパネルで、初期状態では非表示です。
+この HTML には 2 つのパネルがあります。1 つ目は、ユーザーに「今日は最高の自分でいる」ことへの同意を求めるウェルカムパネルです。もう 1 つはフォローアップパネルで、初期状態では非表示です。
 
 ```html
 <div id="welcome" class="panel">
-  <h1>Foobar.com へようこそ！</h1>
-  <p>[OK] をクリックすると、今日は素晴らしいと同意したことになります。</p>
+  <h1>私のウェブサイトへようこそ！</h1>
+  <p>
+    "OK" をクリックすると、今日は最高の自分でいることに同意したことになります。
+  </p>
   <button class="button" id="okButton">OK</button>
 </div>
 
 <div id="awesome" class="panel" hidden>
   <h1>ありがとう！</h1>
-  <p>今日は素晴らしいと同意してくれてありがとう！</p>
+  <p>今日は最高の自分でいることに同意してくれてありがとう！</p>
 </div>
 ```
 
@@ -52,10 +54,10 @@ l10n:
 .panel {
   font:
     16px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
-  border: 1px solid #22d;
+  border: 1px solid #2222dd;
   padding: 12px;
   width: 500px;
   text-align: center;
@@ -64,8 +66,8 @@ l10n:
 .button {
   font:
     22px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 5px 36px;
 }
@@ -78,17 +80,13 @@ h1 {
 
 ### JavaScript
 
-この JavaScript はイベントリスナーを [OK] ボタンに追加し、これが "welcome" パネルを非表示にして "awesome" パネルを表示します。
+この JavaScript は "OK" ボタンにイベントリスナーを追加し、`welcome` パネルを非表示にして `awesome` パネルを表示します。
 
 ```js
-document.getElementById("okButton").addEventListener(
-  "click",
-  () => {
-    document.getElementById("welcome").hidden = true;
-    document.getElementById("awesome").hidden = false;
-  },
-  false,
-);
+document.getElementById("okButton").addEventListener("click", () => {
+  document.getElementById("welcome").hidden = true;
+  document.getElementById("awesome").hidden = false;
+});
 ```
 
 ### 結果

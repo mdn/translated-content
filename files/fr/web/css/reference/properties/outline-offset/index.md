@@ -3,7 +3,7 @@ title: Propriété CSS `outline-offset`
 short-title: outline-offset
 slug: Web/CSS/Reference/Properties/outline-offset
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: f382f345d642cdf970530cf1db6bde8c4da33398
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`outline-offset`** définit l'espace entre un [contour](/fr/docs/Web/CSS/Reference/Properties/outline) et le bord ou la bordure d'un élément.
@@ -64,6 +64,12 @@ outline-offset: unset;
 ## Description
 
 Un contour est une ligne tracée autour d'un élément, à l'extérieur du bord de la bordure. L'espace entre un élément et son contour est transparent. En d'autres termes, il est identique à l'arrière-plan de l'élément parent.
+
+## Accessibilité
+
+Lorsqu'un contour est utilisé comme indicateur de sélection, la proportion de contraste de 3:1 défini dans le [critère de succès 1.4.11 Contraste non textuel <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast) exige que {{CSSxRef("outline-color")}} soit mesurée par rapport à la couleur de l'arrière-plan. Le `outline-offset` crée un espace transparent entre le bord de l'élément et son contour. Le contour décalé est tracé soit sur ce qui se trouve derrière l'élément, soit, avec un décalage négatif, sur l'arrière-plan de l'élément lui-même, ce qui peut modifier la couleur par rapport à laquelle le rapport est mesuré.
+
+Lorsqu'un contour est utilisé comme indicateur de sélection, testez votre contour de sélection à l'intérieur d'un conteneur qui coupe son débordement et à l'intérieur d'un {{Glossary("scroll container", "conteneur de défilement")}}. Un décalage positif peut déplacer le contour en dehors d'un tel ancêtre, où une partie de l'indicateur est coupée. Le [critère de succès 2.4.11 La Sélection N'est Pas Obscurcie (Minimum) <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum) exige que le composant sélectionné ne soit pas entièrement caché, et le [critère de succès 2.4.13 Apparence de la Sélection <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance) définit une surface minimale pour l'indicateur lui-même.
 
 ## Définition formelle
 

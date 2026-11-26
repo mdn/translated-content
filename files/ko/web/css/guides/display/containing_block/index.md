@@ -33,7 +33,7 @@ original_slug: Web/CSS/CSS_display/Containing_block
 4. `position` **속성이** `absolute` **나** `fixed` 인 경우, 다음 조건 중 하나를 만족하는 가장 가까운 조상의 내부 여백 영역이 컨테이닝 블록이 될 수도 있습니다.
    1. {{cssxref("transform")}}이나 {{cssxref("perspective")}} 속성이 `none`이 아님.
    2. {{cssxref("will-change")}} 속성이 `transform`이나 `perspective`임.
-   3. {{cssxref("filter")}} 속성이 `none`임. (Firefox에선 `will-change`가 `filter`일 때도 적용)
+   3. {{cssxref("filter")}} 속성이 `none`이 아님. (Firefox에선 `will-change`가 `filter`일 때도 적용)
    4. {{cssxref("contain")}} 속성이 `paint`임.
 
 > [!NOTE]
@@ -43,7 +43,7 @@ original_slug: Web/CSS/CSS_display/Containing_block
 
 앞서 언급했듯, 특정 속성의 값이 백분율이라면 그 계산값은 요소의 컨테이닝 블록에 의해 결정됩니다. 이렇게 동작하는 속성으로 **박스 모델 속성**과 **오프셋 속성**이 있습니다.
 
-- {{cssxref("height")}}, {{cssxref("top")}}, {{cssxref("bottom")}} 속성은 컨테이닝 블록의 `height`를 사용해 백분율을 계산합니다. 컨테이닝 블록의 `height`가 콘텐츠의 크기에 따라 달라질 수 있고, 컨테이닝 블록의 `position`이 `relative`거나 `static`이면 계산값은 **0**이 됩니다.
+- {{cssxref("height")}}, {{cssxref("top")}}, {{cssxref("bottom")}} 속성은 컨테이닝 블록의 `height`를 사용해 백분율을 계산합니다.
 - {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, {{cssxref("margin")}} 속성은 컨테이닝 블록의 `width`를 사용해 백분율을 계산합니다.
 
 ## 예제

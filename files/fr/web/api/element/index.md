@@ -286,7 +286,7 @@ _`Element` hérite des méthodes de ses parents {{DOMxRef("Node")}}, et de son p
 - {{DOMxRef("Element.querySelectorAll()")}}
   - : Retourne une {{DOMxRef("NodeList")}} de nœuds qui correspondent à la chaîne de caractères de sélecteur définie relative à l'élément.
 - {{DOMxRef("Element.releasePointerCapture()")}}
-  - : Libère (arrête) la capture du pointeur qui avait été précédemment définie pour un {{DOMxRef("PointerEvent")}} spécifique.
+  - : Libère (arrête) la capture du pointeur qui a été précédemment définie pour un {{DOMxRef("PointerEvent")}} spécifique.
 - {{DOMxRef("Element.remove()")}}
   - : Supprime l'élément de la liste des enfants de son parent.
 - {{DOMxRef("Element.removeAttribute()")}}
@@ -347,7 +347,7 @@ _`Element` hérite des méthodes de ses parents {{DOMxRef("Node")}}, et de son p
 - {{DOMxRef("Element/beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Déclenché lorsqu'un script est sur le point d'être exécuté.
 - {{DOMxRef("Element/beforexrselect_event", "beforexrselect")}} {{Experimental_Inline}}
-  - : Déclenché avant que les évènements de sélection WebXR ({{DOMxRef("XRSession/select_event", "select")}}, {{DOMxRef("XRSession/selectstart_event", "selectstart")}}, {{DOMxRef("XRSession/selectend_event", "selectend")}}) ne soient dispatchés.
+  - : Déclenché avant que les évènements de sélection WebXR ({{DOMxRef("XRSession/select_event", "select")}}, {{DOMxRef("XRSession/selectstart_event", "selectstart")}}, {{DOMxRef("XRSession/selectend_event", "selectend")}}) ne soient diffusées.
 - {{DOMxRef("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
   - : Déclenché sur tout élément avec {{CSSxRef("content-visibility", "content-visibility: auto")}} lorsqu'il commence ou cesse d'être [pertinent pour l'utilisateur·ice](/fr/docs/Web/CSS/Guides/Containment/Using#pertinent_pour_lutilisatrice_et_lutilisateur) et [ignore son contenu](/fr/docs/Web/CSS/Guides/Containment/Using#ignorer_le_contenu).
 - {{DOMxRef("Element/input_event", "input")}}

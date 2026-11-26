@@ -3,7 +3,7 @@ title: 擬似クラスと擬似要素
 short-title: 擬似クラスと擬似要素
 slug: Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 l10n:
-  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
+  sourceCommit: 3fbc8b2ba17c1cf331fb67ce2e6561b15bf4f197
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}
@@ -143,9 +143,9 @@ a:hover {
 > [!NOTE]
 > 一部の初期の擬似要素では、単一のコロン構文が使用されていたため、コードまたは例でこれを見ることがあるでしょう。最新のブラウザーは、後方互換性のためにシングルまたはダブルコロン構文で初期の擬似要素に対応しています。
 
-たとえば、段落の最初の行を選択する場合は、それを `<span>` 要素にラップして要素セレクターを使用できます。ただし、ラップした単語の数が親要素の幅よりも長いまたは短い場合は、失敗します。1 行にいくつの単語が収まるかわからない傾向があるため（画面の幅やフォントサイズが変わると、単語数が変わるため）、HTML を追加してこれを確実に行うことは不可能です。
+たとえば、段落の最初の行を選択するには、その行を `<span>` 要素で囲んで要素セレクターを使う方法があります。しかし、囲んだ単語の幅が親要素の幅より長かったり短かったりすると、うまく機能しません。画面幅やフォントサイズによって 1 行に収まる単語数が変わるため、HTML を追加するだけで確実に実現することはできません。
 
-`::first-line` 擬似要素セレクターは確実にあなたのためにこれを行います-それはまだ最初の行のみを選択します言葉の数が増加した場合と減少します。
+`::first-line` 擬似要素セレクターなら、これを確実に実現できます。単語数が増減しても、最初の行だけを選択します。
 
 ```html live-sample___first-line
 <article>

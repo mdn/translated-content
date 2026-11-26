@@ -27,7 +27,6 @@ const url = new URL(
   "https://anonymous:flabada@developer.mozilla.org/ko/docs/Web/API/URL/username",
 );
 console.log(url.username); // Logs "anonymous"
-=======
 ```
 
 ## 명세

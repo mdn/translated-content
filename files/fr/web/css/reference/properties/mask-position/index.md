@@ -3,7 +3,7 @@ title: Propriété CSS `mask-position`
 short-title: mask-position
 slug: Web/CSS/Reference/Properties/mask-position
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 6354422058e438a2599e4eab71eaec8eb40850fa
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-position`** définit la position initiale pour chaque image de masque utilisée. Cette position est relative au calque définit avec la propriété {{CSSxRef("mask-origin")}}.
@@ -58,7 +58,7 @@ mask-position: unset;
 
 ### Valeurs
 
-Une ou plusieurs valeurs de type `<position>`, séparées par des virgules.
+La propriété est définie comme une liste de valeurs séparées par des virgules. Chaque valeur a le type suivant&nbsp;:
 
 - {{CSSxRef("&lt;position&gt;")}}
   - : Une, deux ou quatre valeurs représentant une position 2D définissant les bords de la boîte de l'élément. Des décalages relatifs ou absolus peuvent être donnés.
@@ -80,7 +80,7 @@ Si aucun `mask-origin` n'est défini, la valeur par défaut est `padding-box`, c
 
 Si une seule valeur `mask-position` est définie, la deuxième valeur est supposée être `center`. Si la valeur est une `<length>` ou un `<percentage>`, elle définit la position du masque le long de l'axe horizontal, le masque étant centré verticalement dans la boîte d'origine. Par exemple, `mask-position: 0%;` équivaut à `mask-position: 0% center`.
 
-Si vous utilisez un seul mot-clé pour le positionnement, l'autre valeur sera résolue en `center`. La valeur par défaut de `mask-position` est `0% 0%`, ce qui équivaut à `mask-position: top left`. Cependant&nbsp;:
+Si vous utilisez un seul mot-clé pour le positionnement, l'autre valeur est résolue en `center`. La valeur par défaut de `mask-position` est `0% 0%`, ce qui équivaut à `mask-position: top left`. Cependant&nbsp;:
 
 - `mask-position: top;` est équivalent à `mask-position: top center;`.
 - `mask-position: left;` est équivalent à `mask-position: center left`.
@@ -96,9 +96,9 @@ L'équation est&nbsp;:
 
 `(dimension du conteneur - dimension du masque) * position en pourcentage = valeur de décalage`
 
-Étant donné un masque de `100px` de large et une boîte d'origine de `1000px` de large, définir `mask-position: 10%;` (l'équivalent de `10% 50%`) entraîne le centrage vertical du masque à `90px` du bord gauche. L'équation est `(1000 - 100) * 10% = 90`. Si le décalage gauche avait été `0%`, le bord gauche du masque serait aligné avec le bord gauche du conteneur (`(1000 - 100) * 0% = 0`).
+Étant donné un masque de `100px` de large et une boîte d'origine de `1000px` de large, définir `mask-position: 10%;` (l'équivalent de `10% 50%`) entraîne le centrage vertical du masque à `90px` du bord gauche. L'équation est `(1000 - 100) * 10% = 90`. Si le décalage gauche est de `0%`, le bord gauche du masque est aligné avec le bord gauche du conteneur (`(1000 - 100) * 0% = 0`).
 
-Si le décalage gauche avait été `100%`, le bord droit du masque serait aligné avec le bord droit du conteneur, car le bord gauche du masque de `100px` de large serait à `900px` (`(1000 - 100) * 100% = 900`) du bord gauche du conteneur (la largeur du masque de `100px` plus la distance de `900px` depuis le bord gauche signifie que le bord droit serait à `1000px` du bord gauche, ce qui correspond au bord droit du conteneur).
+Si le décalage gauche est de `100%`, le bord droit du masque est aligné avec le bord droit du conteneur, car le bord gauche du masque de `100px` de large serait à `900px` (`(1000 - 100) * 100% = 900`) du bord gauche du conteneur (la largeur du masque de `100px` plus la distance de `900px` depuis le bord gauche signifie que le bord droit est à `1000px` du bord gauche, ce qui correspond au bord droit du conteneur).
 
 ### Syntaxe à deux valeurs
 
@@ -109,11 +109,11 @@ Si les deux valeurs sont des valeurs de type {{CSSxRef("&lt;length&gt;")}}, des 
 De plus, si des valeurs de type {{CSSxRef("&lt;percentage&gt;")}} sont définies, la première valeur représente également la position horizontale par rapport au bord gauche, et la deuxième valeur représente également la position verticale par rapport au bord supérieur.
 
 Une paire de mots-clés spécifiques à un axe peut être réordonnée, tout comme un mot-clé spécifique à un axe et une valeur de longueur ou de pourcentage, mais deux valeurs de longueur ou de pourcentage ne sont pas interchangeables.
-Si l'une des deux valeurs est `top`, `right`, `bottom` ou `left`, l'ordre des deux valeurs n'a pas d'importance. Toute valeur `center` ou `<length-percentage>` dans la paire de valeurs sera appliquée à l'autre dimension.
+Si l'une des deux valeurs est `top`, `right`, `bottom` ou `left`, l'ordre des deux valeurs n'a pas d'importance. Toute valeur `center` ou `<length-percentage>` dans la paire de valeurs est appliquée à l'autre dimension.
 
 ### Syntaxe à quatre valeurs
 
-La syntaxe à quatre valeurs consiste en deux paires de valeurs, chaque paire contenant un mot-clé définissant le bord à partir duquel décaler, et une valeur `<length>` et `<percentage>` définissant la distance de décalage. Par exemple, `mask-position: left 1em top 2em` définit un décalage horizontal de `1em` à partir du bord gauche de la boîte et un décalage vertical de `2em` à partir du bord supérieur. L'équivalent à deux valeurs serait `mask-position: 1em 2em`.
+La syntaxe à quatre valeurs consiste en deux paires de valeurs, chaque paire contenant un mot-clé définissant le bord à partir duquel décaler, et une valeur `<length>` et `<percentage>` définissant la distance de décalage. Par exemple, `mask-position: left 1em top 2em` définit un décalage horizontal de `1em` à partir du bord gauche de la boîte et un décalage vertical de `2em` à partir du bord supérieur. L'équivalent à deux valeurs est `mask-position: 1em 2em`.
 
 Comme nous définissons les bords de décalage lors de l'utilisation de la syntaxe à quatre valeurs, l'ordre n'a pas d'importance&nbsp;: `mask-position: top 2em left 1em` et `mask-position: left 1em top 2em` produisent le même résultat.
 

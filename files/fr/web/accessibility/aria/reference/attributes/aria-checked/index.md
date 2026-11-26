@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-checked"
 short-title: aria-checked
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-checked
 l10n:
-  sourceCommit: ce12c10364f35c64184dec44be85537b7e10d91f
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 L'attribut `aria-checked` indique l'état actuel («&nbsp;sélectionné&nbsp;» ou non) des cases à cocher, boutons radio et autres composants.
@@ -48,17 +48,6 @@ En utilisant l'élément {{HTMLElement("input")}} avec `type="checkbox"` au lieu
 - `undefined` (valeur par défaut)
   - : L'élément ne prend pas en charge la sélection.
 
-## Rôles associés
-
-Utilisé dans les rôles&nbsp;:
-
-- [`checkbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [`menuitemcheckbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
-- [`menuitemradio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
-- [`option`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
-- [`radio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
-- [`switch`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
-
 ## Interfaces associées
 
 - {{DOMxRef("Element.ariaChecked")}}
@@ -69,6 +58,17 @@ Utilisé dans les rôles&nbsp;:
 ```js
 monElementHTML.ariaChecked = true;
 ```
+
+## Rôles associés
+
+Utilisé dans les rôles&nbsp;:
+
+- [`checkbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
+- [`menuitemcheckbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
+- [`option`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
+- [`radio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
+- [`switch`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
 
 ## Spécifications
 

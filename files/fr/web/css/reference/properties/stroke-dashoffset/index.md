@@ -3,7 +3,7 @@ title: Propriété CSS `stroke-dashoffset`
 short-title: stroke-dashoffset
 slug: Web/CSS/Reference/Properties/stroke-dashoffset
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`stroke-dashoffset`** définit un décalage pour le point de départ du rendu d'un [élément SVG](/fr/docs/Web/SVG) associé à un [tableau de tirets](/fr/docs/Web/CSS/Reference/Properties/stroke-dasharray). Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("stroke-dashoffset")}} de l'élément.
@@ -52,7 +52,7 @@ stroke-dashoffset: unset;
 
 ### Décalage des tirets
 
-Pour montrer comment les tirets peuvent être décalés, nous configurons d'abord cinq chemins identiques, auxquels est attribué un tableau de tirets composé d'un tiret de 20 unités suivi d'un espace de 3 unités avec l'attribut SVG {{SVGAttr('stroke-dasharray')}}. (Cela aurait également pu être fait avec la propriété CSS {{CSSxRef('stroke-dasharray')}}.) Les chemins reçoivent ensuite des décalages de tirets individuels avec CSS.
+Pour montrer comment les tirets peuvent être décalés, nous configurons d'abord cinq chemins identiques, auxquels est attribué un tableau de tirets composé d'un tiret de 20 unités suivi d'un espace de 3 unités avec l'attribut SVG {{SVGAttr("stroke-dasharray")}}. (Cela peut également être fait avec la propriété CSS {{CSSxRef("stroke-dasharray")}}.) Les chemins reçoivent ensuite des décalages de tirets individuels avec CSS.
 
 ```html
 <svg viewBox="0 0 100 50" width="500" height="250">

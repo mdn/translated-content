@@ -3,7 +3,7 @@ title: "ARIA : rôle switch"
 short-title: switch
 slug: Web/Accessibility/ARIA/Reference/Roles/switch_role
 l10n:
-  sourceCommit: 1474534461893381d54c502e655f334b5568e597
+  sourceCommit: 7484d45816002fbf082a59c5d95c38a1eb2b2e4b
 ---
 
 Le rôle **`switch`** est fonctionnellement identique au rôle [checkbox](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role), sauf qu'au lieu de représenter les états «&nbsp;coché&nbsp;» et «&nbsp;non coché&nbsp;», qui sont assez génériques, le rôle `switch` représente les états «&nbsp;activé&nbsp;» et «&nbsp;désactivé&nbsp;».
@@ -102,26 +102,6 @@ Un `switch` est implémenté comme un élément {{HTMLElement("button")}}, qui e
 <label for="speakerPower" class="switch">Alimentation du haut-parleur</label>
 ```
 
-#### JavaScript
-
-Ce code JavaScript définit et applique une fonction pour gérer les évènements de clic sur les composants `switch`. La fonction modifie l'attribut `aria-checked` de `true` à `false`, ou inversement.
-
-```js
-document.querySelectorAll(".switch").forEach((theSwitch) => {
-  theSwitch.addEventListener("click", handleClickEvent);
-});
-
-function handleClickEvent(evt) {
-  const el = evt.target;
-
-  if (el.getAttribute("aria-checked") === "true") {
-    el.setAttribute("aria-checked", "false");
-  } else {
-    el.setAttribute("aria-checked", "true");
-  }
-}
-```
-
 #### CSS
 
 Le but du CSS est de donner au switch une apparence proche de celle d'un interrupteur d'alimentation.
@@ -172,6 +152,26 @@ label.switch {
 
 La partie la plus intéressante est probablement l'utilisation des sélecteurs d'attributs et des pseudo-classes {{CSSxRef(":first-child")}} et {{CSSxRef(":last-child")}} pour modifier l'apparence du switch selon qu'il est activé ou désactivé.
 
+#### JavaScript
+
+Ce code JavaScript définit et applique une fonction pour gérer les évènements de clic sur les composants `switch`. La fonction modifie l'attribut `aria-checked` de `true` à `false`, ou inversement.
+
+```js
+document.querySelectorAll(".switch").forEach((theSwitch) => {
+  theSwitch.addEventListener("click", handleClickEvent);
+});
+
+function handleClickEvent(evt) {
+  const el = evt.target;
+
+  if (el.getAttribute("aria-checked") === "true") {
+    el.setAttribute("aria-checked", "false");
+  } else {
+    el.setAttribute("aria-checked", "true");
+  }
+}
+```
+
 #### Résultat
 
 Le résultat ressemble à ceci&nbsp;:
@@ -185,5 +185,5 @@ Le résultat ressemble à ceci&nbsp;:
 ## Voir aussi
 
 - [ARIA&nbsp;: rôle checkbox](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox)
+- L'élément HTML [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox)
 - L'attribut ARIA [`aria-hidden`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)

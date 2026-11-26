@@ -3,10 +3,12 @@ title: Propriété CSS `max-width`
 short-title: max-width
 slug: Web/CSS/Reference/Properties/max-width
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`max-width`** est utilisée pour définir la largeur maximale d'un élément. Elle empêche la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de la propriété {{CSSxRef("width")}} de devenir supérieure à la valeur définie par `max-width`.
+
+`max-width` surcharge {{CSSxRef("width")}}, mais {{CSSxRef("min-width")}} surcharge `max-width`.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: max-width")}}
 
@@ -45,8 +47,6 @@ max-width: 20ch;
 }
 ```
 
-`max-width` surcharge {{CSSxRef("width")}}, mais {{CSSxRef("min-width")}} surcharge `max-width`.
-
 ## Syntaxe
 
 ```css
@@ -55,7 +55,7 @@ max-width: 3.5em;
 max-width: anchor-size(--my-anchor inline, 245px);
 max-width: calc(anchor-size(width) + 4em);
 
-/* Valeursde type <percentage> */
+/* Valeurs de type <percentage> */
 max-width: 75%;
 
 /* Valeurs avec un mot-clé */
@@ -115,7 +115,7 @@ Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-w
 
 ### Définir une largeur maximale en pixels
 
-Dans cet exemple, l'élément «&nbsp;enfant&nbsp;» aura la largeur la plus petite entre 150 et celle de l'élément «&nbsp;parent&nbsp;».
+Dans cet exemple, l'élément «&nbsp;enfant&nbsp;» a la largeur la plus petite entre 150 et celle de l'élément «&nbsp;parent&nbsp;».
 
 #### HTML
 

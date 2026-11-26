@@ -3,7 +3,7 @@ title: '`<input type="date">` 属性値'
 short-title: <input type="date">
 slug: Web/HTML/Reference/Elements/input/date
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 {{HTMLElement("input")}} 要素の **`type="date"`** は、ユーザーが日付を入力できる入力フィールドを作成します。 日付選択入力 UI の表示は、ブラウザーやオペレーティングシステムによって異なります。 値は `yyyy-mm-dd` 形式に正規化されます。
@@ -102,31 +102,25 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 もっとも基本的な `<input type="date">` の使用方法は、次のように基本的な `<input>` と {{htmlelement("label")}} 要素の組み合わせです。
 
 ```html
-<form action="https://example.com">
-  <label>
-    誕生日を入力してください。
-    <input type="date" name="bday" />
-  </label>
-
-  <p><button>Submit</button></p>
-</form>
+<label>
+  誕生日を入力してください。
+  <input type="date" name="bday" />
+</label>
 ```
 
 {{EmbedLiveSample('Basic_uses_of_date', 600, 40)}}
 
-この HTML は入力された日付を `bday` キーに入れて `https://example.com` に送ります。 — 結果の URL は `https://example.com/?bday=1955-06-08` のようになります。
+この入力欄を `GET` メソッドで `https://example.com` に送信するフォームに含めると、入力された日付は `bday` キーで送られます。結果の URL は `https://example.com/?bday=1955-06-08` のようになります。
 
 ### 日付の最大値と最小値の設定
 
 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性を使用して、ユーザーが選択できる日付を制限することができます。次の例では、日付の最小値を `2017-04-01` に、日付の最大値を `2017-04-30` に設定しています。
 
 ```html
-<form>
-  <label>
-    希望するパーティーの日を選んでください。
-    <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
-  </label>
-</form>
+<label>
+  希望するパーティーの日を選んでください。
+  <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
+</label>
 ```
 
 {{EmbedLiveSample('Setting_maximum_and_minimum_dates', 600, 40)}}
@@ -168,6 +162,12 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 不完全な日付 (または設定した範囲を外れた日付) を送信しようとすると、ブラウザーはエラーを表示します。例を実行してみましょう。
 
 {{EmbedLiveSample('Validation', 600, 100)}}
@@ -205,13 +205,11 @@ input:valid + span::after {
 HTML は次のようになります。
 
 ```html
-<form>
-  <div class="nativeDatePicker">
-    <label for="bday">誕生日を入力してください。</label>
-    <input type="date" id="bday" name="bday" />
-    <span class="validity"></span>
-  </div>
-</form>
+<div class="nativeDatePicker">
+  <label for="bday">誕生日を入力してください。</label>
+  <input type="date" id="bday" name="bday" />
+  <span class="validity"></span>
+</div>
 ```
 
 ### CSS
@@ -268,14 +266,6 @@ input:valid + span::after {
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>

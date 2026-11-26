@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-keyshortcuts"
 short-title: aria-keyshortcuts
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 L'attribut global `aria-keyshortcuts` indique les raccourcis clavier qu'un·e auteur·ice a mis en place pour activer ou donner la sélection à un élément.
@@ -104,14 +104,6 @@ En plus du faible support des navigateurs, les mêmes préoccupations existent p
 - `<string>`
   - : Liste séparée par des espaces des combinaisons de touches qui, lorsqu'elles sont pressées, exécutent l'action.
 
-## Exemple
-
-Dans cet exemple, l'attribut `aria-keyshortcuts` sur l'élément est défini sur «&nbsp;Alt+Shift+A&nbsp;» (pour «&nbsp;Alt+Maj+A&nbsp;»).
-
-```html
-<a href="#content" aria-keyshortcuts="Alt+Shift+A">Aller au contenu</a>
-```
-
 ## Interfaces associées
 
 - {{DOMxRef("Element.ariaKeyShortcuts")}}
@@ -122,6 +114,14 @@ Dans cet exemple, l'attribut `aria-keyshortcuts` sur l'élément est défini sur
 ## Rôles associés
 
 Utilisé dans **TOUS** les rôles.
+
+## Exemple
+
+Dans cet exemple, l'attribut `aria-keyshortcuts` sur l'élément est défini sur «&nbsp;Alt+Shift+A&nbsp;» (pour «&nbsp;Alt+Maj+A&nbsp;»).
+
+```html
+<a href="#content" aria-keyshortcuts="Alt+Shift+A">Aller au contenu</a>
+```
 
 ## Spécifications
 

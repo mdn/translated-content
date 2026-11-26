@@ -44,7 +44,7 @@ console.log(i);
 function testBreak(x) {
   var i = 0;
 
-  while (i &#x3C; 6) {
+  while (i < 6) {
     if (i == 3) {
       break;
     }
@@ -72,12 +72,12 @@ outer_block: {
 
 ```js
 block_1: {
-  console.log('1');
+  console.log("1");
   break block_2; // SyntaxError: label을 찾을 수 없음
 }
 
 block_2: {
-  console.log('2');
+  console.log("2");
 }
 ```
 

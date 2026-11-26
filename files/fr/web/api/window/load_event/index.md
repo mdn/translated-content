@@ -13,10 +13,10 @@ Cela contraste avec {{DOMxRef("Document/DOMContentLoaded_event", "DOMContentLoad
 Cet évènement n'est pas annulable et ne se propage pas.
 
 > [!NOTE]
-> _Tous les évènements nommés `load` ne se propagent pas vers `Window`_, même si `bubbles` est initialisé à `true`. Pour intercepter les évènements `load` sur la `window`, cet évènement `load` doit être dispatché directement vers la `window`.
+> _Tous les évènements nommés `load` ne se propagent pas vers `Window`_, même si `bubbles` est initialisé à `true`. Pour intercepter les évènements `load` sur la `window`, cet évènement `load` doit être diffusé directement vers la `window`.
 
 > [!NOTE]
-> L'évènement `load` qui est dispatché lorsque le document principal est chargé _est_ dispatché sur la `window`, mais possède deux propriétés modifiées&nbsp;: `target` est `document`, et `path` est `undefined`. Ces deux propriétés sont modifiées pour des raisons de compatibilité avec les versions précédentes.
+> L'évènement `load` qui est diffusé lorsque le document principal est chargé _est_ diffusé sur la `window`, mais possède deux propriétés modifiées&nbsp;: `target` est `document`, et `path` est `undefined`. Ces deux propriétés sont modifiées pour des raisons de compatibilité avec les versions précédentes.
 
 Pour éviter d'exécuter un script avant que le DOM qu'il manipule soit entièrement construit, vous pouvez placer le script à la fin du corps du document, juste avant la balise de fermeture `</body>`, sans l'envelopper dans un écouteur d'évènement. Vous ne devez généralement utiliser l'évènement `load` que pour attendre le chargement des ressources externes, telles que les images ou les scripts différés.
 

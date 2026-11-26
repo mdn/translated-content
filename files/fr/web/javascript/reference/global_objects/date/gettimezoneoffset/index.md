@@ -3,7 +3,7 @@ title: "Date : méthode getTimezoneOffset()"
 short-title: getTimezoneOffset()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 98972b1f827b7374e28aee591a73044ffd8fb758
 ---
 
 La méthode **`getTimezoneOffset()`** des instances de {{JSxRef("Date")}} retourne la différence en minutes entre le fuseau horaire UTC, et celui de l'heure locale.
@@ -34,7 +34,7 @@ Aucun.
 
 ### Valeur de retour
 
-Un nombre représentant la différence, en minutes, entre la date évaluée dans le fuseau horaire UTC et celle évaluée dans le fuseau horaire local. L'algorithme réel de l'heure locale dépend de l'implémentation, et la valeur de retour peut être zéro dans les environnements d'exécution sans données appropriées. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+Un nombre représentant la différence, en minutes, entre la date évaluée dans le fuseau horaire UTC et celle évaluée dans le fuseau horaire local. L'algorithme réel de l'heure locale dépend de l'implémentation, et la valeur de retour peut être zéro dans les environnements d'exécution sans données appropriées. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
 ## Description
 
@@ -42,7 +42,7 @@ Un nombre représentant la différence, en minutes, entre la date évaluée dans
 
 ### Valeurs négatives et positives
 
-Le nombre de minutes retourné par `getTimezoneOffset()` est positif si le fuseau horaire local est en retard sur l'UTC, et négatif si le fuseau horaire local est en avance sur l'UTC. Par exemple, pour UTC+10, `-600` sera retourné.
+Le nombre de minutes retourné par `getTimezoneOffset()` est positif si le fuseau horaire local est en retard sur l'UTC, et négatif si le fuseau horaire local est en avance sur l'UTC. Par exemple, pour UTC+10, `-600` est retourné.
 
 | Fuseau horaire actuel | Valeur retournée |
 | --------------------- | ---------------- |
@@ -77,7 +77,7 @@ dateLocaleCourante.getTimezoneOffset() ===
 // false, parfois, dans tout fuseau qui passe à l'heure d'été chaque année
 ```
 
-### getTimezoneOffset() et l'heure d'été (DST)
+### `getTimezoneOffset()` et l'heure d'été (DST)
 
 Dans les régions qui utilisent l'heure d'été, la valeur retournée peut changer en fonction de la période de l'année dans laquelle se trouve `date`. Ci-dessous, la sortie dans un environnement d'exécution à New York, où le fuseau horaire est UTC-05:00.
 
@@ -86,7 +86,7 @@ const decalageHiverNY = new Date("2022-02-01").getTimezoneOffset(); // 300
 const decalageEteNY = new Date("2022-08-01").getTimezoneOffset(); // 240
 ```
 
-### getTimezoneOffset() et les données historiques
+### `getTimezoneOffset()` et les données historiques
 
 Pour des raisons historiques, le fuseau horaire d'une région peut changer constamment, même en ignorant l'heure d'été. Par exemple, ci-dessous est la sortie dans un environnement d'exécution à Shanghai, où le fuseau horaire est UTC+08:00.
 

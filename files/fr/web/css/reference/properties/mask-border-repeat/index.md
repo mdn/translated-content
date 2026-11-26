@@ -3,7 +3,7 @@ title: Propriété CSS `mask-border-repeat`
 short-title: mask-border-repeat
 slug: Web/CSS/Reference/Properties/mask-border-repeat
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-border-repeat`** définit la façon dont les images pour les côtés et la partie centrale de [l'image de bordure de masque](/fr/docs/Web/CSS/Reference/Properties/mask-border) sont mises à l'échelle et répétées.
@@ -56,7 +56,7 @@ La propriété `mask-border-repeat` peut être utilisée avec une ou deux valeur
 
 ### Exemple simple
 
-Cette propriété ne semble pas encore être prise en charge nulle part. Lorsqu'elle commencera à être prise en charge, elle servira à définir comment la tranche de masque de bordure sera répétée autour de la bordure — c'est-à-dire, sera-t-elle simplement répétée, ou légèrement mise à l'échelle pour qu'un nombre entier de tranches s'adapte, ou étirée pour qu'une tranche s'adapte&nbsp;?
+Cette propriété ne semble pas encore être prise en charge nulle part. Lorsqu'elle commence à être prise en charge, elle sert à définir comment la tranche de masque de bordure est répétée autour de la bordure — c'est-à-dire, est-t-elle simplement répétée, ou légèrement mise à l'échelle pour qu'un nombre entier de tranches s'adapte, ou étirée pour qu'une tranche s'adapte&nbsp;?
 
 ```css
 mask-border-repeat: round;

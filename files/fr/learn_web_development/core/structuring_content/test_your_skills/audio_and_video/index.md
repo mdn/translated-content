@@ -3,7 +3,7 @@ title: "Testez vos compétences : Audio et vidéo"
 short-title: "Test : Audio et vidéo"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
 l10n:
-  sourceCommit: 2066cc916dfdcbb782340bf0ce562b230e947cba
+  sourceCommit: 22768e84571c850f2bb67083868cd8577d5de27c
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Splash_page", "Learn_web_development/Core/Structuring_content")}}
@@ -19,7 +19,7 @@ Dans cette tâche, nous vous demandons d'intégrer un fichier audio sur la page.
 
 Pour compléter cette tâche&nbsp;:
 
-1. Ajoutez le chemin vers le fichier audio dans un attribut approprié pour l'intégrer sur la page. L'audio s'appelle `audio.mp3` et est disponible à l'adresse `https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/media-embed/media/audio.mp3`.
+1. Ajoutez le chemin vers le fichier audio dans un attribut approprié pour l'intégrer sur la page. L'audio s'appelle `audio.mp3` et est disponible à l'adresse `https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/audio-video/audio.mp3`.
 2. Ajoutez un attribut pour que les navigateurs affichent certains contrôles par défaut.
 
 Le point de départ de la tâche ressemble à ceci&nbsp;:
@@ -71,7 +71,7 @@ Votre code HTML final doit ressembler à ceci&nbsp;:
 
 <audio
   controls
-  src="https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/media-embed/media/audio.mp3"></audio>
+  src="https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/audio-video/audio.mp3"></audio>
 ```
 
 </details>
@@ -84,12 +84,14 @@ Pour compléter cette tâche&nbsp;:
 
 1. Ajoutez un attribut pour que les navigateurs affichent certains contrôles par défaut.
 2. Ajoutez plusieurs sources, contenant les chemins vers les fichiers vidéo. Les fichiers s'appellent `video.mp4` et `video.webm`, et sont disponibles aux chemins suivants&nbsp;:
-   1. `https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/media-embed/media/video.mp4`
-   2. `https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/media-embed/media/video.webm`
+   1. `https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/audio-video/video.mp4`
+   2. `https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/audio-video/video.webm`
 3. Informez le navigateur à l'avance des formats vidéo vers lesquels les sources pointent, afin qu'il puisse faire un choix éclairé sur celui à télécharger en premier.
 4. Donnez à la balise `<video>` une largeur et une hauteur égales à sa taille intrinsèque (320 par 240 pixels).
 5. Mettez la vidéo en sourdine par défaut.
-6. Affichez les pistes de texte contenues dans le fichier `https://raw.githubusercontent.com/mdn/learning-area/refs/heads/main/html/multimedia-and-embedding/tasks/media-embed/media/subtitles_en.vtt` lorsque la vidéo est en cours de lecture. Vous devez explicitement définir le type comme sous-titres et la langue des sous-titres en anglais.
+6. Affichez les pistes de texte contenues dans le fichier `subtitles_en.vtt` lorsque la vidéo est en cours de lecture. Vous devez explicitement définir le type comme sous-titres et la langue des sous-titres en anglais. Définissez également l'attribut `default` afin que la piste soit affichée par défaut.
+   > [!NOTE]
+   > Si vous complétez la tâche en direct sur MDN avec le MDN Playground, le chemin dont vous avez besoin est `/shared-assets/misc/subtitles_en.vtt`. Si vous décidez de recréer l'exemple sur votre système de fichiers local, vous pouvez trouver une copie à l'adresse `https://mdn.github.io/shared-assets/misc/subtitles_en.vtt`.
 7. Assurez-vous que les lecteurs peuvent identifier la langue des sous-titres lorsqu'ils utilisent les contrôles par défaut.
 
 Le point de départ de la tâche ressemble à ceci&nbsp;:
@@ -118,16 +120,17 @@ Votre code HTML final doit ressembler à ceci&nbsp;:
 
 <video controls width="320" height="240" muted>
   <source
-    src="https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/media-embed/media/video.mp4"
+    src="https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/audio-video/video.mp4"
     type="video/mp4" />
   <source
-    src="https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/media-embed/media/video.webm"
+    src="https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/audio-video/video.webm"
     type="video/webm" />
   <track
     kind="subtitles"
-    src="https://raw.githubusercontent.com/mdn/learning-area/refs/heads/main/html/multimedia-and-embedding/tasks/media-embed/media/subtitles_en.vtt"
+    src="/shared-assets/misc/subtitles_en.vtt"
     srclang="en"
-    label="Anglais" />
+    label="Anglais"
+    default />
 </video>
 ```
 

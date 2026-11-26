@@ -1,31 +1,31 @@
 ---
 title: "SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead"
 slug: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
+JavaScript の警告 "Using `//@` to indicate sourceURL pragmas is deprecated. Use `//#` instead" は、JavaScript のソースで非推奨のソースマップ構文が使われたときに発生します。
 
-JavaScript の警告 "Using `//@` to indicate sourceURL pragmas is deprecated. Use `//#` instead" は、 JavaScript の非推奨のソースマップ構文があったときに発生します。
+## エラーメッセージ
 
-## メッセージ
-
-```
+```plain
 Warning: SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
 
 Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
 ```
 
-## エラーの種類
+## エラー型
 
-{{jsxref("SyntaxError")}} が発生したという警告です。 JavaScript の実行は停止しません。
+{{jsxref("SyntaxError")}} が発生したことを示す警告です。JavaScript の実行は停止しません。
 
 ## エラーの原因
 
-JavaScript のソースに非推奨のソースマップ構文があることです。
+JavaScript のソースに非推奨のソースマップ構文があります。
 
-通常 JavaScript ソースは、サーバーからの提供を効率化するために、結合と最小化が行われます。[ソースマップ](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)があると、デバッガーが実行中のコードを元のソースファイルに対応付けすることができます。
+JavaScript のソースは、サーバーから効率よく配信できるように結合・最小化されることがよくあります。[ソースマップ](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)<sup>(英語)</sup>があると、デバッガーは実行中のコードを元のソースファイルに対応付けできます。
 
-IE の JScript エンジンは、`//@cc_on` の後でページが見つかると、条件付きコンパイルの有効化とみなします。 この IE での競合のために、ソースマップの仕様の構文が変更されました。IE の [@cc_on 文](https://msdn.microsoft.com/ja/library/8ka90k2e%28v=vs.94%29.aspx) はあまり知られていない機能ですが、[jQuery](https://bugs.jquery.com/ticket/13274) やそのほかのライブラリのソースマップを破壊します。
+ソースマップ仕様では、IE との競合のために構文が変更されました。IE の JScript エンジンでは、ページ内の `//@cc_on` が条件付きコンパイルを有効にする構文として解釈されます。IE の[条件付きコンパイルコメント](https://stackoverflow.com/questions/24473882/what-does-this-comment-cc-on-0-do-inside-an-if-statement-in-javascript)<sup>(英語)</sup>はあまり知られていない機能ですが、[jQuery](https://bugs.jquery.com/ticket/13274/)<sup>(英語)</sup>などのライブラリーでソースマップを壊す原因となりました。
 
 ## 例
 
@@ -45,14 +45,14 @@ IE の JScript エンジンは、`//@cc_on` の後でページが見つかると
 //# sourceMappingURL=http://example.com/path/to/your/sourcemap.map
 ```
 
-あるいは、JavaScript ファイルに {{HTTPHeader("SourceMap")}} ヘッダーを設定して、コメントを全く表示しないようにすることもできます。
+あるいは、JavaScript ファイルに {{HTTPHeader("SourceMap")}} ヘッダーを設定すれば、コメントを付けずに済みます。
 
-```js example-good
+```http example-good
 SourceMap: /path/to/file.js.map
 ```
 
 ## 関連情報
 
-- [ソースマップの使用 – Firefox ツールドキュメント](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
-- [Introduction to source maps – HTML5 rocks](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
+- [ソースマップの使用](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)<sup>(英語)</sup>
+- [Introduction to JavaScript source maps](https://developer.chrome.com/blog/sourcemaps/)<sup>(英語)</sup>
 - {{HTTPHeader("SourceMap")}}

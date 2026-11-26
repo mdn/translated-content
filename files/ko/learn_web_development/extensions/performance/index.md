@@ -40,7 +40,7 @@ l10n:
   - : 많은 경우에 가장 쉬운 웹 성능 개선 방법은 미디어 최적화입니다. 사용자 에이전트의 기능, 크기, 픽셀 밀도를 고려해 미디어 파일을 각각 다르게 제공할 수 있습니다. 이 문서에서는 이미지가 웹 성능에 미치는 영향, 이미지당 전송되는 바이트의 크기를 줄이는 방법을 다룹니다.
 - [멀티미디어: 비디오](/ko/docs/Learn_web_development/Extensions/Performance/video)
   - : 많은 경우에 가장 쉬운 웹 성능 개선 방법은 미디어 최적화입니다. 이 문서에서는 비디오 콘텐츠가 웹 성능에 미치는 영향, 배경 영상에서 오디오 트랙을 제거하여 웹 성능 높이기와 같은 팁들을 다룹니다.
-- [JavaScript를 활용한 웹 성능 모범사례](/ko/docs/Learn/Performance/JavaScript)
+- [JavaScript를 활용한 웹 성능 모범사례](/ko/docs/Learn_web_development/Extensions/Performance/JavaScript)
   - : 적절하게 JavaScript를 사용하면 상호작용할 수 있고 몰입되는 웹 경험을 줄 수 있습니다. 하지만 JavaScript를 잘못 사용할 경우 다운로드 시간, 렌더링 시간, 앱 자체의 성능, 배터리 수명, 사용자 경험을 심각하게 해칠 수도 있습니다. 이 문서에서는 컨텐츠가 복잡하더라도 최대한의 성능을 발휘할 수 있도록 고려해야 할 JavaScript 모범사례에 대해 소개합니다.
 - [HTML과 웹 성능](/ko/docs/Learn_web_development/Extensions/Performance/HTML)
   - : 마크업이 배치된 순서나 속성은 웹사이트 성능에 영향을 미칠 수 있습니다. DOM 노드의 개수를 최소화하고 HTML 문서에 콘텐츠(스타일, 스크립트, 미디어, 써드파티 스크립트 등)를 포함시키는 순서와 속성을 최적화하여 사용자 경험을 크게 개선할 수 있습니다. 이 문서에서는 최고의 성능을 끌어내려면 어떻게 HTML을 사용해야 하는지를 자세히 다룹니다.

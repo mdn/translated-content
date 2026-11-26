@@ -3,7 +3,7 @@ title: "Element: setAttribute() メソッド"
 short-title: setAttribute()
 slug: Web/API/Element/setAttribute
 l10n:
-  sourceCommit: ff9dd829bb17d272b7d14c41a442f2c2e3680521
+  sourceCommit: 41a472e5bad6c6d2698d6e85c1172909cb102fa1
 ---
 
 {{APIRef("DOM")}}
@@ -12,7 +12,7 @@ l10n:
 > このメソッドは、属性に応じて、HTML、スクリプト、またはスクリプトの URL として構文解析される属性値を受け取る可能性があります。
 > この API は[インジェクションシンク](/ja/docs/Web/API/Trusted_Types_API#概念と使い方)と呼ばれ、元の値が攻撃者から提供されたものである場合、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS) 攻撃の攻撃経路となる可能性があります。
 >
-> このリスクを軽減するには、常に適切な信頼型オブジェクト（{{domxref("TrustedHTML")}}、{{domxref("TrustedScript")}}、{{domxref("TrustedScriptURL")}} のいずれか）を常に渡すことで、このリスクを軽減できます。また、[信頼型の強制適用](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)を行うことも有効です。
+> このリスクは、適切な信頼型オブジェクト（{{domxref("TrustedHTML")}}、{{domxref("TrustedScript")}}、{{domxref("TrustedScriptURL")}} のいずれか）を渡し、[信頼型を強制する](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)ことで軽減できます。
 > 詳しくは[セキュリティ上の注意事項](#セキュリティ上の注意事項)を参照してください。
 
 **`setAttribute()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定された要素の属性の値を設定します。
@@ -69,7 +69,7 @@ setAttribute(qualifiedName, value)
     > [!NOTE]
     > 仕様の以前のバージョンでは、`qualifiedName` が有効な [XML 名](https://www.w3.org/TR/xml/#dt-name) であることが要求されるなど、より厳しい制約が設けられていました。
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : [`value`](#value) に、信頼型オブジェクトではなく文字列が渡された場合（それらを要求される属性について）、 [信頼型](/ja/docs/Web/API/Trusted_Types_API)が [CSP によって強制されている](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)場合で、かつデフォルトのポリシーが定義されていない場合に発生します。
 
 ## 解説
@@ -86,7 +86,7 @@ setAttribute(qualifiedName, value)
 
 ### セキュリティ上の注意事項
 
-[一部の属性](#値)は、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS)攻撃で使用される可能性があり、この攻撃では、ユーザーから指定された安全性が保証されていない文字列が、まずサニタイズされることなくDOMに挿入されたり、悪意のあるコードが含まれている可能性のあるスクリプトが実行されたりします。
+[一部の属性](#値)は、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS) 攻撃に利用される可能性があります。この攻撃では、ユーザーが指定した安全性の保証されていない文字列が無害化されずに DOM に挿入されたり、悪意のあるコードを含む可能性のあるスクリプトが実行されたりします。
 
 例えば、次のコードは、ボタンが押された際に、ユーザーから指定された信頼できない可能性のある文字列がどのように実行されるかを示しています。
 
@@ -98,7 +98,7 @@ button.setAttribute("onclick", potentiallyUnsafeString);
 
 同様に、{{domxref("HTMLIFrameElement.srcdoc")}} 属性を設定したり、{{domxref("HTMLScriptElement.src")}} または {{domxref("SVGScriptElement.href")}} 属性に信頼できない URL を指定したりすることで、信頼できない HTML を DOM に挿入してしまうことがあります。
 
-これらの課題を軽減するには、それぞれのプロパティに対して文字列ではなく、常に適切な信頼型オブジェクト（{{domxref("TrustedHTML")}}、{{domxref("TrustedScript")}}、{{domxref("TrustedScriptURL")}}）を代入し、CSP の [`require-trusted-types-for`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) ディレクティブを使用して[信頼型を強制する](/ja/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types)ことで、これらの問題を軽減できます。
+これらの問題は、文字列の代わりに適切な信頼型オブジェクト（{{domxref("TrustedHTML")}}、{{domxref("TrustedScript")}}、{{domxref("TrustedScriptURL")}}）を渡し、CSP の [`require-trusted-types-for`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) ディレクティブを使用して[信頼型を強制する](/ja/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types)ことで軽減できます。
 これにより、入力は変換関数を通じて処理されることが保証されます。この変換関数では、例えば、HTML に注入される前に、潜在的に危険なマークアップが除去される場合があります。
 
 ## 例
@@ -176,9 +176,9 @@ name プロパティを設定し、それを用いてボタンのテキストを
 
 {{ EmbedLiveSample('Setting safe attributes', '300', '150') }}
 
-### 安全はでない属性の設定
+### 安全でない属性の設定
 
-この例では、{{htmlelement("iframe")}} の {{domxref("HTMLIFrameElement.srcdoc", "srcdoc")}} 属性を設定するために `setAttributes()` を呼び出す際のリスクを軽減する方法について説明します。
+この例では、{{htmlelement("iframe")}} の {{domxref("HTMLIFrameElement.srcdoc", "srcdoc")}} 属性を設定するために `setAttribute()` を呼び出す際のリスクを軽減する方法について説明します。
 この属性はフレームのソース HTML を設定するものであり、そのため、信頼できない、あるいは安全ではないコードが DOM に注入される可能性があります。
 
 HTML スクリプト要素に {{domxref("HTMLScriptElement.src","src")}} を設定する場合、SVG スクリプト要素に {{domxref("SVGScriptElement.href","href")}} を設定する場合、および `onXxxx` イベントハンドラー属性に設定する場合の手順は同様ですが、主な違いは、それぞれ異なる信頼型オブジェクトを渡すという点です。
@@ -192,7 +192,7 @@ if (typeof trustedTypes === "undefined")
 ```
 
 次に、入力文字列を {{domxref("TrustedHTML")}} インスタンスに変換するための {{domxref("TrustedTypePolicy/createHTML", "createHTML()")}} を定義する {{domxref("TrustedTypePolicy")}} を作成します。
-一般的に、`createHTML()` の実装では、下記に示すように、[DOMPurify](https://github.com/cure53/DOMPurify) などのライブラリーを使用して入力をサニタイズします。
+一般的に、`createHTML()` の実装では、下記に示すように、[DOMPurify](https://github.com/cure53/DOMPurify) などのライブラリーを使用して入力を無害化します。
 
 ```js
 const policy = trustedTypes.createPolicy("my-policy", {
@@ -204,12 +204,13 @@ const policy = trustedTypes.createPolicy("my-policy", {
 
 ```js
 // 悪意のある可能性のある文字列
-const untrustedString = "<p>I might be XSS</p><img src='x' onerror='alert(1)'>";
+const untrustedString =
+  "<p>XSS の可能性あり</p><img src='x' onerror='alert(1)'>";
 
-// ポリシーを使用してTrustedHTMLインスタンスを作成
+// ポリシーを使用して TrustedHTML インスタンスを作成
 const trustedHTML = policy.createHTML(untrustedString);
 
-// TrustedHTML（信頼された文字列が含まれている）を注入
+// TrustedHTML（信頼できる文字列が含まれている）を挿入
 const iframeElement = document.querySelector("#an_iframe");
 iframeElement.setAttribute("srcdoc", trustedHTML);
 ```

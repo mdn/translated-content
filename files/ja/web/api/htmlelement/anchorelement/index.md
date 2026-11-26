@@ -3,14 +3,12 @@ title: "HTMLElement: anchorElement プロパティ"
 short-title: anchorElement
 slug: Web/API/HTMLElement/anchorElement
 l10n:
-  sourceCommit: bba05bf24a714715f3517cf1296274dd41d6e811
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("HTML DOM")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 **`anchorElement`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、この要素のアンカー要素への参照を返します。これは、HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性でアンカーに関連付けられた要素の場合にのみ動作し、CSS の {{cssxref("anchor-name")}} および {{cssxref("position-anchor")}} プロパティでアンカーに関連付けられた要素では動作しません。
-
-アンカーの機能と使用法の詳細情報については、[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュールのランディングページと [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)のガイドを参照してください。
 
 ## 値
 
@@ -20,7 +18,7 @@ l10n:
 
 ### 基本的な使い方
 
-この例はHTMLで要素とアンカーを関連付け、JavaScript を使用してアンカー要素への参照を取得します。
+この例は HTML で要素とアンカーを関連付け、JavaScript を使用してアンカー要素への参照を取得します。
 
 #### HTML
 
@@ -72,4 +70,3 @@ try {
 - HTML [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性
 - CSS {{cssxref("anchor-name")}} および {{cssxref("position-anchor")}} プロパティ
 - [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュール
-- [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)のガイド

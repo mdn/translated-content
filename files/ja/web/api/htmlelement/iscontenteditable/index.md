@@ -3,7 +3,7 @@ title: "HTMLElement: isContentEditable プロパティ"
 short-title: isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 6d2000984203c51f1aad49107ebcebe14d3c1238
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -35,8 +35,8 @@ const secondParagraph = document.getElementById("secondParagraph");
 const infoText1 = document.getElementById("infoText1");
 const infoText2 = document.getElementById("infoText2");
 
-infoText1.textContent += " " + firstParagraph.isContentEditable;
-infoText2.textContent += " " + secondParagraph.isContentEditable;
+infoText1.textContent += ` ${firstParagraph.isContentEditable}`;
+infoText2.textContent += ` ${secondParagraph.isContentEditable}`;
 ```
 
 ### 結果

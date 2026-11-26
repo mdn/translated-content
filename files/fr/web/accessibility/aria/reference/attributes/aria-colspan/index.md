@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-colspan"
 short-title: aria-colspan
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-colspan
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: d9e522ed63f204df4b9ab3ed6c8208ce089fa868
 ---
 
 L'attribut `aria-colspan` définit le nombre de colonnes occupées par une cellule ou une cellule de grille (`gridcell`) dans un tableau ([`table`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)), une grille ([`grid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)) ou une grille arborescente ([`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)).
@@ -12,16 +12,37 @@ L'attribut `aria-colspan` définit le nombre de colonnes occupées par une cellu
 
 Destiné aux [`cell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) et [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role) qui ne sont pas contenus dans un élément HTML natif {{HTMLElement('table')}}, la valeur de la propriété `aria-colspan` définit le nombre de colonnes occupées par une cellule individuelle dans un [`table`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/table_role), une [`grid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) ou une [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) ARIA.
 
-En HTML, les éléments {{HTMLElement('th')}} et {{HTMLElement('td')}} possèdent l'attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#attributes). Lorsque vous utilisez un {{HTMLElement('table')}} sémantique, utilisez l'attribut natif `colspan` comme prévu. Cet attribut ARIA est destiné aux cellules et cellules de grille qui ne sont pas contenues dans un tableau natif, et sera ignoré s'il est utilisé sur une cellule dans un {{HTMLElement('table')}}.
+En HTML, les éléments {{HTMLElement('th')}} et {{HTMLElement('td')}} possèdent l'attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#attributes). Lorsque vous utilisez un {{HTMLElement('table')}} sémantique, utilisez l'attribut natif `colspan` comme prévu. Cet attribut ARIA est destiné aux cellules et cellules de grille qui ne sont pas contenues dans un tableau natif, et est ignoré s'il est utilisé sur une cellule dans un {{HTMLElement('table')}}.
 
 > [!NOTE]
 > La première règle d'utilisation d'ARIA est&nbsp;: si vous pouvez utiliser une fonctionnalité native avec la sémantique et le comportement requis déjà intégrés, au lieu de détourner un élément et **d'ajouter** un rôle, un état ou une propriété ARIA pour le rendre accessible, faites-le. Utilisez les éléments HTML {{HTMLElement('table')}}, y compris {{HTMLElement('td')}} et {{HTMLElement('th')}} avec l'attribut `colspan`, plutôt que des éléments non sémantiques avec des rôles et attributs ARIA dès que possible.
 
 La valeur de `aria-colspan` doit être un entier positif. La valeur par défaut ou supposée d'une cellule est 1. Assurez-vous que la valeur indiquée n'entraîne pas le chevauchement de la cellule ou de la cellule de grille avec la suivante sur la même ligne et ne fait pas dépasser la cellule du tableau, de la grille ou de la treegrid contenant.
 
+## Valeurs
+
+- `<integer>`
+  - : Un entier supérieur ou égal à la valeur par défaut 1, définissant le nombre de colonnes occupées par la cellule. La valeur doit être inférieure à celle qui fait chevaucher la cellule sur la suivante de la même ligne.
+
+## Interfaces associées
+
+- {{DOMxRef("Element.ariaColSpan")}}
+  - : La propriété [`ariaColSpan`](/fr/docs/Web/API/Element/ariaColSpan), qui fait partie de l'interface de chaque élément, reflète la valeur de l'attribut `aria-colspan`, qui définit le nombre de colonnes occupées par une cellule ou une cellule de grille dans un tableau, une grille ou une treegrid.
+
+## Rôles associés
+
+Utilisé dans les rôles&nbsp;:
+
+- [`cell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
+
+Hérité par les rôles&nbsp;:
+
+- [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
+
 ## Exemple
 
-Voici un extrait d'un tableau de scores d'une ligue de bowling. Chaque partie comporte 10 frames, et chaque frame regroupe 3 scores&nbsp;: deux lancers et le total courant. Le 10<sup>e</sup> (et dernier) frame de chaque partie occupe 4 colonnes au cas où quelqu'un ferait uniquement des strikes.
+Voici un extrait d'un tableau de scores d'une ligue de bowling. Chaque partie comporte 10 cadres, et chaque cadre regroupe 3 scores&nbsp;: deux lancers et le total courant. Le 10<sup>e</sup> (et dernier) cadre de chaque partie occupe 4 colonnes au cas où quelqu'un fait uniquement des strikes.
 
 ```html
 <div role="grid" aria-rowcount="27">
@@ -36,9 +57,9 @@ Voici un extrait d'un tableau de scores d'une ligue de bowling. Chaque partie co
 
       <span role="columnheader" aria-rowspan="2">Équipe</span>
       <span role="columnheader" aria-colspan="2">joueur·se</span>
-      <span role="columnheader" aria-colspan="31">Frames partie 1</span>
-      <span role="columnheader" aria-colspan="31">Frames partie 2</span>
-      <span role="columnheader" aria-colspan="31">Frames partie 3</span>
+      <span role="columnheader" aria-colspan="31">Cadres partie 1</span>
+      <span role="columnheader" aria-colspan="31">Cadres partie 2</span>
+      <span role="columnheader" aria-colspan="31">Cadres partie 3</span>
       <span role="columnheader" aria-rowspan="2">Total</span>
     </div>
     <div role="row" aria-rowindex="2">
@@ -134,28 +155,7 @@ Voici un extrait d'un tableau de scores d'une ligue de bowling. Chaque partie co
 </div>
 ```
 
-Si nous avions utilisé un {{HTMLElement('table')}} et des éléments de tableau sémantiques, notre balisage aurait été moins verbeux et accessible par défaut.
-
-## Valeurs
-
-- `<integer>`
-  - : Un entier supérieur ou égal à la valeur par défaut 1, définissant le nombre de colonnes occupées par la cellule. La valeur doit être inférieure à celle qui ferait chevaucher la cellule sur la suivante de la même ligne.
-
-## Interfaces associées
-
-- {{domxref("Element.ariaColSpan")}}
-  - : La propriété [`ariaColSpan`](/fr/docs/Web/API/Element/ariaColSpan), qui fait partie de l'interface de chaque élément, reflète la valeur de l'attribut `aria-colspan`, qui définit le nombre de colonnes occupées par une cellule ou une cellule de grille dans un tableau, une grille ou une treegrid.
-
-## Rôles associés
-
-Utilisé dans les rôles&nbsp;:
-
-- [`cell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
-
-Hérité par les rôles&nbsp;:
-
-- [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-- [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
+Si nous utilisons un tableau ({{HTMLElement("table")}}) et des éléments de tableau sémantiques, notre balisage aurait été moins verbeux et accessible par défaut.
 
 ## Spécifications
 

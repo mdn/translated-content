@@ -97,7 +97,201 @@ requestAnimationFrame(draw);
 
 그것이 이 레슨의 전부입니다. 게임의 최종 버전이 준비되어 있고 시작할 준비가 되어 있습니다!
 
-{{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/dfh2tpu1/","","395")}}
+> [!NOTE]
+> 라이브 샘플이 자동으로 실행되지 않도록 "게임 시작" 버튼을 추가했습니다. 게임이 자동으로 시작되면서 알림 등의 이벤트가 과도하게 발생하는 것을 방지하기 위해서입니다.
+
+```html hidden
+<canvas id="myCanvas" width="480" height="320"></canvas>
+<button id="runButton">게임 시작</button>
+```
+
+```css hidden
+canvas {
+  background: #eee;
+}
+button {
+  display: block;
+}
+```
+
+```js hidden
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+var ballRadius = 10;
+var x = canvas.width / 2;
+var y = canvas.height - 30;
+var dx = 2;
+var dy = -2;
+var paddleHeight = 10;
+var paddleWidth = 75;
+var paddleX = (canvas.width - paddleWidth) / 2;
+var rightPressed = false;
+var leftPressed = false;
+var brickRowCount = 5;
+var brickColumnCount = 3;
+var brickWidth = 75;
+var brickHeight = 20;
+var brickPadding = 10;
+var brickOffsetTop = 30;
+var brickOffsetLeft = 30;
+var score = 0;
+let lives = 3;
+
+var bricks = [];
+for (var c = 0; c < brickColumnCount; c++) {
+  bricks[c] = [];
+  for (var r = 0; r < brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0, status: 1 };
+  }
+}
+
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("mousemove", mouseMoveHandler, false);
+
+function keyDownHandler(e) {
+  if (e.key == "Right" || e.key == "ArrowRight") {
+    rightPressed = true;
+  } else if (e.key == "Left" || e.key == "ArrowLeft") {
+    leftPressed = true;
+  }
+}
+
+function keyUpHandler(e) {
+  if (e.key == "Right" || e.key == "ArrowRight") {
+    rightPressed = false;
+  } else if (e.key == "Left" || e.key == "ArrowLeft") {
+    leftPressed = false;
+  }
+}
+
+function mouseMoveHandler(e) {
+  var relativeX = e.clientX - canvas.offsetLeft;
+  if (relativeX > 0 && relativeX < canvas.width) {
+    paddleX = relativeX - paddleWidth / 2;
+  }
+}
+function collisionDetection() {
+  for (var c = 0; c < brickColumnCount; c++) {
+    for (var r = 0; r < brickRowCount; r++) {
+      var b = bricks[c][r];
+      if (b.status == 1) {
+        if (
+          x > b.x &&
+          x < b.x + brickWidth &&
+          y > b.y &&
+          y < b.y + brickHeight
+        ) {
+          dy = -dy;
+          b.status = 0;
+          score++;
+          if (score == brickRowCount * brickColumnCount) {
+            alert("YOU WIN, CONGRATULATIONS!");
+            document.location.reload();
+          }
+        }
+      }
+    }
+  }
+}
+
+function drawBall() {
+  ctx.beginPath();
+  ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+function drawPaddle() {
+  ctx.beginPath();
+  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+function drawBricks() {
+  for (var c = 0; c < brickColumnCount; c++) {
+    for (var r = 0; r < brickRowCount; r++) {
+      if (bricks[c][r].status == 1) {
+        var brickX = r * (brickWidth + brickPadding) + brickOffsetLeft;
+        var brickY = c * (brickHeight + brickPadding) + brickOffsetTop;
+        bricks[c][r].x = brickX;
+        bricks[c][r].y = brickY;
+        ctx.beginPath();
+        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+      }
+    }
+  }
+}
+function drawScore() {
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText("Score: " + score, 8, 20);
+}
+function drawLives() {
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText(`Lives: ${lives}`, canvas.width - 65, 20);
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBricks();
+  drawBall();
+  drawPaddle();
+  drawScore();
+  drawLives();
+  collisionDetection();
+
+  if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+    dx = -dx;
+  }
+  if (y + dy < ballRadius) {
+    dy = -dy;
+  } else if (y + dy > canvas.height - ballRadius) {
+    if (x > paddleX && x < paddleX + paddleWidth) {
+      dy = -dy;
+    } else {
+      lives--;
+      if (!lives) {
+        alert("GAME OVER");
+        document.location.reload();
+      } else {
+        x = canvas.width / 2;
+        y = canvas.height - 30;
+        dx = 2;
+        dy = -2;
+        paddleX = (canvas.width - paddleWidth) / 2;
+      }
+    }
+  }
+
+  if (rightPressed && paddleX < canvas.width - paddleWidth) {
+    paddleX += 7;
+  } else if (leftPressed && paddleX > 0) {
+    paddleX -= 7;
+  }
+
+  x += dx;
+  y += dy;
+  requestAnimationFrame(draw);
+}
+
+function startGame() {
+  draw();
+}
+
+const runButton = document.getElementById("runButton");
+runButton.addEventListener("click", () => {
+  startGame();
+  runButton.disabled = true;
+});
+```
+
+{{EmbedLiveSample("코드 비교하기", 600, 360)}}
 
 > [!NOTE]
 > 생명의 수와 공이 패들에서 튕겨나가는 각도를 변경해 보세요.
