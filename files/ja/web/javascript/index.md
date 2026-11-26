@@ -73,7 +73,7 @@ JavaScript 仕様と関連技術に関する詳細は、 [JavaScript 技術概�
 - [標準オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects)
   - : 標準組み込みオブジェクトである {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}} などについて理解しましょう。
 - [式と演算子](/ja/docs/Web/JavaScript/Reference/Operators)
-  - : JavaScript の演算子である {{jsxref("instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("new")}}, {{jsxref("this")}} などの挙動、そして[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)などについて学びましょう。
+  - : JavaScript の演算子である {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}} などの挙動、そして[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)などについて学びましょう。
 - [文と宣言](/ja/docs/Web/JavaScript/Reference/Statements)
   - : {{jsxref("Statements/do...while", "do-while")}}, {{jsxref("Statements/for...in", "for-in")}}, {{jsxref("Statements/for...of", "for-of")}}, {{jsxref("Statements/try...catch", "try-catch")}}, {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/var", "var")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/if...else", "if-else")}}, {{jsxref("Statements/switch", "switch")}} などの JavaScript の文やキーワードがどのように機能するか学びましょう。
 - [関数](/ja/docs/Web/JavaScript/Reference/Functions)
