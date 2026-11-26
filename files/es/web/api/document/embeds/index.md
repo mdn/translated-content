@@ -5,17 +5,17 @@ slug: Web/API/Document/embeds
 
 {{ApiRef}}
 
-**`embeds`** es una propiedad de sólo lectura de la interfaz de {{domxref("Document")}}. Devuelve una lista con los elementos {{htmlelement("object")}} incrustados dentro del documento actual.
+La propiedad de solo lectura **`embeds`** de {{domxref("Document")}} devuelve una colección de los elementos {{htmlelement("embed")}} del documento.
 
 ## Sintaxis
 
 ```js
-nodeList = document.embeds;
+const embeds = document.embeds;
 ```
 
 ### Valor
 
-Una {{domxref("HTMLCollection")}}.
+Una {{domxref("HTMLCollection")}} viva de elementos {{htmlelement("embed")}}.
 
 ## Especificaciones
 
