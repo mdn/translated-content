@@ -627,7 +627,7 @@ const sum = (a, b, c) => a + b + c;
 })();
 ```
 
-IIFE の用途については、[クロージャでプライベートメソッドを模倣する](/ja/docs/Web/JavaScript/Guide/Closures#クロージャでプライベートメソッドを模倣する)で見ることができます。
+IIFE の用途については、[クロージャでプライベートメソッドを模倣する](/ja/docs/Web/JavaScript/Guide/Closures#クロージャでプライベートメソッドを模倣)で見ることができます。
 
 ### 再帰関数
 

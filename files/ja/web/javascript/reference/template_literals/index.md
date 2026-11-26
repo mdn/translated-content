@@ -169,7 +169,7 @@ console.log(output);
 // That Mike is a youngster.
 ```
 
-タグは単なる識別子である必要はありません。 16 以上の[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#表)を持つ任意の式を使用でき、これには[プロパティアクセス](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)、関数呼び出し、[new 式](/ja/docs/Web/JavaScript/Reference/Operators/new)、さらには別のタグ付きテンプレートリテラルも含まれます。
+タグは単なる識別子である必要はありません。 16 以上の[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)を持つ任意の式を使用でき、これには[プロパティアクセス](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)、関数呼び出し、[new 式](/ja/docs/Web/JavaScript/Reference/Operators/new)、さらには別のタグ付きテンプレートリテラルも含まれます。
 
 ```js
 console.log`Hello`; // [ 'Hello' ]
