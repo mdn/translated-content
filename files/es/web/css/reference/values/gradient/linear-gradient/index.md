@@ -116,7 +116,7 @@ El _punto de inicio_ es la ubicación en la línea de gradiente donde comienza e
 
 ### Personalización de gradientes
 
-Agregando más puntos de detención de color en la línea del gradiente, puedes crear una transición altamente personalizada entre múltiples colores. La posición de un punto de detención de color se puede definir explícitamente usando una {{CSSxRef("&lt;longitud&gt;")}} o un {{CSSxRef("&lt;porcentaje&gt;")}}. Si no especificas la ubicación de un color, se coloca a mitad de camino entre el que lo precede y el que lo sigue. Los siguientes dos gradientes son equivalentes.
+Agregando más puntos de detención de color en la línea del gradiente, puedes crear una transición altamente personalizada entre múltiples colores. La posición de un punto de detención de color se puede definir explícitamente usando una {{CSSxRef("&lt;length&gt;")}} o un {{CSSxRef("&lt;percentage&gt;")}}. Si no especificas la ubicación de un color, se coloca a mitad de camino entre el que lo precede y el que lo sigue. Los siguientes dos gradientes son equivalentes.
 
 ```css
 linear-gradient(red, orange, yellow, green, blue);
