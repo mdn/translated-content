@@ -3,15 +3,16 @@ title: MathML のためのフォント
 short-title: フォント
 slug: Web/MathML/Guides/Fonts
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: 96eca1db30582588adb0d71944d93d5040682233
 ---
 
-適切な Unicode のカバー範囲と Open Font Format 機能を持つフォントは、優れた数式レンダリングに必須です。
+Unicode の適切な範囲の文字に対応し、Open Font Format の機能を備えたフォントが、適切な数式レンダリングに必要です。
 このページでは、ユーザーがそのような数式フォントをインストールして、ブラウザーで MathML を正しく表示する方法を説明します。
 
 ## インストール手順
 
-経験則として、 _Latin Modern Math_ （数式表記に人気の [Computer Modern](https://ja.wikipedia.org/wiki/Computer_Modern) スタイルを使用）と _STIX Two Math_ （科学記号のの Unicode を広く保有）の両方をインストールすることをお勧めします。次の章では、さまざまなオペレーティングシステムにこれらのフォントをインストールするための詳細な手順を紹介します。
+一般に、 _Latin Modern Math_ と _STIX Two Math_ の両方をインストールすることをお勧めします。前者は数式でよく使われる [Computer Modern](https://ja.wikipedia.org/wiki/Computer_Modern) スタイルを使用し、後者は科学記号に使われる Unicode 文字を幅広く収録しています。
+次の節では、さまざまなオペレーティングシステムにこれらのフォントをインストールする詳しい手順を説明します。
 
 ### Windows
 
@@ -20,12 +21,12 @@ _Latin Modern Math_ および _STIX Two Math_ フォントのインストール�
 1. [latinmodern-math-1959.zip](https://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) をダウンロードします。
 2. この ZIP アーカイブを開き、 `latinmodern-math-1959` ディレクトリー内に移動し、さらに `otf` ディレクトリー内に移動します。 `latinmodern-math` フォントファイルを探します。
 3. `latinmodern-math` フォントファイルを開き、**インストール**ボタンをクリックします。
-4. [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/master/zipfiles/static_otf.zip) をダウンロードします。
+4. [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/v2.13b171/zipfiles/static_otf.zip) をダウンロードします。
 5. `static_otf.zip` ZIP アーカイブを開き、 `static_otf` ディレクトリーの中に移動します。そこにあるファイルの中に、 `STIXTwoMath-Regular` ファイルが見つかるでしょう。
 6. `STIXTwoMath-Regular` ファイルを開き、**インストール**ボタンをクリックします。 必要であれば、ディレクトリー内の他のフォントファイルについても同じ操作を行うことができます。
 
 > [!NOTE]
-> _Cambria Math_ が既定で Windows にインストールされており、比較的良好な MathML レンダリングを保証します。
+> _Cambria Math_ は Windows にデフォルトでインストールされており、比較的良好な MathML レンダリングを保証します。
 
 ### macOS
 
@@ -40,7 +41,7 @@ _Latin Modern Math_ フォントのインストールは次のように行いま
 
 _STIX Two Math_ フォントのインストールは次のように行います。
 
-1. [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/master/zipfiles/static_otf.zip) をダウンロードします。
+1. [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/v2.13b171/zipfiles/static_otf.zip) をダウンロードします。
 2. `static_otf.zip` ZIP アーカイブを開き、 `static_otf` ディレクトリーの中に移動します。そこにあるファイルの中に、 `STIXTwoMath-Regular.otf` ファイルが見つかるでしょう。
 3. `STIXTwoMath-Regular.otf` ファイルを開き、開いたウィンドウから**フォントをインストール**ボタンをクリックします。必要に応じて、ディレクトリー内の他のフォントファイルについても同じ操作を行うことができます。
 
@@ -49,13 +50,17 @@ _STIX Two Math_ フォントのインストールは次のように行います�
 
 ### Linux
 
-下記では、一般的な Linux ディストリビューション上で実行する、パッケージ管理ツールから _Latin Modern Math_ と _STIX Two Math_ フォントをインストールするために、コマンドを探せます。Linuxディストリビューションがこれらのフォント専用のパッケージを提供していない場合は、代替の手法も提供されています。
+ここでは、一般的な Linux ディストリビューションでパッケージマネージャーを使って _Latin Modern Math_ と _STIX Two Math_ フォントをインストールするためのコマンドを紹介します。
+これらのフォント専用のパッケージがない Linux ディストリビューション向けに、別の方法も紹介します。
 
 #### Debian ベースのディストリビューション（Ubuntu や Mint を含む）
 
 ```bash
 sudo apt-get install fonts-lmodern fonts-stix
 ```
+
+> [!NOTE]
+> Debian 13 および Ubuntu 24 までのバージョンでは、`fonts-stix` パッケージは _STIX Two Math_ ではなく STIX 1.x フォントをインストールします。
 
 #### Fedora ベースのディストリビューション
 
@@ -104,13 +109,13 @@ fc-cache -sf
 
 お使いの Linux ディストリビューションで利用できるパッケージがない場合、または上流パッケージをインストールしたい場合は、次のことを試してみてください。
 
-1. [latinmodern-math-1959.zip](https://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) and [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/master/zipfiles/static_otf.zip) をダウンロードします。
+1. [latinmodern-math-1959.zip](https://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) と [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/v2.13b171/zipfiles/static_otf.zip) をダウンロードします。
 2. まだ作成されていない場合は、 `~/.fonts` を作成し、 `latinmodern-math.otf` と `STIXTwoMath-Regular.otf` をそのディレクトリーに配置します。
 3. `fc-cache -f` を実行して、 fontconfig キャッシュを再生成します。
 
 ### Android
 
-[MathML-fonts アドオン](https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/)を使用する必要があります。
+[MathML-fonts アドオン](https://addons.mozilla.org/ja/firefox/addon/mathml-fonts/)を使用する必要があります。
 
 Noto Sans Math は数学記号と[数学レイアウト](https://github.com/notofonts/math/blob/main/documentation/building-math-fonts/index.md)について、 Unicode を十分にカバーしています。
 
@@ -120,7 +125,7 @@ Noto Sans Math は数学記号と[数学レイアウト](https://github.com/noto
 
 ## 高度なセットアップ
 
-次の節では、 MathML のフォントのインストールと構成に役立つ有益なヒントを他にも探してみてください。
+次の節では、MathML フォントのインストールと構成に役立つヒントを紹介します。
 
 ### アラビア数字のアルファベット記号
 
@@ -134,7 +139,7 @@ UNIX システムでは、 [Latin Modern Math](https://www.gust.org.pl/projects/
 
 ### MATH 表を含むフォント
 
-実際には、任意の[数学用 OpenType フォント](https://fred-wang.github.io/MathFonts/)をインストールし、 MathML レンダリングに使用することができます。ブラウザーによっては、フォント環境設定メニューで MathML の既定のフォントを構成可能なものもあります。あるいは、 [MathML フォント設定アドオン](https://addons.mozilla.org/ja/firefox/addon/mathml-font-settings/)を試すこともできます。
+任意の[数学用 OpenType フォント](https://fred-wang.github.io/MathFonts/)をインストールし、MathML のレンダリングに使用できます。ブラウザーによっては、フォント環境設定メニューで MathML のデフォルトフォントを設定できます。あるいは、[MathML フォント設定アドオン](https://addons.mozilla.org/ja/firefox/addon/mathml-font-settings/)を試すこともできます。
 
 - [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/)
 - [Cambria Math](https://learn.microsoft.com/en-us/typography/font-list/?FID=360)

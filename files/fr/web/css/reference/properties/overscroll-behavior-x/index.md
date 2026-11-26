@@ -3,7 +3,7 @@ title: Propriété CSS `overscroll-behavior-x`
 short-title: overscroll-behavior-x
 slug: Web/CSS/Reference/Properties/overscroll-behavior-x
 l10n:
-  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
+  sourceCommit: 151d527b2d48812d732cb4f3fdffa0737682e684
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`overscroll-behavior-x`** définit le comportement du navigateur lorsqu'il atteint la limite horizontale d'une zone de défilement.
@@ -15,6 +15,7 @@ Voir {{CSSxRef("overscroll-behavior")}} pour plus de détails.
 ```css
 /* Valeurs avec un mot-clé */
 overscroll-behavior-x: auto; /* Par défaut */
+overscroll-behavior-x: chain;
 overscroll-behavior-x: contain;
 overscroll-behavior-x: none;
 
@@ -31,11 +32,13 @@ overscroll-behavior-x: unset;
 Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `auto`
-  - : Le dépassement de la zone de défilement se déroule normalement.
+  - : Permet le comportement par défaut à une limite de défilement. Le défilement peut continuer dans un autre conteneur de défilement.
+- `chain`
+  - : Permet au défilement de continuer en dehors du conteneur de défilement, mais empêche les effets de «&nbsp;rebondissement&nbsp;» de dépassement de défilement.
 - `contain`
-  - : Le comportement de dépassement de la zone de défilement par défaut (par exemple, les effets de «&nbsp;rebond&nbsp;») est observé à l'intérieur de l'élément où cette valeur est définie. Cependant, aucune {{Glossary("Scroll_chaining", "chaîne de défilement")}} ne se produit sur les zones de défilement voisines&nbsp;; les éléments sous-jacents ne défilent pas. La valeur `contain` désactive la navigation native du navigateur, y compris le geste de rafraîchissement vertical par glissement et la navigation horizontale par balayage.
+  - : Empêche le défilement de continuer en dehors du conteneur de défilement. Les effets de «&nbsp;rebondissement&nbsp;» peuvent toujours se produire.
 - `none`
-  - : Aucune chaîne de défilement ne se produit vers les zones de défilement voisines et le comportement de dépassement de la zone de défilement par défaut est empêché.
+  - : Empêche le défilement de continuer en dehors du conteneur de défilement et empêche également les effets de «&nbsp;rebondissement&nbsp;» de dépassement de défilement.
 
 ## Définition formelle
 

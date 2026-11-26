@@ -3,10 +3,53 @@ title: Propriété CSS `text-autospace`
 short-title: text-autospace
 slug: Web/CSS/Reference/Properties/text-autospace
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-autospace`** permet de définir l'espacement appliqué entre les caractères chinois/japonais/coréens (CJK) et les caractères non-CJK.
+
+La plupart des conventions typographiques CJK nécessitent un petit espace entre les caractères CJK et les lettres ou chiffres occidentaux (voir les descriptions du W3C pour le texte [chinois <sup>(angl.)</sup>](https://www.w3.org/International/clreq/#mixed_text_composition_in_horizontal_writing_mode) et [japonais <sup>(angl.)</sup>](https://www.w3.org/TR/jlreq/#composition_of_japanese_and_western_mixed_texts)). Certain·e·s auteur·ice·s insèrent manuellement un caractère d'espace à cet effet, mais `text-autospace` ajoute cet espacement au niveau du moteur de mise en page, sans nécessiter de caractères supplémentaires dans le contenu textuel.
+
+{{InteractiveExample("Démonstration CSS&nbsp;: text-autospace")}}
+
+```css interactive-example-choice
+text-autospace: no-autospace;
+```
+
+```css interactive-example-choice
+text-autospace: normal;
+```
+
+```css interactive-example-choice
+text-autospace: ideograph-alpha;
+```
+
+```css interactive-example-choice
+text-autospace: ideograph-numeric;
+```
+
+```css interactive-example-choice
+text-autospace: auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element" lang="zh">
+    <p>HTML超文本标记语言</p>
+    <p>42四十二</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font: 2rem sans-serif;
+}
+
+p {
+  margin: 0;
+}
+```
 
 ## Syntaxe
 
@@ -66,102 +109,6 @@ text-autospace: unset;
 
 {{CSSSyntax}}
 
-## Exemples
-
-Cet exemple montre la différence entre différentes valeurs de `text-autospace`. Essayez de sélectionner une valeur dans la liste déroulante pour voir comment elle affecte l'espacement dans le texte.
-
-```html hidden
-<form>
-  <label for="autospace">Choose value for <code>text-autospace:</code></label>
-  <select name="autospace" id="autospace">
-    <option selected value="no-autospace">no-autospace</option>
-    <option value="normal">normal</option>
-    <option value="ideograph-alpha">ideograph-alpha</option>
-    <option value="ideograph-numeric">ideograph-numeric</option>
-  </select>
-</form>
-<div class="unsupported">
-  <code>text-autospace</code> n'est pas pris en charge dans votre navigateur.
-</div>
-```
-
-```html
-<main>
-  <figure class="no-autospace">
-    <figcaption>
-      <code>
-        text-autospace: <span id="autospace-value">no-autospace</span>;
-      </code>
-    </figcaption>
-    <div>
-      <p>HTML超文本标记语言</p>
-      <p>42四十二</p>
-    </div>
-  </figure>
-</main>
-```
-
-```css
-.no-autospace {
-  text-autospace: no-autospace;
-}
-.auto {
-  text-autospace: auto;
-}
-.normal {
-  text-autospace: normal;
-}
-.ideograph-alpha {
-  text-autospace: ideograph-alpha;
-}
-.ideograph-numeric {
-  text-autospace: ideograph-numeric;
-}
-```
-
-```css hidden
-figure {
-  margin: 1rem;
-  div {
-    font-size: 2rem;
-    padding: 1rem;
-    font-family: sans-serif;
-    border: tomato solid 1px;
-  }
-  p {
-    margin: 0;
-  }
-}
-main {
-  max-width: max-content;
-}
-@supports not (text-autospace: normal) {
-  form {
-    display: none;
-  }
-  .unsupported {
-    color: red;
-  }
-}
-@supports (text-autospace: normal) {
-  .unsupported {
-    display: none;
-  }
-}
-```
-
-```js hidden
-const chose = document.querySelector("#autospace");
-const fig = document.querySelector("figure");
-const codeValue = document.querySelector("#autospace-value");
-chose.addEventListener("change", (e) => {
-  fig.className = e.target.value;
-  codeValue.innerText = e.target.value;
-});
-```
-
-{{EmbedLiveSample("Exemples", 200, 200)}}
-
 ## Spécifications
 
 {{Specifications}}
@@ -175,3 +122,5 @@ chose.addEventListener("change", (e) => {
 - La propriété {{CSSxRef('text-spacing-trim')}}
 - Les unités [`ic`](/fr/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#longueurs_relatives_à_la_police_locales) et [`ric`](/fr/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#longueurs_relatives_à_la_police_racine)
 - Le module [de texte CSS](/fr/docs/Web/CSS/Guides/Text)
+- [Composition mixte de texte en mode d'écriture horizontal <sup>(angl.)</sup>](https://www.w3.org/International/clreq/#mixed_text_composition_in_horizontal_writing_mode) dans les exigences pour la mise en page du texte chinois sur w3.org
+- [Composition mixte de texte japonais et occidental <sup>(angl.)</sup>](https://www.w3.org/International/jlreq/#japanese_and_western_mixed_text_composition) dans les exigences pour la mise en page du texte japonais sur w3.org

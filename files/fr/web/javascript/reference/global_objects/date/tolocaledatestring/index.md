@@ -3,12 +3,12 @@ title: "Date : méthode toLocaleDateString()"
 short-title: toLocaleDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: 98972b1f827b7374e28aee591a73044ffd8fb758
 ---
 
 La méthode **`toLocaleDateString()`** des instances de {{JSxRef("Date")}} retourne une chaîne de caractères représentant la partie date de cette date, adaptée à la langue et au format local. Dans les implémentations prenant en charge [l'API `Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat), cette méthode délègue à `Intl.DateTimeFormat`.
 
-Chaque appel à `toLocaleDateString` effectue une recherche dans une grande base de données de chaînes de localisation, ce qui peut être inefficace. Lorsque la méthode est appelée plusieurs fois avec les mêmes arguments, il est préférable de créer un objet {{JSxRef("Intl.DateTimeFormat")}} et d'utiliser sa méthode {{JSxRef("Intl/DateTimeFormat/format", "format()")}}, car un objet `DateTimeFormat` mémorise les arguments passés et peut décider de mettre en cache une partie de la base de données, afin que les appels futurs à `format` puissent rechercher les chaînes de localisation dans un contexte plus restreint.
+Chaque appel à `toLocaleDateString` effectue une recherche dans une grande base de données de chaînes de caractères de localisation, ce qui peut être inefficace. Lorsque la méthode est appelée plusieurs fois avec les mêmes arguments, il est préférable de créer un objet {{JSxRef("Intl.DateTimeFormat")}} et d'utiliser sa méthode {{JSxRef("Intl/DateTimeFormat/format", "format()")}}, car un objet `DateTimeFormat` mémorise les arguments passés et peut décider de mettre en cache une partie de la base de données, afin que les appels futurs à `format` puissent rechercher les chaînes de caractères de localisation dans un contexte plus restreint.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.toLocaleDateString()", "taller")}}
 
@@ -43,15 +43,15 @@ toLocaleDateString(locales, options)
 
 Les paramètres `locales` et `options` personnalisent le comportement de la fonction et permettent aux applications d'indiquer la langue dont les conventions de formatage doivent être utilisées.
 
-Dans les implémentations prenant en charge [l'API `Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat), ces paramètres correspondent exactement à ceux du constructeur [`Intl.DateTimeFormat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat). Les implémentations sans prise en charge de `Intl.DateTimeFormat` doivent ignorer ces deux paramètres, rendant la locale utilisée et la forme de la chaîne retournée entièrement dépendantes de l'implémentation.
+Dans les implémentations prenant en charge [l'API `Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat), ces paramètres correspondent exactement à ceux du constructeur [`Intl.DateTimeFormat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat). Les implémentations sans prise en charge de `Intl.DateTimeFormat` doivent ignorer ces deux paramètres, rendant la locale utilisée et la forme de la chaîne de caractères retournée entièrement dépendantes de l'implémentation.
 
 - `locales` {{Optional_Inline}}
-  - : Une chaîne de caractères avec un {{Glossary("BCP 47 language tag", "identifiant de langue BCP 47")}}, ou un tableau de telles chaînes. Correspond au paramètre [`locales`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) du constructeur `Intl.DateTimeFormat()`.
+  - : Une chaîne de caractères avec un {{Glossary("BCP 47 language tag", "identifiant de langue BCP 47")}}, ou un tableau de telles chaînes de caractères. Correspond au paramètre [`locales`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) du constructeur `Intl.DateTimeFormat()`.
 
     Dans les implémentations sans prise en charge de `Intl.DateTimeFormat`, ce paramètre est ignoré et la locale de l'hôte est généralement utilisée.
 
 - `options` {{Optional_Inline}}
-  - : Un objet ajustant le format de sortie. Correspond au paramètre [`options`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) du constructeur `Intl.DateTimeFormat()`. L'option `timeStyle` doit être indéfinie, sinon une {{JSxRef("TypeError")}} sera levée. Si `weekday`, `year`, `month` et `day` sont toutes indéfinies, alors `year`, `month` et `day` seront définies sur `"numeric"`.
+  - : Un objet ajustant le format de sortie. Correspond au paramètre [`options`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) du constructeur `Intl.DateTimeFormat()`. L'option `timeStyle` doit être indéfinie, sinon une {{JSxRef("TypeError")}} est levée. Si `weekday`, `year`, `month` et `day` sont toutes indéfinies, alors `year`, `month`, `day` et `dateStyle` sont définies sur `"numeric"`.
 
     Dans les implémentations sans prise en charge de `Intl.DateTimeFormat`, ce paramètre est ignoré.
 
@@ -64,7 +64,7 @@ Une chaîne de caractères représentant la partie date de la date donnée selon
 Dans les implémentations avec `Intl.DateTimeFormat`, cela équivaut à `new Intl.DateTimeFormat(locales, options).format(date)`, où `options` a été normalisé comme décrit ci-dessus.
 
 > [!NOTE]
-> La plupart du temps, le formatage retourné par `toLocaleDateString()` est cohérent. Cependant, le résultat peut varier selon les implémentations, même au sein d'une même locale — ces variations sont prévues et autorisées par la spécification. Il se peut aussi que le résultat ne soit pas celui attendu. Par exemple, la chaîne peut utiliser des espaces insécables ou être entourée de caractères de contrôle bidirectionnels. Vous ne devez pas comparer les résultats de `toLocaleDateString()` à des constantes codées en dur.
+> La plupart du temps, le formatage retourné par `toLocaleDateString()` est cohérent. Cependant, le résultat peut varier selon les implémentations, même au sein d'une même locale — ces variations sont prévues et autorisées par la spécification. Il se peut aussi que le résultat ne soit pas celui attendu. Par exemple, la chaîne de caractères peut utiliser des espaces insécables ou être entourée de caractères de contrôle bidirectionnels. Vous ne devez pas comparer les résultats de `toLocaleDateString()` à des constantes codées en dur.
 
 ## Exemples
 
@@ -118,7 +118,8 @@ console.log(date.toLocaleDateString("en-GB"));
 console.log(date.toLocaleDateString("ko-KR"));
 // "2012. 12. 20."
 
-// le perse utilise un calendrier solaire
+// même pour le persan, il est difficile de convertir manuellement une
+// date en calendrier solaire hijri
 console.log(date.toLocaleDateString("fa-IR"));
 // "۱۳۹۱/۹/۳۰"
 

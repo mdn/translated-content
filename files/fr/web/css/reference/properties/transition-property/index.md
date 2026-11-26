@@ -3,10 +3,12 @@ title: Propriété CSS `transition-property`
 short-title: transition-property
 slug: Web/CSS/Reference/Properties/transition-property
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`transition-property`** désigne les noms des propriétés CSS sur lesquelles [un effet de transition](/fr/docs/Web/CSS/Guides/Transitions/Using) devrait être appliqué.
+La propriété [CSS](/fr/docs/Web/CSS) **`transition-property`** désigne les noms des propriétés CSS sur lesquelles [un effet de transition](/fr/docs/Web/CSS/Guides/Transitions/Using) doit être appliqué.
+
+Si vous définissez une propriété raccourcie (par exemple {{CSSxRef("background")}}), toutes les propriétés détaillées correspondantes sont animées de la même façon.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: transition-property")}}
 
@@ -50,8 +52,6 @@ transition-property: none;
 }
 ```
 
-Si vous définissez une propriété raccourcie (par exemple {{CSSxRef("background")}}), toutes les propriétés détaillées correspondantes seront animées de la même façon.
-
 ## Syntaxe
 
 ```css
@@ -85,7 +85,7 @@ transition-property: unset;
 - `none`
   - : Aucune propriété n'est concernée par les transitions.
 - `all`
-  - : Toutes les propriétés qui peuvent avoir une transition animée seront concernées.
+  - : Toutes les propriétés qui peuvent avoir une transition animée sont concernées.
 - {{CSSxRef("&lt;custom-ident&gt;")}}
   - : Une chaîne de caractère qui identifie la propriété pour laquelle on doit appliquer un effet de transition lorsque sa valeur change.
 
@@ -153,8 +153,8 @@ Voir notre guide [Utiliser les transitions CSS](/fr/docs/Web/CSS/Guides/Transiti
 ## Voir aussi
 
 - [Utiliser les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using)
-- La propriété {{CSSxRef('transition')}}
-- La propriété {{CSSxRef('transition-duration')}}
-- La propriété {{CSSxRef('transition-timing-function')}}
-- La propriété {{CSSxRef('transition-delay')}}
+- La propriété {{CSSxRef("transition")}}
+- La propriété {{CSSxRef("transition-duration")}}
+- La propriété {{CSSxRef("transition-timing-function")}}
+- La propriété {{CSSxRef("transition-delay")}}
 - L'interface API {{DOMxRef("TransitionEvent")}}

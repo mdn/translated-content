@@ -2,16 +2,14 @@
 title: PWA にファイルを関連付ける
 slug: Web/Progressive_web_apps/How_to/Associate_files_with_your_PWA
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 26f9fbee05fb92b584d44fba4359e86796484aa6
 ---
-
-{{PWASidebar}}
 
 端末では、ファイルは通常アプリに関連付けられているため、ユーザーがファイルを開くと、オペレーティングシステムが適切なアプリを起動し、ファイルを渡します。例えば、 HTML ファイルはウェブブラウザーで、テキストファイルはテキストエディターで、動画は動画プレーヤーで開くことが多いです。
 
-プログレッシブウェブアプリは、この機能に連携することができます。そのため、ユーザーが特定のファイル形式をクリックすると、 PWA が起動して処理することができます。
+プログレッシブウェブアプリでもこの機能を利用できます。ユーザーが特定の形式のファイルをクリックすると、PWA が起動してそのファイルを処理できます。
 
-ファイル処理に対応する機能を追加するには、 2 つの部分があります。
+ファイル処理に対応するには、次の 2 つを行います。
 
 - ウェブアプリマニフェストメンバーの [`file_handlers`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/file_handlers) を使用して、特定のファイル形式に対応していることを宣言します。
 - {{domxref("LaunchQueue")}} インターフェイスを使用してファイルを処理します。
@@ -19,7 +17,7 @@ l10n:
 > [!NOTE]
 > 現在、この機能は Chromium ベースのブラウザーだけで利用でき、デスクトップ OS のみで利用できます。
 
-## ファイル型の対応の宣言
+## ファイル形式への対応を宣言する
 
 具体的なファイル形式に対応していることを宣言するには、 [`file_handlers`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/file_handlers) メンバーが[マニフェストファイル](/ja/docs/Web/Progressive_web_apps/Manifest)に記述します。
 
@@ -54,21 +52,21 @@ l10n:
 }
 ```
 
-このマニフェストにより、 PWA がインストールされると、ユーザーがこれらのファイル形式のファイルを開く際に開くことができます。
+このマニフェストを設定すると、PWA のインストール後、ユーザーがこれらの形式のファイルを開いたときに PWA を起動できます。
 
-通常、複数のアプリケーションが指定された形式のファイルを開くことができます。そのため、オペレーティングシステムには、ユーザーがファイルを開く際に使用するアプリケーションを選択したり、既定のハンドラーを設定したりできる機能が用意されています。例えば、 macOS では、ユーザーはファイルを右クリックして「情報を見る」を選択し、表示されるダイアログで既定のハンドラーを構成することができます。
+通常、複数のアプリケーションが指定された形式のファイルを開くことができます。そのため、オペレーティングシステムには、ユーザーがファイルを開く際に使用するアプリケーションを選択したり、デフォルトのハンドラーを設定したりできる機能が用意されています。例えば、macOS では、ユーザーはファイルを右クリックして「情報を見る」を選択し、表示されるダイアログでデフォルトのハンドラーを設定できます。
 
-![macOS で既定のハンドラーを選択](macos-get-info-dialog.png)
+![macOS でデフォルトのハンドラーを選択](macos-get-info-dialog.png)
 
-## 権限を尋ねる
+## ユーザーの許可を求める
 
-ブラウザーがユーザーが開いた1つ以上のファイルを処理するために PWA を起動しようとする最初の時点では、ユーザーに PWA を使用してファイルを開くことを承認するよう依頼するダイアログが表示されます。例えば、 Chrome のダイアログは次のようになります。
+ユーザーが開いたファイルを処理するためにブラウザーが初めて PWA を起動しようとすると、PWA でファイルを開くことを確認するダイアログが表示されます。例えば、Chrome のダイアログは次のようになります。
 
 ![ファイルを処理するために PWA を起動する際の Chrome の警告ダイアログ](macos-chrome-launch-warning.png)
 
 ## ファイルの処理
 
-ブラウザーが PWA を起動し、 `file_handlers` マニフェストメンバーの `action` プロパティで指定したページに移動したら、ファイルを処理するためにコードを実行する必要があります。 このコードは、 `action` プロパティで指定したページで実行されます。
+ブラウザーが PWA を起動すると、`file_handlers` マニフェストメンバーの `action` プロパティで指定したページに移動します。そのページでファイルを処理するコードを実行してください。
 
 ここで重要なインターフェイスは {{domxref("LaunchQueue")}} で、グローバルな {{domxref("Window")}} オブジェクトのプロパティとして利用できます。
 
@@ -101,4 +99,4 @@ API に対応していないブラウザーでもアプリが確実に動作す�
 - [ファイルシステム API](/ja/docs/Web/API/File_System_API)
 - [ファイル API](/ja/docs/Web/API/File_API)
 - [Let installed web applications be file handlers](https://developer.chrome.com/docs/capabilities/web-apis/file-handling) (developer.chrome.com, 2022)
-- [PWA 内のファイルを処理する](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps-chromium/how-to/handle-files) (learn.microsoft.com, 2023)
+- [PWA 内のファイルを処理する](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps/how-to/handle-files) (learn.microsoft.com, 2023)

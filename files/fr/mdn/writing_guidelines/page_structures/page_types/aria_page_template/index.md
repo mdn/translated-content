@@ -2,7 +2,7 @@
 title: Modèle de page ARIA
 slug: MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template
 l10n:
-  sourceCommit: da12dd76d4c9863ce4f9c436f5e2373fe541e1c7
+  sourceCommit: 5af4f6e12c119ea0d809b35b3fa3266a0fbe4ef4
 ---
 
 ## Page de garde
@@ -87,6 +87,25 @@ Incluez une description complète de l'attribut ou du rôle.
 > [!NOTE]
 > Incluez une note sur les alternatives sémantiques à l'utilisation de ce rôle ou attribut. La première règle de l'utilisation d'ARIA est que vous pouvez utiliser une fonctionnalité native avec la sémantique et le comportement dont vous avez besoin déjà intégrés, au lieu de réutiliser un élément et **d'ajouter** un rôle, un état ou une propriété ARIA pour le rendre accessible, puis faites-le. Ensuite, publiez tous les détails dans la section des meilleures pratiques ci-dessous.
 
+## Ordre de priorité
+
+Quelles sont les propriétés associées, et dans quel ordre cet attribut ou cette propriété est-il lu (quelle propriété a la priorité sur celle-ci, et quelle propriété est écrasée).
+
+## Problèmes d'accessibilité
+
+Optionnellement, avertissez des éventuels problèmes d'accessibilité liés à l'utilisation de cette propriété, et comment les contourner. Supprimez cette section s'il n'y en a pas à mentionner.
+
+## Meilleures pratiques
+
+Optionnellement, énumérez les meilleures pratiques existantes pour ce rôle. Supprimez la section s'il n'y en a pas.
+
+### Avantages supplémentaires
+
+- Rôle associé
+  - : Si ce rôle est un parent, enfant ou voisin requis, et ce qu'il fait.
+
+Tout avantage supplémentaire que cette fonctionnalité offre aux utilisateur·ice·s de lecteurs d'écran non typiques, comme Google ou la reconnaissance vocale mobile.
+
 ## Exemples
 
 Notez que nous utilisons le pluriel «&nbsp;Exemples&nbsp;» même si la page ne contient qu'un seul exemple.
@@ -126,30 +145,11 @@ Consultez notre guide sur la façon d'ajouter des [exemples de code](/fr/docs/MD
 > Pour des exemples de cette API, voir [la page sur `fetch()`](https://example.org/).
 > ```
 
-## Problèmes d'accessibilité
-
-Optionnellement, avertissez des éventuels problèmes d'accessibilité liés à l'utilisation de cette propriété, et comment les contourner. Supprimez cette section s'il n'y en a pas à mentionner.
-
-## Meilleures pratiques
-
-Optionnellement, énumérez les meilleures pratiques existantes pour ce rôle. Supprimez la section s'il n'y en a pas.
-
-### Avantages supplémentaires
-
-- Rôle associé
-  - : Si ce rôle est un parent, enfant ou voisin requis, et ce qu'il fait.
-
-Tout avantage supplémentaire que cette fonctionnalité offre aux utilisateur·ice·s de lecteurs d'écran non typiques, comme Google ou la reconnaissance vocale mobile.
-
 ## Spécifications
 
 `\{{Specifications}}`
 
 _Pour utiliser cette macro, supprimez les accents inversés et l'antislash dans le fichier markdown._
-
-## Ordre de priorité
-
-Quelles sont les propriétés associées, et dans quel ordre cet attribut ou cette propriété est-il lu (quelle propriété a la priorité sur celle-ci, et quelle propriété est écrasée).
 
 ## Support des lecteurs d'écran
 

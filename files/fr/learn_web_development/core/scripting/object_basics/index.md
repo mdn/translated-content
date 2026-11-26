@@ -2,7 +2,7 @@
 title: Les bases de JavaScript, orienté objet
 slug: Learn_web_development/Core/Scripting/Object_basics
 l10n:
-  sourceCommit: c529f2672b3541cc28ea687ff9266f98b1734191
+  sourceCommit: 1a2a5b56a689b441ebf3be91b90f15746c5a5a01
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Events","Learn_web_development/Core/Scripting/Test_your_skills/Object_basics", "Learn_web_development/Core/Scripting")}}
@@ -39,7 +39,7 @@ Un objet est une collection de données et/ou de fonctionnalités connexes. Ceux
 Pour commencer, créez un nouveau fichier HTML sur votre système local et ajoutez-y le code suivant&nbsp;:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
@@ -332,7 +332,7 @@ const personne2 = {
 
 Dans ce cas, `personne1.salutation()` affiche «&nbsp;Bonjour&nbsp;! Je m'appelle Christophe.&nbsp;»&nbsp;; `personne2.salutation()` affiche «&nbsp;Bonjour&nbsp;! Je m'appelle Bruno.&nbsp;». Cela s'explique par le fait que lorsque la méthode est appelée, `this` fait référence à l'objet sur lequel la méthode est appelée, ce qui permet à la même définition de méthode de fonctionner pour plusieurs objets.
 
-Ce n'est pas très utile lorsque vous écrivez des littéraux d'objet à la main, car l'utilisation du nom de l'objet (`personne1` et `personne2`) donne exactement le même résultat, mais cela est essentiel lorsque nous commençons à utiliser des **constructeurs** pour créer plusieurs objets à partir d'une seule définition d'objet, ce qui est le sujet de la section suivante.
+Ce n'est pas très utile lorsque vous écrivez des littéraux d'objet à la main, car l'utilisation du nom de l'objet (`personne1` et `personne2`) donne exactement le même résultat, mais c'est essentiel lorsque nous commençons à utiliser des **constructeurs** pour créer plusieurs objets à partir d'une seule définition d'objet, ce qui est le sujet de la section suivante.
 
 ## Présentation des constructeurs
 
@@ -433,7 +433,7 @@ const maNotification = new Notification("Bonjour !");
 
 ## Résumé
 
-Vous devez maintenant avoir une bonne idée de la manière dont fonctionnent les objets en JavaScript — y compris la création de vos propres objets simples. Vous devez également comprendre que les objets sont très utiles en tant que structures permettant de stocker des données et des fonctionnalités connexes — si vous essayiez de garder une trace de toutes les propriétés et méthodes de notre objet `personne` sous forme de variables et de fonctions distinctes, c'est inefficace et frustrant, et nous courrions le risque d'entrer en conflit avec d'autres variables et fonctions portant les mêmes noms. Les objets nous permettent de conserver les informations en toute sécurité dans leur propre package, à l'abri de tout danger.
+Vous devez maintenant avoir une bonne idée de la manière dont fonctionnent les objets en JavaScript — y compris la création de vos propres objets simples. Vous devez également comprendre que les objets sont très utiles en tant que structures permettant de stocker des données et des fonctionnalités connexes — si vous essayiez de garder une trace de toutes les propriétés et méthodes de notre objet `personne` sous forme de variables et de fonctions distinctes, c'est inefficace et frustrant, et nous courrions le risque d'entrer en conflit avec d'autres variables et fonctions portant les mêmes noms. Les objets nous permettent de conserver les informations en toute sécurité dans leur propre paquet, à l'abri de tout danger.
 
 Dans le prochain article, nous vous proposons quelques tests que vous pouvez utiliser pour vérifier si vous avez bien compris et retenu toutes ces informations.
 

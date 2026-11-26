@@ -2,17 +2,17 @@
 title: Naviguer sur le Web
 slug: Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 l10n:
-  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
+  sourceCommit: 2a563c927890794b513523649ccfbbe48d336465
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
 
-À ce stade du module, vous devez avoir installé plusieurs navigateurs web modernes sur votre ordinateur ou d'autres appareils disponibles. Cet article va plus loin sur l'utilisation des navigateurs, en expliquant comment fonctionne un navigateur web, la différence entre certains éléments courants avec lesquels vous interagirez, et comment rechercher des informations.
+À ce stade du module, vous devez avoir installé plusieurs navigateurs web modernes sur votre ordinateur ou d'autres appareils disponibles. Cet article va plus loin sur l'utilisation des navigateurs, en expliquant comment fonctionne un navigateur web, la différence entre certains éléments courants avec lesquels vous interagissez, et comment rechercher des informations.
 
 > [!NOTE]
 > Si vous n'avez pas installé d'autres navigateurs que ceux fournis par défaut avec vos appareils, installez-en d'autres. Regardez la liste des [navigateurs web modernes](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software#navigateurs_web_modernes) pour plus d'informations.
 
-Comme dans tout domaine, le web comporte beaucoup de jargon et de termes techniques. Pas d'inquiétude&nbsp;: nous n'allons pas tout vous présenter d'un coup (vous pouvez consulter le [glossaire](/fr/docs/Glossary) si vous êtes curieux·se). Cependant, il y a quelques termes de base à comprendre dès le début, car vous les entendrez souvent. Nous en présentons quelques-uns ci-dessous.
+Comme dans tout domaine, le web comporte beaucoup de jargon et de termes techniques. Pas d'inquiétude&nbsp;: nous n'allons pas tout vous présenter d'un coup (vous pouvez consulter le [glossaire](/fr/docs/Glossary) si vous êtes curieux·se). Cependant, il y a quelques termes de base à comprendre dès le début, car vous allez souvent l'entendre. Nous en présentons quelques-uns ci-dessous.
 
 <table>
   <tbody>
@@ -156,7 +156,7 @@ Avant d'aller plus loin, essayez de chercher quelques sujets qui vous intéresse
 
 ### Utiliser l'IA
 
-Les résultats de recherche générés par l'IA sont très populaires. Ils offrent une recherche «&nbsp;améliorée&nbsp;»&nbsp;: ils effectuent de nombreuses recherches en arrière-plan, puis compilent les résultats en une réponse unique et digeste. Les plus connus sont [ChatGPT](https://chatgpt.com/), [Google Gemini](https://gemini.google.com/app) et [Microsoft Copilot](https://copilot.microsoft.com/), accessibles en chat ou avec des aides intégrées.
+Les résultats de recherche générés par l'IA sont très populaires. Ils offrent une recherche «&nbsp;améliorée&nbsp;»&nbsp;: ils effectuent de nombreuses recherches en arrière-plan, puis compilent les résultats en une réponse unique et digeste. Les plus connus sont [ChatGPT](https://chatgpt.com/), [Google Gemini](https://gemini.google.com/app) et [Microsoft Copilot](https://copilot.com/), accessibles en chat ou avec des aides intégrées.
 
 Pour apprendre à coder, les IA peuvent être utiles de plusieurs façons&nbsp;:
 

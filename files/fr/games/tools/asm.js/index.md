@@ -2,18 +2,18 @@
 title: asm.js
 slug: Games/Tools/asm.js
 l10n:
-  sourceCommit: 1a0be468b9e7c88a09ea3438a81341c4f6a619a6
+  sourceCommit: b25798255cfb773885c94557b74179400ac7153d
 ---
 
 > [!WARNING]
-> La spécification [asm.js <sup>(angl.)</sup>](http://asmjs.org/) est considérée comme **obsolète**.
+> La spécification [asm.js <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Asm.js) est considérée comme **obsolète**.
 > Les développeur·euse·s peuvent se tourner vers [WebAssembly](/fr/docs/WebAssembly) comme alternative à asm.js pour exécuter du code haute performance dans le navigateur.
 
-[Asm.js](http://asmjs.org/) Asm.js est une spécification définissant un sous-ensemble de JavaScript hautement optimisé. Cet article examine exactement ce qui est permis dans le sous-ensemble asm.js, quelles améliorations il confère, où et comment vous pouvez l'utiliser, et d'autres ressources et exemples.
+[Asm.js](https://en.wikipedia.org/wiki/Asm.js) Asm.js est une spécification définissant un sous-ensemble de JavaScript hautement optimisé. Cet article examine exactement ce qui est permis dans le sous-ensemble asm.js, quelles améliorations il confère, où et comment vous pouvez l'utiliser, et d'autres ressources et exemples.
 
 ## Qu'est-ce que asm.js, exactement ?
 
-Il s'agit d'un très petit sous‑ensemble strict de JavaScript qui n'autorise que des constructions simples telles que `while`, `if`, les nombres, les fonctions nommées de haut niveau et d'autres constructions élémentaires. Il n'autorise pas les objets, les chaînes de caractères, les closures et, en pratique, tout ce qui nécessite une allocation sur le tas. Le code asm.js ressemble à bien des égards au C, mais reste un JavaScript entièrement valide qui s'exécute dans tous les moteurs actuels. Il pousse les moteurs <abbr title="JavaScript">JS</abbr> à optimiser ce type de code et fournit aux compilateurs comme [Emscripten <sup>(angl.)</sup>](https://github.com/kripken/emscripten) une définition claire du code à générer. Nous montrons à quoi ressemble le code asm.js et expliquons comment il aide et comment vous pouvez l'utiliser.
+Il s'agit d'un très petit sous‑ensemble strict de JavaScript qui n'autorise que des constructions simples telles que `while`, `if`, les nombres, les fonctions nommées de haut niveau et d'autres constructions élémentaires. Il n'autorise pas les objets, les chaînes de caractères, les <i lang="en">closures</i> et, en pratique, tout ce qui nécessite une allocation sur le tas. Le code asm.js ressemble à bien des égards au C, mais reste un JavaScript entièrement valide qui s'exécute dans tous les moteurs actuels. Il pousse les moteurs <abbr title="JavaScript">JS</abbr> à optimiser ce type de code et fournit aux compilateurs comme [Emscripten <sup>(angl.)</sup>](https://github.com/kripken/emscripten) une définition claire du code à générer. Nous montrons à quoi ressemble le code asm.js et expliquons comment il aide et comment vous pouvez l'utiliser.
 
 Ce sous-ensemble de JavaScript est déjà très optimisé dans de nombreux moteurs JavaScript utilisant des techniques de compilation <i lang="en">Just-In-Time</i> (<abbr>JIT</abbr>). Cependant, en définissant une norme explicite, nous pouvons travailler sur l'optimisation de ce type de code encore plus et obtenir autant de performance que possible. Il est plus facile de collaborer sur plusieurs moteurs <abbr title="JavaScript">JS</abbr>, car il est facile de parler et de comparer. L'idée est que ce type de code doit fonctionner très rapidement dans chaque moteur, et si ce n'est pas le cas, c'est un bogue et il existe une spécification claire pour laquelle les moteurs doivent optimiser.
 

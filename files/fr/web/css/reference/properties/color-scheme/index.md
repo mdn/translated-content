@@ -13,7 +13,7 @@ La propriété [CSS](/fr/docs/Web/CSS) **`color-scheme`** permet à un élément
 - les couleurs par défaut des contrôles de formulaire&nbsp;;
 - les couleurs par défaut des autres éléments de l'interface fournis par le navigateur, tels que les soulignements de la «&nbsp;correction orthographique&nbsp;».
 
-Les auteur·ice·s de composants doivent utiliser la fonctionnalité média {{CSSxRef("@media/prefers-color-scheme", "prefers-color-scheme")}} pour prendre en charge les jeux de couleurs sur les autres éléments.
+Les auteur·ice·s de composants doivent utiliser la caractéristique média {{CSSxRef("@media/prefers-color-scheme", "prefers-color-scheme")}} pour prendre en charge les jeux de couleurs sur les autres éléments.
 
 Les choix courants de jeux de couleurs pour les systèmes d'exploitation sont «&nbsp;clair&nbsp;» et «&nbsp;sombre&nbsp;», ou «&nbsp;mode jour&nbsp;» et «&nbsp;mode nuit&nbsp;». Lorsqu'un·e utilisateur·ice sélectionne l'un de ces jeux de couleurs, le système d'exploitation ajuste l'interface utilisateur. Cela inclut les [contrôles de formulaire](/fr/docs/Learn_web_development/Extensions/Forms), les [barres de défilement](/fr/docs/Web/CSS/Guides/Scrollbars_styling) et les valeurs utilisées pour les [couleurs système CSS](/fr/docs/Web/CSS/Reference/Values/system-color).
 

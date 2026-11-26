@@ -1,5 +1,5 @@
 ---
-title: 413 Payload Too Large
+title: 413 Content Too Large
 slug: Web/HTTP/Reference/Status/413
 l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15

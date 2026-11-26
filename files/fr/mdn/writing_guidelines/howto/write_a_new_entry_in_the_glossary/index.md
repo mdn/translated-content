@@ -3,7 +3,7 @@ title: Comment ajouter une entrée de glossaire
 short-title: Ajouter une entrée de glossaire
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 l10n:
-  sourceCommit: 964ab8ae30c5ce0a343cc6d0f28c1b94389bae89
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
 
 Dans cet article, nous allons voir comment ajouter des entrées au [glossaire MDN Web Docs](/fr/docs/Glossary) et comment y faire référence.

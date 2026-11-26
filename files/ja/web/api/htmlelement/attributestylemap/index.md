@@ -3,7 +3,7 @@ title: "HTMLElement: attributeStyleMap プロパティ"
 short-title: attributeStyleMap
 slug: Web/API/HTMLElement/attributeStyleMap
 l10n:
-  sourceCommit: 2eacf352ffb5d8a3233c13e4bf5949578b847759
+  sourceCommit: 7cd51a73ad94df604db79ccacbbe0513d0967650
 ---
 
 {{APIRef("CSSOM")}}
@@ -25,15 +25,17 @@ l10n:
 次のコードは `style` 属性と `attributeStyleMap` プロパティの関係を示しています。
 
 ```html
-<div style="white-space: pre-line;">
-  <div id="el" style="border-top: 1px solid blue; color: red;">要素の例</div>
-  <div id="output"></div>
-</div>
+<div id="el" style="border-top: 1px solid blue; color: red;">要素の例</div>
+<div id="output"></div>
 ```
 
 ```css
 #el {
   font-size: 16px;
+}
+
+#output {
+  white-space: pre-line;
 }
 ```
 

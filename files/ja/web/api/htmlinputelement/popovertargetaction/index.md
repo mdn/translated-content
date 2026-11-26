@@ -3,12 +3,12 @@ title: "HTMLInputElement: popoverTargetAction プロパティ"
 short-title: popoverTargetAction
 slug: Web/API/HTMLInputElement/popoverTargetAction
 l10n:
-  sourceCommit: a4e0df90868c274842b083ad034eb60f57b76aae
+  sourceCommit: 847f754b374ed8928a270ab17672a1675802776f
 ---
 
 {{APIRef("Popover API")}}
 
-**`popoverTargetAction`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、{{htmlelement("input")}} 要素の `type="button"` 型でで制御されるポップオーバー要素で実行されるアクション（`"hide"`、`"show"`、`"toggle"` のいずれか）を取得および設定します。
+**`popoverTargetAction`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、`type="button"` の {{htmlelement("input")}} 要素が制御するポップオーバー要素に対して実行するアクション（`"hide"`、`"show"`、`"toggle"` のいずれか）を取得および設定します。
 
 これは HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性の値を反映します。
 
@@ -21,17 +21,17 @@ l10n:
 - `"show"`
   - : このボタンは非表示のポップオーバーを表示します。すでに表示中のポップオーバーを表示させようとした場合は、何も行われません。
 - `"toggle"`
-  - : このボタンはポップオーバーを表示と非表示の間でトグル切り替えします。ポップオーバーが非表示の場合は、表示されます。ポップオーバーが表示中の場合は、非表示になります。`popoverTargetAction` が設定されていない場合、`"toggle"` がこの制御ボタンで行われる既定のアクションになります。
+  - : このボタンはポップオーバーの表示と非表示を切り替えます。ポップオーバーが非表示の場合は表示され、表示中の場合は非表示になります。`popoverTargetAction` が設定されていない場合、`"toggle"` がこの制御ボタンで行われるデフォルトのアクションになります。
 
 ## 例
 
 ### 自動ポップオーバーでのポップオーバーの切り替え動作
 
-この例では、 `popoverTargetAction` プロパティに "toggle" 値を設定したポップオーバー API の基本的な使用方法を示します。
-`popover` 属性は [`"auto"`](/ja/docs/Web/API/Popover_API/Using#自動状態と「簡単な解除」) に設定されているので、ポップオーバーはポップオーバー領域の外側をクリックすることで閉じられた状態 ("light-dismissed") にすることができます。
+この例では、`popoverTargetAction` プロパティに `"toggle"` の値を設定する、ポップオーバー API の基本的な使い方を示します。
+`popover` 属性は [`"auto"`](/ja/docs/Web/API/Popover_API/Using#自動状態と「簡単な解除」) に設定されているので、ポップオーバー領域の外側をクリックすると、ポップオーバーを簡単に解除できます。
 
 まず、ポップオーバーの表示と非表示に使用する [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input/button) の `type="button"` 型と、ポップオーバーとなる `<div>` を定義します。
-この場合、プログラムで行うのと同様に、ボタンには HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性を設定しませんし、 [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性を `<div>` に設定することもなく、
+この場合、これらの属性はプログラムで設定するため、`<input>` 要素に HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性を設定せず、`<div>` 要素にも [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性を設定しません。
 
 ```html
 <input id="toggleBtn" type="button" value="ポップオーバーの表示切り替え" />
@@ -47,7 +47,7 @@ const toggleBtn = document.getElementById("toggleBtn");
 
 // ポップオーバー API の対応状況を確認
 function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+  return Object.hasOwn(HTMLElement.prototype, "popover");
 }
 ```
 
@@ -71,11 +71,11 @@ if (supportsPopover()) {
 ```
 
 > [!NOTE]
-> ポップオーバー要素は既定では非表示ですが、 API に対応していない場合は「通常通り」表示されます。
+> ポップオーバー要素はデフォルトでは非表示ですが、API に対応していない場合は「通常通り」表示されます。
 
 下記の例を試してみてください。
-ボタンを切り替えることでポップオーバーを表示させたり、非表示にしたりできます。
-「自動」ポップオーバーは、ポップオーバーテキストの枠外を選択することで解除することもできます。
+ボタンを押すたびにポップオーバーの表示と非表示が切り替わります。
+`"auto"` ポップオーバーは、ポップオーバーテキストの範囲外をクリックして簡単に解除することもできます。
 
 {{EmbedLiveSample("Toggle popover action with an auto popover", "100%")}}
 
@@ -83,8 +83,8 @@ if (supportsPopover()) {
 
 この例では `popoverTargetAction` 属性の `"show"` と `"hide"` の値を使用する方法を示します。
 
-コードは前回の例とほぼ同じですが、 2 つの `<button>` 要素があり、ポップオーバーが [`"manual"`](/ja/docs/Web/API/Popover_API/Using#using_manual_popover_state) に設定されている点が異なります。
-`manual` ポップオーバーは明示的に閉じる必要があるものであり、ポップオーバー領域外を選択することによる「簡単な解除」も行われません。
+コードは前回の例とほぼ同じですが、2 つの `<button>` 要素があり、ポップオーバーが [`"manual"`](/ja/docs/Web/API/Popover_API/Using#using_manual_popover_state) に設定されている点が異なります。
+`manual` ポップオーバーは明示的に閉じる必要があり、ポップオーバー領域の外側をクリックしても簡単に解除されません。
 
 ```html
 <input id="showBtn" type="button" value="ポップオーバーを表示" />
@@ -94,7 +94,7 @@ if (supportsPopover()) {
 
 ```js
 function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+  return Object.hasOwn(HTMLElement.prototype, "popover");
 }
 
 const popover = document.getElementById("mypopover");

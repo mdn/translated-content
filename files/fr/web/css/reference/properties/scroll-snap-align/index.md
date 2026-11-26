@@ -3,10 +3,10 @@ title: Propriété CSS `scroll-snap-align`
 short-title: scroll-snap-align
 slug: Web/CSS/Reference/Properties/scroll-snap-align
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 6354422058e438a2599e4eab71eaec8eb40850fa
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`scroll-snap-align`** définit la position d'accrochage de la boîte comme un alignement de sa [zone d'accrochage](/fr/docs/Glossary/Scroll_snap#snap_area) (en tant que {{Glossary("alignment subject", "sujet d'alignement")}}) à l'intérieur du port d'accrochage de son conteneur (en tant que {{Glossary("alignment container", "conteneur d'alignement")}}).
+La propriété [CSS](/fr/docs/Web/CSS) **`scroll-snap-align`** définit la position d'accrochage de la boîte comme un alignement de sa [zone d'accrochage](/fr/docs/Glossary/Scroll_snap#snap_area).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: scroll-snap-align")}}
 
@@ -96,7 +96,7 @@ scroll-snap-align: unset;
 
 ### Valeurs
 
-Une ou deux valeurs peuvent être définies pour la propriété `scroll-snap-align`. Si une seule valeur est définie, elle s'applique aux axes bloc et en incise (<i lang="en">inline</i> en anglais). Si deux valeurs sont définies, la première valeur contrôle l'axe bloc et la deuxième valeur contrôle l'axe en incise.
+Cette propriété est définie comme une ou deux des valeurs de mot-clé suivantes, séparées par des espaces&nbsp;:
 
 - `none`
   - : La boîte ne définit aucune position d'accroche sur cet axe.
@@ -106,6 +106,12 @@ Une ou deux valeurs peuvent être définies pour la propriété `scroll-snap-ali
   - : L'alignement de fin de la zone d'accrochage de cette boîte, à l'intérieur du port d'accrochage du conteneur de défilement est une position d'accroche sur cet axe.
 - `center`
   - : Le point d'alignement situé au centre de l'axe et à l'intérieur de la boîte de défilement est une position d'accroche sur cet axe.
+
+## Description
+
+La propriété `scroll-snap-align` définit la position d'accrochage de la boîte comme un alignement de sa [zone d'accrochage](/fr/docs/Glossary/Scroll_snap#snap_area) (en tant que {{Glossary("alignment subject", "sujet d'alignement")}}) à l'intérieur du port d'accrochage de son conteneur (en tant que {{Glossary("alignment container", "conteneur d'alignement")}}).
+
+Une ou deux valeurs peuvent être définies pour la propriété `scroll-snap-align`. Si une seule valeur est définie, elle s'applique aux axes bloc et en incise (<i lang="en">inline</i> en anglais). Si deux valeurs sont définies, la première valeur contrôle l'axe bloc et la deuxième valeur contrôle l'axe en incise.
 
 ## Définition formelle
 

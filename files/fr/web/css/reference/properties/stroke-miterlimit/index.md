@@ -3,26 +3,12 @@ title: Propriété CSS `stroke-miterlimit`
 short-title: stroke-miterlimit
 slug: Web/CSS/Reference/Properties/stroke-miterlimit
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c4e64810ce10fb5cb1eebfcd8b6f526866fd0982
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`stroke-miterlimit`** définit une limite sur le rapport entre la longueur de l'onglet et la largeur du contour ({{CSSxRef("stroke-width")}}) lorsque la forme utilisée aux coins du tracé d'un élément [SVG](/fr/docs/Web/SVG) est une jonction en onglet. Si la limite définie par cette propriété est dépassée, la jonction est convertie de `miter` à `bevel`, ce qui donne à l'angle un aspect tronqué.
 
 Cette propriété s'applique à toute forme SVG générant des coins ou à tout élément de contenu textuel (voir {{SVGAttr("stroke-miterlimit")}} pour une liste complète), mais en tant que propriété héritée, elle peut être appliquée à des éléments tels que {{SVGElement("g")}} et avoir toujours l'effet souhaité sur les contours des éléments descendants. Si elle est présente, elle remplace l'attribut {{SVGAttr("stroke-miterlimit")}} de l'élément.
-
-## Description
-
-Lorsque deux segments de ligne se rejoignent à un angle aigu et que des jonctions `miter` ont été définies pour {{CSSxRef("stroke-linejoin")}}, ou si elles prennent cette valeur par défaut, il est possible que l'onglet dépasse largement l'épaisseur de la ligne du tracé. Le rapport `stroke-miterlimit` sert à définir une limite, au-delà de laquelle la jonction est convertie d'un onglet à un biseau.
-
-Le rapport entre la longueur de l'onglet (la distance entre la pointe extérieure et le coin intérieur de l'onglet) et la {{CSSxRef("stroke-width")}} est directement lié à l'angle (thêta) entre les segments dans l'espace utilisateur par la formule&nbsp;:
-
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mstyle displaystyle="true"><mi>stroke-miterlimit</mi><mo>=</mo><mfrac><mrow><mi>miterLength</mi></mrow><mrow><mi>stroke-width</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mrow><mi>sin</mi><mrow><mo>(</mo><mfrac><mrow><mo>θ</mo></mrow><mrow><mn>2</mn></mrow></mfrac><mo>)</mo></mrow></mrow></mrow></mfrac></mstyle><annotation encoding="TeX">\text{stroke-miterlimit} = \frac{\text{miterLength}}{\text{stroke-width}} = \frac{1}{\sin\left(\frac{\theta}{2}\right)}</annotation></semantics>
-</math>
-<!-- prettier-ignore-end -->
-
-Par exemple, une limite d'onglet de `1.414` convertit les onglets en biseaux pour une valeur de thêta inférieure à 90 degrés, une limite de `4.0` les convertit pour une thêta inférieure à environ 29 degrés, et une limite de `10.0` les convertit pour une thêta inférieure à environ 11,5 degrés.
 
 ## Syntaxe
 
@@ -43,6 +29,20 @@ stroke-miterlimit: unset;
 
 - {{CSSxRef("&lt;number&gt;")}}
   - : Tout nombre réel positif égal ou supérieur à `1`&nbsp;; les valeurs inférieures à `1` sont invalides. La valeur initiale est `4`.
+
+## Description
+
+Lorsque deux segments de ligne se rejoignent à un angle aigu et que des jonctions `miter` ont été définies pour {{CSSxRef("stroke-linejoin")}}, ou si elles prennent cette valeur par défaut, il est possible que l'onglet dépasse largement l'épaisseur de la ligne du tracé. Le rapport `stroke-miterlimit` sert à définir une limite, au-delà de laquelle la jonction est convertie d'un onglet à un biseau.
+
+Le rapport entre la longueur de l'onglet (la distance entre la pointe extérieure et le coin intérieur de l'onglet) et la {{CSSxRef("stroke-width")}} est directement lié à l'angle (thêta) entre les segments dans l'espace utilisateur par la formule&nbsp;:
+
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mstyle displaystyle="true"><mi>stroke-miterlimit</mi><mo>=</mo><mfrac><mrow><mi>miterLength</mi></mrow><mrow><mi>stroke-width</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mrow><mi>sin</mi><mrow><mo>(</mo><mfrac><mrow><mo>θ</mo></mrow><mrow><mn>2</mn></mrow></mfrac><mo>)</mo></mrow></mrow></mrow></mfrac></mstyle><annotation encoding="TeX">\text{stroke-miterlimit} = \frac{\text{miterLength}}{\text{stroke-width}} = \frac{1}{\sin\left(\frac{\theta}{2}\right)}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
+
+Par exemple, une limite d'onglet de `1.414` convertit les onglets en biseaux pour une valeur de thêta inférieure à 90 degrés, une limite de `4.0` les convertit pour une thêta inférieure à environ 29 degrés, et une limite de `10.0` les convertit pour une thêta inférieure à environ 11,5 degrés.
 
 ## Définition formelle
 

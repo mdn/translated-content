@@ -3,7 +3,7 @@ title: "HTMLElement: spellcheck プロパティ"
 short-title: spellcheck
 slug: Web/API/HTMLElement/spellcheck
 l10n:
-  sourceCommit: b39037d337dc89b86229e862f2f3f1e66000d281
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("HTML DOM")}}
@@ -22,11 +22,13 @@ l10n:
 
 ```html
 <div>
-  <span id="sc-label">The spelling and grammar may be checked: </span>
+  <span id="sc-label">スペルや文法をチェックできます: </span>
   <span id="sc-element" contenteditable="true" spellcheck="true">test</span>
 </div>
-<input id="sc-controller" type="checkbox" checked />Enable spelling and grammar
-check
+<input
+  id="sc-controller"
+  type="checkbox"
+  checked />スペルや文法のチェックを有効にする
 ```
 
 ```js
@@ -37,10 +39,10 @@ const controller = document.getElementById("sc-controller");
 controller.addEventListener("change", (e) => {
   if (controller.checked) {
     element.spellcheck = true;
-    label.innerText = "The spelling and grammar may be checked: ";
+    label.innerText = "スペルや文法をチェックできます: ";
   } else {
     element.spellcheck = false;
-    label.innerText = "The spelling and grammar may not be checked: ";
+    label.innerText = "スペルや文法をチェックできません: ";
   }
 });
 ```

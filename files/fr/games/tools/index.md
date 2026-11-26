@@ -2,7 +2,7 @@
 title: Outils pour le développement de jeux vidéo
 slug: Games/Tools
 l10n:
-  sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
+  sourceCommit: b25798255cfb773885c94557b74179400ac7153d
 ---
 
 Sur cette page, vous pouvez trouver des liens vers nos articles sur les outils de développement de jeux, qui visent finalement à couvrir les cadriciels, compilateurs et outils de débogage.
@@ -104,7 +104,7 @@ Sur cette page, vous pouvez trouver des liens vers nos articles sur les outils d
   - : Stocker les données des utilisateur·ice·s sur leur propre ordinateur ou appareil.
 - [Javascript](/fr/docs/Web/JavaScript)
   - : Langue de programmation Web rapide pour écrire le code de votre jeu.
-    Pour porter facilement vos jeux existants [Emscripten](https://github.com/emscripten-core/emscripten/wiki) ou [Asm.js](https://asmjs.org/spec/latest/)
+    Pour porter facilement vos jeux existants [Emscripten <sup>(angl.)</sup>](https://github.com/emscripten-core/emscripten/wiki) ou [Asm.js <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Asm.js)
 - [L'API de verrouillage du pointeur](/fr/docs/Web/API/Pointer_Lock_API)
   - : Verrouiller la souris ou un autre appareil de pointage dans l'interface de votre jeu.
 - [SVG](/fr/docs/Web/SVG) (Graphiques vectoriels évolutifs)
@@ -114,7 +114,7 @@ Sur cette page, vous pouvez trouver des liens vers nos articles sur les outils d
 - [L'API audio Web](/fr/docs/Web/API/Web_Audio_API)
   - : Contrôlez la lecture, la synthèse et la manipulation de l'audio en temps réel.
 - [WebGL](/fr/docs/Web/API/WebGL_API)
-  - : Créez des graphiques 3D (et 2D) à haute performance et avec l'accélération matérielle. [OpenGL ES](https://www.khronos.org/opengles/) 2.0.
+  - : Créez des graphiques 3D (et 2D) à haute performance et avec l'accélération matérielle. [OpenGL ES <sup>(angl.)</sup>](https://www.khronos.org/opengles/) 2.0.
 - [WebRTC](/fr/docs/Web/API/WebRTC_API)
   - : Communications en temps réel pour contrôler les données audio et vidéo, y compris les téléconférences et la transmission d'autres données d'application entre deux utilisateur·ice·s, comme le chat.
 - [Sockets websockets](/fr/docs/Web/API/WebSockets_API)
@@ -124,7 +124,7 @@ Sur cette page, vous pouvez trouver des liens vers nos articles sur les outils d
 
 ## Transférer des jeux natifs vers le Web
 
-Si vous êtes un·e développeur·euse natif·ve (par exemple, vous écrivez des jeux en C++) et que vous souhaitez savoir comment porter vos jeux sur le Web, vous devez en savoir plus sur notre outil [Emscripten](https://emscripten.org/index.html) - il s'agit d'un compilateur LLVM vers JavaScript qui prend le bytecode LLVM (généré par exemple à partir de C/C++ à l'aide de Clang ou d'un autre langage) et le compile en [asm.js](/fr/docs/Games/Tools/asm.js), qui peut être exécuté sur le Web.
+Si vous êtes un·e développeur·euse natif·ve (par exemple, vous écrivez des jeux en C++) et que vous souhaitez savoir comment porter vos jeux sur le Web, vous devez en savoir plus sur notre outil [Emscripten <sup>(angl.)</sup>](https://emscripten.org/index.html) - il s'agit d'un compilateur LLVM vers JavaScript qui prend le bytecode LLVM (généré par exemple à partir de C/C++ à l'aide de Clang ou d'un autre langage) et le compile en [asm.js](/fr/docs/Games/Tools/asm.js), qui peut être exécuté sur le Web.
 
 Pour commencer, regardez les ressources suivantes&nbsp;:
 

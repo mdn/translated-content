@@ -2,7 +2,7 @@
 title: "HTMLElement: beforetoggle イベント"
 slug: Web/API/HTMLElement/beforetoggle_event
 l10n:
-  sourceCommit: 887acda9b43338ce492d4c0ad1a2145e383187b9
+  sourceCommit: 2f34ca590baf2d5447d42fc79002a70b9cb65e73
 ---
 
 {{APIRef("HTML DOM")}}
@@ -22,11 +22,15 @@ l10n:
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+{{domxref("EventTarget/addEventListener", "addEventListener()")}} でこのイベント名を使用してください。
 
 ```js-nolint
 addEventListener("beforetoggle", (event) => { })
+```
 
+または、インターフェイスの[イベントハンドラープロパティ](/ja/docs/Web/API/Document_Object_Model/Events#onevent_プロパティの使用)に代入してください。
+
+```js-nolint
 onbeforetoggle = (event) => { }
 ```
 

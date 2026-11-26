@@ -3,14 +3,19 @@ title: "HTMLInputElement: popoverTargetElement プロパティ"
 short-title: popoverTargetElement
 slug: Web/API/HTMLInputElement/popoverTargetElement
 l10n:
-  sourceCommit: a4e0df90868c274842b083ad034eb60f57b76aae
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("Popover API")}}
 
-**`popoverTargetElement`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、{{htmlelement("input")}} 要素の `type="button"` 型で制御されるポップオーバー要素を取得および設定します。
+**`popoverTargetElement`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、`type="button"` の {{htmlelement("input")}} 要素から制御するポップオーバー要素を取得および設定します。
 
 これは JavaScript において HTML の [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性に相当するものです。
+
+`popoverTargetElement` プロパティを使ってポップオーバーと呼び出し元ボタンを関連付けると、さらに次の 2 つの有用な効果があります。
+
+- ブラウザーは、ポップオーバーと呼び出し元の間に [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) および [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) の暗黙の関係を作成します。また、ポップオーバーの表示時に、キーボードフォーカスナビゲーション順序内の論理的な位置に配置します。これにより、キーボードや支援技術 (AT) を利用するユーザーにとって、ポップオーバーがよりアクセスしやすくなります（[ポップオーバーのアクセシビリティ機能](/ja/docs/Web/API/Popover_API/Using#ポップオーバーのアクセシビリティ機能)も参照してください）。
+- ブラウザーは両者の間に暗黙のアンカー参照も作成するため、[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)を使って、制御ボタンに対するポップオーバーの位置を簡単に指定できます。詳しくは[ポップオーバーのアンカー位置指定](/ja/docs/Web/API/Popover_API/Using#ポップオーバーのアンカー位置指定)を参照してください。
 
 ## 値
 
@@ -20,7 +25,7 @@ DOM 内でのポップオーバー要素への参照です。
 
 ```js
 function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+  return Object.hasOwn(HTMLElement.prototype, "popover");
 }
 
 const popover = document.getElementById("mypopover");
@@ -39,11 +44,11 @@ if (popoverSupported) {
 
 ### 自動ポップオーバーでのポップオーバーの切り替え動作
 
-この例では、 `popoverTargetAction` プロパティに "toggle" 値を設定したポップオーバー API の基本的な使用方法を示します。
-`popover` 属性は [`"auto"`](/ja/docs/Web/API/Popover_API/Using#自動状態と「簡単な解除」) に設定されているので、ポップオーバーはポップオーバー領域の外側をクリックすることで閉じられた状態 ("light-dismissed") にすることができます。
+この例では、`<div>` 要素をポップオーバーとして設定し、その要素を `type="button"` の [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input/button) の `popoverTargetElement` に設定するという、ポップオーバー API の基本的な使い方を示します。
+`popover` 属性は [`"auto"`](/ja/docs/Web/API/Popover_API/Using#自動状態と「簡単な解除」) に設定されているので、ポップオーバー領域の外側をクリックすると簡単に解除できます。
 
-まず、ポップオーバーの表示と非表示に使用する `<input>` と、ポップオーバーとなる `<div>` を定義します。
-この場合、プログラムで行うのと同様に、ボタンには HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性を設定しませんし、 [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性を `<div>` に設定することもなく、
+まず、ポップオーバーの表示と非表示に使用する `<input>` 要素と、ポップオーバーとなる `<div>` 要素を定義します。
+この例では、これらの属性をプログラムで設定するため、`<input>` 要素に HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性を設定せず、`<div>` 要素にも [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性を設定しません。
 
 ```html
 <input id="toggleBtn" type="button" value="ポップオーバーの表示切り替え" />
@@ -59,13 +64,13 @@ const toggleBtn = document.getElementById("toggleBtn");
 
 // ポップオーバー API の対応状況を確認
 function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+  return Object.hasOwn(HTMLElement.prototype, "popover");
 }
 ```
 
 ポップオーバー API に対応している場合、コードは `<div>` 要素の `popover` 属性を `"auto"` に設定し、それをトグルボタンのポップオーバー対象とします。
 そして、ボタンの `popoverTargetAction` を `"toggle"` に設定します。
-ポップオーバー API に対応していない場合は、 `<div>` 要素のテキストコンテンツを変更してその状態にし、トグルボタンを非表示にします。
+ポップオーバー API に対応していない場合は、`<div>` 要素のテキストコンテンツを変更してその状態を示し、`<input>` 要素を非表示にします。
 
 ```js
 if (supportsPopover()) {
@@ -84,11 +89,11 @@ if (supportsPopover()) {
 ```
 
 > [!NOTE]
-> ポップオーバー要素は既定では非表示ですが、 API に対応していない場合は「通常通り」表示されます。
+> ポップオーバー要素はデフォルトでは非表示ですが、API に対応していない場合は「通常通り」表示されます。
 
 下記の例を試してみてください。
-ボタンを切り替えることでポップオーバーを表示させたり、非表示にしたりできます。
-「自動」ポップオーバーは、ポップオーバーテキストの枠外を選択することで解除することもできます。
+ボタンを押して、ポップオーバーの表示と非表示を切り替えてみてください。
+`"auto"` ポップオーバーは、ポップオーバーテキストの範囲外をクリックすると簡単に解除することもできます。
 
 {{EmbedLiveSample("Toggle popover action with an auto popover", "100%")}}
 

@@ -3,7 +3,7 @@ title: "Date : méthode getUTCDate()"
 short-title: getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 98972b1f827b7374e28aee591a73044ffd8fb758
 ---
 
 La méthode **`getUTCDate()`** des instances de {{JSxRef("Date")}} retourne le jour du mois pour la date renseignée d'après UTC.
@@ -33,7 +33,7 @@ Aucun.
 
 ### Valeur de retour
 
-Un entier, entre 1 et 31, représentant le jour du mois pour la date indiquée selon le temps universel. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+Un entier, entre 1 et 31, représentant le jour du mois pour la date indiquée selon le temps universel. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
 ## Exemples
 

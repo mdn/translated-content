@@ -3,7 +3,7 @@ title: Propriété CSS `overflow`
 short-title: overflow
 slug: Web/CSS/Reference/Properties/overflow
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 0e4db835c8abee4ec3813eb29414edd1189d463c
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`overflow`** définit le comportement souhaité lorsque le contenu ne tient pas dans la boîte de remplissage (<i lang="en">padding</i> en anglais) de l'élément (dépassements) dans la direction horizontale et/ou verticale.
@@ -384,6 +384,10 @@ Le fait de définir `overflow` sur les images et autres {{Glossary("replaced ele
 
 Voir le tableau de [compatibilité des navigateurs](#compatibilité_des_navigateurs) pour les informations actuelles sur la prise en charge par les navigateurs.
 
+## Accessibilité
+
+Dans certains navigateurs, les zones de contenu défilantes ne sont pas sélectionnables au clavier, elles ne peuvent donc pas être défilées par un·e utilisateur·ice utilisant uniquement le clavier. Pour permettre à tous les utilisateur·ice·s utilisant uniquement le clavier de faire défiler le conteneur, activez la réception de la sélection par l'élément en définissant [`tabindex="0"`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) sur le conteneur. Pour donner aux utilisateur·ice·s de lecteurs d'écran un contexte lorsque le conteneur reçoit la sélection, définissez un [rôle WAI-ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Roles) approprié sur le conteneur, tel que `role="region"`, et un nom accessible à l'aide de l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby).
+
 ## Définition formelle
 
 {{CSSInfo}}
@@ -391,10 +395,6 @@ Voir le tableau de [compatibilité des navigateurs](#compatibilité_des_navigate
 ## Syntaxe formelle
 
 {{CSSSyntax}}
-
-## Accessibilité
-
-Dans certains navigateurs, les zones de contenu défilantes ne sont pas sélectionnables au clavier, elles ne peuvent donc pas être défilées par un·e utilisateur·ice utilisant uniquement le clavier. Pour permettre à tous les utilisateur·ice·s utilisant uniquement le clavier de faire défiler le conteneur, activez la réception de la sélection par l'élément en définissant [`tabindex="0"`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) sur le conteneur. Pour donner aux utilisateur·ice·s de lecteurs d'écran un contexte lorsque le conteneur reçoit la sélection, définissez un [rôle WAI-ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Roles) approprié sur le conteneur, tel que `role="region"`, et un nom accessible à l'aide de l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby).
 
 ## Exemples
 

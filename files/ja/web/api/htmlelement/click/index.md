@@ -3,7 +3,7 @@ title: "HTMLElement: click() メソッド"
 short-title: click()
 slug: Web/API/HTMLElement/click
 l10n:
-  sourceCommit: bf0b6c9ae5845fdfca1398541ed26d9946db2495
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -32,21 +32,24 @@ click()
 
 ```html
 <form>
-  <input
-    type="checkbox"
-    id="myCheck"
-    onmouseover="myFunction()"
-    onclick="alert('click event occurred')" />
+  <input type="checkbox" id="myCheck" />
 </form>
 ```
 
 ### JavaScript
 
 ```js
-// マウスオーバーで、myFunction を実行する
-function myFunction() {
-  document.getElementById("myCheck").click();
-}
+const checkbox = document.getElementById("myCheck");
+
+// マウスオーバー時に処理を実行
+checkbox.addEventListener("mouseover", () => {
+  // マウスクリックをシミュレート
+  checkbox.click();
+});
+
+checkbox.addEventListener("click", () => {
+  console.log("click event occurred");
+});
 ```
 
 ## 仕様書

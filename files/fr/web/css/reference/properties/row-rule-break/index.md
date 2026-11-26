@@ -3,14 +3,14 @@ title: Propriété CSS `row-rule-break`
 short-title: row-rule-break
 slug: Web/CSS/Reference/Properties/row-rule-break
 l10n:
-  sourceCommit: 1474534461893381d54c502e655f334b5568e597
+  sourceCommit: d3a0fd9820ca27a3f17642841af8426735cb4ec3
 ---
 
 {{SeeCompatTable}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`row-rule-break`** définit le comportement de rupture des règles de ligne en segments lorsque les règles de ligne intersectent les espaces entre les colonnes.
+La propriété [CSS](/fr/docs/Web/CSS) **`row-rule-break`** définit le comportement de rupture des règles de rangée en segments lorsque les règles de rangée intersectent les espaces entre les colonnes.
 
-{{InteractiveExample("Démonstration CSS&nbsp;: rule")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: row-rule-break")}}
 
 ```css interactive-example-choice
 row-rule-break: none;
@@ -91,29 +91,29 @@ row-rule-break: unset;
 Cette propriété est définie comme un mot-clé unique parmi la liste suivante&nbsp;:
 
 - `none`
-  - : Il n'y a pas de rupture dans les règles de ligne lorsqu'elles intersectent les espaces entre les colonnes&nbsp;; au contraire, une règle de ligne continue est peinte sur toute la largeur du conteneur, d'un bord à l'autre.
+  - : Il n'y a pas de rupture dans les règles de rangée lorsqu'elles intersectent les espaces entre les colonnes&nbsp;; au contraire, une règle de rangée continue est peinte sur toute la largeur du conteneur, d'un bord à l'autre.
 - `normal`
-  - : Dans les conteneurs de type grille et flexibles, se comporte comme `none`. Dans les mises en page multi-colonnes, se comporte comme `none`. Il s'agit de la valeur par défaut.
+  - : Dans les conteneurs de type grille et flexibles, et dans les mises en page multi-colonnes, se comporte comme `none`. Il s'agit de la valeur par défaut.
 - `intersection`
-  - : Les règles de ligne se rompent toujours lorsqu'elles intersectent les espaces entre les colonnes, les segments de règle de ligne commençant et se terminant aux bords du conteneur et des espaces.
+  - : Les règles de rangée se rompent toujours lorsqu'elles intersectent les espaces entre les colonnes, les segments de règle de rangée commençant et se terminant aux bords du conteneur et des espaces.
 
 ## Description
 
-La propriété `row-rule-break` définit si les règles de ligne doivent ou non être rompues en segments lorsqu'elles intersectent les espaces entre les colonnes.
+La propriété `row-rule-break` définit si les règles de rangée doivent ou non être rompues en segments lorsqu'elles intersectent les espaces entre les colonnes.
 
-Les règles de ligne sont peintes dans un espace de ligne sous forme d'un ou plusieurs segments, les segments se produisant entre les éléments de grille adjacents dans des lignes séparées, entre les éléments flexibles ou les lignes flexibles, en fonction de la {{CSSxRef("flex-direction")}} dans les mises en page flexibles, ou dans les espaces entre les lignes adjacentes de colonnes dans les mises en page multi-colonnes lorsque {{CSSxRef("column-height")}} crée plusieurs lignes de colonnes.
+Les règles de rangée sont peintes dans un espace de rangée sous forme d'un ou plusieurs segments, les segments se produisant entre les éléments de grille adjacents dans des lignes séparées, entre les éléments flexibles ou les lignes flexibles, en fonction de la {{CSSxRef("flex-direction")}} dans les mises en page flexibles, ou dans les espaces entre les lignes adjacentes de colonnes dans les mises en page multi-colonnes lorsque {{CSSxRef("column-height")}} crée plusieurs lignes de colonnes.
 
-La propriété `row-rule-break` ne détermine que si la rupture se produit. Par défaut, la rupture, ou l'espace, entre les segments de règle de ligne est la largeur de l'espace entre les colonnes, chaque segment commençant et se terminant au bord de l'espace (ou au bord du conteneur). Si l'espace est `0`, cette rupture peut ne pas être visible. Les positions finales peuvent être contrôlées avec les propriétés {{CSSxRef("row-rule-inset")}}.
+La propriété `row-rule-break` ne détermine que si la rupture se produit. Par défaut, la rupture, ou l'espace, entre les segments de règle de rangée est la largeur de l'espace entre les colonnes, chaque segment commençant et se terminant au bord de l'espace (ou au bord du conteneur). Si l'espace est `0`, cette rupture peut ne pas être visible. Les positions finales peuvent être contrôlées avec les propriétés {{CSSxRef("row-rule-inset")}}.
 
-Si `row-rule-break` est défini sur `none`, il n'y a pas de rupture, la ligne de règle de ligne est continue, et toutes les valeurs de `row-rule-inset` n'affectent que la règle de ligne sur le bord gauche et droit du conteneur. Lorsqu'il y a des ruptures, les propriétés `row-rule-inset` affectent le début et la fin de chaque segment de règle de ligne.
+Si `row-rule-break` est défini sur `none`, il n'y a pas de rupture, la ligne de règle de rangée est continue, et toutes les valeurs de `row-rule-inset` n'affectent que la règle de rangée sur le bord gauche et droit du conteneur. Lorsqu'il y a des ruptures, les propriétés `row-rule-inset` affectent le début et la fin de chaque segment de règle de rangée.
 
 La propriété `row-rule-break`, ainsi que la propriété {{CSSxRef("column-rule-break")}}, peut être définie en utilisant la propriété raccourcie {{CSSxRef("rule-break")}}.
 
-Le fait qu'une règle de ligne soit par défaut composée d'un seul segment continu ou de segments qui se rompent lorsqu'ils intersectent les espaces entre les colonnes dépend du type de conteneur.
+Le fait qu'une règle de rangée soit par défaut composée d'un seul segment continu ou de segments qui se rompent lorsqu'ils intersectent les espaces entre les colonnes dépend du type de conteneur.
 
 ### Conteneurs de grille
 
-Dans les conteneurs de grille, par défaut, les segments de règle de ligne continuent à travers les intersections «&nbsp;croisées&nbsp;» visibles. La définition de `row-rule-break: intersection` force les segments à se rompre à chaque espace entre les colonnes, là où ils se croisent autrement.
+Dans les conteneurs de grille, par défaut, les segments de règle de rangée continuent à travers les intersections «&nbsp;croisées&nbsp;» visibles. La définition de `row-rule-break: intersection` force les segments à se rompre à chaque espace entre les colonnes, là où ils se croisent autrement.
 
 ```html hidden
 <h1>Règles de rupture par défaut dans la grille</h1>
@@ -163,15 +163,27 @@ h2 {
   background-color: lime;
   height: 30px;
 }
+
+@layer no-support {
+  @supports not (row-rule-break: intersection) {
+    body::before {
+      content: "Votre navigateur ne prend pas en charge la propriété row-rule-break";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 {{EmbedLiveSample("Conteneurs de grille", "", 240)}}
 
-Par défaut, il n'y a pas de rupture de règle de ligne. Cochez la case pour définir `row-rule-break` sur `intersection`, ce qui fait que les règles continues se rompent à chaque intersection «&nbsp;croisée&nbsp;». Par défaut, la rupture entre les segments correspond à la largeur de l'espacement de colonne {{CSSxRef("column-gap")}}.
+Par défaut, il n'y a pas de rupture de règle de rangée. Cochez la case pour définir `row-rule-break` sur `intersection`, ce qui fait que les règles continues se rompent à chaque intersection «&nbsp;croisée&nbsp;». Par défaut, la rupture entre les segments correspond à la largeur de l'espacement de colonne {{CSSxRef("column-gap")}}.
 
 ### Conteneurs flexibles
 
-Dans les boîtes flexibles, lorsque la `flex-direction` est `row` ou `row-reverse` dans les modes d'écriture horizontaux, la règle de ligne est continue, les segments de colonne commençant et se terminant au bord des espaces de ligne. Lorsque la `flex-direction` est `column` ou `column-reverse`, la règle de colonne est continue, les segments de ligne commençant et se terminant au bord des espaces de colonne.
+Dans les boîtes flexibles, lorsque la `flex-direction` est `row` ou `row-reverse` dans les modes d'écriture horizontaux, la règle de rangée est continue, les segments de colonne commençant et se terminant au bord des espaces de rangée. Lorsque la `flex-direction` est `column` ou `column-reverse`, la règle de colonne est continue, les segments de rangée commençant et se terminant au bord des espaces de colonne.
 
 ```html hidden
 <h1>Règle de rupture dans les boîtes flexibles</h1>
@@ -253,11 +265,23 @@ section {
   flex: 1 1 auto;
   height: 30px;
 }
+
+@layer no-support {
+  @supports not (row-rule-break: intersection) {
+    body::before {
+      content: "Votre navigateur ne prend pas en charge la propriété row-rule-break";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 {{EmbedLiveSample("Conteneurs flexibles", "", 300)}}
 
-Dans les modes d'écriture horizontaux, lorsque la valeur est `row` ou `row-reverse`, la règle de ligne est continue par défaut, tandis qu'avec `column` ou `column-reverse`, la règle de ligne se casse à chaque espace de colonne. La définition de `row-rule-break` sur `intersection` n'affecte que les règles de ligne dans les scénarios `row` et `row-reverse`.
+Dans les modes d'écriture horizontaux, lorsque la valeur est `row` ou `row-reverse`, la règle de rangée est continue par défaut, tandis qu'avec `column` ou `column-reverse`, la règle de rangée se casse à chaque espace de colonne. La définition de `row-rule-break` sur `intersection` n'affecte que les règles de rangée dans les scénarios `row` et `row-reverse`.
 
 ### Conteneurs multi-colonnes
 
@@ -341,11 +365,22 @@ li {
 label {
   margin-right: 20px;
 }
+@layer no-support {
+  @supports not (row-rule-break: intersection) {
+    body::before {
+      content: "Votre navigateur ne prend pas en charge la propriété row-rule-break";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 {{EmbedLiveSample("Conteneurs multi-colonnes", "", 540)}}
 
-Si vous sélectionnez `intersection`, la règle de ligne se divise en segments chaque fois qu'elle atteint un espace entre les colonnes, chaque segment commençant et se terminant au bord de l'espace. Les positions de début et de fin peuvent être modifiées avec les propriétés `row-rule-inset`.
+Si vous sélectionnez `intersection`, la règle de rangée se divise en segments chaque fois qu'elle atteint un espace entre les colonnes, chaque segment commençant et se terminant au bord de l'espace. Les positions de début et de fin peuvent être modifiées avec les propriétés `row-rule-inset`.
 
 ## Définition formelle
 
@@ -359,7 +394,7 @@ Si vous sélectionnez `intersection`, la règle de ligne se divise en segments c
 
 ### Utilisation simple
 
-Dans cet exemple, nous utilisons la propriété `row-rule-break` pour diviser chaque segment de règle dans un conteneur de grille afin que des segments de règle de ligne soient créés entre les espaces des colonnes. La modification de la propriété `column-gap` change la taille des segments.
+Dans cet exemple, nous utilisons la propriété `row-rule-break` pour diviser chaque segment de règle dans un conteneur de grille afin que des segments de règle de rangée soient créés entre les espaces des colonnes. La modification de la propriété `column-gap` change la taille des segments.
 
 #### HTML
 
@@ -438,7 +473,7 @@ Nous créons une liste de 50 éléments et un curseur pour modifier la largeur d
 
 #### CSS
 
-Nous définissons la liste non ordonnée comme un conteneur à 8 colonnes, créant des colonnes et des lignes avec la propriété {{CSSxRef("grid-template-columns")}} et en définissant {{CSSxRef("list-style-type")}} sur `none` pour supprimer les puces. Nous incluons un {{CSSxRef("gap")}} de `20px` pour fournir suffisamment d'espace entre les colonnes et les lignes pour accueillir nos règles de colonne et de ligne solides de `20px`. Enfin, nous définissons les règles de ligne pour qu'elles se divisent en segments à chaque intersection.
+Nous définissons la liste non ordonnée comme un conteneur à 8 colonnes, créant des colonnes et des lignes avec la propriété {{CSSxRef("grid-template-columns")}} et en définissant {{CSSxRef("list-style-type")}} sur `none` pour supprimer les puces. Nous incluons un {{CSSxRef("gap")}} de `20px` pour fournir suffisamment d'espace entre les colonnes et les rangées pour accueillir nos règles de colonne et de ligne solides de `20px`. Enfin, nous définissons les règles de rangée pour qu'elles se divisent en segments à chaque intersection.
 
 ```css live-sample___basic
 ul {
@@ -466,6 +501,17 @@ li {
   font-family: sans-serif;
   line-height: 50px;
 }
+@layer no-support {
+  @supports not (row-rule-break: intersection) {
+    body::before {
+      content: "Votre navigateur ne prend pas en charge la propriété row-rule-break";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 ```js hidden live-sample___basic
@@ -482,7 +528,7 @@ gap.addEventListener("input", () => {
 
 {{EmbedLiveSample("Basic", "", 600)}}
 
-Agrandissez les espaces entre les colonnes et notez comment les ruptures entre les segments de ligne s'agrandissent. Réduisez la largeur de l'espace entre les colonnes à `0px` et remarquez comment la décoration des lignes semble continue. Ce n'est pas le cas&nbsp;! L'espace de `0px` entre les segments peut ne pas être visible, mais les segments commencent et se terminent toujours à l'espace, donc tous les décalages définis avec les propriétés `row-rule-inset` sont toujours appliqués.
+Agrandissez les espaces entre les colonnes et notez comment les ruptures entre les segments de rangée s'agrandissent. Réduisez la largeur de l'espace entre les colonnes à `0px` et remarquez comment la décoration des rangées semble continue. Ce n'est pas le cas&nbsp;! L'espace de `0px` entre les segments peut ne pas être visible, mais les segments commencent et se terminent toujours à l'espace, donc tous les décalages définis avec les propriétés `row-rule-inset` sont toujours appliqués.
 
 ## Spécifications
 

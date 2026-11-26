@@ -3,10 +3,10 @@ title: Propriété CSS `overscroll-behavior`
 short-title: overscroll-behavior
 slug: Web/CSS/Reference/Properties/overscroll-behavior
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 151d527b2d48812d732cb4f3fdffa0737682e684
 ---
 
-La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`overscroll-behavior`** définit le comportement d'un navigateur lorsqu'il atteint la limite d'une zone de défilement.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`overscroll-behavior`** contrôle ce qui se passe lorsque le défilement atteint le bord d'un [conteneur de défilement](/fr/docs/Glossary/Scroll_container).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: overscroll-behavior")}}
 
@@ -16,6 +16,10 @@ overscroll-behavior: auto;
 
 ```css interactive-example-choice
 overscroll-behavior: contain;
+```
+
+```css interactive-example-choice
+overscroll-behavior: chain;
 ```
 
 ```css interactive-example-choice
@@ -95,6 +99,7 @@ Cette propriété est un raccourci pour les propriétés CSS suivantes&nbsp;:
 ```css
 /* Valeurs avec un mot-clés */
 overscroll-behavior: auto; /* Par défaut */
+overscroll-behavior: chain;
 overscroll-behavior: contain;
 overscroll-behavior: none;
 
@@ -109,24 +114,26 @@ overscroll-behavior: revert-layer;
 overscroll-behavior: unset;
 ```
 
+### Valeurs
+
 La propriété `overscroll-behavior` est définie avec un ou deux mots-clés parmi ceux de la liste ci-après.
 
 Deux mots-clés définissent la valeur de `overscroll-behavior` sur les axes `x` et `y` respectivement. Si une seule valeur est définie, les axes x et y sont supposés avoir la même valeur.
 
-### Valeurs
-
 - `auto`
-  - : Le comportement de dépassement de défilement par défaut se produit normalement.
+  - : Permet le comportement par défaut à une limite de défilement. Le défilement peut continuer dans un autre conteneur de défilement.
+- `chain`
+  - : Permet au défilement de continuer en dehors du conteneur de défilement, mais empêche les effets de «&nbsp;rebondissement&nbsp;» de dépassement.
 - `contain`
-  - : Le comportement de dépassement de défilement par défaut (par exemple, les effets de «&nbsp;rebondissement&nbsp;») est observé à l'intérieur de l'élément où cette valeur est définie. Cependant, aucun enchaînement de défilement ne se produit sur les zones de défilement voisines&nbsp;; les éléments sous-jacents ne défilent pas. La valeur `contain` désactive la navigation native du navigateur, y compris le geste de «&nbsp;tirer pour actualiser&nbsp;» vertical et la navigation par balayage horizontal.
+  - : Empêche le défilement de continuer en dehors du conteneur de défilement. Les effets de «&nbsp;rebondissement&nbsp;» peuvent toujours se produire.
 - `none`
-  - : Aucun enchaînement de défilement ne se produit vers les zones de défilement voisines, et le comportement de dépassement de défilement par défaut est empêché.
+  - : Empêche le défilement de continuer en dehors du conteneur de défilement et empêche également les effets de «&nbsp;rebondissement&nbsp;» de dépassement.
 
 ## Description
 
 Par défaut, les navigateurs mobiles ont tendance à fournir un effet de «&nbsp;rebondissement&nbsp;» ou même un rafraîchissement de la page lorsque le haut ou le bas d'une page (ou d'une autre zone de défilement) est atteint. Vous avez peut-être également remarqué que lorsque vous avez une boîte de dialogue avec du contenu défilant en haut d'une page qui a également du contenu défilant, une fois que la {{Glossary("Scroll_boundary", "limite de défilement")}} de la boîte de dialogue est atteinte, la page sous-jacente commence alors à défiler — cela s'appelle {{Glossary("Scroll_chaining", "enchaînement de défilement")}}.
 
-Dans certains cas, ces comportements ne sont pas souhaitables. Vous pouvez utiliser `overscroll-behavior` pour vous débarrasser de l'enchaînement de défilement indésirable et du comportement de type «&nbsp;tirer pour actualiser&nbsp;» inspiré des applications Facebook/Twitter.
+Dans certains cas, ces comportements ne sont pas souhaitables. Vous pouvez utiliser `overscroll-behavior` pour vous débarrasser de l'enchaînement de défilement indésirable et du comportement de type «&nbsp;tirer pour actualiser&nbsp;».
 
 Notez que cette propriété s'applique uniquement aux {{Glossary("Scroll_container", "conteneurs de défilement")}}. En particulier, comme un {{HTMLElement("iframe")}} n'est pas un conteneur de défilement, définir cette propriété sur un cadre intégré n'a aucun effet. Pour contrôler l'enchaînement de défilement depuis un cadre intégré, définissez `overscroll-behavior` à la fois sur les éléments {{HTMLElement("html")}} et {{HTMLElement("body")}} du document du cadre intégré.
 
@@ -142,30 +149,106 @@ Un {{Glossary("Scroll_container", "conteneur de défilement")}} qui n'a pas de d
 
 ## Exemples
 
-### Prévenir le défilement d'un élément sous-jacent
+### `overscroll-behavior` sur les éléments `<dialog>`
 
-Dans notre [exemple sur `overscroll-behavior` <sup>(angl.)</sup>](https://mdn.github.io/css-examples/overscroll-behavior/) (voir également le [code source <sup>(angl.)</sup>](https://github.com/mdn/css-examples/tree/main/overscroll-behavior)), nous présentons une liste de contacts factices sur toute la page et une boîte de dialogue contenant une fenêtre de discussion.
+Dans cet exemple, il y a 4 boutons qui lancent une boîte de dialogue, chaque boîte de dialogue ayant une valeur différente de `overscroll-behavior`. Il y a également un `<div>` qui force le contenu à être plus grand que le conteneur afin que l'effet de défilement de la page puisse être observé.
 
-![Une fenêtre de discussion contextuelle intitulée 'Active chat', montrant une conversation entre Chris et Bob. Derrière la fenêtre de discussion se trouve une liste de contacts intitulée 'overscroll-behavior demo'.](example.png)
+#### HTML
 
-Les deux zones peuvent défiler&nbsp;; normalement, si vous faites défiler la fenêtre de discussion jusqu'à atteindre une limite de défilement, la fenêtre de contacts sous-jacente commencerait également à défiler, ce qui n'est pas souhaitable. Cela peut être empêché en utilisant `overscroll-behavior-y` (`overscroll-behavior` fonctionnerait également) sur la fenêtre de discussion, comme ceci&nbsp;:
+```html
+<div class="buttons">
+  <button popovertarget="dialog-auto"><code>auto</code></button>
+  <button popovertarget="dialog-contain"><code>contain</code></button>
+  <button popovertarget="dialog-chain"><code>chain</code></button>
+  <button popovertarget="dialog-none"><code>none</code></button>
+</div>
+<div class="force-scroll"></div>
+<dialog id="dialog-auto" popover>
+  <code>overscroll-behavior: auto;</code>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio
+    voluptatum minus dolorem assumenda nemo quos autem culpa, pariatur illo
+    deserunt ea nam commodi fugiat ipsum quam alias suscipit facilis?
+  </p>
+</dialog>
+<dialog id="dialog-contain" popover>
+  <code>overscroll-behavior: contain;</code>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio
+    voluptatum minus dolorem assumenda nemo quos autem culpa, pariatur illo
+    deserunt ea nam commodi fugiat ipsum quam alias suscipit facilis?
+  </p>
+</dialog>
+<dialog id="dialog-chain" popover>
+  <code>overscroll-behavior: chain;</code>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio
+    voluptatum minus dolorem assumenda nemo quos autem culpa, pariatur illo
+    deserunt ea nam commodi fugiat ipsum quam alias suscipit facilis?
+  </p>
+</dialog>
+<dialog id="dialog-none" popover>
+  <code>overscroll-behavior: none;</code>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio
+    voluptatum minus dolorem assumenda nemo quos autem culpa, pariatur illo
+    deserunt ea nam commodi fugiat ipsum quam alias suscipit facilis?
+  </p>
+</dialog>
+```
 
-```css
-.messages {
-  height: 220px;
-  overflow: auto;
-  overscroll-behavior-y: contain;
+#### CSS
+
+```css hidden
+::backdrop {
+  backdrop-filter: blur(0.5rem);
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2vb;
+}
+.force-scroll {
+  width: 20vi;
+  height: 200vb;
+  margin-inline: auto;
+  border: solid 1px black;
+  background: linear-gradient(45deg, tomato, olivedrab);
 }
 ```
 
-Nous voulions également nous débarrasser des effets de dépassement de défilement standard lorsque les contacts sont défilés jusqu'en haut ou en bas (par exemple, Chrome sur Android actualise la page lorsque vous dépassez la limite supérieure). Cela peut être empêché en définissant `overscroll-behavior: none` sur l'élément {{HTMLElement("html")}}&nbsp;:
-
 ```css
-html {
-  margin: 0;
+[popover] {
+  width: 30vi;
+  height: 10vi;
+}
+#dialog-auto {
+  overscroll-behavior: auto;
+}
+#dialog-contain {
+  overscroll-behavior: contain;
+}
+#dialog-chain {
+  overscroll-behavior: chain;
+}
+#dialog-none {
   overscroll-behavior: none;
 }
 ```
+
+#### Résultat
+
+Cliquez sur l'un des boutons pour voir ce comportement appliqué à la boîte de dialogue qui apparaît, lorsque vous faites défiler à l'intérieur de la boîte de dialogue&nbsp;:
+
+- `auto`&nbsp;: si vous dépassez le défilement de la boîte de dialogue, vous voyez le contenu «&nbsp;rebondir&nbsp;» et si vous continuez à faire défiler, vous voyez également le fond défiler.
+- `contain`&nbsp;: si vous dépassez le défilement de la boîte de dialogue, vous voyez le contenu «&nbsp;rebondir&nbsp;» et si vous continuez à faire défiler, vous voyez que le fond ne défile pas.
+- `chain`&nbsp;: si vous dépassez le défilement de la boîte de dialogue, vous voyez que le contenu ne «&nbsp;rebondit&nbsp;» pas et si vous continuez à faire défiler, vous voyez le fond défiler également.
+- `none`&nbsp;: si vous dépassez le défilement de la boîte de dialogue, vous voyez que le contenu ne «&nbsp;rebondit&nbsp;» pas et si vous continuez à faire défiler, vous voyez que le fond ne défile pas.
+
+{{EmbedLiveSample("`overscroll-behavior` sur les éléments `<dialog>`", "100%", 180)}}
+
+Un autre exemple de contrôle du défilement d'une fenêtre de «&nbsp;chat&nbsp;» peut être consulté sur la propriété [`overscroll-behavior-y`](/fr/docs/Web/CSS/Reference/Properties/overscroll-behavior-y#prévenir_le_défilement_dun_élément_sous-jacent).
 
 ## Spécifications
 

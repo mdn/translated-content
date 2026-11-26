@@ -3,10 +3,10 @@ title: "Date : méthode getDay()"
 short-title: getDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 98972b1f827b7374e28aee591a73044ffd8fb758
 ---
 
-La méthode **`getDay()`** des instances de {{JSxRef("Date")}} retourne le jour de la semaine pour la date spécifiée selon l'heure locale (0 correspondant à dimanche). Pour obtenir le jour du mois, on utilisera {{JSxRef("Date.prototype.getDate()")}}.
+La méthode **`getDay()`** des instances de {{JSxRef("Date")}} retourne le jour de la semaine pour la date définie selon l'heure locale (0 correspondant à dimanche). Pour obtenir le jour du mois, on utilise {{JSxRef("Date.prototype.getDate()")}}.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.getDay()", "shorter")}}
 
@@ -27,28 +27,28 @@ getDay()
 
 ### Valeur de retour
 
-Un entier, entre 0 et 6, représentant le jour de la semaine pour la date indiquée selon l'heure locale&nbsp;: 0 pour dimanche, 1 pour lundi, 2 pour mardi, et ainsi de suite. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+Un entier, entre 0 et 6, représentant le jour de la semaine pour la date indiquée selon l'heure locale&nbsp;: 0 pour dimanche, 1 pour lundi, 2 pour mardi, et ainsi de suite. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
 ## Description
 
 La valeur de retour de `getDay()` est indexée à partir de zéro, ce qui est utile pour indexer des tableaux de jours, par exemple&nbsp;:
 
 ```js
-const saintValentin = new Date("1995-02-14");
+const saintValentin = new Date("1995-02-14T00:00:00");
 const jour = saintValentin.getDay();
 const nomsJours = ["Dimanche", "Lundi", "Mardi" /* , … */];
 
-console.log(nomsJours[jour]); // "Lundi"
+console.log(nomsJours[jour]); // "Mardi"
 ```
 
-Cependant, pour l'internationalisation, vous devriez préférer utiliser {{JSxRef("Intl.DateTimeFormat")}} avec le paramètre `options`.
+Cependant, pour l'internationalisation, vous devez privilégier {{JSxRef("Intl.DateTimeFormat")}} avec le paramètre `options`.
 
 ```js
 const options = { weekday: "long" };
 console.log(new Intl.DateTimeFormat("en-US", options).format(saintValentin));
-// "Monday"
+// "Tuesday"
 console.log(new Intl.DateTimeFormat("de-DE", options).format(saintValentin));
-// "Montag"
+// "Dienstag"
 ```
 
 ## Exemples
@@ -74,6 +74,6 @@ console.log(jourSemaine); //1
 
 ## Voir aussi
 
-- La m&thode {{JSxRef("Date.prototype.getUTCDate()")}}
-- La m&thode {{JSxRef("Date.prototype.getUTCDay()")}}
-- La m&thode {{JSxRef("Date.prototype.setDate()")}}
+- La méthode {{JSxRef("Date.prototype.getUTCDate()")}}
+- La méthode {{JSxRef("Date.prototype.getUTCDay()")}}
+- La méthode {{JSxRef("Date.prototype.setDate()")}}

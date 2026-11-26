@@ -3,7 +3,7 @@ title: "Attribut HTML universel : `hidden`"
 short-title: hidden
 slug: Web/HTML/Reference/Global_attributes/hidden
 l10n:
-  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`hidden`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui indique que le navigateur ne doit pas rendre le contenu de l'élément. Par exemple, il peut être utilisé pour masquer des éléments de la page qui ne peuvent pas être utilisés tant que le processus de connexion n'est pas terminé.
@@ -57,15 +57,15 @@ Le mot-clé `until-found` place l'élément dans l'état [_masqué jusqu'à déc
 
 ### L'état masqué
 
-L'état _masqué_ indique que l'élément n'est pas actuellement pertinent pour la page, ou qu'il est utilisé pour déclarer du contenu à réutiliser par d'autres parties de la page et ne doit pas être présenté directement à l'utilisateur·ice. Le navigateur n'affichera pas les éléments qui sont dans l'état _masqué_.
+L'état _masqué_ indique que l'élément n'est pas actuellement pertinent pour la page, ou qu'il est utilisé pour déclarer du contenu à réutiliser par d'autres parties de la page et ne doit pas être présenté directement à l'utilisateur·ice. Le navigateur n'affiche pas les éléments qui sont dans l'état _masqué_.
 
-Les navigateurs web peuvent implémenter l'état _masqué_ en utilisant `display: none`, auquel cas l'élément ne participera pas à la mise en page.
+Les navigateurs web peuvent implémenter l'état _masqué_ en utilisant `display: none`, auquel cas l'élément ne participe pas à la mise en page.
 De plus, modifier la valeur de la propriété CSS {{CSSxRef("display")}} sur un élément masqué va surcharger l'état _masqué_.
-Par exemple, les éléments avec le style `display: block` seront affichés même si l'attribut `hidden` est présent.
+Par exemple, les éléments avec le style `display: block` sont affichés même si l'attribut `hidden` est présent.
 
 ### L'état masqué jusqu'à découverte
 
-Dans l'état _masqué jusqu'à découverte_, l'élément est masqué mais son contenu sera accessible à la fonctionnalité «&nbsp;Rechercher dans la page&nbsp;» du navigateur ou à la navigation par fragment.
+Dans l'état _masqué jusqu'à découverte_, l'élément est masqué mais son contenu est accessible à la fonctionnalité «&nbsp;Rechercher dans la page&nbsp;» du navigateur ou à la navigation par fragment.
 Lorsque ces fonctionnalités provoquent un défilement vers un élément dans un sous-arbre _masqué jusqu'à découverte_, le navigateur va&nbsp;:
 
 1. Déclencher un évènement {{DOMxRef("Element/beforematch_event", "beforematch")}} sur l'élément masqué
@@ -81,22 +81,22 @@ Cela signifie que, contrairement aux éléments dans l'état _masqué_, les él�
 - leur marge, bordure, remplissage et arrière-plan sont rendus
 
 De plus, l'élément doit être affecté par la [compartimentation de mise en page](/fr/docs/Web/CSS/Guides/Containment) pour être révélé.
-Si l'élément dans l'état _masqué jusqu'à découverte_ a une valeur `display` de `none`, `contents` ou `inline`, alors l'élément ne sera pas révélé par «&nbsp;Rechercher dans la page&nbsp;» ou la navigation par fragment.
+Si l'élément dans l'état _masqué jusqu'à découverte_ a une valeur `display` de `none`, `contents` ou `inline`, alors l'élément n'est pas révélé par «&nbsp;Rechercher dans la page&nbsp;» ou la navigation par fragment.
 
 ## Notes d'utilisation
 
 L'attribut `hidden` ne doit pas être utilisé pour masquer du contenu uniquement dans une présentation.
 Si un élément est marqué comme masqué, il l'est pour toutes les présentations, y compris, par exemple, pour les lecteurs d'écran.
 
-Les éléments masqués ne devraient pas être liés depuis des éléments visibles, sauf en utilisant `hidden="until-found"`.
-Par exemple, il serait incorrect d'utiliser l'attribut `href` pour lier vers une section avec l'attribut `hidden`.
+Les éléments masqués ne doivent pas être liés depuis des éléments visibles, sauf en utilisant `hidden="until-found"`.
+Par exemple, il est incorrect d'utiliser l'attribut `href` pour lier vers une section avec l'attribut `hidden`.
 Si le contenu n'est pas applicable ou pertinent, il ne doit pas être lié.
 
 Il est cependant possible d'utiliser l'attribut ARIA [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) pour faire référence à des descriptions masquées. Bien que masquer les descriptions implique qu'elles ne sont pas utiles seules, elles peuvent fournir un contexte utile lorsqu'elles sont référencées de cette manière.
 
-De même, un élément canvas avec l'attribut `hidden` pourrait être utilisé par un moteur graphique scripté comme un tampon hors champ, et un contrôle de formulaire pourrait faire référence à un élément de formulaire masqué en utilisant son attribut de formulaire.
+De même, un élément canvas avec l'attribut `hidden` peut être utilisé par un moteur graphique scripté comme un tampon hors champ, et un contrôle de formulaire peut faire référence à un élément de formulaire masqué en utilisant son attribut de formulaire.
 
-Enfin, notez que les éléments descendants d'un élément masqué restent actifs, ce qui signifie que les éléments script peuvent toujours s'exécuter, et les éléments de formulaire peuvent toujours être soumis&nbsp;:
+Enfin, notez que les éléments descendants d'un élément masqué restent actifs, ce qui signifie que les éléments script peuvent toujours s'exécuter, et les éléments de formulaire peuvent toujours être envoyé&nbsp;:
 
 ```html
 <div hidden>

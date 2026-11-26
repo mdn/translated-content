@@ -3,12 +3,12 @@ title: Propriété CSS `row-rule-width`
 short-title: row-rule-width
 slug: Web/CSS/Reference/Properties/row-rule-width
 l10n:
-  sourceCommit: a9dc3374034d357cbfea717fd5d641605359e3c7
+  sourceCommit: 5fd3b03e9ad1ee4e8bc64d4f6888570690a7fbc8
 ---
 
 {{SeeCompatTable}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`row-rule-width`** définit la largeur des lignes tracées entre les lignes dans les grilles multi-lignes, les conteneurs flexibles et les mises en page multi-colonnes.
+La propriété [CSS](/fr/docs/Web/CSS) **`row-rule-width`** définit la largeur des lignes tracées entre les rangées dans les grilles multi-rangées, les conteneurs flexibles et les mises en page multi-colonnes.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: row-rule-width")}}
 
@@ -91,23 +91,23 @@ La propriété `row-rule-width` accepte une liste de valeurs séparées par des 
   - : Une fonction {{CSSxRef("repeat()")}}, avec le premier argument étant un entier ({{CSSxRef("&lt;integer&gt;")}}) de `1` ou plus, et une ou plusieurs valeurs {{CSSxRef("&lt;line-width&gt;")}} comme arguments suivants. L'entier définit le nombre de fois que les valeurs `<line-width>` doivent être répétées.
 
 - `<auto-repeat-line-width>`
-  - : Une fonction {{CSSxRef("repeat()")}}, avec `auto` comme premier argument et une ou plusieurs valeurs `<line-width>` comme arguments suivants. Les valeurs `<line-width>` fournies sont répétées autant de fois que nécessaire pour remplir les valeurs de toutes les règles de ligne qui ne sont pas explicitement définies par d'autres composants de la valeur de la propriété.
+  - : Une fonction {{CSSxRef("repeat()")}}, avec `auto` comme premier argument et une ou plusieurs valeurs `<line-width>` comme arguments suivants. Les valeurs `<line-width>` fournies sont répétées autant de fois que nécessaire pour remplir les valeurs de toutes les règles de rangée qui ne sont pas explicitement définies par d'autres composants de la valeur de la propriété.
 
 ## Description
 
-La propriété `row-rule-width` définit les largeurs de toutes les lignes de règle de ligne tracées dans les interstices entre les lignes dans les conteneurs [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grilles](/fr/docs/Web/CSS/Guides/Grid_layout) comportant plus d'une ligne.
+La propriété `row-rule-width` définit les largeurs de toutes les lignes de règle de rangée tracées dans les gouttières entre les rangées dans les conteneurs [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grilles](/fr/docs/Web/CSS/Guides/Grid_layout) comportant plus d'une rangée.
 
 La valeur est une liste de composants séparés par des virgules, qui peut inclure des types `<line-width>`, `<repeat-line-width>` et `<auto-repeat-line-width>`.
 
 La propriété `row-rule-width`, ainsi que les propriétés {{CSSxRef("row-rule-color")}} et {{CSSxRef("row-rule-style")}}, peut être définie à l'aide de la propriété raccourcie {{CSSxRef("row-rule")}}. La propriété `row-rule-width`, ainsi que la propriété {{CSSxRef("column-rule-width")}}, peut également être définie à l'aide de la propriété raccourcie {{CSSxRef("rule-width")}}.
 
-Si la valeur de la propriété ne consiste qu'en un seul `<line-width>`, toutes les règles de ligne ont cette largeur. Si nous déclarons ce qui suit, toutes les règles de ligne sont de `3px`&nbsp;:
+Si la valeur de la propriété ne consiste qu'en un seul `<line-width>`, toutes les règles de rangée ont cette largeur. Si nous déclarons ce qui suit, toutes les règles de rangée sont de `3px`&nbsp;:
 
 ```css
 row-rule-width: 3px;
 ```
 
-Lorsque plusieurs `<line-width>` sont déclarés, ils sont appliqués aux règles de ligne dans l'ordre défini. S'il y a plus de règles de ligne que de valeurs `<line-width>`, la liste des largeurs de ligne est répétée jusqu'à ce que chaque règle ait une largeur. Si nous déclarons ce qui suit, par exemple, toutes les règles impaires sont `thin`, et toutes les règles paires sont `1em`.
+Lorsque plusieurs `<line-width>` sont déclarés, ils sont appliqués aux règles de rangée dans l'ordre défini. S'il y a plus de règles de rangée que de valeurs `<line-width>`, la liste des largeurs de ligne est répétée jusqu'à ce que chaque règle ait une largeur. Si nous déclarons ce qui suit, par exemple, toutes les règles impaires sont `thin`, et toutes les règles paires sont `1em`.
 
 ```css
 row-rule-width: thin, 1em;
@@ -122,7 +122,7 @@ row-rule-width: 1rem, thick, thin, thick, thin;
 row-rule-width: 1rem, repeat(2, thick, thin);
 ```
 
-Vous pouvez utiliser n'importe quelle valeur `<line-width>`, y compris les propriétés personnalisées qui se résolvent en une valeur `<line-width>`. L'utilisation de `repeat()` peut faciliter l'écriture des valeurs, en particulier lors de l'utilisation de calculs de longueurs complexes. Elle permet d'écrire un motif récurrent à l'aide d'une seule fonction, quel que soit le nombre de lignes.
+Vous pouvez utiliser n'importe quelle valeur `<line-width>`, y compris les propriétés personnalisées qui se résolvent en une valeur `<line-width>`. L'utilisation de `repeat()` peut faciliter l'écriture des valeurs, en particulier lors de l'utilisation de calculs de longueurs complexes. Elle permet d'écrire un motif récurrent à l'aide d'une seule fonction, quel que soit le nombre de rangées.
 
 Si nous définissons `--base: 1vh` et `--secondaire: 1vw`, ce qui suit donne des résultats similaires à la déclaration précédente&nbsp;:
 
@@ -137,21 +137,21 @@ row-rule-width:
   thin;
 ```
 
-Cela crée une liste de six largeurs. Si le nombre de largeurs dans la liste de largeurs de la valeur `row-rule-width` dépasse le nombre d'interstices entre les lignes, les largeurs excédentaires sont ignorées. Si le conteneur a trois lignes, la règle dans le premier interstice est de `1rem` de large, et la seconde est déterminée par la fonction {{CSSxRef("min()")}}.
+Cela crée une liste de six largeurs. Si le nombre de largeurs dans la liste de largeurs de la valeur `row-rule-width` dépasse le nombre d'interstices entre les rangées, les largeurs excédentaires sont ignorées. Si le conteneur a trois rangées, la règle dans la première gouttière est de `1rem` de large, et la seconde est déterminée par la fonction {{CSSxRef("min()")}}.
 
-S'il y a plus d'interstices que de largeurs, la liste des largeurs est répétée. Si le conteneur a 7, 13, 19 ou 25 lignes, cette séquence de largeurs est répétée une, deux, trois ou quatre fois, respectivement, la dernière règle étant `thin`.
+S'il y a plus d'interstices que de largeurs, la liste des largeurs est répétée. Si le conteneur a 7, 13, 19 ou 25 rangées, cette séquence de largeurs est répétée une, deux, trois ou quatre fois, respectivement, la dernière règle étant `thin`.
 
 ### Répétition automatique des largeurs de ligne
 
-La fonction `repeat()` accepte également `auto` comme premier argument au lieu d'un entier positif. Avec `auto` comme premier argument, la liste des valeurs `<line-width>` passées comme arguments suivants est répétée autant de fois que nécessaire pour remplir les valeurs de toutes les règles de ligne qui ne sont pas explicitement définies par d'autres composants de la valeur de la propriété.
+La fonction `repeat()` accepte également `auto` comme premier argument au lieu d'un entier positif. Avec `auto` comme premier argument, la liste des valeurs `<line-width>` passées comme arguments suivants est répétée autant de fois que nécessaire pour remplir les valeurs de toutes les règles de rangée qui ne sont pas explicitement définies par d'autres composants de la valeur de la propriété.
 
 ```css
 row-rule-width: thin, repeat(auto, medium), thin;
 ```
 
-Dans ce cas, peu importe si le conteneur a 3, 6, 11, 16 ou 21 lignes&nbsp;; les première et dernière lignes sont toujours `thin`, et toutes les autres règles de ligne sont `medium`. S'il n'y a que 2 ou 3 lignes, il n'y a pas de règles de ligne de taille moyenne.
+Dans ce cas, peu importe si le conteneur a 3, 6, 11, 16 ou 21 rangées&nbsp;; les première et dernière rangées sont toujours `thin`, et toutes les autres règles de rangée sont `medium`. S'il n'y a que 2 ou 3 rangées, il n'y a pas de règles de rangée de taille moyenne.
 
-Le mot-clé `auto` dans la fonction `repeat()` crée un répéteur automatique qui remplit les valeurs des règles de ligne qui ne reçoivent pas autrement de valeurs provenant d'autres parties de la liste, empêchant ainsi la liste d'être répétée. Au maximum, une seule occurrence de `repeat(auto, <width>)` peut être présente dans une valeur `row-rule-width`.
+Le mot-clé `auto` dans la fonction `repeat()` crée un répéteur automatique qui remplit les valeurs des règles de rangée qui ne reçoivent pas autrement de valeurs provenant d'autres parties de la liste, empêchant ainsi la liste d'être répétée. Au maximum, une seule occurrence de `repeat(auto, <width>)` peut être présente dans une valeur `row-rule-width`.
 
 ## Définition formelle
 
@@ -184,7 +184,7 @@ Nous incluons une liste de duos sportifs dynamiques&nbsp;:
 
 #### CSS
 
-Nous définissons la liste comme un conteneur flexible, créant des lignes en définissant la {{CSSxRef("flex-direction")}} sur `column` à l'aide du raccourci {{CSSxRef("flex-flow")}}. Nous incluons un {{CSSxRef("gap")}} de `5px` pour fournir suffisamment d'espace entre les lignes pour accueillir notre règle rouge en pointillés de `3px`&nbsp;:
+Nous définissons la liste comme un conteneur flexible, créant des rangées en définissant la {{CSSxRef("flex-direction")}} sur `column` à l'aide du raccourci {{CSSxRef("flex-flow")}}. Nous incluons un {{CSSxRef("gap")}} de `5px` pour fournir suffisamment d'espace entre les rangées pour accueillir notre règle rouge en pointillés de `3px`&nbsp;:
 
 ```css live-sample___basic live-sample___repeat live-sample___func live-sample___auto
 ul {
@@ -203,7 +203,9 @@ ul {
 
 ### Valeurs répétées
 
-Cet exemple montre comment, lorsque la liste des largeurs contient moins de valeurs que le nombre de règles de ligne, les valeurs sont répétées.
+Cet exemple montre comment, lorsque la liste des largeurs contient moins de valeurs que le nombre de règles de rangée, les valeurs sont répétées.
+
+#### CSS
 
 En utilisant le même HTML et CSS que dans l'exemple précédent, nous incluons trois largeurs séparées par des virgules comme valeur de `row-rule-width`&nbsp;:
 
@@ -213,11 +215,15 @@ ul {
 }
 ```
 
+#### Résultat
+
 {{EmbedLiveSample("repeat", "", 180)}}
 
 ### Utiliser la fonction `repeat()`
 
 Cet exemple montre comment utiliser la fonction `repeat()` dans la valeur de la propriété `row-rule-width` et comment cette fonction peut aider à réduire la verbosité des déclarations de valeurs.
+
+#### CSS
 
 Nous utilisons le même HTML et CSS que dans les exemples précédents. Pour montrer comment les valeurs peuvent devenir verbeuses et l'utilité de la fonction `repeat()`, nous déclarons deux propriétés personnalisées, que nous utilisons dans les déclarations de la fonction `repeat()`. La fonction `repeat()` définit une liste de deux valeurs `<line-width>` à répéter 3 fois.
 
@@ -236,21 +242,27 @@ ul {
 }
 ```
 
+#### Résultat
+
 {{EmbedLiveSample("func", "", 180)}}
 
-Le conteneur flexible a six lignes, donc cinq interstices. La fonction `repeat()` répète deux valeurs de largeur trois fois, créant une liste de huit valeurs de largeur. Comme il y a moins d'interstices de ligne que de largeurs totales, les trois dernières valeurs de la liste sont ignorées.
+Le conteneur flexible a six rangées, donc cinq gouttières. La fonction `repeat()` répète deux valeurs de largeur trois fois, créant une liste de huit valeurs de largeur. Comme il y a moins de gouttières de rangée que de largeurs totales, les trois dernières valeurs de la liste sont ignorées.
 
 ### Utiliser `auto` avec `repeat()`
 
 Cet exemple montre comment utiliser `auto` au lieu d'un entier dans la fonction `repeat()`.
 
-En utilisant `repeat(auto, <line-width>)`, nous définissons toutes les règles de ligne à `1px`, sauf la première et la dernière, que nous définissons à `5px`.
+#### CSS
+
+En utilisant `repeat(auto, <line-width>)`, nous définissons toutes les règles de rangée à `1px`, sauf la première et la dernière, que nous définissons à `5px`.
 
 ```css live-sample___auto
 ul {
   row-rule-width: 5px, repeat(auto, 1px), 5px;
 }
 ```
+
+#### Résultat
 
 {{EmbedLiveSample("auto", "", 180)}}
 
@@ -284,4 +296,5 @@ ul {
 - La propriété raccourcie {{CSSxRef("row-rule")}}
 - La propriété raccourcie {{CSSxRef("rule-width")}}
 - La propriété raccourcie {{CSSxRef("rule")}}
+- [Définir les espaces CSS](/fr/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - Le module [des espaces CSS](/fr/docs/Web/CSS/Guides/Gaps)

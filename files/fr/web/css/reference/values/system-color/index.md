@@ -12,7 +12,7 @@ Cependant, les agents utilisateur peuvent fournir une fonctionnalité d'accessib
 
 En mode couleurs forcées, les auteur·ice·s doivent utiliser les couleurs du type `<system-color>` pour toutes les propriétés qui ne font pas partie de l'ensemble des propriétés dont les couleurs sont remplacées. Cela garantit que la page utilise de manière cohérente la même palette de couleurs pour toutes les propriétés.
 
-Les auteur·ice·s peuvent détecter le mode couleurs forcées à l'aide de la fonctionnalité média {{CSSxRef("@media/forced-colors", "forced-colors")}}.
+Les auteur·ice·s peuvent détecter le mode couleurs forcées à l'aide de la caractéristique média {{CSSxRef("@media/forced-colors", "forced-colors")}}.
 
 Une valeur `<system-color>` peut être utilisée partout où une valeur {{CSSxRef("&lt;color&gt;")}} peut l'être.
 
@@ -291,7 +291,7 @@ Les mots-clés suivants étaient définis dans les versions antérieures du modu
 
 ### Utilisation des couleurs système
 
-Dans cet exemple, nous avons un bouton qui obtient normalement son contraste à l'aide de la propriété box-shadow. En mode couleurs forcées, `box-shadow` est forcé à `none`, donc l'exemple utilise la fonctionnalité média `forced-colors` pour s'assurer qu'il y a une bordure de la couleur appropriée (`ButtonBorder` dans ce cas).
+Dans cet exemple, nous avons un bouton qui obtient normalement son contraste à l'aide de la propriété box-shadow. En mode couleurs forcées, `box-shadow` est forcé à `none`, donc l'exemple utilise la caractéristique média `forced-colors` pour s'assurer qu'il y a une bordure de la couleur appropriée (`ButtonBorder` dans ce cas).
 
 #### HTML
 
