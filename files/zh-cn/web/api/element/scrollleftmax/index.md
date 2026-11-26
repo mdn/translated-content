@@ -1,26 +1,27 @@
 ---
-title: Element.scrollLeftMax
+title: Element：scrollLeftMax 属性
+short-title: scrollLeftMax
 slug: Web/API/Element/scrollLeftMax
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}{{Non-standard_header}}
 
-这个 **`Element.scrollLeftMax`** 是只读的属性返回一个 {{jsxref("Number")}} 表示一个元素横向滚动条可滚动的最大距离。
+**`Element.scrollLeftMax`** 只读属性返回该元素可能的最大左侧滚动偏移量。
 
-## 语法
+## 值
 
-```plain
-var pxl = elt.scrollLeftMax;
-```
+一个数字。
 
 ## 规范
 
-_这个属性还没纳入规范。_
+_此属性不属于任何规范。_
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 更多
+## 参见
 
-- {{domxref("Element.scrollTopMax")}} 纵坐标用法相同。
+- {{domxref("Element.scrollTopMax")}}，提供另一轴上的相同信息。
