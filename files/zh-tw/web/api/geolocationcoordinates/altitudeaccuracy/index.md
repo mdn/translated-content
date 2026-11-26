@@ -1,17 +1,18 @@
 ---
 title: GeolocationCoordinates：altitudeAccuracy 屬性
+short-title: altitudeAccuracy
 slug: Web/API/GeolocationCoordinates/altitudeAccuracy
 l10n:
-  sourceCommit: 066d55a090927fa19ba19c2a4b2417470e1a979f
+  sourceCommit: c16932d73afd08c1d5fb7743e209382f183c40c3
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-{{domxref("GeolocationCoordinates")}} 介面的 **`altitudeAccuracy`** 唯讀屬性是一個正 `double` 值，表示以公尺表示的 `altitude` 的準確度，並具有 95% 的可信度。如果實作不支援測量高度，則此值為 `null`。
+{{domxref("GeolocationCoordinates")}} 介面的 **`altitudeAccuracy`** 唯讀屬性是一個正的 `double` 值，表示 `altitude` 在 68% 信賴水準下的準確度（以公尺為單位）。如果實作不支援測量高度，則此值為 `null`。
 
 ## 值
 
-一個正的 `double`，表示以公尺表示的 `altitude` 的準確度，並具有 95% 的可信度。
+一個正的 `double` 值，表示 `altitude` 在 68% 信賴水準下的準確度（以公尺為單位）。
 
 ## 規範
 
