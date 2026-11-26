@@ -6,7 +6,3 @@ l10n:
 ---
 
 **装飾ボックス**は、{{cssxref("text-decoration-line")}} CSS プロパティが適用された[インライン要素](/ja/docs/Glossary/Inline-level_content)です。
-
-
-
-
