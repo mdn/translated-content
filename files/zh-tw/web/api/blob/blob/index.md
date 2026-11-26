@@ -1,8 +1,9 @@
 ---
 title: Blob：Blob() 建構子
+short-title: Blob()
 slug: Web/API/Blob/Blob
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 6d97bc4fcbb8896f7b15e32d5128df5bb3b4efe4
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
@@ -19,7 +20,7 @@ new Blob(blobParts, options)
 ### 參數
 
 - `blobParts` {{optional_inline}}
-  - : 一個[可迭代](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代協議)的物件，例如 {{jsxref("Array")}}，包含 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("Blob")}}、字串，或這些元素的混合，這些元素將被放入 {{domxref("Blob")}} 中。字串應為格式良好的 Unicode，孤立的代理項會使用與 {{jsxref("String.prototype.toWellFormed()")}} 相同的演算法進行清理。
+  - : 一個[可迭代](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代協議)的物件，例如 {{jsxref("Array")}}，包含 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("Blob")}}、字串，或這些元素的混合，這些元素將被放入 {{domxref("Blob")}} 中。字串應為格式良好的 Unicode，孤立的代理項會使用與 {{jsxref("String.prototype.toWellFormed()")}} 相同的演算法進行清理。所得的字串會以 UTF-8 編碼。
 
 - `options` {{optional_inline}}
   - : 一個物件，可以指定以下任一屬性：
