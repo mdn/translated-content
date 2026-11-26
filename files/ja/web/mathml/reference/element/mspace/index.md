@@ -19,7 +19,7 @@ l10n:
   - : {{cssxref("length-percentage")}} で、この空間の理想的な幅を示します。
 
 > [!NOTE]
-> `depth`、`height`、`width` 属性については、一部のブラウザーは[古い MathML における長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れることがあります。
+> `depth`、`height`、`width` 属性については、一部のブラウザーは[古い MathML における長さ](/ja/docs/Web/MathML/Reference/Values#mathml_における古い長さ)も受け入れることがあります。
 
 ## 例
 

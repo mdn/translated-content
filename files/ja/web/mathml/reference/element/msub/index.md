@@ -17,7 +17,7 @@ l10n:
   - : {{cssxref("length-percentage")}} で、下付き文字部分を本体のベースラインから下げる最小量を示します。
 
 > [!NOTE]
-> `subscriptshift` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れることがあります。
+> `subscriptshift` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Reference/Values#mathml_における古い長さ)も受け入れることがあります。
 
 ## 例
 

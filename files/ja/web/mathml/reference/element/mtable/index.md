@@ -42,7 +42,7 @@ l10n:
   - : 表全体の幅を示す {{cssxref("length-percentage")}} を指定します。
 
 > [!NOTE]
-> `width` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れられるかもしれません。
+> `width` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Reference/Values#mathml_における古い長さ)も受け入れられるかもしれません。
 
 ## 例
 
