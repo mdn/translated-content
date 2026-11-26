@@ -18,7 +18,8 @@ localStorage.setItem("corDefinida", "#a4509b");
 ```
 
 > [!NOTE]
-> Recomendamos que você utilize a API Web Storage (`setItem`, `getItem`, `removeItem`, `key`, `length`) para evitar as [armadilhas](https://www.2ality.com/2012/01/objects-as-maps.html) associadas ao uso de objetos literais como mapas de chave-valor.
+> Você deve sempre usar a API Web Storage (`setItem()`, `getItem()`, `removeItem()`, `key`, `length`) em vez de acessar diretamente as propriedades do objeto, como `localStorage.key = value` ou `localStorage["key"] = value`.
+> Isso evita problemas ao passar um objeto, como conflitos com métodos nativos (por exemplo, `.clear()` ou `.getItem()`), vazamentos inesperados de dados pela herança de protótipos e vulnerabilidades de segurança como a poluição de protótipo (_prototype pollution_) ao lidar com dados não confiáveis vindos do usuário.
 
 Os dois mecanismos presentes na Web Storage são os seguintes:
 
