@@ -3353,6 +3353,7 @@
 /ja/docs/Web/API/PositionOptions	/ja/docs/Web/API/Geolocation/getCurrentPosition
 /ja/docs/Web/API/ProgressEvent/initProgressEvent	/ja/docs/Web/API/ProgressEvent
 /ja/docs/Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable	/ja/docs/Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable_static
+/ja/docs/Web/API/PushSubscription/subscriptionId	/ja/docs/conflicting/Web/API/PushSubscription
 /ja/docs/Web/API/Push_API/Using_the_Push_API	/ja/docs/Web/API/Push_API
 /ja/docs/Web/API/RTCConfiguration	/ja/docs/Web/API/RTCPeerConnection/RTCPeerConnection
 /ja/docs/Web/API/RandomSource	/ja/docs/Web/API/Crypto/getRandomValues
