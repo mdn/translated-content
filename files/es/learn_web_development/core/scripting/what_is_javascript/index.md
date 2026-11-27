@@ -2,7 +2,7 @@
 title: ¿Qué es JavaScript?
 slug: Learn_web_development/Core/Scripting/What_is_JavaScript
 l10n:
-  sourceCommit: c529f2672b3541cc28ea687ff9266f98b1734191
+  sourceCommit: 1a2a5b56a689b441ebf3be91b90f15746c5a5a01
 ---
 
 {{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
@@ -237,7 +237,7 @@ Mientras que CSS usa elementos {{htmlelement("link")}} para aplicar hojas de est
 1. En primer lugar, crea un archivo HTML nuevo en tu sistema de archivos local y añádele el siguiente contenido:
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />
