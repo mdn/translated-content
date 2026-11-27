@@ -41,7 +41,7 @@ const elements = document.getElementsByName(name);
 
 El método también incluye elementos HTML que coinciden con el nombre aunque el atributo `name` no esté definido para ese tipo de elemento.
 
-El método **getElementsByName** trabaja de diferente manera en diferentes navegadires. En IE < 10, el método getElementsByName() tambipen retornará elementos que tienen un atributo `id` con el valor especificado. Entonces, debería tener cuidado de no usar el mismo string como `name` y `ID`.
+El comportamiento del método varía entre navegadores. En versiones de Internet Explorer anteriores a la 10, `getElementsByName()` también devuelve los elementos cuyo atributo `id` tiene el valor indicado. Por eso, conviene evitar el mismo valor para `name` y `id`.
 
 ## Especificaciones
 
@@ -55,4 +55,4 @@ El método **getElementsByName** trabaja de diferente manera en diferentes naveg
 
 - {{domxref("document.getElementById()")}} para retornar una referencia de un elemento por su `id`
 - {{domxref("document.getElementsByTagName()")}} para retornar referencias de elementos por el nombre de sus etiquetas
-- {{domxref("document.querySelector()")}} for powerful selectors via queries like `'div.myclass'`
+- {{domxref("Document.querySelector()")}} para encontrar el primer elemento que coincida con un selector CSS como `div.myclass`.

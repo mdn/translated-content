@@ -7,9 +7,6 @@ slug: Web/API/Document/querySelectorAll
 
 El método **`querySelectorAll()`** de {{domxref("Document")}} devuelve una {{domxref("NodeList")}} estática de los elementos del documento que coinciden con los selectores indicados.
 
-> [!NOTE]
-> Esto método se implementa en base al método {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} del mixin {{domxref("ParentNode")}}.
-
 ## Sintaxis
 
 ```js
