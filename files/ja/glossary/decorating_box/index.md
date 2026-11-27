@@ -1,5 +1,5 @@
 ---
-title: Decorating box
+title: Decorating box (装飾ボックス)
 slug: Glossary/decorating_box
 l10n:
   sourceCommit: 3a04f324f1fb55e3c073c32d0ead28b5803a6284
