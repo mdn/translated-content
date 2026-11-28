@@ -40,7 +40,7 @@ l10n:
 > - **page-type**
 >   - : Siempre `svg-element`.
 > - **status**
->   - : Etiquetas que describen el estado de la funcionalidad. Un array que puede contener uno o más de las siguientes opciones: [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**desaprobada**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **no estándar** (si no está en una pista de estándares). Esta clave no debe configurarse manualmente: Se configura automáticamente basado en los valores de los datos de compatibilidad del navegador para esta funcionalidad. Consulta ["como se agregan o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
+>   - : Etiquetas que describen el estado de la funcionalidad. Un array que puede contener uno o más de las siguientes opciones: [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**desaprobada**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#obsoleto), **no estándar** (si no está en una pista de estándares). Esta clave no debe configurarse manualmente: Se configura automáticamente basado en los valores de los datos de compatibilidad del navegador para esta funcionalidad. Consulta ["como se agregan o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características).
 > - **browser-compat**
 >   - : Reemplaza el valor de marcador de posición `svg.elements.NombreDelElemento` con la cadena de consulta para el elemento en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data).
 >     La herramienta utiliza automáticamente la clave para completar las secciones de compatibilidad y especificación (reemplazando las macros `\{{Compat}}` y `\{{Specifications}}`).
@@ -62,7 +62,7 @@ l10n:
 >   Si es experimental y la tecnología está oculta mediante una preferencia en Firefox, también debes completar su entrada en la página [Funcionalidades experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features)
 > - `\{{Non-standard_Header}}` — esto genera un banner **No estándar** que indica que la funcionalidad no forma parte de ninguna especificación.
 >
-> Consulta ["como se agregan o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) para más información.
+> Consulta ["como se agregan o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características) para más información.
 >
 > Los ejemplos de los banners para **Experimental**, **Obsoleto**, and **No estándar** se muestran después de este bloque de notas.
 >
@@ -85,9 +85,9 @@ _Para usar esta macro, elimina las comillas invertidas y la barra invertida en e
 
 ### Atributos globales
 
-- [Atributos principales](/es/docs/Web/SVG/Reference/Attribute#core_attributes)
-- [Atributos de evento](/es/docs/Web/SVG/Reference/Attribute#event_attributes)
-- [Atributos de presentación](/es/docs/Web/SVG/Reference/Attribute#presentation_attributes)
+- [Atributos principales](/es/docs/Web/SVG/Reference/Attribute#atributos_principales)
+- [Atributos de evento](/es/docs/Web/SVG/Reference/Attribute)
+- [Atributos de presentación](/es/docs/Web/SVG/Reference/Attribute#atributos_presentacionales)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("transform")}}

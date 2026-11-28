@@ -41,7 +41,7 @@ l10n:
 > - **page-type**
 >   - : La clave `page-type` para los constructores Web/API es siempre `web-api-constructor`.
 > - **status**
->   - : Indicadores que describen el estado de esta característica. Un arreglo que puede contener uno o más de los siguientes: `experimental`, `deprecated`, `non-standard`. Esta clave no debe establecerse manualmente: se asigna automáticamente según los valores en los datos de compatibilidad del navegador. Vea ["Cómo se agregan o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
+>   - : Indicadores que describen el estado de esta característica. Un arreglo que puede contener uno o más de los siguientes: `experimental`, `deprecated`, `non-standard`. Esta clave no debe establecerse manualmente: se asigna automáticamente según los valores en los datos de compatibilidad del navegador. Vea ["Cómo se agregan o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características).
 > - **browser-compat**
 >   - : Reemplace el valor de marcador de posición `ruta.hacia.caracteristica.NombreDelConstructor` con la cadena de consulta para el constructor en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data).
 >     La cadena se utiliza automáticamente para rellenar las secciones de compatibilidad y especificaciones (reemplazando los macros `\{{Compat}}` y `\{{Specifications}}`).
@@ -72,7 +72,7 @@ l10n:
 >   Para generar el menú lateral correcto para su API, debe agregar una entrada `GroupData` a nuestro repositorio de GitHub e incluir el nombre de la entrada dentro de la llamada a la macro en lugar de _GroupDataName_.
 >   Vea nuestra [guía de menús laterales de referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) para obtener información sobre cómo hacerlo. Recuerde eliminar el macro `\{{MDNSidebar}}` cuando copie esta página.
 >
-> No proporcione las macros de encabezado de estado manualmente. Consulte la sección [Cómo se agregan o actualizan los estados de las características](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) para agregar estos estados a la página.
+> No proporcione las macros de encabezado de estado manualmente. Consulte la sección [Cómo se agregan o actualizan los estados de las características](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características) para agregar estos estados a la página.
 >
 > Se muestran ejemplos de los banners **Contexto seguro**, **Disponible en workers**, **Experimental**, **Desaprobado** y **No estándar** justo después de este bloque de notas.
 >
@@ -163,7 +163,7 @@ _Para usar esta macro, elimine las comillas invertidas y la barra invertida en e
 
 ## Véase también
 
-Incluya enlaces a páginas de referencia y guías relacionadas con la API actual. Para obtener más pautas, consulte la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
+Incluya enlaces a páginas de referencia y guías relacionadas con la API actual. Para obtener más pautas, consulte la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#sección_véase_también) en la _Guía de estilo de escritura_.
 
 - enlace1
 - enlace2

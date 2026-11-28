@@ -38,7 +38,7 @@ l10n:
 > - **page-type**
 >   - : El valor de `page-type` para las propiedades CSS es `css-property`. Para una propiedad CSS abreviada (shorthand), el valor es `css-shorthand-property`. Por ejemplo, el valor de `page-type` para la propiedad [animation](/es/docs/Web/CSS/Reference/Properties/animation) es `css-shorthand-property` porque es una propiedad abreviada, mientras que el valor de `page-type` para la propiedad [animation-delay](/es/docs/Web/CSS/Reference/Properties/animation-delay) es `css-property`.
 > - **status**
->   - : Etiquetas (flags) que describen el estado de esta característica. Es un arreglo (array) que puede contener uno o más de los siguientes valores: `experimental`, `deprecated`, `non-standard`. Esta clave no debe configurarse manualmente: se establece automáticamente según los valores en los datos de compatibilidad del navegador para la característica. Consulta ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
+>   - : Etiquetas (flags) que describen el estado de esta característica. Es un arreglo (array) que puede contener uno o más de los siguientes valores: `experimental`, `deprecated`, `non-standard`. Esta clave no debe configurarse manualmente: se establece automáticamente según los valores en los datos de compatibilidad del navegador para la característica. Consulta ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características).
 > - **browser-compat**
 >   - : Reemplaza el valor de marcador de posición <code>css.properties.NameOfTheProperty</code> con la cadena de consulta (query string) para la propiedad en el [repositorio de datos de compatibilidad de navegadores (Browser compat data repo)](https://github.com/mdn/browser-compat-data/tree/main/css/properties). Revisa la sección _Otras macros en la página_ de este bloque de notas para ver cómo se utiliza este par clave-valor para generar contenido para las secciones _Especificaciones_ y _Compatibilidad con navegadores_.
 > - **sidebar**
@@ -58,7 +58,7 @@ l10n:
 >
 > Debes actualizar o eliminar las siguientes macros de acuerdo con los consejos a continuación:
 
-> No proporciones macros de encabezado de estado manualmente. Consulta la sección ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) para añadir estos estados a la página.
+> No proporciones macros de encabezado de estado manualmente. Consulta la sección ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características) para añadir estos estados a la página.
 >
 > Justo después de este bloque de notas se muestran ejemplos de los banners **Experimental**, **Obsoleto** y **No estándar**.
 >
@@ -81,7 +81,7 @@ Comienza el contenido de la página con un párrafo introductorio que nombre la 
 
 ## Pruébalo
 
-Esta sección es generada por la macro `InteractiveExample`. Incluye el título de la sección "Try it" y el editor de código. Consulta la sección de [Ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#interactive_examples) en nuestras _Directrices de escritura_ para más información.
+Esta sección es generada por la macro `InteractiveExample`. Incluye el título de la sección "Try it" y el editor de código. Consulta la sección de [Ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#ejemplos_interactivos) en nuestras _Directrices de escritura_ para más información.
 
 ## Propiedades constituyentes
 
@@ -136,7 +136,7 @@ A continuación, añade una lista de definiciones que incluya un término y una 
   - : Incluye una descripción del subvalor, su tipo de datos y qué representa.
 
 > [!WARNING]
-> No añadas [macros de estado en línea](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_icons_in_definition_lists) en las páginas de CSS.
+> No añadas [macros de estado en línea](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#iconos_de_estado_en_las_listas_de_definiciones) en las páginas de CSS.
 
 ## Descripción
 
@@ -217,7 +217,7 @@ _Para usar esta macro, elimina las comillas invertidas y la barra invertida en e
 
 ## Véase también
 
-Incluye enlaces a páginas de referencia y guías relacionadas con la propiedad actual. Incluye también un enlace al módulo CSS al que pertenece la propiedad. Para más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
+Incluye enlaces a páginas de referencia y guías relacionadas con la propiedad actual. Incluye también un enlace al módulo CSS al que pertenece la propiedad. Para más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#sección_véase_también) en la _Guía de estilo de escritura_.
 
 - enlace1
 - enlace2

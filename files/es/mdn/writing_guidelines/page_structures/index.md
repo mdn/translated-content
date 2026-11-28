@@ -12,5 +12,5 @@ Esta página enumera los artículos que describen estas estructuras para que pue
 
 ## Véase también
 
-- [Plantillas de página](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types#page_templates)
-- [Componentes de la página](/es/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
+- [Plantillas de página](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types#plantillas_de_página)
+- [Componentes de la página](/es/docs/MDN/Writing_guidelines/Writing_style_guide#componentes_de_la_página)

@@ -49,4 +49,4 @@ Por ejemplo, la [API Trusted Types](/es/docs/Web/API/Trusted_Types_API) tiene un
 
 ### Integración de polyfills en las páginas
 
-Los polyfills suelen integrarse en la [página de descripción general de la API](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key#web_api_page_types).
+Los polyfills suelen integrarse en la [página de descripción general de la API](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key#tipos_de_página_de_la_api_web).

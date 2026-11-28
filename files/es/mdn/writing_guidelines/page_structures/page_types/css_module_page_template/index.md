@@ -140,7 +140,7 @@ _Para usar esta macro, elimina las comillas invertidas y la barra invertida en e
 
 ## Véase también
 
-Incluye enlaces a cualquier otra página de referencia y otro contenido que sea relevante pero que no encaje en las otras secciones. Si hay guías externas relevantes que valga la pena enlazar, colócalas al final de la lista (no bajo la sección "Guías", que está limitada a guías de MDN). Consulta la sección [Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en nuestra _Guía de estilo de escritura_ para más consejos e instrucciones.
+Incluye enlaces a cualquier otra página de referencia y otro contenido que sea relevante pero que no encaje en las otras secciones. Si hay guías externas relevantes que valga la pena enlazar, colócalas al final de la lista (no bajo la sección "Guías", que está limitada a guías de MDN). Consulta la sección [Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#sección_véase_también) en nuestra _Guía de estilo de escritura_ para más consejos e instrucciones.
 
 - enlace1
 - enlace2

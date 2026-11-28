@@ -40,7 +40,7 @@ l10n:
 > - **page-type**
 >   - : Siempre `html-element`.
 > - **status**
->   - : Indicadores que describen el estado de esta funcionalidad. Es un arreglo que puede contener uno o más de los siguientes valores: `experimental`, `deprecated`, `non-standard`. Esta clave no debe configurarse manualmente: se establece automáticamente según los valores en los datos de compatibilidad de navegadores. Consulta ["Cómo se añaden o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
+>   - : Indicadores que describen el estado de esta funcionalidad. Es un arreglo que puede contener uno o más de los siguientes valores: `experimental`, `deprecated`, `non-standard`. Esta clave no debe configurarse manualmente: se establece automáticamente según los valores en los datos de compatibilidad de navegadores. Consulta ["Cómo se añaden o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características).
 > - **browser-compat**
 >   - : Reemplaza el valor de marcador de posición `html.elements.NombreDelElemento` con la cadena de consulta para el elemento en el [repositorio de datos de compatibilidad de navegadores](https://github.com/mdn/browser-compat-data).
 >     La cadena de herramientas usa automáticamente esta clave para rellenar las secciones de compatibilidad y especificaciones (reemplazando las macros `\{{Compat}}` y `\{{Specifications}}`).
@@ -59,7 +59,7 @@ l10n:
 >   Si es experimental y está oculta detrás de una preferencia en Firefox, también debes completar una entrada en la página [Funcionalidades experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
 > - `\{{Non-standard_Header}}` — genera un banner de **No estándar** que indica que la funcionalidad no forma parte de ninguna especificación.
 >
-> Consulta ["Cómo se añaden o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) para más información.
+> Consulta ["Cómo se añaden o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características) para más información.
 >
 > Justo después de este bloque de notas se muestran ejemplos de los banners **Experimental**, **Obsoleto** y **No estándar**.
 >
@@ -71,7 +71,7 @@ El elemento [HTML](/es/docs/Web/HTML) **`<insertar_el_nombre_del_elemento>`** ha
 
 ## Pruébalo
 
-Esta sección es generada por la macro `InteractiveExample`. Incluye el título de la sección "Try it" y el editor de código. Consulta la sección de [Ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#interactive_examples) en nuestras _Directrices de escritura_ para más información.
+Esta sección es generada por la macro `InteractiveExample`. Incluye el título de la sección "Try it" y el editor de código. Consulta la sección de [Ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#ejemplos_interactivos) en nuestras _Directrices de escritura_ para más información.
 
 Más información — en este punto, incluye algunos párrafos más explicando las cosas más importantes que se deben saber sobre el uso del elemento y sus características principales. Es bueno explicar brevemente qué sucede en el ejemplo interactivo si no es obvio de inmediato. También podrías explicar puntos clave sobre cómo este elemento interactúa con características importantes relacionadas de JavaScript o CSS. No entres en demasiados detalles (no conviene repetir la documentación en varias páginas), pero un punto clave más un enlace a la página de esa característica sería útil. De nuevo, consulta la página de `<video>` para ver un ejemplo.
 
@@ -202,7 +202,7 @@ _Para usar esta macro, elimina las comillas invertidas y la barra invertida en e
 
 ## Véase también
 
-Incluye enlaces a páginas de referencia y guías relacionadas con el elemento actual. Para más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#seccion_vease_tambien) en la _Guía de estilo de escritura_.
+Incluye enlaces a páginas de referencia y guías relacionadas con el elemento actual. Para más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#sección_véase_también) en la _Guía de estilo de escritura_.
 
 - enlace1
 - enlace2
