@@ -3,7 +3,7 @@ title: "Tutorial de Django Parte 5: Creación de tu página de inicio"
 short-title: "5: Página de inicio"
 slug: Learn_web_development/Extensions/Server-side/Django/Home_page
 l10n:
-  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
+  sourceCommit: edc9ab5479d1253d9edd93bfe90dd1d100605c26
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}
@@ -89,10 +89,10 @@ urlpatterns += [
 ```
 
 > [!NOTE]
-> Siempre que Django encuentra la función de importación [`django.urls.include()`](https://docs.djangoproject.com/en/5.0/ref/urls/#django.urls.include), divide la cadena de la URL en el carácter final designado y envía la subcadena restante al módulo _URLConf_ incluido para que continúe procesándola.
+> Siempre que Django encuentra la función de importación [`django.urls.include()`](https://docs.djangoproject.com/en/6.1/ref/urls/#django.urls.include), divide la cadena de la URL en el carácter final designado y envía la subcadena restante al módulo _URLConf_ incluido para que continúe procesándola.
 
 También creamos un archivo marcador de posición para el módulo _URLConf_, llamado **/catalog/urls.py**.
-Añade las siguientes líneas a ese archivo:
+Actualiza la lista `urlpatterns` con lo siguiente:
 
 ```python
 urlpatterns = [
@@ -113,13 +113,13 @@ Por ejemplo, podemos usar el parámetro name para enlazar a nuestra página de i
 ```
 
 > [!NOTE]
-> Podríamos codificar el enlace de forma fija, como en `<a href="/catalog/">Home</a>`, pero si cambiamos el patrón de nuestra página de inicio, por ejemplo, a `/catalog/index`, las plantillas ya no enlazarían correctamente. Usar un mapeo de URL invertido es más robusto.
+> Podríamos codificar el enlace de forma fija (como en `<a href="/catalog/">Home</a>`), pero si cambiamos el patrón de nuestra página de inicio (por ejemplo, a `/catalog/index`), las plantillas ya no enlazarían correctamente. Usar un mapeo de URL invertido es más robusto.
 
 ### Vista (basada en funciones)
 
 Una vista es una función que procesa una solicitud HTTP, obtiene los datos necesarios de la base de datos, renderiza los datos en una página HTML usando una plantilla HTML, y luego devuelve el HTML generado en una respuesta HTTP para mostrar la página al usuario. La vista índice sigue este modelo — obtiene información sobre el número de registros de `Book`, `BookInstance`, `BookInstance` disponibles y `Author` que tenemos en la base de datos, y pasa esa información a una plantilla para mostrarla.
 
-Abre **catalog/views.py** y observa que el archivo ya importa la función de atajo [render()](https://docs.djangoproject.com/en/5.0/topics/http/shortcuts/#django.shortcuts.render) para generar un archivo HTML usando una plantilla y datos:
+Abre **catalog/views.py** y observa que el archivo ya importa la función de atajo [render()](https://docs.djangoproject.com/en/6.1/topics/http/shortcuts/#django.shortcuts.render) para generar un archivo HTML usando una plantilla y datos:
 
 ```python
 from django.shortcuts import render
@@ -133,16 +133,16 @@ Pega las siguientes líneas al final del archivo:
 from .models import Book, Author, BookInstance, Genre
 
 def index(request):
-    """View function for home page of site."""
+    """Función de vista para la página de inicio del sitio."""
 
-    # Generate counts of some of the main objects
+    # Genera los conteos de algunos de los objetos principales
     num_books = Book.objects.all().count()
     num_instances = BookInstance.objects.all().count()
 
-    # Available books (status = 'a')
-    num_instances_available = BookInstance.objects.filter(status__exact='a').count()
+    # Libros disponibles
+    num_instances_available = BookInstance.objects.filter(status__exact=BookInstance.LoanStatus.AVAILABLE).count()
 
-    # The 'all()' is implied by default.
+    # El 'all()' está implícito de forma predeterminada.
     num_authors = Author.objects.count()
 
     context = {
@@ -152,13 +152,13 @@ def index(request):
         'num_authors': num_authors,
     }
 
-    # Render the HTML template index.html with the data in the context variable
+    # Renderiza la plantilla HTML index.html con los datos en la variable de contexto.
     return render(request, 'index.html', context=context)
 ```
 
 La primera línea importa las clases de modelo que usaremos para acceder a los datos en todas nuestras vistas.
 
-La primera parte de la función de vista obtiene el número de registros usando el atributo `objects.all()` en las clases de modelo. También obtiene una lista de objetos `BookInstance` que tienen el valor 'a' (Disponible) en el campo status. Puedes encontrar más información sobre cómo acceder a los datos de los modelos en nuestro tutorial anterior [Tutorial de Django Parte 3: Uso de modelos > Búsqueda de registros](/es/docs/Learn_web_development/Extensions/Server-side/Django/Models#búsqueda_de_registros).
+La primera parte de la función de vista obtiene el número de registros usando el atributo `objects.all()` en las clases de modelo. También obtiene una lista de objetos `BookInstance` cuyo estado es `BookInstance.LoanStatus.AVAILABLE`. Puedes encontrar más información sobre cómo acceder a los datos de los modelos en nuestro tutorial anterior [Tutorial de Django Parte 3: Uso de modelos > Búsqueda de registros](/es/docs/Learn_web_development/Extensions/Server-side/Django/Models#búsqueda_de_registros).
 
 Al final de la función de vista llamamos a la función `render()` para crear una página HTML y devolverla como respuesta. Esta función de atajo envuelve varias otras funciones para simplificar un caso de uso muy común. La función `render()` acepta los siguientes parámetros:
 
@@ -172,12 +172,12 @@ Hablaremos más sobre las plantillas y la variable `context` en la siguiente sec
 
 Una plantilla es un archivo de texto que define la estructura o el diseño de un archivo (como una página HTML), y usa marcadores de posición para representar el contenido real.
 
-Una aplicación de Django creada con **startapp** (como el esqueleto de este ejemplo) buscará plantillas en un subdirectorio llamado "**templates**" de tus aplicaciones. Por ejemplo, en la vista índice que acabamos de añadir, la función `render()` esperará encontrar el archivo **_index.html_** en **/django-locallibrary-tutorial/catalog/templates/** y generará un error si el archivo no está presente.
+Una aplicación de Django creada con **startapp** (como el esqueleto de este ejemplo) buscará plantillas en un subdirectorio llamado "**templates**" de tus aplicaciones. Por ejemplo, en la vista índice que acabamos de añadir, la función `render()` esperará encontrar el archivo **_index.html_** en **/catalog/templates/** y generará un error si el archivo no está presente.
 
 Puedes comprobarlo guardando los cambios anteriores y accediendo a `127.0.0.1:8000` en tu navegador: mostrará un mensaje de error bastante intuitivo, "TemplateDoesNotExist at /catalog/", y otros detalles.
 
 > [!NOTE]
-> Según el archivo de configuración de tu proyecto, Django buscará plantillas en varios lugares, buscando en tus aplicaciones instaladas por defecto. Puedes encontrar más información sobre cómo Django encuentra las plantillas y qué formatos de plantilla admite en [la sección Templates de la documentación de Django](https://docs.djangoproject.com/en/5.0/topics/templates/).
+> Según el archivo de configuración de tu proyecto, Django buscará plantillas en varios lugares, buscando en tus aplicaciones instaladas por defecto. Puedes encontrar más información sobre cómo Django encuentra las plantillas y qué formatos de plantilla admite en [la sección Templates de la documentación de Django](https://docs.djangoproject.com/en/6.1/topics/templates/).
 
 #### Extendiendo plantillas
 
@@ -203,10 +203,10 @@ Puedes dejar los bloques vacíos, o incluir contenido predeterminado para usar a
   </head>
   <body>
     {% block sidebar %}
-      <!-- insert default navigation text for every page -->
+      <!-- inserta el texto de navegación predeterminado para cada página -->
     {% endblock %}
     {% block content %}
-      <!-- default content text (typically empty) -->
+      <!-- texto de contenido predeterminado (normalmente vacío) -->
     {% endblock %}
   </body>
 </html>
@@ -220,9 +220,9 @@ Por ejemplo, el siguiente fragmento de código muestra cómo usar la etiqueta de
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Local Library Home</h1>
+  <h1>Inicio de la biblioteca local</h1>
   <p>
-    Welcome to LocalLibrary, a website developed by
+    Te damos la bienvenida a LocalLibrary, un sitio web desarrollado por
     <em>Mozilla Developer Network</em>!
   </p>
 {% endblock %}
@@ -235,7 +235,7 @@ Usaremos el siguiente fragmento de código como plantilla base para el sitio web
 > [!NOTE]
 > También introducimos dos etiquetas de plantilla adicionales: `url` y `load static`. Estas etiquetas se explicarán en las siguientes secciones.
 
-Crea un nuevo archivo **base_generic.html** en **/django-locallibrary-tutorial/catalog/templates/** y pega el siguiente código en el archivo:
+Crea un nuevo archivo **base_generic.html** en **/catalog/templates/** y pega el siguiente código en el archivo:
 
 ```django
 <!doctype html>
@@ -246,11 +246,11 @@ Crea un nuevo archivo **base_generic.html** en **/django-locallibrary-tutorial/c
     {% endblock %}
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous">
-    <!-- Add additional CSS in static file -->
+    <!-- Agrega CSS adicional en un archivo estático -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
   </head>
@@ -275,7 +275,7 @@ Crea un nuevo archivo **base_generic.html** en **/django-locallibrary-tutorial/c
 
 La plantilla incluye CSS de [Bootstrap](https://getbootstrap.com/) para mejorar el diseño y la presentación de la página HTML. Usar Bootstrap (u otro framework web del lado del cliente) es una forma rápida de crear una página atractiva que se muestre bien en distintos tamaños de pantalla.
 
-La plantilla base también hace referencia a un archivo CSS local (**styles.css**) que proporciona estilos adicionales. Crea un archivo **styles.css** en **/django-locallibrary-tutorial/catalog/static/css/** y pega el siguiente código en el archivo:
+La plantilla base también hace referencia a un archivo CSS local (**styles.css**) que proporciona estilos adicionales. Crea un archivo **styles.css** en **/catalog/static/css/** y pega el siguiente código en el archivo:
 
 ```css
 .sidebar-nav {
@@ -287,30 +287,30 @@ La plantilla base también hace referencia a un archivo CSS local (**styles.css*
 
 #### La plantilla índice
 
-Crea un nuevo archivo HTML **index.html** en **/django-locallibrary-tutorial/catalog/templates/** y pega el siguiente código en el archivo.
+Crea un nuevo archivo HTML **index.html** en **/catalog/templates/** y pega el siguiente código en el archivo.
 Este código extiende nuestra plantilla base en la primera línea, y luego reemplaza el bloque `content` predeterminado de la plantilla.
 
 ```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Local Library Home</h1>
+  <h1>Inicio de la biblioteca local</h1>
   <p>
-    Welcome to LocalLibrary, a website developed by
+    Te damos la bienvenida a LocalLibrary, un sitio web desarrollado por
     <em>Mozilla Developer Network</em>!
   </p>
-  <h2>Dynamic content</h2>
-  <p>The library has the following record counts:</p>
+  <h2>Contenido dinámico</h2>
+  <p>La biblioteca tiene los siguientes conteos de registros:</p>
   <ul>
-    <li><strong>Books:</strong> \{{ num_books }}</li>
-    <li><strong>Copies:</strong> \{{ num_instances }}</li>
-    <li><strong>Copies available:</strong> \{{ num_instances_available }}</li>
-    <li><strong>Authors:</strong> \{{ num_authors }}</li>
+    <li><strong>Libros:</strong> \{{ num_books }}</li>
+    <li><strong>Copias:</strong> \{{ num_instances }}</li>
+    <li><strong>Copias disponibles:</strong> \{{ num_instances_available }}</li>
+    <li><strong>Autores:</strong> \{{ num_authors }}</li>
   </ul>
 {% endblock %}
 ```
 
-En la sección _Dynamic content_ declaramos marcadores de posición (_variables de plantilla_) para la información de la vista que queremos incluir.
+En la sección _Contenido dinámico_ declaramos marcadores de posición (_variables de plantilla_) para la información de la vista que queremos incluir.
 Las variables se encierran entre llaves dobles.
 
 > [!NOTE]
@@ -337,7 +337,7 @@ Es probable que tu proyecto use recursos estáticos, incluyendo JavaScript, CSS 
 Dentro de la plantilla, primero llamas a la etiqueta de plantilla `load` especificando "static" para añadir la biblioteca de plantillas, como se muestra en el ejemplo de código de abajo. Luego puedes usar la etiqueta de plantilla `static` y especificar la URL relativa del archivo que necesitas.
 
 ```django
-<!-- Add additional CSS in static file -->
+<!-- Agrega CSS adicional en un archivo estático -->
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 ```
@@ -349,13 +349,14 @@ Puedes añadir una imagen a la página de forma similar, por ejemplo:
 <img
   src="{% static 'images/local_library_model_uml.png' %}"
   alt="UML diagram"
-  style="width:555px;height:540px;" />
+  width="555"
+  height="540" />
 ```
 
 > [!NOTE]
-> Los ejemplos de arriba especifican dónde se ubican los archivos, pero Django no los sirve por defecto. Configuramos el servidor web de desarrollo para servir archivos modificando el mapeador de URL global (**/django-locallibrary-tutorial/locallibrary/urls.py**) cuando [creamos el esqueleto del sitio web](/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website), pero todavía necesitamos habilitar el servicio de archivos en producción. Veremos esto más adelante.
+> Los ejemplos de arriba especifican dónde se ubican los archivos, pero Django no los sirve por defecto. Configuramos el servidor web de desarrollo para servir archivos modificando el mapeador de URL global (**/locallibrary/urls.py**) cuando [creamos el esqueleto del sitio web](/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website), pero todavía necesitamos habilitar el servicio de archivos en producción. Veremos esto más adelante.
 
-Para más información sobre cómo trabajar con archivos estáticos consulta [Managing static files](https://docs.djangoproject.com/en/5.0/howto/static-files/) en la documentación de Django.
+Para más información sobre cómo trabajar con archivos estáticos consulta [Managing static files](https://docs.djangoproject.com/en/6.1/howto/static-files/) en la documentación de Django.
 
 #### Enlazando a URL
 
@@ -380,7 +381,6 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -395,7 +395,7 @@ El valor `'APP_DIRS': True` es el más importante, ya que le indica a Django que
 También podemos especificar ubicaciones concretas para que Django busque directorios usando `'DIRS': []` (aunque todavía no lo necesitamos).
 
 > [!NOTE]
-> Puedes encontrar más información sobre cómo Django encuentra las plantillas y qué formatos de plantilla admite en [la sección Templates de la documentación de Django](https://docs.djangoproject.com/en/5.0/topics/templates/).
+> Puedes encontrar más información sobre cómo Django encuentra las plantillas y qué formatos de plantilla admite en [la sección Templates de la documentación de Django](https://docs.djangoproject.com/en/6.1/topics/templates/).
 
 ## ¿Cómo se ve?
 
@@ -425,11 +425,11 @@ En el siguiente artículo construiremos sobre este conocimiento para crear las c
 
 ## Véase también
 
-- [Writing your first Django app, part 3: Views and Templates](https://docs.djangoproject.com/en/5.0/intro/tutorial03/) (documentación de Django)
-- [URL dispatcher](https://docs.djangoproject.com/en/5.0/topics/http/urls/) (documentación de Django)
-- [View functions](https://docs.djangoproject.com/en/5.0/topics/http/views/) (documentación de Django)
-- [Templates](https://docs.djangoproject.com/en/5.0/topics/templates/) (documentación de Django)
-- [Managing static files](https://docs.djangoproject.com/en/5.0/howto/static-files/) (documentación de Django)
-- [Django shortcut functions](https://docs.djangoproject.com/en/5.0/topics/http/shortcuts/#django.shortcuts.render) (documentación de Django)
+- [Writing your first Django app, part 3: Views and Templates](https://docs.djangoproject.com/en/6.1/intro/tutorial03/) (documentación de Django)
+- [URL dispatcher](https://docs.djangoproject.com/en/6.1/topics/http/urls/) (documentación de Django)
+- [View functions](https://docs.djangoproject.com/en/6.1/topics/http/views/) (documentación de Django)
+- [Templates](https://docs.djangoproject.com/en/6.1/topics/templates/) (documentación de Django)
+- [Managing static files](https://docs.djangoproject.com/en/6.1/howto/static-files/) (documentación de Django)
+- [Django shortcut functions](https://docs.djangoproject.com/en/6.1/topics/http/shortcuts/#django.shortcuts.render) (documentación de Django)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}
