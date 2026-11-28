@@ -1,9 +1,9 @@
 ---
-title: Firefox 160 release notes for developers (Stable)
-short-title: Firefox 160 (Stable)
+title: Firefox 160 release notes for developers
+short-title: Firefox 160
 slug: Mozilla/Firefox/Releases/160
 l10n:
-  sourceCommit: 7ba141d212766d3c840c4176f72d39dce1df122e
+  sourceCommit: 5b678632840c829c7f0ac157372e46cfcb60bc91
 ---
 
 このページでは、開発者に影響する Firefox 160 の変更点をまとめています。
@@ -52,11 +52,11 @@ Firefox 160 は、米国時間 [2026 年 11 月 10 日](https://whattrainisitnow
 - `window.open` によって起動されたプリロードスクリプトから `script.message` イベントを送信したときに、イベントの `context` フィールドが正しいブラウジングコンテキスト ID を返すように修正しました ([Firefox bug 2079905](https://bugzil.la/2079905))。
 - `Set-Cookie` レスポンスヘッダーの処理を修正して、`\n` で区切られた値を 1 つに結合した値ではなく個別の項目として表示するようになりました。これは、ほかの "改行で結合された" ヘッダーである `proxy-authenticate` および `www-authenticate` にも適用されます ([Firefox bug 1940389](https://bugzil.la/1940389))。
 - 未使用のセキュリティ詳細情報の処理を停止するように、ネットワークイベントの監視機能を更新しました。この処理はページ読み込み時などに、パフォーマンスに目に見える影響を及ぼす可能性がありました ([Firefox bug 2075175](https://bugzil.la/2075175))。
-- `script.evaluate` および `script.callFunction` コマンドを、`userActivation: false` を指定して呼び出した場合に既存のユーザーアクティベーションフラグをクリアしないように更新しました ([Firefox bug 2084107](https://bugzil.la/2084107))。
 
 ## アドオン開発者向けの変更点一覧
 
 - {{WebExtAPIRef("runtime.PlatformInfo")}} が、ARM64 プラットフォームで `arch` の値として `arm64` を返すようになりました。以前は `aarch64` を返していました。これにより、ARM64 プラットフォームで Firefox が返す値が Chrome と一致します ([Firefox bug 2080310](https://bugzil.la/2080310))。
+- {{WebExtAPIRef("runtime.MessageSender")}} に `windowId` プロパティを追加しました。これは、送信元を含むウィンドウの ID を保持します。`tab.windowId` とは、ポップアップやサイドバーのようなタブ内にない送信元も設定されることが異なります ([Firefox bug 2072133](https://bugzil.la/2072133))。
 
 ## 実験的なウェブ機能
 
