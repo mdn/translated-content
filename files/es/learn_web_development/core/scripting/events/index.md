@@ -3,7 +3,7 @@ title: Introducción a los eventos
 short-title: Eventos
 slug: Learn_web_development/Core/Scripting/Events
 l10n:
-  sourceCommit: c529f2672b3541cc28ea687ff9266f98b1734191
+  sourceCommit: 1a2a5b56a689b441ebf3be91b90f15746c5a5a01
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Functions","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}
@@ -133,7 +133,7 @@ Existen muchos eventos diferentes que puede lanzar un elemento `<button>`. Exper
 Primero, crea un archivo HTML nuevo en tu sistema de archivos local y añádele el siguiente código:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -419,7 +419,7 @@ form.addEventListener("submit", (e) => {
 
 Obviamente, esta es una validación de formulario bastante débil —no evitaría, por ejemplo, que el usuario validara el formulario con espacios en blanco o números en los campos—, pero sirve a modo de ejemplo.
 
-Puedes ver el ejemplo completo [funcionando en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/preventdefault/); pruébalo ahí. Consulta también el [código fuente](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/preventdefault/).
+Puedes ver el ejemplo completo [funcionando en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/preventdefault/); pruébalo ahí. Consulta también el [código fuente](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/preventdefault/).
 
 ## No es solo en páginas web
 
