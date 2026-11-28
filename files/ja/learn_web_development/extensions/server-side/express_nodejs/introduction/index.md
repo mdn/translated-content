@@ -2,7 +2,7 @@
 title: Express/Node の紹介
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction
 l10n:
-  sourceCommit: 2aa175159b0354f7c5ba36574ef99e37e95b19c8
+  sourceCommit: d775e1249487f1a7ab9a8a031c70ca71bc892d63
 ---
 
 {{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
@@ -35,10 +35,10 @@ Express の最初の記事では「Node って何だろう？」、「Express �
 
 - 素晴らしいパフォーマンス。 Node はウェブアプリケーションのスループットとスケーラビリティを最適化するように設計されており、多くの一般的なウェブ開発の問題 (リアルタイムウェブアプリケーションなど) に良い解決策となります
 - コードは "plain old JavaScript" で書かれています。つまり、ブラウザーとウェブサーバーの両方のコードを記述しているときに、言語間の "コンテキストシフト" に費やす時間が短くなります
-- JavaScript は比較的新しいプログラミング言語であり、他の従来の ウェブサーバー言語（Python、PHP など）と比較して言語設計の改善のメリットがあります。CoffeeScript、ClojureScript、Scala、LiveScript などを使用できるように、新しく普及している多くの言語が JavaScript にコンパイル/変換されます。
+- JavaScript は急速に進化するプログラミング言語であり、他の従来のウェブサーバー言語（Java、PHP など）と比較して、最新の言語設計による恩恵を受けています。
 - Node パッケージマネージャー (npm) は、何十万もの再利用可能なパッケージへのアクセスを提供します。クラス最高の依存関係解決機能もあり、ほとんどのビルドツールチェーンの自動化にも使用できます。
-- Node.js は移植可能です。Microsoft Windows、macOS、Linux、Solaris、FreeBSD、OpenBSD、WebOS、および NonStop OS で利用できます。さらに、多くの ウェブホスティングプロバイダーが、Node サイトをホスティングするための特定のインフラストラクチャとドキュメントが提供しています。
-- 非常に活発な第三者のエコシステムと開発者コミュニティがあり、多くの方々が 快く協力しています。
+- Node.js は移植可能です。主要なオペレーティングシステムと多くのウェブホスティングプロバイダーで利用できます。サーバーを作成したら、追加の修正なしでどこでも動作することを確信できます。
+- 非常に活発なサードパーティのエコシステムと開発者コミュニティがあり、助けを惜しまない人々が多くいます。
 
 Node HTTP パッケージを使用することで、Node.js で簡単な ウェブサーバーを作成できます。
 
@@ -53,11 +53,11 @@ Node HTTP パッケージを使用することで、Node.js で簡単な ウェ�
    cd test-node
    ```
 
-3. 好きなテキストエディターを使って `hello.js` というファイルを作成し、次のコードを貼り付けます。
+3. 好きなテキストエディターを使って `hello.mjs` というファイルを作成し、次のコードを貼り付けます。
 
    ```js
    // HTTP モジュールの読み込み
-   const http = require("http");
+   import http from "node:http";
 
    const hostname = "127.0.0.1";
    const port = 8000;
@@ -81,7 +81,7 @@ Node HTTP パッケージを使用することで、Node.js で簡単な ウェ�
 5. 端末に戻り、次のコマンドを入力します。
 
    ```bash
-   node hello.js
+   node hello.mjs
    ```
 
 最後に、ウェブブラウザーで `http://localhost:8000` に移動します。テキスト以外は空の ウェブページの左上に "**Hello World**" というテキストが表示されます。
@@ -91,7 +91,7 @@ Node HTTP パッケージを使用することで、Node.js で簡単な ウェ�
 
 ## ウェブフレームワーク
 
-その他の一般的なウェブ開発タスクは、Node 自体では直接サポートされていません。様々な HTTP の述語 (`GET`, `POST`, `DELETE` など) に特定の処理を追加したい場合、別々の URL パス ("routes") でリクエストを個別に処理したり、静的ファイルを提供したり、テンプレートを使用してレスポンスを動的に作成したり、自分でコードを書いたりする必要があります。そうしない場合はウェブフレームワークを使用して、車輪の再発明を避けることができます。
+Node HTTP ライブラリーは、基本的な機能だけを提供します。様々な HTTP 述語 (`GET`, `POST`, `DELETE` など)、別々の URL パス（ルート）、静的ファイル、レスポンスを動的に作成するテンプレートなど、一般的なウェブの慣用的な機能を実装したい場合、Node だけではあまり役に立ちません。コードを自分で書くか、車輪の再発明を避けるためウェブフレームワークを使用する必要があります。
 
 ## Express の紹介
 
@@ -102,7 +102,7 @@ Node HTTP パッケージを使用することで、Node.js で簡単な ウェ�
 - 接続に使用するポートやレスポンスのレンダリングに使用されるテンプレートの場所などの一般的なウェブアプリケーション設定値を設定します。
 - リクエスト処理パイプライン内の任意の時点で、追加のリクエスト処理「ミドルウェア」を追加します。
 
-Express 自体はかなりシンプルですが、開発者はほぼすべてのウェブ開発問題に対応する互換性のあるミドルウェアパッケージを作成しています。Cookie、セッション、ユーザーログイン、URL 引数、POST データ、セキュリティヘッダーなどを扱うライブラリーがあります。Express チームが管理するミドルウェアパッケージのリストは、[Express Middleware](https://expressjs.com/en/resources/middleware.html) (一般的なサードパーティパッケージのリストとともに) にあります。
+Express 自体はかなりシンプルですが、開発者はほぼすべてのウェブ開発問題に対応する互換性のあるミドルウェアパッケージを作成しています。Cookie、セッション、ユーザーログイン、URL 引数、POST データ、セキュリティヘッダーなどを扱うライブラリーがあります。Express チームが管理するミドルウェアパッケージのリストは、[Express Middleware](https://expressjs.com/en/resources/middleware/)（一般的なサードパーティパッケージのリストとともに）にあります。
 
 > [!NOTE]
 > この柔軟性は両刃の剣です。ほぼすべての問題や要件に対応するミドルウェアパッケージがありますが、適切なパッケージを使用して作業することは時には挑戦になることがあります。アプリケーションを構造化する「正しい方法」もなく、インターネット上で見つかる多くの例は最適ではないし、ウェブアプリケーションを開発するために必要なことのほんの一部を示しているだけです。
@@ -111,7 +111,7 @@ Express 自体はかなりシンプルですが、開発者はほぼすべての
 
 Node は 2009 年に Linux 用に最初にリリースされました。npm パッケージマネージャは 2010 年にリリースされ、ネイティブ Windows サポートは 2012 年に追加されました。もっと知りたいのであれば、[Wikipedia](https://en.wikipedia.org/wiki/Node.js#History) を掘り下げてみてください。
 
-Express は 2010 年 11 月に最初にリリースされ、現在 API のメジャーバージョンが 4 になっています。現在のリリースの変更点については[更新履歴](https://expressjs.com/en/changelog/#5.x)を、詳細な履歴リリースノートについては [GitHub](https://github.com/expressjs/express/blob/master/History.md) を参照してください。
+Express は 2010 年 11 月に最初にリリースされ、現在 API のメジャーバージョンは 5 です。現在のリリースの変更点については[更新履歴](https://github.com/expressjs/express/releases)を、詳細な履歴リリースノートについては [GitHub](https://github.com/expressjs/express/blob/master/History.md) を参照してください。
 
 ## Node と Express はどれくらい普及していますか？
 
@@ -120,6 +120,9 @@ Express は 2010 年 11 月に最初にリリースされ、現在 API のメジ
 サーバー側のフレームワークの普及率は、すぐに利用可能で決定的なものではありません（ただし、各プラットフォームの GitHub プロジェクトや StackOverflow の質問数をカウントするような仕組みを使って、人気を推定することはできます）。より良い質問は、人気のないプラットフォームの問題を避けるために Node と Express が「人気がある」かどうかです。それらは進化し続けていますか？あなたがそれを必要としたら助けを得ることができますか？あなたが Express を学ぶならば、あなたは職を得る機会がありますか？
 
 Express を使用している有名企業の数、コードベースに貢献している人の数、および無料と有料の両方でサポートを提供している人の数に基づけば、Express は一般的なフレームワークといえます。
+
+> [!NOTE]
+> Node エコシステムは、すべてのプログラミング言語の中でも最も急速に進化しているものの 1 つです。Express は競合製品の多くよりも前に登場し、パフォーマンス、操作性、フロントエンドフレームワークとの統合などの点で競争力を失いつつあります。しかし、十分な期間使用されているため、今後もあらゆる場面で見かけるでしょう。また、このチュートリアルで学ぶ概念の多くは、新しいフレームワークにも簡単に応用できます。
 
 ## Express は指図をしたがりますか？
 
@@ -142,15 +145,17 @@ Express は特定の HTTP 述語 (`GET`, `POST`, `PUT` など) と URL パター
 
 ### Helloworld Express
 
-最初に、標準の Express の [Hello World](https://expressjs.com/ja/starter/hello-world.html) の例を考えてみましょう (これについては、以下の各セクションで説明します)。
+最初に、標準の Express の [Hello World](https://expressjs.com/ja/starter/hello-world/) の例を考えてみましょう（これについては、以下の各節で説明します）。
 
 > [!NOTE]
-> Node と Express がすでにインストールされている場合（または[次の記事](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)のようにインストールする場合）は、このコードを **app.js** というテキストファイルに保存し、bash コマンドプロンプトで次のように呼び出して実行できます。
+> Node と Express がすでにインストールされている場合（または[次の記事](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)で示すようにインストールする場合）は、**package.json** に `"type": "module"` を追加し、このコードを **app.js** というテキストファイルに保存し、bash コマンドプロンプトで次のように呼び出して実行してください。
 >
-> **`node ./app.js`**
+> ```bash
+> node ./app.js
+> ```
 
 ```js
-const express = require("express");
+import express from "express";
 
 const app = express();
 const port = 3000;
@@ -164,20 +169,25 @@ app.listen(port, () => {
 });
 ```
 
-最初の 2 行は `require()` で express モジュールをインポートして [Express アプリケーション](https://expressjs.com/ja/5x/api.html#app)を作成します。このオブジェクトは伝統的に `app` と呼ばれ、HTTP リクエストのルーティング、ミドルウェアの設定、HTML ビューのレンダリング、テンプレートエンジンの登録、アプリケーションの動作を制御する[アプリケーション設定](https://expressjs.com/ja/5x/api.html#app.settings.table)の変更 (環境モード、ルート定義の大文字と小文字の区別など) のためのメソッドがあります。
+最初の 2 つの文は express モジュールをインポートして [Express アプリケーション](https://expressjs.com/ja/5x/api/application/)を作成します。このオブジェクトは伝統的に `app` と呼ばれ、HTTP リクエストのルーティング、ミドルウェアの設定、HTML ビューのレンダリング、テンプレートエンジンの登録、アプリケーションの動作を制御する[アプリケーション設定](https://expressjs.com/ja/5x/api/application/#application-settings)（環境モード、ルート定義の大文字と小文字の区別など）の変更のためのメソッドがあります。
 
-コードの中央部分 (`app.get` で始まる 3 行) はルート定義を示しています。`app.get()` メソッドは、サイトルートからの相対パス (`'/'`) を持つ HTTP `GET` リクエストがあるたびに呼び出されるコールバック関数を指定します。コールバック関数はリクエストとレスポンスオブジェクトを引数として取り、レスポンスに対して単に [`send()`](https://expressjs.com/ja/5x/api.html#res.send) を呼び出して文字列 "Hello World!" を返します。
+コードの中央部分（`app.get` で始まる 3 行）はルート定義を示しています。`app.get()` メソッドは、サイトルートからの相対パス (`'/'`) を持つ HTTP `GET` リクエストがあるたびに呼び出されるコールバック関数を指定します。コールバック関数はリクエストとレスポンスオブジェクトを引数として取り、レスポンスに対して [`send()`](https://expressjs.com/ja/5x/api/response/#ressend) を呼び出して文字列 "Hello World!" を返します。
 
 最後のブロックは 3000 番ポートでサーバーを起動し、コンソールにログコメントを出力します。 サーバーが稼働している場合は、ブラウザーの `localhost:3000` にアクセスして、レスポンスの例を確認することができます。
 
+> [!NOTE]
+> [Express のドキュメント](https://expressjs.com/ja/starter/hello-world/)では、ECMAScript モジュール (`import`/`export` 宣言を使用) と CommonJS モジュール (`require()` と `module.exports` を使用) の両方の方法が説明されています。ECMAScript モジュールは公式の JavaScript 標準であり、このチュートリアルで使用するものです。公式ドキュメントを参照する場合は、コードブロックの "ESM" タブを選択してください。
+
 ### モジュールのインポートと作成
 
-モジュールは Node の `require()` 関数を使って他のコードにインポートできる JavaScript ライブラリー/ファイルです。 Express 自体はモジュールです。Express アプリケーションで使用するミドルウェアおよびデータベースライブラリーも同様です。
+モジュールは、[`import`](/ja/docs/Web/JavaScript/Reference/Statements/import) 宣言を使用して他のコードにインポートできる JavaScript ライブラリー/ファイルです。Express 自体もモジュールであり、Express アプリケーションで使用するミドルウェアやデータベースライブラリーもモジュールです。
 
-以下のコードは、例として Express フレームワークを使用して、モジュールを名前でインポートする方法を示しています。 最初に `require()` 関数を呼び出し、モジュールの名前を文字列 (`'express'`) として指定し、返されたオブジェクトを呼び出して [Express アプリケーション](https://expressjs.com/ja/5x/api.html#app.settings.table)を作成します。その後、アプリケーションオブジェクトのプロパティと機能にアクセスできます。
+このチュートリアルでは [ECMAScript モジュール (ESM)](/ja/docs/Web/JavaScript/Guide/Modules)を使用します。プロジェクトの **package.json** に `"type": "module"` を設定すると、Node は **.js** ファイルを ES モジュールとして扱います。ESM が Node でどのように動作するかについては、[Node ESM](https://nodejs.org/api/esm.html) リファレンスを参照してください。
+
+以下のコードは、Express フレームワークを例として、モジュールを名前でインポートする方法を示しています。モジュールのデフォルトエクスポートを `express` としてインポートし、それを呼び出して[Express アプリケーション](https://expressjs.com/ja/5x/api/application/)を作成します。その後、アプリケーションオブジェクトのプロパティと関数にアクセスできます。
 
 ```js
-const express = require("express");
+import express from "express";
 
 const app = express();
 ```
@@ -187,45 +197,53 @@ const app = express();
 > [!NOTE]
 > あなたは自身のモジュールを作成したいと思うでしょう、これはあなたが自身のコードを管理しやすい部品に分けることを可能にします 。ちなみに、モノリシックな単一ファイルのアプリケーションは理解し維持するのが難しいです。モジュールを使用すると、明示的にエクスポートした変数のみがインポートされるため、モジュールを使用すると名前空間を管理するのにも役立ちます。
 
-オブジェクトをモジュールの外部で利用可能にするには、それらを `exports` オブジェクトの追加プロパティとして公開するだけです。たとえば、以下の **square.js** モジュールは `area()` メソッドと `perimeter()` メソッドをエクスポートしたファイルです。
+モジュール外でオブジェクトを利用可能にするには、[`export`](/ja/docs/Web/JavaScript/Reference/Statements/export) 宣言を使用します。たとえば、以下の **square.js** モジュールは `area()` と `perimeter()` 関数をエクスポートします。
 
 ```js
-exports.area = function (width) {
+export function area(width) {
   return width * width;
-};
-exports.perimeter = function (width) {
+}
+
+export function perimeter(width) {
   return 4 * width;
-};
+}
 ```
 
-`require()` を使ってこのモジュールをインポートし、次に示すようにエクスポートされたメソッドを呼び出すことができます。
+これらの名前付きエクスポートをインポートし、次のように呼び出すことができます。
 
 ```js
-const square = require("./square"); // require() にはファイル拡張子を除いたファイル名を引数に指定します。
-console.log(`The area of a square with a width of 4 is ${square.area(4)}`);
+import { area } from "./square.js";
+
+console.log(`The area of a square with a width of 4 is ${area(4)}`);
 ```
 
-> [!NOTE]
-> モジュールへの絶対パス（または最初に行ったように名前）を指定することもできます。
-
-一度に 1 つのプロパティを構築するのではなく、1 つの割り当てで完全なオブジェクトをエクスポートする場合は、次のように `module.exports` に割り当てます (これを実行して、エクスポートオブジェクトのルートをコンストラクターまたは他の関数にすることもできます)。
+相対インポートにはファイル拡張子を含める必要があります。すべての名前付きエクスポートを 1 つのオブジェクトとして利用するには、名前空間インポートを使用します。
 
 ```js
-module.exports = {
-  area(width) {
-    return width * width;
-  },
+import * as square from "./square.js";
 
-  perimeter(width) {
-    return 4 * width;
-  },
-};
+console.log(
+  `The perimeter of a square with a width of 4 is ${square.perimeter(4)}`,
+);
 ```
 
-> [!NOTE]
-> `exports` を与えられたモジュール内の `module.exports` への[ショートカット](https://nodejs.org/api/modules.html#modules_exports_shortcut)として考えることができます。実際、`exports` は、モジュールが評価される前に `module.exports` の値に初期化される単なる変数です。 その値はオブジェクト (この場合は空のオブジェクト) への参照です。これは、`exports` が `module.exports` によって参照されるのと同じオブジェクトへの参照を保持することを意味します。また、エクスポートに別の値を代入することで、`module.exports` にバインドされなくなることも意味します。
+単一の値をモジュールのデフォルトエクスポートとしてエクスポートすることもできます。
 
-モジュールの詳細については、[モジュール](https://nodejs.org/api/modules.html#modules_modules) (Node API のドキュメント) を参照してください。
+```js
+export default function area(width) {
+  return width * width;
+}
+```
+
+デフォルトエクスポートを中括弧なしでインポートし、ローカル名を選択します。
+
+```js
+import squareArea from "./square.js";
+
+console.log(squareArea(4));
+```
+
+詳しくは、[モジュール: ECMAScript モジュール](https://nodejs.org/api/esm.html)（Node API ドキュメント）を参照してください。
 
 ### 非同期 API の使用
 
@@ -268,7 +286,7 @@ app.get("/", (req, res) => {
 });
 ```
 
-コールバック関数はリクエストとレスポンスオブジェクトを引数として取ります。 この場合、メソッドは単にレスポンスに対して [`send()`](https://expressjs.com/en/5x/api.html#res.send) を呼び出して、文字列 "Hello World!" を返します。リクエスト/レスポンスサイクルを終了するための[レスポンスメソッドは他にも多数](https://expressjs.com/ja/guide/routing.html#response-methods)あります。たとえば、[`res.json()`](https://expressjs.com/en/5x/api.html#res.json) を呼び出して JSON レスポンスを送信したり、[`res.sendFile()`](https://expressjs.com/en/5x/api.html#res.sendFile) を呼び出してファイルを送信したりすることができます。
+コールバック関数はリクエストとレスポンスオブジェクトを引数として取ります。この場合、メソッドはレスポンスに対して [`send()`](https://expressjs.com/ja/5x/api/response/#ressend) を呼び出して、文字列 "Hello World!" を返します。リクエスト/レスポンスサイクルを終了する[レスポンスメソッドは他にも多数](https://expressjs.com/ja/guide/routing/#response-methods)あります。たとえば、[`res.json()`](https://expressjs.com/ja/5x/api/response/#resjson) を呼び出して JSON レスポンスを送信したり、[`res.sendFile()`](https://expressjs.com/ja/5x/api/response/#ressendfile) を呼び出してファイルを送信したりできます。
 
 > [!NOTE]
 > コールバック関数で好きな引数名を使うことができます。 コールバックが呼び出されると、最初の引数は常にリクエストになり、2 番目の引数は常にレスポンスになります。 コールバックの本体で作業しているオブジェクトを識別できるようにそれらの名前を付けることは意味があります。
@@ -288,14 +306,14 @@ app.all("/secret", (req, res, next) => {
 
 ルートを使用すると、URL 内の特定のパターンの文字を照合し、URL からいくつかの値を抽出し、それらを引数としてルートハンドラーに渡すことができます(引数として渡されるリクエストオブジェクトの属性として)。
 
-多くの場合、サイトの特定の部分のルートハンドラーをまとめて、共通のルート接頭辞を使用してそれらにアクセスすると便利です (たとえば、Wiki のあるサイトでは、1 つのファイルにすべての Wiki 関連ルートがあり、ルート接頭辞 _/wiki/_ を使用してアクセスすることがあります)。 Express では、これは [`express.Router`](https://expressjs.com/ja/guide/routing.html#express-router) オブジェクトを使用して実現されます。たとえば、**wiki.js** という名前のモジュールで Wiki ルートを作成してから、次に示すように `Router` オブジェクトをエクスポートできます。
+多くの場合、サイトの特定の部分のルートハンドラーをまとめて、共通のルート接頭辞を使用してそれらにアクセスすると便利です（たとえば、Wiki のあるサイトでは、1 つのファイルにすべての Wiki 関連ルートがあり、ルート接頭辞 _/wiki/_ を使用してアクセスすることがあります）。Express では、これは [`express.Router`](https://expressjs.com/ja/guide/routing/#expressrouter) オブジェクトを使用して実現されます。たとえば、**wiki.js** という名前のモジュールで Wiki ルートを作成してから、次に示すように `Router` オブジェクトをエクスポートできます。
 
 ```js
 // wiki.js - Wiki ルートモジュール
 
-const express = require("express");
+import { Router } from "express";
 
-const router = express.Router();
+const router = Router();
 
 // ホームページルート
 router.get("/", (req, res) => {
@@ -307,16 +325,16 @@ router.get("/about", (req, res) => {
   res.send("About this wiki");
 });
 
-module.exports = router;
+export default router;
 ```
 
 > [!NOTE]
 > `Router` オブジェクトにルートを追加することは、(前述のように) `app` オブジェクトにルートを追加するのと同じです。
 
-メインアプリケーションファイルでルーターを使用するには、ルートモジュール (**wiki.js**) を `require()` してから、Express アプリケーションで `use()` を呼び出してミドルウェア処理パスにルーターを追加します。 2 つの経路は `/wiki/` と `/wiki/about/` からアクセス可能になります。
+メインアプリケーションファイルでルーターを使用するには、ルートモジュール (**wiki.js**) をインポートしてから、Express アプリケーションで `use()` を呼び出してミドルウェア処理パスにルーターを追加します。2 つの経路は `/wiki/` と `/wiki/about/` からアクセスできます。
 
 ```js
-const wiki = require("./wiki.js");
+import wiki from "./wiki.js";
 
 // …
 app.use("/wiki", wiki);
@@ -331,9 +349,9 @@ app.use("/wiki", wiki);
 > [!NOTE]
 > ミドルウェアは任意の操作を実行し、任意のコードを実行し、リクエストおよびレスポンスオブジェクトに変更を加えることができ、またリクエスト - レスポンスサイクルを終了することもできます。サイクルが終了しない場合は、`next()` を呼び出して次のミドルウェア機能に制御を渡す必要があります (そうでない場合、リクエストは中断されたままになります)。
 
-Cookie の操作、セッション、ユーザー認証、リクエスト `POST` および JSON データへのアクセス、ロギングなどの一般的なウェブ開発タスクを簡素化するために、ほとんどのアプリはサードパーティ製ミドルウェアを使用します。[Express チームが管理するミドルウェアパッケージのリスト](https://expressjs.com/ja/resources/middleware.html)を見つけることができます。(他の人気のあるサードパーティのパッケージも含みます)。他の Express パッケージは npm パッケージマネージャーで入手できます。
+Cookie の操作、セッション、ユーザー認証、リクエスト `POST` および JSON データへのアクセス、ロギングなどの一般的なウェブ開発タスクを簡素化するために、ほとんどのアプリはサードパーティ製ミドルウェアを使用します。[Express チームが管理するミドルウェアパッケージのリスト](https://expressjs.com/ja/resources/middleware/)（他の人気のあるサードパーティパッケージも含む）があります。他の Express パッケージは npm パッケージマネージャーで入手できます。
 
-サードパーティのミドルウェアを使用するには、まず npm を使用してそれをアプリにインストールする必要があります。たとえば、 [morgan](https://expressjs.com/en/resources/middleware/morgan.html) という HTTP リクエストロガーミドルウェアをインストールするには、次のようにします。
+サードパーティのミドルウェアを使用するには、まず npm を使用してアプリにインストールする必要があります。たとえば、[morgan](https://expressjs.com/en/resources/middleware/morgan/) という HTTP リクエストロガーミドルウェアをインストールするには、次のようにします。
 
 ```bash
 npm install morgan
@@ -342,8 +360,8 @@ npm install morgan
 次に、Express アプリケーションオブジェクトで `use()` を呼び出してミドルウェアをスタックに追加できます。
 
 ```js
-const express = require("express");
-const logger = require("morgan");
+import express from "express";
+import logger from "morgan";
 
 const app = express();
 app.use(logger("dev"));
@@ -360,7 +378,7 @@ app.use(logger("dev"));
 以下の例は、ルートの有無に関わらず、両方の方法を使用してミドルウェア関数を追加する方法を示しています。
 
 ```js
-const express = require("express");
+import express from "express";
 
 const app = express();
 
@@ -385,11 +403,11 @@ app.listen(3000);
 > [!NOTE]
 > 上記ではミドルウェア関数を別々に宣言してからコールバックとして設定しています。以前のルートハンドラー関数では、使用時にコールバック関数を宣言しました。JavaScript では、どちらの方法も有効です。
 
-Express の資料には、Express ミドルウェアの[使用](https://expressjs.com/ja/guide/using-middleware.html)および[作成](https://expressjs.com/ja/guide/writing-middleware.html)に関するより優れた資料があります。
+Express の資料には、Express ミドルウェアの[使用](https://expressjs.com/ja/guide/using-middleware/)および[作成](https://expressjs.com/ja/guide/writing-middleware/)に関する優れた資料があります。
 
 ### 静的ファイルの提供
 
-[express.static](https://expressjs.com/ja/5x/api.html#express.static) ミドルウェアを使用すると、画像、CSS、JavaScript などの静的ファイルを提供できます (`static()` は、実際には Express の**一部**である唯一のミドルウェア関数です)。 たとえば、node を呼び出す場所と同じレベルで、'**public**' という名前のディレクトリーから画像、CSS ファイル、および JavaScript ファイルを配信するには、次の行を使用します。
+[express.static](https://expressjs.com/ja/5x/api/express/#expressstatic) ミドルウェアを使用すると、画像、CSS、JavaScript などの静的ファイルを提供できます (`static()` は、実際には Express の**一部**である唯一のミドルウェア関数です)。たとえば、node を呼び出す場所と同じレベルで、**public** という名前のディレクトリーから画像、CSS ファイル、JavaScript ファイルを配信するには、次の行を使用します。
 
 ```js
 app.use(express.static("public"));
@@ -411,7 +429,7 @@ app.use(express.static("public"));
 app.use(express.static("media"));
 ```
 
-ファイルをベース URL に追加するのではなく、静的 URL の仮想接頭辞を作成することもできます。たとえば、ここではファイルが接頭辞 "/media" でロードされるように[マウントパスを指定](https://expressjs.com/ja/5x/api.html#app.use)します。
+ファイルをベース URL に追加するのではなく、静的 URL の仮想接頭辞を作成することもできます。たとえば、ここではファイルが接頭辞 "/media" でロードされるように[マウントパスを指定](https://expressjs.com/ja/5x/api/application/#appuse)します。
 
 ```js
 app.use("/media", express.static("public"));
@@ -426,7 +444,7 @@ http://localhost:3000/media/cry.mp3
 ```
 
 > [!NOTE]
-> 詳しくは、[Express での静的ファイルの提供](https://expressjs.com/en/starter/static-files.html)を参照してください。
+> 詳しくは、[Express での静的ファイルの提供](https://expressjs.com/ja/starter/static-files/)を参照してください。
 
 ### エラーの処理
 
@@ -447,9 +465,9 @@ Express にはエラーハンドラーが組み込まれています。これは
 > スタックトレースは実稼働環境に含まれていません。プロダクションモードで実行するには、環境変数 `NODE_ENV` を `"production"` に設定する必要があります。
 
 > [!NOTE]
-> HTTP 404 およびその他の「エラー」ステータスコードは、エラーとして扱われません。これらを処理したい場合は、ミドルウェア関数を追加して処理することができます。詳しくは [FAQ](https://expressjs.com/ja/starter/faq.html#how-do-i-handle-404-responses) を見てください。
+> HTTP 404 およびその他の「エラー」ステータスコードは、エラーとして扱われません。これらを処理したい場合は、ミドルウェア関数を追加して処理することができます。詳しくは [FAQ](https://expressjs.com/ja/starter/faq/#how-do-i-handle-404-responses) を参照してください。
 
-詳しくは[エラー処理](https://expressjs.com/ja/guide/error-handling.html)（Express ドキュメント） を参照してください。
+詳しくは[エラー処理](https://expressjs.com/ja/guide/error-handling/)（Express ドキュメント）を参照してください。
 
 ### データベースの使用
 
@@ -465,7 +483,7 @@ npm install mongodb
 以下の例は、MongoDB を使ってどのように「哺乳類の」レコードを見つけることができるかを示しています。
 
 ```js
-const { MongoClient } = require("mongodb");
+import { MongoClient } from "mongodb";
 
 const uri = "mongodb://localhost:27017";
 const client = new MongoClient(uri);
@@ -486,31 +504,30 @@ run().catch(console.error);
 
 もう 1 つの一般的な方法は、Object Relational Mapper ("ORM") を介して間接的にデータベースにアクセスすることです。このアプローチではデータを「オブジェクト」または「モデル」として定義し、ORM はそれらを基礎となるデータベース形式にマッピングします。このアプローチには、開発者としてデータベースのセマンティクスではなく JavaScript オブジェクトの観点から考え続けることができ、受信データの検証とチェックを実行するための明らかな場所があるという利点があります。データベースについての詳細は、後の記事で説明します。
 
-詳しくは[データベース統合](https://expressjs.com/ja/guide/database-integration.html)（Express ドキュメント） を参照してください。
+詳しくは[データベース統合](https://expressjs.com/ja/guide/database-integration/)（Express ドキュメント）を参照してください。
 
 ### データのレンダリング（ビュー）
 
 テンプレートエンジン（Express では「ビューエンジン」とも呼ばれています）を使用すると、ページの生成時に埋められるデータのプレースホルダを使用して、テンプレート内の出力ドキュメントの構造を指定できます。テンプレートは HTML の作成によく使用されますが、他の種類の文書も作成できます。
 
 Express は複数のテンプレートエンジンをサポートしており、特に Pug（旧称 "Jade"）、Mustache、EJS が挙げられます。それぞれが特定の用途に対応する独自の強みを持っています（相対的な比較はインターネット検索で容易に見つかります）。
-Express アプリケーションジェネレーターはデフォルトで Jade を使用しますが、それ以外にもいくつかに対応しています。
 
 次に示すように、アプリケーション設定コードで、使用するテンプレートエンジンと、Express が 'ビュー' および 'ビューエンジン' 設定を使用してテンプレートを探す場所を設定します（テンプレートライブラリーを含むパッケージもインストールする必要があります！）
 
 ```js
-const express = require("express");
-const path = require("path");
+import express from "express";
+import path from "node:path";
 
 const app = express();
 
 // ('views') テンプレートを含むディレクトリーを設定
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(import.meta.dirname, "views"));
 
 // 利用するビューエンジン、この場合は 'some_template_engine_name' を設定
 app.set("view engine", "some_template_engine_name");
 ```
 
-テンプレートの外観は使用するエンジンによって異なります。"title" および "message" という名前のデータ変数のプレースホルダを含む "index.\<テンプレート拡張子>" という名前のテンプレートファイルがあると仮定すると、ルートハンドラー関数で [`Response.render()`](https://expressjs.com/ja/5x/api.html#res.render) を呼び出して HTML レスポンスを作成し、送信することになります。
+テンプレートの外観は使用するエンジンによって異なります。"title" および "message" という名前のデータ変数のプレースホルダを含む "index.\<テンプレート拡張子>" という名前のテンプレートファイルがあると仮定すると、ルートハンドラー関数で [`Response.render()`](https://expressjs.com/ja/5x/api/response/#resrender) を呼び出して HTML レスポンスを作成し、送信できます。
 
 ```js
 app.get("/", (req, res) => {
@@ -518,33 +535,35 @@ app.get("/", (req, res) => {
 });
 ```
 
-詳しくは [Express でのテンプレートエンジンの使用](https://expressjs.com/ja/guide/using-template-engines.html)（Express ドキュメント） を参照してください。
+詳しくは [Express でのテンプレートエンジンの使用](https://expressjs.com/ja/guide/using-template-engines/)（Express ドキュメント）を参照してください。
 
 ### ファイル構造
 
 Express は、構造や使用するコンポーネントに関しては何も想定していません。ルート、ビュー、静的ファイル、およびその他のアプリケーション固有のロジックは、任意のディレクトリー構造を持つ任意の数のファイルに存在できます。 Express アプリケーション全体を 1 つのファイルにまとめることは完全に可能ですが、通常は機能 (アカウント管理、ブログ、ディスカッション掲示板など) およびアーキテクチャ上の問題のドメイン ([MVC アーキテクチャ](/ja/docs/Glossary/MVC)を使用している場合は、モデル、ビュー、コントローラーなど) に基づいてアプリケーションをファイルに分割します。
 
-後のトピックでは、ウェブアプリケーションを作成するために簡単に拡張できるモジュール式のアプリケーションスケルトンを作成する Express Application Generator を使用します。
+後のトピックでは、ウェブアプリケーションを作成するために拡張できるモジュール式のアプリケーションスケルトンを作成します。
 
 ## まとめ
 
 おめでとうございます、Express/Node の旅の最初のステップを完了しました。これで Express と Node の主な利点と、Express アプリケーションの主要部分がどのように見えるか (ルート、ミドルウェア、エラー処理、およびテンプレートコード) をおおまかに理解できています。また、Express は指図しないフレームワークであるため、これらの部分をどのようにまとめるかやどのライブラリーを使用するかは、ほとんどあなた次第です。
 
-もちろん、Express は意図的に非常に軽量なウェブアプリケーションフレームワークであるため、その利点と可能性の多くはサードパーティのライブラリーと機能からもたらされています。以下の記事でそれらをより詳しく見ていきます。次回の記事では、Node 開発環境のセットアップについて見ていきます。そうすれば、いくつかの Express コードが実際に動作しているところを見始めることができます。
+もちろん、Express は意図的に非常に軽量なウェブアプリケーションフレームワークであるため、その利点と可能性の多くはサードパーティのライブラリーと機能からもたらされています。以下の記事でそれらをより詳しく見ていきます。次の記事では、Node 開発環境のセットアップについて見ていきます。そうすれば、いくつかの Express コードが実際に動作しているところを見られます。
 
 ## 関連情報
 
 - [Learn Node.js](https://scrimba.com/learn-nodejs-c00ho9qqh6?via=mdn) (Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>) はによる、楽しくインタラクティブな Node.js 入門を提供します。
 - [Learn Express.js](https://scrimba.com/learn-expressjs-c062las154?via=mdn) (Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>) は前のリンクを基に、Express フレームワークを使ってサーバーサイドのウェブサイトを構築する方法を示しています。
-- [Modules](https://nodejs.org/api/modules.html#modules_modules) (Node API docs)
+- [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)
+- [プラットフォーム間でのモジュールの使用](/ja/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms)
+- [ECMAScript モジュール](https://nodejs.org/api/esm.html)（Node API ドキュメント）
 - [Express](https://expressjs.com/ja)（ホームページ）
-- [基本的なルーティング](https://expressjs.com/ja/starter/basic-routing.html)（Express ドキュメント）
-- [ルーティング](https://expressjs.com/ja/guide/routing.html)（Express ドキュメント）
-- [Express でのテンプレート・エンジンの使用](https://expressjs.com/ja/guide/using-template-engines.html)（Express ドキュメント）
-- [ミドルウェアの使用](https://expressjs.com/ja/guide/using-middleware.html)（Express ドキュメント）
-- [Express アプリケーションで使用するミドルウェアの作成](https://expressjs.com/ja/guide/writing-middleware.html)（Express ドキュメント）
-- [データベースの統合](https://expressjs.com/ja/guide/database-integration.html)（Express ドキュメント）
-- [Express での静的ファイルの提供](https://expressjs.com/ja/starter/static-files.html)（Express ドキュメント）
-- [エラー処理](https://expressjs.com/ja/guide/error-handling.html)（Express ドキュメント）
+- [基本的なルーティング](https://expressjs.com/ja/starter/basic-routing/)（Express ドキュメント）
+- [ルーティングガイド](https://expressjs.com/ja/guide/routing/)（Express ドキュメント）
+- [Express でのテンプレートエンジンの使用](https://expressjs.com/ja/guide/using-template-engines/)（Express ドキュメント）
+- [ミドルウェアの使用](https://expressjs.com/ja/guide/using-middleware/)（Express ドキュメント）
+- [Express アプリケーションで使用するミドルウェアの作成](https://expressjs.com/ja/guide/writing-middleware/)（Express ドキュメント）
+- [データベースの統合](https://expressjs.com/ja/guide/database-integration/)（Express ドキュメント）
+- [Express での静的ファイルの提供](https://expressjs.com/ja/starter/static-files/)（Express ドキュメント）
+- [エラー処理](https://expressjs.com/ja/guide/error-handling/)（Express ドキュメント）
 
 {{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

@@ -3,7 +3,7 @@ title: "Express チュートリアル: 地域図書館のウェブサイト"
 short-title: "1: 地域図書館のチュートリアル"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website
 l10n:
-  sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
+  sourceCommit: d775e1249487f1a7ab9a8a031c70ca71bc892d63
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
@@ -35,14 +35,14 @@ MDN 「地域図書館」 Express (Node) チュートリアルへようこそ。
 
 この一連のチュートリアル記事では、次のことを行います。
 
-- Express Application Generator ツールを使用して、スケルトンウェブサイトとアプリケーションを作成します。
+- スケルトンウェブサイトとアプリケーションを作成します。
 - Node ウェブサーバーを起動および停止します。
 - データベースを使用してアプリケーションのデータを保存します。
 - さまざまな情報を要求するためのルートを作成し、ブラウザーに表示するデータを HTML としてレンダリングするためのテンプレート（「ビュー」）を作成します
 - フォームを操作します。
 - アプリケーションを運用環境にデプロイします。
 
-あなたはすでにこれらのトピックのいくつかについて学び、他のものについても簡単に触れました。チュートリアルシリーズの最後までに、簡単な Express アプリケーションを自分で開発するのに十分な知識があるはずです。
+これらのトピックの一部はすでに学び、他のものには簡単に触れました。チュートリアルシリーズの最後までに、簡単な Express アプリケーションを自分で開発するのに十分な知識を身につけられるはずです。
 
 ## 地域図書館ウェブサイト
 
@@ -61,7 +61,7 @@ MDN 「地域図書館」 Express (Node) チュートリアルへようこそ。
 
 すべてのコードスニペットをコピー＆ペーストするのではなく、実際に手入力してみてください。そうすることで、次回同様のコードを書く際に、よりコードに慣れることができ、長期的にはきっと役立つはずです。
 
-行き詰まったら、[Github のここ](https://github.com/mdn/express-locallibrary-tutorial)で ウェブサイトの完全に開発されたバージョンを見つけることができます。
+行き詰まったら、[GitHub のここ](https://github.com/mdn/express-locallibrary-tutorial)で ウェブサイトの完全に開発されたバージョンを見つけることができます。
 
 > [!NOTE]
 > この文書でテストされた Node、Express、および他のモジュールの特定のバージョンは、プロジェクト [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/main/package.json) にリストされています。
