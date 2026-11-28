@@ -3,7 +3,7 @@ title: Frameworks web del lado del servidor
 short-title: Frameworks del lado del servidor
 slug: Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks
 l10n:
-  sourceCommit: 6aca3e5157dbc163fe8209d9bf8cc3f2e8ec3f9d
+  sourceCommit: e9cb9feda05ce0f1dc08aada71c0a2265baeeaff
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}
@@ -148,7 +148,7 @@ Los frameworks web suelen ofrecer un mecanismo que facilita generar otros format
 Por ejemplo, el sistema de plantillas de Django te permite especificar variables usando una sintaxis de "llaves dobles" (por ejemplo, `\{{ variable_name }}`), que se sustituirán por los valores pasados desde la función de vista cuando se renderice la página. El sistema de plantillas también admite expresiones (con la sintaxis: `{% expression %}`), que permiten a las plantillas realizar operaciones simples, como iterar sobre los valores de una lista pasada a la plantilla.
 
 > [!NOTE]
-> Muchos otros sistemas de plantillas usan una sintaxis similar, por ejemplo: Jinja2 (Python), Handlebars (JavaScript), Moustache (JavaScript), etc.
+> Muchos otros sistemas de plantillas usan una sintaxis similar, por ejemplo: Jinja2 (Python), Handlebars (JavaScript), Mustache (JavaScript), etc.
 
 El fragmento de código de abajo muestra cómo funciona esto. Continuando con el ejemplo del "equipo más joven" de la sección anterior, la vista pasa a la plantilla HTML una variable de tipo lista llamada `youngest_teams`. Dentro del esqueleto HTML tenemos una expresión que primero comprueba si existe la variable `youngest_teams`, y luego la recorre con un bucle `for`. En cada iteración, la plantilla muestra el valor `team_name` del equipo en un elemento de lista.
 
@@ -273,13 +273,13 @@ Rails se ha usado en sitios de alto perfil, entre ellos: [Basecamp](https://base
 
 [Laravel](https://laravel.com/) es un framework de aplicaciones web con una sintaxis expresiva y elegante. Laravel intenta eliminar el sufrimiento del desarrollo facilitando las tareas comunes usadas en la mayoría de los proyectos web, tales como:
 
-- [Motor de enrutado simple y rápido](https://laravel.com/docs/routing).
-- [Potente contenedor de inyección de dependencias](https://laravel.com/docs/container).
-- Múltiples backends para el almacenamiento de [sesiones](https://laravel.com/docs/session) y [caché](https://laravel.com/docs/cache).
-- [ORM de base de datos](https://laravel.com/docs/eloquent) expresivo e intuitivo.
-- [Migraciones de esquema](https://laravel.com/docs/migrations) independientes de la base de datos.
-- [Procesamiento robusto de tareas en segundo plano](https://laravel.com/docs/queues).
-- [Difusión de eventos en tiempo real](https://laravel.com/docs/broadcasting).
+- [Motor de enrutado simple y rápido](https://laravel.com/framework/docs/routing).
+- [Potente contenedor de inyección de dependencias](https://laravel.com/framework/docs/container).
+- Múltiples backends para el almacenamiento de [sesiones](https://laravel.com/framework/docs/session) y [caché](https://laravel.com/framework/docs/cache).
+- [ORM de base de datos](https://laravel.com/framework/docs/eloquent) expresivo e intuitivo.
+- [Migraciones de esquema](https://laravel.com/framework/docs/migrations) independientes de la base de datos.
+- [Procesamiento robusto de tareas en segundo plano](https://laravel.com/framework/docs/queues).
+- [Difusión de eventos en tiempo real](https://laravel.com/framework/docs/broadcasting).
 
 Laravel es accesible, pero a la vez potente, y ofrece las herramientas necesarias para aplicaciones grandes y robustas.
 

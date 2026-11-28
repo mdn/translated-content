@@ -3,7 +3,7 @@ title: Introducción al lado del servidor
 short-title: Introducción
 slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
 l10n:
-  sourceCommit: 710372d69095aaeadfba6c892f3e39ed63df4c54
+  sourceCommit: 8bc4e3fe45532906246a760bff0b06b7cd105c52
 ---
 
 {{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps")}}

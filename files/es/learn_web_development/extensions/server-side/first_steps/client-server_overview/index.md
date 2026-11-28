@@ -2,7 +2,7 @@
 title: Descripción general de cliente-servidor
 slug: Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: a23122d0e86fb376234614beb5b350b217068054
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
