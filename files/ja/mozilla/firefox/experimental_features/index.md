@@ -3,7 +3,7 @@ title: Firefox における実験的機能
 short-title: 実験的機能
 slug: Mozilla/Firefox/Experimental_features
 l10n:
-  sourceCommit: 3e280ba0985e16f5cc48136b3c812ec506ac9735
+  sourceCommit: aba461489f7940803cdec6297933a0ae3f8dfc88
 ---
 
 このページには、Firefox の実験的機能および部分的に実装されている機能、および開発中または提案中のウェブプラットフォーム標準が記載されています。
@@ -109,7 +109,7 @@ HTML の [`<input type="color">`](/ja/docs/Web/HTML/Reference/Elements/input/col
 
 #### 中間の積極性
 
-Firefox 158 では、[`moderate`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules#moderate) という積極性への対応が追加されました。これにより、ユーザーがリンクにカーソルを短時間（デフォルトで 200 ミリ秒）合わせると、該当する先読みが開始されます。([Firefox バグ 2061013](https://bugzil.la/2061013))。
+[`moderate`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules#moderate) の積極性では、ユーザーがリンクに短時間（デフォルトで 200 ミリ秒）カーソルを合わせると、そのリンクに一致する先読みが開始されます。([Firefox バグ 2061013](https://bugzil.la/2061013))。
 
 | リリースチャンネル | 追加バージョン | デフォルトで有効 |
 | ------------------ | -------------- | ---------------- |
@@ -119,6 +119,71 @@ Firefox 158 では、[`moderate`](/ja/docs/Web/HTML/Reference/Elements/script/ty
 | Release            | 158            | No               |
 
 - `dom.speculation_rules.enabled`
+  - : 有効にするには `true` に設定してください。
+
+#### Speculation-Rules ヘッダー
+
+HTTP の {{httpheader("Speculation-Rules")}} レスポンスヘッダーは、インラインの `<script type="speculationrules">` 要素の代わりに、投機ルールを含む外部ファイルの URL を列挙します。このヘッダーは最上位の文書にのみ適用され、それぞれのファイルは `application/speculationrules+json` MIME タイプで提供する必要があります。([Firefox バグ 2020709](https://bugzil.la/2020709))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 160            | Yes              |
+| Developer Edition  | 160            | No               |
+| Beta               | 160            | No               |
+| Release            | 160            | No               |
+
+- `dom.speculation_rules.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### 文書間のビュー遷移
+
+[文書間のビュー遷移](/ja/docs/Web/API/View_Transition_API/Using#基本的な_mpa_ビュー遷移)を使用すると、複数ページアプリケーションで同じオリジンのページ間を移動するときに、遷移をアニメーション化できます。
+両方のページで CSS の {{cssxref("@view-transition")}} アットルールを使用して、遷移を有効にする必要があります。
+JavaScript で遷移をカスタマイズするには、古いページが置き換えられる直前に発生する {{domxref("Window.pageswap_event", "pageswap")}} イベント ({{domxref("PageSwapEvent")}}) を使用します。また、新しいページが初めて表示されるときに発生する {{domxref("Window.pagereveal_event", "pagereveal")}} イベント ({{domxref("PageRevealEvent")}}) も使用できます。
+{{domxref("CSSViewTransitionRule")}} インターフェイスは、CSS オブジェクトモデルにおける `@view-transition` ルールを表します。
+遷移の開始前に新しいページの重要な部分が読み込まれるように、[レンダーブロッキング](#レンダーブロッキング)を使用できることに注意してください。
+([Firefox バグ 2084340](https://bugzil.la/2084340))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 161            | Yes              |
+| Developer Edition  | 160            | No               |
+| Beta               | 160            | No               |
+| Release            | 160            | No               |
+
+- `dom.viewTransitions.cross-document.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### レンダーブロッキング
+
+{{HTMLElement("link",,"blocking")}}、{{HTMLElement("script",,"blocking")}}、{{HTMLElement("style",,"blocking")}} 要素の `blocking="render"` 属性に対応しました。
+これを使うと、指定したスタイルシートが読み込まれるかスクリプトが実行されるまでページの描画をブロックできるため、ページがスタイルなし、または不完全な状態で最初に表示されるのを防げます。
+`blocking="render"` と [`<link rel="expect">`](/ja/docs/Web/HTML/Reference/Attributes/rel#expect) を併用すると、文書内の特定の要素が構文解析されるまで描画をブロックすることもできます。
+{{domxref("PerformanceResourceTiming.renderBlockingStatus")}} プロパティは、リソースが描画をブロックしたかどうかを示します。
+([Firefox バグ 1751383](https://bugzil.la/1751383)、[Firefox バグ 2053279](https://bugzil.la/2053279))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 161            | Yes              |
+| Developer Edition  | 160            | No               |
+| Beta               | 160            | No               |
+| Release            | 160            | No               |
+
+- `dom.element.blocking.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### 動画と音声の遅延読み込み
+
+{{HTMLElement("video", "", "#loading")}} 要素と {{HTMLElement("audio", "", "#loading")}} 要素の `loading` 属性、およびその属性を反映する {{domxref("HTMLMediaElement.loading")}} プロパティに対応しました。`loading="lazy"` を指定すると、要素がビューポートに近づくまで、メディアと動画のポスター画像の読み込み、および `autoplay` 再生の開始が遅延されます。([Firefox バグ 2005072](https://bugzil.la/2005072))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 160            | No               |
+| Developer Edition  | 160            | No               |
+| Beta               | 160            | No               |
+| Release            | 160            | No               |
+
+- `media.lazy_loading.enabled`
   - : 有効にするには `true` に設定してください。
 
 ## CSS
@@ -396,20 +461,6 @@ CSS の {{cssxref("text-decoration-inset")}} プロパティは、値として�
 - `layout.css.anchor-positioning.follows-transforms.enabled`
   - : 有効にするには `true` に設定してください。
 
-### CSS `random()` 関数
-
-CSS {{cssxref("random")}} 関数は、指定された範囲内でランダムな値を生成し、必要に応じて、その範囲内の値をステップサイズごとの間隔に制限することができます。オプションの `<random-key>` 引数は、どの `random()` 関数がランダム値を共有するかを制御します。例えば、要素間やプロパティ間で共有する場合などです（[Firefox バグ 2071165](https://bugzil.la/2071165)）。
-
-| リリースチャンネル | 追加バージョン | デフォルトで有効 |
-| ------------------ | -------------- | ---------------- |
-| Nightly            | 158            | Yes              |
-| Developer Edition  | 158            | No               |
-| Beta               | 158            | No               |
-| Release            | 158            | No               |
-
-- `layout.css.random.enabled`
-  - : 有効にするには `true` に設定してください。
-
 ### `corner-shape` プロパティ
 
 {{cssxref("corner-shape")}} 一括指定プロパティおよびそれを構成する個別指定プロパティに、Nightly が対応するようになりました。これらのプロパティを使用すると、{{cssxref("corner-shape-value")}} キーワード値のいずれか、または {{cssxref("superellipse")}} 関数を用いて、角の形状をカスタマイズできます。
@@ -423,6 +474,74 @@ CSS {{cssxref("random")}} 関数は、指定された範囲内でランダムな
 | Release            | 157            | No               |
 
 - `layout.css.corner-shape.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### `margin-trim` プロパティ
+
+{{cssxref("margin-trim")}} プロパティは、ブロックコンテナーで Nightly に対応しました。このプロパティは、兄弟要素間のマージンを維持しながら、コンテナーの先頭側、末尾側、または両方の端にある子要素のブロック軸方向のマージンを取り除きます。
+([Firefox バグ 2051240](https://bugzil.la/2051240))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 161            | Yes              |
+| Developer Edition  | 161            | No               |
+| Beta               | 161            | No               |
+| Release            | 161            | No               |
+
+- `layout.css.margin-trim.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### `quotes` の `match-parent` 値
+
+CSS の {{cssxref("quotes")}} プロパティの {{cssxref("quotes", "match-parent", "#match-parent")}} 値が Nightly に対応しました。
+
+この値を指定すると、要素は親要素と同じ引用符の組を使用します。
+親の `quotes` の値が引用符の組の明示的なリストであれば、要素はそのリストの引用符を使用します。
+親の値が `auto` であれば、要素は親要素の言語に対応する引用符の組を使用します。
+使用する開始引用符と終了引用符の組は、引用の入れ子レベルによって異なります。
+
+Firefox の入れ子になった {{htmlelement("q")}} 要素のデフォルトスタイルでは、この値を使用します。
+そのため、入れ子になった引用文が異なる言語であっても、外側の引用文と同じ引用スタイルを自動的に使用します。
+([Firefox バグ 1752382](https://bugzil.la/1752382))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 161            | Yes              |
+| Developer Edition  | 161            | No               |
+| Beta               | 161            | No               |
+| Release            | 161            | No               |
+
+- `layout.css.quotes.match-parent.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### `text-autospace-size` プロパティ
+
+{{cssxref("text-autospace-size")}} プロパティが Nightly に対応しました。このプロパティは、{{cssxref("text-autospace")}} が中国語・日本語・韓国語 (CJK) の文字と CJK 以外の文字との間に追加する空白の量を設定します。
+([Firefox バグ 2086765](https://bugzil.la/2086765))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 161            | Yes              |
+| Developer Edition  | 161            | No               |
+| Beta               | 161            | No               |
+| Release            | 161            | No               |
+
+- `layout.css.text-autospace-size.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### `<meta name="color-scheme">` を反映する `prefers-color-scheme`
+
+{{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} メディア特性は、単一の配色を指定する [`<meta name="color-scheme">`](/ja/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) 要素で宣言された配色を反映します。これにより、配色に応じて画像や動画をより適切に選択できます。また、テーマ切り替え機能も実装しやすくなります。
+([Firefox バグ 2085572](https://bugzil.la/2085572))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 161            | Yes              |
+| Developer Edition  | 161            | No               |
+| Beta               | 161            | No               |
+| Release            | 161            | No               |
+
+- `layout.css.prefers-color-scheme.meta-tag.enabled`
   - : 有効にするには `true` に設定してください。
 
 ## SVG
@@ -573,52 +692,20 @@ CSS {{cssxref("random")}} 関数は、指定された範囲内でランダムな
 - `dom.reporting.crash.enabled`
   - : 有効にするには `true` に設定してください（Nightly ではデフォルトで有効）。
 
-### CSS Typed Object Model Level 1
+### ワーカーおよびワークレットで公開される CSS の数値ファクトリー関数
 
-[CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API) は Nightly に実装されています。
-これにより、CSS 値が文字列ではなく型付き JavaScript オブジェクトとして公開されるため、CSS プロパティの操作が簡素化されます。
-([Firefox バグ 1278697](https://bugzil.la/1278697))
-
-| リリースチャンネル | 追加バージョン | デフォルトで有効 |
-| ------------------ | -------------- | ---------------- |
-| Nightly            | 154            | Yes              |
-| Developer Edition  | 149            | No               |
-| Beta               | 149            | No               |
-| Release            | 149            | No               |
-
-- `layout.css.typed-om.enabled`
-  - : 有効にするには `true` に設定してください。
-
-#### ワーカーおよびワークレットで公開される CSS の数値ファクトリー関数
-
-{{domxref("CSS")}} 名前空間の[数値ファクトリー関数](/ja/docs/Web/API/CSS/factory_functions_static)（例: `CSS.px()`）は、`Window` だけでなく、ワーカーやペイントワークレットでも公開されるようになりました。これらは [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_型付きオブジェクトモデル_API)の一部であるため、Nightly 版以外では、`layout.css.typed-om.enabled` 環境設定を `true` に設定する必要があります。（[Firefoxバグ 2079188](https://bugzil.la/2079188)）。
+{{domxref("CSS")}} 名前空間の[数値ファクトリー関数](/ja/docs/Web/API/CSS/factory_functions_static)（例: `CSS.px()`）が、`Window` だけでなく、ワーカーやペイントワークレットでも公開されるようになりました。
+([Firefox バグ 2079188](https://bugzil.la/2079188)、[Firefox バグ 2079583](https://bugzil.la/2079583))。
 
 | リリースチャンネル | 追加バージョン | デフォルトで有効 |
 | ------------------ | -------------- | ---------------- |
-| Nightly            | 159            | No               |
+| Nightly            | 161            | Yes              |
 | Developer Edition  | 159            | No               |
 | Beta               | 159            | No               |
 | Release            | 159            | No               |
 
 - `layout.css.namespace.exposed-in-workers-and-worklets`
-  - : 有効にするには `true` に設定してください。
-- `layout.css.typed-om.enabled`
   - : 有効にするには `true` に設定してください（Nightly ではデフォルトで有効）。
-
-### 端末内音声認識
-
-[端末内音声認識](/ja/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition)が、Nightly 版（デスクトップ版のみ）で対応するようになりました。これにより、クラウドサービスに頼ることなく、ブラウザー上で直接[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) を介して音声認識を行うことができるようになります。
-([Firefox bug 2069803](https://bugzil.la/2069803)).
-
-| リリースチャンネル | 追加バージョン | デフォルトで有効 |
-| ------------------ | -------------- | ---------------- |
-| Nightly            | 158            | Yes              |
-| Developer Edition  | 158            | No               |
-| Beta               | 158            | No               |
-| Release            | 158            | No               |
-
-- `media.webspeech.recognition.enable`
-  - : 有効にするには `true` に設定してください。
 
 ### ストリーミングリクエスト本体
 
@@ -636,6 +723,20 @@ CSS {{cssxref("random")}} 関数は、指定された範囲内でランダムな
   - : 有効にするには `true` に設定してください。
 
 ### グラフィック: Canvas, WebGL, WebGPU
+
+#### Canvas の二次元色空間
+
+{{domxref("HTMLCanvasElement.getContext()")}} と {{domxref("OffscreenCanvas.getContext()")}} の [`colorSpace`](/ja/docs/Web/API/HTMLCanvasElement/getContext#colorspace) オプションは、`2d` コンテキストで対応しています。{{domxref("CanvasRenderingContext2D.getContextAttributes()")}} は選択された色空間を返します。画像データにも色空間があり、{{domxref("ImageData.colorSpace")}} プロパティで取得できます。{{domxref("ImageData.ImageData", "ImageData()")}} コンストラクターと {{domxref("CanvasRenderingContext2D.createImageData()", "createImageData()")}} メソッドおよび {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}} メソッドの `colorSpace` 設定で、色空間を指定します。対応する値は `"srgb"` と `"display-p3"` です。現時点では、ピクセルデータは色空間間で変換されません。([Firefox バグ 1841326](https://bugzil.la/1841326))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 160            | No               |
+| Developer Edition  | 160            | No               |
+| Beta               | 160            | No               |
+| Release            | 160            | No               |
+
+- `gfx.canvas.colorspace.enabled`
+  - : 有効にするには `true` に設定してください。
 
 #### WebGL: ドラフト拡張
 
@@ -832,7 +933,7 @@ Linux や Intel Silicon 搭載 macOS などのその他のプラットフォー�
 
 ### コンテナータイミング API
 
-コンテナータイミング API は、コンテナー要素のコンテンツが描画された時点を報告するため、ビューポート全体ではなく、ページの一部の領域のレンダリング時間を測定することができます。
+[コンテナータイミング API](/ja/docs/Web/API/PerformanceContainerTiming) は、コンテナー要素のコンテンツが描画された時点を報告するため、ビューポート全体ではなく、ページの一部の領域のレンダリング時間を測定することができます。
 ([Firefox bug 1940240](https://bugzil.la/1940240)).
 
 | リリースチャンネル | 変更バージョン | デフォルトで有効 |
@@ -859,21 +960,6 @@ Linux や Intel Silicon 搭載 macOS などのその他のプラットフォー�
 | Release            | 157            | No               |
 
 - `dom.webcrypto.encapsulation.enabled`
-  - : 有効にするには `true` に設定してください。
-
-### 非同期クリップボード API におけるウェブ独自形式
-
-[クリップボード API](/ja/docs/Web/API/Clipboard_API) は、独自のクリップボード形式に対応しており、ウェブアプリが {{domxref("Clipboard.write()")}} メソッドおよび {{domxref("Clipboard.read()")}} メソッドを使用して、それぞれ `"web "` で始まる独自の MIME タイプを書き込んだり読み込んだりすることができます。
-この機能は、デスクトップ版では Firefox 154 以降で対応しており、Android 版では Firefox 156 以降で対応しています（[Firefox バグ 1956304](https://bugzil.la/1956304) および [Firefox バグ 2048545](https://bugzil.la/2048545)）。
-
-| リリースチャンネル | 変更バージョン | デフォルトで有効       |
-| ------------------ | -------------- | ---------------------- |
-| Nightly            | 154            | Yes (デスクトップのみ) |
-| Developer Edition  | 154            | No                     |
-| Beta               | 154            | No                     |
-| Release            | 154            | No                     |
-
-- `dom.clipboard.customFormatSupport.enabled`
   - : 有効にするには `true` に設定してください。
 
 ## セキュリティとプライバシー
