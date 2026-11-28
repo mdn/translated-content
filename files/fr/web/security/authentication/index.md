@@ -33,7 +33,7 @@ Dans cette série de guides, nous décrirons les systèmes d'authentification su
 
     Dans un système qui utilise des clés d'accès, l'appareil de l'utilisateur·ice stocke une {{Glossary("Public-key cryptography", "paire de clés cryptographiques")}} qui représente l'inscription de l'utilisateur·ice sur un site donné. Lorsque l'utilisateur·ice essaie de se connecter au site, celui-ci envoie un défi à l'appareil. L'appareil {{Glossary("digital signature", "signe")}} le défi avec la clé privée et envoie le résultat au site web, qui peut vérifier la signature et connecter l'utilisateur·ice.
 
-    Les clés d'accès sont mises en œuvre à l'aide de l'[API Web Authentication](/fr/docs/Web/API/Web_Authentication_API).
+    Les clés d'accès sont mises en œuvre à l'aide de [l'API Web Authentication](/fr/docs/Web/API/Web_Authentication_API).
 
 ## Gestion de session
 
