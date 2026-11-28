@@ -27,7 +27,7 @@ encodeURIComponent(uriComponent)
 ### 引数
 
 - `uriComponent`
-  - : URI の部分（パス、クエリー文字列、フラグメントなど）としてエンコードされる文字列。他にも[文字列に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)される値があります。
+  - : URI の部分（パス、クエリー文字列、フラグメントなど）としてエンコードされる文字列。他にも[文字列に強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)される値があります。
 
 ### 返値
 

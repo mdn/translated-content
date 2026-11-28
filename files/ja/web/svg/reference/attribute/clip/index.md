@@ -2,7 +2,7 @@
 title: clip
 slug: Web/SVG/Reference/Attribute/clip
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
 **`clip`** 属性は、要素の表示領域を定義します。代わりに {{svgattr("clip-path")}} を使用してください。
@@ -33,12 +33,12 @@ svg {
 
 ```html
 <svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
-  <!-- Auto clipping -->
+  <!-- 自動クリッピング -->
   <svg x="0" width="10" height="10" clip="auto">
     <circle cx="5" cy="5" r="4" stroke="green" />
   </svg>
 
-  <!-- Rect(top, right, bottom, left) clipping -->
+  <!-- 矩形（上、右、下、左）によるクリッピング -->
   <svg x="10" width="10" height="10" clip="rect(1, 9, 8, 2)">
     <circle cx="5" cy="5" r="4" stroke="green" />
   </svg>
@@ -56,7 +56,7 @@ svg {
       <td><code>auto</code> | <code>rect()</code></td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>auto</code></td>
     </tr>
     <tr>
@@ -66,7 +66,7 @@ svg {
   </tbody>
 </table>
 
-値 `auto` は、指定された要素によって作成されたビューポートの境界に沿ってクリップパスを定義します。値 `rect()` はクリップ長方形を定義し、 `rect(<top>, <right>, <bottom>, <left>)` の構文を取ります。 `<top>` および `<bottom>` の値は、要素のビューポートの上境界線からのオフセットを指定し、`<right>` および `<left>` は、要素のビューポートの左境界線からのオフセットを指定します。
+値 `auto` は、指定された要素によって作成されたビューポートの境界に沿ってクリップパスを定義します。値 `rect()` はクリップ矩形を定義し、 `rect(<top>, <right>, <bottom>, <left>)` の構文を取ります。 `<top>` および `<bottom>` の値は、要素のビューポートの上境界線からのオフセットを指定し、`<right>` および `<left>` は、要素のビューポートの左境界線からのオフセットを指定します。
 
 ## 仕様書
 

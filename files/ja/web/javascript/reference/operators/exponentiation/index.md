@@ -2,7 +2,7 @@
 title: べき乗演算子 (**)
 slug: Web/JavaScript/Reference/Operators/Exponentiation
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 <strong>べき乗演算子 (`**`)</strong> は、1 つ目のオペランドを 2 つ目のオペランドでべき乗した結果を返します。これは {{jsxref("Math.pow()")}} と同等ですが、オペランドとして[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)も受け入れます。
@@ -29,13 +29,24 @@ console.log((2 ** 3) ** 2);
 x ** y
 ```
 
+### 引数
+
+- `x`
+  - : 前置インクリメント演算子 (`++x`)、前置デクリメント演算子 (`--x`)、または[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 15 （後置演算子）以上の式です。その値は[数値または長整数](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)に強制変換されます。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 13 （べき乗）以上の式です。その値は[数値または長整数](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)に強制変換されます。
+
+### 返値
+
+`x` の `y` 乗を表す数値または長整数です。
+
 ## 解説
 
-`**` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。まず[両オペランドを数値型に変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への変換)し、それらの型を検査します。両オペランドが長整数になった場合、長整数のべき乗を実行します。そうでない場合は数値のべき乗を実行します。一方のオペランドが長整数になり、もう一方が数値になった場合は、{{jsxref("TypeError")}} が発生します。
+`**` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。まず[両オペランドを数値に強制変換し](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)、それらの型を検査します。両オペランドが長整数になった場合、長整数のべき乗を実行します。そうでない場合は数値のべき乗を実行します。一方のオペランドが長整数になり、もう一方が数値になった場合は、{{jsxref("TypeError")}} が発生します。
 
-数値と長整数の両方において、 `0` の正のべき乗は `0` を返し、 `0` の `0` 乗は `1` を返します。数値の場合、 `0` の負のべき乗は `Infinity` を返し、 `-0` の負のべき乗は `-Infinity` を返します。
+数値と長整数の両方において、 `0` の正のべき乗は `0` を返し、 `0` の `0` 乗は `1` を返します。数値の場合、`0` を負の指数でべき乗すると `Infinity` を返します。`-0` を負の奇数整数の指数でべき乗すると `-Infinity` を返し、その他の負の指数では `Infinity` を返します。
 
-`NaN ** 0`（および同等の `Math.pow(NaN, 0)`）は、数学操作において {{jsxref("NaN")}} が伝播しない唯一のケースです。オペランドが `NaN` であるにもかかわらず、結果は `1` を返します。さらに、 `base` が 1 で `exponent` が非有限数（±Infinity または `NaN`）の場合の挙動は IEEE 754 規格と異なります。規格では結果が 1 であるべきと指定しているのに対し、 JavaScript は後方互換性を維持するため `NaN` を返します。
+`NaN ** 0`（および同等の `Math.pow(NaN, 0)`）は、数学演算において {{jsxref("NaN")}} が伝播しない数少ないケースの 1 つです。オペランドが `NaN` であるにもかかわらず、結果は `1` を返します。さらに、 `base` が 1 で `exponent` が非有限数（±Infinity または `NaN`）の場合の挙動は IEEE 754 規格と異なります。規格では結果が 1 であるべきと指定しているのに対し、 JavaScript は後方互換性を維持するため `NaN` を返します。
 
 長整数のべき乗では、指数 `y` が負の場合は {{jsxref("RangeError")}} が発生します。これらは、負の指数は（底が `1`、`-1`、または `0` である場合を除き） 0 から 1 の間の値となる可能性が高く、丸め処理で 0 に変換されるため、開発者のミスである可能性が高いからです。
 
@@ -43,7 +54,7 @@ x ** y
 
 PHP や Python など、べき乗演算子 (`**`) を持つほとんどの言語では、べき乗演算子は単項演算子（単項 `+` や単項 `-` など）よりも優先順位が高いと定義されていますが、いくつかの例外があります。例えば、Bash では `**` 演算子は単項演算子よりも優先順位が低いと定義されています。
 
-JavaScript では、あいまいなべき乗式を記述することはできません。 つまり、基数の直前に単項演算子（[優先順位 14](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)、`+`/`-`/`~`/`!`/`++`/`--`/`delete`/`void`/`typeof`/`await`）を置くことはできません。 [これを行うと、SyntaxError が発生します](/ja/docs/Web/JavaScript/Reference/Errors/Unparenthesized_unary_expr_lhs_exponentiation)。
+JavaScript では、あいまいなべき乗式を記述することはできません。つまり、基数の直前に単項演算子（[優先順位 14](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)、`+`/`-`/`~`/`!`/`delete`/`void`/`typeof`/`await`）を置くことはできません。[これを行うと、SyntaxError が発生します](/ja/docs/Web/JavaScript/Reference/Errors/Unparenthesized_unary_expr_lhs_exponentiation)。なお、`++` と `--` は構文上有効な解釈がそれぞれ 1 つしかないため、使用できます。
 
 例えば、`-2 ** 2` は Bash では 4 ですが、それ以外の言語（Python など）では -4 です。これは JavaScript では演算子が曖昧であるため、無効な操作です。意図を明確にするには、いずれかの辺を括弧で囲む必要があります。例えば `-(2 ** 2)` のようにします。
 
@@ -64,7 +75,7 @@ NaN ** 0; // 1
 1 ** Infinity; // NaN
 ```
 
-長整数以外の値は、数値に変換されます。
+長整数以外の値は、数値に強制変換されます。
 
 ```js
 2 ** "3"; // 8

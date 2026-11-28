@@ -64,7 +64,7 @@ slice(indexStart, indexEnd)
 
 - `indexStart >= str.length` の場合、空文字列が返されます。
 - `indexStart < 0` の場合、位置は文字列の末尾から数えられます。もっと正式に言えば、この場合、部分文字列は `max(indexStart + str.length, 0)` から始まります。
-- `indexStart` が省略されていたり、`undefined` であったり、または[数値に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)できなかったりした場合、`0` として扱われます。
+- `indexStart` が省略されていたり、`undefined` であったり、または数値に[強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)できなかったりした場合、`0` として扱われます。
 - `indexEnd` が省略されているか、`undefined` であるか、`indexEnd >= str.length` の場合、`slice()` は文字列の末尾まで抽出します。
 - `indexEnd < 0` であった場合、その位置は文字列の末尾から数えられます。もっと正式に言えば、この場合、部分文字列は `max(indexEnd + str.length, 0)` で終わります。
 - 負の値を正規化した後、`indexEnd <= indexStart` である場合（つまり、`indexEnd` が `indexStart` の前の文字を表す場合）、空文字列が返されます。

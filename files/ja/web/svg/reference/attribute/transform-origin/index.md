@@ -2,7 +2,7 @@
 title: transform-origin
 slug: Web/SVG/Reference/Attribute/transform-origin
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`transform-origin`** は SVG の属性で、アイテムの座標変換の原点を設定します。
@@ -11,30 +11,6 @@ l10n:
 
 > [!NOTE]
 > プレゼンテーション属性であるため、`transform-origin` には対応する CSS プロパティ {{cssxref("transform-origin")}} もあります。両方が指定された場合、 CSS プロパティが優先されます。
-
-## 使用上のメモ
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong>値</strong></td>
-      <td>See {{cssxref("transform-origin", "", "#formal_syntax")}}</td>
-    </tr>
-    <tr>
-      <td><strong>デフォルト値</strong></td>
-      <td><code>0 0</code></td>
-    </tr>
-    <tr>
-      <td><strong>アニメーション</strong></td>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
-
-> [!NOTE]
-> `transform-origin` のデフォルト値は、すべての SVG 要素で `0 0` ですが、ルートの `<svg>` 要素および `<svg>` 要素のうち直接の子に [`foreignObject`](/ja/docs/Web/SVG/Reference/Element/foreignObject) があるものは例外です。これらの要素は、通常の CSS と同じく `transform-origin: 50% 50%` です。
-
-指定された長さ、パーセント値、およびキーワード（`left`、`center`、`right`、`top`、`bottom`）はすべて、[参照ボックス](/ja/docs/Web/CSS/Reference/Properties/transform-box)を基準としています。`transform-box` のデフォルト値は `view-box` であるため、要素自体に関連付けられた CSS レイアウトボックスがない限り、変換原点の座標は SVG 要素の `viewBox` を基準とします。
 
 ## 例
 
@@ -162,6 +138,30 @@ l10n:
 {{ EmbedLiveSample('transform-origin relative to the transformed element', 400, 310) }}
 
 それ以外の例は CSS の {{cssxref("transform-origin")}} を参照してください。
+
+## 使用上のメモ
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong>値</strong></td>
+      <td>{{cssxref("transform-origin", "", "#formal_syntax")}}</td>
+    </tr>
+    <tr>
+      <td><strong>デフォルト値</strong></td>
+      <td><code>0 0</code></td>
+    </tr>
+    <tr>
+      <td><strong>アニメーション</strong></td>
+      <td>可</td>
+    </tr>
+  </tbody>
+</table>
+
+> [!NOTE]
+> `transform-origin` のデフォルト値は、ルートの `<svg>` 要素および [`foreignObject`](/ja/docs/Web/SVG/Reference/Element/foreignObject) の直接の子である `<svg>` 要素を除くすべての SVG 要素で `0 0` です。これらの要素では、通常の CSS と同じく `transform-origin: 50% 50%` です。
+
+指定された長さ、パーセント値、およびキーワード（`left`、`center`、`right`、`top`、`bottom`）はすべて[参照ボックス](/ja/docs/Web/CSS/Reference/Properties/transform-box)を基準とします。`transform-box` のデフォルト値は `view-box` であるため、要素自体に関連付けられた CSS レイアウトボックスがない限り、座標変換の原点の座標は SVG 要素の `viewBox` を基準とします。
 
 ## 仕様書
 

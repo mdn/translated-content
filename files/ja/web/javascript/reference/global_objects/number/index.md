@@ -2,7 +2,7 @@
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`Number`** （数値）の値は `37` や `-9.25` のような浮動小数点数を表します。
@@ -58,35 +58,36 @@ JavaScript の数値 (`Number`) 型は [IEEE 754 の倍精度 64ビットバイ�
 
 これについては、[ECMAScript 標準](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-ecmascript-language-types-number-type)に記述されています。
 
-### 数値への変換
+### 数値への強制変換
 
-数字を期待する多くの組み込み演算は、最初に引数を数字に変換します（`Number`オブジェクトが数字プリミティブと似たような動作をするのは、このためです）。[この操作](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tonumber) は以下のように要約されます。
+数値を期待する多くの組み込み演算は、最初に引数を数値に強制変換します（これが `Number` オブジェクトが数値プリミティブと同様に動作する主な理由です）。[この操作](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tonumber)は以下のように要約されます。
 
 - 数値はそのまま返されます。
 - [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) は [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) になります。
 - [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) は `0` になります。
 - `true` は `1` に、`false` は `0` になります。
-- 文字列は、[数値リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#数値リテラル)が入っているかのように解釈して変換されます。解釈に失敗した場合は `NaN` が返されます。実際の数値リテラルと比較すると、いくつかの異なる点があります。
+- 文字列は、[数値リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#数値リテラル)を含むかのように構文解析されます。
+  構文解析に失敗した場合は `NaN` が返されます。実際の数値リテラルとは、いくつか異なる点があります。
   - 先頭および末尾のホワイトスペース/改行文字は無視されます。
   - 先頭が数字 `0` である場合、数値が 8 進数のリテラルとなる（または厳格モードで拒否される）ことはありません。
   - 文字列の始めには、符号を示すために `+` と `-` を置くことができます。（実際のコードでは、これらはリテラルの一部に「見える」のですが、実際には別個の単項演算子です。）ただし、符号は一度しか現れず、空白が続いてはいけません。
   - `Infinity` と `-Infinity` はリテラルとして認識されます。実際のコードでは、これらはグローバル変数です。
   - 空文字列またはホワイトスペースのみの文字列は `0` に変換されます。
   - [数値の区切り文字](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#数値の区切り文字)は許可されません。
-- [長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)は、意図しない精度の低下を防ぐために {{jsxref("TypeError")}} 例外が発生します。
+- [長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の場合、意図しない暗黙の強制変換による精度の低下を防ぐため、{{jsxref("TypeError")}} が発生します。
 - [シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)は {{jsxref("TypeError")}} 例外が発生します。
-- オブジェクトはまず[プリミティブに変換されます](/ja/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion)（[`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)を `"number"` のヒント付きで、`valueOf()`、`toString()` メソッドをこの順で呼び出すことで）。結果のプリミティブは数値へ変換されます。
+- オブジェクトはまず[プリミティブに変換されます](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブへの強制変換)（[`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)を `"number"` のヒント付きで、`valueOf()`、`toString()` メソッドをこの順で呼び出すことで）。結果のプリミティブは数値へ変換されます。
 
 JavaScript でほぼ同じ効果を得るには、2 つの方法があります。
 
-- [単項プラス](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus): `+x` は上で説明した数値変換の手順を、`x` を変換するためにそのまま実行します。
+- [単項プラス](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus): `+x` は、上記の数値への強制変換と同じ手順で `x` を数値に変換します。
 - [`Number()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) 関数: `Number(x)` は `x` を変換する同じアルゴリズムを使用します。ただし[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)は {{jsxref("TypeError")}} 例外を発生させず、精度が落ちる可能性があるものの、数値としての値を返します。
 
 {{jsxref("Number.parseFloat()")}} および {{jsxref("Number.parseInt()")}} は `Number()` と似ていますが、文字列のみを若干異なる解釈ルールで変換します。例えば、`parseInt()` は小数点を解釈せず、 `parseFloat()` は `0x` の接頭辞を解釈しません。
 
 #### 整数への変換
 
-演算子の中には整数を期待するものがあり ます。特に、配列や文字列の添字、時刻の成分、数値の基数を扱う演算子はそうです。上記の数値強制の手順を実行した後、結果は[切り捨て](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)て（小数部分を捨てて）整数に変換します。数値が無限大 (±Infinity) の場合は、そのまま返します。数値が `NaN` または `-0` の場合、`0` を返します。したがって、結果は常に整数（`-0`ではない）か ±Infinity となります。
+演算子の中には整数を期待するものがあります。特に、配列や文字列の添字、時刻の成分、数値の基数を扱う演算子が該当します。上記の数値への強制変換を行った後、結果は小数部分を捨てて[切り捨て](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)、整数に変換されます。数値が無限大 (±Infinity) の場合は、そのまま返されます。数値が `NaN` または `-0` の場合は、`0` が返されます。したがって、結果は常に整数（`-0` ではない）または ±Infinity です。
 
 注目すべきは、整数に変換すると `undefined` も `null` も `0` になることです。これは `undefined` が `NaN` に変換され、これも `0` になるためです。
 
@@ -240,7 +241,7 @@ Number("-Infinity"); // -Infinity
 
 ## 関連情報
 
-- [最新の `Number` の動作（2 進数と 8 進数のリテラルに対応）のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
+- [最新の `Number` の動作（2 進数と 8 進数のリテラルに対応）のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/number)<sup>(英語)</sup>
 - {{jsxref("NaN")}}
 - [算術演算子](/ja/docs/Web/JavaScript/Reference/Operators#算術演算子)
 - {{jsxref("Math")}} グローバルオブジェクト

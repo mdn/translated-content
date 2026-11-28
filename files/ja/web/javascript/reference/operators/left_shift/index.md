@@ -2,7 +2,7 @@
 title: 左シフト演算子 (<<)
 slug: Web/JavaScript/Reference/Operators/Left_shift
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **左シフト演算子 (`<<`)** は、 1 つ目のオペランドを指定されたビット数だけ左にずらしたバイナリー表現を持つ、数値または長整数を返します。左にずらしてあふれたビットは破棄され、右から 0 のビットが入ります。
@@ -23,6 +23,17 @@ console.log(a << b); // 00000000000000000000000000010100
 x << y
 ```
 
+### 引数
+
+- `x`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 10 （ビットシフト）以上の式です。その値は[符号付き 32 ビット整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#固定長数値への変換)または[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt#長整数への強制変換)に強制変換されます。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 11 （加算）以上の式です。その値は[符号なし 32 ビット整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#固定長数値への変換)または[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt#長整数への強制変換)に強制変換されます。数値の場合、シフト量は下位 5 ビットで決まります。長整数の場合、負のシフト量はシフト方向を反転させます。
+
+### 返値
+
+シフト量だけ左シフトした `x` を表す、符号付き 32 ビット整数または長整数です。
+
 ## 解説
 
 `<<` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。数値の場合、この演算子は 32 ビット整数を返します。 長整数の場合、演算子は長整数を返します。最初の両オペランドを数値型に変換し、それらの型を検査します。両オペランドが長整数になった場合、長整数の左シフトを実行します。そうでない場合、両オペランドを [32 ビット整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#固定長数値への変換)に変換し、数値の左シフトを実行します。一方のオペランドが長整数になり、もう一方が数値になった場合、 {{jsxref("TypeError")}} が発生します。
@@ -35,8 +46,8 @@ x << y
 9 << 2 (10 進数): 00000000000000000000000000100100 (2 進数) = 36 (10 進数)
 ```
 
-任意の数 `x` を `y` ビット分だけ左にビット単位にずらすと、 `x * 2 ** y` になります。
-ですから、例えば `9 << 3` は `9 * (2 ** 3) = 9 * (8) = 72` になります。
+32 ビット整数 `x` を `y` ビット左へビット単位でシフトすると、`x * 2 ** y` になります。
+例えば、`9 << 3` は `9 * (2 ** 3) = 9 * (8) = 72` と等価です。
 
 左オペランドが 32 ビットを超える数値の場合、上位側のビットが破棄されます。例えば、以下の 32 ビットを超える整数は 32 ビット整数に変換されます。
 

@@ -37,7 +37,7 @@ localeCompare(compareString, locales, options)
 [`Intl.Collator` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) に対応している実装では、これらの引数はちょうど [`Intl.Collator()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) コンストラクターの引数に対応します。`Intl.Collator` の対応のない実装では、両方の引数を無視し、比較を行うと完全に実装依存の値を返します。一貫性があることだけが必要です。
 
 - `compareString`
-  - : この文字列と比較される文字列です。すべての値は[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ので、省略したり `undefined` を渡したりすると、`localeCompare()` は `"undefined"` という文字列と比較を行います。これはおそらく望むところではないでしょう。
+  - : この文字列と比較される文字列です。すべての値は文字列に[強制変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)ので、省略したり `undefined` を渡したりすると、`localeCompare()` は `"undefined"` という文字列と比較を行います。これはおそらく望むところではないでしょう。
 - `locales` {{optional_inline}}
   - : BCP 47 言語タグの文字列、またはそのような文字列の配列です。`Intl.Collator()` コンストラクターの [`locales`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) 引数に対応します。
 

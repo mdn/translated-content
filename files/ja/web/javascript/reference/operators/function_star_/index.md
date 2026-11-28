@@ -2,12 +2,12 @@
 title: function* 式
 slug: Web/JavaScript/Reference/Operators/function*
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **`function*`** キーワードは、式の中でジェネレーター関数を定義するために使用することができます。
 
-また、ジェネレーター関数は[`function*`宣言](/ja/docs/Web/JavaScript/Reference/Statements/function*)を使用して定義することもできます。
+また、ジェネレーター関数は [`function*` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function*)を使用して定義することもできます。
 
 {{InteractiveExample("JavaScript デモ: function* 式", "taller")}}
 
@@ -63,9 +63,13 @@ function* name(param0, param1, /* …, */ paramN) {
 - `statements` {{optional_inline}}
   - : 関数の本体を構成する文。
 
+### 返値
+
+{{jsxref("GeneratorFunction")}} オブジェクトです。
+
 ## 解説
 
-`function*` 式は [`function*` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function*)ととてもよく似ており、構文もほとんど同じです。`function*` 式と `function*` 文の主な違いは、`function*` 式で無名ジェネレーター関数を生成する場合は関数名が省略できる点です。 `function*` 式は、定義すると直ちに実行する [IIFE](/ja/docs/Glossary/IIFE) （即時実行関数式）として使用できるため、その場で作成する[反復可能イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反覆可能プロトコル)を実現することができます。詳細は[関数](/ja/docs/Web/JavaScript/Reference/Functions)に関する章も参照してください。
+`function*` 式は [`function*` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function*)ととてもよく似ており、構文もほとんど同じです。`function*` 式と `function*` 宣言の主な違いは、`function*` 式では関数名を省略して無名ジェネレーター関数を作成できる点です。`function*` 式は、定義すると直ちに実行する [IIFE](/ja/docs/Glossary/IIFE) （即時実行関数式）として使用でき、その場で作成する[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)を実現できます。詳細は[関数](/ja/docs/Web/JavaScript/Reference/Functions)に関する章も参照してください。
 
 ## 例
 

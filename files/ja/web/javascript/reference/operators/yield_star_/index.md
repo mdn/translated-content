@@ -1,11 +1,11 @@
 ---
-title: yield* 演算子
+title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
-**`yield*`** 演算子は、ジェネレーター関数（同期または非同期）内で使用でき、別の [反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反覆可能プロトコル)（{{jsxref("Generator")}} など）への委任に使用することができます。非同期ジェネレーター関数内では、さらに別の非同期反復可能オブジェクト（{{jsxref("AsyncGenerator")}} など）への委任にも使用できます。
+**`yield*`** 演算子は、ジェネレーター関数（同期または非同期）内で使用でき、別の[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)（{{jsxref("Generator")}} など）への委任に使用できます。非同期ジェネレーター関数内では、さらに別の非同期反復可能オブジェクト（{{jsxref("AsyncGenerator")}} など）への委任にも使用できます。
 {{InteractiveExample("JavaScript デモ: yield* 演算子")}}
 
 ```js interactive-example
@@ -31,16 +31,16 @@ yield* expression
 
 ### 引数
 
-- `expression` {{optional_inline}}
-  - : 反復可能オブジェクトです。
+- `expression`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 2（代入）以上で、[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)として評価される式です。非同期ジェネレーター内では、[非同期反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)として評価されることもあります。
 
 ### 返値
 
-そのイテレーターが閉じられたとき（`done` が `true` のとき）に返される値を返します。
+イテレーターの最終結果の `value` プロパティです（その結果の `done` プロパティは{{Glossary("truthy", "真値")}}です）。
 
 ## 解説
 
-`yield*` 式はオペランドを反復処理し、オペランドが返すそれぞれの値を生成します。これは現在のジェネレーターの反復処理を基盤となるイテレーターに委任します。これらをそれぞれ「ジェネレーター」と「イテレーター」と呼びます。 `yield*` は最初の、オペランドからイテレーターを、後者の [`[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) メソッドを呼び出すことで取得します。その後、ジェネレーターの `next()` メソッドが呼び出されるそれぞれの時点において、 `yield*` はイテレーターの `next()` メソッドを呼び出します。この際、ジェネレーターの `next()` メソッドが受け取った引数（最初の呼び出しでは常に `undefined`）を渡すと同時に、イテレーターの `next()` メソッドから返される結果オブジェクトと同じものをyieldします。イテレーターの結果が `done: true` を持つ場合、 `yield*` 式は実行を停止し、その結果の `value` を返します。
+`yield*` 式はオペランドを反復処理し、オペランドが返すそれぞれの値を生成します。これは現在のジェネレーターの反復処理を基盤となるイテレーターに委任します。これらをそれぞれ「ジェネレーター」と「イテレーター」と呼びます。`yield*` は、オペランドの [`[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) メソッドを呼び出して、オペランドからイテレーターを取得します。その後、ジェネレーターの `next()` メソッドが呼び出されるたびに、`yield*` はイテレーターの `next()` メソッドを呼び出します。この際、ジェネレーターの `next()` メソッドが受け取った引数（最初の呼び出しでは常に `undefined`）を渡し、イテレーターの `next()` メソッドが返すものと同じ結果オブジェクトを生成します。イテレーターの結果が `done: true` の場合、`yield*` 式は実行を停止し、その結果の `value` を返します。
 
 `yield*` 演算子は、現在のジェネレーターの {{jsxref("Generator/throw", "throw()")}} メソッドと {{jsxref("Generator/return", "return()")}} メソッドを、基盤となるイテレーターにも転送します。現在のジェネレーターがこれらのメソッドのいずれかによって早期に閉じられた場合、基盤となるイテレーターに通知されます。ジェネレーターの `throw()`/`return()` メソッドが呼び出されると、基盤となるイテレーターの `throw()`/`return()` メソッドが同じ引数で呼び出されます。`throw()`/`return()` の返値は `next()` メソッドの結果と同様に処理され、メソッドが例外を発生する場合、その例外は `yield*` 式から伝播されます。
 
@@ -50,9 +50,9 @@ yield* expression
 
 ## 例
 
-### 別のジェネレータに委任する
+### 別のジェネレーターに委任する
 
-次のコードでは、 `g1()` によって生成される値は、 `g2()` で生成されるものと同じように `next()` の呼び出しから返されます。
+次のコードでは、`next()` の呼び出しが `g1()` と `g2()` の両方が生成した値を返します。
 
 ```js
 function* g1() {
@@ -77,9 +77,9 @@ console.log(gen.next()); // {value: 5, done: false}
 console.log(gen.next()); // {value: undefined, done: true}
 ```
 
-### 他の反復可能なオブジェクト
+### 他の反復可能オブジェクト
 
-ジェネレータオブジェクトのほかに、 `yield*` は他の種類の反復 (例えば、配列、文字列、 {{jsxref("Functions/arguments", "arguments")}} オブジェクト) を `yield` することができます。
+ジェネレーターオブジェクトのほかに、`yield*` は配列、文字列、{{jsxref("Functions/arguments", "arguments")}} オブジェクトなど、ほかの種類の反復可能オブジェクトから値を生成することもできます。
 
 ```js
 function* g3(...args) {
@@ -119,7 +119,7 @@ const gen = g5();
 
 console.log(gen.next()); // {value: 1, done: false}
 console.log(gen.next()); // {value: 2, done: false}
-console.log(gen.next()); // {value: 3, done: false} done は false。 g5 が終了せず g4 だけが終了しているため
+console.log(gen.next()); // {value: 3, done: false}
 console.log(gen.next()); // {value: 'foo', done: true}
 ```
 
@@ -199,8 +199,8 @@ console.log(gen2.next(10));
 console.log(gen2.throw(50));
 // throw called with 50
 // { value: 'gf return value', done: true }
-console.log(gen.next(60));
-// { value: undefined, done: true }; gen は既に閉じている
+console.log(gen2.next(60));
+// { value: undefined, done: true }; gen2 は既に閉じている
 ```
 
 基盤となるイテレーターの `return()`/`throw()` メソッドが `done: false` を返した場合は、現在のジェネレーターは実行を続けて、 `yield*` は基盤となるイテレーターの委任を続けます。
@@ -236,7 +236,8 @@ console.log(gen.return(20));
 // return called with 20
 // { value: 'iterable return value', done: false }
 console.log(gen.next(30));
-// { value: 2, done: false }; gen is not closed
+// next called with 30
+// { value: 2, done: false }; gen はまだ閉じていない
 ```
 
 基盤となるイテレーターに `throw()` メソッドがなく、ジェネレーターの `throw()` が呼び出された場合、 `yield*` はエラーを発生します。
@@ -260,7 +261,7 @@ function* gf() {
 }
 
 const gen = gf();
-gen.next(); // First next() starts the yield* expression
+gen.next(); // 最初の next() 呼び出しで yield* 式を開始
 gen.throw(20); // TypeError: The iterator does not provide a 'throw' method.
 ```
 

@@ -2,7 +2,7 @@
 title: begin
 slug: Web/SVG/Reference/Attribute/begin
 l10n:
-  sourceCommit: a9063bb88f28dc2a9b32e39f060ab6930663da52
+  sourceCommit: 8d0c8728f49f2a0577ca17910f2149d6dd36b37e
 ---
 
 **`begin`** 属性は、関連する要素がいつアクティブになるかを定義します。
@@ -28,7 +28,7 @@ l10n:
       <td><code>&#x3C;begin-value-list></code></td>
     </tr>
     <tr>
-      <th scope="row">既定の値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0s</code></td>
     </tr>
     <tr>
@@ -114,9 +114,8 @@ l10n:
   width="120"
   height="120"
   viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1">
-  <!-- animated rectangles -->
+  xmlns="http://www.w3.org/2000/svg">
+  <!-- アニメーションする矩形 -->
   <rect x="10" y="35" height="15" width="0">
     <animate
       attributeType="XML"
@@ -147,7 +146,7 @@ l10n:
       fill="freeze" />
   </rect>
 
-  <!-- grid -->
+  <!-- 目盛り -->
   <text x="10" y="20" text-anchor="middle">0s</text>
   <line x1="10" y1="25" x2="10" y2="105" stroke="grey" stroke-width=".5" />
   <text x="35" y="20" text-anchor="middle">2s</text>
@@ -174,9 +173,8 @@ l10n:
   height="120"
   viewBox="0 0 120 120"
   xmlns="http://www.w3.org/2000/svg"
-  version="1.1"
   xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- animated rectangles -->
+  <!-- アニメーションする矩形 -->
   <rect x="10" y="35" height="15" width="0">
     <animate
       attributeType="XML"
@@ -207,7 +205,7 @@ l10n:
       dur="2s" />
   </rect>
 
-  <!-- grid -->
+  <!-- 目盛り -->
   <text x="10" y="20" text-anchor="middle">0s</text>
   <line x1="10" y1="25" x2="10" y2="105" stroke="grey" stroke-width=".5" />
   <text x="35" y="20" text-anchor="middle">2s</text>
@@ -234,9 +232,8 @@ l10n:
   height="120"
   viewBox="0 0 120 120"
   xmlns="http://www.w3.org/2000/svg"
-  version="1.1"
   xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- animated rectangle -->
+  <!-- アニメーションする矩形 -->
   <rect x="10" y="35" height="15" width="0">
     <animate
       attributeType="XML"
@@ -248,7 +245,7 @@ l10n:
       fill="freeze" />
   </rect>
 
-  <!-- trigger -->
+  <!-- トリガー -->
   <rect
     id="startButton"
     cursor="pointer"
@@ -265,7 +262,7 @@ l10n:
     クリック
   </text>
 
-  <!-- grid -->
+  <!-- 目盛り -->
   <text x="10" y="20" text-anchor="middle">0s</text>
   <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
   <text x="35" y="20" text-anchor="middle">2s</text>
@@ -292,9 +289,8 @@ l10n:
   height="120"
   viewBox="0 0 120 120"
   xmlns="http://www.w3.org/2000/svg"
-  version="1.1"
   xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- animated rectangle -->
+  <!-- アニメーションする矩形 -->
   <rect x="10" y="35" height="15" width="0">
     <animate
       attributeType="XML"
@@ -325,7 +321,7 @@ l10n:
       begin="myLoop.repeat(2)" />
   </rect>
 
-  <!-- grid -->
+  <!-- 目盛り -->
   <text x="10" y="20" text-anchor="middle">0s</text>
   <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
   <text x="35" y="20" text-anchor="middle">1s</text>
@@ -352,9 +348,8 @@ l10n:
   height="120"
   viewBox="0 0 120 120"
   xmlns="http://www.w3.org/2000/svg"
-  version="1.1"
   xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- animated rectangles -->
+  <!-- アニメーションする矩形 -->
   <rect x="10" y="35" height="15" width="0">
     <animate
       attributeType="XML"
@@ -366,12 +361,12 @@ l10n:
       fill="freeze" />
   </rect>
 
-  <!-- trigger -->
+  <!-- トリガー -->
   <text x="60" y="80" text-anchor="middle" pointer-events="none">
     "s" キーを押す
   </text>
 
-  <!-- grid -->
+  <!-- 目盛り -->
   <text x="10" y="20" text-anchor="middle">0s</text>
   <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
   <text x="35" y="20" text-anchor="middle">2s</text>

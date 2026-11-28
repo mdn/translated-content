@@ -1,8 +1,8 @@
 ---
-title: yield 演算子
+title: yield
 slug: Web/JavaScript/Reference/Operators/yield
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **`yield`** 演算子は、[ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)を一時停止したり再開したりするために使用します。
@@ -36,11 +36,11 @@ yield expression
 ### 引数
 
 - `expression` {{optional_inline}}
-  - : [イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)経由でジェネレーター関数が生成する値を定義します。省略した場合、代わりに `undefined` が生成されます。
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 2（代入）以上の式です。その値は[イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)を介してジェネレーター関数から生成されます。省略した場合、代わりに `undefined` が生成されます。
 
 ### 返値
 
-ジェネレーターの `next()` メソッドに渡されたオプションの値を返し、その実行を再開します。
+ジェネレーターの実行を再開するため、その `next()` メソッドに渡された任意の値を返します。
 
 > [!NOTE]
 > つまり、`next()` は非対称です。常に値を現在中断されている `yield` に送信しますが、次の `yield` のオペランドを返します。最初の `next()` 呼び出しに渡された引数は、現在中断されている `yield` が存在しないため取得できません。
@@ -56,7 +56,7 @@ yield expression
 - `yield` 式。この場合、ジェネレーターは一時停止し、 `next()` メソッドは、[イテレーター結果](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)オブジェクトを返します。このオブジェクトには、 `value` と `done` の 2 つのプロパティがあります。 `value` プロパティは `yield` 演算子の後にある式の値であり、 `done` は `false` で、ジェネレーター関数が完全に終了していないことを示します。
 - ジェネレーター関数の終了。この場合、ジェネレーターの処理が終了し、 `next()` メソッドはイテレーター結果オブジェクトを返します。このオブジェクトでは `value` が {{jsxref("undefined")}}、 `done` が `true` となります。
 - {{jsxref("Statements/return", "return")}} 文。この場合、ジェネレーターの処理は終了し、 `next()` メソッドはイテレーター結果オブジェクトを返します。このオブジェクトでは、 `value` が指定された返値となり、 `done` は `true` となります。
-- {{jsxref("Statements/throw", "throw")}} 文。これは、ジェネレーターの実行が完全に停止し、 `next()` メソッドは指定された例外を発生します。
+- {{jsxref("Statements/throw", "throw")}} 文。この場合、ジェネレーターの実行は完全に停止し、`next()` メソッドから指定された例外が発生します。
 
 `yield` 式で一時停止すると、ジェネレーターのコード実行は、ジェネレーターの `next()` メソッドが再度呼び出されるまで停止したままになります。ジェネレーターの `next()` メソッドにオプションの値が渡された場合、その値はジェネレーターの現在の `yield` 操作によって返される値となります。最初の `next()` 呼び出しには、対応する中断された `yield` 操作が持たないため、最初の `next()` 呼び出しで渡された引数を取得する方法はありません。
 
@@ -77,7 +77,7 @@ function* countAppleSales() {
 }
 ```
 
-ジェネレーター関数が定義されると、ご覧のようにイテレーターを構築するために使用されます。
+ジェネレーター関数を定義した後、次のようにしてイテレーターを構築できます。
 
 ```js
 const appleStore = countAppleSales(); // Generator { }
@@ -87,7 +87,7 @@ console.log(appleStore.next()); // { value: 5, done: false }
 console.log(appleStore.next()); // { value: undefined, done: true }
 ```
 
-ジェネレーターには `next(value)` で値を渡すこともできます。`step` は `yield` 式の返値として評価します。ただし、`next()` が最初の時点で呼び出された際にジェネレーターの `next()` メソッドに渡された値は無視されます。
+ジェネレーターには `next(value)` で値を渡すこともできます。`step` は `yield` 式の返値として評価されます。ただし、最初の `next()` 呼び出しでジェネレーターの `next()` メソッドに渡された値は無視されます。
 
 ```js
 function* counter(value) {

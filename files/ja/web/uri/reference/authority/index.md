@@ -3,7 +3,7 @@ title: URI オーソリティ
 short-title: オーソリティ
 slug: Web/URI/Reference/Authority
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 **オーソリティ**は URI の部分で、[スキーム](/ja/docs/Web/URI/Reference/Schemes)の後でパスより前に来る部分です。 最大 3 つの部分、すなわちユーザー情報、ホスト、ポート番号を持つことがあります。

@@ -2,10 +2,10 @@
 title: clip-path
 slug: Web/SVG/Reference/Attribute/clip-path
 l10n:
-  sourceCommit: 1c24dd81053cd34f393ce2c4b2ac071886007625
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`clip-path`** 表示属性は、クリップパスを、それが関連付けられている要素と定義、または関連付けます。
+**`clip-path`** はプレゼンテーション属性で、関連する要素にクリップパスを定義するか、関連付けます。
 
 > [!NOTE]
 > プレゼンテーション属性であるため、 `clip-path` には対応する CSS プロパティの {{cssxref("clip-path")}} があります。両方が指定された場合、 CSS プロパティの方が優先されます。
@@ -47,7 +47,7 @@ svg {
     <circle cx=".5" cy=".5" r=".5" />
   </clipPath>
 
-  <!-- Top-left: Apply a custom defined clipping path -->
+  <!-- 左上: 独自に定義したクリップパスを適用 -->
   <rect
     x="1"
     y="1"
@@ -56,9 +56,8 @@ svg {
     stroke="green"
     clip-path="url(#myClip)" />
 
-  <!-- Top-right: Apply a CSS basic shape on a fill-box
-       geometry. This is the same as having a custom clipping
-       path with a clipPathUnits set to objectBoundingBox -->
+  <!-- 右上: fill-box ジオメトリーに CSS 基本図形を適用。
+       clipPathUnits を objectBoundingBox に設定した独自のクリップパスと同じ -->
   <rect
     x="11"
     y="1"
@@ -67,7 +66,7 @@ svg {
     stroke="green"
     clip-path="circle() fill-box" />
 
-  <!-- Bottom-left -->
+  <!-- 左下 -->
   <rect
     x="1"
     y="11"
@@ -76,9 +75,8 @@ svg {
     stroke="green"
     clip-path="circle() stroke-box" />
 
-  <!-- Bottom-right: Apply a CSS basic shape on a view-box
-       geometry. This is the same as having a custom clipping
-       path with a clipPathUnits set to userSpaceOnUse -->
+  <!-- 右下: view-box ジオメトリーに CSS 基本図形を適用。
+       clipPathUnits を userSpaceOnUse に設定した独自のクリップパスと同じ -->
   <rect
     x="11"
     y="11"
@@ -103,7 +101,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>none</code></td>
     </tr>
     <tr>

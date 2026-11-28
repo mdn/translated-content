@@ -43,7 +43,7 @@ test(str)
 ### 引数
 
 - `str`
-  - : 正規表現と照合する文字列。すべての値は[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ので、これを省略したり `undefined` を渡したりすると `test()` は文字列 `"undefined"` を検索するようになります。
+  - : 正規表現と照合する文字列。すべての値は文字列に[強制変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)ので、これを省略したり `undefined` を渡したりすると `test()` は文字列 `"undefined"` を検索するようになります。
 
 ### 返値
 

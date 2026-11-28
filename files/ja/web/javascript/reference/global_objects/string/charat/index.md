@@ -30,7 +30,7 @@ charAt(index)
 ### 引数
 
 - `index`
-  - : 返される文字のゼロから始まる文字のインデックスです。[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)。`undefined` は 0 に変換されます。
+  - : 返される文字のゼロから始まる文字のインデックスです。整数に[強制変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)。`undefined` は 0 として扱われます。
 
 ### 返値
 
@@ -44,7 +44,7 @@ Unicode のコードポイントは `0` から `1114111` (`0x10FFFF`) までの�
 
 `charAt()` は [ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ブラケット記法)を使用して指定された位置の文字にアクセスするのにとても似ています。主な違いは次の通りです。
 
-- `charAt()` は `index` を整数に変換しようとしますが、ブラケット記法はそうせずに、直接 `index` をプロパティ名として使用します。
+- `charAt()` は `index` を整数に強制変換しようとしますが、ブラケット記法はそうせずに、直接 `index` をプロパティ名として使用します。
 - `charAt()` は `index` が範囲外であったときに空文字列を返しますが、ブラケット記法は `undefined` を返します。
 
 ## 例

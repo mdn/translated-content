@@ -2,7 +2,7 @@
 title: attributeType
 slug: Web/SVG/Reference/Attribute/attributeType
 l10n:
-  sourceCommit: db01d0c8b4cbf8a4467b1db65e17f6724d0ce710
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 **`attributeType`** 属性は、対象の属性およびそれに関連付けられた値が定義されている名前空間を指定します。

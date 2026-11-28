@@ -2,7 +2,7 @@
 title: 除算演算子 (/)
 slug: Web/JavaScript/Reference/Operators/Division
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **除算演算子 (`/`)** は、左のオペランドを被除数とし、右のオペランドを除数としたオペランド同士の除算結果を生成します。
@@ -29,11 +29,29 @@ console.log(2 / 0);
 x / y
 ```
 
+### 引数
+
+- `x`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 12 （乗算）以上の式です。その値は[数値または長整数](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)に強制変換されます。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 13 （べき乗）以上の式です。その値は[数値または長整数](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)に強制変換されます。
+
+### 返値
+
+`x` を `y` で割った商を表す数値または長整数です。長整数の除算では、商は 0 方向に切り捨てられます。
+
 ## 解説
 
-`/` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。まず[両オペランドを数値型に変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への変換)し、それらの型を検査します。両オペランドが長整数になった場合、長整数の除算を実行します。そうでない場合は数値の除算を実行します。一方のオペランドが長整数になり、もう一方が数値になった場合は、{{jsxref("TypeError")}} が発生します。
+`/` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。まず[両オペランドを数値に強制変換し](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)、それらの型を検査します。両オペランドが長整数になった場合、長整数の除算を実行します。そうでない場合は数値の除算を実行します。一方のオペランドが長整数になり、もう一方が数値になった場合は、{{jsxref("TypeError")}} が発生します。
 
-長整数の除算では、結果は両オペランドの商を 0 方向に切り捨てた値となり、余りは破棄されます。除数 `y` が `0n` の場合、{{jsxref("RangeError")}} が発生します。これは数値除算で 0 を割ると `Infinity` または `-Infinity` を返すのに対し、長整数には無限大の概念が存在しないためです。
+数値の除算の結果は（丸め誤差を除けば）一般に数学上の計算と一致し、`Infinity` との演算も含まれます（例えば、`Infinity` を有限の正の数で割っても `Infinity` です）。結果の符号は、両方のオペランドの符号が同じ場合は正で、異なる場合は負です（`0` と `-0` の符号は異なります）。特殊なケースをいくつか示します。
+
+- いずれかのオペランドが `NaN` の場合、結果は `NaN` です。
+- 両方のオペランドが `Infinity` または `-Infinity` の場合、結果は `NaN` です。
+- 両方のオペランドが `0` または `-0` の場合、結果は `NaN` です。
+- `y` のみが `0` または `-0` の場合、`x` と `y` の符号に応じて結果は `Infinity` または `-Infinity` になります（この場合、0 は限りなく小さい値として解釈されます）。
+
+長整数の除算では、結果は両オペランドの商を 0 方向に切り捨てた値となり、余りは破棄されます。除数 `y` が `0n` の場合、{{jsxref("RangeError")}} が発生します。これは、数値を 0 で割ると `Infinity`、`-Infinity`、または `NaN` が返る一方、長整数には無限大の概念が存在しないためです。
 
 ## 例
 
@@ -45,11 +63,12 @@ Math.floor(3 / 2); // 1
 1.0 / 2.0; // 0.5
 
 2 / 0; // Infinity
-2.0 / 0.0; // Infinity, because 0.0 === 0
+2.0 / 0.0; // Infinity （0.0 === 0 のため）
 2.0 / -0.0; // -Infinity
+0 / 0; // NaN
 ```
 
-長整数以外の値は数値に変換されます。
+長整数以外の値は数値に強制変換されます。
 
 ```js
 5 / "2"; // 2.5

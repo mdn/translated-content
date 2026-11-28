@@ -2,10 +2,13 @@
 title: 論理和演算子 (||)
 slug: Web/JavaScript/Reference/Operators/Logical_OR
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
-**論理和演算子 (`||`)** （論理的選言）をオペランドの組み合わせに対して使用すると、オペランドのうち 1 つ以上が true である場合に true になります。一般的には論理値（ブール値）で使用されます。その場合は論理値を返します。ただし `||` 演算子は実際には指定されたオペランドのうち一方の値を返すので、この演算子が論理値以外で使用された場合は、論理値以外の値を返すことになります。
+**論理和演算子 (`||`)** （論理的選言）をオペランドの組み合わせに対して使用すると、オペランドのうち 1 つ以上が true である場合に true になります。
+一般的には論理値（ブール値）で使用されます。
+その場合は論理値を返します。
+ただし `||` 演算子は実際には指定されたオペランドのうち一方の値を返すので、この演算子が論理値以外で使用された場合は、論理値以外の値を返すことになります。
 
 {{InteractiveExample("JavaScript デモ: 論理和演算子 (||)", "shorter")}}
 
@@ -23,6 +26,17 @@ console.log(a > 0 || b > 0);
 x || y
 ```
 
+### 引数
+
+- `x`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 3 （論理和）以上の式です。ここでヌル値合体式 (`??`) を使用する場合は、括弧で囲んでください。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 4 （論理積）以上の式です。`x` が{{Glossary("falsy", "偽値")}}の場合にのみ評価されます。
+
+### 返値
+
+`x` が{{Glossary("truthy", "真値")}}の場合は `x` の値、そうでなければ `y` の値です。
+
 ## 解説
 
 `x` が `true` に変換できる場合は `x` を返し、それ以外の場合は `y` を返します。
@@ -37,7 +51,7 @@ false に変換されうる式の例を示します。
 - 空文字列 (`""` または `''` または ` `` `)
 - `undefined`
 
-`||` 演算子では論理値以外のオペランドを使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Guide/Data_structures#論理型)に変換することが可能であるため、論理演算子と見なすことができます。返値 (または一般的な式) を対応する論理値に明示的に変換するには、二重の{{jsxref("Operators/Logical_NOT", "否定演算子", "", 1)}}または {{jsxref("Boolean/Boolean", "Boolean()")}} コンストラクターを使用してください。
+`||` 演算子では論理値以外のオペランドを使用することができますが、返値を常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Guide/Data_structures#論理型)に変換できるため、論理演算子と見なすことができます。返値 (または一般的な式) を対応する論理値に明示的に変換するには、二重の{{jsxref("Operators/Logical_NOT", "否定演算子", "", 1)}}または {{jsxref("Boolean/Boolean", "Boolean()")}} コンストラクターを使用してください。
 
 ### 短絡評価
 
@@ -64,10 +78,10 @@ console.log(B() || A());
 
 ### 演算子の優先順位
 
-以下の式は同じであるように見えるかもしれませんが、異なります。 `&&` 演算子は `||` 演算子よりも先に実行されるからです（[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)を参照）。
+以下の式は同じであるように見えるかもしれませんが、`&&` 演算子は `||` 演算子よりも強く結合するため、異なります（[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)を参照）。
 
 ```js-nolint
-true || false && false; // true を返す。 && が先に実行されるため
+true || false && false; // true を返す。true || (false && false) と同等
 (true || false) && false; // false を返す。グループ化の優先順位が最も高いため
 ```
 

@@ -1,43 +1,40 @@
 ---
-title: Window.find()
+title: "Window: find() メソッド"
+short-title: find()
 slug: Web/API/Window/find
+l10n:
+  sourceCommit: 950f04d94b48f259c471175bdafb52933b2b038d
 ---
 
 {{ApiRef}}{{Non-standard_Header}}
 
 > [!NOTE]
-> `Window.find()` の対応は、 Gecko の将来のバージョンで変更される可能性があります。 [Firefox バグ 672395](https://bugzil.la/672395) を参照してください。
+> `Window.find()` の対応は、 Gecko の将来のバージョンで変更される可能性があります。[Firefox バグ 672395](https://bugzil.la/672395) を参照してください。
 
 **`Window.find()`** メソッドは、ウィンドウ内の文字列を順次検索します。
 
 ## 構文
 
-```js
-find(
-  aString,
-  aCaseSensitive,
-  aBackwards,
-  aWrapAround,
-  aWholeWord,
-  aSearchInFrames,
-  aShowDialog,
-);
+```js-nolint
+find(string, caseSensitive, backwards, wrapAround, wholeWord, searchInFrames, showDialog)
 ```
 
 ### 引数
 
-- `aString`
+- `string`
   - : 検索するテキスト文字列です。
-- `aCaseSensitive`
+- `caseSensitive`
   - : 論理値です。 `true` の場合、大文字と小文字を区別して検索します。
-- `aBackwards`
+- `backwards`
   - : 論理値です。 `true` の場合、後方検索を行います。
-- `aWrapAround`
+- `wrapAround`
   - : 論理値です。 `true` の場合、折り返し検索を行います。
-- `aWholeWord`
-  - : 論理値です。 `true` の場合、完全一致検索を行います。これは実装されていません。 [Firefox バグ 481513](https://bugzil.la/481513) を参照してください。
-- `aSearchInFrames`
+- `wholeWord`
+  - : 論理値です。 `true` の場合、単語単位の検索を行います。
+- `searchInFrames`
   - : 論理値です。 `true` の場合、フレーム内の検索を行います。
+- `showDialog`
+  - : 論理値です。 `true` の場合、検索ダイアログを表示します。
 
 ### 返値
 
@@ -45,26 +42,33 @@ find(
 
 ## 例
 
+### HTML
+
+```html
+<p>Apples, Bananas, and Oranges.</p>
+<button type="button" id="find-apples">Apples を検索</button>
+<button type="button" id="find-bananas">Bananas を検索</button>
+<button type="button" id="find-orange">Orange を検索</button>
+<p id="output"></p>
+```
+
 ### JavaScript
 
 ```js
 function findString(text) {
   document.querySelector("#output").textContent =
-    "String found? " + window.find(text);
+    `文字列が見つかったか？ ${window.find(text)}`;
 }
-```
 
-### HTML
-
-```html
-<p>Apples, Bananas, and Oranges.</p>
-<button type="button" onClick='findString("Apples")'>Search for Apples</button>
-<button type="button" onClick='findString("Bananas")'>
-  Search for Bananas
-</button>
-<button type="button" onClick='findString("Orange")'>Search for Orange</button>
-
-<p id="output"></p>
+document.getElementById("find-apples").addEventListener("click", () => {
+  findString("Apples");
+});
+document.getElementById("find-bananas").addEventListener("click", () => {
+  findString("Bananas");
+});
+document.getElementById("find-orange").addEventListener("click", () => {
+  findString("Orange");
+});
 ```
 
 ### 結果
@@ -73,11 +77,11 @@ function findString(text) {
 
 ## メモ
 
-一部のブラウザーでは、 `Windows.find()` はサイト内で見つかったコンテンツを選択（強調表示）します。
+一部のブラウザーでは、`Window.find()` はサイト内で見つかったコンテンツを選択（強調表示）します。
 
 ## 仕様書
 
-どの仕様書にも含まれていません。
+この機能はどの仕様にも含まれていません。
 
 ## ブラウザーの互換性
 

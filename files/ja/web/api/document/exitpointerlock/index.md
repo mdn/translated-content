@@ -3,7 +3,7 @@ title: "Document: exitPointerLock() メソッド"
 short-title: exitPointerLock()
 slug: Web/API/Document/exitPointerLock
 l10n:
-  sourceCommit: c99ff93a1b71e7d664509fdd3e0c168920be967a
+  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
 ---
 
 {{APIRef("Pointer Lock API")}}

@@ -2,7 +2,7 @@
 title: import()
 slug: Web/JavaScript/Reference/Operators/import
 l10n:
-  sourceCommit: 696a0436bb4dd20eb4d30ac3f1d4fc5140d1eee9
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **`import()`** 構文は、一般に「動的インポート」と呼ばれ、ECMAScript モジュールを非同期かつ動的に[読み込み](/ja/docs/Web/JavaScript/Guide/Modules/Module_graph#グラフの読み込み)、モジュールではない環境でも使用できる関数風の式です。
@@ -23,9 +23,9 @@ import(moduleName, options)
 ### 引数
 
 - `moduleName`
-  - : インポートするモジュールを指定します。指定子の解決方法はホストによって定められますが、常に静的な[インポート宣言](/ja/docs/Web/JavaScript/Reference/Statements/import)と同じアルゴリズムに従います。
-- `options`
-  - : インポートオプションを格納するオブジェクト。以下のキーが認識されます。
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 2 （代入）以上の式です。その値は、インポートするモジュールを指定する[文字列](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)に強制変換されます。指定子の解決方法はホストによって定められますが、常に静的な[インポート宣言](/ja/docs/Web/JavaScript/Reference/Statements/import)と同じアルゴリズムに従います。
+- `options` {{optional_inline}}
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 2 （代入）以上の式です。評価結果は `undefined` またはインポートオプションを格納するオブジェクトです。以下のキーが認識されます。
     - `with`
       - : [インポート属性](/ja/docs/Web/JavaScript/Reference/Statements/import/with)。
 
@@ -34,7 +34,7 @@ import(moduleName, options)
 以下のプロミスを返します。
 
 - 参照されるモジュールが正常に読み込まれ、[評価](/ja/docs/Web/JavaScript/Guide/Modules/Module_graph#モジュールの評価)された場合、[モジュール名前空間オブジェクト](#モジュール名前空間オブジェクト)（すなわち `moduleName` からのすべてのエクスポートを格納したオブジェクト）で履行されます。
-- `moduleName` の[文字列への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)で例外が発生した場合、その例外で拒否されます。
+- `moduleName` の[文字列への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)で例外が発生した場合、その例外で拒否されます。
 - モジュールの[取得](/ja/docs/Web/JavaScript/Guide/Modules/Module_graph#グラフの読み込み)に失敗した場合、ホストが定めるエラーで拒否されます（Node では通常 `Error`、ブラウザーでは `TypeError` が使用されます）。一般的な原因には以下があります。
   - ファイルシステムベースのモジュールシステム（Node.js など）では、ファイルシステムへのアクセスに失敗した場合（アクセス権がない、ファイルが見つからない、など）。
   - ウェブベースのモジュールシステム（ブラウザーなど）では、ネットワーク要求が失敗した場合（インターネットに接続されていない、CORS の問題、など）または HTTP エラーが発生した場合（404、500 など）。
@@ -107,7 +107,7 @@ export function then(resolve) {
 import * as mod from "/my-module.js";
 
 import("/my-module.js").then((mod2) => {
-  // Logs "then() called"
+  // "then() called" をログに出力
   console.log(mod === mod2); // false
 });
 ```

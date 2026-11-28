@@ -3,7 +3,7 @@ title: "Document: pointerlockerror イベント"
 short-title: pointerlockerror
 slug: Web/API/Document/pointerlockerror_event
 l10n:
-  sourceCommit: c99ff93a1b71e7d664509fdd3e0c168920be967a
+  sourceCommit: 1c322acc575d927494ecff49c04159ba34aec781
 ---
 
 {{APIRef("Pointer Lock API")}}
@@ -14,12 +14,16 @@ l10n:
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxref("EventTarget/addEventListener", "addEventListener()")}} で使用します。
 
-```js
-addEventListener("pointerlockerror", (event) => {});
+```js-nolint
+addEventListener("pointerlockerror", (event) => { })
+```
 
-onpointerlockerror = (event) => {};
+または、このインターフェイスの[イベントハンドラープロパティ](/ja/docs/Web/API/Document_Object_Model/Events#イベントハンドラープロパティの使用)に代入します。
+
+```js-nolint
+onpointerlockerror = (event) => { }
 ```
 
 ## イベント型
@@ -38,7 +42,7 @@ document.addEventListener("pointerlockerror", (event) => {
 });
 ```
 
-`onpointerlockerror` イベントハンドラープロパティを使用した場合
+`onpointerlockerror` イベントハンドラープロパティを使用した場合（ただし、これにより、すでに `onpointerlockerror` を使用して追加されたほかのイベントリスナーが置換されます）。
 
 ```js
 document.onpointerlockerror = (event) => {

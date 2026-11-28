@@ -57,9 +57,9 @@ Math.abs(1); // 1
 Math.abs(Infinity); // 無限大
 ```
 
-### 引数の変換
+### 引数の強制変換
 
-`Math.abs()` は[引数を数値に変換します](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)。変換できない値は {{jsxref("NaN")}} となり、`Math.abs()` も {{jsxref("NaN")}} を返します。
+`Math.abs()` は[引数を数値に強制変換します](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)。強制変換できない値は {{jsxref("NaN")}} となり、`Math.abs()` も {{jsxref("NaN")}} を返します。
 
 ```js
 Math.abs("-1"); // 1

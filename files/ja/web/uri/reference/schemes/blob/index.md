@@ -3,7 +3,7 @@ title: "blob: URL"
 short-title: "blob:"
 slug: Web/URI/Reference/Schemes/blob
 l10n:
-  sourceCommit: 44373c3805ba65db7542af75b664dc6fdce2aec0
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 **blob （またはオブジェクト） URL**、すなわち blob: スキームが接頭辞として付いた URL を使用すると、 {{domxref("Blob")}} や {{domxref("MediaSource")}} を、 {{HTMLElement("img")}} 要素など、URL でのみ使用するように設計されている他の API と統合することができます。 blob URL は、ローカルで生成されたデータのダウンロードを開始したり、そのデータに移動したりするためにも使用できます。これらは不透明な識別子として設計されているため（つまり、手書きで記述してはいけません）、 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} や {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} 関数を使用して管理する必要があります。
@@ -55,6 +55,10 @@ blob URL 経由のリソースへのアクセスは、他のすべてのスト�
 > [!WARNING]
 > メディア要素にストリームを添付するために `createObjectURL()` に依存しているコードがまだ存在する場合、コードを更新して、 {{domxref("HTMLMediaElement.srcObject", "srcObject")}} を `MediaStream` に直接設定する必要があります。
 
+### Range ヘッダーを使用した取得
+
+Blob URL は、部分的なコンテンツをリクエストするために [`Range`](/ja/docs/Web/HTTP/Reference/Headers/Range) ヘッダーを使用した取得に対応しています。これは大きな blob を処理する際に特に便利で、blob 全体ではなく必要な部分だけを取得できます。例については、[blob URLから範囲を取得](/ja/docs/Web/HTTP/Reference/Headers/Range#blob_url_から範囲を取得)を参照してください。
+
 ## 例
 
 ### 有効な blob URL
@@ -90,4 +94,4 @@ canvas.toBlob((blob) => {
 - [画像を表示するためのオブジェクト URL の使い方](/ja/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images)
 - {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}
 - {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}}
-- [IANA リストの URI スキーム](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)（英語）
+- [IANA リストの URI スキーム](https://www.iana.org/assignments/uri-schemes)<sup>(英語)</sup>
