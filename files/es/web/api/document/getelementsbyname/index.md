@@ -5,15 +5,15 @@ slug: Web/API/Document/getElementsByName
 
 {{APIRef("DOM")}}
 
-Returns a nodelist collection with a given {{domxref("element.name","name")}} in the (X)HTML document.
+El método **`getElementsByName()`** de {{domxref("Document")}} devuelve una {{domxref("NodeList")}} viva de los elementos que tienen el valor indicado en el atributo `name`.
 
 ## Sintaxis
 
 ```js
-elements = document.getElementsByName(name);
+const elements = document.getElementsByName(name);
 ```
 
-- `elements` es una colección existente de {{domxref("NodeList")}}
+- `elements` es una {{domxref("NodeList")}} que se actualiza cuando cambian los elementos que coinciden con el nombre.
 - `name` es el valor del atributo `name` del elemento.
 
 ## Ejemplo
@@ -39,9 +39,9 @@ elements = document.getElementsByName(name);
 
 ## Notas
 
-El atributo [`name`](/es/docs/Web/API) es solamente aplicable al documento (X)HTML. El método retorna una colección existente de {{domxref("NodeList")}} que contiene todos los elementos con el valor dado para el atributo `name`, tanto {{htmlelement("meta")}} o {{htmlelement("object")}} o en caso que `name` sea colocado en elementos que no soportan un atributo de atributo del todo.
+El método también incluye elementos HTML que coinciden con el nombre aunque el atributo `name` no esté definido para ese tipo de elemento.
 
-El método **getElementsByName** trabaja de diferente manera en diferentes navegadires. En IE < 10, el método getElementsByName() tambipen retornará elementos que tienen un atributo `id` con el valor especificado. Entonces, debería tener cuidado de no usar el mismo string como `name` y `ID`.
+El comportamiento del método varía entre navegadores. En versiones de Internet Explorer anteriores a la 10, `getElementsByName()` también devuelve los elementos cuyo atributo `id` tiene el valor indicado. Por eso, conviene evitar el mismo valor para `name` y `id`.
 
 ## Especificaciones
 
@@ -55,4 +55,4 @@ El método **getElementsByName** trabaja de diferente manera en diferentes naveg
 
 - {{domxref("document.getElementById()")}} para retornar una referencia de un elemento por su `id`
 - {{domxref("document.getElementsByTagName()")}} para retornar referencias de elementos por el nombre de sus etiquetas
-- {{domxref("document.querySelector()")}} for powerful selectors via queries like `'div.myclass'`
+- {{domxref("Document.querySelector()")}} para encontrar el primer elemento que coincida con un selector CSS como `div.myclass`.
