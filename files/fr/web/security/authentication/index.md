@@ -7,7 +7,7 @@ l10n:
 
 L'authentification est le processus qui consiste à vérifier qu'une entité, par exemple une personne qui utilise un site web, est bien celle qu'elle prétend être. Vous devrez très probablement vous préoccuper de l'authentification si vous voulez que des personnes se connectent à votre site web.
 
-Si des personnes peuvent se connecter à votre site web, il existe généralement des actions qu'elles peuvent effectuer une fois connectées, ou des données auxquelles elles peuvent accéder, que vous ne voulez pas rendre accessibles à tout le monde. Par exemple, les personnes connectées peuvent avoir la possibilité de :
+Si des utilisateur·ice·s peuvent se connecter à votre site web, il existe généralement des actions qu'ils·elles peuvent effectuer une fois connectées, ou des données auxquelles ils·elles peuvent accéder, que vous ne voulez pas rendre accessibles à tout le monde. Par exemple, les personnes connectées peuvent avoir la possibilité de&nbsp;:
 
 - Utiliser un service pour lequel elles ont payé
 - Dépenser de l'argent
