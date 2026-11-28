@@ -1,9 +1,9 @@
 ---
-title: "Express チュートリアル Part 3: データベースの使用 (Mongoose を使用)"
+title: "Express チュートリアル Part 3: データベースの使用（Mongoose を使用）"
 short-title: "3: Mongoose によるデータベースの使用"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose
 l10n:
-  sourceCommit: 483ce811e1ea52cb2d9d2a5af0c4d1c4d591ea4a
+  sourceCommit: e976b4bf6b9e0c68b4321904560df47804d8cc48
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
@@ -33,45 +33,51 @@ Express アプリケーションはさまざまなデータベースを使用で
 
 ### どのデータベースを使用できるか
 
-Express アプリは Node でサポートされている任意のデータベースを使用できます (Express 自体はデータベース管理のための特定の追加の動作や要件を定義していません)。 PostgreSQL、MySQL、Redis、SQLite、MongoDB など、[多くの一般的な選択肢](https://expressjs.com/en/guide/database-integration.html)があります。
+Express アプリは Node で対応している任意のデータベースを使用できます（Express 自体はデータベース管理のための特定の追加動作や要件を定義していません）。PostgreSQL、MySQL、Redis、SQLite、MongoDB など、[多くの一般的な選択肢](https://expressjs.com/ja/guide/database-integration/)があります。
 
 データベースを選択するときは、生産性/学習時間の曲線、パフォーマンス、複製/バックアップの容易さ、コスト、コミュニティサポートなどのことを考慮する必要があります。「最高の」データベースは 1 つもありませんが、ほとんどの一般的なソリューションは、地域図書館のような中小規模のサイトでは十分条件を満たしているはずです。
 
-オプションの詳細については、[データベース統合](https://expressjs.com/ja/guide/database-integration.html) (Express ドキュメント) を参照してください。
+オプションの詳細については、[データベース統合](https://expressjs.com/ja/guide/database-integration/)（Express ドキュメント）を参照してください。
 
 ### データベースを利用するための最良の方法
 
 データベースにインタラクティブにアプローチするには 2 つの方法があります。
 
-- データベースのネイティブクエリー言語 (例：SQL)を使用する
+- データベースのネイティブクエリー言語（例：SQL）を使用する
 - オブジェクトデータモデル ("ODM")／オブジェクトリレーショナルモデル ("ORM") を使用する。ODM/ORM はウェブサイトのデータを JavaScript オブジェクトとして表し、それが基になるデータベースにマッピングされます。一部の ORM は特定のデータベースに関連付けられていますが、他のデータベースはデータベースに依存しないバックエンドを提供しています
 
-SQL、またはデータベースでサポートされているクエリー言語を使用すると、最高のパフォーマンスが得られます。ODM は、変換コードを使用してオブジェクトとデータベース形式の間のマッピングを行うため、処理が遅くなることが多く、最も効率的なデータベースクエリーが使用されない可能性があります（これは、ODM がさまざまなデータベースバックエンドをサポートしている場合に特に当てはまります。サポートされているデータベース機能に関して、さらに妥協する必要があります）。
+SQL、またはデータベースで対応している問い合わせ言語を使用すると、最高のパフォーマンスが得られます。ODM は、変換コードを使用してオブジェクトとデータベース形式の間のマッピングを行うため、処理が遅くなることが多く、最も効率的なデータベースクエリーが使用されない可能性があります（これは、ODM がさまざまなデータベースバックエンドに対応している場合に特に当てはまります。対応しているデータベース機能に関して、さらに妥協する必要があります）。
 
-ORM を使用する利点は、プログラマがデータベースのセマンティクスではなく JavaScript オブジェクトの観点から考え続けることができることです。これは、同じデータベースまたは異なるウェブサイトで異なるデータベースを扱う必要がある場合に特に当てはまります。またデータの検証とチェックを実行するための明らかな場所を提供します。
+ORM を使用する利点は、プログラマーがデータベースの意味ではなく JavaScript オブジェクトの観点から考え続けることができることです。これは、同じウェブサイトまたは異なるウェブサイトで異なるデータベースを扱う必要がある場合に特に当てはまります。また、データ検証を実行する明確な場所を提供し、通常はデータスキーマから TypeScript の型を導出できます。
 
 > [!NOTE]
 > ODM/ORM を使用すると、多くの場合、開発と保守のコストが削減されます。ネイティブのクエリー言語に精通しているかパフォーマンスが最優先であるのでなければ、ODM の使用を積極的に検討するべきです。
 
 ### どの ORM/ODM を使うべきか
 
-npm パッケージマネージャのサイトには、多数の ODM/ORM ソリューションがあります (サブセットの [odm](https://www.npmjs.com/search?q=keywords:odm) タグおよび [orm](https://www.npmjs.com/search?q=keywords:orm) タグを調べてください)。
+npm パッケージマネージャのサイトには、多数の ODM/ORM ソリューションがあります（サブセットの [odm](https://www.npmjs.com/search?q=keywords:odm) タグおよび [orm](https://www.npmjs.com/search?q=keywords:orm) タグを調べてください）。
 
 執筆時点で一般的だったいくつかの解決策は、次のとおりです。
 
-- [Mongoose](https://www.npmjs.com/package/mongoose): Mongoose は、非同期環境で動作するように設計された [MongoDB](https://www.mongodb.com/) オブジェクトモデリングツールです
-- [Waterline](https://www.npmjs.com/package/waterline): Express ベースの [Sails](https://sailsjs.com/) ウェブフレームワークから抽出された ORM。Redis、MySQL、LDAP、MongoDB、Postgres など、さまざまなデータベースにアクセスするための統一された API を提供します
-- [Bookshelf](https://www.npmjs.com/package/bookshelf): Promise ベースおよび従来の callback インターフェイスの両方を備え、トランザクションのサポート、熱心な/入れ子になったリレーションの読み込み、多態的な関連付け、および 1 対 1、1 対多、および多対多のリレーションのサポートを提供します。PostgreSQL、MySQL、および SQLite3 で動作します
-- [Objection](https://www.npmjs.com/package/objection): SQL とその基盤となるデータベースエンジン (SQLite 3、Postgres、および MySQL をサポート) の全機能を使用することを可能な限り簡単にします
-- [Sequelize](https://www.npmjs.com/package/sequelize) は Node.js と io.js のための Promise ベースの ORM です。PostgreSQL、MySQL、MariaDB、SQLite、および MSSQL のダイアレクトをサポートし、堅実なトランザクションサポート、リレーション、リードレプリケーションなどを備えています
-- [Node ORM2](https://node-orm.readthedocs.io/en/latest/) は NodeJS のオブジェクトリレーションマネージャです。MySQL、SQLite、Progres をサポートし、オブジェクト指向のアプローチを使用してデータベースを操作するのを助けます
-- [GraphQL](https://graphql.org/): 主に RESTful API 向けの問い合わせ言語である GraphQL は、とても人気があり、データベースからデータを取得するための機能も持っています。
+- [Mongoose](https://mongoosejs.com/): 非同期環境で動作するように設計された [MongoDB](https://www.mongodb.com/) オブジェクトモデリングツールです。
+- [Prisma ORM](https://www.prisma.io/orm): 専用のスキーマファイルでモデルを定義し、それらからデータベースクライアントを生成します。これにより、自分のモデルに対するクエリーで補完と型チェックが利用でき、移行ツールはデータベース構造とスキーマの同期を保つのに役立ちます。
+- [Drizzle ORM](https://orm.drizzle.team/docs/overview): TypeScript でスキーマを直接定義し、SQL によく似たクエリー API を提供します。SQL に詳しい開発者は、その知識を再利用して結合や他のクエリーを作成でき、型推論された TypeScript 型を得られます。別のデータベースクライアントを生成する必要もありません。
+- [TypeORM](https://typeorm.io/docs/guides/active-record-data-mapper/): データベースレコードを JavaScript または TypeScript クラスにマッピングします。モデルクラス自体にクエリーメソッドを置く (Active Record) か、データベースアクセスを別個のリポジトリーに保持する (Data Mapper) かを選び、永続化とアプリケーションロジックをどのように整理するか決められます。
+- [Sequelize](https://sequelize.org/): Node.js と TypeScript 向けの Promise ベースの ORM です。PostgreSQL、MySQL、MariaDB、SQLite、MSSQL の方言に対応し、堅実なトランザクション対応、リレーション、読み取りレプリケーションなどを備えています。
+- [GraphQL](https://graphql.org/): REST の代替としてよく使用される API 用のクエリー言語です。GraphQL サーバーは、データベースドライバーまたは ORM を使用できるリゾルバー関数を介してデータを取得します。
 
-原則として、解決策を選択する際には、提供されている機能と「コミュニティ活動」（ダウンロード、協力、バグ報告、ドキュメントの品質など）の両方を考慮する必要があります。この記事を書いている時点では、Mongoose は最も人気のある ODM であり、データベースに MongoDB を使用している場合は妥当な選択です。
+原則として、解決策を選択する際には、提供される機能と「コミュニティ活動」（ダウンロード数、協力、バグ報告、ドキュメントの品質など）の両方を考慮する必要があります。考慮すべきことが他にもあります。
+
+- ORM を使用するには、別個のスキーマ宣言ファイルを書き、JavaScript の接着コードを得るための追加のコンパイル手順が必要ですか。
+- 厳密な TypeScript 型を自動生成しますか。
+- アプリケーションに十分なパフォーマンスがありますか。
+- アプリケーションのデータモデルを適切に記述できますか。
+
+執筆時点では、データベースに MongoDB を使用する場合、Mongoose は妥当な選択です。
 
 ### 地域図書館で Mongoose と MongoDB を使用する
 
-地域図書館の例（およびこのトピックの残りの部分）では、[Mongoose ODM](https://www.npmjs.com/package/mongoose) を使用してライブラリーデータにアクセスします。Mongoose は、文書指向のデータモデルを使用するオープンソースの [NoSQL](https://en.wikipedia.org/wiki/NoSQL) データベースである [MongoDB](https://www.mongodb.com/what-is-mongodb) のフロントエンドとして機能します。MongoDB データベースの "文書" の "コレクション" は、リレーショナルデータベースの "行" の "テーブル" [に似ています](https://www.mongodb.com/manual/core/databases-and-collections/)。
+地域図書館の例（およびこのトピックの残りの部分）では、[Mongoose ODM](https://www.npmjs.com/package/mongoose) を使用してライブラリーデータにアクセスします。Mongoose は、文書指向のデータモデルを使用するオープンソースの [NoSQL](https://ja.wikipedia.org/wiki/NoSQL) データベースである [MongoDB](https://www.mongodb.com/company/what-is-mongodb) のフロントエンドとして機能します。MongoDB データベースの「文書」の「コレクション」は、リレーショナルデータベースの「行」の「テーブル」[に似ています](https://www.mongodb.com/docs/manual/core/databases-and-collections/)。
 
 この ODM とデータベースの組み合わせは、Node コミュニティで非常に人気があります。これは、文書の保存とクエリーのシステムが JSON に非常に似ているため、JavaScript 開発者にはよく知られているためです。
 
@@ -84,20 +90,20 @@ npm パッケージマネージャのサイトには、多数の ODM/ORM ソリ�
 
 いきなりモデルのコーディングを始める前に、格納する必要があるデータと、さまざまなオブジェクト間の関係について検討することをお勧めします。
 
-書籍に関する情報 (タイトル、概要、著者、ジャンル、ISBN) を保存する必要があること、および複数のコピーが利用可能であること (グローバルに一意の ID、利用状況など) があることを知っています。著者の名前だけではなく、著者に関するより多くの情報を格納する必要があるかもしれません。また、同じ名前または類似の名前を持つ著者が複数いる可能性があります。書籍のタイトル、著者、ジャンル、およびカテゴリーに基づいて情報を並べ替えることができるようにします。
+書籍に関する情報（タイトル、概要、著者、ジャンル、ISBN）を保存する必要があること、および複数のコピーが利用可能であること（グローバルに一意の ID、利用状況など）があることを知っています。著者の名前だけではなく、著者に関するより多くの情報を格納する必要があるかもしれません。また、同じ名前または類似の名前を持つ著者が複数いる可能性があります。書籍のタイトル、著者、ジャンル、およびカテゴリーに基づいて情報を並べ替えることができるようにします。
 
-モデルを設計するときは、すべての "オブジェクト" (関連情報のグループ) ごとに別々のモデルを用意するのが合理的です。 この場合、明らかなオブジェクトは本、本のインスタンス、および作者です。
+モデルを設計するときは、すべての「オブジェクト」（関連情報のグループ）ごとに別々のモデルを用意するのが合理的です。 この場合、明らかなオブジェクトは本、本のインスタンス、および作者です。
 
-ウェブサイト自体に選択肢をハードコーディングするのではなく、モデルを使用して選択肢の選択肢 (たとえば選択肢のドロップダウンリストなど) を表すこともできます - すべてのオプションが事前にわかっていない場合や変更される可能性がある場合は、これをお勧めします。このタイプのモデルの明らかな候補は本のジャンルです (例：サイエンスフィクション、フランス詩など)。
+ウェブサイト自体に選択肢をハードコーディングするのではなく、モデルを使用して選択肢の選択肢（たとえば選択肢のドロップダウンリストなど）を表すこともできます - すべてのオプションが事前にわかっていない場合や変更される可能性がある場合は、これをお勧めします。このタイプのモデルの明らかな候補は本のジャンルです（例：サイエンスフィクション、フランス詩など）。
 
 モデルとフィールドを決めたら、それらの関係について考える必要があります。
 
-そのことを念頭に置いて、以下の UML 関連図は、この場合に定義するモデルを (ボックスとして) 示しています。上記で説明したように、本のモデル (本の一般的な詳細)、本のインスタンス (システムで利用可能な本の特定の物理コピーのステータス)、および作成者のモデルを作成しました。また、値を動的に作成できるように、ジャンルのモデルを用意することにしました。`BookInstance:status` のモデルを使用しないことにしました - 許容値は変更しないと考えられるので、許容値をハードコードします。各ボックス内には、モデル名、フィールド名と型、そしてメソッドとその戻り型が表示されます。
+そのことを念頭に置いて、以下の UML 関連図は、この場合に定義するモデルを（ボックスとして）示しています。上記で説明したように、本のモデル（本の一般的な詳細）、本のインスタンス（システムで利用可能な本の特定の物理コピーのステータス）、および作成者のモデルを作成しました。また、値を動的に作成できるように、ジャンルのモデルを用意することにしました。`BookInstance:status` のモデルを使用しないことにしました - 許容値は変更しないと考えられるので、許容値をハードコードします。各ボックス内には、モデル名、フィールド名と型、そしてメソッドとその戻り型が表示されます。
 
-この図には、モデル間の関係 (それらの多重度も含む) も示されています。多重度は、関係内に存在する可能性がある各モデルの番号 (最大および最小) を示す図上の番号です。たとえば、ボックス間の接続線は、`Book` と `Genre` が関連していることを示しています。`Book` モデルに近い数字は、ジャンルに 0 個以上の Book がある必要があることを示しており、線のもう一方の端にある`Genre` の隣の数字は、本に 0 個以上の関連する`Genre`があることを示しています。
+この図には、モデル間の関係（それらの多重度も含む）も示されています。多重度は、関係内に存在する可能性がある各モデルの番号（最大および最小）を示す図上の番号です。たとえば、ボックス間の接続線は、`Book` と `Genre` が関連していることを示しています。`Book` モデルに近い数字は、ジャンルに 0 個以上の Book がある必要があることを示しており、線のもう一方の端にある `Genre` の隣の数字は、本に 0 個以上の関連する `Genre` があることを示しています。
 
 > [!NOTE]
-> 下記の [Mongoose 入門](#mongoose_入門)で説明されているように、1 つのモデルだけで documents/models 間の関係を定義するフィールドがあるほうがよいでしょう (他のモデルで関連する `_id` を検索することによって逆の関係を見つけることができます)。以下では、Book スキーマの Book/Genre と Book/Author の関係、および BookInstance スキーマの Book/BookInstance の関係を定義します。この選択は多少恣意的でした - 他のスキーマでも同じようにフィールドを持つことができました。
+> 下記の [Mongoose 入門](#mongoose_入門)で説明されているように、1 つのモデルだけで documents/models 間の関係を定義するフィールドがあるほうがよいでしょう（他のモデルで関連する `_id` を検索することによって逆の関係を見つけることができます）。以下では、Book スキーマの Book/Genre と Book/Author の関係、および BookInstance スキーマの Book/BookInstance の関係を定義します。この選択は多少恣意的でした - 他のスキーマでも同じようにフィールドを持つことができました。
 
 ![Mongoose Library Model with correct cardinality](library_website_-_mongoose_express.png)
 
@@ -110,8 +116,8 @@ npm パッケージマネージャのサイトには、多数の ODM/ORM ソリ�
 つまり、これらのメソッドは即座に返却され、メソッドの成功または失敗を処理するコードは、操作が完成した後の時点で実行されます。
 サーバーがデータベースの操作の完了を待機している間も、それ以外にもコードを実行できるため、サーバーは他のリクエストに対して応答性を維持することができます。
 
-JavaScriptには、非同期動作に対応する仕組みがいくつかあります。
-かつてJavaScriptでは、成功時やエラー時の処理を行うために、非同期メソッドに[コールバック関数](/ja/docs/Learn_web_development/Extensions/Async_JS/Introducing)を渡す方法に強く依存していました。
+JavaScript には、非同期動作に対応する仕組みがいくつかあります。
+かつて JavaScript では、成功時やエラー時の処理を行うために、非同期メソッドに[コールバック関数](/ja/docs/Learn_web_development/Extensions/Async_JS/Introducing)を渡す方法に強く依存していました。
 現行の JavaScript で、コールバックは主に[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)に置き換えられています。
 プロミスは、非同期メソッドによって（即座に）返されるオブジェクトであり、その将来の状態を表します。
 操作が完了すると、プロミスオブジェクトは「決定」され、操作の結果またはエラーを表すオブジェクトを解決します。
@@ -126,27 +132,29 @@ JavaScriptには、非同期動作に対応する仕組みがいくつかあり�
 その後、非同期関数内のコードは、次の `await` に遭遇して再び一時停止するか、関数内のすべてのコードが実行されるまで実行されます。
 
 下記の例で、これがどのように動作するかを確認できます。
-`myFunction()` は、[`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) ブロック内で呼び出される非同期関数です。
+`myFunction()` は、`await` 式の周囲に [`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) ブロックを含む非同期関数です。
 `myFunction()` が実行されると、コードの実行は `methodThatReturnsPromise()` で一時停止し、プロミスが解決されるまで待つます。プロミスが解決されると、コードは `functionThatReturnsPromise()` へと続け、再び待つます。
 非同期関数内でエラーが発生した場合、`catch` ブロック内のコードが実行されます。これは、いずれかのメソッドから返されたプロミスが拒否された場合に現れます。
 
 ```js
 async function myFunction() {
-  // …
-  await someObject.methodThatReturnsPromise();
-  // …
-  await functionThatReturnsPromise();
-  // …
+  try {
+    // …
+    await someObject.methodThatReturnsPromise();
+    // …
+    await functionThatReturnsPromise();
+    // …
+  } catch (e) {
+    // エラー処理コード
+  }
 }
 
-try {
-  // …
-  myFunction();
-  // …
-} catch (e) {
-  // error handling code
-}
+myFunction();
 ```
+
+非同期関数は、関数内でエラーが捕捉されない場合に拒否される Promise を返します。
+呼び出し元のコードでそのエラーを捕捉するには、返された Promise の [`catch()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) メソッドを使用するか、別の非同期関数内で `try...catch` ブロックを使用して関数呼び出しを `await` します。
+`await` なしで関数を `try...catch` ブロック内で呼び出すと拒否を捕捉できません。拒否された Promise を発生したエラーに変換するのは `await` だからです。
 
 以上の非同期メソッドは、順番に実行されます。
 メソッド同士に依存関係がない場合は、それらを並列に実行することで、操作全体をより迅速に完了させることができます。
@@ -159,7 +167,7 @@ try {
 `Promise.all()` によって返されたプロミスを使用して、両方の関数が完了するのを `await` で待ちます。
 両方が完了すると、`await` が返され、結果の配列が設定されます。
 その後、関数は次の `await` を続け、`anotherFunctionThatReturnsPromise()` によって返されたプロミスが決定されるまで待ちます。
-エラーを捕捉するために、`myFunction()` は `try...catch` ブロック内で呼び出すようにしてください。
+エラーを捕捉するには、`myFunction()` が返す Promise に `catch()` ハンドラーを追加してください。
 
 ```js
 async function myFunction() {
@@ -180,7 +188,7 @@ async function myFunction() {
 このセクションでは、Mongoose を MongoDB データベースに接続する方法、スキーマとモデルを定義する方法、そして基本的なクエリーを作成する方法の概要を説明します。
 
 > [!NOTE]
-> この入門書は、npm の [Mongoose クイックスタート](https://www.npmjs.com/package/mongoose)と[公式ドキュメント](https://mongoosejs.com/docs/guide.html)に "大きく影響を受けています"。
+> この入門書は、npm の [Mongoose クイックスタート](https://www.npmjs.com/package/mongoose)と[公式ドキュメント](https://mongoosejs.com/docs/guide.html)に「大きく影響を受けています」。
 
 ### Mongoose と MongoDB のインストール
 
@@ -190,7 +198,7 @@ Mongoose は他の依存関係と同じようにあなたのプロジェクト (
 npm install mongoose
 ```
 
-Mongoose をインストールすると、MongoDB データベースドライバを含むすべての依存関係が追加されますが、MongoDB 自体はインストールされません。 MongoDB サーバーをインストールする場合は、さまざまな OS 用の[インストーラーをここからダウンロード](https://www.mongodb.com/download-center)してローカルにインストールできます。クラウドベースの MongoDB インスタンスを使用することもできます。
+Mongoose をインストールすると、MongoDB データベースドライバを含むすべての依存関係が追加されますが、MongoDB 自体はインストールされません。 MongoDB サーバーをインストールする場合は、さまざまな OS 用の[インストーラーをここからダウンロード](https://www.mongodb.com/try/download/community)してローカルにインストールできます。クラウドベースの MongoDB インスタンスを使用することもできます。
 
 > [!NOTE]
 > このチュートリアルでは、データベースとして [MongoDB Atlas](https://www.mongodb.com/) のクラウド型 _Database as a Service_ の無料プランを使用します。これは開発に適しており、OS に依存しない「インストール」環境を実現できるため、このチュートリアルには最適です（Database as a Service は、本番環境のデータベースとして採用する手法の一つでもあります）。
@@ -198,11 +206,10 @@ Mongoose をインストールすると、MongoDB データベースドライバ
 ### MongoDB への接続
 
 _Mongoose_ を使用するには、MongoDB データベースへの接続が必要です。
-下記に示すように、`require()` を使用して、`mongoose.connect()` を通じてローカルでホストされているデータベースに接続することができます（このチュートリアルでは、代わりにインターネット上でホストされているデータベースに接続します）。
+下記に示すように、Mongoose をインポートして `mongoose.connect()` を通じてローカルでホストされているデータベースに接続できます（このチュートリアルでは、代わりにインターネット上でホストされているデータベースに接続します）。
 
 ```js
-// mongoose モジュールをインポート
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 // 接続するデータベースの URL を定義
 const mongoDB = "mongodb://127.0.0.1/my_database";
@@ -216,29 +223,28 @@ async function main() {
 
 > [!NOTE]
 > [データベース API は非同期である](#データベース_api_は非同期である)の節でディスカッションしたように、ここでは `async` 関数内で `connect()` メソッドから返されるプロミスを `await` しています。
-> 接続時に発生するエラーを処理するためにプロミスの `catch()` ハンドラーを使用していますが、`try...catch` ブロック内で `main()` を呼び出してもよかったでしょう。
+> 接続時に発生するエラーを処理するためにプロミスの `catch()` ハンドラーを使用していますが、別の `async` 関数内の `try...catch` ブロックで `await main()` を使用してもよかったでしょう。
 
 デフォルトの `Connection` オブジェクトは、`mongoose.connection` で取得できます。
 追加の接続を作成する必要がある場合は、`mongoose.createConnection()` を使用することができます。
 これは `connect()` と同じ形式のデータベース URI（ホスト、データベース、ポート、オプションなど）を受け取り、`Connection` オブジェクトを返します。
-なお、`createConnection()`は即座に返ります。接続が確立されるまで待機する必要がある場合は、`asPromise()`をつけて呼び出すことで、プロミスを返すことができます (`mongoose.createConnection(mongoDB).asPromise()`)。
+なお、`createConnection()` は即座に返ります。接続が確立されるまで待機する必要がある場合は、`asPromise()` をつけて呼び出すことで、プロミスを返すことができます (`mongoose.createConnection(mongoDB).asPromise()`)。
 
 ### モデルの定義と作成
 
 モデルは `Schema` インターフェイスを使用して定義されます。スキーマを使用すると、各文書に格納されているフィールドとその検証要件およびデフォルト値を定義できます。さらに、データ型や他のフィールドと同じように使用できるが実際にはデータベースに格納されていない仮想プロパティも扱いやすいように、静的メソッドおよびインスタンスヘルパーメソッドを定義できます（もう少し後で説明します）。
 
-その後、スキーマは `mongoose.model()` メソッドを使用してモデルに "コンパイル" されます。モデルを作成したら、それを使用して特定のタイプのオブジェクトを検索、作成、更新、および削除できます。
+その後、スキーマは `mongoose.model()` メソッドを使用してモデルに「コンパイル」されます。モデルを作成したら、それを使用して特定のタイプのオブジェクトを検索、作成、更新、および削除できます。
 
 > [!NOTE]
 > 各モデルは MongoDB データベース内の文書のコレクションにマップされます。文書はモデル `Schema` で定義されたフィールド/スキーマタイプを含みます。
 
 #### スキーマの定義
 
-以下のコードは、単純なスキーマを定義する方法を示しています。最初に mongoose を `require()` し、次に Schema コンストラクターを使用して新しいスキーマインスタンスを作成し、コンストラクターの object 引数で内部のさまざまなフィールドを定義します。
+以下のコードは、単純なスキーマを定義する方法を示しています。まず mongoose をインポートし、Schema コンストラクターを使用して新しいスキーマインスタンスを作成し、コンストラクターの object 引数で内部のさまざまなフィールドを定義します。
 
 ```js
-// Require Mongoose
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 // スキーマを定義
 const Schema = mongoose.Schema;
@@ -268,12 +274,12 @@ const SomeModelSchema = new Schema({
 const SomeModel = mongoose.model("SomeModel", SomeModelSchema);
 ```
 
-最初の引数はあなたのモデル用に作成されるコレクションの単数形の名前です (Mongoose は上記の SomeModel モデル用のデータベースコレクションを作成します)、そして 2 番目の引数はモデルの作成に使用したいスキーマです。
+最初の引数はあなたのモデル用に作成されるコレクションの単数形の名前です（Mongoose は上記の SomeModel モデル用のデータベースコレクションを作成します）、そして 2 番目の引数はモデルの作成に使用したいスキーマです。
 
 > [!NOTE]
 > モデルクラスを定義したら、それらを使用してレコードを作成、更新、または削除し、クエリーを実行してすべてのレコードまたは特定のレコードのサブセットを取得できます。これを行う方法を[モデルの使用](#モデルの使用)の節で、そしてビューを作成するときに示します。
 
-#### スキーマ型 (フィールド)
+#### スキーマ型（フィールド）
 
 スキーマには任意の数のフィールドを含めることができます。それぞれのフィールドは、MongoDB に格納されたドキュメント内のフィールドを表します。
 一般的なフィールド型の多くと、それらの宣言方法を示したスキーマの例を下記に示します。
@@ -297,7 +303,7 @@ const schema = new Schema({
 
 - `ObjectId`: データベース内のモデルの特定のインスタンスを表します。例えば、書籍データでは、作成者のオブジェクトを表すためにこれを使用することがあります。実際には、指定されたオブジェクトの一意の ID (`_id`) が含まれます。必要に応じて、`populate()` メソッドを使用して関連付けられた情報を取得することができます。
 - [`Mixed`](https://mongoosejs.com/docs/schematypes.html#mixed): 任意のスキーム型。
-- `[]`: アイテムの配列。このモデルには JavaScript の配列操作（push, pop, unshift, その他。）を行うことができます。上記の例は特別な型なしに `String` オブジェクトの配列を示しています。また、他の型のオブジェクトに対しても配列で持つことはできます。
+- `[]`: アイテムの配列。このモデルには JavaScript の配列操作（push, pop, unshift, など）を行うことができます。上記の例は特別な型なしに `String` オブジェクトの配列を示しています。また、他の型のオブジェクトに対しても配列で持つことはできます。
 
 このコードはフィールドを宣言する 2 つのやり方も示しています。
 
@@ -312,12 +318,12 @@ const schema = new Schema({
 
 #### 検証
 
-Mongooseには、組み込みのバリデーターや独自のバリデーター、同期型および非同期型のバリデーターが用意されています。すべての場合で、受け入れられる値の範囲と、検証に失敗した際のエラーメッセージの両方を指定することができます。
+Mongoose には、組み込みのバリデーターや独自のバリデーター、同期型および非同期型のバリデーターが用意されています。すべての場合で、受け入れられる値の範囲と、検証に失敗した際のエラーメッセージの両方を指定することができます。
 
 組み込みのバリデータには、
 
 - すべての [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) に [required](https://mongoosejs.com/docs/api.html#schematype_SchemaType-required) があります。 これは文書を保存するために必要なフィールドを指定するために使われます。
-- [Numbers](https://mongoosejs.com/docs/api/schemanumber.html) に [min](https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.min)（最小値を指定） と [max](https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.max)（最大値を指定） バリデーターがあります。
+- [Numbers](https://mongoosejs.com/docs/api/schemanumber.html) に [min](<https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.min()>)（最小値を指定）と [max](<https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.max()>)（最大値を指定）バリデーターがあります。
 - [Strings](https://mongoosejs.com/docs/api/schemastring.html) には次のものがあります。
   - [enum](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.enum()>): フィールドに利用可能な値の配列を指定します。
   - [match](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.match()>): 照合する正規表現を指定します。
@@ -353,16 +359,16 @@ const breakfastSchema = new Schema({
 
 #### メソッドとクエリーヘルパー
 
-スキーマは同時に、[インスタンスメソッド](https://mongoosejs.com/docs/guide.html#methods)、[静的メソッド](https://mongoosejs.com/docs/guide.html#statics)、[クエリーヘルパー](https://mongoosejs.com/docs/guide.html#query-helpers)を持つことができます。インスタンスメソッドと静的メソッドは似ていますが、インスタンスメソッドは具体的なレコードに関連付けられ、現在のオブジェクトにアクセスできるという点で明らかな違いがあります。クエリヘルパーを使用すると、Mongooseの[チェーン可能なクエリビルダー API](https://mongoosejs.com/docs/queries.html)を拡張することができます（例えば、`find()`、`findOne()`、`findById()` メソッドに加えて、"byName" というクエリーを追加することができる）。
+スキーマは同時に、[インスタンスメソッド](https://mongoosejs.com/docs/guide.html#methods)、[静的メソッド](https://mongoosejs.com/docs/guide.html#statics)、[クエリーヘルパー](https://mongoosejs.com/docs/guide.html#query-helpers)を持つことができます。インスタンスメソッドと静的メソッドは似ていますが、インスタンスメソッドは具体的なレコードに関連付けられ、現在のオブジェクトにアクセスできるという点で明らかな違いがあります。クエリーヘルパーを使用すると、Mongoose の[チェーン可能なクエリービルダー API](https://mongoosejs.com/docs/queries.html) を拡張することができます（例えば、`find()`、`findOne()`、`findById()` メソッドに加えて、"byName" というクエリーを追加することができる）。
 
 ### モデルの使用
 
 スキーマを作成したら、それを使用してモデルを作成できます。モデルは、データベース内の文書の集合を表し、検索を行うことができます。一方、モデルのインスタンスは個々の文書を表し、保存や取得を行うことができます。
 
-下記に概要を簡単にご提供します。詳細の情報については、[Models](https://mongoosejs.com/docs/models.html)（Mongooseのドキュメント）をご覧ください。
+下記に概要を簡単にご提供します。詳細の情報については、[Models](https://mongoosejs.com/docs/models.html)（Mongoose のドキュメント）をご覧ください。
 
 > [!NOTE]
-> レコードの作成、更新、削除、およびクエリーは、[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/プロミス) を返す非同期操作です。
+> レコードの作成、更新、削除、およびクエリーは、[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期操作です。
 > 下記の例では、関連するメソッドと `await` の使用法のみを表示しています（つまり、メソッドを使用するために不可欠なコードです）。
 > わかりやすくするため、外側の `async function` およびエラーを捕捉するための `try...catch` ブロックは除外しています。
 > `await/async` の使用に関する情報については、上記の[データベース API は非同期である](#データベース_api_は非同期である)をご覧ください。
@@ -402,7 +408,7 @@ await awesome_instance.save();
 
 #### レコードの検索
 
-照会メソッドを使用して、照会条件をJSONドキュメントとして指定することで、レコードを検索することができます。下記コード例は、データベース内のテニス選手をすべて検索し、選手の _name_ および _age_ フィールドのみを返す方法を示しています。ここでは一致するフィールド (sport) を 1 つだけ指定していますが、条件を追加したり、正規表現による条件を指定したり、あるいは条件をすべて除去してすべての選手を返すことも可能です。
+照会メソッドを使用して、照会条件を JSON ドキュメントとして指定することで、レコードを検索することができます。下記コード例は、データベース内のテニス選手をすべて検索し、選手の _name_ および _age_ フィールドのみを返す方法を示しています。ここでは一致するフィールド (sport) を 1 つだけ指定していますが、条件を追加したり、正規表現による条件を指定したり、あるいは条件をすべて除去してすべての選手を返すことも可能です。
 
 ```js
 const Athlete = mongoose.model("Athlete", yourSchema);
@@ -418,9 +424,9 @@ const tennisPlayers = await Athlete.find(
 > 検索で結果が見つからないことは、検索そのものとしては**エラーではありません**が、アプリケーションのコンテキストにおいて失敗の場合があることを覚えておくことが重要です。
 > アプリケーションが検索によって値が見つかることを想定している場合は、結果として返される項目の数を調べることができます。
 
-[`find()`](<https://mongoosejs.com/docs/api/model.html#Model.find()>) などのクエリ API は、[Query](https://mongoosejs.com/docs/api/query.html) 型の変数を返します。
-クエリオブジェクトを使用すると、[`exec()`](https://mongoosejs.com/docs/api/query.html#Query.prototype.exec) メソッドで実行する前に、クエリを段階的に構築することができます。
-`exec()` はクエリを実行し、結果を `await` できるプロミスを返します。
+[`find()`](<https://mongoosejs.com/docs/api/model.html#Model.find()>) などのクエリー API は、[Query](https://mongoosejs.com/docs/api/query.html) 型の変数を返します。
+クエリーオブジェクトを使用すると、[`exec()`](https://mongoosejs.com/docs/api/query.html#Query.prototype.exec) メソッドで実行する前に、クエリーを段階的に構築することができます。
+`exec()` はクエリーを実行し、結果を `await` できるプロミスを返します。
 
 ```js
 // テニスをする選手をすべて探す
@@ -439,7 +445,7 @@ query.sort({ age: -1 });
 query.exec();
 ```
 
-以上では、[`find()`](<https://mongoosejs.com/docs/api/model.html#Model.find()>) メソッド内でクエリー条件を定義しました。これと同じことは、[`where()`](<https://mongoosejs.com/docs/api/model.html#Model.where()>) 関数を使って行うこともでき、クエリの各部分を別個に追加するのではなく、ドット演算子 (.) を使って連結することも可能です。
+以上では、[`find()`](<https://mongoosejs.com/docs/api/model.html#Model.find()>) メソッド内でクエリー条件を定義しました。これと同じことは、[`where()`](<https://mongoosejs.com/docs/api/model.html#Model.where()>) 関数を使って行うこともでき、クエリーの各部分を別個に追加するのではなく、ドット演算子 (.) を使って連結することも可能です。
 下記コード断片は、以上のクエリーと同じですが、年齢に関する条件が追加されています。
 
 ```js
@@ -455,7 +461,7 @@ Athlete.find()
   .exec();
 ```
 
-[`find()`](<https://mongoosejs.com/docs/api/model.html#Model.find()>) メソッドは、条件に一致するすべてのレコードを取得しますが、多くの場合、一致するレコードを1件だけ取得したいことがあります。以下のメソッドは、単一のレコードを検索します。
+[`find()`](<https://mongoosejs.com/docs/api/model.html#Model.find()>) メソッドは、条件に一致するすべてのレコードを取得しますが、多くの場合、一致するレコードを 1 件だけ取得したいことがあります。以下のメソッドは、単一のレコードを検索します。
 
 - [`findById()`](<https://mongoosejs.com/docs/api/model.html#Model.findById()>): 指定された `id` を持つドキュメントを検索します（すべてのドキュメントには固有の `id` が付与されています）。
 - [`findOne()`](<https://mongoosejs.com/docs/api/model.html#Model.findOne()>): 指定された条件に一致する単一のドキュメントを検索します。
@@ -464,11 +470,11 @@ Athlete.find()
 > [!NOTE]
 > また、条件に一致するアイテムの数を取得するために使用できる [`countDocuments()`](<https://mongoosejs.com/docs/api/model.html#Model.countDocuments()>) メソッドもあります。これは、実際にレコードを取得せずに件数を数えたい場合に便利です。
 
-クエリーでは、他にもさまざまなことが可能です。情報については、[クエリー](https://mongoosejs.com/docs/queries.html) (Mongoose ドキュメント) をご覧ください。
+クエリーでは、他にもさまざまなことが可能です。情報については、[クエリー](https://mongoosejs.com/docs/queries.html)（Mongoose ドキュメント）をご覧ください。
 
 #### 関連文書と一緒に作業する — データセット
 
-`ObjectId` スキーマフィールドを使用すると、あるドキュメント／モデルインスタンスから別のドキュメント／モデルインスタンスへの参照を作成できます。また、`ObjectId` の配列を使用すれば、1つのドキュメントから複数のドキュメントへの参照を作成することも可能です。このフィールドには、関連するモデルのIDが格納されます。関連付けられたドキュメントの実際のコンテンツが必要な場合は、クエリー内で [`populate()`](https://mongoosejs.com/docs/populate.html) メソッドを使用することで、IDを実際のデータに置き換えることができます。
+`ObjectId` スキーマフィールドを使用すると、あるドキュメント／モデルインスタンスから別のドキュメント／モデルインスタンスへの参照を作成できます。また、`ObjectId` の配列を使用すれば、1 つのドキュメントから複数のドキュメントへの参照を作成することも可能です。このフィールドには、関連するモデルの ID が格納されます。関連付けられたドキュメントの実際のコンテンツが必要な場合は、クエリー内で [`populate()`](https://mongoosejs.com/docs/populate.html) メソッドを使用することで、ID を実際のデータに置き換えることができます。
 
 例えば、以下のスキーマでは、作成者と記事を定義しています。
 それぞれの作成者は複数の記事を保有し、これは `ObjectId` の配列として表されます。
@@ -476,7 +482,7 @@ Athlete.find()
 `ref` プロパティは、このフィールドにどのモデルを代入することができるかをスキーマに指示します。
 
 ```js
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
@@ -495,7 +501,7 @@ const Author = mongoose.model("Author", authorSchema);
 ```
 
 関連する文書への参照は、`_id` の値を代入することで保存できます。
-下記では、まず作成者を作成し、次にストーリーを作成し、そのストーリーの author フィールドに作成者のIDを代入します。
+下記では、まず作成者を作成し、次にストーリーを作成し、そのストーリーの author フィールドに作成者の ID を代入します。
 
 ```js
 const bob = new Author({ name: "Bob Smith" });
@@ -537,14 +543,14 @@ Story.findOne({ title: "Bob goes sledding" })
 
 ### ファイルあたり 1 つの schema/model
 
-スキーマやモデルは、お好みのファイル構造で作成することも可能ですが、それぞれのモデルのスキーマを個別のモジュール（ファイル）に定義し、モデルを生成するメソッドをエクスポートすることを強くお勧めします。
+スキーマやモデルは、お好みのファイル構造で作成できますが、それぞれのモデルスキーマを個別のモジュール（ファイル）に定義し、モデルをエクスポートすることを強くお勧めします。
 その例を下記に示します。
 
 ```js
 // File: ./models/some-model.js
 
-// Require Mongoose
-const mongoose = require("mongoose");
+// Mongoose をインポート
+import mongoose from "mongoose";
 
 // Define a schema
 const Schema = mongoose.Schema;
@@ -554,15 +560,15 @@ const SomeModelSchema = new Schema({
   a_date: Date,
 });
 
-// Export function to create "SomeModel" model class
-module.exports = mongoose.model("SomeModel", SomeModelSchema);
+// モデルをエクスポート
+export default mongoose.model("SomeModel", SomeModelSchema);
 ```
 
-You can then require and use the model immediately in other files. Below we show how you might use it to get all instances of the model.
+その後、他のファイルですぐにモデルをインポートして使用できます。以下は、モデルのすべてのインスタンスを取得する方法を示しています。
 
 ```js
-// Create a SomeModel model just by requiring the module
-const SomeModel = require("../models/some-model");
+// SomeModel モデルをインポート
+import SomeModel from "../models/some-model.js";
 
 // Use the SomeModel object (model) to find all SomeModel records
 const modelInstances = await SomeModel.find().exec();
@@ -572,13 +578,13 @@ const modelInstances = await SomeModel.find().exec();
 
 Mongoose の機能やモデルの設計方法についてある程度理解できた時点で、いよいよ地域図書館ウェブサイトの制作に取り掛かりましょう。まず最初に行うのは、図書館データを保存するために使用する MongoDB データベースの設定です。
 
-このチュートリアルでは、[MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) のクラウドホスト型サンドボックスデータベースを使用します。このデータベース階層は冗長性を持たないため、本番環境のウェブサイトには適していませんが、開発やプロトタイプ作成には最適です。ここでこれを使用するのは、無料かつ設定が簡単であることに加え、MongoDB Atlasが人気の _Database as a Service_ プロバイダーであり、本番環境のデータベースとして選べます（執筆時点では、[ScaleGrid](https://scalegrid.io/) や [Rackspace](https://www.rackspace.com/data/rackspace-dbaas) などがあります）。
+このチュートリアルでは、[MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) のクラウドホスト型サンドボックスデータベースを使用します。このデータベース階層は冗長性を持たないため、本番環境のウェブサイトには適していませんが、開発やプロトタイプ作成には最適です。無料で簡単に設定でき、MongoDB Atlas は本番環境のデータベースとして選ぶこともできる人気の _database as a service_ プロバイダーだからです（執筆時点で他の選択肢には [Supabase](https://supabase.com/)、[Firebase Firestore](https://firebase.google.com/docs/firestore)、[Cloudflare D1](https://developers.cloudflare.com/d1/) があります）。
 
 > [!NOTE]
-> よろしければ、[お使いのシステムに適したバイナリー](https://www.mongodb.com/try/download/community-edition/releases)をダウンロードしてインストールすることで、ローカルに MongoDB データベースを設定することも可能です。接続時に指定するデータベースのURLを除き、この記事の残りの手順は同様になります。
+> よろしければ、[お使いのシステムに適したバイナリー](https://www.mongodb.com/try/download/community-edition/releases)をダウンロードしてインストールすることで、ローカルに MongoDB データベースを設定することも可能です。接続時に指定するデータベースの URL を除き、この記事の残りの手順は同様になります。
 > [Express チュートリアル Part 7: 本番環境への展開](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment)では、アプリケーションとデータベースの両方を [Railway](https://railway.com/) 上でホスティングしていますが、[MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) 上のデータベースを使用しても同様に問題ありません。
 
-まず、MongoDB Atlasで[アカウントを作成](https://www.mongodb.com/cloud/atlas/register)する必要があります（これは無料で、基本的な連絡先情報を入力し、利用規約に同意するだけで完了します）。
+まず、MongoDB Atlas で[アカウントを作成](https://www.mongodb.com/cloud/atlas/register)する必要があります（これは無料で、基本的な連絡先情報を入力し、利用規約に同意するだけで完了します）。
 ログインすると、[ホーム](https://cloud.mongodb.com/v2)画面が表示されます。
 
 1. 概要の節にある **+ Create** ボタンをクリックします。
@@ -620,7 +626,7 @@ Mongoose の機能やモデルの設計方法についてある程度理解で�
    ![MongoDB Atlas でアクセスルールを設定した後、データベースへ移動](mongodb_atlas_-_accessrules.jpg)
 
 6. _Overview_ 画面に戻ります。左側の _Deployment_ メニューの下にある _Database_ セクションをクリックしてください。 **Browse Collections** ボタンをクリックしてください。
-   ![MongoDB Atlas にコレクションをセットアップする](mongodb_atlas_-_createcollection.jpg)
+   ![MongoDB Atlas にコレクションを設定する](mongodb_atlas_-_createcollection.jpg)
 
 7. この _Collections_ セクションを開くための手順です。**Add My Own Data** ボタンをクリックしてください。
    ![MongoDB Atlas にデータベースを作成します。](mongodb_atlas_-_adddata.jpg)
@@ -642,7 +648,7 @@ Mongoose の機能やモデルの設計方法についてある程度理解で�
 
 11. これにより、_Connect to Cluster0_ のための画面が開きます。
 
-    ![MongoDB Atlasで接続を設定する際は、「Short SRV」接続を選べます。](mongodb_atlas_-_connectforshortsrv.jpg)
+    ![MongoDB Atlas で接続を設定する際は、"Short SRV" 接続を選べます。](mongodb_atlas_-_connectforshortsrv.jpg)
     - データベースユーザーを選択してください。
     - 図のように、_Drivers_ カテゴリーを選択し、次に _Driver_ の **Node.js** および _Version_ を選択してください。
     - 提案としてドライバーをインストールすることは**絶対にしないでください**。
@@ -659,7 +665,7 @@ URL は `mongodb+srv://your_user_name:your_password@cluster0.cojoign.mongodb.net
 ## Mongoose のインストール
 
 コマンドプロンプトを開き、[ローカルライブラリーのウェブサイト用スケルトン](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)を作成したディレクトリーに移動してください。
-以下のコマンドを入力して、Mongoose （およびその依存関係）をインストールし、**package.json** ファイルに追加してください。ただし、前述の [Mongoose 入門](#mongoose_と_mongodb_のインストール) を読み、すでにこの作業を行っている場合は除きます。
+以下のコマンドを入力して、Mongoose（およびその依存関係）をインストールし、**package.json** ファイルに追加してください。ただし、前述の [Mongoose 入門](#mongoose_と_mongodb_のインストール) を読み、すでにこの作業を行っている場合は除きます。
 
 ```bash
 npm install mongoose
@@ -667,58 +673,60 @@ npm install mongoose
 
 ## MongoDB への接続
 
-自分のプロジェクトのルートディレクトリーから **bin/www** を開き、ポートを設定する箇所（`app.set("port", port);` の行の後）に下記テキストをコピーしてください。
-データベースの URL 文字列 ('_insert_your_database_url_here_') を、ご自身のデータベースの場所を表す URL（つまり、_MongoDB Atlas_ の情報を使用したもの）に置き換えてください。
+プロジェクトルートの **server.js** を開き、ファイル先頭の他のパッケージインポートと並んで Mongoose のインポートを追加します。
 
 ```js
-// Set up mongoose connection
-const mongoose = require("mongoose");
-
-const mongoDB = "insert_your_database_url_here";
-
-async function connectMongoose() {
-  await mongoose.connect(mongoDB);
-
-  // Add connection error handlers
-  mongoose.connection.on("error", (err) => {
-    console.error("MongoDB connection error:", err);
-  });
-
-  mongoose.connection.on("disconnected", () => {
-    console.warn("MongoDB disconnected");
-  });
-}
-
-try {
-  connectMongoose();
-} catch (err) {
-  console.error("Failed to connect to MongoDB:", err);
-  process.exit(1);
-}
+import mongoose from "mongoose";
 ```
 
-上記の [Mongoose 入門](#mongodb_への接続)で説明したように、このコードはデータベースへのデフォルトの接続を生成し、エラーがあればコンソールに出力します。
+次に、`app.set("port", port);` の後、`const server = createServer(app);` の前に次のコードを追加します。データベースの URL 文字列 (`"insert_your_database_url_here"`) を、_MongoDB Atlas_ のデータベース URL に置き換えてください。
+
+```js
+const mongoDB = "insert_your_database_url_here";
+
+mongoose.connection.on("error", (err) => {
+  console.error("MongoDB connection error:", err);
+});
+
+mongoose.connection.on("disconnected", () => {
+  console.warn("MongoDB disconnected");
+});
+
+await mongoose.connect(mongoDB);
+```
+
+上記の [Mongoose 入門](#mongodb_への接続)で説明したように、このコードはデータベースへのデフォルト接続を生成し、接続エラーを出力します。**server.js** は ES モジュールなので、[トップレベルの `await`](/ja/docs/Web/JavaScript/Reference/Operators/await#トップレベル_await) を使用できます。Node は接続を待ってからサーバーの作成と待ち受けコードを続行します。最初の接続に失敗すると、モジュールの読み込みに失敗し、Node は HTTP サーバーを起動せずに終了します。
 
 > [!NOTE]
-> データベース接続のコードを **app.js** に記述することも可能です。
-> アプリケーションのエントリーポイントに記述することで、アプリケーションとデータベースの結合度が低くなり、テストコードを実行する際に別のデータベースを使用しやすくなります。
+> データベース接続を **server.js** に保持すると、**app.js** はデータベースへの接続やサーバーの起動なしでアプリケーションを設定およびエクスポートできます。
 
-なお、以上のようにソースコードにデータベースの資格情報をハードコーディングすることは推奨されません。
-ここでは、接続のコアとなるコードを示して、また開発段階では、これらの資格情報が漏洩しても機密情報が公開されたり破損したりする重大なリスクがないため、あえてこのようにしています。
-[本番環境への展開](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment#database_configuration)の際には、この方法がより安全であることを示します！
+> [!WARNING]
+> データベースの資格情報をソースコードにハードコーディングすることは、非常に悪い習慣です。
+> 接続の中心的なコードを示し、開発段階ではこの情報が漏洩して機密情報を公開したり破損したりする重大なリスクがないため、ここではあえてハードコーディングしています。
+> コードを GitHub にコミットしてプッシュする場合は、このチュートリアルが終わるまでコミットを停止してください。コミットするとデータベースの資格情報が Git 履歴に永続的に残り、GitHub リポジトリーにアクセスできるすべての人が利用できるようになります。
+> より安全な方法については、[本番環境への展開](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment#データベースの設定)で説明します。
+>
+> 公開ソースコードにデータベースの資格情報を誤って漏洩させた場合は、直ちにデータベースのパスワードを変更してください。
 
-## LocalLibrary スキーマの定義
+## 地域図書館スキーマの定義
 
 [前述の通り](#ファイルあたり_1_つの_schemamodel)、モデルごとに別個のモジュールを定義します。
-まず、プロジェクトのルートディレクトリーにモデル用のフォルダー内 (**/models**) を作成し、それぞれのモデルごとに別個のファイルを作成します。
+まず、プロジェクトルートにモデル用のフォルダー **models/** を作成し、それぞれのモデルごとに別個のファイルを作成します。
 
 ```plain
-/express-locallibrary-tutorial  # the project root
-  /models
-    author.js
-    book.js
-    bookinstance.js
-    genre.js
+express-locallibrary-tutorial
+├── models
+│   ├── author.js
+│   ├── book.js
+│   ├── bookinstance.js
+│   └── genre.js
+...
+```
+
+Bash または同様のシェルを使用している場合は、次のコマンドですべて作成できます。
+
+```bash
+mkdir models && touch models/{author,book,bookinstance,genre}.js
 ```
 
 ### Author モデル
@@ -727,7 +735,7 @@ try {
 このスキーマでは、作成者を、名前と姓（必須、最大 100 文字）に `String` スキーマタイプを、生年月日と没年月日に `Date` フィールドを持つものとして定義しています。
 
 ```js
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
@@ -757,7 +765,7 @@ AuthorSchema.virtual("url").get(function () {
 });
 
 // Export model
-module.exports = mongoose.model("Author", AuthorSchema);
+export default mongoose.model("Author", AuthorSchema);
 ```
 
 同時に、AuthorSchema に対して "url" という名前付きの[仮想プロパティ](#仮想プロパティ)を宣言しました。これは、モデルの具体的なインスタンスを取得するために必要な絶対 URL を返すものです。具体的な著者のリンクを取得する必要がある際は、テンプレート内でこのプロパティを使用します。
@@ -775,7 +783,7 @@ module.exports = mongoose.model("Author", AuthorSchema);
 その大部分は author モデルと似ています。ここでは、いくつかの文字列フィールドと、特定の書籍レコードの URL を取得するための仮想フィールドを含むスキーマを宣言し、モデルをエクスポートしています。
 
 ```js
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
@@ -794,7 +802,7 @@ BookSchema.virtual("url").get(function () {
 });
 
 // Export model
-module.exports = mongoose.model("Book", BookSchema);
+export default mongoose.model("Book", BookSchema);
 ```
 
 ここでの主な違いは、他のモデルへの参照を 2 つ作成した点です。
@@ -805,10 +813,10 @@ module.exports = mongoose.model("Book", BookSchema);
 ### BookInstance モデル
 
 最後に、下記に示す `BookInstance` のスキーマコードをコピーし、**./models/bookinstance.js** ファイルに貼り付けてください。
-`BookInstance` は、誰かが借りる可能性のある書籍の特定の1冊を表しており、その書籍が利用できるかどうか、返却予定日、および「版」（またはバージョン）の詳細といった情報が含まれています。
+`BookInstance` は、誰かが借りる可能性のある書籍の特定の 1 冊を表しており、その書籍が利用できるかどうか、返却予定日、および「版」（またはバージョン）の詳細といった情報が含まれています。
 
 ```js
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
@@ -831,13 +839,13 @@ BookInstanceSchema.virtual("url").get(function () {
 });
 
 // Export model
-module.exports = mongoose.model("BookInstance", BookInstanceSchema);
+export default mongoose.model("BookInstance", BookInstanceSchema);
 ```
 
 ここで示しているのは、フィールドのオプションです。
 
 - `enum`: これにより、文字列の許容値を設定することができます。この場合、書籍の在庫状況を指定するために使用しています（enum を使用することで、スペルミスや不適切な値が設定されるのを防ぐことができます）。
-- `default`: `default` を使用することで、新しく作成された書籍インスタンスのデフォルトの状態を「メンテナンス中」に設定し、デフォルトの `due_back` 日付を `now` に設定します（日付を設定する際に Date 関数を呼び出すことができる点にご注目ください！）。
+- `default`: `default` を使用することで、新しく作成された書籍インスタンスのデフォルトの状態を "Maintenance" に設定し、デフォルトの `due_back` 日付を `now` に設定します（日付を設定する際に Date 関数を呼び出すことができる点にご注目ください！）。
 
 それ以外の部分は、前回のスキーマでご存知の通りです。
 
@@ -848,8 +856,8 @@ module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 定義は他のモデルとよく似ています。
 
 - モデルには、ジャンルを説明する `name` という名前の `String` スキーマタイプを持つ必要があります。
-- この `name` は要求される項目であり、文字数は3文字以上100文字以下とします。
-- ジャンルのURLを表す `url` という名前付きの[仮想プロパティ](#仮想プロパティ)を宣言します。
+- この `name` は要求される項目であり、文字数は 3 文字以上 100 文字以下とします。
+- ジャンルの URL を表す `url` という名前付きの[仮想プロパティ](#仮想プロパティ)を宣言します。
 - モデルをエクスポートします。
 
 ## テスト — いくつかのアイテムの作成
@@ -858,20 +866,18 @@ module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 
 モデルを検査するため（そして、次の記事で使用できるサンプル書籍やその他のアイテムを生成するため）、ここでは独立したスクリプトを実行し、それぞれのタイプのアイテムを生成します：
 
-1. _express-locallibrary-tutorial_ ディレクトリー内（`package.json` と同じ階層）に、ファイル [populatedb.js](https://raw.githubusercontent.com/MDN/express-locallibrary-tutorial/main/populatedb.js) をダウンロード（または作成）してください。
+1. _express-locallibrary-tutorial_ ディレクトリー内（`package.json` と同じ階層）に、ファイル [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/main/populatedb.js) をダウンロード（または作成）してください。
 
    > [!NOTE]
    > `populatedb.js` 内のコードは JavaScript を学ぶ上で有益ですが、このチュートリアルを進める上で、その内容を理解する必要はありません。
 
-2. コマンドプロンプトで `node` を使用してスクリプトを実行し、_MongoDB_ データベースの URL を渡してください（先ほど `app.js` 内で `_insert_your_database_url_here_` というプレースホルダーを置き換えたものと同じものです）。
+2. コマンドプロンプトで `node` を使用してスクリプトを実行し、_MongoDB_ データベースの URL を渡してください（先ほど `server.js` 内で `_insert_your_database_url_here_` というプレースホルダーを置き換えたものと同じものです）。
 
    ```bash
-   node populatedb <your MongoDB url>
+   node populatedb.js "<your MongoDB URL>"
    ```
 
-   > [!NOTE]
-   > Windows では、データベースの URL を二重引用符 (") で囲む必要があります。
-   > その他のオペレーティングシステムでは、単一の引用符 (') を使用する必要がある場合があります。
+   URL は二重引用符で囲んでください。
 
 3. スクリプトは最後まで実行され、アイテムが作成されるたびに端末に表示されるはずです。
 
@@ -887,13 +893,13 @@ module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 
 ## 関連情報
 
-- [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express ドキュメント)
-- [Mongoose website](https://mongoosejs.com/) (Mongoose ドキュメント)
-- [Mongoose Guide](https://mongoosejs.com/docs/guide.html) (Mongoose ドキュメント)
-- [Validation](https://mongoosejs.com/docs/validation.html) (Mongoose ドキュメント)
-- [Schema Types](https://mongoosejs.com/docs/schematypes.html) (Mongoose ドキュメント)
-- [Models](https://mongoosejs.com/docs/models.html) (Mongoose ドキュメント)
-- [Queries](https://mongoosejs.com/docs/queries.html) (Mongoose ドキュメント)
-- [Population](https://mongoosejs.com/docs/populate.html) (Mongoose ドキュメント)
+- [データベース統合](https://expressjs.com/ja/guide/database-integration/)（Express ドキュメント）
+- [Mongoose website](https://mongoosejs.com/)（Mongoose ドキュメント）
+- [Mongoose Guide](https://mongoosejs.com/docs/guide.html)（Mongoose ドキュメント）
+- [Validation](https://mongoosejs.com/docs/validation.html)（Mongoose ドキュメント）
+- [Schema Types](https://mongoosejs.com/docs/schematypes.html)（Mongoose ドキュメント）
+- [Models](https://mongoosejs.com/docs/models.html)（Mongoose ドキュメント）
+- [Queries](https://mongoosejs.com/docs/queries.html)（Mongoose ドキュメント）
+- [Population](https://mongoosejs.com/docs/populate.html)（Mongoose ドキュメント）
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
