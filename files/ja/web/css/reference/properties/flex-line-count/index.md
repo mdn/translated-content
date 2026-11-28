@@ -380,5 +380,5 @@ body {
 - {{CSSXRef("flex-wrap")}}
 - {{CSSXRef("flex-flow")}} 一括指定
 - [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
-- [フレックスアイテムの折り返しをマスターする > 均等な折り返し](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items#均等な折り返し)
+- [フレックスアイテムの折り返しをマスターする > バランスの取れた折り返し](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items#バランスの取れた折り返し)
 - [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール

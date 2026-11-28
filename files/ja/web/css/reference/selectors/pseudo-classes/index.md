@@ -208,7 +208,7 @@ button:hover {
 
 ## 関数擬似クラス
 
-[セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#セレクターリスト)または[寛容なセレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#寛容なセレクターリスト)を引数として受け取る擬似クラスです。
+[セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list)または[寛容なセレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#寛容なセレクターリスト)を引数として受け取る擬似クラスです。
 
 - {{cssxref(":is()")}}
   - : matches-any 擬似クラスは、指定されたリストのセレクターのどれかに一致する要素に一致します。リストは寛容です。

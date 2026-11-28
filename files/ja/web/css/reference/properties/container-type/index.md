@@ -36,7 +36,7 @@ container-type: unset;
 - `anchored`
   - : そのコンテナー内で、アンカー付きコンテナークエリー用のクエリコンテナーを確立します。この場合、要素のサイズは独立して計算されるわけではなく、[抑制](/ja/docs/Web/CSS/Guides/Containment/Using)は適用されません。
 - `inline-size`
-  - : コンテナーの[インライン軸](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック軸とインライン軸)上のサイズクエリー用のクエリーコンテナーを確立します。
+  - : コンテナーの[インライン軸](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック次元とインライン次元)上のサイズクエリー用のクエリーコンテナーを確立します。
     要素に[スタイル](/ja/docs/Web/CSS/Reference/Properties/contain#style)抑制と[インラインサイズ](/ja/docs/Web/CSS/Reference/Properties/contain#inline-size)抑制を適用します。要素のインラインサイズは、子要素を無視して[単独で計算](/ja/docs/Web/CSS/Guides/Containment/Using#サイズ抑制)することができます（[CSS コンテナーの使用](/ja/docs/Web/CSS/Guides/Containment/Using)を参照してください）。
 
 - `normal`
@@ -46,7 +46,7 @@ container-type: unset;
   - : コンテナーのスクロール状態クエリー用のクエリコンテナーを設定します。この場合、要素のサイズは単独で計算されず、抑制は適用されません。
 
 - `size`
-  - : [インラインおよびブロック](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック軸とインライン軸)の両方の寸法で コンテナーサイズクエリーのためのクエリー コンテナーを確立します。
+  - : [インラインおよびブロック](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック次元とインライン次元)の両方の寸法で コンテナーサイズクエリーのためのクエリー コンテナーを確立します。
     コンテナーに[スタイル](/ja/docs/Web/CSS/Reference/Properties/contain#style)抑制と[サイズ](/ja/docs/Web/CSS/Reference/Properties/contain#size)抑制を適用します。サイズ抑制は、インライン方向とブロック方向の両方で要素に適用されます。要素のサイズは、子要素を無視して単独で計算できます。
 
 ## 解説

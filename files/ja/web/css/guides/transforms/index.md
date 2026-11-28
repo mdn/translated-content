@@ -712,7 +712,7 @@ updateTransform();
   - : CSS でスタイル付けされた要素をどのように座標変換するかについての手順を追ったチュートリアルです。
 - [座標系](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems)
   - : CSS オブジェクトモデルでピクセル位置を定義する方法を説明します。
-- [パフォーマンスの基礎: CSS 座標変換の使用](/ja/docs/Web/Performance/Guides/Fundamentals#css_変換を使用する)
+- [パフォーマンスの基礎: CSS 座標変換の使用](/ja/docs/Web/Performance/Guides/Fundamentals#css_座標変換を使用する)
   - : ウェブパフォーマンスの基礎について、 CSS 座標変換がどのようにパフォーマンスを向上させることができるかを含め、概説します。
 - [ウェブの行列演算](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
   - : オブジェクトの座標変換を行列で表す方法を説明しています。
