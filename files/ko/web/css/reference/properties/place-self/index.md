@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c72b86b3d6818ec6c8df1d52a77513d769f4164e
 ---
 
-**`place-self`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties) 은 [그리드](/ko/docs/Web/CSS/Guides/Grid_layout) 혹은 [플렉스박스](/ko/docs/Web/CSS/Guides/Flexible_box_layout) 와 같은 관계형 레이아웃 시스템에서 블록 방향과 인라인 방향에서 한번에 개별 요소를 정렬합니다 (예시. {{CSSxRef("align-items")}} 와 {{CSSxRef("justify-items")}} 속성). 만일 두번째 값이 지정되지 않는다면, 첫번째 값이 두번째 값으로도 사용됩니다.
+**`place-self`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties) 은 [그리드](/ko/docs/Web/CSS/Guides/Grid_layout) 혹은 [플렉스박스](/ko/docs/Web/CSS/Guides/Flexible_box_layout) 와 같은 관계형 레이아웃 시스템에서 블록 방향과 인라인 방향에서 한번에 개별 요소를 정렬합니다 (즉, {{CSSxRef("align-self")}} 와 {{CSSxRef("justify-self")}} 속성). 만일 두번째 값이 지정되지 않는다면, 첫번째 값이 두번째 값으로도 사용됩니다.
 
 {{InteractiveExample("CSS Demo: place-self")}}
 
