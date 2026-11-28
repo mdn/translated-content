@@ -1,6 +1,7 @@
 ---
 title: Насколько дорого обойдётся сделать что-то с помощью Web?
-slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
+slug: conflicting/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
+original_slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 ---
 
 {{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
