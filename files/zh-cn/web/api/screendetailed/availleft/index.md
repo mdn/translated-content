@@ -1,40 +1,52 @@
 ---
-title: Screen.availLeft
+title: ScreenDetailed：availLeft 属性
+short-title: availLeft
 slug: Web/API/ScreenDetailed/availLeft
+l10n:
+  sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
 ---
 
-{{ ApiRef() }}
+{{APIRef("Window Management API")}}{{seecompattable}}{{SecureContext_Header}}
 
-### 概述
+{{domxref("ScreenDetailed")}} 接口的 **`availLeft`** 只读属性是一个数字，表示操作系统虚拟屏幕排列中可用屏幕区域的 x 坐标（左边缘），相对于[多屏原点](/zh-CN/docs/Web/API/Window_Management_API/Multi-screen_origin)。
 
-返回浏览器可用空间左边距离屏幕（系统桌面）左边界的距离。
+该值等于 {{domxref("ScreenDetailed.left")}} 属性，加上屏幕左侧绘制的所有操作系统 UI 元素的宽度。这些区域无法放置窗口，因此 `availLeft` 可以告诉你实际可用于打开或放置窗口的区域的左边界。
 
-### 语法
+> [!NOTE]
+> 所有浏览器都在 `Screen` 接口上提供了 `availLeft` 属性的非标准实现。使用细节见下面的[非标准示例](#非标准示例)；与这种非标准实现相关的浏览器支持信息见 [`Screen`](/zh-CN/docs/Web/API/Screen#浏览器兼容性) 参考页。
 
-```plain
-iAvail = window.screen.availLeft
+## 值
+
+一个数字。
+
+## 示例
+
+### Window Management API 示例
+
+```js
+// 在支持 Window Management API 的浏览器中可用
+const screenDetails = await window.getScreenDetails();
+
+// 返回第一块屏幕的 availLeft 值
+const screen1AvailLeft = screenDetails.screens[0].availLeft;
 ```
 
-### 示例
+### 非标准示例
 
-```plain
-setY = window.screen.height - window.screen.availTop;
-setX = window.screen.width - window.screen.availLeft;
-window.moveTo(setX, setY);
+```js
+// 在所有浏览器中可用
+// 返回当前屏幕的 availLeft 值
+const screenAvailLeft = window.screen.availLeft;
 ```
 
-### 备注
+## 规范
 
-大多数情况下，该属性返回 0。
+{{Specifications}}
 
-如果你在有两个屏幕的电脑上使用该属性，在右侧屏幕计算该属性值时，返回左侧屏幕的宽度（单位：像素），也即左侧屏幕左边界的 X 坐标。
+## 浏览器兼容性
 
-在 Windows 中，该属性值取决于哪个屏幕被设为主屏幕，返回相对于主屏幕左边界的 X 坐标。就是说，即使主屏幕不是左侧的屏幕，它的左边界的 X 坐标也是返回 0。如果副屏幕在主屏幕的左侧，则它拥有负的 X 坐标。
+{{Compat}}
 
-\[1] \[2] - 左屏幕 _availLeft_ 返回 **0**，右侧的屏幕返回左侧屏幕的宽度
+## 参见
 
-\[2] \[1] - 左侧屏幕 _availLeft_ 返回该屏幕的 **-width**，右侧屏幕返回 **0**
-
-### 规范
-
-DOM Level 0。不属于任何规范。
+- [Window Management API](/zh-CN/docs/Web/API/Window_Management_API)
