@@ -19,7 +19,7 @@ l10n:
   - : {{cssxref("length-percentage")}} で、上付き文字を式のベースラインより上にシフトするための最小量。
 
 > [!NOTE]
-> `subscriptshift` および `superscriptshift` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れられるかもしれません。
+> `subscriptshift` および `superscriptshift` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Reference/Values#mathml_における古い長さ)も受け入れられるかもしれません。
 
 ## 例
 

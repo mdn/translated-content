@@ -223,7 +223,7 @@ latexmlc --dest foo.epub foo.tex # EPUB 文書 foo.epub を生成
 
 ### 入力ボックス
 
-単純な手法は、[単純構文からのコンバーター](#単純構文からのコンバーター)を数学の単純な入力ボックスとして統合することです。例えば、 [Thunderbird](https://www.thunderbird.net/ja/) や [SeaMonkey](https://www.seamonkey-project.org/) には、ポップアップウィンドウを開くための **Insert > Math** コマンドが指定され、 LaTeX から MathML への入力フィールドとライブ MathML プレビューが表示されます：
+単純な手法は、[単純構文からのコンバーター](#簡易記法からの変換)を数学の単純な入力ボックスとして統合することです。例えば、 [Thunderbird](https://www.thunderbird.net/ja/) や [SeaMonkey](https://www.seamonkey-project.org/) には、ポップアップウィンドウを開くための **Insert > Math** コマンドが指定され、 LaTeX から MathML への入力フィールドとライブ MathML プレビューが表示されます：
 
 ![Thunderbird の LaTeX 入力ボックス](thunderbird.png)
 
