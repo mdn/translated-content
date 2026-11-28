@@ -2,7 +2,7 @@
 title: 使用类
 slug: Web/JavaScript/Guide/Using_classes
 l10n:
-  sourceCommit: 8c56e742169bd80f27cbc57591f6b3a00e23c873
+  sourceCommit: 44b7cee840c2c4b4f9fa164d45bb4f397e5af5da
 ---
 
 {{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}
@@ -313,10 +313,12 @@ class Color {
     this.values = rgbToHSL([r, g, b]);
   }
   getRed() {
-    return this.values[0];
+    return hslToRGB(this.values)[0];
   }
   setRed(value) {
-    this.values[0] = value;
+    const rgb = hslToRGB(this.values);
+    rgb[0] = value;
+    this.values = rgbToHSL(rgb);
   }
 }
 
@@ -721,7 +723,7 @@ console.log(color instanceof ColorWithAlpha); // true
 
 ```js
 function incrementDay(date) {
-  return date.setDate(date.getDate() + 1);
+  return new Date(date.setDate(date.getDate() + 1));
 }
 const date = new Date(); // 2019-06-19
 const newDay = incrementDay(date);
