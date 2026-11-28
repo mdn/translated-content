@@ -1,25 +1,31 @@
 ---
 title: "HTML : une bonne base pour l'accessibilité"
+short-title: HTML accessible
 slug: Learn_web_development/Core/Accessibility/HTML
-original_slug: Learn/Accessibility/HTML
+l10n:
+  sourceCommit: 306f0d17c10c4bfa8179b81fe676102ea0b0b6fa
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/Test_your_skills/HTML", "Learn_web_development/Core/Accessibility")}}
 
-Une grande partie des contenus web peut être rendue accessible simplement en s'assurant d'utiliser les éléments HTML appropriés systématiquement. Cet article détaille comment HTML peut être utilisé pour un maximum d'accessibilité.
+Une grande partie du contenu web peut être rendue accessible simplement en s'assurant que les éléments Hypertext Markup Language corrects sont utilisés pour le bon objectif à tout moment. Cet article examine en détail comment HTML peut être utilisé pour garantir une accessibilité maximale.
 
-<table class="standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
-      <td>Connaissance de base de <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a> et une <a href="/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility">compréhension des concepts fondamentaux de l'accessibilité</a>.</td>
+      <td>Être familier avec <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>, et avoir une <a href="/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility">compréhension de base des concepts d'accessibilité</a>.</td>
     </tr>
     <tr>
-      <th scope="row">Objectif d'apprentissage&nbsp;:</th>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
       <td>
-        Se familiariser avec les fonctionnalités de HTML qui bénéficient à
-        l'accessibilité, et comment les utiliser de manière appropriée dans vos
-        documents web.
+        <ul>
+          <li>Utiliser le HTML sémantique, aussi appelé «&nbsp;le bon élément pour le bon objectif&nbsp;», car le navigateur fournit de nombreux mécanismes d'accessibilité intégrés.</li>
+          <li>Les bonnes pratiques en matière d'accessibilité, telles que le texte alternatif, un bon texte de lien, les étiquettes de formulaire, ainsi que les en-têtes et la portée des lignes et colonnes de tableau.</li>
+          <li>Utiliser un langage simple et clair, éviter autant que possible l'argot et les abréviations, et fournir des définitions lorsque ce n'est pas possible.</li>
+          <li>Le concept et la pratique de l'accessibilité au clavier.</li>
+          <li>L'importance de l'ordre des sources.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -27,244 +33,170 @@ Une grande partie des contenus web peut être rendue accessible simplement en s'
 
 ## HTML et accessibilité
 
-Plus vous apprenez le HTML — plus vous lisez de ressources, regardez d'exemples — plus vous recontrerez un thème récurrent : l'importance d'utiliser du HTML sémantique, parfois appelé POSH (Plain Old Semantic HTML). C'est l'usage des éléments HTML appropriés autant que possible.
+Au fur et à mesure que vous apprenez le HTML — que vous lisez davantage de ressources, que vous regardez plus d'exemples, etc. — vous constatez un thème récurrent&nbsp;: l'importance d'utiliser du HTML sémantique (parfois appelé POSH, ou Plain Old Semantic HTML). Cela signifie utiliser les éléments HTML corrects pour leur objectif prévu autant que possible.
 
-Vous pouvez vous demander pourquoi c'est si important. Après tout, vous pouvez utiliser une combinaison de CSS et de JavaScript pour faire fonctionner n'importe quel élément HTML de la manière que vous souhaitez. Par exemple, un bouton de lecture pour une vidéo sur votre site pourrait être codé ainsi :
+Vous pouvez vous demander pourquoi c'est si important. Après tout, vous pouvez utiliser une combinaison de CSS et de JavaScript pour faire fonctionner n'importe quel élément HTML de la manière que vous souhaitez. Par exemple, un bouton de lecture pour une vidéo sur votre site peut être codé ainsi&nbsp;:
 
 ```html
 <div>Lire la vidéo</div>
 ```
 
-Mais comme vous le verrez en détail plus loin, il est beaucoup plus sensé d'utiliser le bon élément à cet effet :
+Mais comme vous le voyez en détail plus loin, il est beaucoup plus sensé d'utiliser le bon élément à cet effet&nbsp;:
 
 ```html
 <button>Lire la vidéo</button>
 ```
 
-Non seulement `<button>` possède des styles adéquats par défaut (que vous voudrez probablement surcharger), il intègre aussi l'accès au clavier — on peut tabuler dessus, et l'activer avec la touche entrée.
+Le HTML sémantique ne prend pas plus de temps à écrire que du balisage non sémantique (mauvais) si vous le faites de manière cohérente dès le début de votre projet. Mieux encore, le balisage sémantique présente d'autres avantages au-delà de l'accessibilité&nbsp;:
 
-Le HTML sémantique ne demande pas plus de temps à écrire que du (mauvais) balisage non-sémantique si vous le faites de manière constante dès le début de votre projet, et il a également des bénéfices au delà de l'accessibilité :
+1. **Facile à développer avec** — comme mentionné ci-dessus, vous obtenez certaines fonctionnalités gratuitement, et c'est indiscutablement plus compréhensible.
+2. **Meilleur sur mobile** — le HTML sémantique est probablement plus léger en taille de fichier que le code spaghetti non sémantique, et plus facile à rendre réactif.
+3. **Bon pour le SEO** — les moteurs de recherche accordent plus d'importance aux mots-clés dans les titres, les liens, etc. qu'aux mots-clés inclus dans des `<div>` non sémantiques, etc., donc vos documents sont plus facilement trouvables par les utilisateur·ice·s.
 
-1. **Facilite les développements** — comme mentionné ci-dessus, certaines fonctionnalités sont gratuites, et c'est indiscutablement plus compréhensible.
-2. **Meilleur pour le mobile** — le HTML sémantique est indiscutablement plus léger en la taille du fichier que le code spaghetti non sémantique, et plus aisé à rendre responsive.
-3. **Bon pour le SEO** — les moteurs de recherche donnent plus d'importance aux mots clés contenus dans les titres, liens, etc. que des mots-clés contenus dans des `<div>` non sémantiques, et donc vos documents seront plus facilement trouvés par vos clients.
+Passons maintenant à l'examen du HTML accessible plus en détail.
 
-Continuons et jetons un œil au HTML accessible dans le détail.
+## Bonne sémantique
 
-> [!NOTE]
-> C'est une bonne idée d'avoir un lecteur d'écran configuré, pour tester les exemples ci-dessous. Voir notre guide pour [gérer les problèmes courants d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/Tooling#screenreaders) pour plus de détails.
+Nous avons déjà parlé de l'importance d'une sémantique appropriée et de la raison pour laquelle nous devons utiliser le bon élément HTML pour le travail. Cela ne peut pas être ignoré, car c'est l'un des principaux endroits où l'accessibilité est gravement compromise si elle n'est pas correctement gérée.
 
-## Une bonne sémantique
+Sur le web, la vérité est que les gens font parfois des choses très étranges avec le balisage HTML. Souvent, l'utilisation incorrecte du HTML est due à des pratiques héritées qui n'ont pas encore disparu, mais parfois cela se produit parce que les auteur·ice·s ne savent pas mieux faire. Quoi qu'il en soit, vous devez remplacer le mauvais code par un bon balisage sémantique autant que possible, à la fois dans les pages HTML statiques et dans le HTML généré dynamiquement à partir de code [côté serveur](/fr/docs/Learn_web_development/Extensions/Server-side) ou de [cadriciels JavaScript côté client](/fr/docs/Learn_web_development/Core/Frameworks_libraries) tels que React.
 
-Nous avons déjà parlé de l'importance d'une bonne sémantique, et pourquoi nous devons utiliser le bon élément HTML pour le bon usage. Il ne faut pas l'ignorer car c'est une des principales causes d'importants problèmes d'accessibilité si ce n'est pas fait correctement.
+Parfois, vous ne pouvez pas vous débarrasser d'un balisage médiocre — vos pages peuvent dépendre de code côté serveur ou de composants web/de cadriciel que vous ne contrôlez pas, ou vous pouvez avoir du contenu tiers sur votre page (comme des bannières publicitaires).
 
-En vérité sur le Web, les développeurs font d'étranges choses avec HTML. Certains abus en HTML sont hérités de vieilles pratiques obsolètes pas complètement oubliées, d'autre sont juste de l'ignorance. Dans tous les cas, vous devez remplacer ce mauvais code partout où vous le verrez, dès que vous le pourrez.
+Le but n'est pas «&nbsp;tout ou rien&nbsp;»&nbsp;; chaque amélioration que vous apportez contribue à l'accessibilité.
 
-Parfois vous ne pourrez pas vous débarrasser du mauvais balisage — vos pages seront générées par quelque framework côté serveur dont vous n'aurez pas le contrôle total, ou vous aurez des contenus tiers (comme des bannières publicitaires) que nous ne contrôlerez pas.
+### Utiliser du contenu textuel bien structuré
 
-L'objectif cependant n'est pas « tout ou rien&nbsp;» — toute amélioration que vous pouvez faire aidera la cause de l'accessibilité.
-
-### Contenus textuels
-
-L'une des meilleures aides en accessibilité qu'un utilisateur de lecteur d'écran peut avoir est une bonne structure des titres, paragraphes, listes, etc. Un bon exemple sémantique devrait ressembler au code suivant :
+L'une des meilleures aides à l'accessibilité pour un·e utilisateur·ice qui utilise un lecteur d'écran est une excellente structure textuelle avec des titres, des paragraphes, des listes, etc. Un bon exemple sémantique peut ressembler à ceci&nbsp;:
 
 ```html example-good
 <h1>Mon titre</h1>
 
-<p>Ceci est la premère section de mon document.</p>
+<p>Voici la première section de mon document.</p>
 
-<p>Je vais ajouter ici un autre paragraphe.</p>
+<p>J'ajoute également un autre paragraphe ici.</p>
 
 <ol>
   <li>Voici</li>
-  <li>une liste pour</li>
-  <li>toi à lire.</li>
+  <li>une liste à</li>
+  <li>lire</li>
 </ol>
 
 <h2>Mon sous-titre</h2>
 
 <p>
-  Ceci est la première sous-section de mon document. J'aurais aimé que les gens
-  puissent trouver ce contenu!
+  Voici la première sous-section de mon document. J'aimerais que les gens
+  puissent trouver ce contenu !
 </p>
 
-<h2>Mon second sous-titre</h2>
+<h2>Mon deuxième sous-titre</h2>
 
 <p>
-  Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus
-  intéressante que la dernière.
+  Voici la deuxième sous-section de mon contenu, que je trouve plus intéressante
+  que la précédente.
 </p>
 ```
 
-Nous avons préparé pour vous une version avec un texte plus long afin de l'essayer avec lecteur d'écran (voir [la bonne sémantique](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html)). Si vous essayez de naviguer dans ce document, vous verrez qu'il est assez simple de s'y retrouver :
+Nous avons préparé une version avec un texte plus long que vous pouvez essayer avec un lecteur d'écran (voir [good-semantics.html <sup>(angl.)</sup>](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html)). Si vous essayez de naviguer dans cette page, vous constatez que la navigation est assez facile&nbsp;:
 
-1. Le lecteur d'écran lit à voix haute chaque élément au fur et à mesure que vous progressez dans le contenu, vous notifiant ce qui est un paragraphe, ce qui est un titre, etc.
-2. Il s'arrête après chaque élément, vous laissant aller à n'importe quel endroit vous convenant.
-3. Vous pouvez sauter au précédent ou au prochain titre avec de nombreux lecteurs d'écran.
-4. Vous pouvez aussi dresser une liste de tous les titres avec de nombreux lecteurs d'écrans, vous permettant de les utiliser comme une table des matières pratique pour trouver un contenu spécifique.
+1. Le lecteur d'écran lit chaque titre au fil de votre progression dans le contenu et vous indique s'il s'agit d'un titre, d'un paragraphe, etc.
+2. Il s'arrête après chaque élément, ce qui vous permet d'avancer à votre rythme.
+3. Dans de nombreux lecteurs d'écran, vous pouvez passer au titre suivant ou précédent.
+4. Dans de nombreux lecteurs d'écran, vous pouvez aussi afficher la liste de tous les titres et vous en servir comme d'une table des matières pratique pour trouver un contenu précis.
 
-Les gens écrivent parfois des titres, des paragraphes, etc. utilisant le HTML de présentation et retours à la ligne, quelque chose comme ce qui suit :
+Les gens écrivent parfois des titres, des paragraphes, etc. en utilisant des sauts de ligne et en ajoutant des éléments HTML uniquement pour la mise en forme, comme ceci&nbsp;:
 
 ```html example-bad
-<font size="7">Mon titre</font> <br /><br />
-Ceci est la première section de mon document.
+<span style="font-size: 3em">Mon titre</span> <br /><br />
+Voici la première section de mon document.
 <br /><br />
-Je vais ajouter ici un autre paragraphe.
+J'ajoute également un autre paragraphe ici.
 <br /><br />
 1. Voici
 <br /><br />
-2. une liste pour
+2. une liste à
 <br /><br />
-3. toi à lire.
+3. lire
 <br /><br />
-<font size="5">Mon sous-titre</font>
+<span style="font-size: 2.5em">Mon sous-titre</span>
 <br /><br />
-<p>
-  Ceci est la première sous-section de mon document. J'aurais aimé que les gens
-  puissent trouver ce contenu! <br /><br />
-  <font size="5">My 2nd subheading</font>
-  <br /><br />
-  Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus
-  intéressante que la dernière.
-</p>
+Voici la première sous-section de mon document. J'aimerais que les gens puissent
+trouver ce contenu !
+<br /><br />
+<span style="font-size: 2.5em">Mon deuxième sous-titre</span>
+<br /><br />
+Voici la deuxième sous-section de mon contenu. Je la trouve plus intéressante
+que la précédente.
 ```
 
-Si vous essayez notre version plus longue avec un lecteur d'écran (voir [la mauvaise sémantique](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)), vous n'aurez pas une très bonne expérience – le lecteur d'écran n'a plus rien à utiliser comme indicateur, il ne peut pas récupérer une table des matières utilisable, et la page entière est vue comme un bloc unique, lu tout d'une traite.
+Si vous essayez notre version plus longue avec un lecteur d'écran (voir [bad-semantics.html <sup>(angl.)</sup>](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)), l'expérience n'est pas très bonne — le lecteur d'écran ne dispose d'aucun repère, vous ne pouvez donc pas obtenir de table des matières utile, et toute la page est considérée comme un seul bloc gigantesque, lu d'une traite.
 
-Il y a aussi d'autres problèmes au-delà de l'accessibilité – le contenu est plus dur à mettre en forme avec le CSS, ou à manipuler avec JavaScript par exemple, car il n'y a pas d'élément à utiliser comme sélecteurs.
+Il existe aussi d'autres problèmes que ceux liés à l'accessibilité — il est par exemple plus difficile de mettre en forme le contenu avec CSS ou de le manipuler avec JavaScript, car aucun élément ne peut servir de sélecteur.
 
-#### Utiliser un langage clair
+### Utiliser un langage clair
 
-Le langage que vous employez peut aussi affecter l'accessiblité. En général vous ne devriez pas utiliser un langage trop complexe, ni utiliser un jargon ou de l'argot inutiles. Cela ne profite pas qu'aux gens avec des handicaps congnitifs ou autres ; cela profite au lecteur pour qui le texte n'est pas écrit dans sa langue maternelle, pour des gens plus jeunes… à tout un chacun en fait ! Mis à part cela, vous devriez essayer d'éviter d'utiliser un langage et des caractères qui ne sont pas lus clairement à voix haute par le lecteur d'écran. Par exemple :
+Le langage que vous utilisez peut également influer sur l'accessibilité. En général, utilisez un langage clair, qui n'est pas trop complexe et qui n'emploie pas de jargon ou d'argot inutile. Cela profite non seulement aux personnes ayant un handicap cognitif ou un autre handicap&nbsp;; cela profite aussi aux personnes qui ne lisent pas dans leur langue maternelle, aux jeunes…, à tout le monde, en fait&nbsp;! En outre, essayez d'éviter les termes et les caractères que le lecteur d'écran ne lit pas clairement. Par exemple&nbsp;:
 
-- N'utilisez pas des tirets si vous le pouvez. Au lieu d'écrire 5–7, écrivez 5 à 7.
-- Explicitez les abréviations — au lieu d'écrire Jan, écrivez Janvier.
-- Explicitez les acronymes, au moins une ou deux fois. Au lieu d'écrire "HTML" en premier lieu, écrivez Hypertext Markup Language.
+- N'utilisez pas de tirets si vous pouvez les éviter. Au lieu d'écrire 5-7, écrivez 5 à 7.
+- Développez les abréviations — au lieu d'écrire janv, écrivez janvier.
+- Développez les sigles au moins une ou deux fois, puis utilisez la balise [`<abbr>`](/fr/docs/Web/HTML/Reference/Elements/abbr) pour les décrire.
 
-### Disposition des pages
+### Structurer logiquement les sections de la page
 
-Dans les âges sombres, les gens avaient pour habitude de créer les dispositions de leurs pages avec des tableaux HTML — en utilisant différentes cellules de ces tableaux pour contenir l'en-tête, le pied de page, une barre latérale, la colonne du contenu principal, etc. Ce n'est pas une bonne idée car un lecteur d'écran va donner des lectures déroutantes, surtout si la disposition est complexe et a de nombreux tableaux imbriqués.
+Utilisez les [éléments de sectionnement](/fr/docs/Web/HTML/Reference/Elements#contenu_sectionnant) appropriés pour structurer vos pages web, par exemple la navigation ({{HTMLElement("nav")}}), le pied de page ({{HTMLElement("footer")}}) et les unités de contenu répétées ({{HTMLElement("article")}}). Ces éléments apportent une sémantique supplémentaire aux lecteurs d'écran (et aux autres outils), qui peuvent ainsi fournir des indications aux utilisateur·ice·s sur le contenu parcouru.
 
-Essayez notre exemple [table-layout.html](https://mdn.github.io/learning-area/accessibility/html/table-layout.html), qui ressemble à quelque chose comme ça :
-
-```html
-<table width="1200">
-  <!-- main heading row -->
-  <tr id="heading">
-    <td colspan="6">
-      <h1 align="center">Header</h1>
-    </td>
-  </tr>
-  <!-- nav menu row  -->
-  <tr id="nav" bgcolor="#ffffff">
-    <td width="200">
-      <a href="#" align="center">Home</a>
-    </td>
-    <td width="200">
-      <a href="#" align="center">Our team</a>
-    </td>
-    <td width="200">
-      <a href="#" align="center">Projects</a>
-    </td>
-    <td width="200">
-      <a href="#" align="center">Contact</a>
-    </td>
-    <td width="300">
-      <form width="300">
-        <input type="search" name="q" placeholder="Search query" width="300" />
-      </form>
-    </td>
-    <td width="100">
-      <button width="100">Go!</button>
-    </td>
-  </tr>
-  <!-- spacer row -->
-  <tr id="spacer" height="10">
-    <td></td>
-  </tr>
-  <!-- main content and aside row -->
-  <tr id="main">
-    <td id="content" colspan="4" bgcolor="#ffffff">
-      <!-- main content goes here -->
-    </td>
-    <td id="aside" colspan="2" bgcolor="#ff80ff" valign="top">
-      <h2>Related</h2>
-
-      <!-- aside content goes here -->
-    </td>
-  </tr>
-  <!-- spacer row -->
-  <tr id="spacer" height="10">
-    <td></td>
-  </tr>
-  <!-- footer row -->
-  <tr id="footer" bgcolor="#ffffff">
-    <td colspan="6">
-      <p>©Copyright 2050 by nobody. All rights reversed.</p>
-    </td>
-  </tr>
-</table>
-```
-
-Si vous essayez de naviguer à l'aide d'un lecteur d'écran, cela vous indiquera probablement qu'il existe un tableau à examiner (bien que certains lecteurs d'écran puissent deviner la différence entre les présentations de tableau et les tableaux de données). Vous devrez ensuite (en fonction du lecteur d'écran que vous utilisez) devoir accéder à la table en tant qu'objet et en examiner les caractéristiques séparément, puis sortir à nouveau de la table pour continuer à naviguer dans le contenu.
-
-Les structures de table sont un vestige du passé – elles semblaient logiques lorsque le support CSS n'était pas répandu dans les navigateurs, mais elles semaient la confusion chez les utilisateurs de lecteurs d'écran, tout en étant mauvaises pour de nombreuses autres raisons (utilisation abusive des tableaux, nécessite plus de balisage, design manquant de souplesse). Ne les utilisez pas !
-
-Vous pouvez vérifier ces affirmations en comparant votre expérience antérieure avec un [exemple plus moderne de structure de site Web](https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/), qui pourrait ressembler à ceci :
+Par exemple, une structure de contenu moderne peut ressembler à ceci&nbsp;:
 
 ```html
 <header>
-  <h1>Entête</h1>
+  <h1>En-tête</h1>
 </header>
 
 <nav>
-  <!--  navigation principale ici  -->
+  <!-- navigation principale ici -->
 </nav>
 
-<!--  Voici le contenu principal de notre page  -->
+<!-- Voici le contenu principal de notre page -->
 <main>
-  <!--  Il contient un article  -->
+  <!-- Il contient un article -->
   <article>
-    <h2>Intitulé de l'article</h2>
+    <h2>Titre de l'article</h2>
 
-    <!--  contenu de l'article ici  -->
+    <!-- contenu de l'article ici -->
   </article>
 
   <aside>
-    <h2>en relation</h2>
+    <h2>Contenu associé</h2>
 
-    <!--  à part le contenu ici  -->
+    <!-- contenu complémentaire ici -->
   </aside>
 </main>
 
-<!--  Et voici notre pied de page principal utilisé dans toutes les pages de notre site Web. -->
+<!-- Et voici le pied de page principal, utilisé sur toutes les pages de notre site web -->
 
 <footer>
-  <!--  contenu du pied de page ici  -->
+  <!-- contenu du pied de page ici -->
 </footer>
 ```
 
-Si vous essayez notre exemple plus moderne de structure avec un lecteur d'écran, vous verrez que le balisage de présentation ne gêne plus ni ne rend la lecture du contenu confuse. Il est également beaucoup plus léger et plus petit en termes de taille de code, ce qui signifie une maintenance plus facile du code et une sollicitation moindre de la bande passante par l'utilisateur (particulièrement critique en cas de connexions lentes).
+Vous trouverez un [exemple complet ici <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/).
 
-Une autre considération à prendre en compte lors de la création de dispositions consiste à utiliser des éléments sémantiques HTML5 comme dans l'exemple ci-dessus (voir [Référence des éléments HTML](/fr/docs/Web/HTML/Reference/Elements#content_sectioning)). Vous pouvez créer une disposition en utilisant uniquement des éléments {{htmlelement("div")}} imbriqués, mais il est préférable d'utiliser des éléments de sectionnement appropriés pour envelopper votre navigation principale ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), en répétant des unités de contenu ({{htmlelement("article")}}), etc. Elles fournissent une sémantique supplémentaire aux lecteurs d'écran (et à d'autres outils) pour donner à l'utilisateur des indices supplémentaires sur le contenu qu'il navigue (voir [Prise en charge du lecteur d'écran pour les nouveaux éléments de section HTML5](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) pour une idée de la prise en charge du lecteur d'écran).
+En plus d'avoir une bonne sémantique et une mise en page attrayante, votre contenu doit suivre un ordre logique dans le code source — vous pouvez toujours le placer où vous le souhaitez avec CSS par la suite, mais commencez par choisir le bon ordre dans le code source, afin que le contenu lu aux utilisateur·ice·s qui utilisent un lecteur d'écran soit cohérent.
 
-> [!NOTE]
-> Outre le fait que votre contenu présente une bonne sémantique et une présentation attrayante, il convient que son ordre source soit logique : vous pouvez toujours le placer où vous le souhaitez à l'aide de CSS par la suite, mais vous devez définir l'ordre exact des sources pour commencer. les utilisateurs de lecteur d'écran qui se liront auront du sens.
+### Utiliser des contrôles d'interface utilisateur sémantiques lorsque c'est possible
 
-### Contrôles de l'interface utilisateur
+Par contrôles d'interface utilisateur, nous entendons les principales parties des documents web avec lesquelles les utilisateur·ice·s interagissent — le plus souvent, les boutons, les liens et les contrôles de formulaire. Dans cette section, nous examinons les principaux aspects d'accessibilité à prendre en compte lors de la création de ces contrôles. Les articles suivants sur WAI-ARIA et le contenu multimédia abordent d'autres aspects de l'accessibilité des interfaces utilisateur.
 
-Par contrôles d'interface utilisateur, nous entendons les parties principales des documents web avec lesquelles les utilisateurs interagissent – le plus souvent des boutons, des liens et des contrôles de formulaire. Dans cette section, nous examinerons les problèmes d'accessibilité de base à prendre en compte lors de la création de tels contrôles. Des articles ultérieurs sur WAI-ARIA et le multimédia aborderont d'autres aspects de l'accessibilité de l'interface utilisateur.
+Un aspect clé de l'accessibilité des contrôles d'interface utilisateur est que, par défaut, les navigateurs permettent de les manipuler au clavier. Vous pouvez essayer cela avec notre exemple [native-keyboard-accessibility.html <sup>(angl.)</sup>](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (voir le [code source <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)). Ouvrez-le dans un nouvel onglet, et essayez d'appuyer sur la touche de tabulation&nbsp;; après quelques pressions, vous voyez la sélection par tabulation commencer à passer par les différents éléments pouvant recevoir la sélection. Les éléments sélectionnés sont dotés d'un style par défaut mis en évidence dans chaque navigateur (il diffère légèrement d'un navigateur à l'autre) afin que vous puissiez voir quel élément est sélectionné.
 
-L'un des aspects clés de l'accessibilité des contrôles de l'interface utilisateur est que, par défaut, les navigateurs leur permettent d'être manipulés par le clavier. Vous pouvez essayer ceci en utilisant notre exemple [accessibilité du clavier natif](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) – ouvrez-le dans un nouvel onglet et essayez d'appuyer sur la touche de tabulation; après quelques appuis, vous devriez voir le focus de l'onglet commencer à se déplacer à travers les différents éléments qui peuvent être mis au point ; les éléments focalisés se voient attribuer un style par défaut en surbrillance dans chaque navigateur (il diffère légèrement d'un navigateur à l'autre) afin que vous puissiez déterminer quel élément est ciblé.
-
-![](button-focused-unfocused.png)
-
-Vous pouvez ensuite appuyer sur Entrée/Retour pour suivre un lien sélectionné ou appuyer sur un bouton (nous avons inclus du JavaScript pour que les boutons alertent un message), ou commencer à taper pour saisir du texte dans une entrée de texte (les autres éléments de formulaire ont des contrôles différents, par exemple, l'élément {{htmlelement("select")}} peut avoir ses options affichées et alterner entre les touches fléchées haut et bas).
+![Trois boutons comportant respectivement les mentions « Clique ici ! », « Clique ici aussi ! » et « Et moi aussi ! ». Le troisième bouton est entouré d'un contour bleu pour indiquer qu'il est actuellement sélectionné.](button-focused-unfocused.png)
 
 > [!NOTE]
-> Différents navigateurs peuvent avoir différentes options de contrôle du clavier disponibles. Voir comment [gérer les problèmes courants d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/Tooling#using_native_keyboard_accessibility) pour plus de détails.
+> Vous pouvez activer une superposition qui affiche l'ordre de tabulation de la page dans vos outils de développement. Pour plus d'informations, consultez [Inspecteur d'accessibilité > Afficher l'ordre de tabulation de la page web <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
 
-Vous obtenez essentiellement ce comportement gratuitement, en utilisant simplement les éléments appropriés, par exemple :
+Vous pouvez ensuite appuyer sur Entrée/Retour pour suivre un lien sélectionné, cliquer sur un bouton (nous avons intégré du code JavaScript pour que les boutons affichent un message d'alerte) ou commencer à taper pour saisir du texte dans un champ de saisie. D'autres éléments de formulaire disposent de commandes différentes&nbsp;; par exemple, l'élément HTML {{HTMLElement("select")}} permet d'afficher ses options et de passer de l'une à l'autre à l'aide des touches fléchées haut et bas.
+
+Vous bénéficiez essentiellement de ce comportement gratuitement, simplement en utilisant les éléments appropriés, par exemple&nbsp;:
 
 ```html example-good
 <h1>Liens</h1>
@@ -272,287 +204,354 @@ Vous obtenez essentiellement ce comportement gratuitement, en utilisant simpleme
 <p>Ceci est un lien vers <a href="https://www.mozilla.org">Mozilla</a>.</p>
 
 <p>
-  Un autre lien, pour
+  Un autre lien, vers le
   <a href="https://developer.mozilla.org">Mozilla Developer Network</a>.
 </p>
 
 <h2>Boutons</h2>
 
 <p>
-  <button data-message="This is from the first button">Cliquez moi!</button>
-  <button data-message="This is from the second button">
-    Cliquez moi aussi !
-  </button>
-  <button data-message="This is from the third button">Et moi!</button>
+  <button data-message="Message du premier bouton">Cliquez ici !</button>
+  <button data-message="Message du deuxième bouton">Cliquez ici aussi !</button>
+  <button data-message="Message du troisième bouton">Moi aussi !</button>
 </p>
 
-<h2>formulaire</h2>
+<h2>Formulaire</h2>
 
 <form>
   <div>
-    <label for="name"> Remplis ton nom :</label>
-    <input type="text" id="name" name="name" />
+    <label for="nom">Saisissez votre nom :</label>
+    <input type="text" id="nom" name="nom" />
   </div>
   <div>
-    <label for="age"> Entrez votre âge :</label>
+    <label for="age">Saisissez votre âge :</label>
     <input type="text" id="age" name="age" />
   </div>
   <div>
-    <label for="mood"> Choisissez votre humeur :</label>
-    <select id="mood" name="mood">
-      <option>Heureux</option>
+    <label for="humeur">Choisissez votre humeur :</label>
+    <select id="humeur" name="humeur">
+      <option>Heureux·se</option>
       <option>Triste</option>
-      <option>Fâché</option>
-      <option>Préoccupé</option>
+      <option>En colère</option>
+      <option>Inquiet·e</option>
     </select>
   </div>
 </form>
 ```
 
-Cela signifie que vous devez utiliser des liens, des boutons, des éléments de formulaire et des étiquettes de manière appropriée (y compris l'élément {{htmlelement("label")}} pour les contrôles de formulaire).
+Cela signifie utiliser correctement les liens, les boutons, les éléments de formulaire et les étiquettes (y compris l'élément HTML {{HTMLElement("label")}} pour les contrôles de formulaire).
 
-Cependant, il est encore une fois que les gens font parfois des choses étranges avec HTML. Par exemple, vous voyez parfois des boutons balisés en utilisant {{htmlelement("div")}}s, par exemple :
+Cependant, c'est un autre cas où les gens font parfois des choses étranges avec HTML. Par exemple, vous voyez parfois des boutons balisés au moyen d'éléments HTML {{HTMLElement("div")}}, par exemple&nbsp;:
 
 ```html example-bad
-<div data-message="This is from the first button">Cliquez-moi!</div>
-<div data-message="This is from the second button">Cliquez moi aussi!</div>
-<div data-message="This is from the third button">Et moi!</div>
+<div data-message="Message du premier bouton">Cliquez ici !</div>
+<div data-message="Message du deuxième bouton">Cliquez ici aussi !</div>
+<div data-message="Message du troisième bouton">Moi aussi !</div>
 ```
 
-Il est toutefois déconseillé d'utiliser un tel code. Vous perdriez immédiatement l'accessibilité au clavier natif que vous auriez obtenue si vous aviez utilisé des éléments {{htmlelement("button")}}. De plus, vous n'obtenez aucun des styles CSS par défaut que les boutons ont.
+Mais l'utilisation d'un tel code est déconseillée — vous perdez immédiatement l'accessibilité native au clavier dont vous bénéficiez en utilisant simplement des éléments HTML {{HTMLElement("button")}}, et vous ne profitez pas non plus de la mise en forme CSS par défaut des boutons. Dans le cas rare, voire inexistant, où vous devez utiliser un élément autre qu'un bouton pour créer un bouton, utilisez le [rôle `button`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/button_role) et implémentez tous les comportements par défaut des boutons, y compris la prise en charge du clavier et de la souris.
 
-#### Remettre l'accessibilité au clavier
+#### Rétablir l'accessibilité au clavier
 
-Ajouter de tels avantages en retour demande un peu de travail (vous pouvez utiliser un exemple de code dans notre exemple [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) – voir également le [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Ici, nous avons donné à nos faux boutons `<div>` la possibilité se focaliser (y compris via la touche Tab) en donnant à chacun l'attribut `tabindex="0"` :
+Ajouter de nouveau ces avantages demande un peu de travail (vous pouvez voir un exemple dans notre [fake-div-buttons.html <sup>(angl.)</sup>](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) exemple — voir aussi le [code source <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Ici, nous donnons à nos faux boutons `<div>` la possibilité de recevoir la sélection (y compris par tabulation) en donnant à chacun l'attribut `tabindex="0"`. Nous incluons également `role="button"` pour que les utilisateur·ice·s de lecteurs d'écran sachent qu'ils·elles peuvent sélectionner l'élément et interagir avec lui&nbsp;:
 
 ```html
-<div data-message="This is from the first button" tabindex="0">
-  Cliquez-moi!
+<div data-message="Message du premier bouton" tabindex="0" role="button">
+  Cliquez ici !
 </div>
-<div data-message="This is from the second button" tabindex="0">
-  Cliquez moi aussi!
+<div data-message="Message du deuxième bouton" tabindex="0" role="button">
+  Cliquez ici aussi !
 </div>
-<div data-message="This is from the third button" tabindex="0">Et moi!</div>
+<div data-message="Message du troisième bouton" tabindex="0" role="button">
+  Moi aussi !
+</div>
 ```
 
-Fondamentalement, l'attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes#tabindex) est principalement destiné à permettre aux éléments que l'on peut cibler avec la touche Tab d'avoir un ordre de tabulation personnalisé (spécifié dans l'ordre numérique positif), au lieu d'être simplement tabulés dans leur ordre source par défaut. C'est presque toujours une mauvaise idée, car cela peut causer une confusion majeure. Utilisez-le uniquement si vous en avez vraiment besoin, par exemple si la mise en page affiche les éléments dans un ordre visuel très différent de celui du code source et si vous souhaitez que les éléments fonctionnent de manière plus logique. Il y a deux autres options pour `tabindex` :
+En principe, l'attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) sert principalement à permettre aux éléments sélectionnables par tabulation d'avoir un ordre de tabulation personnalisé (défini par ordre numérique croissant), au lieu de les parcourir simplement dans leur ordre par défaut dans le code source. C'est presque toujours une mauvaise idée, car cela peut créer une grande confusion. Utilisez cette possibilité uniquement si vous en avez vraiment besoin, par exemple si la mise en page affiche les éléments dans un ordre visuel très différent de celui du code source et que vous voulez les faire fonctionner de façon plus logique. Il existe deux autres options pour `tabindex`&nbsp;:
 
-- `tabindex="0"` – comme indiqué ci-dessus, cette valeur permet aux éléments qui ne sont pas normalement tabulables de le devenir. C'est la valeur la plus utile de `tabindex`.
-- `tabindex="-1"` – cela permet aux éléments qui ne sont normalement pas tabulables d'être ciblés par le programme, par ex. via JavaScript, ou en tant que cible de liens.
+- `tabindex="0"` — comme indiqué ci-dessus, cette valeur permet aux éléments qui ne sont normalement pas sélectionnables par tabulation de le devenir. C'est la valeur la plus utile de `tabindex`.
+- `tabindex="-1"` — cette valeur permet de sélectionner par programmation les éléments qui ne sont normalement pas sélectionnables par tabulation, par exemple avec JavaScript ou comme cible de liens.
 
-Bien que l'addition ci-dessus nous permette de tabuler les boutons, elle ne nous permet pas de les activer via la touche Entrée/Retour. Pour ce faire, nous avons dû ajouter le bout de code JavaScript suivant :
+Bien que l'ajout ci-dessus permette d'atteindre les boutons par tabulation, il ne permet pas de les activer avec les touches Entrée/Retour. Pour cela, nous ajoutons le code JavaScript suivant&nbsp;:
 
 ```js
-document.onkeydown = function (e) {
-  if (e.keyCode === 13) {
-    // The Enter/Return key
-    document.activeElement.onclick(e);
+document.onkeydown = (e) => {
+  // La touche Entrée/Retour
+  if (e.key === "Enter") {
+    document.activeElement.click();
   }
 };
 ```
 
-Ici, nous ajoutons un écouteur à l'objet `document` pour détecter le moment où un bouton a été appuyé sur le clavier. Nous vérifions quel bouton a été pressé via la propriété [`keyCode`](/fr/docs/Web/API/KeyboardEvent/keyCode) de l'objet événement; s'il s'agit du code clé qui correspond Return/Enter, nous exécutons la fonction stockée dans le gestionnaire du bouton `onclick` à l'aide de `document.activeElement.onclick()`. [`activeElement`](/fr/docs/Web/API/Document/activeElement) nous donne l'élément qui est actuellement ciblé sur la page.
+Ici, nous ajoutons un écouteur à l'objet `document` afin de détecter quand une touche du clavier a été enfoncée. Nous vérifions quelle touche a été enfoncée dans la propriété [`key`](/fr/docs/Web/API/KeyboardEvent/key) de l'objet d'évènement&nbsp;; si la touche enfoncée est <kbd>Entrée</kbd>/<kbd>Retour</kbd>, nous exécutons la fonction stockée dans le gestionnaire `onclick` du bouton en utilisant `document.activeElement.click()`. [`activeElement`](/fr/docs/Web/API/Document/activeElement) nous donne l'élément actuellement sélectionné sur la page.
 
-> [!NOTE]
-> N'oubliez pas que cette technique ne fonctionnera que si vous définissez vos gestionnaires d'événements d'origine via les propriétés du gestionnaire d'événements (par exemple, onclick), `addEventListener` ne fonctionnera pas.
+Tout cela demande beaucoup de travail supplémentaire pour ajouter à nouveau cette fonctionnalité. D'autres problèmes sont également inévitables. **Il vaut mieux utiliser le bon élément pour la bonne tâche dès le départ.**
 
-C'est beaucoup de tracas supplémentaire pour reconstruire la fonctionnalité. Et il y aura sûrement d'autres problèmes. **Mieux vaut utiliser le bon élément pour le bon travail en premier lieu**.
+#### Utiliser des étiquettes textuelles pertinentes
 
-#### Étiquettes de texte significatives
+Les étiquettes textuelles des commandes d'interface sont très utiles à tou·te·s les utilisateur·ice·s, mais il est particulièrement important de bien les choisir pour les utilisateur·ice·s en situation de handicap.
 
-Les étiquettes de texte de contrôle UI sont très utiles pour tous les utilisateurs, mais leur mise au point est particulièrement importante pour les utilisateurs handicapés.
+Assurez-vous que les étiquettes textuelles des boutons et des liens sont compréhensibles et distinctives. N'utilisez pas seulement «&nbsp;Cliquez ici&nbsp;» comme étiquette, car les utilisateur·ice·s de lecteurs d'écran consultent parfois une liste de boutons et de contrôles de formulaire. La capture d'écran suivante montre nos contrôles répertoriés par VoiceOver sur Mac.
 
-Vous devez vous assurer que les libellés des boutons et des liens sont compréhensibles et distinctifs. Ne vous contentez pas d'utiliser « Cliquez ici&nbsp;» pour vos étiquettes, car les utilisateurs et utilisatrices de lecteur d'écran créent parfois une liste de boutons et de contrôles de formulaire. La capture d'écran suivante montre nos commandes répertoriées par VoiceOver sur Mac.
+![Liste des étiquettes de champs de formulaire affichées par le logiciel VoiceOver sur Mac. Cette liste contient des étiquettes dénuées de sens, telles que « bouton de menu heureux », attribuées à différents contrôles de formulaire comme un bouton, un champ de texte et un lien.](voiceover-formcontrols.png)
 
-![](voiceover-formcontrols.png)
-
-Assurez-vous que vos étiquettes ont une signification hors contexte, qu'elles soient lues séparément ou dans le contexte du paragraphe dans lequel elles se trouvent. Par exemple, voici un exemple de texte de lien de qualité :
+Assurez-vous que vos étiquettes ont du sens hors contexte, lorsqu'on les lit seules, ainsi que dans le contexte du paragraphe où elles se trouvent. Par exemple, voici un exemple de bon texte de lien&nbsp;:
 
 ```html example-good
 <p>
-  Les baleines sont vraiment des créatures géniales .
-  <a href="whales.html"> En savoir plus sur les baleines </a>.
+  Les baleines sont vraiment géniales.
+  <a href="whales.html">En savoir plus sur les baleines</a>.
 </p>
 ```
 
-c'est un mauvais texte du lien :
+mais ce texte de lien est mauvais&nbsp;:
 
 ```html example-bad
 <p>
-  Les baleines sont des créatures vraiment impressionnantes. Pour en savoir plus
-  sur les baleines, <a href="whales.html">cliquez ici</a>.
+  Les baleines sont vraiment géniales. Pour en savoir plus sur les baleines,
+  <a href="whales.html">cliquez ici</a>.
 </p>
 ```
 
 > [!NOTE]
-> Vous pouvez trouver beaucoup plus d'informations sur l'implémentation de liens et les meilleures pratiques dans notre article sur la [création d'hyperliens](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links). Vous pouvez également voir quelques bons et mauvais exemples dans [Bons-liens.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) et [Mauvais-liens.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
+> Vous trouverez beaucoup plus d'informations sur la création de liens et les bonnes pratiques dans notre article [Créer des liens](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links). Vous pouvez aussi consulter de bons et de mauvais exemples dans [good-links.html <sup>(angl.)</sup>](https://mdn.github.io/learning-area/accessibility/html/good-links.html) et [bad-links.html <sup>(angl.)</sup>](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
 
-Les libellés de formulaire sont également importantes pour vous donner un indice sur ce que vous devez entrer dans chaque entrée de formulaire. Ce qui suit semble être un exemple assez raisonnable :
+Les étiquettes de formulaire sont aussi importantes pour vous donner une indication sur ce que vous devez saisir dans chaque champ de formulaire. L'exemple suivant semble assez raisonnable&nbsp;:
 
 ```html example-bad
-Remplis ton nom : <input type="text" id="name" name="name" />
+Saisissez votre nom : <input type="text" id="nom" name="nom" />
 ```
 
-Cependant, ce n'est pas très utile pour les utilisateurs handicapés. Dans l'exemple ci-dessus, rien n'associe de manière non équivoque l'étiquette à la saisie de formulaire et explique clairement comment la remplir si vous ne la voyez pas. Si vous y accédez avec certains lecteurs d'écran, vous ne recevrez peut-être qu'une description du type « éditer le texte".
+Cependant, cet exemple n'est pas très utile aux utilisateur·ice·s en situation de handicap. Rien dans l'exemple ci-dessus n'associe sans ambiguïté l'étiquette au champ de formulaire ni n'indique clairement comment le remplir si vous ne le voyez pas. Si vous accédez à ce formulaire avec certains lecteurs d'écran, vous recevez parfois uniquement une description du type «&nbsp;texte à modifier&nbsp;».
 
-Ce qui suit est un exemple bien meilleur :
+L'exemple suivant est bien meilleur&nbsp;:
 
 ```html example-good
 <div>
-  <label for="name">Entrez votre nom:</label>
-  <input type="text" id="name" name="name" />
+  <label for="nom">Saisissez votre nom :</label>
+  <input type="text" id="nom" name="nom" />
 </div>
 ```
 
-Avec le code comme celui-ci, le label sera clairement associée à input; la description ressemblera davantage à "Entrez votre nom: éditez le texte".
+Avec un tel code, l'étiquette est clairement associée au champ&nbsp;; la description ressemble davantage à «&nbsp;Saisissez votre nom&nbsp;: texte à modifier&nbsp;».
 
-![](voiceover-good-form-label.png)
+![Une étiquette de formulaire appropriée, portant la mention « Indiquez votre nom », est associée à un champ de saisie de texte.](voiceover-good-form-label.png)
 
-En prime, dans la plupart des navigateurs, associer a un label à une form input signifie que vous pouvez cliquer sur celle-ci pour sélectionner / activer l'élément label. Cela donne à input une zone de résultats plus grande, ce qui facilite la sélection
+De plus, dans la plupart des navigateurs, le fait d'associer une étiquette à un champ de formulaire permet de cliquer sur cette étiquette pour sélectionner ou activer l'élément du formulaire. Cela agrandit la zone de sélection du champ, ce qui facilite sa sélection.
 
 > [!NOTE]
-> Vous pouvez voir des exemples de bonnes et de mauvaises de formulaire dans [exemple de bon formulaire](https://mdn.github.io/learning-area/accessibility/html/good-form.html) et [exemple de mauvais formulaire](https://mdn.github.io/learning-area/accessibility/html/bad-form.html).
+> Vous pouvez voir des exemples de bonnes et de mauvaises pratiques dans [good-form.html <sup>(angl.)</sup>](https://mdn.github.io/learning-area/accessibility/html/good-form.html) et [bad-form.html <sup>(angl.)</sup>](https://mdn.github.io/learning-area/accessibility/html/bad-form.html).
+
+Vous trouvez dans la vidéo suivante une explication claire sur l'importance d'utiliser des étiquettes de texte appropriées, ainsi que sur la manière d'identifier les problèmes liés à ces étiquettes à l'aide de[l'inspecteur d'accessibilité de Firefox <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)&nbsp;:
+
+{{EmbedYouTube("YhlAVlfH0rQ")}}
 
 ## Tableaux de données accessibles
 
-Une table de données de base peut être écrite avec un balisage très simple, par exemple :
+Un tableau de données basique peut être créé à l'aide d'un balisage très simple, par exemple&nbsp;:
 
 ```html
 <table>
   <tr>
     <td>Nom</td>
-    <td>Age</td>
-    <td>Sexe</td>
+    <td>Âge</td>
+    <td>Pronoms</td>
   </tr>
   <tr>
-    <td>Gabriel</td>
-    <td>13</td>
-    <td>Male</td>
+    <td>Xavier</td>
+    <td>23</td>
+    <td>il/lui</td>
   </tr>
   <tr>
-    <td>Elva</td>
+    <td>Tina</td>
     <td>8</td>
-    <td>Femelle</td>
+    <td>elle/elle</td>
   </tr>
   <tr>
-    <td>Freida</td>
-    <td>5</td>
-    <td>Femelle</td>
+    <td>Sam</td>
+    <td>17</td>
+    <td>elle/elle</td>
   </tr>
 </table>
 ```
 
-Mais cela pose des problèmes : un utilisateur de lecteur d'écran ne peut pas associer des lignes ou des colonnes en tant que groupes de données. Pour ce faire, vous devez savoir quelles sont les lignes d'en-tête et si elles sont dirigées vers le haut, des colonnes, etc. Cela ne peut être fait que visuellement pour le tableau ci-dessus (voir bad-table.html et essayez vous-même l'exemple).
+Mais cela pose problème — il n'existe aucun moyen pour un·e utilisateur·ice de lecteur d'écran d'associer les lignes ou les colonnes en tant que groupes de données. Pour ce faire, vous devez savoir quelles sont les lignes d'en-tête et si elles servent d'en-têtes pour les lignes, les colonnes, etc. Cela ne peut être fait visuellement pour le tableau ci-dessus (voir [bad-table.html <sup>(angl.)</sup>](https://mdn.github.io/learning-area/accessibility/html/bad-table.html) et essayez l'exemple vous-même).
 
-Regardez maintenant notre tableau d'exemple sur les groupes punk – vous pouvez voir quelques aides à l'accessibilité au travail ici :
+Jetez maintenant un œil à notre [exemple de tableau de groupes punk](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html) — vous pouvez voir quelques aides à l'accessibilité en action ici&nbsp;:
 
-- Les en-têtes de tableau sont définis à l'aide d'éléments {{htmlelement("th")}} — vous pouvez également spécifier s'il s'agit d'en-têtes de lignes ou de colonnes à l'aide de l'attribut `scope`. Cela vous donne des groupes complets de données qui peuvent être consommés par les lecteurs d'écran en tant qu'unités simples
-- L'élément {{htmlelement("caption")}} et l'attribut summary `<table>` effectuent tous deux des travaux similaires. Ils agissent en tant que texte alternatif pour une table, offrant ainsi à un utilisateur de lecteur d'écran un résumé rapide et utile du contenu de la table. `<caption>` est généralement préféré car il rend son contenu accessible aux utilisateurs malvoyants, qui pourraient également le trouver utile. Vous n'avez pas vraiment besoin des deux.
+- Les en-têtes de tableau sont définis à l'aide des éléments HTML {{HTMLElement("th")}} — vous pouvez également définir s'ils sont des en-têtes pour les lignes ou les colonnes à l'aide de l'attribut `scope`. Cela vous donne des groupes complets de données qui peuvent être consommés par les lecteurs d'écran comme des unités uniques.
+- L'élément HTML {{HTMLElement("caption")}} et l'attribut `summary` de l'élément `<table>` remplissent des fonctions similaires — ils agissent comme un texte alternatif pour un tableau, donnant à un·e utilisateur·ice de lecteur d'écran un résumé rapide utile du contenu du tableau. L'élément `<caption>` est généralement privilégié, car il rend son contenu accessible aux utilisateur·ice·s voyant·e·s également, qui peuvent également le trouver utile. Vous n'avez pas vraiment besoin des deux.
 
 > [!NOTE]
-> Voir notre article [Tableaux HTML&nbsp;: dispositions avancées et accessibilité](/fr/docs/Learn_web_development/Core/Structuring_content/Table_accessibility) pour plus de détails sur les tables de données accessibles.
+> Regardez notre article [Accessibilité des tableaux HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Table_accessibility) pour plus de détails sur les tableaux de données accessibles.
 
-## Alternatives textuelles
+## Textes alternatifs
 
-Alors que le contenu textuel est intrinsèquement accessible, il n'en est pas de même pour le contenu multimédia : le contenu image/vidéo ne peut pas être vu par les personnes malvoyantes et le contenu audio ne peut pas être entendu par les malentendants. Nous verrons plus loin le contenu audio et vidéo dans l'article multimédia accessible, mais pour cet article, nous examinerons l'accessibilité pour l'élément humble {{htmlelement("img")}}.
+Alors que le contenu textuel est intrinsèquement accessible, il n'en va pas nécessairement de même pour le contenu multimédia — le contenu image et vidéo ne peut pas être vu par les personnes malvoyantes, et le contenu audio ne peut pas être entendu par les personnes malentendantes. Nous couvrons le contenu vidéo et audio en détail dans l'article [Multimédia accessible](/fr/docs/Learn_web_development/Core/Accessibility/Multimedia), mais pour cet article, nous examinons l'accessibilité du humble élément HTML {{HTMLElement("img")}}.
 
-Nous avons un exemple simple écrit, [accessible-image.html](https://mdn.github.io/learning-area/accessibility/html/accessible-image.html), comporte quatre copies de la même image :
+Nous avons un exemple simple rédigé, [accessible-image.html <sup>(angl.)</sup>](https://mdn.github.io/learning-area/accessibility/html/accessible-image.html), qui présente quatre copies de la même image&nbsp;:
 
 ```html
 <img src="dinosaur.png" />
 
 <img
   src="dinosaur.png"
-  alt="Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées." />
+  alt="Un tyrannosaure rouge : un dinosaure à deux pattes debout comme un être humain, avec de petits bras, et une grosse tête avec beaucoup de dents pointues." />
 
 <img
   src="dinosaur.png"
-  alt="Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées."
-  title="Le dinosaure rouge de Mozilla " />
+  alt="Un tyrannosaure rouge : un dinosaure à deux pattes debout comme un être humain, avec de petits bras, et une grosse tête avec beaucoup de dents pointues."
+  title="Le dinosaure rouge de Mozilla" />
 
 <img src="dinosaur.png" aria-labelledby="dino-label" />
 
 <p id="dino-label">
-  Tyrannosaure rouge Rex de Mozilla: Dinosaure à deux jambes, debout comme un
-  être humain, avec des armes légères et une grosse tête avec beaucoup de dents
-  acérées.
+  Un tyrannosaure rouge : un dinosaure à deux pattes debout comme un être
+  humain, avec de petits bras, et une grosse tête avec beaucoup de dents
+  pointues.
 </p>
 ```
 
-La première image, lorsqu'elle est visualisée par un lecteur d'écran, n'offre pas beaucoup d'aide à l'utilisateur. VoiceOver, par exemple, lit « /dinosaur.png, image&nbsp;». Il lit le nom du fichier pour essayer de fournir de l'aide. Dans cet exemple, l'utilisateur ou l'utilisatrice saura au moins qu'il s'agit d'un dinosaure, mais les fichiers peuvent souvent être chargés avec des noms de fichiers générés par une machine (par exemple, à partir d'un appareil photo numérique) et ces noms de fichiers ne fourniront probablement aucun contexte au contenu de l'image.
+La première image, lorsqu'elle est vue par un lecteur d'écran, n'offre pas vraiment beaucoup d'aide à l'utilisateur·ice — VoiceOver, par exemple, lit «&nbsp;image, /dinosaur.png&nbsp;». Il lit le nom du fichier pour essayer de fournir une certaine aide. Dans cet exemple, l'utilisateur·ice sait au moins qu'il s'agit d'un dinosaure d'une certaine sorte, mais souvent les fichiers peuvent être téléchargés avec des noms de fichiers générés par machine (par exemple, à partir d'un appareil photo numérique) et ces noms de fichiers ne fournissent probablement aucun contexte sur le contenu de l'image.
 
 > [!NOTE]
-> C'est pourquoi vous ne devriez jamais inclure de contenu textuel dans une image. Les lecteurs d'écran ne peuvent tout simplement pas y accéder. Il y a aussi d'autres inconvénients - vous ne pouvez pas le sélectionner et le copier/coller. Juste ne le faite pas !
+> C'est pourquoi vous ne devez jamais inclure de contenu textuel à l'intérieur d'une image — les lecteurs d'écran ne peuvent pas y accéder. Il y a aussi d'autres inconvénients — vous ne pouvez pas le sélectionner ni le copier/coller. Ne le faites tout simplement pas&nbsp;!
 
-Quand un lecteur d'écran rencontre la deuxième image, il lit l'intégralité de l'attribut alt – « Un Tyrannosaure Rex rouge : Un dinosaure à deux pattes se tenant droit comme un humain, avec des armes de petit calibre et une grosse tête avec beaucoup de dents acérées.&nbsp;»
+Lorsqu'un lecteur d'écran rencontre la deuxième image, il lit l'intégralité de l'attribut alt — «&nbsp;Un tyrannosaure rouge&nbsp;: un dinosaure à deux pattes debout comme un être humain, avec de petits bras, et une grosse tête avec beaucoup de dents pointues.&nbsp;».
 
-Cela met en évidence l'importance non seulement d'utiliser des noms de fichiers significatifs au cas où ce qui est appelé **alt text** n'est pas disponible, mais aussi de s'assurer que le texte alternatif est fourni dans les attributs `alt` chaque fois que possible. Notez que le contenu de l'attribut `alt` doit toujours fournir une représentation directe de l'image et de ce qu'elle transmet visuellement. Aucune connaissance personnelle ou description supplémentaire ne devrait être incluse ici, car elle n'est pas utile pour les personnes qui n'ont jamais rencontré l'image auparavant.
+Cette section met en évidence l'importance non seulement d'utiliser des noms de fichiers significatifs au cas où le soi-disant **texte alternatif** n'est pas disponible, mais aussi de s'assurer que le texte alternatif est fourni dans les attributs `alt` chaque fois que possible.
 
-Une chose à considérer est de savoir si vos images ont une signification dans votre contenu, ou si elles sont purement décoratives, n'ont donc aucune signification. S'ils sont décoratifs, il est préférable de les inclure dans la page en tant qu'images d'arrière-plan CSS.
+Notez que le contenu de l'attribut `alt` doit toujours fournir une représentation directe de l'image et de ce qu'elle transmet visuellement. Le texte alternatif doit être bref et concis et inclure toutes les informations transmises par l'image qui ne sont pas dupliquées dans le texte environnant.
+
+Le contenu de l'attribut `alt` d'une image dépend du contexte. Par exemple, si la photo de Fluffy est un avatar à côté d'un avis sur les croquettes pour chien Yuckymeat, `alt="Fluffy"` convient. Si la photo fait partie de la page d'adoption de Fluffy de l'association de protection des animaux, incluez les informations communiquées par l'image qui sont pertinentes pour un·e futur·e parent·e de chien et qui ne sont pas répétées dans le texte environnant. Une description plus longue, comme `alt="Fluffy, un terrier tricolore au poil très court, avec une balle de tennis dans la gueule."` convient. Comme le texte environnant mentionne probablement la taille et la race de Fluffy, ne les incluez pas dans `alt`. Cependant, comme la biographie du chien ne mentionne probablement pas la longueur de son poil, ses couleurs ou ses jouets préférés, dont le parent potentiel a besoin de connaître, incluez-les. L'image se trouve-t-elle à l'extérieur, ou Fluffy porte-t-elle un collier rouge avec une laisse bleue&nbsp;? Ces détails n'ont pas d'importance pour l'adoption de l'animal et ne sont donc pas inclus. Il faut communiquer toutes les informations que l'image transmet, auxquelles un·e utilisateur·ice voyant·e peut accéder et qui sont pertinentes dans le contexte&nbsp;; rien de plus. Soyez bref, précis et utile.
+
+Aucune connaissance personnelle ou description supplémentaire ne doit être incluse ici, car cela n'est pas utile aux personnes qui n'ont pas vu l'image auparavant. Si la balle est le jouet préféré de Fluffy ou si un·e utilisateur·ice voyant·e ne peut pas le savoir à partir de l'image, alors il ne faut pas l'inclure.
+
+Un élément à prendre en compte est de savoir si vos images ont un sens dans votre contenu, ou si elles servent uniquement à la décoration visuelle, et n'ont donc pas de sens. Si elles sont décoratives, il vaut mieux écrire un texte vide comme valeur de l'attribut `alt` (voir [Attributs `alt` vides](#attributs_alt_vides)) ou simplement les inclure dans la page sous forme d'images d'arrière-plan CSS.
 
 > [!NOTE]
-> Lisez [Les images en HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images) et [Images adaptatives](/fr/docs/Web/HTML/Guides/Responsive_images) pour plus d'informations sur la mise en œuvre des images et les meilleures pratiques.
+> Lisez [Images HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images) et [Images adaptatives](/fr/docs/Web/HTML/Guides/Responsive_images) pour beaucoup plus d'informations sur l'implémentation des images et les bonnes pratiques.
+> Vous pouvez également consulter [Un arbre de décision pour l'attribut alt <sup>(angl.)</sup>](https://www.w3.org/WAI/tutorials/images/decision-tree/) pour apprendre à utiliser un attribut alt pour les images dans différentes situations.
 
-Si vous souhaitez fournir des informations contextuelles supplémentaires, vous devez les insérer dans le texte entourant l'image ou dans un attribut title, comme indiqué ci-dessus. Dans ce cas, la plupart des lecteurs d'écran liront le texte alternatif, l'attribut title et le nom du fichier. En outre, les navigateurs affichent le texte du titre sous forme d'infos lors du survol de la souris.
+Si vous souhaitez fournir des informations contextuelles supplémentaires, vous devez les placer dans le texte qui entoure l'image ou dans un attribut `title`, comme indiqué ci-dessus. Dans ce cas, la plupart des lecteurs d'écran lisent le texte alternatif, l'attribut title et le nom de fichier. De plus, les navigateurs affichent le texte title sous forme d'infobulle lorsque la souris le survole.
 
-![](title-attribute.png)
+![Capture d'écran d'un tyrannosaure rouge avec le texte « Le dinosaure rouge de Mozilla » affiché sous forme d'infobulle au survol de la souris.](title-attribute.png)
 
-Jetons un autre coup d'oeil à la quatrième méthode :
+Examinons rapidement la quatrième méthode&nbsp;:
 
 ```html
 <img src="dinosaur.png" aria-labelledby="dino-label" />
 
-<p id="dino-label">Le Tyrannosaure rouge Mozilla ...</p>
+<p id="dino-label">Le tyrannosaure rouge de Mozilla…</p>
 ```
 
-Dans ce cas, nous n'utilisons pas du tout l'attribut `alt` Nous avons plutôt présenté notre description de l'image sous forme de paragraphe de texte normal, en lui attribuant un `id` puis nous avons utilisé l'attribut `aria-labelledby` pour : faire référence à cela `id`, ce qui amène les lecteurs d'écran à utiliser ce paragraphe comme alt text/label pour cette image. Ceci est particulièrement utile si vous souhaitez utiliser le même texte comme étiquette pour plusieurs images – quelque chose qui n'est pas possible avec `alt`.
+Dans ce cas, nous n'utilisons pas du tout l'attribut `alt` — au lieu de cela, nous présentons notre description de l'image sous la forme d'un paragraphe de texte ordinaire, lui attribuons un `id`, puis utilisons l'attribut `aria-labelledby` pour faire référence à cet `id`, ce qui amène les lecteurs d'écran à utiliser ce paragraphe comme texte alternatif/étiquette pour cette image. C'est particulièrement utile si vous voulez utiliser le même texte comme étiquette pour plusieurs images — ce qui n'est pas possible avec `alt`.
 
 > [!NOTE]
-> `aria-labelledby` fait partie de la spécification [WAI ARIA](https://www.w3.org/TR/wai-aria-1.1/), qui permet aux développeurs d'ajouter une sémantique supplémentaire à leur balisage afin d'améliorer l'accessibilité du lecteur d'écran, le cas échéant. Pour en savoir plus sur son fonctionnement, lisez notre article [WAI-ARIA basic](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics).
+> [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) fait partie de la [spécification WAI-ARIA <sup>(angl.)</sup>](https://w3c.github.io/aria/), qui permet aux développeur·euse·s d'ajouter des sémantiques à leur balisage afin d'améliorer l'accessibilité des lecteurs d'écran si nécessaire.
 
-### Autres mécanismes alternatifs de texte
+### Figures et légendes de figures
 
-Les images ont également d'autres mécanismes disponibles pour fournir un texte descriptif. Par exemple, il existe un attribut `longdesc` destiné à pointer sur un document web distinct contenant une description étendue de l'image, par exemple :
-
-```html
-<img src="dinosaur.png" longdesc="dino-info.html" />
-```
-
-Cela semble être une bonne idée, en particulier pour les infographies telles que les grands graphiques contenant de nombreuses informations, qui pourraient peut-être être représentées sous forme de tableau de données accessible (voir section précédente). Cependant, longdesc n'est pas toujours pris en charge par les lecteurs d'écran et le contenu est totalement inaccessible aux utilisateurs autres que les lecteurs d'écran. Il est sans doute préférable d'inclure la description longue sur la même page que l'image, ou d'y accéder par un lien régulier.
-
-HTML5 comprend deux nouveaux éléments — {{htmlelement("figure")}} et {{htmlelement("figcaption")}} — qui sont supposés associer une figure quelconque (ce peut être n'importe quoi, pas nécessairement une image) à une légende de figure :
+HTML inclut deux éléments HTML — {{HTMLElement("figure")}} et {{HTMLElement("figcaption")}} — qui associent une figure (qui peut être de n'importe quelle sorte, pas nécessairement une image) à une légende de figure&nbsp;:
 
 ```html
 <figure>
-  <img src="dinosaur.png" alt="Le Mozilla Tyrannosaurus " />
-  <figcaption>
-    Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme
-    un humain, avec de petits bras et une grosse tête avec beaucoup de dents
-    acérées .
+  <img
+    src="dinosaur.png"
+    alt="Le tyrannosaure de Mozilla"
+    aria-describedby="dinodescr" />
+  <figcaption id="dinodescr">
+    Un tyrannosaure rouge&nbsp;: un dinosaure à deux pattes debout comme un
+    humain, avec de petits bras et une grosse tête avec beaucoup de dents
+    pointues.
   </figcaption>
 </figure>
 ```
 
-Malheureusement, la plupart des lecteurs d'écran ne semblent pas encore associer de légendes à leurs figures, mais la structure des éléments est utile pour le style CSS. Elle permet également de placer une description de l'image à côté de la source.
+Bien que la prise en charge par les lecteurs d'écran de l'association des légendes à leurs figures soit variable, l'ajout de [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) ou de [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) crée l'association si aucune n'est présente. Cela dit, la structure des éléments est utile pour la mise en forme CSS et fournit également un moyen de placer une description de l'image à côté d'elle dans la source.
 
-### Attributs alt vides
+### Attributs `alt` vides
 
 ```html
 <h3>
   <img src="article-icon.png" alt="" />
-  Tyrannosaurus Rex: le roi des dinosaures
+  Tyrannosaure&nbsp;: le roi des dinosaures
 </h3>
 ```
 
-Il peut arriver qu'une image soit incluse dans la conception d'une page, mais son objectif principal est la décoration visuelle. Vous remarquerez dans l'exemple de code ci-dessus que l'attribut `alt` de l'image est vide – il s'agit pour que les lecteurs d'écran reconnaissent l'image, mais n'essayent pas de décrire l'image (au lieu de cela, ils diraient simplement «&nbsp;image&nbsp;», ou similaire) .
+Il arrive qu'une image figure dans la conception d'une page alors que son objectif principal est la décoration visuelle. Vous remarquez dans l'exemple de code ci-dessus que l'attribut `alt` de l'image est vide — cela permet aux lecteurs d'écran de reconnaître l'image, sans essayer de la décrire (ils disent simplement «&nbsp;image&nbsp;» ou quelque chose de similaire).
 
-La raison d'utiliser un vide `alt` au lieu de ne pas l'inclure est due au fait que de nombreux lecteurs d'écran annoncent l'URL complète de l'image si aucun `alt` n'est fourni. Dans l'exemple ci-dessus, l'image agit comme une décoration visuelle de l'en-tête auquel elle est associée. Dans ce cas, et dans les cas où une image est uniquement une décoration et n'a pas de valeur de contenu, vous devez mettre un vide `alt` sur vos images. Une autre alternative consiste à utiliser l'attribut aria role role = "presentation" – cela empêche également les lecteurs d'écrans de lire du texte alternatif.
+La raison d'utiliser un attribut `alt` vide plutôt que de ne pas l'inclure est que de nombreux lecteurs d'écran annoncent l'URL entière de l'image si aucun attribut `alt` n'est fourni. Dans l'exemple ci-dessus, l'image sert de décoration visuelle au titre auquel elle est associée. Dans ce cas, et lorsqu'une image est uniquement décorative et n'a aucune valeur de contenu, vous devez inclure un attribut `alt` vide dans vos éléments `img`. Une autre solution consiste à utiliser l'attribut ARIA [`role`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles) [`role="presentation"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role), car il empêche également les lecteurs d'écran de lire le texte alternatif.
 
 > [!NOTE]
-> Si possible, vous devriez utiliser CSS pour afficher des images qui ne sont que des décorations.
+> Si possible, utilisez CSS pour afficher les images uniquement décoratives.
+
+## En savoir plus sur les liens
+
+Les liens (l'élément {{HTMLElement("a")}} avec un attribut `href`), selon la façon dont ils sont utilisés, peuvent aider ou nuire à l'accessibilité. Par défaut, les liens sont accessibles par leur apparence. Ils peuvent améliorer l'accessibilité en aidant un·e utilisateur·ice à naviguer rapidement vers différentes sections d'un document. Ils peuvent aussi nuire à l'accessibilité si leur mise en forme accessible est supprimée ou si JavaScript leur fait adopter des comportements inattendus.
+
+### Mettre les liens en forme
+
+Par défaut, les liens se distinguent visuellement des autres textes par leur couleur et leur [décoration de texte](/fr/docs/Web/CSS/Reference/Properties/text-decoration), les liens étant bleus et soulignés par défaut, violets et soulignés lorsqu'ils ont été visités, et dotés d'un [anneau de sélection](/fr/docs/Web/CSS/Reference/Selectors/:focus) lorsqu'ils reçoivent la sélection du clavier.
+
+La couleur ne doit pas être utilisée comme seul moyen de distinguer les liens du contenu sans lien. La couleur du texte des liens, comme celle de tout texte, doit être sensiblement différente de celle de l'arrière-plan (un [contraste de 4.5:1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)). De plus, les liens doivent être visuellement très différents du texte sans lien, avec une exigence de contraste minimal de 3:1 entre le texte des liens et le texte environnant, ainsi qu'entre les états par défaut, visité et sélectionné/actif, et un contraste de 4.5:1 entre toutes ces couleurs d'état et la couleur d'arrière-plan.
+
+### Évènements `onclick`
+
+Les balises d'ancrage détournent souvent l'évènement `onclick` pour créer de faux boutons en définissant **href** sur `"#"` ou `"javascript:void(0)"` afin d'empêcher l'actualisation de la page.
+
+Ces valeurs entraînent un comportement inattendu lors de la copie ou du déplacement des liens, de leur ouverture dans un nouvel onglet ou une nouvelle fenêtre, de leur ajout aux signets, et lorsque JavaScript est encore en cours de téléchargement, rencontre une erreur ou est désactivé. Cela transmet également une sémantique incorrecte aux technologies d'assistance (par exemple, aux lecteurs d'écran). Dans ces cas, il est recommandé d'utiliser plutôt un élément {{HTMLElement("button")}}. En général, utilisez un élément d'ancrage uniquement pour naviguer à l'aide d'une URL appropriée.
+
+### Liens externes et lier des ressources qui ne sont pas du HTML
+
+Les liens qui s'ouvrent dans un nouvel onglet ou une nouvelle fenêtre avec la déclaration `target="_blank"` et les liens dont la valeur `href` pointe vers une ressource de fichier doivent inclure un indicateur sur le comportement qui se produit lorsque le lien est activé.
+
+Les personnes malvoyantes, qui naviguent à l'aide d'une technologie de lecture d'écran ou qui présentent des troubles cognitifs, peuvent être désorientées lorsqu'un nouvel onglet, une nouvelle fenêtre ou une nouvelle application s'ouvre de façon inattendue. Les anciennes versions des logiciels de lecture d'écran peuvent même ne pas annoncer ce comportement.
+
+#### Lien qui s'ouvre dans un nouvel onglet ou une nouvelle fenêtre
+
+```html
+<a target="_blank" href="https://www.wikipedia.org/"
+  >Wikipedia (s'ouvre dans une nouvelle fenêtre)</a
+>
+```
+
+#### Lien vers une ressource qui n'est pas du HTML
+
+```html
+<a target="_blank" href="2017-annual-report.ppt"
+  >Rapport annuel 2017 (PowerPoint)</a
+>
+```
+
+Si une icône est utilisée à la place du texte pour signifier ce type de comportement de lien, assurez-vous qu'elle inclut une [description alternative](/fr/docs/Web/HTML/Reference/Elements/img#alt).
+
+- [WebAIM&nbsp;: liens et hypertexte - liens hypertextes <sup>(angl.)</sup>](https://webaim.org/techniques/hypertext/hypertext_links)
+- [Comprendre les règles WCAG de MDN, explications de la directive 3.2](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [G200&nbsp;: ouvrir de nouvelles fenêtres et de nouveaux onglets à partir d'un lien uniquement lorsque cela est nécessaire | Techniques W3C pour WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
+- [G201&nbsp;: avertir les utilisateur·ice·s à l'avance lors de l'ouverture d'une nouvelle fenêtre | Techniques W3C pour WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
+
+### Skip links
+
+Un lien d'évitement, aussi appelé lien de navigation d'évitement, est un élément `a` placé aussi près que possible de l'élément ouvrant {{HTMLElement("body")}} et qui mène au début du contenu principal de la page. Ce lien permet d'ignorer le contenu répété sur plusieurs pages d'un site web, comme l'en-tête et la navigation principale du site.
+
+Les liens d'évitement sont particulièrement utiles aux personnes qui naviguent à l'aide de technologies d'assistance telles que le contrôle par contacteur, la commande vocale ou les baguettes buccales ou frontales, pour qui parcourir des liens répétitifs peut être une tâche laborieuse.
+
+- [WebAIM&nbsp;: liens «&nbsp;Ignorer la navigation&nbsp;» <sup>(angl.)</sup>](https://webaim.org/techniques/skipnav/)
+- [Guide pratique&nbsp;: utiliser les liens d'évitement de la navigation - The A11Y Project <sup>(angl.)</sup>](https://www.a11yproject.com/posts/skip-nav-links/)
+- [Comprendre les règles WCAG de MDN, explications de la directive 2.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [Comprendre le critère de réussite 2.4.1 | Comprendre WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+
+### Proximité
+
+Lorsque de nombreux éléments interactifs — y compris les ancres — sont placés à proximité visuelle les uns des autres, il convient d'insérer un espace pour les séparer. Cet espacement est utile pour les personnes souffrant de troubles de la motricité fine, qui risquent d'activer accidentellement le mauvais élément interactif lors de la navigation.
+
+L'espacement peut être créé à l'aide de propriétés CSS telles que {{CSSxRef("margin")}}.
+
+- [Tremblements des mains et le problème des boutons géants - Axess Lab <sup>(angl.)</sup>](https://axesslab.com/hand-tremors/)
 
 ## Résumé
 
-Vous devriez maintenant bien connaître l'écriture HTML accessible pour la plupart des cas. Notre article sur les bases de WAI-ARIA comblera également certaines lacunes dans cette connaissance, mais cet article s'occupe des bases. Ensuite, nous allons explorer CSS et JavaScript, et comment l'accessibilité est affectée par leur bon ou mauvais usage.
+Vous devez désormais maîtriser la rédaction de code HTML accessible dans la plupart des cas. Dans le prochain article, nous vous proposons quelques exercices qui vous permettent de vérifier si vous avez bien compris et assimilé toutes ces informations.
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/Test_your_skills/HTML", "Learn_web_development/Core/Accessibility")}}
