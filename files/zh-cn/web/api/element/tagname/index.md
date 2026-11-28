@@ -1,44 +1,51 @@
 ---
-title: Element.tagName
+title: "Element: tagName 属性"
+short-title: tagName
 slug: Web/API/Element/tagName
+l10n:
+  sourceCommit: bc7e82aa6db60568d7146ee285918550bbe4b8ce
 ---
 
-{{ APIRef() }}
+{{ApiRef("DOM")}}
 
-## 概述
+{{domxref("Element")}} 接口的只读属性 **`tagName`** 会返回调用该属性的元素的标签名。
 
-返回当前元素的标签名
+例如，如果元素是 {{HTMLElement("img")}}，那么它的 `tagName` 属性值为 `IMG`（对于 HTML 文档而言；对于 XML/XHTML 文档，大小写可能不同）。注意：你可以使用 {{domxref("Element.localName", "localName")}} 属性访问元素的本地名称；在本例中，该名称为小写的 `img`。
 
-## 语法
+## 值
+
+一个表示元素标签名的字符串。该字符串的大小写取决于文档类型：
+
+- 对于表示 HTML 文档的 DOM 树，返回的标签名始终为规范的大写形式。例如，在 {{HTMLElement("div")}} 元素上调用 `tagName` 会返回 `"DIV"`。
+- XML DOM 树中元素的标签名会按照其在原始 XML 文件中的大小写形式返回。如果 XML 文档包含标签 `"<SomeTag>"`，那么 `tagName` 属性值就是 `"SomeTag"`。
+
+对于 {{domxref("Element")}} 对象，`tagName` 的值与该元素对象从 {{domxref("Node")}} 继承的 {{domxref("Node.nodeName", "nodeName")}} 属性值相同。
+
+## 示例
+
+### HTML 示例
 
 ```html
-elementName = element.tagName
+<span id="born">When I was born…</span>
 ```
 
-- `elementName` 是一个字符串，包含了 element 元素的标签名。
-
-## 备注
-
-在 XML (或者其他基于 XML 的语言，比如 XHTML,xul) 文档中，`tagName 的值会`保留原始的大小写。在 HTML 文档中，`tagName`会返回其大写形式。对于元素节点来说，`tagName 属性`的值和[nodeName](/zh-CN/docs/Web/API/Node/nodeName)属性的值是相同的。
-
-## 例子
-
-假设给定下面的源码
+### JavaScript 示例
 
 ```js
-<span id="born">When I was born...</span>
+const span = document.getElementById("born");
+console.log(span.tagName);
 ```
 
-然后运行下面的脚本
-
-```plain
-var span = document.getElementById("born");
-alert(span.tagName);
-```
-
-在 XHTML 中 (或者其他的 XML 格式文件中), 会弹出小写的"span".而在 HTML 中，会弹出大写的"SPAN".
+在 XHTML（或任何其他 XML 格式）中，会保留原始大小写；因此，如果原始标签名使用小写形式，输出结果就是 `"span"`。而在 HTML 中，无论创建原始文档时使用何种大小写，输出结果都会是 `"SPAN"`。
 
 ## 规范
 
-- [DOM Level 2 Core: tagName](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-104682815)
-- [HTML 5: APIs in HTML documents](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("Element.localName")}}
