@@ -27,7 +27,7 @@ Dans cette série de guides, nous décrirons les systèmes d'authentification su
 - [Mots de passe à usage unique (OTP)](/fr/docs/Web/Security/Authentication/OTP)
   - : Un mot de passe à usage unique est un code généré, propre à une seule tentative de connexion. Soit le site web envoie le code à l'utilisateur·ice par un canal distinct, comme un e-mail, soit l'appareil de l'utilisateur·ice génère le code de façon autonome. L'utilisateur·ice saisit ensuite le code sur le site pour se connecter.
 - [Identité fédérée](/fr/docs/Web/Security/Authentication/Federated_identity)
-  - : Dans la plupart des systèmes d'authentification, il y a deux parties : l'utilisateur·ice et le site web auquel il·elle essaie de se connecter. Dans un système fédéré, il existe une troisième partie, appelée _fournisseur d'identité_. Lorsque l'utilisateur·ice veut se connecter au site web, celui-ci demande au fournisseur d'identité d'identifier l'utilisateur·ice et, si l'identification réussit, le·la connecte.
+  - : Dans la plupart des systèmes d'authentification, il y a deux parties&nbsp;: l'utilisateur·ice et le site web auquel il·elle essaie de se connecter. Dans un système fédéré, il existe une troisième partie, appelée _fournisseur d'identité_. Lorsque l'utilisateur·ice veut se connecter au site web, celui-ci demande au fournisseur d'identité d'identifier l'utilisateur·ice et, si l'identification réussit, le·la connecte.
 - [Clés d'accès](/fr/docs/Web/Security/Authentication/Passkeys)
   - : Les clés d'accès permettent aux sites web d'authentifier les personnes sans qu'elles aient à saisir de mot de passe ni d'autre code secret sur le site lui-même.
 
