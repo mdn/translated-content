@@ -1,6 +1,7 @@
 ---
 title: Как использовать GitHub Pages?
-slug: Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
+slug: conflicting/Learn_web_development/Core/Version_control
+original_slug: Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
 ---
 
 {{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
