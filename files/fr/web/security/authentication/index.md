@@ -37,6 +37,6 @@ Dans cette série de guides, nous décrirons les systèmes d'authentification su
 
 ## Gestion de session
 
-Une fois qu'un site web a authentifié un·e utilisateur·ice, il souhaite généralement que l'utilisateur·ice reste connecté·e sans avoir à s'authentifier à nouveau, soit pendant une durée limitée, soit même indéfiniment, jusqu'à ce qu'il·elle se déconnecte. Pour cela, les sites web définissent généralement un cookie qui contient un identifiant de session secret, ou utilisent un objet {{glossary("digital signature", "signé cryptographiquement")}}, comme un JSON Web Token (JWT).
+Une fois qu'un site web a authentifié un·e utilisateur·ice, il souhaite généralement que l'utilisateur·ice reste connecté·e sans avoir à s'authentifier à nouveau, soit pendant une durée limitée, soit même indéfiniment, jusqu'à ce qu'il·elle se déconnecte. Pour cela, les sites web définissent généralement un cookie qui contient un identifiant de session secret, ou utilisent un objet {{Glossary("digital signature", "signé cryptographiquement")}}, comme un JSON Web Token (<abbr>JWT</abbr>).
 
 Dans notre guide sur la [gestion de session](/fr/docs/Web/Security/Authentication/Session_management), nous présentons les bonnes pratiques en matière de gestion de session.
