@@ -32,7 +32,9 @@ El evento **`invalid`** se dispara cuando se ha comprobado la validez de un elem
   </tbody>
 </table>
 
-Este evento puede ser útil para desplegar un resumen de los problemas con un formulario al enviarlo. Cuando un formulario se envía, los eventos `invalid` son disparados en cada control del formulario que es inválido, y entonces en el mismo elemento [`form`](https://www.w3.org/TR/html51/sec-forms.html#elementdef-form). La válidez de los elementos presentados se comprueba antes de enviar al propio {{HtmlElement("form")}}, o despúes del método [`checkValidity()`](/es/docs/Learn_web_development/Extensions/Forms#constraint_validation_api) de un elemento o su propio `<form>` es llamado. No es revisada al perder el foco (on blur).
+Este evento puede ser útil para mostrar un resumen de los problemas de un formulario al enviarlo. Cuando se envía un formulario, se disparan eventos `invalid` en cada control que no es válido. El objetivo del evento es el control y no burbujea, por lo que un detector en el {{HtmlElement("form")}} solo lo recibe durante la fase de captura. Para mostrar un resumen en el formulario, puedes registrar el detector con `{ capture: true }`; `event.target` sigue siendo el control no válido.
+
+La validez de los elementos que se pueden enviar se comprueba antes de enviar su {{HtmlElement("form")}}, o después de llamar al método [`checkValidity()`](/es/docs/Web/API/HTMLInputElement/checkValidity) del elemento o de su `<form>`. No se comprueba al perder el foco.
 
 ## Ejemplo
 
