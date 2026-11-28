@@ -2,7 +2,7 @@
 title: Catégories de contenu
 slug: Web/HTML/Guides/Content_categories
 l10n:
-  sourceCommit: ba3c8980510073ee92674aa71cb2c8c5b71294ab
+  sourceCommit: b58d84c261b9cfa66d46a070ba205c53e18ee3e0
 ---
 
 La plupart des éléments [HTML](/fr/docs/Web/HTML) font partie d'une ou plusieurs **catégories de contenu** — ces catégories regroupent des éléments qui partagent des caractéristiques communes. Il s'agit d'un regroupement souple (cela ne crée pas réellement de relation entre les éléments de ces catégories), mais cela permet de définir et de décrire le comportement partagé des catégories et leurs règles associées. Il est possible que certains [éléments ne fassent partie _d'aucune_ de ces catégories](#élément_sans_catégorie).
@@ -107,6 +107,7 @@ Les éléments de flux sont&nbsp;:
 - {{HTMLElement("small")}}
 - {{HTMLElement("span")}}
 - {{HTMLElement("strong")}}
+- {{HTMLElement("style")}}
 - {{HTMLElement("sub")}}
 - {{HTMLElement("sup")}}
 - {{SVGElement("svg")}}

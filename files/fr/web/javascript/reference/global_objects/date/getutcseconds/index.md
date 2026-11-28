@@ -29,7 +29,7 @@ Aucun.
 
 ### Valeur de retour
 
-Un entier entre 0 et 59 correspondant au nombre de secondes écoulées pour la date indiquée selon le temps universel. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+Un entier entre 0 et 59 correspondant au nombre de secondes écoulées pour la date indiquée selon le temps universel. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
 ## Exemples
 

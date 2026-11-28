@@ -52,7 +52,7 @@ Date.UTC(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 
 ### Valeur de retour
 
-Un nombre représentant le [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) de la date donnée. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+Un nombre représentant [l'horodatage (<i lang="en">timestamp</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide) de la date donnée. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide).
 
 ## Description
 
@@ -62,11 +62,11 @@ La méthode `UTC()` diffère du constructeur {{JSxRef("Date/Date", "Date()")}} d
 
 1. `Date.UTC()` utilise le temps universel plutôt que l'heure locale.
 2. `Date.UTC()` retourne une valeur temporelle sous la forme d'un nombre au lieu de créer un objet {{JSxRef("Date")}}.
-3. Lorsqu'un seul nombre est passé, `Date.UTC()` l'interprète comme une année et non comme un timestamp.
+3. Lorsqu'un seul nombre est passé, `Date.UTC()` l'interprète comme une année et non comme un horodatage.
 
-Si un paramètre est en dehors de la plage attendue, la méthode `UTC()` ajuste les autres paramètres pour s'adapter à la valeur. Par exemple, si `15` est utilisé pour `monthIndex`, l'année sera incrémentée de 1 `(year + 1)` et `3` sera utilisé pour le mois.
+Si un paramètre est en dehors de la plage attendue, la méthode `UTC()` ajuste les autres paramètres pour s'adapter à la valeur. Par exemple, si `15` est utilisé pour `monthIndex`, l'année est incrémentée de 1 `(year + 1)` et `3` est utilisé pour le mois.
 
-Comme `UTC()` est une méthode statique de `Date`, vous l'utilisez toujours sous la forme `Date.UTC()`, et non comme une méthode d'un objet `Date` que vous auriez créé.
+Comme `UTC()` est une méthode statique de `Date`, vous l'utilisez toujours sous la forme `Date.UTC()`, et non comme une méthode d'un objet `Date` que vous avez créé.
 
 ## Exemples
 
@@ -80,7 +80,7 @@ const utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
 
 ### Comportement de `Date.UTC()` avec un seul argument
 
-`Date.UTC()` lorsqu'elle reçoit un seul argument avait un comportement incohérent, car les implémentations ne gardaient la cohérence qu'avec le constructeur {{JSxRef("Date/Date", "Date()")}}, qui n'interprète pas un seul argument comme une année. Les implémentations doivent maintenant traiter un `monthIndex` omis comme `0`, au lieu de le contraindre à `NaN`.
+`Date.UTC()` lorsqu'elle reçoit un seul argument a un comportement incohérent, car les implémentations ne gardent la cohérence qu'avec le constructeur {{JSxRef("Date/Date", "Date()")}}, qui n'interprète pas un seul argument comme une année. Les implémentations doivent maintenant traiter un `monthIndex` omis comme `0`, au lieu de le contraindre à `NaN`.
 
 ```js
 Date.UTC(2017); // 1483228800000

@@ -2,7 +2,7 @@
 title: ポップオーバー API
 slug: Web/API/Popover_API
 l10n:
-  sourceCommit: 0c13af55e869cbc54830fd1a601fd05f60717375
+  sourceCommit: f81527232ae480626f8cec10a7d2775a698be30a
 ---
 
 {{DefaultAPISidebar("Popover API")}}
@@ -29,7 +29,7 @@ l10n:
   <div id="mypopover" popover>ポップオーバーコンテンツ</div>
   ```
 
-- JavaScript API から。例えば、{{domxref("HTMLElement.togglePopover()")}} を使用してポップオーバーを表示と非表示のトグル切り替えができます。
+- JavaScript API から。例えば、{{domxref("HTMLElement.togglePopover()")}} を使用してポップオーバーの表示状態と非表示状態を切り替えることができます。
 
 同時に、ポップオーバー API では、ポップオーバーの表示・非表示の切り替えに応答するためのイベントや、ポップオーバーのスタイル設定を支援する CSS 機能も指定されています。[ポップオーバー API の使用](/ja/docs/Web/API/Popover_API/Using)で、この API の詳細なガイドを参照してください。
 
@@ -62,20 +62,9 @@ l10n:
 - {{domxref("InterestEvent")}} {{experimental_inline}}
   - : {{domxref("HTMLElement.interest_event", "interest")}} および {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} イベントのイベントオブジェクトです。これには、関連付けられた関心インボーカー要素への参照を含む `source` プロパティが含まれます。
 - {{domxref("ToggleEvent")}}
-  - : popover 要素の状態が表示と非表示の間で切り替わるときにユーザーに通知するイベントを表します。これは、{{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} と {{domxref("HTMLElement.toggle_event", "toggle")}} イベント用のイベントオブジェクトで、ポップオーバーでその状態が変化するときに発行されます。
+  - : ポップオーバー要素の状態が表示と非表示の間で切り替わるときにユーザーに通知するイベントを表します。これは、{{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} と {{domxref("HTMLElement.toggle_event", "toggle")}} イベント用のイベントオブジェクトで、ポップオーバーの状態が変化するときに発生します。
 
 ## 他のインターフェイスの拡張
-
-### インスタンスプロパティ
-
-- {{domxref("HTMLButtonElement.interestForElement", "interestForElement")}} {{experimental_inline}}
-  - : 関心インボーカーが対象としている要素への参照を取得または設定します。HTML または SVG の関心インボーカーが、その `interestfor` 属性でターゲット要素を参照している場合、その要素は、対応する DOM オブジェクトの `interestForElement` プロパティで参照されます。{{domxref("HTMLButtonElement")}}、{{domxref("HTMLAnchorElement")}}、{{domxref("HTMLAreaElement")}}、{{domxref("SVGAElement")}} の各インターフェイスで利用可能です。
-- {{domxref("HTMLElement.popover")}}
-  - : 要素のポップオーバー状態を JavaScript で取得または設定し（`"auto"`, `"hint"`, `"manual"` のいずれか）、機能検出にも使用することができます。HTML のグローバル属性である [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) global を反映します。
-- {{domxref("HTMLButtonElement.popoverTargetElement")}} および {{domxref("HTMLInputElement.popoverTargetElement")}}
-  - : この制御ボタンで制御されるポップオーバー要素を取得または設定します。JavaScript において HTML の [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性に相当するものです。
-- {{domxref("HTMLButtonElement.popoverTargetAction")}} および {{domxref("HTMLInputElement.popoverTargetAction")}}
-  - : この制御ボタンが制御するポップオーバー要素に対して行われるアクション（`"hide"`、`"show"`、`"toggle"` の何れか）を設定または取得します。HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性を反映します。
 
 ### インスタンスメソッド
 
@@ -86,13 +75,24 @@ l10n:
 - {{domxref("HTMLElement.togglePopover()")}}
   - : ポップオーバー要素の表示状態と非表示状態を切り替えます。
 
+### インスタンスプロパティ
+
+- {{domxref("HTMLButtonElement.interestForElement", "interestForElement")}} {{experimental_inline}}
+  - : 関心インボーカーが対象としている要素への参照を取得または設定します。HTML または SVG の関心インボーカーが、その `interestfor` 属性でターゲット要素を参照している場合、その要素は、対応する DOM オブジェクトの `interestForElement` プロパティで参照されます。{{domxref("HTMLButtonElement")}}、{{domxref("HTMLAnchorElement")}}、{{domxref("HTMLAreaElement")}}、{{domxref("SVGAElement")}} の各インターフェイスで利用可能です。
+- {{domxref("HTMLElement.popover")}}
+  - : 要素のポップオーバー状態を JavaScript で取得または設定し（`"auto"`, `"hint"`, `"manual"` のいずれか）、機能検出にも使用することができます。HTML の [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) グローバル属性を反映します。
+- {{domxref("HTMLButtonElement.popoverTargetElement")}} および {{domxref("HTMLInputElement.popoverTargetElement")}}
+  - : この制御ボタンで制御されるポップオーバー要素を取得または設定します。JavaScript において HTML の [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性に相当するものです。
+- {{domxref("HTMLButtonElement.popoverTargetAction")}} および {{domxref("HTMLInputElement.popoverTargetAction")}}
+  - : この制御ボタンが制御するポップオーバー要素に対して行われるアクション（`"hide"`、`"show"`、`"toggle"` の何れか）を設定または取得します。HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性を反映します。
+
 ### イベント
 
 - {{domxref("HTMLElement.beforetoggle_event","beforetoggle")}} イベント
-  - : ポップオーバー要素の表示と非表示の状態が変わる直前、またはその逆で発行されます。
-    ポップオーバーが開くのを防ぐため、またはポップオーバーの状態に応じて他の要素を開始するために使用できます。
+  - : ポップオーバー要素の表示と非表示の状態が変わる直前、またはその逆で発生します。
+    ポップオーバーが開くのを防ぐため、またはポップオーバーの状態に応じて他の要素を動作させるために使用できます。
 - {{domxref("HTMLElement.toggle_event", "toggle")}} イベント
-  - : ポップオーバー要素の状態が、表示と非表示、またはその逆に変化した直後に発行されます。
+  - : ポップオーバー要素の状態が、表示と非表示、またはその逆に変化した直後に発生します。
 - {{domxref("HTMLElement.interest_event", "interest")}} {{experimental_inline}}
   - : 関心が示された際に、関心インボーカーの対象要素に対して発生し、それに応じてコードを実行することができます。
 - {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} {{experimental_inline}}

@@ -2,7 +2,7 @@
 title: URI
 slug: Web/URI
 l10n:
-  sourceCommit: eaec5c4226ac64696a95314a7bce995165a4d124
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 **Uniform Resource Identifiers (統一リソース識別子、URI)** は、ウェブ上の「リソース」を識別するために使用されます。
@@ -23,6 +23,9 @@ URI は、HTML の `<a>` リンクの [`href`](/ja/docs/Web/HTML/Reference/Eleme
 - [パス](/ja/docs/Web/URI/Reference/Path)
   - : オーソリティの後の部分です。
     通常、階層形式で編成された、URI のスキームおよび権限の範囲内でリソースを識別するためのデータが含まれています。
+- [クエリー](/ja/docs/Web/URI/Reference/Query)
+  - : パスの後の部分です。
+    パス要素内のデータとともに、URI のスキームおよび命名オーソリティの範囲内でリソースを識別するための非階層的なデータが含まれています。
 - [フラグメント](/ja/docs/Web/URI/Reference/Fragment)
   - : URI の末尾の `#` 文字で始まるオプションの部分です。
     これは、文書内の領域や動画内の位置など、リソースの特定の部分を識別するために使用されます。

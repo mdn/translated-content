@@ -3,7 +3,7 @@ title: Propriété CSS `will-change`
 short-title: will-change
 slug: Web/CSS/Reference/Properties/will-change
 l10n:
-  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
+  sourceCommit: d78544a841b0e266a6efc169c044573f5e0b4e7d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`will-change`** permet d'optimiser les animations en fournissant un indice au navigateur sur la manière dont un élément est censé changer.

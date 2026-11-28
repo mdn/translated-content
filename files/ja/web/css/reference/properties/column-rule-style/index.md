@@ -1,12 +1,12 @@
 ---
-title: "`column-rule-style` プロパティ (CSS)"
+title: "`column-rule-style` プロパティ"
 short-title: column-rule-style
 slug: Web/CSS/Reference/Properties/column-rule-style
 l10n:
-  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
+  sourceCommit: edc9ab5479d1253d9edd93bfe90dd1d100605c26
 ---
 
-**`column-rule-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、複数列のグリッド、フレックス、段組みレイアウトで列・段の間に引かれる罫線のスタイルを設定します。
+**`column-rule-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、複数列のグリッド、フレックスボックス、段組みレイアウトで列や段の間に引かれる罫線のスタイルを設定します。
 
 {{InteractiveExample("CSS デモ: column-rule-style")}}
 
@@ -90,7 +90,7 @@ column-rule-style: unset;
 
 ## 解説
 
-`column-rule-style` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)のコンテナーに複数の列・段がある場合に、列・段間のギャップに描画される罫線のスタイルを定義します。
+`column-rule-style` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)のコンテナーに複数の列・段がある場合に、列・段間の隙間に描画される罫線のスタイルを定義します。
 
 この値は、カンマ区切りの一連の成分からなり、`<line-style>`、`<repeat-line-style>`、`<auto-repeat-line-style>` といった型を含めることができます。
 
@@ -213,6 +213,8 @@ ul {
 
 この例は、スタイルのリストに含まれる値の数が罫線の数よりも少ない場合、値が繰り返し適用される様子を示しています。
 
+#### CSS
+
 前回の例と同じ HTML と CSS を使用し、`column-rule-style` の値として、カンマで区切られた 3 つのスタイルを記載します。
 
 ```css live-sample___repeat
@@ -221,17 +223,25 @@ ul {
 }
 ```
 
+#### 結果
+
 {{EmbedLiveSample("Repeat", "", "180")}}
 
 ### `repeat()` 関数の使用
 
-この例では、`column-rule-style` プロパティの値内で `repeat()` 関数を使用する方法を示します。HTML と CSS は前回の例と同じものを使用します。`repeat()` 関数を記載し、2 つの `<line-style>` 値のリストを 3 回繰り返すように設定しています。
+この例では、`column-rule-style` プロパティの値内で `repeat()` 関数を使用する方法を示します。
+
+#### CSS
+
+前回の例と同じ HTML と CSS を使用します。`repeat()` 関数を記載し、2 つの `<line-style>` 値のリストを 3 回繰り返すように設定しています。
 
 ```css live-sample___func live-sample___auto
 ul {
   column-rule-style: solid, repeat(3, inset, outset), solid;
 }
 ```
+
+#### 結果
 
 {{EmbedLiveSample("func", "", "180")}}
 
@@ -241,6 +251,8 @@ ul {
 
 この例では、`repeat()` 関数内で整数の代わりに `auto` を使用する方法を示しています。
 
+#### CSS
+
 `repeat(auto, <line-style>)` を使用することで、すべての列間罫を `groove` に設定しますが、最初と最後の列間罫のみを `solid` に設定します。
 
 ```css live-sample___auto
@@ -248,6 +260,8 @@ ul {
   column-rule-style: solid, repeat(auto, groove), solid;
 }
 ```
+
+#### 結果
 
 {{EmbedLiveSample("auto", "", "180")}}
 
@@ -281,4 +295,5 @@ ul {
 - {{cssxref("column-rule")}} 一括指定
 - {{cssxref("rule-style")}} 一括指定
 - {{cssxref("rule")}} 一括指定
+- [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)モジュール

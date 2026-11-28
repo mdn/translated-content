@@ -3,7 +3,7 @@ title: Firefox 151 note de version pour les développeurs
 short-title: Firefox 151
 slug: Mozilla/Firefox/Releases/151
 l10n:
-  sourceCommit: 681ee4beb90b7e0d001f8938df41d5af0f602fe7
+  sourceCommit: 9126ecf140009f571300b0d083148eb31e826128
 ---
 
 Cet article présente les informations concernant les changements de Firefox 151 qui concernent les développeur·euse·s.
@@ -42,8 +42,7 @@ Pas de changements notables.
   Cela empêche la touche <kbd>Esc</kbd> de faire quitter le mode plein écran (une pression longue est requise à la place), et certaines touches de raccourci du navigateur autrefois réservées peuvent désormais être interceptées et leur action par défaut empêchée.
   ([bogue Firefox 2032302 <sup>(angl.)</sup>](https://bugzil.la/2032302)).
 - Les propriétés `maxStorageBuffersInFragmentStage`, `maxStorageBuffersInVertexStage`, `maxStorageTexturesInFragmentStage` et `maxStorageTexturesInVertexStage` de {{DOMxRef("GPUSupportedLimits")}} sont désormais partiellement prises en charge.
-  Ces propriétés reflètent la valeur des limites `maxStorageBuffersPerShaderStage` et `maxStorageTexturesPerShaderStage`.
-  Lors de la création d'un appareil, les valeurs demandées pour les limites *In*Stage sont ignorées.
+  Lors de la création d'un appareil, les valeurs demandées pour ces limites sont ignorées. À la place, elles sont ajustées pour correspondre aux valeurs des limites `maxStorageBuffersPerShaderStage` et `maxStorageTexturesPerShaderStage`. Cependant, Firefox présente actuellement un bogue selon lequel ces ajustements ne sont pas signalés dans les {{DOMxRef("GPUDevice.limits")}}.
   ([bogue Firefox 2006720 <sup>(angl.)</sup>](https://bugzil.la/2006720)).
 - La propriété {{DOMxRef("CSSContainerRule.conditions")}} est désormais prise en charge, reflétant la prise en charge de la règle `@container` pour plusieurs conditions de conteneur séparées par des virgules.
   La propriété `condition` reflète un `@container` correspondant sous forme de tableau d'objets, chaque objet représentant une seule condition de conteneur.

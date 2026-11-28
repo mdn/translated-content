@@ -3,20 +3,22 @@ title: "HTMLElement: accessKeyLabel プロパティ"
 short-title: accessKeyLabel
 slug: Web/API/HTMLElement/accessKeyLabel
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: b9569fcd65bb09ea7e032ef0938185eccdc2d9c4
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement.accessKeyLabel`** は読み取り専用プロパティで、要素に割り当てられたアクセスキーを（あれば）文字列で返します。それ以外の場合は空文字列を返します。
-
-## 構文
-
-```js-nolint
-label = element.accessKeyLabel
-```
+**`HTMLElement.accessKeyLabel`** は読み取り専用プロパティで、ブラウザーが要素にアクセスキーを割り当てている場合は、そのキーを含む文字列を返します。割り当てられていない場合は空文字列を返します。
 
 ## 例
+
+### HTML
+
+```html
+<button accesskey="h" title="キャプション" id="btn1">
+  マウスポインターを合わせてください
+</button>
+```
 
 ### JavaScript
 
@@ -27,17 +29,9 @@ btn.title += ` [${shortcutLabel.toUpperCase()}]`;
 
 btn.onclick = () => {
   const feedback = document.createElement("output");
-  feedback.textContent = "Pressed!";
+  feedback.textContent = "押されました！";
   btn.insertAdjacentElement("afterend", feedback);
 };
-```
-
-### HTML
-
-```html
-<button accesskey="h" title="キャプション" id="btn1">
-  マウスを当ててください
-</button>
 ```
 
 ### 結果

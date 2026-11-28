@@ -3,7 +3,7 @@ title: "Attribut HTML universel : `dir`"
 short-title: dir
 slug: Web/HTML/Reference/Global_attributes/dir
 l10n:
-  sourceCommit: 8ed465762d06fa17f7cc6adb3e2be9b57df03e9b
+  sourceCommit: 0af116bebeb388d977338b4072664b4e1c068960
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`dir`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui définit la _direction de texte de base_ de l'élément et isole la direction du contenu provenant du texte environnant.
@@ -64,7 +64,7 @@ Même pour les documents utilisant un seul système d'écriture, il est recomman
 
 Cet attribut peut être remplacé par les propriétés CSS {{CSSxRef("direction")}} et {{CSSxRef("unicode-bidi")}}, si une feuille CSS est active et que l'élément prend en charge ces propriétés.
 
-Comme la direction du texte est liée sémantiquement à son contenu et non à sa présentation, il est recommandé aux développeur·euse·s web d'utiliser cet attribut plutôt que les propriétés CSS associées lorsque cela est possible. Ainsi, le texte s'affiche correctement, y compris dans un navigateur qui ne prend pas en charge le CSS ou si le CSS est désactivé.
+Comme la direction du texte est liée sémantiquement à son contenu et non à sa présentation, il est recommandé aux développeur·euse·s web d'utiliser cet attribut plutôt que les propriétés CSS associées lorsque c'est possible. Ainsi, le texte s'affiche correctement, y compris dans un navigateur qui ne prend pas en charge le CSS ou si le CSS est désactivé.
 
 Une image peut avoir sa propriété `dir` réglée sur `"rtl"` auquel cas les attributs HTML `title` et `alt` sont formatés et définis comme `"rtl"`.
 
@@ -105,9 +105,7 @@ Cet exemple définit explicitement la direction de base de deux paragraphes. La 
 
 ```html
 <p dir="ltr" lang="en">This sentence is in English and reads left to right.</p>
-<p dir="rtl" lang="ar">
-  هذه الجملة باللغة العربية وتُقرأ من اليمين إلى اليسار.
-</p>
+<p dir="rtl" lang="ar">هذه الجملة باللغة العربية وتُقرأ من اليمين إلى اليسار.</p>
 ```
 
 ### Texte bidirectionnel en incise

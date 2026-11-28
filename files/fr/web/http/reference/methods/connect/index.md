@@ -3,28 +3,11 @@ title: Méthode de requête CONNECT
 short-title: CONNECT
 slug: Web/HTTP/Reference/Methods/CONNECT
 l10n:
-  sourceCommit: b25798255cfb773885c94557b74179400ac7153d
+  sourceCommit: 98b1752bbde3987c1c445b038aa4a463dccff6b8
 ---
 
 La méthode HTTP **`CONNECT`** demande à un {{Glossary("Proxy server", "mandataire")}} d'établir un tunnel HTTP vers un serveur de destination et, en cas de succès, de transmettre aveuglément les données dans les deux sens jusqu'à la fermeture du tunnel.
-
-La cible de la requête est unique à cette méthode&nbsp;: elle se compose uniquement de l'hôte et du port de destination du tunnel, séparés par un deux-points (voir la section [Syntaxe](#syntaxe) pour plus de détails).
-Tout [code de statut de réponse 2XX de succès](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès) signifie que le mandataire passe en «&nbsp;mode tunnel&nbsp;» et que toute donnée dans le corps de la réponse provient du serveur identifié par la cible de la requête.
-
-Si un site web est derrière un mandataire et que des règles réseau imposent que tout le trafic externe passe par ce mandataire, la méthode `CONNECT` permet d'établir une connexion {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) avec ce site&nbsp;:
-
-- Le client demande au mandataire de créer un tunnel pour la connexion {{Glossary("TCP")}} vers la destination souhaitée.
-- Le serveur mandataire établit une connexion sécurisée avec le serveur pour le compte du client.
-- Une fois la connexion établie, le mandataire continue de relayer le flux TCP entre le client et le serveur.
-
-En plus de permettre un accès sécurisé à des sites derrière des mandataires, un tunnel HTTP permet de faire passer du trafic qui est autrement restreint (SSH ou FTP) avec le protocole HTTP(S).
-
-`CONNECT` est une méthode «&nbsp;hop-by-hop&nbsp;»&nbsp;: les mandataires ne transmettent la requête `CONNECT` que s'il y a un autre mandataire en amont du serveur d'origine, car la plupart des serveurs d'origine n'implémentent pas `CONNECT`.
-
-> [!WARNING]
-> Si vous exploitez un mandataire prenant en charge `CONNECT`, limitez son usage à un ensemble de ports connus ou à une liste configurable de cibles sûres.
-> Il existe des risques importants à établir un tunnel vers des serveurs arbitraires, en particulier lorsque la destination est un port TCP bien connu ou réservé qui n'est pas destiné au trafic Web.
-> Un mandataire mal configuré peut être détourné pour relayer du trafic comme SMTP afin de diffuser du courrier indésirable, par exemple.
+En HTTP/2 et HTTP/3, une requête [CONNECT étendue](#connect_étendu) est également utilisée pour exécuter des protocoles tels que WebSockets et WebTransport sur un flux HTTP.
 
 <table class="properties">
   <tbody>
@@ -68,6 +51,35 @@ CONNECT <host>:<port> HTTP/1.1
 - `<port>`
   - : Un numéro de port en décimal (par exemple, `80`, `443`). Il n'y a pas de port par défaut, donc le client **doit** toujours en définir un.
 
+## Description
+
+La cible de la requête est unique à cette méthode&nbsp;: elle se compose uniquement de l'hôte et du port de destination du tunnel, séparés par un deux-points (voir la section [Syntaxe](#syntaxe) pour plus de détails).
+Tout [code de statut de réponse 2XX de succès](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès) signifie que le mandataire passe en «&nbsp;mode tunnel&nbsp;» et que toute donnée dans le corps de la réponse provient du serveur identifié par la cible de la requête.
+
+Si un site web est derrière un mandataire et que des règles réseau imposent que tout le trafic externe passe par ce mandataire, la méthode `CONNECT` permet d'établir une connexion {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) avec ce site&nbsp;:
+
+- Le client demande au mandataire de créer un tunnel pour la connexion {{Glossary("TCP")}} vers la destination souhaitée.
+- Le serveur mandataire établit une connexion sécurisée avec le serveur pour le compte du client.
+- Une fois la connexion établie, le mandataire continue de relayer le flux TCP entre le client et le serveur.
+
+En plus de permettre un accès sécurisé à des sites derrière des mandataires, un tunnel HTTP permet de faire passer du trafic qui est autrement restreint (SSH ou FTP) avec le protocole HTTP(S).
+
+`CONNECT` est une méthode «&nbsp;hop-by-hop&nbsp;»&nbsp;: les mandataires ne transmettent la requête `CONNECT` que s'il y a un autre mandataire en amont du serveur d'origine, car la plupart des serveurs d'origine n'implémentent pas `CONNECT`.
+
+> [!WARNING]
+> Si vous exploitez un mandataire prenant en charge `CONNECT`, limitez son usage à un ensemble de ports connus ou à une liste configurable de cibles sûres.
+> Il existe des risques importants à établir un tunnel vers des serveurs arbitraires, en particulier lorsque la destination est un port TCP bien connu ou réservé qui n'est pas destiné au trafic Web.
+> Un mandataire mal configuré peut être détourné pour relayer du trafic comme SMTP afin de diffuser du courrier indésirable, par exemple.
+
+### `CONNECT` étendu
+
+HTTP/2 et HTTP/3 définissent également une requête `CONNECT` _étendue_, qui est utilisée pour exécuter un autre protocole sur un seul flux HTTP ({{RFC("8441")}} et {{RFC("9220")}}).
+La requête inclut un pseudo-en-tête `:protocol` nommant le protocole, ainsi que les pseudo-en-têtes `:scheme`, `:authority` et `:path` qui identifient la ressource cible.
+La requête est envoyée au serveur d'origine, qui doit d'abord annoncer la prise en charge en utilisant le paramètre `SETTINGS_ENABLE_CONNECT_PROTOCOL`.
+Si le serveur répond avec un [code de statut de réponse 2XX de succès](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès), le protocole nommé prend le contrôle du flux.
+
+Le `CONNECT` étendu est utilisé pour ouvrir des connexions [WebSocket](/fr/docs/Web/API/WebSockets_API) sur HTTP/2 et HTTP/3 (avec `:protocol` défini sur `websocket`), et pour établir des sessions [WebTransport](/fr/docs/Web/API/WebTransport_API) (avec `:protocol` défini sur `webtransport`).
+
 ## Exemple
 
 Une requête pour les serveurs mandataires qui nécessitent une autorisation pour créer un tunnel ressemble à ceci.
@@ -94,3 +106,5 @@ Proxy-Authorization: basic aGVsbG86d29ybGQ=
 - [En-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)
 - L'entrée de glossaire {{Glossary("Proxy server", "Serveur mandataire")}}
 - L'en-tête {{HTTPHeader("Proxy-Authorization")}}
+- [L'API WebSockets](/fr/docs/Web/API/WebSockets_API)
+- [L'API WebTransport](/fr/docs/Web/API/WebTransport_API)

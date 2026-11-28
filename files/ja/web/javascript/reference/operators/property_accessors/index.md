@@ -2,7 +2,7 @@
 title: プロパティアクセサー
 slug: Web/JavaScript/Reference/Operators/Property_accessors
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **プロパティアクセサー**はオブジェクトのプロパティへのアクセスを提供するもので、ドット記法またはブラケット記法を使用します。
@@ -33,6 +33,21 @@ object.propertyName
 object[expression]
 object.#privateProperty
 ```
+
+### 引数
+
+- `object`
+  - : プロパティにアクセスする対象となる、[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 17 （アクセスと呼び出し）以上の式です。
+- `propertyName`
+  - : アクセスするプロパティの[識別子名](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)です。
+- `expression`
+  - : 任意の[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)の式です。その値はプロパティキー（[文字列](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)またはシンボル）に強制変換されます。
+- `#privateProperty`
+  - : [プライベート要素の識別子](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)で、外側のクラスで宣言されているものです。
+
+### 返値
+
+指定されたプロパティまたはプライベート要素への参照です。この参照を読み取ると、その値が得られます。
 
 ## 解説
 
@@ -71,14 +86,14 @@ document.createElement("pre");
 
 ```js-nolint
 77 .toExponential();
-// or
+// または
 77
 .toExponential();
-// or
+// または
 (77).toExponential();
-// or
+// または
 77..toExponential();
-// or
+// または
 77.0.toExponential();
 // 77. と 77.0 は同じものとして評価されます
 ```
@@ -87,7 +102,7 @@ document.createElement("pre");
 
 ### ブラケット記法
 
-`object[expression]` の構文では、`expression` は文字列または[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)です。ですから、これは任意の文字列、例えば `'1foo'`、`'!bar!'`、または `' '` (空白) であっても構いません。
+`object[expression]` の構文では、`expression` はプロパティ名を表す文字列または[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)に評価される必要があります。したがって、`'1foo'`、`'!bar!'`、`' '`（空白）など、任意の文字列を使用できます。
 
 ```js
 const variable = object[propertyName];
@@ -106,7 +121,7 @@ document["createElement"]("pre");
 document ["createElement"]("pre");
 ```
 
-プロパティ名として評価される式を渡すと、プロパティ名を直に直接渡すのと同じことが行われます。
+プロパティ名に評価される式を渡すと、そのプロパティ名を直接渡した場合と同じ結果になります。
 
 ```js
 const key = "name";
@@ -130,7 +145,7 @@ object["1"] = "value";
 console.log(object[1]);
 ```
 
-こちらも `'value'` を出力します。`foo` と `bar` は同じ文字列に変換されるからです。
+こちらも `'value'` を出力します。`foo` と `bar` は同じ文字列 (`"[object Object]"`) に変換されるからです。
 
 ```js
 const foo = { uniqueProp: 1 };
@@ -158,7 +173,7 @@ JavaScript 初心者はしばしば、代わりにブラケット記法を使え
 const x = eval(`document.forms.form_name.elements.${strFormControl}.value`);
 ```
 
-`eval()` は低速であり、可能な限り避けるべきです。また、 `strFormControl` は ID を必要としますが、フォームコントロールの名前と `id` は必須ではありません。代わりにブラケット記法を使った方が良いでしょう。
+`eval()` は低速であり、可能な限り避けるべきです。また、この方法では `strFormControl` が識別子である必要がありますが、フォームコントロールの `name` や `id` は有効な識別子である必要はありません。代わりにブラケット記法を使用する方がよいでしょう。
 
 ```js
 const x = document.forms.form_name.elements[strFormControl].value;

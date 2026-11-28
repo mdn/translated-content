@@ -3,18 +3,18 @@ title: "HTMLElement: translate プロパティ"
 short-title: translate
 slug: Web/API/HTMLElement/translate
 l10n:
-  sourceCommit: 1442377111a1649dfce278eac688e06efce34b83
+  sourceCommit: 874ad29df9150037acb8a4a3e7550a302c90a080
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`translate`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、ページがローカライズされるとき、要素の属性値や {{domxref("Text")}} ノードの子の値を対応させるか、そのままにするかを示します。
+**`translate`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、ページのローカライズ時に、要素の属性値と子の {{domxref("Text")}} ノードの値を翻訳するか、そのままにするかを示します。
 
 これは HTML の [`translate`](/ja/docs/Web/HTML/Reference/Global_attributes/translate) グローバル属性の値を反映します。
 
 ## 値
 
-論理値で、ページがローカライズされるときに要素の属性値や {{domxref("Text")}} ノードの子の値が翻訳される場合は `true`、そうでない場合は `false` です。
+論理値で、ページのローカライズ時に要素の属性値と子の {{domxref("Text")}} ノードの値を翻訳する場合は `true`、そうでない場合は `false` です。
 
 ## 例
 
@@ -22,14 +22,16 @@ l10n:
 
 ```html
 <div>
-  <span>The content may always be translated: </span>
-  <span translate="yes">El contenido será traducido</div>
+  <span>この内容は常に翻訳できます: </span>
+  <span translate="yes">El contenido será traducido</span>
 </div>
 <div>
-  <span id="translate-label">The content may be translated:</span>
-  <span id="translate-element" translate="no">El contenido puede ser traducido.</div>
+  <span id="translate-label">この内容は翻訳できます:</span>
+  <span id="translate-element" translate="no">
+    El contenido puede ser traducido.
+  </span>
 </div>
-<input id="translate-controller" type="checkbox" /> Enable translation
+<input id="translate-controller" type="checkbox" /> 翻訳を有効にする
 ```
 
 ```js
@@ -40,10 +42,10 @@ const controller = document.getElementById("translate-controller");
 controller.addEventListener("change", (e) => {
   if (controller.checked) {
     element.translate = true;
-    label.innerText = "The content may be translated:";
+    label.innerText = "この内容は翻訳できます:";
   } else {
     element.translate = false;
-    label.innerText = "The content may not be translated:";
+    label.innerText = "この内容は翻訳できません:";
   }
 });
 ```

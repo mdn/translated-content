@@ -2,12 +2,12 @@
 title: href
 slug: Web/MathML/Reference/Global_attributes/href
 l10n:
-  sourceCommit: 29e6ba9d844b835a1f00346ef1a78fa5d9e7c1a8
+  sourceCommit: 9ba3ab2c48fb51423f811d329818071e4c79caca
 ---
 
 {{Non-standard_header}}
 
-**`href`** は[グローバル属性](/ja/docs/Web/MathML/Reference/Global_attributes)で、MathML 要素上に、指定された URL を指すハイパーリンクを作成します。
+**`href`** は[グローバル属性](/ja/docs/Web/MathML/Reference/Global_attributes)で、指定された URL を指すハイパーリンクを MathML 要素上に作成します。ただし、{{MathMLElement("a")}} 以外の MathML 要素に `href` を設定することは非推奨です。MathML コンテンツ内にハイパーリンクを作成するには、{{MathMLElement("a")}} 要素を使用してください。
 
 ## 例
 

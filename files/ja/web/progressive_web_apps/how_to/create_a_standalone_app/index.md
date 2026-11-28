@@ -2,20 +2,18 @@
 title: スタンドアロンアプリを作成する
 slug: Web/Progressive_web_apps/How_to/Create_a_standalone_app
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 1b6ddc3ab1356aabfe2cd5a19875cdaf35220590
 ---
 
-{{PWASidebar}}
+[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps) (PWA) は、ユーザーの端末にインストールされ、ユーザーが起動したときの表示方法を定義できます。ウェブサイトと同じようにウェブブラウザーで表示するか、 OS ネイティブのアプリケーションと同じように専用のウィンドウを表示するかを選択できます。
 
-[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps) (PWA) は、ユーザーの端末にインストールするされ、ユーザーが起動するときの表示方法を定義することができます。ウェブサイトと同じようにウェブブラウザーで表示するか、 OS ネイティブのアプリケーションと同じように専用のウィンドウを表示するかを選択できます。
+ユーザーは、インストールされたアプリケーションが端末上でどのように動作するかについて、一定の期待を持っています。そのひとつが、アプリケーションに専用のウィンドウが用意されていることです。
 
-ユーザーは、インストールされたアプリケーションが端末上でどのように動作するかについて、特定の期待を持っている傾向があります。そのひとつが、アプリケーションに専用のウィンドウが用意されていることです。
+[ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)の [`display`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/display) メンバーを使用すると、インストールされた PWA をユーザーの端末で起動したときに、ブラウザー内に表示するか、専用のウィンドウに表示するかを定義できます。
 
-[ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)の [`display`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/display) メンバーを使用することで、インストールされた PWA がユーザーの端末で起動されたときに、ブラウザーで表示されるか、独自の専用のウインドウで表示されるかを定義することができます。
+## standalone 表示モード
 
-## standalone 画面モード
-
-standalone 画面モードを使用して、 PWA を独自の専用のウィンドウを与えるには、 [`display`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/display) メンバーを[ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)に設定し、値を `standalone` に設定します。
+standalone 表示モードを使用して PWA を専用のウィンドウに表示するには、[ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)の [`display`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/display) メンバーを `standalone` に設定します。
 
 ```json
 {
@@ -32,7 +30,7 @@ standalone 画面モードを使用して、 PWA を独自の専用のウィン�
 }
 ```
 
-なお、表示モードは他にも `browser`, `minimal-ui`, `fullscreen` などがあります。選択した表示モードによって、ブラウザーのユーザーインターフェイスがユーザーに表示される範囲が変わります。利用可能なすべての表示モードと、対応していない場合にどのように代替されるかについては、 [`display`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/display) メンバーに関するドキュメントを参照してください。
+なお、表示モードには `browser`、`minimal-ui`、`fullscreen` などもあります。選択した表示モードによって、ユーザーに表示されるブラウザー UI の範囲が変わります。利用可能なすべての表示モードと、対応していない場合にどのように代替されるかについては、[`display`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/display) メンバーのドキュメントを参照してください。
 
 ## ベストプラクティス
 
@@ -44,9 +42,9 @@ standalone 画面モードを使用して、 PWA を独自の専用のウィン�
 
 ## 表示モードに応じてアプリをカスタマイズ
 
-ウェブアプリのマニフェストで `browser` 以外の表示モードを定義した場合、それはアプリケーションがインストールされているときにのみ適用されます。他のウェブページと同様に、マニフェストの `display` メンバーは、 PWA がインストールされていないときには何の効果もありません。アプリがインストールされているかどうかを検出するために、実行時に表示モードをチェックすることができます。
+ウェブアプリのマニフェストで `browser` 以外の表示モードを定義した場合、それはアプリケーションがインストールされているときにのみ適用されます。他のウェブページと同様に、マニフェストの `display` メンバーは、 PWA がインストールされていないときには何の効果もありません。
 
-CSS の {{cssxref("@media/display-mode", "display-mode")}} メディア機能または JavaScript の {{domxref("Window.matchMedia()")}} 機能を使用すると、表示モードに基づいて選択的に CSS スタイルを適用したり、アプリで JavaScript コードを実行したりできます。
+CSS の {{cssxref("@media/display-mode", "display-mode")}} メディア特性または JavaScript の {{domxref("Window.matchMedia()")}} メソッドを使用すると、表示モードに基づいて CSS スタイルを選択的に適用したり、アプリで JavaScript コードを実行したりできます。
 
 以下は、 CSS の {{cssxref("@media")}} アットルールを使用して、 `standalone` 表示モードが有効な場合にのみウェブページ上の要素を表示する方法を示す例です。
 
@@ -62,7 +60,7 @@ CSS の {{cssxref("@media/display-mode", "display-mode")}} メディア機能ま
 }
 ```
 
-この例では、`.app-button` 要素は、表示モードが `standalone` に設定されない限り、既定で非表示になります。これは、 `display` マニフェストメンバーが `standalone` に設定され、アプリがユーザーの端末にインストールされている場合に発生します。
+この例では、`.app-button` 要素は、アプリが現在 `standalone` モードで表示されていない限り、デフォルトで非表示になります。
 
 次の例は、 {{domxref("window.matchMedia()")}} メソッドを使って、 `standalone` 表示モードが有効かどうかを検出する方法を示す別の例です。
 
@@ -71,6 +69,13 @@ function isStandaloneApp() {
   return window.matchMedia("(display-mode: standalone)").matches;
 }
 ```
+
+> [!NOTE]
+> PWA がインストール済みかどうかを確実に判断する、ブラウザー間で共通の方法はありません。また、表示モードとインストール状態は単純には対応しません。
+>
+> - インストール済みの PWA でもブラウザーのタブで開けるため、`standalone` にはならないことがあります。
+> - PWA が代わりに `fullscreen` で表示されることもあります（ステータスバーが隠れ、バッテリー残量やネットワーク接続などが表示されません）。
+> - 通常のウェブページも `fullscreen` で表示できます。
 
 ## 関連情報
 

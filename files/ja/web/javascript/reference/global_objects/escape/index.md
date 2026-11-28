@@ -2,13 +2,13 @@
 title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 0c3c464abb1422b0534a5e3f5e81e9bbae13544c
 ---
 
 > [!NOTE]
-> `escape()` は、ブラウザーによって実装されている標準外の関数であり、エンジン間の互換性のためにのみ標準化されています。すべての JavaScript エンジンで実装されているとは限らず、すべての環境で動作するとは限りません。可能であれば、{{jsxref("encodeURIComponent()")}} または {{jsxref("encodeURI()")}} を使用してください。
+> `escape()` は、ブラウザーが実装している古い関数で、エンジン間の互換性のためだけに標準化されました。すべての JavaScript エンジンで実装されるとは限らず、すべての環境で動作するとは限りません。可能であれば、{{jsxref("encodeURIComponent()")}} または {{jsxref("encodeURI()")}} を使用してください。
 
-The **`escape()`** 関数は、特定の文字を 16 進数のエスケープシーケンスで置き換えた新しい文字列を計算します。
+**`escape()`** 関数は、特定の文字を 16 進数のエスケープシーケンスに置き換えた新しい文字列を計算します。
 
 ## 構文
 
@@ -27,12 +27,12 @@ escape(str)
 
 ## 解説
 
-`escape` 関数はグローバルオブジェクトのプロパティです。
+`escape()` はグローバルオブジェクトの関数プロパティです。
 
-`escape()` 関数は、{{Glossary("ASCII")}} 単語文字 (A–Z、a–z、0–9、\_) および `@\*_+-./` を除き、すべての文字をエスケープシーケンスに置き換えます。文字は UTF-16 コード単位によってエスケープされます。コード単位の値が 256 未満の場合は、必要に応じて左に 0 を補って、`%XX` の書式で 2 桁の 16 進数で表されます。それ以外の場合は、必要に応じて左に 0 を補って、`%uXXXX` の書式で 4 桁の 16 進数で表されます。
+`escape()` 関数は、{{Glossary("ASCII")}} の単語構成文字 (A–Z、a–z、0–9、\_) および `@\*_+-./` を除くすべての文字をエスケープシーケンスに置き換えます。文字は UTF-16 コード単位ごとにエスケープされます。コード単位の値が 256 未満の場合は、必要に応じて左側を 0 で埋めた 2 桁の 16 進数 `%XX` で表します。それ以外の場合は、必要に応じて左側を 0 で埋めた 4 桁の 16 進数 `%uXXXX` で表します。
 
 > [!NOTE]
-> この関数は主に{{Glossary("Percent-encoding", "パーセントエンコード")}}に使用され、 {{rfc(1738)}} のエスケープ形式を部分的に基にしています。エスケープ形式は、文字列リテラルにおける[エスケープシーケンス](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#エスケープシーケンス)ではありません。 `%XX` を `\xXX`、`%uXXXX` を `\uXXXX` に置き換えることで、実際の文字列リテラルエスケープシーケンスを含む文字列を取得することができます。
+> この関数は主に{{Glossary("Percent-encoding", "パーセントエンコード")}}に使用され、{{rfc(1738)}} のエスケープ形式を部分的に基にしています。このエスケープ形式は、文字列リテラルにおける[エスケープシーケンス](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#エスケープシーケンス)ではありません。`%XX` を `\xXX`、`%uXXXX` を `\uXXXX` に置き換えると、実際の文字列リテラル用エスケープシーケンスを含む文字列を取得できます。
 
 ## 例
 
@@ -57,7 +57,7 @@ escape("@*_+-./"); // "@*_+-./"
 
 ## 関連情報
 
-- [`escape` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [`escape` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/string-regexp)
 - {{jsxref("encodeURI")}}
 - {{jsxref("encodeURIComponent")}}
 - {{jsxref("unescape")}}

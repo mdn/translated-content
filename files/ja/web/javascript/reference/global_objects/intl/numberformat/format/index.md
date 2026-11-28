@@ -3,7 +3,7 @@ title: Intl.NumberFormat.prototype.format()
 short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`format()`** は {{jsxref("Intl.NumberFormat")}} インスタンスのメソッドで、この `Intl.NumberFormat` オブジェクトの[ロケールおよび書式設定オプション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters)に応じて数値を書式化します。
@@ -35,7 +35,7 @@ format(number)
 ### 引数
 
 - `number`
-  - : 書式化する数値 ({{jsxref("Number")}})、長整数 ({{jsxref("BigInt")}})、文字列のいずれかです。文字列は、[数値への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)と同じ方法で解釈されますが、`formatRange()` は、文字列が表す正確な値を使用し、暗黙的に数値に変換する際に精度が失われることを避けます。
+  - : 書式化する数値 ({{jsxref("Number")}})、長整数 ({{jsxref("BigInt")}})、文字列のいずれかです。文字列は、[数値への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)と同じ方法で解釈されますが、`format()` は、文字列が表す正確な値を使用し、暗黙的に数値へ強制変換する際に精度が失われることを避けます。
 
 > [!NOTE]
 > この仕様の古いバージョンでは、文字列は {{jsxref("Number")}} として解釈されていました。
@@ -99,7 +99,7 @@ console.log(formatted.join("; "));
 ```js
 const numberFormat = new Intl.NumberFormat("en-US");
 
-// ここでは、値は数値に変換される
+// ここでは、値は数値に強制変換される
 console.log(numberFormat.format(987654321987654321));
 // 987,654,321,987,654,300
 

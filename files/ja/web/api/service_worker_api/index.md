@@ -2,12 +2,15 @@
 title: サービスワーカー API
 slug: Web/API/Service_Worker_API
 l10n:
-  sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
+  sourceCommit: 972c6cc542e271e4c00def9465d7a0cc81011378
 ---
 
 {{DefaultAPISidebar("Service Workers API")}}{{AvailableInWorkers}}
 
 サービスワーカーは、基本的にウェブアプリケーション、ブラウザー、そして（もし繋がっていれば）ネットワークの間に介在するプロキシーサーバーのように振る舞います。これは、よりよいオフラインの操作性を可能にするように意図されており、ネットワークのリクエストに介在してネットワークの使用可否の状況に基づいて適切な対応を取ったり、サーバー上にある資産を更新したりします。また、プッシュ通知やバックグラウンド同期の API 群へのアクセスもできるようになります。
+
+> [!NOTE]
+> サービスワーカーはウェブワーカーの一種です。ワーカーの種類やユースケースの一般的な情報については、[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)を参照してください。
 
 ## サービスワーカーの概念と使い方
 
@@ -15,16 +18,16 @@ l10n:
 
 サービスワーカーはワーカーのコンテキストで実行されます。従って、DOM へアクセスすることができず、アプリを実行する主要な JavaScript とは異なるスレッドで実行されるため、他のタスクをブロックすることはありません。完全に非同期で設計されています。そのため、同期型の [XHR](/ja/docs/Web/API/XMLHttpRequest) や[ウェブストレージ](/ja/docs/Web/API/Web_Storage_API)のような API をサービスワーカーで使用することはできません。
 
-サービスワーカーの JavaScript モジュールは動的にインポートできず、[`import()`](/ja/docs/Web/JavaScript/Reference/Operators/import#ブラウザーの互換性) はサービスワーカーのグローバルスコープで呼び出されると例外を発生します。
+サービスワーカーの JavaScript モジュールは動的にインポートできず、[`import()`](/ja/docs/Web/JavaScript/Reference/Operators/import) はサービスワーカーのグローバルスコープで呼び出されると例外が発生します。
 [`import`](/ja/docs/Web/JavaScript/Reference/Statements/import) 文を使用した静的インポートは許可されています。
 
-サービスワーカーはセキュリティ上の理由から、 HTTPS 通信でのみ動作します。最も重要なことは、HTTP 接続は{{Glossary("MitM", "中間者")}}攻撃による悪意のあるコード注入の影響を受けやすく、こうした強力な API へのアクセスを許可されると、その攻撃はより悪いものになる可能性があるということです。Firefox では[プライベートブラウジングモード](https://support.mozilla.org/ja/kb/private-browsing-use-firefox-without-history)でサービスワーカー API を利用することはできません。
+サービスワーカーは[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ利用できます。つまり、文書が HTTPS 経由で配信される必要があります。ただし、ローカル開発を容易にするため、ブラウザーは `http://localhost` も保護されたコンテキストとして扱います。HTTP 接続は[中間者 (MITM) 攻撃](/ja/docs/Web/Security/Attacks/MITM)による悪意のあるコード注入の影響を受けやすく、こうした強力な API へのアクセスを許可すると、その攻撃の被害がさらに大きくなる可能性があります。
 
 > [!NOTE]
-> Firefox では、テストのためにサービスワーカーを HTTP (安全ではない) 上で実行することができます。これは、 **HTTP によるサービスワーカーを有効化 (ツールボックスを開いたとき)** オプションを Firefox Devtools 設定メニューでチェックするだけです。
+> Firefox では、テストのためにサービスワーカーを安全ではない HTTP で実行することができます。Firefox の DevTools 設定メニューで **HTTP によるサービスワーカーを有効化 (ツールボックスを開いたとき)** を選択してください。
 
 > [!NOTE]
-> サービスワーカーは [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag/) のような、この分野における以前の試みより勝っています。以前のものは、あなたがしようとしていることを想定していなかったり、想定が正しくなかったときに壊れたりしていたのに対して、サービスワーカーはあなたがすべてを細かく制御することができるためです。
+> サービスワーカーは [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag/) のような、この分野における以前の試みより勝っています。以前のものは、しようとしていることを想定していなかったり、想定が正しくなかったときに壊れたりしていたのに対して、サービスワーカーはすべてを細かく制御することができるためです。
 
 > [!NOTE]
 > サービスワーカーは[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)を頻繁に使用して、レスポンスが来るのを待ってから、成功または失敗のアクションで応答します。プロミスのアーキテクチャはこの領域に対して理想的なものです。
@@ -54,9 +57,9 @@ l10n:
 
 利用できる既存のサービスワーカーがあった場合は、新しいバージョンがバックグラウンドでインストールされますが、まだ有効化 (activate) されません。この時点のものを*待機中 (waiting) のワーカー*と呼びます。まだ使用している古いサービスワーカーが読み込んでいるページがなくなった時のみ、有効化されます。ページが読み込まれなくなったらすぐに、新しいサービスワーカーが有効化されます（*アクティブワーカー*になります）。 {{DOMxRef("ServiceWorkerGlobalScope.skipWaiting()")}} を使用するとすぐに有効化することができ、 {{DOMxRef("Clients.claim()")}} を使用してアクティブワーカーが既存のページの管理を始めることができます。
 
-{{domxref("ServiceWorkerGlobalScope/install_event", "install")}} を受け取ることもできます。イベントが発行されたときの標準的なアクションは、使用するためにサービスワーカーを準備すること、例えば組込みストレージ API を使用してキャッシュを構築したり、アプリがオフラインの時に使用したい資産をその中に配置したりすることです。
+{{domxref("ServiceWorkerGlobalScope/install_event", "install")}} を受け取ることもできます。イベントが発生したときの標準的なアクションは、使用するためにサービスワーカーを準備すること、例えば組込みストレージ API を使用してキャッシュを構築したり、アプリがオフラインの時に使用したい資産をその中に配置したりすることです。
 
-{{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}} イベントもあります。このイベントが発行された時点は、古いキャッシュや、前のバージョンのサービスワーカーに関するその他のものを整理するのによいタイミングです。
+{{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}} イベントもあります。このイベントが発生した時点は、古いキャッシュや、前のバージョンのサービスワーカーに関するその他のものを整理するのによいタイミングです。
 
 サービスワーカーは {{DOMxRef("FetchEvent")}} イベントを使用してリクエストに応答することができます。{{DOMxRef("FetchEvent.respondWith()")}} メソッドを使用して、これらのリクエストに対するレスポンスを何でも思うように変更できます。
 
@@ -96,7 +99,7 @@ l10n:
 - {{DOMxRef("Cache")}}
   - : {{DOMxRef("ServiceWorker")}} のライフサイクルの一部としてキャッシュされる、{{DOMxRef("Request")}} / {{DOMxRef("Response")}} オブジェクトのペアのためのストレージです。
 - {{DOMxRef("CacheStorage")}}
-  - : {{DOMxRef("Cache")}} オブジェクトのストレージです。これは {{DOMxRef("ServiceWorker")}} がアクセスできるすべての名前付きキャッシュのへの目録を提供し、文字列の名前から対応する {{DOMxRef("Cache")}} へのマップを保持します。
+  - : {{DOMxRef("Cache")}} オブジェクトのストレージです。これは {{DOMxRef("ServiceWorker")}} がアクセスできるすべての名前付きキャッシュの一覧を提供し、文字列の名前と対応する {{DOMxRef("Cache")}} オブジェクトの対応関係を保持します。
 - {{DOMxRef("Client")}}
   - : サービスワーカークライアントのスコープを表します。サービスワーカークライアントは、閲覧コンテキスト内の文書または {{DOMxRef("SharedWorker")}} であり、アクティブワーカーによって制御されています。
 - {{DOMxRef("Clients")}}
@@ -124,8 +127,8 @@ l10n:
 
 ### 他のインターフェイスへの拡張
 
-- {{DOMxRef("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}
-  - : 現在のkンテキストに関連付けられた {{domxref("CacheStorage")}} オブジェクトです。
+- {{DOMxRef("Window.caches")}} および {{domxref("WorkerGlobalScope.caches")}}
+  - : 現在のコンテキストに関連付けられた {{domxref("CacheStorage")}} オブジェクトです。
 - {{DOMxRef("Navigator.serviceWorker")}} および {{DOMxRef("WorkerNavigator.serviceWorker")}}
   - : {{DOMxRef("ServiceWorkerContainer")}} オブジェクトを返します。このオブジェクトは、[関連付けられた文書](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)の {{DOMxRef("ServiceWorker")}} オブジェクトの登録、削除、アップグレード、通信へのアクセスを提供します。
 
@@ -138,6 +141,7 @@ l10n:
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service Worker Lifecycle](https://web.dev/articles/service-worker-lifecycle) (英語)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (英語)
+- [ローカルネットワークアクセス](/ja/docs/Web/Security/Defenses/Local_network_access)
 - サービスワーカー APIに関連する Web API:
   - {{domxref("Background Fetch API", "バックグラウンドフェッチ API", "", "nocode")}}
   - {{domxref("Background Synchronization API", "バックグラウンド同期 API", "", "nocode")}}

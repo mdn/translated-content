@@ -2,7 +2,7 @@
 title: xlink:href
 slug: Web/SVG/Reference/Attribute/xlink:href
 l10n:
-  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`xlink:href`** 属性は、リソースを参照する [IRI](/ja/docs/Web/SVG/Guides/Content_type#iri) として参照先を定義します。そのリンクが正確に意味している内容は、そのリンクを使用している各要素のコンテキストによって異なります。
@@ -27,26 +27,6 @@ l10n:
 - {{SVGElement("set")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("use")}}
-
-## 例
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
-  <a xlink:href="https://developer.mozilla.org/">
-    <text x="10" y="25">MDN Web Docs</text>
-  </a>
-</svg>
-```
-
-{{EmbedLiveSample("Example", "320", "100")}}
 
 ## a
 
@@ -355,6 +335,26 @@ svg {
     </tr>
   </tbody>
 </table>
+
+## 例
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
+  <a xlink:href="https://developer.mozilla.org/">
+    <text x="10" y="25">MDN Web Docs</text>
+  </a>
+</svg>
+```
+
+{{EmbedLiveSample("Example", "320", "100")}}
 
 ## 仕様書
 

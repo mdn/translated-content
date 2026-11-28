@@ -1,46 +1,46 @@
 ---
 title: "SyntaxError: applying the 'delete' operator to an unqualified name is deprecated"
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
-
-JavaScript の [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)専用の例外 "applying the 'delete' operator to an unqualified name is deprecated" は、 [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) 演算子を用いて変数を削除しようとしたときに発生します。
+JavaScript の[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ発生する例外 "applying the 'delete' operator to an unqualified name is deprecated" は、[`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) 演算子で変数を削除しようとしたときに発生します。
 
 ## エラーメッセージ
 
-```js
-SyntaxError: Calling delete on expression not allowed in strict mode (Edge)
+```plain
+SyntaxError: Delete of an unqualified identifier in strict mode. (V8-based)
 SyntaxError: applying the 'delete' operator to an unqualified name is deprecated (Firefox)
-SyntaxError: Delete of an unqualified identifier in strict mode. (Chrome)
+SyntaxError: Cannot delete unqualified property 'a' in strict mode. (Safari)
 ```
 
-## エラータイプ
+## エラー型
 
-[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) でのみ {{jsxref("SyntaxError")}}。
+{{jsxref("SyntaxError")}} です。[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ発生します。
 
-## 何がうまくいかなかったのか？
+## エラーの原因
 
-JavaScript では、通常の変数を [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) 演算子で削除できません。strict モードで、変数を削除しようとするとエラーが発生し、削除できません。
+JavaScript では、通常の変数を [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) 演算子で削除できません。厳格モードでは変数を削除しようとするとエラーが発生し、削除は許可されません。
 
-`delete` 演算子は、オブジェクトのプロパティのみ削除できます。オブジェクトプロパティは、設定可能な場合は "修飾" されます。
+`delete` 演算子はオブジェクトのプロパティのみ削除できます。オブジェクトのプロパティは、構成可能な場合に「修飾された」と見なされます。
 
-よくある予想とは異なり、 `delete` 演算子は直接的なメモリーの解放とは**関係ありません**。メモリー管理は、参照の解放によって間接的に行われます。[メモリー管理](/ja/docs/Web/JavaScript/Guide/Memory_management)ページと [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) 演算子ページで詳細を確認してください。
+一般に考えられていることとは異なり、`delete` 演算子はメモリーを直接解放することとは**関係ありません**。メモリー管理は参照を断つことで間接的に行われます。詳しくは[メモリー管理](/ja/docs/Web/JavaScript/Guide/Memory_management)のページと [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) 演算子のページを参照してください。
 
-このエラーは、[strict mode モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ発生します。非 strict モードでは、演算子はただ `false` を返します。
+このエラーは[厳格モードのコード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ発生します。厳格モードでないコードでは、この操作は `false` を返すだけです。
 
 ## 例
 
 ### 変数の内容の解放
 
-JavaScript ではプレーンな変数を削除しようとすると動作せず、 strict モードだとエラーをスローします。
+JavaScript では通常の変数を削除しようとしても機能せず、厳格モードではエラーが発生します。
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 
 var x;
 
-// ...
+// …
 
 delete x;
 
@@ -48,18 +48,18 @@ delete x;
 // is deprecated
 ```
 
-変数のコンテンツを解放するには、[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を設定してください。
+変数の内容を解放するには、[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を変数に代入します。
 
 ```js example-good
 "use strict";
 
 var x;
 
-// ...
+// …
 
 x = null;
 
-// x can be garbage collected
+// x はガベージコレクションで回収可能
 ```
 
 ## 関連情報

@@ -3,15 +3,15 @@ title: "HTMLElement: focus() メソッド"
 short-title: focus()
 slug: Web/API/HTMLElement/focus
 l10n:
-  sourceCommit: 1ca8335a919a2877ab9dc1bf6ad5967682d7c876
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement.focus()`** メソッドは、指定された要素にフォーカスを設定できる場合、フォーカスを設定します。フォーカスされた要素は、既定でキーボードや同様のイベントを受け取る要素です。
+**`HTMLElement.focus()`** メソッドは、指定された要素にフォーカスを設定できる場合、フォーカスを設定します。フォーカスされた要素は、デフォルトでキーボードや同様のイベントを受け取る要素です。
 
-既定では、ブラウザーは要素をフォーカスした後、スクロールして表示します。また、フォーカスした要素を可視的に示すこともあります（通常は、要素の周りに「フォーカスリング」を表示します）。
-既定では、スクロールを無効化し、要素に可視的な表示を強制するための引数オプションが提供されています。
+デフォルトでは、ブラウザーは要素にフォーカスした後、その要素が見えるようにスクロールします。また、フォーカスされた要素を視覚的に示すこともあります（通常は、要素の周りに「フォーカスリング」を表示します）。
+デフォルトのスクロール動作を無効にしたり、要素のフォーカス状態を視覚的に示すよう強制したりするオプションもあります。
 
 ## 構文
 
@@ -26,10 +26,10 @@ focus(options)
   - : フォーカス処理の制御の側面のためのオプションのオブジェクト。
     このオブジェクトには、次のプロパティが含まれる場合があります。
     - `preventScroll` {{optional_inline}}
-      - : 論理値で、ブラウザーが文書をスクロールして、新しくフォーカスされた要素を表示するかどうかを示します。`preventScroll` の値が `false`（既定値）の場合、ブラウザーは要素をフォーカスした後、その要素をスクロールして表示します。`preventScroll` が `true` に設定されている場合、スクロールしません。
+      - : 論理値で、ブラウザーが文書をスクロールして、新しくフォーカスされた要素を表示するかどうかを示します。`preventScroll` の値が `false`（デフォルト）の場合、ブラウザーは要素にフォーカスした後、その要素が見えるようにスクロールします。`preventScroll` が `true` に設定されている場合、スクロールしません。
     - `focusVisible` {{optional_inline}} {{experimental_inline}}
-      - : 論理値です。`true` に設定すると、要素にフォーカスが当たっていることを強制的に可視的に示すことができ、`false` に設定すると、それを防ぐことができます。
-        このプロパティが指定されていない場合は、ブラウザーがユーザーにとってのアクセシビリティを向上させると判断した場合は、可視表示を提供することがあります。
+      - : 論理値です。`true` に設定すると、要素にフォーカスが当たっていることを視覚的に示すよう強制でき、`false` に設定すると、その表示を抑止できます。
+        このプロパティが指定されていない場合は、ブラウザーがユーザーのアクセシビリティ向上につながると判断したときに、視覚的な表示を行うことがあります。
 
 ### 返値
 
@@ -51,7 +51,7 @@ focus(options)
 #### JavaScript
 
 次のコードは、ボタンが押されたときにテキストフィールドにフォーカスを設定するイベントハンドラーを追加しています。
-ほとんどのブラウザーは、フォーカスされたテキストフィールドに自動的に可視表示（「フォーカスリング」）を追加するので、このコードでは `focusVisible` を `true` に設定していないことに注意してください。
+ほとんどのブラウザーは、フォーカスされたテキストフィールドに自動的に視覚的な表示（「フォーカスリング」）を追加するので、このコードでは `focusVisible` を `true` に設定していないことに注意してください。
 
 ```js
 document.getElementById("focusButton").addEventListener("click", () => {
@@ -74,10 +74,10 @@ document.getElementById("focusButton").addEventListener("click", () => {
 一番右のボタンは `focusVisible` を指定します。
 
 ```html
-<button id="myButton">クリックしてください</button>
-<button id="focusButton">クリックで 「ボタン」にフォーカスを設定</button>
+<button id="myButton">ボタン</button>
+<button id="focusButton">クリックで「ボタン」にフォーカスを設定</button>
 <button id="focusButtonVisibleIndication">
-  クリックで「Button」にフォーカスと focusVisible を設定
+  クリックで「ボタン」にフォーカスと focusVisible を設定
 </button>
 ```
 
@@ -101,14 +101,14 @@ document
 
 一番左のボタンにフォーカスを設定するには、中央のボタンか一番右のボタンのいずれかを選択します。
 
-ブラウザーは通常、プログラムでフォーカスを設定する際にボタン要素に目に見えるフォーカスの表示をしないので、真ん中のボタンを選択した場合の効果は明らかではないかもしれません。
-しかし、`focusVisible` オプションがブラウザーで対応していれば、正しいボタンが選択されたときに、左端のボタンにフォーカスが変わるのが見えるはずです。
+ブラウザーは通常、プログラムでフォーカスを設定する際にボタン要素に視覚的なフォーカス表示をしないので、真ん中のボタンを選択した場合の効果は明らかではないかもしれません。
+しかし、ブラウザーが `focusVisible` オプションに対応していれば、一番右のボタンを選択したときに、一番左のボタンにフォーカスが移るのが見えるはずです。
 
 {{ EmbedLiveSample('Focus_on_a_button') }}
 
 ### スクロールありとなしのフォーカス
 
-この例では、オプション [`preventScroll`](#preventscroll) に `true` と `false`（既定値）を設定してフォーカスを設定した場合の効果を示しています。
+この例では、オプション [`preventScroll`](#preventscroll) に `true` と `false`（デフォルト）を設定してフォーカスを設定した場合の効果を示しています。
 
 #### HTML
 
@@ -121,8 +121,14 @@ HTML は、画面外にある 3 つ目のボタンのフォーカスを設定す
 </button>
 
 <div id="container">
-  <button id="myButton" style="margin-top: 500px;">ボタン</button>
+  <button id="myButton">ボタン</button>
 </div>
+```
+
+```css hidden
+#myButton {
+  margin-top: 500px; /* ボタンを画面外に移動 */
+}
 ```
 
 #### JavaScript
@@ -132,7 +138,7 @@ HTML は、画面外にある 3 つ目のボタンのフォーカスを設定す
 
 ```js
 document.getElementById("focus_scroll").addEventListener("click", () => {
-  document.getElementById("myButton").focus(); // default: {preventScroll:false}
+  document.getElementById("myButton").focus(); // デフォルト: {preventScroll:false}
 });
 
 document.getElementById("focus_no_scroll").addEventListener("click", () => {
@@ -142,7 +148,7 @@ document.getElementById("focus_no_scroll").addEventListener("click", () => {
 
 #### 結果
 
-最初のボタンを選択すると、フォーカスが設定され、画面の内側のボタンまでスクロールします。
+最初のボタンを選択すると、フォーカスが設定され、画面外のボタンまでスクロールします。
 2 つ目のボタンを選択すると、フォーカスは設定されますが、スクロールは無効です。
 
 {{ EmbedLiveSample('Focus with and without scrolling') }}
@@ -155,7 +161,7 @@ document.getElementById("focus_no_scroll").addEventListener("click", () => {
 
 - `HTMLElement.focus()` をmousedown イベントハンドラーから呼び出した場合、 `HTMLElement` からフォーカスが外れないように `event.preventDefault()` を呼び出す必要があります。
 - [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) や{{Glossary("shadow tree", "シャドウ DOM", 1)}} など、これまで仕様が定まらないままだった様々な HTML 機能に関するフォーカスの挙動が、最近（2019 年 10 月に）更新されました。
-  詳しくは [WHATWG blog](https://blog.whatwg.org/focusing-on-focus) をチェックしてみてください。
+  詳しくは [WHATWG blog](https://blog.whatwg.org/focusing-on-focus)<sup>(英語)</sup> をチェックしてみてください。
 
 ## ブラウザーの互換性
 

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 344" role="img" aria-labelledby="title description">
+  <title id="title">動的インポートによるモジュールグラフの拡張</title>
+  <desc id="description">main.js とその依存先である config.js はすでに存在し、薄い灰色で示されています。標準入力で、前後の空白を取り除いたテキストが Hi であるデータチャンクを受信すると、formatters.js の動的インポートが開始され、青緑色の二重線の矢印で示されます。1 本線の矢印は静的な依存関係を表します。formatters.js は既存の config.js と、新しい logger.js をインポートします。main.js から config.js への既存の辺は薄い灰色で、新たに検出された依存関係の辺は青緑色で示されています。変更されていない関数本体とオブジェクト本体は省略されています。</desc>
+  <style>
+    text { fill: #6b7280; font-family: Menlo, Consolas, monospace; font-size: 12px; }
+    .existing text { fill: #a1a1aa; }
+    .specifier { fill: #08827e; font-weight: bold; }
+    .existing .specifier { fill: #b0b0b8; }
+    .existing .active { fill: #08827e; font-weight: bold; }
+    .outline { fill: none; stroke: #08827e; }
+    .existing .outline { stroke: #d1d5db; }
+    .edge { fill: none; stroke: #08827e; stroke-width: 1.5; marker-end: url(#arrow); }
+    .dynamic-import { fill: none; stroke: #08827e; stroke-width: 1.5; stroke-linejoin: round; }
+    .old-edge { fill: none; stroke: #d1d5db; marker-end: url(#old-arrow); }
+    .status { text-anchor: end; paint-order: stroke; stroke: white; stroke-width: 4; stroke-linejoin: round; fill: #08827e; }
+    .old-status { fill: #a1a1aa; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#08827e"/>
+    </marker>
+    <marker id="old-arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#d1d5db"/>
+    </marker>
+  </defs>
+
+  <rect x="20" y="30" width="430" height="142" fill="#fafafa"/>
+  <rect x="20" y="244" width="280" height="70" fill="#fafafa"/>
+  <rect x="500" y="30" width="500" height="116" fill="#edf8f5"/>
+  <rect x="670" y="244" width="270" height="80" fill="#edf8f5"/>
+
+
+  <path class="old-edge" d="M 255 58 V 244"/>
+  <path class="edge" d="M 654 58 L 300 244"/>
+  <path class="edge" d="M 734 76 V 244"/>
+
+  <g class="existing">
+    <path class="outline" d="M 92 30 H 450 V 172 H 20 V 30 H 28"/>
+    <text x="34" y="34">main.js</text>
+    <text x="34" y="52">import config from <tspan class="specifier">"./config.js"</tspan>;</text>
+    <text x="34" y="88">process.stdin.on("data", async (data) =&gt; {</text>
+    <text x="34" y="106" xml:space="preserve">  if (data.toString().trim() !== "Hi") return;</text>
+    <text x="34" y="124" xml:space="preserve">  const { greet } = await <tspan class="active">import("./formatters.js")</tspan>;</text>
+    <text x="34" y="142" xml:space="preserve">  greet("Josh", config.locale);</text>
+    <text x="34" y="160">});</text>
+
+    <path class="outline" d="M 106 244 H 300 V 314 H 20 V 244 H 28"/>
+    <text x="34" y="248">config.js</text>
+    <text x="34" y="266">export default {</text>
+    <text x="34" y="284" xml:space="preserve">  // ...</text>
+    <text x="34" y="302">};</text>
+  </g>
+
+  <path class="outline" d="M 614 30 H 1000 V 146 H 500 V 30 H 508"/>
+  <text x="514" y="34">formatters.js</text>
+  <text x="514" y="52">import config from <tspan class="specifier">"./config.js"</tspan>;</text>
+  <text x="514" y="70">import { log } from <tspan class="specifier">"./logger.js"</tspan>;</text>
+  <text x="514" y="98">export function greet(name, localeName = config.defaultLocale) {</text>
+  <text x="514" y="116" xml:space="preserve">  // ...</text>
+  <text x="514" y="134">}</text>
+
+  <path class="outline" d="M 756 244 H 940 V 324 H 670 V 244 H 678"/>
+  <text x="684" y="248">logger.js</text>
+  <text x="684" y="266">export function log(message) {</text>
+  <text x="684" y="284" xml:space="preserve">  // ...</text>
+  <text x="684" y="302">}</text>
+
+  <text class="status old-status" x="450" y="22">既存</text>
+  <text class="status old-status" x="300" y="236">再利用</text>
+  <text class="status" x="1000" y="22">新規</text>
+  <text class="status" x="940" y="236">新規</text>
+  <path class="dynamic-import" d="M 425 117 H 490 V 113 L 500 120 L 490 127 V 123 H 425"/>
+</svg>

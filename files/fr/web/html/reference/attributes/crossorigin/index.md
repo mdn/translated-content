@@ -3,7 +3,7 @@ title: "Attribut HTML : `crossorigin`"
 short-title: crossorigin
 slug: Web/HTML/Reference/Attributes/crossorigin
 l10n:
-  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
+  sourceCommit: 210eb1d964922bbae94774dc6676ce92056e0423
 ---
 
 L'attribut **`crossorigin`** est valide sur les éléments HTML {{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}} et {{HTMLElement("video")}}. Il permet de gérer le [CORS](/fr/docs/Web/HTTP/Guides/CORS), c'est-à-dire la façon dont l'élément traite les requêtes inter-origines, et donc de configurer les requêtes CORS pour les données récupérées par l'élément. Selon l'élément, l'attribut peut être un attribut de configuration CORS.
@@ -13,15 +13,13 @@ L'attribut de contenu `crossorigin` sur les éléments média est un attribut de
 Ces attributs sont {{Glossary("Enumerated", "énumérés")}} et acceptent les valeurs suivantes&nbsp;:
 
 - `anonymous`
-  - : La requête utilise les en-têtes CORS et le drapeau credentials est positionné à `'same-origin'`. Il n'y a aucun échange de **données d'identification utilisateur** via les cookies, certificats TLS côté client ou authentification HTTP, sauf si la destination est la même origine.
+  - : La requête utilise les en-têtes CORS ([`mode`](/fr/docs/Web/API/RequestInit#mode) est défini sur `cors`) et [`credentials`](/fr/docs/Web/API/RequestInit#credentials) est défini sur `'same-origin'`, ce qui signifie que les informations d'identification telles que les cookies, les certificats TLS côté client et les en-têtes d'authentification HTTP ne sont incluses que si la destination a la même origine.
 - `use-credentials`
-  - : La requête utilise les en-têtes CORS, le drapeau credentials est positionné à `'include'` et les **données d'identification utilisateur** sont toujours incluses.
+  - : La requête utilise les en-têtes CORS ([`mode`](/fr/docs/Web/API/RequestInit#mode) est défini sur `cors`) et [`credentials`](/fr/docs/Web/API/RequestInit#credentials) est défini sur `'include'`, donc les informations d'identification sont toujours incluses, même pour les requêtes inter-origines.
 - `""`
-  - : Définir l'attribut sans valeur ou avec une valeur vide, comme `crossorigin` ou `crossorigin=""`, revient à utiliser `anonymous`.
+  - : Définir le nom de l'attribut sur une valeur vide, comme `crossorigin` ou `crossorigin=""`, revient à utiliser `anonymous`. Les valeurs invalides sont également traitées comme une chaîne de caractères vide.
 
-Un mot-clé invalide ou une chaîne vide sera traité comme le mot-clé `anonymous`.
-
-Par défaut (c'est-à-dire si l'attribut n'est pas défini), CORS n'est pas utilisé. L'agent utilisateur ne demandera pas d'accès complet à la ressource et, en cas de requête inter-origine, certaines limitations s'appliqueront selon le type d'élément concerné&nbsp;:
+Par défaut (c'est-à-dire lorsque l'attribut n'est pas défini), les ressources sont généralement récupérées sans CORS, sauf pour les [scripts de module](/fr/docs/Web/HTML/Reference/Elements/script/type#module) qui utilisent toujours CORS, donc seul `crossorigin="use-credentials"` a un effet. L'agent utilisateur ne demande pas l'autorisation pour un accès complet à la ressource et, dans le cas d'une requête inter-origines, certaines limitations sont appliquées en fonction du type d'élément concerné&nbsp;:
 
 <table class="no-markdown">
   <tbody>
@@ -38,7 +36,7 @@ Par défaut (c'est-à-dire si l'attribut n'est pas défini), CORS n'est pas util
     <tr>
       <td><code>script</code></td>
       <td>
-        L'accès à la journalisation des erreurs via {{DOMxRef("Window.error_event", "window.onerror")}} sera limité.
+        L'accès à la journalisation des erreurs par {{DOMxRef("Window.error_event", "window.onerror")}} est limité.
       </td>
     </tr>
     <tr>

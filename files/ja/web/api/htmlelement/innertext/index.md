@@ -3,18 +3,19 @@ title: "HTMLElement: innerText プロパティ"
 short-title: innerText
 slug: Web/API/HTMLElement/innerText
 l10n:
-  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
+  sourceCommit: 5c513c8e3075989886ae5f3b00d92f2b2988085a
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`innerText`** は {{domxref("HTMLElement")}} のプロパティで、ノードとその子孫の「レンダリングされている」テキスト内容を示します。
+**`innerText`** は {{domxref("HTMLElement")}} のプロパティで、ノードとその子孫のレンダリングされているテキストコンテンツを示します。
 
 ゲッターとしては、カーソルで要素の内容を選択しクリップボードにコピーした際のテキストに近いものを取得することができます。
 セッターとしては、この要素の子要素を指定された値で置き換え、すべての改行を {{HTMLElement("br")}} 要素に変換します。
 
 > [!NOTE]
-> `innerText` は {{domxref("Node.textContent")}} と混同しやすいのですが、両者には重要な違いがあります。基本的に `innerText` はテキストがレンダリングされる外見を意識しますが、 `textContent` はそうではありません。
+> `innerText` は {{domxref("Node.textContent")}} と混同しやすいのですが、両者には重要な違いがあります。
+> 基本的に `innerText` はテキストがレンダリングされる外見を意識しますが、 `textContent` はそうではありません。
 
 ## 値
 
@@ -23,7 +24,7 @@ l10n:
 要素自身が[表示されないとき](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered)（例えば、文書から切り離されたり、表示から隠されたりしている場合）、返値は {{domxref("Node.textContent")}} プロパティと同じ値になります。
 
 > [!WARNING]
-> `innerText` をノードに設定すると、そのノードの _すべての_ 子ノードが取り除かれ、指定した文字列値のテキストノード 1 つに置き換えられます。
+> `innerText` をノードに設定すると、そのノードのすべての子ノードが取り除かれ、指定した文字列値のテキストノード 1 つに置き換えられます。
 
 ## 例
 
@@ -50,9 +51,9 @@ l10n:
   <span style="display:none">隠しテキスト</span>
 </p>
 <h3>textContent の結果:</h3>
-<textarea id="textContentOutput" rows="6" cols="30" readonly>…</textarea>
+<textarea id="textContentOutput" rows="18" cols="40" readonly>…</textarea>
 <h3>innerText の結果:</h3>
-<textarea id="innerTextOutput" rows="6" cols="30" readonly>…</textarea>
+<textarea id="innerTextOutput" rows="6" cols="40" readonly>…</textarea>
 ```
 
 ### JavaScript
@@ -68,7 +69,7 @@ innerTextOutput.value = source.innerText;
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 700, 450)}}
+{{EmbedLiveSample("Examples", 700, 650)}}
 
 ## 仕様書
 
@@ -80,5 +81,6 @@ innerTextOutput.value = source.innerText;
 
 ## 関連情報
 
+- {{domxref("HTMLScriptElement.innerText")}}
 - {{domxref("HTMLElement.outerText")}}
 - {{domxref("Element.innerHTML")}}

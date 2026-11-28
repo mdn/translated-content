@@ -3,7 +3,7 @@ title: "HTMLElement: style プロパティ"
 short-title: style
 slug: Web/API/HTMLElement/style
 l10n:
-  sourceCommit: 6ec00da93f656e1386f27507291bc6431540d97a
+  sourceCommit: aa95ccc2ee32f99c8fe2d7f370121a0fd4c6aaf4
 ---
 
 {{APIRef("CSSOM")}}
@@ -43,7 +43,7 @@ l10n:
 ### 基本的な使い方
 
 このコード例は、要素のインラインスタイルを読み取る方法を示しています。
-それぞれの場合、{{DOMxRef("CSSStyleDeclaration/getPropertyPriority", "getPropertyValue()")}} を使用してダッシュで区切られた名前付きのスタイルプロパティを読み取り、ドット演算子を使用してキャメルケースのプロパティを取得しています。
+それぞれの場合、{{DOMxRef("CSSStyleDeclaration/getPropertyValue", "getPropertyValue()")}} を使用してダッシュで区切られた名前付きのスタイルプロパティを読み取り、ドット演算子を使用してキャメルケースのプロパティを取得しています。
 
 #### HTML
 
@@ -156,7 +156,7 @@ function log(text) {
 }
 ```
 
-以下のコードは、`CSSStyleProperties` の反復可能なプロパティを反復処理し、その結果をログ出力します。
+以下のコードは、`CSSStyleProperties` の列挙可能なプロパティを反復処理し、その結果をログ出力します。
 
 ```js
 const element = document.getElementById("elt");
@@ -164,7 +164,7 @@ const elementStyle = element.style;
 
 // すべての要素のスタイルを、 `for...in` を使用して走査
 for (const prop in elementStyle) {
-  // プロパティが CSSStyleDeclaration インスタンスに属しているか確認する
+  // プロパティが CSSStyleProperties インスタンスに属しているか確認する
   // また、プロパティが（インラインスタイルを示す）数値インデックスであることを確認する
   if (
     Object.hasOwn(elementStyle, prop) &&

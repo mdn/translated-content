@@ -3,7 +3,7 @@ title: Intl.DurationFormat.prototype.format()
 short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/format
 l10n:
-  sourceCommit: c43e46090257fbfd33c4dd5cac0cdbd1d5d1c274
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`format()`** は {{jsxref("Intl.DurationFormat")}} インスタンスのメソッドで、この {{jsxref("Intl.DurationFormat")}} オブジェクトのロケールおよび書式設定オプションに従って経過時間を書式化します。
@@ -46,7 +46,7 @@ const duration = {
   nanoseconds: 9,
 };
 
-// オプションを指定しない場合、スタイルは既定の "short" になります。
+// オプションなしの場合、スタイルはデフォルトで "short"
 new Intl.DurationFormat("en").format(duration);
 // "1 yr, 2 mths, 3 wks, 3 days, 4 hr, 5 min, 6 sec, 7 ms, 8 μs, 9 ns"
 
@@ -76,7 +76,7 @@ new Intl.DurationFormat("fr-FR", { style: "long" }).format(duration);
 new Intl.DurationFormat("en", { style: "short" }).format(duration);
 // "1 hr, 46 min and 40 sec"
 
-// スタイルを "short" に設定し、ロケールを "pt" に設定
+// スタイルを "narrow" に設定し、ロケールを "pt" に設定
 new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
 // "1 h 46 min 40 s"
 
@@ -113,7 +113,7 @@ new Intl.DurationFormat("en", { style: "digital", fractionalDigits: 5 }).format(
 new Intl.DurationFormat("en", { style: "digital", fractionalDigits: 3 }).format(
   duration,
 );
-// "11:30:12.346"
+// "11:30:12.345"
 ```
 
 ## 仕様書

@@ -2,7 +2,7 @@
 title: getUserMedia() による写真の撮影
 slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 l10n:
-  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 {{DefaultAPISidebar("Media Capture and Streams")}}

@@ -3,7 +3,7 @@ title: Propriété CSS `rotate`
 short-title: rotate
 slug: Web/CSS/Reference/Properties/rotate
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`rotate`** vous permet de définir des transformations de rotation individuellement et indépendamment de la propriété {{CSSxRef("transform")}}. Cela correspond mieux à l'utilisation typique de l'interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformation à définir dans la propriété `transform`.
@@ -203,8 +203,8 @@ La première boîte pivote de 90 degrés sur l'axe Z au survol, la deuxième piv
 
 ## Voir aussi
 
-- La propriété {{CSSxRef('translate')}}
-- La propriété {{CSSxRef('scale')}}
-- La propriété {{CSSxRef('transform')}}
+- La propriété {{CSSxRef("translate")}}
+- La propriété {{CSSxRef("scale")}}
+- La propriété {{CSSxRef("transform")}}
 
 Note&nbsp;: `skew` n'est pas une valeur de transformation indépendante

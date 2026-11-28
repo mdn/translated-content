@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`light-dark()`** accepte deux couleurs ou deux images et retourne une couleur ou une image en fonction du schéma de couleurs actif, sans avoir besoin d'une [fonctionnalité média](/fr/docs/Web/CSS/Guides/Media_queries/Using#cibler_des_types_de_média) [`prefers-color-scheme`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme).
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`light-dark()`** accepte deux couleurs ou deux images et retourne une couleur ou une image en fonction du schéma de couleurs actif, sans avoir besoin d'une [caractéristique média](/fr/docs/Web/CSS/Guides/Media_queries/Using#cibler_des_types_de_média) [`prefers-color-scheme`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme).
 
 ## Syntaxe
 
@@ -97,11 +97,11 @@ On inclut trois sections pour cibler les couleurs claires, sombres et celles sé
 </section>
 <section class="light">
   <h2>Clair</h2>
-  <p>Cette section sera claire grâce à <code>color-scheme: light;</code>.</p>
+  <p>Cette section est claire grâce à <code>color-scheme: light;</code>.</p>
 </section>
 <section class="dark">
   <h2>Sombre</h2>
-  <p>Cette section sera sombre grâce à <code>color-scheme: dark;</code>.</p>
+  <p>Cette section est sombre grâce à <code>color-scheme: dark;</code>.</p>
 </section>
 ```
 

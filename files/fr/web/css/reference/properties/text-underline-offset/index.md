@@ -3,10 +3,12 @@ title: Propriété CSS `text-underline-offset`
 short-title: text-underline-offset
 slug: Web/CSS/Reference/Properties/text-underline-offset
 l10n:
-  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-underline-offset`** définit la distance de décalage d'une ligne de décoration de texte soulignée (appliquée à l'aide de {{CSSxRef("text-decoration")}}) par rapport à sa position originale.
+
+`text-underline-offset` ne fait pas partie de la propriété raccourcie {{CSSxRef('text-decoration')}}. Lorsqu'un élément peut avoir plusieurs lignes de `text-decoration`, `text-underline-offset` n'affecte que le soulignement, et **pas** les autres options de décoration de ligne possibles telles que `overline` ou `line-through`.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: text-underline-offset")}}
 
@@ -35,8 +37,6 @@ p {
   text-decoration-color: red;
 }
 ```
-
-`text-underline-offset` ne fait pas partie de la propriété raccourcie {{CSSxRef('text-decoration')}}. Lorsqu'un élément peut avoir plusieurs lignes de `text-decoration`, `text-underline-offset` n'affecte que le soulignement, et **pas** les autres options de décoration de ligne possibles telles que `overline` ou `line-through`.
 
 ## Syntaxe
 

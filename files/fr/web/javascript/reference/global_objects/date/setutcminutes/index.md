@@ -41,13 +41,13 @@ setUTCMinutes(minutesValue, secondsValue, msValue)
 
 ### Valeur de retour
 
-Modifie l'objet {{JSxRef("Date")}} en place et retourne son nouveau [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide). Si un paramètre vaut `NaN` (ou d'autres valeurs qui sont [contraintes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre) en `NaN`, comme `undefined`), la date est définie sur [Date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) et `NaN` est retourné.
+Modifie l'objet {{JSxRef("Date")}} en place et retourne son nouvel [horodatage (<i lang="en">timestamp</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide). Si un paramètre vaut `NaN` (ou d'autres valeurs qui sont [contraintes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre) en `NaN`, comme `undefined`), la date est définie sur [Date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide) et `NaN` est retourné.
 
 ## Description
 
 Si vous ne définissez pas les paramètres `secondsValue` et `msValue`, les valeurs retournées par les méthodes {{JSxRef("Date/getUTCSeconds", "getUTCSeconds()")}} et {{JSxRef("Date/getUTCMilliseconds", "getUTCMilliseconds()")}} sont utilisées.
 
-Si un paramètre que vous définissez est en dehors de la plage attendue, `setUTCMinutes()` tente de mettre à jour les informations de date dans l'objet {{JSxRef("Date")}} en conséquence. Par exemple, si vous utilisez 100 pour `secondsValue`, les minutes seront incrémentées de 1 (`minutesValue + 1`), et 40 sera utilisé pour les secondes.
+Si un paramètre que vous définissez est en dehors de la plage attendue, `setUTCMinutes()` tente de mettre à jour les informations de date dans l'objet {{JSxRef("Date")}} en conséquence. Par exemple, si vous utilisez 100 pour `secondsValue`, les minutes sont incrémentées de 1 (`minutesValue + 1`), et 40 est utilisé pour les secondes.
 
 ## Exemples
 

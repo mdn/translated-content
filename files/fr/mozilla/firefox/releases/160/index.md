@@ -3,7 +3,7 @@ title: Firefox 160 note de version pour les développeurs
 short-title: Firefox 160
 slug: Mozilla/Firefox/Releases/160
 l10n:
-  sourceCommit: 4bf4746470a4d0bd53e4ae7d320849d0c912bb10
+  sourceCommit: 5b678632840c829c7f0ac157372e46cfcb60bc91
 ---
 
 Cet article présente les informations concernant les changements de Firefox 160 qui concernent les développeur·euse·s.
@@ -41,9 +41,6 @@ Pas de changements notables.
   La définir sur `bytes` fait du flux de datagrammes entrants du transport, {{DOMxRef("WebTransportDatagramDuplexStream.readable", "transport.datagrams.readable")}}, un [flux d'octets lisible](/fr/docs/Web/API/Streams_API/Using_readable_byte_streams).
   Vous pouvez ensuite utiliser un {{DOMxRef("ReadableStreamBYOBReader")}} pour lire chaque datagramme dans un tampon que vous fournissez et réutilisez, au lieu de recevoir un nouveau {{JSxRef("Uint8Array")}} pour chaque datagramme.
   ([bogue Firefox 2007755 <sup>(angl.)</sup>](https://bugzil.la/2007755)).
-- Les propriétés {{DOMxRef("WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams", "anticipatedConcurrentIncomingUnidirectionalStreams")}} et {{DOMxRef("WebTransport.anticipatedConcurrentIncomingBidirectionalStreams","anticipatedConcurrentIncomingBidirectionalStreams")}} de l'interface `WebTransport` sont désormais prises en charge, ainsi que les propriétés `options` correspondantes qui peuvent être utilisées pour les définir dans le constructeur {{DOMxRef("WebTransport/WebTransport", "WebTransport()")}}.
-  Ces propriétés représentent le nombre maximum de flux unidirectionnels et bidirectionnels entrants, respectivement, que l'application s'attend à ce que le serveur ait ouverts en même temps.
-  ([bogue Firefox 2007825 <sup>(angl.)</sup>](https://bugzil.la/2007825)).
 - La [reconnaissance vocale sur l'appareil](/fr/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition) utilisant [l'API Web Speech](/fr/docs/Web/API/Web_Speech_API) est désormais disponible sur le bureau, permettant la conversion en temps réel de la parole en texte sur l'appareil dans 40 langues.
   La reconnaissance n'est pas prise en charge sur Android, et la reconnaissance distante (cloud) non plus.
   ([bogue Firefox 2080908 <sup>(angl.)</sup>](https://bugzil.la/2080908)).
@@ -52,9 +49,19 @@ Pas de changements notables.
 
 - L'évènement non standard `MozScrolledAreaChanged` n'est plus envoyé aux pages web. Il était déclenché sur le document lorsque la taille de la zone défilable de la page changeait. Il est désormais disponible uniquement pour l'interface utilisateur de Firefox. Vous pouvez restaurer l'évènement pour les pages web en définissant la préférence `layout.scrolled-area-changed.content.enabled` sur `true`. ([bogue Firefox 2079865 <sup>(angl.)</sup>](https://bugzil.la/2079865)).
 
+### Conformité WebDriver (WebDriver BiDi, Marionette)
+
+#### WebDriver BiDi
+
+- Ajout d'un CDDL lisible par machine pour toutes les extensions fournisseur Firefox WebDriver BiDi (`moz:` commandes, évènements, paramètres, capacités…). ([bogue Firefox 2057588 <sup>(angl.)</sup>](https://bugzil.la/2057588)).
+- Correction du champ `context` dans l'évènement `script.message` pour retourner un identifiant de contexte de navigation correct lors de l'envoi de l'évènement depuis un script de préchargement déclenché par `window.open`. ([bogue Firefox 2079905 <sup>(angl.)</sup>](https://bugzil.la/2079905)).
+- Correction de la gestion des en-têtes de réponse `Set-Cookie` afin que les valeurs séparées par `\n` apparaissent désormais comme des entrées individuelles au lieu d'une seule valeur fusionnée. Cela s'applique également à d'autres en-têtes «&nbsp;fusionnés par saut de ligne&nbsp;»&nbsp;: `proxy-authenticate` et `www-authenticate`. ([bogue Firefox 1940389 <sup>(angl.)</sup>](https://bugzil.la/1940389)).
+- La surveillance des évènements réseau a été mise à jour pour cesser de calculer les détails de sécurité inutilisés, ce qui peut avoir des impacts visibles sur les performances, par exemple lors du chargement d'une page. ([bogue Firefox 2075175 <sup>(angl.)</sup>](https://bugzil.la/2075175)).
+
 ## Changements pour les développeur·euse·s d'extensions
 
 - {{WebExtAPIRef("runtime.PlatformInfo")}} retourne désormais `arch` comme `arm64` pour les plateformes ARM64. Auparavant, il retournait `aarch64`. Cela aligne la valeur retournée par Firefox pour les plateformes ARM64 avec Chrome. ([bogue Firefox 2080310 <sup>(angl.)</sup>](https://bugzil.la/2080310)).
+- Ajout de la propriété `windowId` à {{WebExtAPIRef("runtime.MessageSender")}}, qui contient l'ID de la fenêtre contenant l'expéditeur. Contrairement à `tab.windowId`, elle est également définie pour les expéditeurs ne se trouvant pas dans un onglet, comme une fenêtre contextuelle ou une barre latérale. ([bogue Firefox 2072133 <sup>(angl.)</sup>](https://bugzil.la/2072133)).
 
 ## Fonctionnalités web expérimentales
 

@@ -2,7 +2,7 @@
 title: 大なり演算子 (>)
 slug: Web/JavaScript/Reference/Operators/Greater_than
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **大なり演算子 (`>`)** は、左オペランドが右オペランドより大きい場合は `true` を返し、それ以外の場合は `false` を返します。
@@ -30,9 +30,20 @@ console.log("ab" > "aa");
 x > y
 ```
 
+### 引数
+
+- `x`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 9 （関係演算子）以上の式です。その値は文字列、長整数、数値のいずれかに強制変換されます。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 10 （ビットシフト）以上の式です。その値は文字列、長整数、数値のいずれかに強制変換されます。
+
+### 返値
+
+`x` が `y` より大きい場合は `true`、それ以外の場合は `false` です。
+
 ## 解説
 
-オペランドは、[小なり](/ja/docs/Web/JavaScript/Reference/Operators/Less_than)演算子と同様のアルゴリズムを使用して比較されますが、 2 つのオペランドが逆になります。 `x > y` は一般的に `y < x` と同等ですが、`x > y` は `y` の前に `x` をプリミティブ型に強制変換するのに対し、`y < x` は `x` の前に `y` をプリミティブ型に強制変換します。変換には副作用が持つことがあるため、オペランドの順序が重要になる場合があります。
+オペランドは、[小なり](/ja/docs/Web/JavaScript/Reference/Operators/Less_than)演算子と同様のアルゴリズムを使用して比較されますが、2 つのオペランドの順序は逆になります。`x > y` は一般的に `y < x` と同等ですが、`x > y` は `y` の前に `x` をプリミティブ型に強制変換するのに対し、`y < x` は `x` の前に `y` をプリミティブ型に強制変換します。強制変換によって副作用が生じる場合があるため、オペランドの順序が重要になることがあります。
 
 ## 例
 

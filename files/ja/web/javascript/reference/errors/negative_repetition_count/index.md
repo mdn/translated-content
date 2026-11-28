@@ -1,27 +1,29 @@
 ---
 title: "RangeError: repeat count must be non-negative"
 slug: Web/JavaScript/Reference/Errors/Negative_repetition_count
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
+JavaScript の例外 "repeat count must be non-negative" は、{{jsxref("String.prototype.repeat()")}} メソッドの `count` 引数に負の数が指定された場合に発生します。
 
-JavaScript の例外 "repeat count must be non-negative" は、 {{jsxref("String.prototype.repeat()")}} メソッドに `count` 引数が指定され、その値が負の数であった場合に発生します。
+## エラーメッセージ
 
-## メッセージ
-
-```js
-RangeError: argument out of range
+```plain
+RangeError: Invalid count value: -1 (V8-based)
 RangeError: repeat count must be non-negative (Firefox)
-RangeError: Invalid count value (Chrome)
+RangeError: String.prototype.repeat argument must be greater than or equal to 0 and not be Infinity (Safari)
 ```
 
-## エラータイプ
+## エラー型
 
 {{jsxref("RangeError")}}
 
 ## エラーの原因
 
-{{jsxref("String.prototype.repeat()")}} メソッドを使用しています。 `count` 引数は、文字列の繰り返し回数を指定します。 これは 0 から正の {{jsxref("Infinity")}} 未満の値である必要があり、負の数は使用できません。 有効値の範囲は \[0, +∞) のように説明できます。
+{{jsxref("String.prototype.repeat()")}} メソッドが使用されています。`count` 引数は文字列の繰り返し回数を指定します。
+これは 0 以上で正の {{jsxref("Infinity")}} 未満の値である必要があり、負の数は使用できません。
+有効な値の範囲は \[0, +∞) と表せます。
 
 ## 例
 

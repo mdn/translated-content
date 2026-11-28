@@ -3,7 +3,7 @@ title: "Document: pointerlockchange イベント"
 short-title: pointerlockchange
 slug: Web/API/Document/pointerlockchange_event
 l10n:
-  sourceCommit: c99ff93a1b71e7d664509fdd3e0c168920be967a
+  sourceCommit: 1c322acc575d927494ecff49c04159ba34aec781
 ---
 
 {{APIRef("Pointer Lock API")}}
@@ -16,12 +16,16 @@ l10n:
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラーのプロパティを設定するかしてください。
+このイベント名を {{domxref("EventTarget/addEventListener", "addEventListener()")}} で使用します。
 
-```js
-addEventListener("pointerlockchange", (event) => {});
+```js-nolint
+addEventListener("pointerlockchange", (event) => { })
+```
 
-onpointerlockchange = (event) => {};
+または、このインターフェイスの[イベントハンドラープロパティ](/ja/docs/Web/API/Document_Object_Model/Events#イベントハンドラープロパティの使用)に代入します。
+
+```js-nolint
+onpointerlockchange = (event) => { }
 ```
 
 ## イベント型
@@ -33,23 +37,23 @@ onpointerlockchange = (event) => {};
 `addEventListener()` を使用した場合
 
 ```js
-addEventListener("pointerlockchange", (event) => {
+document.addEventListener("pointerlockchange", (event) => {
   if (document.pointerLockElement)
-    console.log("The pointer is locked to: ", document.pointerLockElement);
+    console.log("ポインターのロック先: ", document.pointerLockElement);
   else {
-    console.log("The pointer is not locked");
+    console.log("ポインターはロックされていません");
   }
 });
 ```
 
-`onpointerlockchange` イベントハンドラープロパティを使用した場合
+`onpointerlockchange` イベントハンドラープロパティを使用した場合（ただし、これにより、すでに `onpointerlockchange` を使用して追加されたほかのイベントリスナーが置換されます）。
 
 ```js
 document.onpointerlockchange = (event) => {
   if (document.pointerLockElement)
-    console.log("The pointer is locked to: ", document.pointerLockElement);
+    console.log("ポインターのロック先: ", document.pointerLockElement);
   else {
-    console.log("The pointer is not locked");
+    console.log("ポインターはロックされていません");
   }
 };
 ```

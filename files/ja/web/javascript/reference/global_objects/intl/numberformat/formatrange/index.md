@@ -3,7 +3,7 @@ title: Intl.NumberFormat.prototype.formatRange()
 short-title: formatRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`formatRange()`** は {{jsxref("Intl.NumberFormat")}} インスタンスのメソッドで、この `Intl.NumberFormat` オブジェクトのロケールおよび書式設定オプションに従って、数値の範囲を書式化します。
@@ -17,7 +17,7 @@ formatRange(startRange, endRange)
 ### 引数
 
 - `startRange`
-  - : 書式化する数値 ({{jsxref("Number")}})、長整数 ({{jsxref("BigInt")}})、文字列のいずれかです。文字列は、[数値への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)と同じ方法で解釈されますが、`formatRange()` は、文字列が表す正確な値を使用し、暗黙的に数値に変換する際に精度が失われることを避けます。
+  - : 書式化する数値 ({{jsxref("Number")}})、長整数 ({{jsxref("BigInt")}})、文字列のいずれかです。文字列は、[数値への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)と同じ方法で解釈されますが、`formatRange()` は、文字列が表す正確な値を使用し、暗黙的に数値へ強制変換する際に精度が失われることを避けます。
 - `endRange`
   - : 書式化する数値 ({{jsxref("Number")}})、長整数 ({{jsxref("BigInt")}})、文字列のいずれかです。
 
@@ -28,19 +28,19 @@ formatRange(startRange, endRange)
 ### 例外
 
 - {{jsxref("RangeError")}}
-  - : `startRange` または `endRange` が `NaN` または変換不可能な文字列の場合に発生します。
+  - : `startRange` または `endRange` が `NaN` または数値に強制変換できない文字列の場合に発生します。
 - {{jsxref("TypeError")}}
   - : `startRange` または `endRange` のいずれかが undefined の場合に発生します。
 
 ## 解説
 
-`formatRange` ゲッター関数は、呼び出された {{jsxref("Intl.NumberFormat")}} オブジェクトのロケールおよび書式化オプションに従って、数値の範囲を文字列に書式化します。
+`formatRange` メソッドは、呼び出された {{jsxref("Intl.NumberFormat")}} オブジェクトのロケールおよび書式化オプションに従って、数値の範囲を文字列に書式化します。
 
 ## 例
 
 ### formatRange の使用
 
-通貨値の範囲を書式化するには、`formatRange` ゲッター関数を使用します。
+通貨値の範囲を書式化するには、`formatRange` メソッドを使用します。
 
 ```js
 const nf = new Intl.NumberFormat("en-US", {

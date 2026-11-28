@@ -3,7 +3,7 @@ title: Propriété CSS `word-spacing`
 short-title: word-spacing
 slug: Web/CSS/Reference/Properties/word-spacing
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: c4e64810ce10fb5cb1eebfcd8b6f526866fd0982
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`word-spacing`** définit la règle d'espacement utilisée entre les balises et entre les mots.
@@ -43,7 +43,7 @@ word-spacing: -0.4ch;
 
 ```css interactive-example
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2");
   font-family: "Amstelvar";
   font-style: normal;
 }
@@ -100,7 +100,7 @@ La bonne valeur à utiliser pour `word-spacing` doit être déterminée au cas p
 
 {{CSSSyntax}}
 
-## Exemple
+## Exemples
 
 ### Utilisation simple
 

@@ -3,7 +3,7 @@ title: "data: URL"
 short-title: "data:"
 slug: Web/URI/Reference/Schemes/data
 l10n:
-  sourceCommit: 466ca1db767535c1aa9984b4e6c0db41b3a53475
+  sourceCommit: c8b64fbd9beeee79caa5e3f0e8a47f02033e7c0d
 ---
 
 **data URL** は `data:` スキームが先頭についた URL で、小さなファイルをインラインで文書に埋め込むことができます。以前、 WHATWG で取り下げられるまでは "data URIs" と呼ばれていました。
@@ -30,6 +30,8 @@ data:[<media-type>][;base64],<data>
 
 - `data:,Hello%2C%20World%21`
   - : text/plain データで `Hello, World!` です。なお、カンマは{{Glossary("Percent-encoding", "パーセントエンコード")}}で `%2C`となり、空白は `%20` となります。
+- `data:text/plain,Hello%2C%20%57%6F%72%6C%64%21`
+  - : text/plain データで `Hello, World!` です。`World` の文字だけでなく、カンマと空白もパーセントエンコードされています。パーセントエンコードが不要な場合でも、任意の文字をパーセントエンコードできます。{{jsxref("decodeURIComponent()")}} を使用すると、エンコードされたすべての文字をデコードできます。
 - `data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==`
   - : 同じ内容の base64 エンコード版
 - `data:text/html,%3Ch1%3EHello%2C%20World%21%3C%2Fh1%3E`
@@ -82,14 +84,14 @@ bash$ echo -n hello | base64
 この章では `data` の URL を作ったり使ったりするときに、よく起こる問題について述べます。
 
 ```plain
-data:text/html,lots of text…<p><a name%3D"bottom">bottom</a>?arg=val</p>
+data:text/html,lots of text…<p><span class%3D"bottom">bottom</span>?arg=val</p>
 ```
 
 これは次の内容の HTML リソースを表します。
 
 ```html
 lots of text…
-<p><a name="bottom">bottom</a>?arg=val</p>
+<p><span class="bottom">bottom</span>?arg=val</p>
 ```
 
 - 構文

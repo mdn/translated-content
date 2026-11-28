@@ -3,7 +3,7 @@ title: Propriété CSS `print-color-adjust`
 short-title: print-color-adjust
 slug: Web/CSS/Reference/Properties/print-color-adjust
 l10n:
-  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
+  sourceCommit: 7484d45816002fbf082a59c5d95c38a1eb2b2e4b
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`print-color-adjust`** définit ce que {{Glossary("user agent", "l'agent utilisateur")}} peut éventuellement faire pour optimiser l'apparence de l'élément sur l'appareil de sortie.
@@ -61,6 +61,14 @@ Les options de configuration fournies par l'agent utilisateur ont la priorité s
 
 Dans cet exemple, on a une boîte qui utilise {{CSSxRef("background-image")}} avec {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}} pour avoir un dégradé bleu foncé sur un fond noir. Le texte par-dessus est écrit en rouge. Pour cet exemple, on estime que c'est l'apparence voulue dans chaque environnement de rendu, y compris sur le papier et on utilise donc `print-color-adjust: exact` pour indiquer au navigateur de ne pas effectuer d'ajustements sur la boîte lors du rendu.
 
+#### HTML
+
+```html
+<div class="ma-boite">
+  <p>Il faut plus de contraste&nbsp;!</p>
+</div>
+```
+
 #### CSS
 
 ```css
@@ -79,14 +87,6 @@ Dans cet exemple, on a une boîte qui utilise {{CSSxRef("background-image")}} av
   justify-content: center;
   print-color-adjust: exact;
 }
-```
-
-#### HTML
-
-```html
-<div class="ma-boite">
-  <p>Il faut plus de contraste&nbsp;!</p>
-</div>
 ```
 
 #### Résultat

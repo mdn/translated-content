@@ -1,9 +1,9 @@
 ---
-title: MathML の作成
-short-title: 作成
+title: MathML の記述
+short-title: 記述
 slug: Web/MathML/Guides/Authoring
 l10n:
-  sourceCommit: f08990ec1e823fbe54fed15f859d43405e978fd7
+  sourceCommit: 47b1321d6cac5c7093583162c4cf73e015cc4905
 ---
 
 このページでは、タグと属性をテキスト形式で記述する MathML 言語を使って数学を記述する方法を説明します。 HTML や SVG と同様に、このテキストは複雑なコンテンツではとても冗長になるため、[軽量マークアップ言語](https://ja.wikipedia.org/wiki/軽量マークアップ言語)からのコンバーターや [WYSIWYG](https://ja.wikipedia.org/wiki/WYSIWYG) 数式エディターなどの[適切な作成ツール](https://www.w3.org/wiki/Math_Tools#Authoring_tools)が必要です。そのようなツールは数多く利用できるので、網羅的なリストを提供することは不可能です。代わりに、この記事では一般的な手法と例に焦点を当てます。
@@ -14,7 +14,7 @@ MathML の数式が作成ツールで生成されるとしても、文書内の�
 
 ### HTML ページ中の MathML
 
-それぞれの MathML 数式はルート [`math`](/ja/docs/Web/MathML/Reference/Element/math) 要素で表され、HTML ページに直接埋め込むことができます。既定では、数式はインラインで表示され、高さが最小になるように調整されます。 `display="block"` 属性を使用すると、複雑な数式を普通に、自分自身で段落を作って表示することができます。
+それぞれの MathML 数式はルート [`math`](/ja/docs/Web/MathML/Reference/Element/math) 要素で表され、HTML ページに直接埋め込むことができます。デフォルトでは、数式はインラインで表示され、高さが最小になるように調整されます。 `display="block"` 属性を使用すると、複雑な数式を普通に、自分自身で段落を作って表示することができます。
 
 ```html
 <!doctype html>
@@ -57,36 +57,14 @@ MathML の数式が作成ツールで生成されるとしても、文書内の�
 > XML 文書（XHTML、EPUB、OpenDocumentなど）の中で MathML を使用するには、それぞれの `<math>` 要素に明示的に `xmlns="http://www.w3.org/1998/Math/MathML"` 属性を配置してください。
 
 > [!NOTE]
-> 電子メールやインスタントメッセージクライアントの中には、 HTML 形式でメッセージを送受信できるものがあります。そのため、 MathML タグがマークアップサニタイザーによってフィルタリングされない限り、そのようなメッセージの中に数式を埋め込むことは使用可能です。
-
-#### MathML に対応していないブラウザー向けの代替策
-
-MathML に対応していないブラウザーに対しては、代替機構を提供することが推奨されます。もし文書が基本的な数式しか持たないのであれば、小さな [mathml.css](https://github.com/fred-wang/mathml.css) スタイルシートで十分かもしれません。条件付きで読み込むには、文書内のヘッダーに 1 行挿入するだけです。
-
-```html
-<script src="https://fred-wang.github.io/mathml.css/mspace.js"></script>
-```
-
-ただ、もっと高度な表現も使いたいという場合にはもう少し大きい [MathJax](https://www.mathjax.org/) ライブラリーを用いると良いでしょう。
-
-```html
-<script src="https://fred-wang.github.io/mathjax.js/mpadded-min.js"></script>
-```
-
-また、 MathML に対応していないブラウザーに対しては、ページの上部に警告を表示し、上記の代替案のいずれかをユーザーに選ばせることもできます。
-
-```html
-<script src="https://fred-wang.github.io/mathml-warning.js/mpadded-min.js"></script>
-```
-
-> [!NOTE]
-> これらの小さなスクリプトは、機能検出（[mspace](/ja/docs/Web/MathML/Reference/Element/mspace) または [mpadded](/ja/docs/Web/MathML/Reference/Element/mpadded) 要素の機能検出）を行います。これは、[ブラウザの検出](/ja/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent) よりも推奨されています。また、これらはオープンソースライセンスで配布されていますので、ご自身のサーバーにコピーして、必要に応じて自由に改変してください。
+> 電子メールやインスタントメッセージクライアントの中には、HTML 形式でメッセージを送受信できるものがあります。そのため、マークアップの無害化処理によって MathML タグが除去されない限り、そのようなメッセージに数式を埋め込むことができます。
 
 #### 数学記号用のフォント
 
 [MathML フォント](/ja/docs/Web/MathML/Guides/Fonts)の記事で説明したように、数学フォントは MathML コンテンツをレンダリングするのに役立ちます。そのため、[そのようなフォントのインストール手順](/ja/docs/Web/MathML/Guides/Fonts#インストール手順)を共有したり、[ウェブフォント](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)として指定されたフォントを提供することは常によい考えです。
 
-[MathFonts ページ](https://fred-wang.github.io/MathFonts/)は、そのようなウェブフォントを適切なスタイルシートとともに提供しています。例えば、以下の行を文書内のヘッダーに挿入するだけで、フォールバックのウェブフォントとともに現代の欧文フォントを選択することができます。
+[MathFonts ページ](https://fred-wang.github.io/MathFonts/)は、そのようなウェブフォントを適切なスタイルシートとともに提供しています。
+例えば、以下の行を文書内のヘッダーに挿入するだけで、代替ウェブフォントとともに現代の欧文フォントを選択できます。
 
 ```html
 <link
@@ -100,6 +78,15 @@ MathML に対応していないブラウザーに対しては、代替機構を�
 <link
   rel="stylesheet"
   href="https://fred-wang.github.io/MathFonts/STIX/mathfonts.css" />
+```
+
+右書きでレンダリングする必要がある数式には、[XITS フォント](https://fred-wang.github.io/MathFonts/XITS/mathfonts.css)が推奨されます。
+詳しくは、[`dir`](/ja/docs/Web/MathML/Reference/Global_attributes/dir) グローバル属性を参照してください。
+
+```html
+<link
+  rel="stylesheet"
+  href="https://fred-wang.github.io/MathFonts/XITS/mathfonts.css" />
 ```
 
 > [!NOTE]
@@ -227,13 +214,6 @@ latexmlc --dest foo.html foo.tex # HTML 文書 foo.html を生成
 latexmlc --dest foo.epub foo.tex # EPUB 文書 foo.epub を生成
 ```
 
-`latexmlc` は `--javascript` 引数を受け付けます。この引数を使用することで、上記の[代替スクリプト](#mathml_に対応していないブラウザー向けの代替策)のいずれかを含めることができます。
-
-```bash
-latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathml.css/mspace.js foo.tex  # Add the CSS fallback
-latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Add the MathJax fallback
-```
-
 > [!NOTE]
 > コマンドラインツールはサーバー側で使用することができます。例えば、 [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) は [Mathoid](https://github.com/wikimedia/mediawiki-services-mathoid) を介して LaTeX から MathML への変換を行います。
 
@@ -266,7 +246,7 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpa
 ![TeXmacs example](texmacs.png)
 
 > [!NOTE]
-> 既定では、 Lyx と TeXmacs は HTML 出力に数式の画像を使用します。その代わりに MathML を選択するには、前者では[こちらの指示に従ってください](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx)。後者では`ユーザー設定 > 変換 > 数式を MathML としてエクスポート`を選択してください。
+> デフォルトでは、Lyx と TeXmacs は HTML 出力に数式の画像を使用します。その代わりに MathML を選択するには、前者では[こちらの指示に従ってください](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx)。後者では`ユーザー設定 > 変換 > 数式を MathML としてエクスポート`を選択してください。
 
 ## 光学文字認識・手書き文字認識
 

@@ -3,7 +3,7 @@ title: "`content` プロパティ"
 short-title: content
 slug: Web/CSS/Reference/Properties/content
 l10n:
-  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
+  sourceCommit: c4e64810ce10fb5cb1eebfcd8b6f526866fd0982
 ---
 
 **`content`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ある要素を生成された値で置き換えます。これは、要素または擬似要素の内部でレンダリングされるものを定義するために使用することができます。要素の場合、 `content` プロパティは、要素が通常通りレンダリングされるか（`normal` または `none`）、画像（および関連付けられた "alt" テキスト）に置き換えられるかを指定します。擬似要素とマージンボックスの場合、 `content` は、コンテンツを画像、テキスト、その両方、またはなしとして定義し、要素が全体的にレンダリングされるかどうかを決定します。
@@ -135,14 +135,6 @@ content: unset;
 - 代替テキスト: `/ <string> | <counter> | attr()`
   - : 画像や `<content-list>` アイテムには、スラッシュの後に文字列、カウンター、`attr()` 関数の組み合わせを追加することで代替テキストが指定できます。代替テキストは、スクリーンリーダーによる音声出力に意図通りに機能しますが、一部のブラウザーでも表示される場合があります。
 
-## 公式定義
-
-{{cssinfo}}
-
-## 形式文法
-
-{{csssyntax}}
-
 ## アクセシビリティ
 
 CSS の生成コンテンツは、 [DOM](/ja/docs/Web/API/Document_Object_Model) には含まれません。そのため、これは[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#アクセシビリティの_api_群)では表現されず、支援技術とブラウザーの組み合わせによってはアナウンスされないことがあります。そのコンテンツがページの目的を理解する上で重要な情報を含んでいるのであれば、メイン文書に含めたほうが適切です。
@@ -153,6 +145,14 @@ CSS の生成コンテンツは、 [DOM](/ja/docs/Web/API/Document_Object_Model)
 - [WCAG の解説、ガイドライン 1.3 – MDN](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 - [Failure of Success Criterion 1.3.1: inserting non-decorative generated content](https://www.w3.org/TR/WCAG20-TECHS/F87) Techniques for WCAG 2.0
+
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
+
+{{csssyntax}}
 
 ## 例
 

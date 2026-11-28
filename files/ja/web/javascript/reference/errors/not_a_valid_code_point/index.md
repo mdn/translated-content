@@ -1,28 +1,29 @@
 ---
 title: "RangeError: argument is not a valid code point"
 slug: Web/JavaScript/Reference/Errors/Not_a_valid_code_point
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
-
-JavaScript の例外 "Invalid code point" は、 {{jsxref("NaN")}} 値、負の整数 (-1)、 整数以外 (5.4)、 0x10FFFF より大きい数 (1114111) が {{jsxref("String.fromCodePoint()")}} で使用された場合に発生します。
+JavaScript の例外 "Invalid code point" は、{{jsxref("NaN")}} の値、負の整数 (-1)、整数でない値 (5.4)、または 0x10FFFF (1114111) より大きい値が {{jsxref("String.fromCodePoint()")}} で使用された場合に発生します。
 
 ## メッセージ
 
-```js
-RangeError: {0} is not a valid code point (Firefox)
-RangeError: Invalid code point {0} (Chromium)
+```plain
+RangeError: Invalid code point -1 (V8-based)
+RangeError: -1 is not a valid code point (Firefox)
+RangeError: Arguments contain a value that is out of range of code points (Safari)
 ```
 
-## エラーの種類
+## エラー型
 
 {{jsxref("RangeError")}}
 
 ## エラーの原因
 
-{{jsxref("String.fromCodePoint()")}} は、 {{jsxref("NaN")}} 値、負の整数 (-1)、 整数以外 (5.4)、 0x10FFFF より大きい数 (1114111) が渡されるとこのエラーを発生します。
+{{jsxref("String.fromCodePoint()")}} は、{{jsxref("NaN")}} の値、負の整数 (-1)、整数でない値 (5.4)、または 0x10FFFF (1114111) より大きい値が渡されたときに、このエラーを発生させます。
 
-[コードポイント](https://ja.wikipedia.org/wiki/%E7%AC%A6%E5%8F%B7%E7%82%B9)は、 Unicode 文字集合の値です。これは整数 `0` から `0x10FFFF` までの範囲です。
+[コードポイント](https://ja.wikipedia.org/wiki/%E7%AC%A6%E5%8F%B7%E7%82%B9)は、Unicode の符号空間における値で、整数 `0` から `0x10FFFF` までの範囲をとります。
 
 ## 例
 
@@ -37,15 +38,15 @@ String.fromCodePoint(3e-2); // RangeError
 String.fromCodePoint(NaN); // RangeError
 ```
 
-### 有効な場合
+### 有効なケース
 
 ```js example-good
 String.fromCodePoint(42); // "*"
 String.fromCodePoint(65, 90); // "AZ"
-String.fromCodePoint(0x404); // "\u0404"
-String.fromCodePoint(0x2f804); // "\uD87E\uDC04"
-String.fromCodePoint(194564); // "\uD87E\uDC04"
-String.fromCodePoint(0x1d306, 0x61, 0x1d307); // "\uD834\uDF06a\uD834\uDF07"
+String.fromCodePoint(0x404); // 'Є' (U+0404)
+String.fromCodePoint(0x2f804); // '你' (U+2F804)
+String.fromCodePoint(194564); // '你'
+String.fromCodePoint(0x1d306, 0x61, 0x1d307); // '𝌆a𝌇'
 ```
 
 ## 関連情報

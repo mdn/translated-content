@@ -1,17 +1,12 @@
 ---
-title: position-try-fallbacks
+title: "`position-try-fallbacks` プロパティ"
+short-title: position-try-fallbacks
 slug: Web/CSS/Reference/Properties/position-try-fallbacks
 l10n:
-  sourceCommit: 3e0ba995376cace7f08f0771635f86f0fb1753b3
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 **`position-try-fallbacks`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アンカー位置指定された要素が、関連付けられたアンカー要素に対して配置される際の、1 つ以上の**位置指定代替オプション**のリストを指定することができます。要素がインセット修正済み包含ブロックからオーバーフローする可能性がある場合、ブラウザーは指定された順序でこれらの異なる代替配置位置を試行し、要素がコンテナーまたはビューポートからオーバーフローしなくなる値を探すまで配置を試みます。
-
-> [!NOTE]
-> {{cssxref("position-try")}} 一括指定プロパティを使用すると、{{cssxref("position-try-order")}} と `position-try-fallbacks` の値を単一の宣言で指定することができます。
-
-> [!NOTE]
-> このプロパティは当初、Chromium ブラウザーで `position-try-options` という名前で対応しており、同じプロパティ値を指定できました。`position-try-fallbacks` が対応されるまでは、代わりに {{cssxref("position-try")}} の一括指定を使用してください。
 
 ## 構文
 
@@ -53,6 +48,8 @@ position-try-fallbacks: unset;
 
 ### 値
 
+このプロパティはキーワード `none`、または以下の値をカンマ区切りにしたリストとして指定します。
+
 - `none`
   - : デフォルト値です。位置試行代替オプションは設定されません。
 - `<try-tactic>`
@@ -68,9 +65,6 @@ position-try-fallbacks: unset;
 - {{cssxref("dashed-ident")}}
   - : 代替オプションリストにカスタムオプション {{cssxref("@position-try")}} を追加します。このオプションの識別名は指定された `dashed-ident` と一致します。その名前を持つカスタム位置オプションが存在しない場合、このオプションは無視されます。
 
-> [!NOTE]
-> 複数のオプションを指定できます。オプションはカンマで区切ります。
-
 ## 解説
 
 アンカー位置指定された要素は、可能な限り、アンカーの位置に関わらず、常にユーザーが操作しやすい場所に表示すべきです。配置された要素がビューポートからはみ出さないようにするには、アンカーが親要素やビューポートの端に近づいた際に、その位置を変更する必要が生じることがよくあります。
@@ -81,6 +75,8 @@ position-try-fallbacks: unset;
 
 > [!NOTE]
 > 場合によっては、位置指定要素が画面からはみ出した部分を単に非表示にしたいこともあるでしょう。これは {{cssxref("position-visibility")}} プロパティを使用して実現できます。ただし、ほとんどの場合、それらを画面に表示したまま使用可能にしておく方が望ましいでしょう。
+
+`position-try-fallbacks` プロパティは、{{cssxref("position-try-order")}} プロパティとともに、{{cssxref("position-try")}} 一括指定を使用して設定することもできます。
 
 アンカー機能の詳細や位置指定の代替手法については、[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュールおよび[オーバーフロー時の代替オプションと条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)ガイドを参照してください。
 
@@ -191,7 +187,7 @@ body {
 
 これは次のような結果になります。
 
-{{ EmbedLiveSample("Predefined try options", "100%", "250") }}
+{{ EmbedLiveSample("basic_usage", "100%", "250") }}
 
 アンカーが端に近づくようにスクロールしてみてください。
 

@@ -74,9 +74,9 @@ console.log(1000000000000000100 === 1000000000000000128); // true
 
 一方、{{jsxref("Number.prototype.toFixed()")}} および {{jsxref("Number.prototype.toPrecision()")}} を使用すると、精度を指定でき、 `toString()` よりも正確な結果を得ることができます。
 
-この `toString()` メソッドは、`this` 値が数値プリミティブまたは `Number` ラッパーオブジェクトである必要があります。他の `this` 値に対しては、数値に変換しようとせずに {{jsxref("TypeError")}} を発生させます。
+この `toString()` メソッドは、`this` 値が数値プリミティブまたは `Number` ラッパーオブジェクトである必要があります。他の `this` 値に対しては、数値に強制変換しようとせずに {{jsxref("TypeError")}} を発生させます。
 
-`Number` には [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) メソッドがないので、 `Number` _オブジェクト_ が[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals) などのように文字列を期待するコンテキストで用いられるとき、 JavaScript は `toString()` メソッドを自動的に呼び出します。しかし、数値プリミティブは `toString()` メソッドを参照して[文字列へ変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)するのではなく、初期の `toString()` 実装と同じアルゴリズムを使用して直接変換される。
+`Number` には [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) メソッドがないので、 `Number` _オブジェクト_ が[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals) などのように文字列を期待するコンテキストで用いられるとき、 JavaScript は `toString()` メソッドを自動的に呼び出します。しかし、数値プリミティブは `toString()` メソッドを参照して文字列に[強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)するのではなく、初期の `toString()` 実装と同じアルゴリズムを使用して直接強制変換される。
 
 ```js
 Number.prototype.toString = () => "Overridden";

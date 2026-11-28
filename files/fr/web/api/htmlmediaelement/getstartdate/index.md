@@ -32,7 +32,7 @@ En interne, chaque élément multimédia suit une date de début, qui commence c
 
 Pour les médias qui définissent une heure et une date de début (par exemple, une diffusion télévisée en direct diffusée sur le web), `getStartDate()` retourne un objet `Date` correspondant à l'heure réelle à laquelle le média commence. Cela permet aux contrôles du lecteur multimédia d'afficher des heures absolues (comme «&nbsp;14:30&nbsp;») plutôt que des heures relatives au début de la lecture (comme «&nbsp;3 heures, 12 minutes&nbsp;»).
 
-L'objet `Date` retourné aura une valeur temporelle de `NaN` (ce qui en fait une [date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide)) dans l'un des cas suivants&nbsp;:
+L'objet `Date` retourné aura une valeur temporelle de `NaN` (ce qui en fait une [date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide)) dans l'un des cas suivants&nbsp;:
 
 - Aucune donnée n'a encore été chargée ({{DOMxRef("HTMLMediaElement.readyState", "readyState")}} est `HAVE_NOTHING`), donc la date de début n'a pas été définie.
 - Le format du média n'inclut pas d'informations de date et d'heure.

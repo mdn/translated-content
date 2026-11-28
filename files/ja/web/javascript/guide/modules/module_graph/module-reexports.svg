@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 256" role="img" aria-labelledby="title description">
+  <title id="title">再エクスポートを介して元のバインディングに接続する</title>
+  <desc id="description">a.js は b.js から x をインポートします。b.js は c.js から x をインポートし、それを記録してエクスポートします。c.js は x が宣言されている d.js から x を再エクスポートします。実線の矢印は、a.js から b.js、c.js、d.js へと続く依存関係チェーンに沿ってモジュール指定子をたどります。a.js と b.js でインポートされた x 識別子から伸びる破線の矢印は、d.js にある元の x 宣言を直接指します。c.js にはローカルな x バインディングも、外向きのバインディング矢印もありません。</desc>
+  <style>
+    text { fill: #6b7280; font-family: Menlo, Consolas, monospace; font-size: 12px; }
+    .identifier { fill: #08827e; font-weight: bold; }
+    .outline { fill: none; stroke: #808080; stroke-width: 1; }
+    .binding { fill: none; stroke: #808080; stroke-width: 1; stroke-dasharray: 4 3; marker-end: url(#arrow); }
+    .dependency { fill: none; stroke: #808080; stroke-width: 1; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#808080"/>
+    </marker>
+  </defs>
+
+  <path class="dependency" d="M 193 58 V 126"/>
+  <path class="dependency" d="M 236 144 H 340"/>
+  <path class="dependency" d="M 513 136 V 64"/>
+
+  <path class="binding" d="M 102 40 V 14 H 452 V 40"/>
+  <path class="binding" d="M 102 136 V 106 H 452 V 58"/>
+
+  <path class="outline" d="M 70 30 H 250 V 88 H 20 V 30 H 28"/>
+  <text x="34" y="34">a.js</text>
+  <text x="34" y="52">import { <tspan class="identifier">x</tspan> } from "./b.js";</text>
+  <text x="34" y="76">console.log(<tspan class="identifier">x</tspan>);</text>
+
+  <path class="outline" d="M 390 30 H 570 V 64 H 340 V 30 H 348"/>
+  <text x="354" y="34">d.js</text>
+  <text x="354" y="52">export const <tspan class="identifier">x</tspan> = 1;</text>
+
+  <path class="outline" d="M 70 126 H 250 V 208 H 20 V 126 H 28"/>
+  <text x="34" y="130">b.js</text>
+  <text x="34" y="148">import { <tspan class="identifier">x</tspan> } from "./c.js";</text>
+  <text x="34" y="172">console.log(<tspan class="identifier">x</tspan>);</text>
+  <text x="34" y="196">export { <tspan class="identifier">x</tspan> };</text>
+
+  <path class="outline" d="M 390 126 H 570 V 160 H 340 V 126 H 348"/>
+  <text x="354" y="130">c.js</text>
+  <text x="354" y="148">export { <tspan class="identifier">x</tspan> } from "./d.js";</text>
+
+  <path class="dependency" d="M 20 238 H 56"/>
+  <text x="66" y="242">モジュールの依存関係</text>
+  <path class="binding" d="M 270 238 H 306"/>
+  <text x="316" y="242">バインドの接続</text>
+</svg>

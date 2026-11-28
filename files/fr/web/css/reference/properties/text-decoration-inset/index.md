@@ -3,10 +3,8 @@ title: Propriété CSS `text-decoration-inset`
 short-title: text-decoration-inset
 slug: Web/CSS/Reference/Properties/text-decoration-inset
 l10n:
-  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
+  sourceCommit: 85577061e99da7082b48263fa19f9b1ef4187eda
 ---
-
-{{SeeCompatTable}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-decoration-inset`** permet d'ajuster les points de départ et de fin de la décoration de texte d'un élément afin qu'elle puisse être raccourcie, allongée ou déplacée par rapport au texte rendu.
 
@@ -54,11 +52,13 @@ text-decoration-inset: auto;
 /* Une valeur de type <length> */
 text-decoration-inset: 20px;
 text-decoration-inset: -2rem;
+text-decoration-inset: 5%;
 
 /* Deux valeurs de type <length> */
 text-decoration-inset: 20px 1em;
 text-decoration-inset: -0.5rem -1.5rem;
 text-decoration-inset: -2ex 1vw;
+text-decoration-inset: -5% -5%;
 
 /* Valeurs globales */
 text-decoration-inset: inherit;
@@ -70,10 +70,10 @@ text-decoration-inset: unset;
 
 ### Valeurs
 
-Une ou deux valeurs {{CSSxRef("&lt;length&gt;")}}, ou le mot-clé `auto`.
+Cette propriété est définie comme une ou deux des valeurs suivantes ou le mot-clé `auto`&nbsp;:
 
-- {{CSSxRef("&lt;length&gt;")}}
-  - : Définit la quantité de décalage de la décoration de texte. Les valeurs positives insèrent la décoration de texte (la rendent plus courte) tandis que les valeurs négatives la font ressortir (la rendent plus longue). Si une seule valeur est définie, elle s'applique aux points de départ et de fin de la décoration de texte. Si deux valeurs sont définies, la première s'applique au point de départ de la décoration de texte et la seconde au point de fin.
+- {{CSSxRef("&lt;length-percentage&gt;")}}
+  - : Définit la quantité de décalage de la décoration de texte. Les valeurs positives insèrent la décoration de texte (la rendent plus courte) tandis que les valeurs négatives la font ressortir (la rendent plus longue). Si une seule valeur est définie, elle s'applique aux points de départ et de fin de la décoration de texte. Si deux valeurs sont définies, la première s'applique au point de départ de la décoration de texte et la seconde au point de fin. Les valeurs en pourcentage se réfèrent soit à la taille en incise totale de la {{Glossary("decorating box", "boîte décorative")}} si {{CSSxRef("box-decoration-break")}} est définie sur {{CSSxRef("box-decoration-break#slice", "slice")}}, soit à la taille en incise de chaque {{Glossary("box fragment", "fragment de boîte")}} individuel, si elle est définie sur {{CSSxRef("box-decoration-break#clone", "clone")}}.
 - `auto`
   - : Le navigateur choisit une quantité de décalage pour le début et la fin afin de s'assurer que, si deux boîtes de texte décorées apparaissent côte à côte, un espace est créé entre leurs décorations de texte afin qu'elles ne semblent pas avoir une seule décoration de texte.
 
@@ -83,7 +83,10 @@ Par défaut, la décoration de texte d'un élément, telle que définie par la p
 
 La propriété `text-decoration-inset` permet d'ajuster les points de début et/ou de fin de la décoration de texte d'un conteneur de texte. C'est utile pour créer des effets où vous souhaitez que la décoration de texte soit en retrait ou en saillie par rapport au texte lui-même, ou décalée en position. Voir [Cas d'utilisation simple](#cas_dutilisation_simple) pour un exemple de chaque.
 
-Une seule valeur `<length>` définit le retrait (si positif) ou la saillie (si négatif) aux positions de début et de fin de la décoration de texte. Pour définir séparément les positions de début et de fin, vous pouvez utiliser deux valeurs `<length>` — la première s'applique à la position de début de la décoration de texte et la seconde à la fin.
+Une seule valeur `<length-percentage>` définit le retrait (si positif) ou la saillie (si négatif) aux positions de début et de fin de la décoration de texte. Pour définir séparément les positions de début et de fin, vous pouvez utiliser deux valeurs `<length-percentage>` — la première s'applique à la position de début de la décoration de texte et la seconde à la fin.
+
+> [!NOTE]
+> Une valeur en pourcentage dépend de la valeur de {{CSSxRef("box-decoration-break")}}, si elle est définie sur `slice` (la valeur initiale) elle se réfère à la taille en incise de la boîte décorative ou si elle est définie sur `clone` elle se réfère à chaque fragment de boîte individuel.
 
 La propriété `text-decoration-inset` peut aussi prendre le mot-clé `auto`. Cela fait en sorte que le navigateur décale les points de début et de fin de la décoration de texte pour garantir que, si deux boîtes de texte décorées apparaissent côte à côte, elles ne semblent pas avoir une seule décoration de texte. La valeur `auto` est particulièrement importante lors du rendu du texte chinois, où le soulignement est utilisé pour [ponctuer les noms propres <sup>(angl.)</sup>](https://www.w3.org/International/clreq/#id88), et les noms propres adjacents doivent avoir des soulignements séparés. Voir [Effet de la valeur `auto`](#effect_of_the_auto_value) pour un exemple.
 

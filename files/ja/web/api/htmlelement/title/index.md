@@ -3,12 +3,12 @@ title: "HTMLElement: title プロパティ"
 short-title: title
 slug: Web/API/HTMLElement/title
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement.title`** プロパティは、要素のタイトルを表します。 通常、テキストは、マウスがノード上にあるときに「ツールチップ」ポップアップに表示されます。
+**`title`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、要素のタイトルを表します。通常、マウスポインターがノード上にあるときに「ツールチップ」ポップアップに表示されるテキストです。
 
 ## 値
 

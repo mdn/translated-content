@@ -1,35 +1,49 @@
 ---
-title: Window.scrollByLines()
+title: "Window: scrollByLines() メソッド"
+short-title: scrollByLines()
 slug: Web/API/Window/scrollByLines
+l10n:
+  sourceCommit: 950f04d94b48f259c471175bdafb52933b2b038d
 ---
 
-{{ ApiRef() }} {{Non-standard_header}}
+{{APIRef}} {{Non-standard_header}}
 
 **`Window.scrollByLines()`** メソッドは、指定された行数だけ文書をスクロールさせます。
 
 ## 構文
 
-```js
-window.scrollByLines(lines);
+```js-nolint
+scrollByLines(lines)
 ```
 
 ### 引数
 
-- `lines` は文書をスクロールする行数です。これは正または負の整数を指定することができます。
+- `lines`
+  - : 文書をスクロールする行数です。正または負の整数を指定できます。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
 ```html
-<!-- 文書を 5 行だけ上方向にスクロールする -->
-<button id="scroll-up" onclick="scrollByLines(-5);">Up 5 lines</button>
+<button id="scroll-up">5 行上へスクロール</button>
+<button id="scroll-down">5 行下へスクロール</button>
+```
 
-<!-- 文書を 5 行だけ下方向にスクロールする -->
-<button id="scroll-down" onclick="scrollByLines(5);">Down 5 lines</button>
+```js
+document.getElementById("scroll-up").addEventListener("click", () => {
+  window.scrollByLines(-5);
+});
+document.getElementById("scroll-down").addEventListener("click", () => {
+  window.scrollByLines(5);
+});
 ```
 
 ## 仕様書
 
-どの仕様書にもありません。
+この機能はどの仕様にも含まれていません。
 
 ## ブラウザーの互換性
 

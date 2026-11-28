@@ -2,37 +2,80 @@
 title: サービスワーカーの使用
 slug: Web/API/Service_Worker_API/Using_Service_Workers
 l10n:
-  sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
+  sourceCommit: cce594ebff79d155da35415eeebb144251355cce
 ---
 
 {{DefaultAPISidebar("Service Workers API")}}
 
-この記事はサービスワーカーを使い始めるための情報を提供するページです。基本的な構造、サービスワーカーの登録、新しいサービスワーカーのインストールと有効化のプロセス、サービスワーカーの更新、キャッシュやレスポンスの操作を含めた、オフラインで動作するシンプルなアプリケーションの機能についてです。
+この記事では、オフラインで動作するアプリを題材に、サービスワーカーの基本構造、登録、新しいサービスワーカーのインストールと有効化、更新、キャッシュ制御、カスタムレスポンスについて説明します。
 
-## サービスワーカーの前提条件
+## サービスワーカーの背景
 
 ウェブユーザーが長年苦しめられてきた主要な問題の一つは、接続を失うことです。世界中の最高のウェブアプリは、ダウンロードできないときの使い勝手が最悪でした。これまでにも、この問題を解決するための技術を生み出す試みはさまざまに行われ、いくつかの問題は解決されてきました。しかし、一番の問題は、資産のキャッシュとカスタムネットワークリクエストのための優れた全体的な制御メカニズムが存在しなかったことです。
 
-このような課題を修正したのがサービスワーカーです。サービスワーカーを使用すると、キャッシュ資産を最初に使用するようにアプリを設定することができ、したがってネットワークからより多くのデータを取得する前に、オフラインの場合でも既定の使い勝手を提供することができます（一般に「オフラインファースト」と呼ばれます）。これはネイティブアプリですでに利用できることで、ウェブアプリよりもネイティブアプリが多く選ばれる主な理由のひとつです。
+このような課題を解決するのがサービスワーカーです。サービスワーカーを使うと、キャッシュした資産を最初に使用するようアプリを設定できます。そのため、ネットワークからデータを取得する前でも、オフライン時にデフォルトの使い勝手を提供できます（一般に「オフラインファースト」と呼ばれます）。これはネイティブアプリではすでに実現されており、ネイティブアプリがウェブアプリよりよく選ばれる主な理由のひとつです。
 
-サービスワーカーはプロキシーサーバーのように機能し、リクエストやレスポンスを自分自身でキャッシュに置き換えて変更することができます。
+サービスワーカーはプロキシーサーバーのように機能し、自身のキャッシュ内のアイテムでリクエストやレスポンスを置き換えて変更できます。
 
 ## サービスワーカーを実行するための設定
 
-サービスワーカーは、現代のすべてのブラウザーで、既定で有効になっています。サービスワーカーを使用してコードを実行するには、コードを HTTPS で提供する必要があります。サービスワーカーは、セキュリティ上の理由から HTTPS を介して実行するように制限されています。HTTPS に対応しているサーバーが必要です。実験をホスティングするには、GitHub、Netlify、Vercel などのサービスを使用することができます。ローカル開発を容易にするために、`localhost` はブラウザーでも安全なオリジンとみなされます。
+サービスワーカーは、現代のすべてのブラウザーでデフォルトで有効になっています。サービスワーカーを使用するコードは、セキュリティ上の理由から HTTPS 経由で提供する必要があります。そのため、HTTPS に対応したサーバーが必要です。実験用のコードは GitHub、Netlify、Vercel などのサービスでホストできます。ローカル開発を容易にするため、ブラウザーは `localhost` も保護されたオリジンとして扱います。
 
 ## 基本構造
 
-サービスワーカーでは、基本的なセットアップの際に下記のステップが一般的に見られます。
+サービスワーカーでは、初回インストールと既存のサービスワーカーの置き換えに、一般に次の手順があります。図は、インストール時にバージョン管理されたキャッシュを作成し、有効化時に古いキャッシュを削除する例です。
 
-1. サービスワーカーのコードが読み取られ、[`serviceWorkerContainer.register()`](/ja/docs/Web/API/ServiceWorkerContainer/register) を通して登録されます。成功した場合、サービスワーカーは [`ServiceWorkerGlobalScope`](/ja/docs/Web/API/ServiceWorkerGlobalScope) で実行されます。これは根本的に特殊なワーカーコンテキストで、メインスレッドから独立しており、 DOM へのアクセスもありません。
-2. インストールが行われます。`install` イベントは常にサービスワーカーに送られる最初のイベントです（これを使用して IndexedDB を設定したり、サイト資産をキャッシュしたりするプロセスを開始することができます）。この段階では、アプリケーションはオフラインで使用するためのすべての準備をします。
-3. `install` ハンドラーが完了すると、サービスワーカーはインストールされたと見なされます。この時点で、前回までのバージョンのサービスワーカーがアクティブになっており、ページを開くための制御をしている可能性があります。同じサービスワーカーの異なる2つのバージョンを同時に実行することは避けたいので、新しいバージョンはまだアクティブにはなりません。
-4. 古いバージョンのサービスワーカーによって制御されているページがすべて閉じられたら、古いバージョンを引退させても問題なくなり、新しくインストールしたサービスワーカーは `activate` イベントを受け取ります。`activate` の主な使用目的は、以前のバージョンのサービスワーカーで使用していたリソースをクリーンアップすることです。新しいサービスワーカーは [`skipWaiting()`](/ja/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting) を呼び出すことで、開いているページが閉じられるのを待たずにすぐにアクティブ化することをリクエストすることができます。新しいサービスワーカーは直ちに `activate` を受け取り、開いているページを引き継ぎます。
-5. 有効化後、サービスワーカーはこれでページを制御するようになりますが、それは `register()` が成功した後に開かれたページだけです。言い換えれば、文書が実際に制御下に入るには、再読み込みが必要です。これは、文書におけるサービスワーカーの有無はライフサイクルの開始時に決まり、終了時までその状態が維持されるからです。サービスワーカーが [`clients.claim()`](/ja/docs/Web/API/Clients/claim) を呼び出すと、この既定の動作を上書きして、開いているページに関与することができます。
-6. 新しいバージョンのサービスワーカーが取得されるたびに、このサイクルが繰り返され、新しいバージョンのアクティブ化時に前回バージョンの残骸が掃除されます。
+### 初回インストール
 
-![ライフサイクルの図](sw-lifecycle.svg)
+この例では、最初のサービスワーカーを登録する前から 2 つのページが開いています。そのうちの 1 つのページで [`serviceWorkerContainer.register()`](/ja/docs/Web/API/ServiceWorkerContainer/register) を呼び出すと、処理が始まります。
+
+1. サービスワーカーのコードが取得され、登録されます。登録に成功すると、サービスワーカーは [`ServiceWorkerGlobalScope`](/ja/docs/Web/API/ServiceWorkerGlobalScope) で実行されます。これはメインスクリプトの実行スレッドから独立し、DOM にアクセスできない、特殊な種類のワーカーコンテキストです。サービスワーカーはイベントを処理できる状態になります。
+
+   ![初回のサービスワーカー登録。スクリプトの解析とスコープの設定が済み、制御されていない 2 つのクライアントが開いている状態。](sw-registration.svg)
+
+2. インストールが行われます。`install` イベントはサービスワーカーに送られる最初のイベントです（これを使って IndexedDB へのデータ格納やサイト資産のキャッシュを開始できます）。この段階で、アプリケーションはすべてをオフラインで使えるように準備します。
+
+   ![同じ 2 つのクライアントが開いたまま、install イベントがキャッシュにデータを格納する。](sw-installation.svg)
+
+3. インストールが正常に完了すると、サービスワーカーはインストール済みと見なされます。
+
+   ![サービスワーカーはインストール済みで、キャッシュも格納済みだが、クライアントはまだ制御していない。](sw-installed.svg)
+
+4. これは初回のサービスワーカーなので、開いているページが閉じるのを待たずに `activate` イベントを受け取ります。`activate` ハンドラーでサービスワーカーのセットアップを完了できます。
+
+   ![同じ 2 つのクライアントが開いたまま、activate イベントがセットアップを完了する。](sw-activation.svg)
+
+5. 有効化後、サービスワーカーはスコープ内で新しく開かれたページを制御します。既存の文書を制御するには再読み込みが必要です。文書はサービスワーカーの制御下にあるかどうかが決まった状態で読み込まれ、その状態は文書が存続する間変わらないためです。このデフォルトの動作を上書きして開いているページを制御するには、サービスワーカーから [`clients.claim()`](/ja/docs/Web/API/Clients/claim) を呼び出します。
+
+   ![新しいクライアントが開き、有効化済みのサービスワーカーに制御される。既存の 2 つのクライアントは開いたままで制御されない。](sw-activated.svg)
+
+### 既存のサービスワーカーの置き換え
+
+この独立した例は、バージョン 1 に制御されるクライアントが 1 つ開いている状態から始まります。既存のサービスワーカーを置き換えるときのデフォルトの待機動作を示します。
+
+1. 新しいバージョンのサービスワーカーが取得されるたびに、このサイクルが繰り返されます。以前のバージョンはアクティブなままで、クライアントを制御し続けます。
+
+   ![開いているクライアントが register() を呼び出すと、バージョン 1 が有効でクライアントを制御したまま、バージョン 2 が解析される。](sw-replacement-fetched.svg)
+
+2. 新しいバージョンのインストールが行われます。その `install` ハンドラーで新しいキャッシュを格納する間、以前のバージョンは既存のキャッシュを引き続き使用できます。
+
+   ![バージョン 1 が同じクライアントを制御したまま、バージョン 2 が install イベントを受け取り、新しいキャッシュにデータを格納する。](sw-replacement-installation.svg)
+
+3. インストールが正常に完了すると、以前のバージョンがクライアントを制御している間、新しいバージョンは待機します。新しいバージョンはまだアクティブではありません。
+
+   ![バージョン 2 はインストール済みで待機中。新しいキャッシュの準備ができているが、バージョン 1 が開いているクライアントを引き続き制御している。](sw-replacement-waiting.svg)
+
+4. 以前のバージョンが制御するページがすべて閉じられ、以前のバージョンが保留中のイベントの処理を完了すると、以前のバージョンを終了できます。新しくインストールされたサービスワーカーは `activate` イベントを受け取ります。`activate` の主な用途は、以前のバージョンで使用していたリソース（この例では古いキャッシュなど）を削除することです。
+
+   新しいサービスワーカーから [`skipWaiting()`](/ja/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting) を呼び出すと、開いているページが閉じるのを待たずに有効化されるよう要求できます。すると、以前のバージョンが制御していたページを引き継ぎます。
+
+   ![バージョン 1 が制御するクライアントが閉じる。バージョン 1 は終了し、バージョン 2 が activate イベントを受け取り、古いキャッシュを削除する。](sw-replacement-activation.svg)
+
+5. 有効化後、登録のスコープ内で新しく開かれたページは新しいバージョンに制御されます。
+
+   ![新しいクライアントが開き、新しいキャッシュを使うバージョン 2 に制御される。](sw-replacement-activated.svg)
+
+### サービスワーカーのイベント
 
 利用可能なサービスワーカーのイベントの概要は次の通りです。
 
@@ -83,9 +126,9 @@ registerServiceWorker();
 
 1. `if` ブロックは、登録を試みる前にサービスワーカーに対応しているか確認する機能検出試験を行います。
 2. 次に、[`ServiceWorkerContainer.register()`](/ja/docs/Web/API/ServiceWorkerContainer/register) 関数を使って、このサイトのサービスワーカーを登録します。サービスワーカーのコードはアプリ内にあります（なお、これはオリジンからのファイルの相対 URL であって、それを参照している JS ファイルではありません）。
-3. `scope` 引数はオプションで、サービスワーカーが制御するコンテンツのサブセットを指定することができます。このケースでは `'/'` を指定しており、アプリのオリジン配下のすべてのコンテンツを意味しています。もしこれを指定しなくてもこの値が既定値になりますが、指定方法を示すために使用しています。
+3. `scope` 引数はオプションで、サービスワーカーが制御するコンテンツの範囲を指定できます。この例では `'/'` を指定しているため、アプリのオリジン配下のすべてのコンテンツが対象です。省略した場合もこの値がデフォルトになりますが、ここでは指定方法を示しています。
 
-これは、ワーカーのコンテキストで実行されるサービスワーカーを登録しているため、 DOM にはアクセスしていません。
+サービスワーカーはワーカーコンテキストで実行されるため、DOM にアクセスできません。
 
 1 つのサービスワーカーで、多数のページを制御することができます。スコープ内のページが読み込まれるたびに、サービスワーカーはそのページにインストールされて動作します。そのため、サービスワーカースクリプト内でのグローバル変数の扱いには注意が必要だということを心にとどめておいてください。各ページが固有のワーカーを持つわけではありません。
 
@@ -94,22 +137,25 @@ registerServiceWorker();
 
 #### サービスワーカーの登録に失敗する理由
 
-次の可能性が考えられます。
+サービスワーカーの登録は、次のいずれかの理由で失敗します。
 
-- HTTPS を使用してアプリケーションを実行していない。
-- サービスワーカーファイルへのパスが正しく書かれていない。 — アプリのルートディレクトリーではなく、アプリのオリジンからの相対パスで書く必要があります。上記の例では、ワーカーが `https://bncb2v.csb.app/sw.js` にあり、アプリのルートは `https://bncb2v.csb.app/` です。しかし、パスは `/sw.js` と書く必要があります。
-- 指定されているサービスワーカーがアプリとは異なるオリジンにある。これは許可されていません。
-- サービスワーカーはサービスワーカーのスコープ内にあるクライアントからのリクエストのみを取得します。
-- サービスワーカーの最大スコープは、ワーカーのある場所です。
-- サービスワーカーの最大スコープはワーカーの位置です（言い換えれば、スクリプト `sw.js` が `/js/sw.js` にある場合、 既定では `/js/` 以下の URL しか制御できません）。サービスワーカーの最大スコープのリストは `Service-Worker-Allowed` ヘッダーで指定することができます。
-- Firefox では、ユーザーが[プライベートブラウジングモード](https://bugzil.la/1320796)である場合、履歴が無効である場合、Firefox を閉じたときに Cookie がクリアされる場合、サービスワーカーの API は隠され使用することができません。
-- Chrome の場合、「すべての Cookie をブロックする（推奨しない）」オプションが有効になっていると、登録に失敗します。
+- アプリケーションを[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts) (HTTPS) で実行していない。
+- サービスワーカーファイルのパスが正しくない。
+  パスはアプリのルートディレクトリーではなく、オリジンからの相対パスで指定する必要があります。
+  例では、ワーカーは `https://bncb2v.csb.app/sw.js` にあり、アプリのルートは `https://bncb2v.csb.app/` なので、サービスワーカーは `/sw.js` と指定します。
+- サービスワーカーのパスが、アプリとは異なるオリジンのサービスワーカーを指している。
+- サービスワーカーの登録で指定した `scope` オプションが、ワーカーのパスで許可される範囲より広い。
+  デフォルトでは、サービスワーカーのスコープはワーカーが置かれたディレクトリーです。
+  つまり、スクリプト `sw.js` が `/js/sw.js` にある場合、デフォルトでは `/js/` 以下の URL しか制御できません。
+  {{HTTPHeader("Service-Worker-Allowed")}} ヘッダーを使うと、サービスワーカーのスコープを広げたり狭めたりできます。
+- Cookie のブロック、プライベートブラウジングモード、終了時の Cookie の自動削除など、ブラウザー固有の設定が有効になっている。
+  詳しくは [`serviceWorker.register()` のブラウザーの互換性](/ja/docs/Web/API/ServiceWorkerContainer/register#ブラウザーの互換性)を参照してください。
 
 ### インストールとアクティブ化: キャッシュの作成
 
 サービスワーカーを登録した後、ブラウザーはページ/サイト上でサービスワーカーをインストールおよびアクティブ化しようとします。
 
-インストールが成功裡に完了したとき、 `install` イベントが発行されます。通常、 `install` イベントはオフラインで実行する必要のある資産を、ブラウザーのオフラインキャッシュ領域に配置するために使われます。これをするために、サービスワーカーのストレージ API — [`cache`](/ja/docs/Web/API/Cache) — を使用します。キャッシュはサービスワーカーのグローバルオブジェクトで、レスポンスによって配信された資産を、そのリクエストをキーにして保存することができます。この API はブラウザーの標準キャッシュと同じように動作しますが、そのドメインに特化しています。キャッシュのコンテンツは、クリアするまで保持されます。
+`install` イベントは、サービスワーカーのインストールまたは更新時に発生する最初のイベントです。このイベントは登録が正常に完了した直後に一度だけ発生し、一般に、アプリをオフラインで実行するために必要な資産をブラウザーのオフラインキャッシュに格納するために使われます。これには、サービスワーカーで利用できるストレージ API である [`Cache`](/ja/docs/Web/API/Cache) を使います。`Cache` オブジェクトを使うと、レスポンスで配信された資産をリクエストをキーとして保存できます。この API はブラウザーの標準キャッシュと同様に動作しますが、そのドメインに固有です。キャッシュの内容はクリアするまで保持されます。
 
 サービスワーカーが `install` イベントを扱う方法の例です。
 
@@ -151,7 +197,7 @@ self.addEventListener("install", (event) => {
 
 サイトの資産がキャッシュされたので、サービスワーカーにキャッシュされたコンテンツを使って何かするように指示する必要があります。これは `fetch` イベントを使って実現できます。
 
-1. `fetch` イベントが発行されるたび、指定されたスコープ内の文書とこれらの文書が参照するすべてのリソースを含む、サービスワーカーによって制御されたリソースの取得します（例えば、`index.html` が画像を埋め込むためにオリジン間リクエストを行うと、サービスワーカーを通過します）。
+1. `fetch` イベントは、サービスワーカーが制御するリソースが取得されるたびに発生します。これには、指定されたスコープ内の文書と、それらの文書が参照するすべてのリソースが含まれます（例えば、`index.html` が画像を埋め込むためにオリジンをまたぐリクエストを行う場合も、サービスワーカーを通過します）。
 
 2. `fetch` イベントリスナーをサービスワーカーに割り当てると、そのイベント上で `respondWith()` を呼び出すことで、 HTTP レスポンスを乗っ取ってコンテンツを更新することができます。
 
@@ -169,7 +215,7 @@ self.addEventListener("install", (event) => {
    });
    ```
 
-   `caches.match(event.request)` は、ネットワークからリクエストされた各リソースを、キャッシュにある同等のリソースが利用可能であれば、マッチングさせることができるようにします。マッチングは、通常の HTTP リクエストと同様に、URL と様々なヘッダーを介して行われます。
+   `caches.match(event.request)` を使うと、ネットワークからリクエストされた各リソースを、キャッシュ内に同等のリソースがあればそれと照合できます。照合は通常の HTTP リクエストと同様に、URL とさまざまなヘッダーに基づいて行われます。
 
 ![フェッチイベントの図](sw-fetch.svg)
 
@@ -177,7 +223,7 @@ self.addEventListener("install", (event) => {
 
 では、 `caches.match(event.request)` はサービスワーカーのキャッシュに一致するものがある場合は良いのですが、一致しない場合はどうでしょうか？もし、何らかの失敗処理を提供しなければ、プロミスは `undefined` で解決され、何も返されないでしょう。
 
-キャッシュからのレスポンスをテストした後、通常のネットワークリクエストにフォールバックすることができます。
+キャッシュからのレスポンスを確認した後、通常のネットワークリクエストに切り替えることができます。
 
 ```js
 const cacheFirst = async (request) => {
@@ -203,18 +249,18 @@ const putInCache = async (request, response) => {
   await cache.put(request, response);
 };
 
-const cacheFirst = async (request) => {
+const cacheFirst = async (request, event) => {
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
     return responseFromCache;
   }
   const responseFromNetwork = await fetch(request);
-  putInCache(request, responseFromNetwork.clone());
+  event.waitUntil(putInCache(request, responseFromNetwork.clone()));
   return responseFromNetwork;
 };
 
 self.addEventListener("fetch", (event) => {
-  event.respondWith(cacheFirst(event.request));
+  event.respondWith(cacheFirst(event.request, event));
 });
 ```
 
@@ -222,9 +268,9 @@ self.addEventListener("fetch", (event) => {
 
 リクエストストリームとレスポンスストリームは一度しか読み込めないので、レスポンスの複製を作成する必要があります。ブラウザーにレスポンスを返してキャッシュに入れるには、それを複製する必要があります。つまり、オリジナルはブラウザーに返され、クローンはキャッシュに送られます。これらはそれぞれ一度だけ読み込まれます。
 
-少し奇妙に見えるのは、 `putInCache()` が返すプロミスが待ち状態でないことです。しかしその理由は、レスポンスクローンがキャッシュに追加されるまで、レスポンスを返すのを待ちたくないからです。
+一見奇妙なのは、`putInCache()` が返すプロミスを待たないことです。レスポンスを返す前に、レスポンスのクローンがキャッシュに追加されるのを待ちたくないためです。ただし、キャッシュへの追加が完了する前にサービスワーカーが終了しないよう、このプロミスに対して `event.waitUntil()` を呼び出す必要があります。
 
-今ある唯一の問題は、リクエストがキャッシュに何も一致せず、ネットワークも利用できない場合、やはりリクエストは失敗してしまうということです。何が起こっても、ユーザーは少なくとも何かを得ることができるように、既定の代替処理を提供することにしましょう。
+今ある唯一の問題は、リクエストに一致するものがキャッシュになく、ネットワークも利用できない場合、やはりリクエストが失敗することです。何が起きてもユーザーが少なくとも何かを得られるよう、デフォルトの代替処理を用意しましょう。
 
 ```js
 const putInCache = async (request, response) => {
@@ -232,29 +278,29 @@ const putInCache = async (request, response) => {
   await cache.put(request, response);
 };
 
-const cacheFirst = async ({ request, fallbackUrl }) => {
-  // First try to get the resource from the cache
+const cacheFirst = async ({ request, fallbackUrl, event }) => {
+  // キャッシュからリソースを取得
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
     return responseFromCache;
   }
 
-  // Next try to get the resource from the network
+  // 次にネットワークからリソースを取得
   try {
     const responseFromNetwork = await fetch(request);
-    // response may be used only once
-    // we need to save clone to put one copy in cache
-    // and serve second one
-    putInCache(request, responseFromNetwork.clone());
+    // レスポンスは一度しか使用できない
+    // 複製を保存して、片方をキャッシュに格納
+    // もう片方を返す
+    event.waitUntil(putInCache(request, responseFromNetwork.clone()));
     return responseFromNetwork;
   } catch (error) {
     const fallbackResponse = await caches.match(fallbackUrl);
     if (fallbackResponse) {
       return fallbackResponse;
     }
-    // when even the fallback response is not available,
-    // there is nothing we can do, but we must always
-    // return a Response object
+    // 代替レスポンスも利用できず、
+    // 対処方法がなくても、常に
+    // Response オブジェクトを返す
     return new Response("Network error happened", {
       status: 408,
       headers: { "Content-Type": "text/plain" },
@@ -267,6 +313,7 @@ self.addEventListener("fetch", (event) => {
     cacheFirst({
       request: event.request,
       fallbackUrl: "/gallery/myLittleVader.jpg",
+      event,
     }),
   );
 });
@@ -309,37 +356,44 @@ const putInCache = async (request, response) => {
   await cache.put(request, response);
 };
 
-const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
-  // First try to get the resource from the cache
+const cacheFirst = async ({
+  request,
+  preloadResponsePromise,
+  fallbackUrl,
+  event,
+}) => {
+  // キャッシュからリソースを取得
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
+    // レスポンスを使わない場合もナビゲーション先読みのリクエストを維持
+    event.waitUntil(preloadResponsePromise.catch(() => undefined));
     return responseFromCache;
   }
 
-  // Next try to use (and cache) the preloaded response, if it's there
+  // 先読みしたレスポンスがあれば、次に使用してキャッシュ
   const preloadResponse = await preloadResponsePromise;
   if (preloadResponse) {
     console.info("using preload response", preloadResponse);
-    putInCache(request, preloadResponse.clone());
+    event.waitUntil(putInCache(request, preloadResponse.clone()));
     return preloadResponse;
   }
 
-  // Next try to get the resource from the network
+  // 次にネットワークからリソースを取得
   try {
     const responseFromNetwork = await fetch(request);
-    // response may be used only once
-    // we need to save clone to put one copy in cache
-    // and serve second one
-    putInCache(request, responseFromNetwork.clone());
+    // レスポンスは一度しか使用できない
+    // 複製を保存して、片方をキャッシュに格納
+    // もう片方を返す
+    event.waitUntil(putInCache(request, responseFromNetwork.clone()));
     return responseFromNetwork;
   } catch (error) {
     const fallbackResponse = await caches.match(fallbackUrl);
     if (fallbackResponse) {
       return fallbackResponse;
     }
-    // when even the fallback response is not available,
-    // there is nothing we can do, but we must always
-    // return a Response object
+    // 代替レスポンスも利用できず、
+    // 対処方法がなくても、常に
+    // Response オブジェクトを返す
     return new Response("Network error happened", {
       status: 408,
       headers: { "Content-Type": "text/plain" },
@@ -347,7 +401,7 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
   }
 };
 
-// Enable navigation preload
+// ナビゲーション先読みを有効化
 const enableNavigationPreload = async () => {
   if (self.registration.navigationPreload) {
     await self.registration.navigationPreload.enable();
@@ -380,6 +434,7 @@ self.addEventListener("fetch", (event) => {
       request: event.request,
       preloadResponsePromise: event.preloadResponse,
       fallbackUrl: "/gallery/myLittleVader.jpg",
+      event,
     }),
   );
 });
@@ -451,9 +506,10 @@ self.addEventListener("activate", (event) => {
 - [Chrome](https://www.chromium.org/blink/serviceworker/service-worker-faq/)
 - [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/application/service_workers/index.html)
   - [Firefox のツールバーのカスタマイズオプション](https://support.mozilla.org/en-US/kb/customize-firefox-controls-buttons-and-toolbars)で利用できる「このサイトを忘れる」ボタンは、サービスワーカーとそのキャッシュを消去するために使用できます。
-- [Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/service-workers/)
+- [Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools/progressive-web-apps/#service-workers)
 
 ## 関連情報
 
 - [プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
+- HTTP {{HTTPHeader("Service-Worker-Allowed")}} ヘッダー

@@ -3,7 +3,7 @@ title: Intl.Locale.prototype.baseName
 short-title: baseName
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
 l10n:
-  sourceCommit: e509776556a47f12843b91ab5c6e9be6585698c6
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`baseName`** は {{jsxref("Intl.Locale")}} インスタンスのアクセサープロパティで、このロケールの文字列表現の一部を返します。この部分文字列には、利用できる場合、言語、スクリプト、地域、バリアントなど、このロケールに関する基本情報が含まれています。
@@ -20,7 +20,7 @@ l10n:
 
 ```js
 const myLoc = new Intl.Locale("fr-Latn-CA"); // ロケールをカナダのフランス語に設定
-console.log(myLoc.toString()); // "fr-Latn-CA-u-ca-gregory" と表示
+console.log(myLoc.toString()); // "fr-Latn-CA" と表示
 console.log(myLoc.baseName); // "fr-Latn-CA" と表示
 ```
 
@@ -29,7 +29,7 @@ console.log(myLoc.baseName); // "fr-Latn-CA" と表示
 ```js
 // 言語を日本語、地域を日本に設定する。
 // カレンダーをグレゴリオ暦、時制を 24 時制にする
-const japan = new Intl.Locale("ja-JP-u-ca-gregory-hc-24");
+const japan = new Intl.Locale("ja-JP-u-ca-gregory-hc-h24");
 console.log(japan.toString()); // "ja-JP-u-ca-gregory-hc-h24" と表示
 console.log(japan.baseName); // "ja-JP" と表示
 ```

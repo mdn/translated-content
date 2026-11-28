@@ -2,7 +2,7 @@
 title: Les API JavaScript
 slug: Mozilla/Add-ons/WebExtensions/API
 l10n:
-  sourceCommit: 83b221d2955a42bed9b87a5206a7953d1b57d8a9
+  sourceCommit: 3116241f515352d336d2edb460cebfe99d43aea7
 ---
 
 Les APIs WebExtensions en JavaScript peuvent être utilisées au sein des [scripts d'arrière plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) de l'extension et dans tout autre document livré avec celle-ci. Ceci inclut les pop-ups relatives à une [action navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) ou [action de page](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions), [barres latérales](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), [pages d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages), ou [pages de nouvel onglet](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). Certaines de ces APIs peuvent également être interrogées par des [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#scripts_de_contenu) de l'extension. (Voir la [liste dans le guide des scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#apis_webextension).)
@@ -50,9 +50,9 @@ Tous les navigateurs ne prennent pas en charge toutes les API&nbsp;: pour plus d
 
 Dans les listes d'API JavaScript, de courts exemples de code illustrent la manière dont l'API est utilisée. Vous pouvez expérimenter avec la plupart de ces exemples en utilisant la console dans la [boîte à outils <sup>(angl.)</sup>](https://extensionworkshop.com/documentation/develop/debugging/#developer-tools-toolbox). Cependant, vous devez avoir la boîte à outils en cours d'exécution dans le contexte d'une extension web. Pour ce faire, ouvrez `about:debugging` puis **This Firefox**, cliquez sur **Inspect** pour toute extension installée ou temporaire, et ouvrez **Console**. Vous pouvez ensuite coller et exécuter le code exemple dans la console.
 
-Par exemple, voici le premier exemple de code sur cette page fonctionnant dans la console de la boîte à outils dans Firefox Developer Edition&nbsp;:
+Par exemple, voici la première extension [tabs-tabs-tabs <sup>(angl.)</sup>](https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs) fonctionnant dans la console de la boîte à outils dans Firefox Developer Edition&nbsp;:
 
-![Illustration d'un extrait de code d'extension web exécuté depuis la console dans la boîte à outils](javaScript_exercised_in_console.jpg)
+![L'extension d'exemple tabs-tabs-tabs dans la console de la boîte à outils, dans Firefox Developer Edition](javascript_exercised_in_console.jpg)
 
 ## Liste des API JavaScript
 

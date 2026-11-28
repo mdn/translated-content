@@ -2,7 +2,7 @@
 title: クロスサイトスクリプティング (XSS)
 slug: Web/Security/Attacks/XSS
 l10n:
-  sourceCommit: b07e3b87504a8984cf31d7a735ec373d33a11cd5
+  sourceCommit: dd70ed064388b0fac4338321f727c8840a508b64
 ---
 
 クロスサイトスクリプティング (XSS) 攻撃とは、攻撃者が標的となるサイトに、あたかもそのサイトの一部であるかのように悪意のあるコードを実行させる攻撃手法です。
@@ -13,21 +13,21 @@ l10n:
 
 ![ブラウザー内の分離された世界における 2 つのサイトの図](same-origin.svg)
 
-XSS 攻撃に成功した場合、攻撃者は標的となるサイトを欺き、あたかも同一オリジンであるかのように、そのサイト自身のコンテキスト内で悪意のあるコードを実行させることで、同一オリジンポリシーを回避することが可能となります。これにより、そのコードはサイトの自身のコードが行えるあらゆる操作を実行できるようになります。例えば次のような操作です。
+XSS 攻撃に成功した場合、攻撃者は標的となるサイトを欺き、あたかも同一オリジンであるかのように、そのサイト自身のコンテキスト内で悪意のあるコードを実行させることで、同一オリジンポリシーを回避することが可能となります。これにより、そのコードはサイト自身のコードが行えるあらゆる操作を実行できるようになります。例えば次のような操作です。
 
-- サイトの読み込まれたページ上のすべてのコンテンツ、およびローカルストレージ内のあらゆるコンテンツへのアクセスや変更
+- サイトで読み込まれているページのすべてのコンテンツ、およびローカルストレージ内のあらゆるコンテンツへのアクセスや変更
 - ユーザーの資格情報を使用して HTTP リクエストを送信し、ユーザーになりすますことや機密データへのアクセスができるようにする
 
 ![標的ウェブサイト上で実行される攻撃者コードの図](xss.svg)
 
-すべての XSS 攻撃は、ウェブサイトが次の 2 つのことを行うことによって発生します。
+すべての XSS 攻撃は、ウェブサイトが次の 2 つのことを行うことで発生します。
 
 1. 攻撃者によって作成された可能性のある入力を受け入れること、
 2. この入力を無害化（サニタイズ）せずにページに組み込むこと、すなわち、JavaScript として実行可能にならないことを保証しないまま組み込むことです。
 
 ## 2 つの XSS の例
 
-この節では、XSS 攻撃に対して脆弱な 2 つのサンプルページについてご説明いたします。
+この節では、XSS 攻撃に対して脆弱な 2 つのサンプルページを説明します。
 
 ### ブラウザー内のコード挿入
 
@@ -37,7 +37,7 @@ XSS 攻撃に成功した場合、攻撃者は標的となるサイトを欺き�
 <h1 id="welcome"></h1>
 ```
 
-このページでは、現在のユーザー名を [URL 引数](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#引数)から取得することを前提としております。引数の値を抽出し、その値を用いてパーソナライズされた挨拶メッセージを作成します。
+このページでは、現在のユーザー名を [URL 引数](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#引数)から取得することを前提とします。引数の値を抽出し、その値を用いてパーソナライズされた挨拶メッセージを作成します。
 
 ```js
 const params = new URLSearchParams(window.location.search);
@@ -59,7 +59,7 @@ welcome.innerHTML = `おかえりなさい、${user} さん！`;
 ユーザーがリンクをクリックすると、次のようになります。
 
 1. ブラウザーはページを読み込みます。
-2. このページは、`user` という名前のURL引数を抽出します。その値は `<img src=x onerror=alert("hello!")>` となります。
+2. このページは、`user` という名前の URL 引数を抽出します。その値は `<img src=x onerror=alert("hello!")>` となります。
 3. その後、ページはこの値を `welcome` 要素の `innerHTML` プロパティに割り当てます。これにより、`src` 属性の値が `x` である新しい {{htmlelement("img")}} 要素が生成されます。
 4. `src` の値はエラーを生成するため、`onerror` [イベントハンドラープロパティ](/ja/docs/Learn_web_development/Core/Scripting/Events#inline_event_handlers_%e2%80%94_dont_use_these)が実行され、攻撃者はページ内でそのコードを実行できるようになります。
 
@@ -79,7 +79,7 @@ welcome.innerHTML = `おかえりなさい、${user} さん！`;
 </form>
 ```
 
-ユーザーが検索語句を入力 して "submit" をクリックすると、ブラウザーは "/results" に対してGETリクエストを送信します。この際、検索語句は URL 引数として次のように含められます。
+ユーザーが検索語句を入力して送信ボタンをクリックすると、ブラウザーは `/results` に GET リクエストを送信します。この際、検索語句は URL 引数として次のように含められます。
 
 ```plain
 https://example.org/results?search=bananas
@@ -115,8 +115,8 @@ app.get("/results", (req, res) => {
 
 他の XSS 攻撃と同様に、これらの 2 つの例が可能なのは、当該ウェブサイトが以下の理由によるものです。
 
-1. 攻撃者が作成した可能性のある入力を使用します
-2. ページにその入力を含めますが、無害化は行いません。
+1. 攻撃者が作成した可能性のある入力を受け入れます。
+2. その入力を無害化せずにページに含めます。
 
 これらの例はいずれも、悪意のある入力に対して同じ攻撃ベクトル（URL 引数）を使用しています。ただし、攻撃者が利用可能な他の攻撃ベクトルも存在します。
 
@@ -149,7 +149,7 @@ app.get("/results", (req, res) => {
 
 出力エンコードとは、入力文字列内の危険な可能性のある文字をエスケープ処理し、HTML などの言語の一部としてではなく、単なるテキストとして扱うようにするプロセスです。
 
-入力内容をテキストとして扱う必要がある場合に適切な選択となります。例えば、ウェブサイトで入力内容をコンテンツに挿入するテンプレートを使用している場合などが該当します。以下のような [Django テンプレート](https://docs.djangoproject.com/en/5.1/ref/templates/language/)の抜粋がその一例です。
+入力内容をテキストとして扱う必要がある場合に適切な選択となります。例えば、ウェブサイトで入力内容をコンテンツに挿入するテンプレートを使用している場合などが該当します。以下のような [Django テンプレート](https://docs.djangoproject.com/en/stable/ref/templates/language/)の抜粋がその一例です。
 
 ```django
 <p>\{{ search_term }} の検索結果</p>
@@ -204,7 +204,7 @@ XSS 攻撃を防ぐ上で最も重要なのは、堅牢な出力エンコーデ�
 ```
 
 この場合、ブラウザーは `my_input` 変数を HTML 属性として扱います。Django は引用符をエンコードするため (`"` → `&quot;`, `'` → `&#x27;`)、本体である `onmouseover="alert('XSS')"` は実行されません。
-ただし、`onmouseover=alert(1)`（またはバッククォートを使った ``onmouseover=alert(`XSS`)``）のように、引用符で囲まれていない本体は、属性値を引用符で囲むことが必須ではなく、バッククォートはデフォルトでエスケープされないため、実行されます。
+ただし、`onmouseover=alert(1)`（または逆引用符を使った ``onmouseover=alert(`XSS`)``）のような引用符で囲まれていない本体は、属性値を引用符で囲む必要がなく、逆引用符はデフォルトでエスケープされないため、実行されます。
 
 ブラウザーは、ウェブページのそれぞれの部分（HTML 要素とそのコンテンツ、HTML 属性、インラインスタイル、インラインスクリプト）を処理するために異なるルールを使用します。入力が補間されるコンテキストによって、必要なエンコーディングの種類は異なります。
 
@@ -229,11 +229,11 @@ XSS 攻撃を防ぐ上で最も重要なのは、堅牢な出力エンコーデ�
 
 ### 無害化
 
-テンプレートエンジンでは通常、開発者が出力エンコードを無効にすることが可能です。これは、開発者が信頼できないコンテンツをテキストではなくHTMLとして挿入したい場合に必要となります。例えば、Django では、[`safe`](https://docs.djangoproject.com/en/5.0/ref/templates/language/#how-to-turn-it-off) フィルターは出力エンコーディングを無効化し、React では [`dangerouslySetInnerHTML`](https://react.dev/reference/react-dom/components/common#dangerously-setting-the-inner-html) が同様の効果を持ちます。
+テンプレートエンジンでは通常、開発者が出力エンコードを無効にできます。これは、信頼できないコンテンツをテキストではなく HTML として挿入したい場合に必要です。例えば、Django では [`safe`](https://docs.djangoproject.com/en/stable/ref/templates/language/#how-to-turn-it-off) フィルターが出力エンコードを無効にし、React では [`dangerouslySetInnerHTML`](https://react.dev/reference/react-dom/components/common#dangerously-setting-the-inner-html) が同様の効果を持ちます。
 
 この場合、コンテンツの安全性を確保するのは開発者の責任であり、適切な無害化処理を行う必要があります。
 
-無害化処理（サニタイズ）とは、HTML 文字列から安全でない要素（{{htmlelement("script")}} タグやインラインイベントハンドラーなど）を除去するプロセスです。出力エンコーディングと同様に、無害化処理は適切に実施するのが難しいため、信頼できるサードパーティ製ライブラリーの利用をお勧めします。[DOMPurify](https://github.com/cure53/DOMPurify) は、[OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#html-sanitization) を含む多くの専門家から推奨されています。
+無害化とは、HTML 文字列から安全でない機能（{{htmlelement("script")}} 要素やインラインイベントハンドラーなど）を取り除く処理です。出力エンコーディングと同様に、適切な無害化は難しいため、信頼できるサードパーティ製ライブラリーの利用をお勧めします。[DOMPurify](https://github.com/cure53/DOMPurify) は、[OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#html-sanitization) を含む多くの専門家から推奨されています。
 
 例えば、次のような HTML の文字列があったとします。
 
@@ -300,7 +300,7 @@ element.innerHTML = trustedHTML;
 ```
 
 > [!NOTE]
-> 信頼型 API は無害化機能を提供していません。これは、開発者が自分たちが提供する無害化関数が確実に呼び出されることを保証できるフレームワークです。上記の例では、開発者は信頼型フレームワーク内で、HTML シンク用のサニタイザーとして DOMPurify を使用しています。
+> 信頼型 API は無害化機能を提供していません。これは、開発者が自分たちの無害化関数が確実に呼び出されることを保証できるフレームワークです。上記の例では、開発者は信頼型フレームワーク内で、HTML シンク用の無害化関数として DOMPurify を使用しています。
 
 信頼型 API は、現時点ではクロスブラウザー対応が十分に実現されていませんが、対応が整えば DOM ベースの XSS 攻撃に対する重要な防御手段となるでしょう。
 
@@ -308,7 +308,7 @@ element.innerHTML = trustedHTML;
 
 出力エンコーディングと無害化は、悪意のあるスクリプトがサイトのページに侵入するのを防ぐためのものです。コンテンツセキュリティポリシーの主な機能の一つは、たとえ悪意のあるスクリプトがサイトのページ内に存在しても、その実行を阻止することにあります。つまり、他の防御策が失敗した場合のバックアップとなるのです。
 
-CSP を用いた XSS 対策として推奨されるアプローチは、[厳格な CSP](/ja/docs/Web/HTTP/Guides/CSP#厳格な_csp) です。これは、[ノンス](/ja/docs/Web/HTTP/Guides/CSP#ノンス)または[ハッシュ](/ja/docs/Web/HTTP/Guides/CSP#ハッシュ)を使用して、ブラウザーに対して文書内で期待されるスクリプトを指示します。攻撃者が悪意のある `<script>` 要素を挿入した場合、それらは正しいノンスまたはハッシュを持たないため、ブラウザーは実行しません。さらに、インラインイベントハンドラー、`javascript:` URL、引数を JavaScript として実行する `eval()` のような API など、様々な一般的な XSS 攻撃のベクトルが完全に禁止されます。
+CSP を用いた XSS 対策として推奨されるアプローチは、[厳格な CSP](/ja/docs/Web/HTTP/Guides/CSP#厳格な_csp) です。これは、[ノンス](/ja/docs/Web/HTTP/Guides/CSP#ノンス)または[ハッシュ](/ja/docs/Web/HTTP/Guides/CSP#ハッシュ)を使用して、ブラウザーに対して文書内で期待されるスクリプトを指示します。攻撃者が悪意のある `<script>` 要素を挿入した場合、それらは正しい{{Glossary("Nonce", "ノンス")}}またはハッシュを持たないため、ブラウザーは実行しません。さらに、インラインイベントハンドラー、`javascript:` URL、引数を JavaScript として実行する `eval()` のような API など、さまざまな一般的な XSS 攻撃ベクトルが完全に禁止されます。
 
 ## 防衛の要約チェックリスト
 
@@ -319,4 +319,4 @@ CSP を用いた XSS 対策として推奨されるアプローチは、[厳格�
 
 ## 関連情報
 
-- [Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) ([owasp.org](https://owasp.org/))
+- [クロスサイトスクリプティング防止早見表](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)<sup>(英語)</sup> ([owasp.org](https://owasp.org/))

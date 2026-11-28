@@ -3,7 +3,7 @@ title: "ARIA : rôle menu"
 short-title: menu
 slug: Web/Accessibility/ARIA/Reference/Roles/menu_role
 l10n:
-  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
+  sourceCommit: b126460df717d910e92f311f0603800987ecebee
 ---
 
 Le rôle `menu` est un type de composant composite qui offre une liste de choix à l'utilisateur·ice.
@@ -42,11 +42,11 @@ Si le menu est visuellement persistant, envisagez d'utiliser le rôle [`menubar`
 - l'attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex)
   - : Le conteneur `menu` a `tabindex` défini sur `-1` ou `0` et chaque élément du menu a `tabindex` défini sur `-1`.
 - [`aria-activedescendant`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant)
-  - : Défini sur l'ID de l'élément focalisé, s'il y en a un.
+  - : Défini sur l'ID de l'élément sélectionné, s'il y en a un.
 - [`aria-orientation`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation)
   - : Indique si l'orientation du menu est horizontale ou verticale&nbsp;; par défaut, elle est `verticale` si omise.
 - [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-  - : Le `menu` doit avoir un nom accessible. Utilisez `aria-labelledby` si un label visible est présent, sinon utilisez `aria-label`. Incluez soit `aria-labelledby` défini sur l'`id` de l'`menuitem` ou du `button` qui contrôle son affichage, soit utilisez `aria-label` pour définir le label.
+  - : Le `menu` doit avoir un nom accessible. Utilisez `aria-labelledby` si un label visible est présent, sinon utilisez `aria-label`. Incluez soit `aria-labelledby` défini sur un `id` du `menuitem` ou du `button` qui contrôle son affichage, soit utilisez `aria-label` pour définir le label.
 - [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
   - : Défini uniquement sur le conteneur de menu pour inclure des éléments qui ne sont pas des enfants DOM du conteneur. Si défini, ces éléments apparaissent dans l'ordre de lecture dans la séquence dans laquelle ils sont référencés et après tout élément qui est un enfant DOM. Lors de la gestion de la sélection, assurez-vous que l'ordre de sélection visuel correspond à cet ordre de lecture de la technologie d'assistance.
 
@@ -57,7 +57,7 @@ Si le menu est visuellement persistant, envisagez d'utiliser le rôle [`menubar`
 - <kbd>Échap</kbd>
   - : Lorsqu'il se trouve dans un sous-menu, il ferme le sous-menu et déplace la sélection sur l'élément de menu ou de barre de menu parent.
 - <kbd>Flèche droite</kbd>
-  - : Dans une barre de menu, déplace la sélection sur l'élément suivant de la barre de menu. Si la sélection est sur le dernier élément, il déplace la sélection sur le premier élément. Si dans un sous-menu, si la sélection est sur un élément qui n'a pas de sous-menu, il ferme le sous-menu et déplace la sélection sur l'élément suivant de la barre de menu. Sinon, il ouvre le sous-menu de l'élément de barre de menu nouvellement focalisé, en gardant la sélection sur cet élément de barre de menu parent. S'il n'est pas dans une barre de menu ou un sous-menu et n'est pas sur un `menuitem` avec un sous-menu, si la sélection n'est pas le dernier élément sélectionnable du menu, il déplace éventuellement la sélection sur le prochain élément sélectionnable.
+  - : Dans une barre de menu, déplace la sélection sur l'élément suivant de la barre de menu. Si la sélection est sur le dernier élément, il déplace la sélection sur le premier élément. Si dans un sous-menu, si la sélection est sur un élément qui n'a pas de sous-menu, il ferme le sous-menu et déplace la sélection sur l'élément suivant de la barre de menu. Sinon, il ouvre le sous-menu de l'élément de barre de menu nouvellement sélectionné, en gardant la sélection sur cet élément de barre de menu parent. S'il n'est pas dans une barre de menu ou un sous-menu et n'est pas sur un `menuitem` avec un sous-menu, si la sélection n'est pas le dernier élément sélectionnable du menu, il déplace éventuellement la sélection sur le prochain élément sélectionnable.
 - <kbd>Flèche gauche</kbd>
   - : Déplace la sélection sur l'élément précédent de la barre de menu. Si la sélection est sur le premier élément, il déplace la sélection sur le dernier élément. Si dans un sous-menu, il ferme le sous-menu et déplace la sélection sur l'élément de menu parent. S'il n'est pas dans une barre de menu ou un sous-menu, si la sélection n'est pas le premier élément sélectionnable du menu, il déplace éventuellement la sélection sur le dernier élément sélectionnable.
 - <kbd>Flèche bas</kbd>
@@ -153,7 +153,7 @@ Le code suivant est un menu contextuel imbriqué dans une barre de menu. Il s'af
 </div>
 ```
 
-Le bouton qui ouvre le menu a [`aria-haspopup="menu"`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) défini, indiquant explicitement que le popup qu'il contrôle est un `menu`.
+Le bouton qui ouvre le menu a [`aria-haspopup="menu"`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) défini, indiquant explicitement que la fenêtre intrusive qu'il contrôle est un `menu`.
 
 Pour qu'un menu s'ouvre, l'utilisateur·ice interagit généralement avec un bouton de menu en tant qu'élément déclencheur. Le bouton de menu doit être sélectionnable et répondre à la fois aux évènements de clic et aux évènements clavier. Lorsqu'il est sélectionné, le fait de choisir <kbd>Entrée</kbd>, <kbd>Espace</kbd>, <kbd>Flèche vers le bas</kbd> ou <kbd>Flèche vers le haut</kbd> doit ouvrir le menu et placer la sélection sur un élément de menu.
 

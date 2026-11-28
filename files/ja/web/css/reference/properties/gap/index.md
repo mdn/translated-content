@@ -1,9 +1,9 @@
 ---
-title: "`gap` プロパティ (CSS)"
+title: "`gap` プロパティ"
 short-title: gap
 slug: Web/CSS/Reference/Properties/gap
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: e57c161bccdd08db7e46922255e1dc3ea74058d4
 ---
 
 **`gap`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、行や列の間の隙間（{{glossary("gutters", "溝")}}）を[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)コンテナーに適用します。
@@ -34,11 +34,11 @@ gap: calc(20px + 10%);
 <section class="default-example" id="default-example">
   <div class="example-container">
     <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
     </div>
   </div>
 </section>
@@ -68,16 +68,15 @@ gap: calc(20px + 10%);
 ## 構文
 
 ```css
-/* キーワード値 */
-gap: normal;
-
 /* 単一の値 */
+gap: normal;
 gap: 20px;
 gap: 1em;
 gap: 3vmin;
 gap: 0.5cm;
 gap: 16%;
 gap: 100%;
+gap: thick;
 gap: calc(10% + 20px);
 
 /* 2 つの値 */
@@ -87,7 +86,10 @@ gap: 3vmin 2vmax;
 gap: 0.5cm 2mm;
 gap: 16% 100%;
 gap: 21px 82%;
+gap: normal thin;
+gap: thin thick;
 gap: calc(20px + 10%) calc(10% - 5px);
+gap: calc(20px + 10%) medium;
 
 /* グローバル値 */
 gap: inherit;
@@ -99,34 +101,36 @@ gap: unset;
 
 ### 値
 
+このプロパティは、次の一覧から選んだ 1 つまたは 2 つの値として指定します。
+
 - `normal`
-  - : 段組みコンテナーでは `1em`、それ以外のすべてのコンテキストでは `0` となります。
-- {{CSSxRef("&lt;length&gt;")}}
-  - : 隙間の大きさで、非負の {{CSSxRef("&lt;length&gt;")}} 値です。
-- {{CSSxRef("&lt;percentage&gt;")}}
-  - : その次元におけるコンテナー要素の[コンテンツボックス](/ja/docs/Web/CSS/Guides/Box_model/Introduction#コンテンツ領域)のサイズに対する隙間の大きさを、非負の {{CSSxRef("&lt;percentage&gt;")}} 値として表したものです。
+  - : 段組みレイアウトでは隙間を `1em` に、それ以外のすべてのコンテキストでは `0` に設定します。これがデフォルト値です。
+- {{cssxref("&lt;line-width&gt;")}}
+  - : `thin`、`medium`、`thick` キーワード、または正の {{cssxref("length")}} 値を使用して隙間の大きさを設定します。
+- {{CSSxRef("length-percentage")}}
+  - : 非負の {{CSSxRef("&lt;length&gt;")}} または {{CSSxRef("&lt;percentage&gt;")}} 値を使用して隙間を設定します。
 
 ## 解説
 
-`gap` プロパティは、列間・行間の隙間を定義するもので、その効果は、コンテナーがグリッドコンテナー、フレックスボックスコンテナー、段組みレイアウトコンテナーのどれであるかによって異なります。
+`gap` プロパティは、列の隙間と行の隙間を定義します。その効果は、コンテナーがグリッドコンテナー、フレックスボックスコンテナー、段組みレイアウトコンテナーのどれであるかによって異なります。レイアウトの種類ごとの隙間について詳しくは、[CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)を参照してください。
 
-これは一括指定プロパティで、`<'row-gap'>` の値として指定され、必要に応じてその後に `<'column-gap'>` の値が続きます。両方のサブプロパティのデフォルト値は `normal` ですが、値が 1 つしか宣言されていない場合は、その値が両方に適用されます。`<'row-gap'>` と `<'column-gap'>` は、それぞれ `<length>`、`<percentage>`、またはキーワード `normal` として指定します。
+この一括指定プロパティには 1 つまたは 2 つの値を指定します。値が 1 つの場合は `row-gap` と `column-gap` の両方に設定されます。値が 2 つの場合は、最初の値が `row-gap` に、次の値が `column-gap` に設定されます。両方のサブプロパティのデフォルト値は `normal` です。値を 1 つだけ指定した場合、その値が両方に適用されます。
 
 パーセント値による隙間の値は、常にコンテナー要素の[コンテンツボックス](/ja/docs/Web/CSS/Guides/Box_model/Introduction#コンテンツ領域)のサイズを基準に計算されます。コンテナーのサイズが確定している場合、この動作は明確に定義されており、レイアウトモードを問わず一貫しています。
 
-生成された隙間は、空のアイテムやトラックのように、指定したサイズの幅や高さを持った空の空間を生成します。要素間の目に見える空間は指定された `gap` の値とは異なるかもしれません。マージン、パディング、分配配置によって、 `gap` が決定する値よりも要素間の間隔を広がるかもしれないからです。
+生成された隙間は、空のアイテムやトラックのように、指定値に応じた幅または高さを持つ空間です。要素間に実際に見える空間は、指定した `gap` 値と異なる場合があります。マージン、パディング、分配配置によって、`gap` が定める値よりも要素間隔が広がることがあるためです。
 
-隙間には、装飾として目に見える区切り線を引くことができます。列や行、あるいはその両方の間に装飾用の線がある場合、それらは隙間の中央に表示されますが、隙間のサイズには影響しません。これらの装飾線は、{{cssxref("rule")}} 一括指定を使用することで、本来「空白」である部分に追加することができます。
+隙間には、装飾として目に見える区切り線を引くことができます。列の隙間、行の隙間、またはその両方に装飾線がある場合、それらは隙間の中央に表示されますが、隙間のサイズには影響しません。これらの装飾線は、{{cssxref("rule")}} 一括指定を使用して、本来「空白」である部分に追加できます。
 
 ### グリッドレイアウトの場合
 
-[CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)では、`gap` プロパティによって行と列の間の空間が定義されます。最初の値は行間の溝を定義し、2 つ目は列間の溝を定義します。1 つの値のみが指定されている場合、その値は両方の寸法に使用されます。
+[CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)では、`gap` プロパティによって行と列の間の隙間が定義されます。2 つの値が指定されている場合、最初の値は行の溝を定義し、2 つ目は列の溝を定義します。
 
 パーセント値の場合は、コンテナー要素の[コンテンツボックス](/ja/docs/Web/CSS/Guides/Box_model/Introduction#コンテンツ領域)のサイズを基準に計算されます。パーセントのサイズが循環している場合は、{{glossary("intrinsic size", "内在サイズ")}}の割り当てを決定する際にはゼロを基準として扱われますが、コンテンツのレイアウトを行う際にはグリッドコンテナーのコンテンツボックスを基準として扱われます。下記の 2 つの例は、例のセクションにおける[明示的なコンテナーサイズ](#パーセント値の_gap_値と明示的なコンテナーサイズ)および[暗黙的なコンテナーサイズ](#パーセント値の_gap_値と暗黙的なコンテナーサイズ)を用いたパーセント値を示しています。
 
 `gap` に正の値を指定した場合は、グリッド線に太さが生じたかのような効果になります。つまり、2 本のグリッド線の間にあるグリッドトラックは、それらを表す溝と溝の間の空間となります。グリッドアイテムが複数の行または列にまたがる場合、トラックのサイズ決定のためには、ガターは、またがる方向のサイズに追加される、指定されたサイズの追加の空の固定サイズトラックとして扱われます。例えば、 `gap: 10px` が 100 × 100px のボックスからなる 3 × 3 のグリッドで設定されている場合、グリッドアイテムが 2 つの縦列にまたがっているときは、その幅は `210px` になります。3 つすべてにまたがっている場合は、幅は `320px` になります。
 
-{{cssxref("justify-content")}} および {{cssxref("align-content")}} プロパティによってトラック間に空間が追加されるため、グリッドの行と列の間隔が `gap` プロパティの値よりも大きくなる場合があります。
+{{cssxref("justify-content")}} および {{cssxref("align-content")}} プロパティによってトラック間に空間が追加されるため、グリッドの行の隙間や列の隙間が `gap` プロパティの値よりも大きくなる場合があります。
 
 溝は、暗黙のグリッドのトラック間にのみ現れます。グリッドがトラック間で断片化されている場合、それらのトラックの間には溝の余白は追加されません。最初のトラックの前や最後のトラックの後には溝はなく、トラックが折りたたまれている場合も、溝は現れません。
 
@@ -134,9 +138,9 @@ CSS グリッド仕様の初期バージョンでは、このプロパティは 
 
 ### フレックスボックスの場合
 
-フレックスコンテナーでは、`gap` プロパティは、フレックスアイテム間およびフレックス行間の空間を定義します。最初の値がフレックスアイテム間の隙間なのか、フレックス行間の隙間なのかは、方向によって異なります。フレックスアイテムは、 {{cssxref("flex-direction")}} プロパティの値によって行と列のどちらかにレイアウトされます。行方向（`row` （デフォルト値）または `row-reverse`）の場合、1 つ目の値はフレックス行間の隙間を定義し、 2 つ目の値は各行内のアイテム間の隙間を定義します。値が 1 つしか指定されていない場合、その値が両方の次元に対して使用されます。
+フレックスコンテナーでは、`gap` プロパティはフレックスアイテム間とフレックス行間の空間を定義します。最初の値がどちらの隙間を定義するかは、方向によって異なります。フレックスアイテムは、{{cssxref("flex-direction")}} プロパティの値によって行または列に配置されます。行方向（`row`（デフォルト値）または `row-reverse`）の場合、最初の値はフレックス行間の隙間を、2 つ目の値は各行内のアイテム間の隙間を定義します。値が 1 つだけの場合は、両方の方向に同じ値が使われます。
 
-列方向（`column` または `column-reverse`）の場合、1 つ目値はフレックス行内のフレックス項目間の隙間を定義し、 2 つ目の値は各フレックス行間の隙間を定義します。こちらも、値が 1 つしか指定されていない場合は、その値が両方の次元に対して使用されます。
+列方向（`column` または `column-reverse`）の場合、最初の値は各フレックス行内のアイテム間の隙間を、2 つ目の値はフレックス行間の隙間を定義します。値が 1 つだけの場合は、両方の方向に同じ値が使われます。
 
 ### 段組みレイアウトの場合
 
@@ -253,10 +257,10 @@ CSS グリッド仕様の初期バージョンでは、このプロパティは 
 
 ### パーセント値の gap 値と明示的なコンテナーサイズ
 
-コンテナーに固定されたサイズが設定されている場合、隙間のパーセント値の計算はコンテナーのサイズに基づいて行われます。したがって、隙間の動作はすべてのレイアウトで一貫しています。次の例では、2 種類のコンテナーがあり、1 つはグリッドレイアウト、もう 1 つはフレックスレイアウトです。コンテナーには 20x20px の赤色の子が 5 つあります。どちらのコンテナーも明示的に `height: 200px` を用いて高さを 200px に設定し、 `gap: 12.5% 0` を用いて隙間を設定します。
+コンテナーに固定されたサイズが設定されている場合、隙間のパーセント値の計算はコンテナーのサイズに基づいて行われます。したがって、隙間の動作はすべてのレイアウトで一貫しています。次の例では、2 種類のコンテナーがあり、1 つはグリッドレイアウト、もう 1 つはフレックスレイアウトです。コンテナーには 20x20px の赤色の子が 5 つあります。どちらのコンテナーも明示的に `height: 200px` を用いて高さを 200px に設定し、 `gap: 12.5% 0` を用いて隙間を設定します。詳しくは[隙間の値をパーセント値で指定](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps#隙間の値をパーセント値で指定)を参照してください。
 
 ```html live-sample___explicit_container_size
-<span>Grid</span>
+<span>グリッド</span>
 <div id="grid">
   <div>1</div>
   <div>2</div>
@@ -264,7 +268,7 @@ CSS グリッド仕様の初期バージョンでは、このプロパティは 
   <div>4</div>
   <div>5</div>
 </div>
-<span>Flex</span>
+<span>フレックス</span>
 <div id="flex">
   <div>1</div>
   <div>2</div>
@@ -303,16 +307,16 @@ body > div {
 }
 ```
 
-{{EmbedLiveSample("Explicit container size", "auto", "200px")}}
+{{EmbedLiveSample("percentage_gap_value_and_explicit_container_size", "auto", "200px")}}
 
-さて、[ウェブ開発者ツールのインスペクタータブ](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html)を使用してグリッドとフレックス要素を検査しましょう。実際の隙間を見るには、インスペクターの `<div id="grid">` と `<div id="flex">` タグにマウスを当ててください。隙間がどちらも同じ 25px であることがわかります。
+次に、[ウェブ開発者ツールのインスペクタータブ](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html)<sup>(英語)</sup>を使用して、グリッドとフレックス要素を調べます。実際の隙間を見るには、インスペクターで `<div id="grid">` と `<div id="flex">` 要素にポインターを合わせます。どちらの隙間も同じ `25px` であることがわかります。
 
 ### パーセント値の gap 値と暗黙的なコンテナーサイズ
 
 サイズがコンテナーに明示的に設定されていない場合、パーセント値での隙間はグリッドレイアウトとフレックスレイアウトで異なります。次の例では、コンテナーに高さが明示的に設定されていません。
 
 ```html hidden live-sample___implicit_container_size
-<span>Grid</span>
+<span>グリッド</span>
 <div id="grid">
   <div>1</div>
   <div>2</div>
@@ -320,7 +324,7 @@ body > div {
   <div>4</div>
   <div>5</div>
 </div>
-<span>Flex</span>
+<span>フレックス</span>
 <div id="flex">
   <div>1</div>
   <div>2</div>
@@ -355,7 +359,7 @@ body > div {
 }
 ```
 
-{{EmbedLiveSample("Implicit container size", "auto", "200px")}}
+{{EmbedLiveSample("percentage_gap_value_and_implicit_container_size", "auto", "200px")}}
 
 グリッドレイアウトの場合、パーセント値はグリッドの実際の高さに寄与しません。コンテナーの高さは `0px` の隙間を使用して計算されるため、実際の高さは 100px （20px × 5）となります。次に、コンテンツボックスの高さを使用してパーセント値の隙間を計算するため、実際の隙間は `12.5px` （100px x 12.5%）になります。隙間はレンダリングの直前に適用されます。このように、グリッドの高さは 100px のままですが、レンダリング直前にパーセント値を追加したため、オーバーフローします。
 
@@ -373,7 +377,12 @@ body > div {
 
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("column-gap")}}
+- {{CSSxRef("rule")}}
+- [CSS 隙間と隙間装飾プロパティの概要](/ja/docs/Web/CSS/Guides/Gaps/Overview)
+- [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+- [CSS 隙間の罫線の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_rules)
 - [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#溝)
+- [CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)モジュール
 - [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール
 - [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール
 - [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュール

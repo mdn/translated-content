@@ -2,7 +2,7 @@
 title: color-interpolation-filters
 slug: Web/SVG/Reference/Attribute/color-interpolation-filters
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 5fbc600ce5903c85daac8ec7408527a2b2ea81da
 ---
 
 **`color-interpolation-filters`** 属性は、フィルター効果で行う画像操作で用いる色空間を指定します。
@@ -19,7 +19,6 @@ l10n:
 
 この属性は、以下の SVG 要素で使用できます。
 
-- {{SVGElement("feSpotLight")}}
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}
 - {{SVGElement("feComponentTransfer")}}
@@ -62,7 +61,7 @@ l10n:
 - `sRGB`
   - : 色の補間を sRGB 色空間で行うべきであることを表します。
 - `linearRGB`
-  - : 色の補間を [sRGB の仕様書](https://webstore.iec.ch/publication/6169)に記述されている通りの linearized RGB 色空間で行うべきであることを表します。
+  - : 色の補間を [sRGB の仕様書](https://webstore.iec.ch/publication/6169)に記述されている通りの線形化された RGB 色空間で行うべきであることを表します。
 
 ## 仕様書
 

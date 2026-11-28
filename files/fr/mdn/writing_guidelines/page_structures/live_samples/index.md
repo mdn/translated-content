@@ -3,11 +3,11 @@ title: Exemples interactifs (EmbedLiveSample)
 short-title: Exemples interactifs
 slug: MDN/Writing_guidelines/Page_structures/Live_samples
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 7484d45816002fbf082a59c5d95c38a1eb2b2e4b
 ---
 
-MDN prend en charge l'affichage de blocs de code dans les articles sous forme d'_exemples interactifs_, afin que les lecteur·ice·s puissent voir à la fois le code source et son résultat tel qu'il apparaît sur une page web.
-Cette fonctionnalité permet aux lecteur·ice·s de comprendre exactement ce que le code exécuté produira, rendant la documentation dynamique et instructive.
+MDN prend en charge l'affichage de blocs de code dans les articles sous forme _d'exemples interactifs_, afin que les lecteur·ice·s puissent voir à la fois le code source et son résultat tel qu'il apparaît sur une page web.
+Cette fonctionnalité permet aux lecteur·ice·s de comprendre exactement ce que le code exécuté produit, rendant la documentation dynamique et instructive.
 Elle permet aussi aux auteur·ice·s d'être absolument certain·e·s que les blocs de code de la documentation produisent le résultat attendu et fonctionnent correctement avec différents navigateurs.
 
 Le système d'exemples interactifs peut traiter des blocs de code écrits en HTML, CSS et JavaScript, quel que soit l'ordre dans lequel ils sont placés dans la page.
@@ -47,9 +47,9 @@ Le système d'exemples interactifs permet de regrouper les blocs de code de diff
 Les blocs de code peuvent être regroupés de deux manières&nbsp;:
 
 1. En utilisant l'identifiant (ID) d'un titre ou d'un élément de bloc qui contient les blocs de code comme identifiant du groupe
-2. En définissant une chaîne d'identification avec les blocs de code
+2. En définissant une chaîne de caractères d'identification avec les blocs de code
 
-Les blocs de code qui ne spécifient pas explicitement d'identifiant sont, par défaut, regroupés à l'aide de l'ID du titre ou de l'élément de bloc qui les contient. L'identifiant dans ce cas est l'ID d'un titre ou d'un élément de bloc (comme un {{HTMLElement("div")}}). Cela est illustré dans l'exemple ci-dessous, où les codes `html` et `css` du bloc «&nbsp;Mise en forme d'un paragraphe&nbsp;» sont utilisés pour générer le résultat de l'appel de macro `EmbedLiveSample`.
+Les blocs de code qui ne définissant pas explicitement d'identifiant sont, par défaut, regroupés à l'aide de l'ID du titre ou de l'élément de bloc qui les contient. L'identifiant dans ce cas est l'ID d'un titre ou d'un élément de bloc (comme un {{HTMLElement("div")}}). C'est illustré dans l'exemple ci-dessous, où les codes `html` et `css` du bloc «&nbsp;Mise en forme d'un paragraphe&nbsp;» sont utilisés pour générer le résultat de l'appel de macro `EmbedLiveSample`.
 
 ````md
 ## Exemples
@@ -61,7 +61,7 @@ Dans cet exemple, nous utilisons du CSS pour mettre en forme les paragraphes aya
 #### HTML
 
 ```html
-<p>Je ne suis pas stylé.</p>
+<p>Je ne suis pas mis en forme.</p>
 
 <p class="fancy">Mais moi oui&nbsp;!</p>
 ```
@@ -78,13 +78,13 @@ p.fancy {
 
 \{{EmbedLiveSample("Mise en forme d'un paragraphe")}}
 
-Seul l'élément `<p>` avec `class="fancy"` sera affiché en rouge.
+Seul l'élément `<p>` avec `class="fancy"` est affiché en rouge.
 ````
 
 - Si l'ID appartient à un élément de bloc, le groupe inclut tous les blocs de code à l'intérieur de cet élément de bloc dont l'ID est utilisé.
-- Si l'ID appartient à un titre, le groupe inclut tous les blocs de code qui suivent ce titre et précèdent le prochain titre du même niveau. Notez que les blocs de code sous les sous-titres du titre spécifié sont tous utilisés&nbsp;; si ce n'est pas l'effet souhaité, utilisez un ID sur un élément de bloc ou une chaîne d'identification.
+- Si l'ID appartient à un titre, le groupe inclut tous les blocs de code qui suivent ce titre et précèdent le prochain titre du même niveau. Notez que les blocs de code sous les sous-titres du titre défini sont tous utilisés&nbsp;; si ce n'est pas l'effet souhaité, utilisez un ID sur un élément de bloc ou une chaîne de caractères d'identification.
 
-Pour regrouper des blocs de code à l'aide d'un identifiant, ajoutez une chaîne au format `live-sample___{IDENTIFIANT}` dans l'info string du bloc de code. L'identifiant doit être unique pour les blocs de code que vous souhaitez regrouper. Par exemple, `live-sample___color-picker` utilise `color-picker` comme identifiant pour le système d'exemples interactifs, et tous les blocs de code avec `live-sample___color-picker` dans leur info string sont combinés dans l'exemple interactif.
+Pour regrouper des blocs de code à l'aide d'un identifiant, ajoutez une chaîne de caractères au format `live-sample___{IDENTIFIANT}` dans l'info string du bloc de code. L'identifiant doit être unique pour les blocs de code que vous souhaitez regrouper. Par exemple, `live-sample___color-picker` utilise `color-picker` comme identifiant pour le système d'exemples interactifs, et tous les blocs de code avec `live-sample___color-picker` dans leur info string sont combinés dans l'exemple interactif.
 L'exemple suivant regroupe un bloc CSS et un bloc JavaScript à l'aide de l'identifiant `color-picker`&nbsp;:
 
 ````md
@@ -95,7 +95,7 @@ L'exemple suivant regroupe un bloc CSS et un bloc JavaScript à l'aide de l'iden
 Dans cet exemple, nous utilisons du CSS pour mettre en forme les paragraphes ayant la classe `fancy`.
 
 ```html live-sample___mise-en-forme-dun-paragraphe
-<p>Je ne suis pas stylé.</p>
+<p>Je ne suis pas mis en forme.</p>
 
 <p class="fancy">Mais moi oui&nbsp;!</p>
 ```
@@ -106,7 +106,7 @@ p.fancy {
 }
 ```
 
-Seul l'élément `<p>` avec `class="fancy"` sera affiché en rouge&nbsp;:
+Seul l'élément `<p>` avec `class="fancy"` est affiché en rouge&nbsp;:
 
 \{{EmbedLiveSample("mise-en-forme-dun-paragraphe")}}
 
@@ -116,14 +116,14 @@ p.fancy {
 }
 ```
 
-Seul l'élément `<p>` avec `class="fancy"` sera affiché en rouge&nbsp;:
+Seul l'élément `<p>` avec `class="fancy"` est affiché en rouge&nbsp;:
 
 \{{EmbedLiveSample("mise-en-forme-paragraphe")}}
 ````
 
 La macro utilise une URL spéciale qui inclut l'ID pour récupérer le résultat d'un groupe de blocs de code donné. Vous ne devez jamais coder en dur cette URL dans le contenu&nbsp;: si vous devez créer un lien vers l'exemple, utilisez la macro [`LiveSampleLink`](#macro_livesamplelink).
 
-Le cadre (ou la page) résultant est sandboxé, sécurisé, et peut techniquement faire tout ce qui fonctionne sur le web. Bien sûr, en pratique, le code doit être pertinent pour le contenu de la page&nbsp;; tout contenu non pertinent pourra être supprimé par la communauté éditoriale de MDN.
+Le cadre (ou la page) résultant est mis dans un bac à sable, sécurisé, et peut techniquement faire tout ce qui fonctionne sur le web. Bien sûr, en pratique, le code doit être pertinent pour le contenu de la page&nbsp;; tout contenu non pertinent peut être supprimé par la communauté éditoriale de MDN.
 
 Le système d'exemples interactifs propose de nombreuses options, que nous allons détailler point par point.
 
@@ -143,12 +143,12 @@ Dans de nombreux cas, vous pouvez ajouter la macro `EmbedLiveSample` ou `LiveSam
 ```
 
 - `sample_id`
-  - : Obligatoire&nbsp;: il peut s'agir de la chaîne identifiant l'exemple ou de l'ID du titre ou du bloc englobant à partir duquel extraire le code.
+  - : Obligatoire&nbsp;: il peut s'agir de la chaîne de caractères identifiant l'exemple ou de l'ID du titre ou du bloc englobant à partir duquel extraire le code.
     Pour vérifier si vous avez le bon ID de titre, regardez l'URL de la section dans la table des matières de la page&nbsp;; vous pouvez aussi le vérifier en consultant le code source de la page.
 - `width` {{Deprecated_Inline}}
-  - : L'attribut `width` pour le {{HTMLElement("iframe")}}, définit en `px`. Obsolète car il n'a plus d'effet&nbsp;: les exemples interactifs occupent toujours toute la largeur de la zone de contenu.
+  - : L'attribut `width` pour le {{HTMLElement("iframe")}}, définit en `px`. Obsolète, car il n'a plus d'effet&nbsp;: les exemples interactifs occupent toujours toute la largeur de la zone de contenu.
 - `height`
-  - : L'attribut `height` du {{HTMLElement("iframe")}}, définit en `px`. Doit être au moins `60`. Ce paramètre est optionnel&nbsp;; une hauteur par défaut raisonnable sera utilisée si vous l'omettez.
+  - : L'attribut `height` du {{HTMLElement("iframe")}}, définit en `px`. Doit être au moins `60`. Ce paramètre est optionnel&nbsp;; une hauteur par défaut raisonnable est utilisée si vous l'omettez.
 - `screenshot_URL` {{Deprecated_Inline}}
   - : L'URL d'une capture d'écran montrant à quoi doit ressembler l'exemple interactif. Obsolète&nbsp;; n'ajoutez des exemples interactifs que s'il existe un support navigateur raisonnable.
 - `page_slug` {{Deprecated_Inline}}
@@ -158,7 +158,7 @@ Dans de nombreux cas, vous pouvez ajouter la macro `EmbedLiveSample` ou `LiveSam
 - `allow`
   - : L'attribut `allow` pour le {{HTMLElement("iframe")}}. Ce paramètre est optionnel&nbsp;; par défaut, aucune fonctionnalité n'est autorisée.
 - `sandbox`
-  - : Une chaîne contenant les attributs `sandbox` que l'exemple doit inclure.
+  - : Une chaîne de caractères contenant les attributs `sandbox` que l'exemple doit inclure.
     Les valeurs autorisées sont `allow-modals`, `allow-forms` et `allow-popups`.
     Plusieurs valeurs peuvent être fournies, comme `"allow-modals allow-popups"`.
 
@@ -198,7 +198,7 @@ Parfois, vous souhaitez simplement afficher le bloc de code statique pertinent p
 
 Pour cela, vous pouvez masquer les blocs de code non pertinents en ajoutant l'info string `hidden` à l'identifiant de langage. Si vous faites cela, omettez les titres `### HTML/CSS/JavaScript` pour les blocs de code masqués.
 
-En reprenant l'exemple ci-dessus mais en masquant le code HTML, cela donnerait&nbsp;:
+En reprenant l'exemple ci-dessus mais en masquant le code HTML, cela donne&nbsp;:
 
 ````md
 ## Exemples
@@ -208,7 +208,7 @@ En reprenant l'exemple ci-dessus mais en masquant le code HTML, cela donnerait&n
 Dans cet exemple, nous utilisons du CSS pour mettre en forme les paragraphes ayant la classe `fancy`.
 
 ```html hidden
-<p>Je ne suis pas stylé.</p>
+<p>Je ne suis pas mis en forme.</p>
 
 <p class="fancy">Mais moi oui&nbsp;!</p>
 ```
@@ -223,7 +223,7 @@ p.fancy {
 
 #### Résultat
 
-Seul l'élément `<p>` avec `class="fancy"` sera affiché en rouge.
+Seul l'élément `<p>` avec `class="fancy"` est affiché en rouge.
 
 \{{EmbedLiveSample("Mise en forme d'un paragraphe")}}
 ````
@@ -236,7 +236,7 @@ La première étape consiste à ajouter des extraits de code ou à s'assurer que
 Chaque morceau de code doit être dans un bloc de code, avec un bloc séparé pour chaque langage, correctement marqué selon le langage. La plupart du temps, cela a déjà été fait, mais il est toujours utile de vérifier que chaque bloc de code est bien configuré avec la bonne coloration syntaxique. Cela se fait avec un identifiant de langage sur le bloc de code de type `type-langage`, où _type-langage_ est le type de langage du bloc, par exemple `html`, `css` ou `js`.
 
 > [!NOTE]
-> Vous pouvez avoir plusieurs blocs pour chaque langage&nbsp;; ils seront tous concaténés. Cela permet d'avoir un morceau de code, suivi d'une explication, puis un autre morceau, etc. Cela facilite la création de tutoriels utilisant des exemples interactifs entrecoupés de texte explicatif.
+> Vous pouvez avoir plusieurs blocs pour chaque langage&nbsp;; ils sont tous concaténés. Cela permet d'avoir un morceau de code, suivi d'une explication, puis un autre morceau, etc. Cela facilite la création de tutoriels utilisant des exemples interactifs entrecoupés de texte explicatif.
 
 Assurez-vous donc que les blocs de code HTML, CSS et/ou JavaScript sont bien configurés pour la coloration syntaxique du langage, et c'est tout bon.
 
@@ -250,7 +250,7 @@ Notez que les titres des blocs de code («&nbsp;HTML&nbsp;», «&nbsp;CSS&nbsp;�
 
 #### HTML
 
-Ce code HTML crée un paragraphe et des blocs pour nous aider à positionner et à styliser un message.
+Ce code HTML crée un paragraphe et des blocs pour nous aider à positionner et à mettre en forme un message.
 
 ```html
 <p>Un exemple simple du système d'exemples interactifs en action.</p>
@@ -281,7 +281,7 @@ Le code CSS met en forme la boîte ainsi que le texte à l'intérieur.
 
 #### JavaScript
 
-Dans l'exemple JavaScript, nous attachons un gestionnaire d'événement au texte «&nbsp;Bonjour le monde&nbsp;!&nbsp;» qui le bascule lorsqu'il est cliqué.
+Dans l'exemple JavaScript, nous attachons un gestionnaire d'évènement au texte «&nbsp;Bonjour le monde&nbsp;!&nbsp;» qui le bascule lorsqu'il est cliqué.
 
 ```js
 const el = document.getElementById("item");
@@ -296,17 +296,17 @@ el.onclick = function () {
 
 #### Résultat
 
-Voici le résultat de l'exécution des blocs de code ci-dessus via `\{{EmbedLiveSample('grouping_code_blocks_by_heading')}}`&nbsp;:
+Voici le résultat de l'exécution des blocs de code ci-dessus avec `\{{EmbedLiveSample('grouping_code_blocks_by_heading')}}`&nbsp;:
 
-{{EmbedLiveSample('grouping_code_blocks_by_heading')}}
+{{EmbedLiveSample("grouping_code_blocks_by_heading")}}
 
-Voici un lien généré en appelant ces blocs de code via `\{{LiveSampleLink('grouping_code_blocks_by_heading', 'Lien de démonstration d\'exemple interactif')}}`&nbsp;:
+Voici un lien généré en appelant ces blocs de code avec `\{{LiveSampleLink('grouping_code_blocks_by_heading', 'Lien de démonstration d\'exemple interactif')}}`&nbsp;:
 
-{{LiveSampleLink('grouping_code_blocks_by_heading', 'Lien de démonstration d\'exemple interactif')}}
+{{LiveSampleLink("grouping_code_blocks_by_heading", "Lien de démonstration d'exemple interactif")}}
 
 ### Regroupement des blocs de code par identifiant
 
-Ce code HTML crée un paragraphe et des blocs pour nous aider à positionner et à styliser un message. La chaîne `live-sample___hello-world` a été ajoutée à l'identifiant de langage `html` pour ce bloc de code.
+Ce code HTML crée un paragraphe et des blocs pour nous aider à positionner et à mettre en forme un message. La chaîne de caractères `live-sample___hello-world` a été ajoutée à l'identifiant de langage `html` pour ce bloc de code.
 
 ```html live-sample___hello-world
 <p>Un exemple simple du système d'exemples interactifs en action.</p>
@@ -315,7 +315,7 @@ Ce code HTML crée un paragraphe et des blocs pour nous aider à positionner et 
 </div>
 ```
 
-Le code CSS met en forme la boîte ainsi que le texte à l'intérieur. La chaîne `live-sample___hello-world` a été ajoutée à l'identifiant de langage `css` pour ce bloc de code.
+Le code CSS met en forme la boîte ainsi que le texte à l'intérieur. La chaîne de caractères `live-sample___hello-world` a été ajoutée à l'identifiant de langage `css` pour ce bloc de code.
 
 ```css live-sample___hello-world
 .box {
@@ -333,7 +333,7 @@ Le code CSS met en forme la boîte ainsi que le texte à l'intérieur. La chaîn
 }
 ```
 
-Ce code JavaScript attache un gestionnaire d'événement au texte « Bonjour le monde ! » qui le bascule lorsqu'il est cliqué. La chaîne `live-sample___hello-world` a aussi été ajoutée à l'identifiant de langage `js` pour ce bloc de code.
+Ce code JavaScript attache un gestionnaire d'évènement au texte «&nbsp;Bonjour le monde&nbsp;!&nbsp;» qui le bascule lorsqu'il est cliqué. La chaîne de caractères `live-sample___hello-world` a aussi été ajoutée à l'identifiant de langage `js` pour ce bloc de code.
 
 ```js live-sample___hello-world
 const el = document.getElementById("item");
@@ -346,29 +346,29 @@ el.onclick = function () {
 };
 ```
 
-On obtient ce résultat en exécutant les blocs de code ci-dessus en utilisant l'identifiant de chaîne `hello-world` dans l'appel de macro `\{{EmbedLiveSample('hello-world')}}`&nbsp;:
+On obtient ce résultat en exécutant les blocs de code ci-dessus en utilisant l'identifiant de chaîne de caractères `hello-world` dans l'appel de macro `\{{EmbedLiveSample('hello-world')}}`&nbsp;:
 
 {{EmbedLiveSample("hello-world")}}
 
 ### Affichage d'un `<iframe>` d'une certaine taille
 
-Utilisez le paramètre `height` pour spécifier la taille de l'élément `<iframe>` qui contient le résultat de l'exemple interactif.
+Utilisez le paramètre `height` pour définir la taille de l'élément `<iframe>` qui contient le résultat de l'exemple interactif.
 
-```html
+```html live-sample___iframe_size
 <p>Juste un texte simple ici.</p>
 ```
 
-Résultat de `\{{EmbedLiveSample("iframe_size", "", "60")}}`&nbsp;:
+Résultat de `\{{EmbedLiveSample("iframe_size", "", 60)}}`&nbsp;:
 
-{{EmbedLiveSample("iframe_size", "", "60")}}
+{{EmbedLiveSample("iframe_size", "", 60)}}
 
-Résultat de `\{{EmbedLiveSample("iframe_size", "", "120")}}`&nbsp;:
+Résultat de `\{{EmbedLiveSample("iframe_size", "", 120)}}`&nbsp;:
 
-{{EmbedLiveSample("iframe_size", "", "120")}}
+{{EmbedLiveSample("iframe_size", "", 120)}}
 
 ### Autoriser des fonctionnalités
 
-Le paramètre `allow` peut être utilisé pour spécifier les fonctionnalités autorisées dans l'élément `<iframe>` qui contient le résultat de l'exemple interactif. Les valeurs disponibles proviennent de la [syntaxe de la politique d'autorisations pour les frames](/fr/docs/Web/HTTP/Guides/Permissions_Policy#syntaxe_du_cadre_intégré).
+Le paramètre `allow` peut être utilisé pour définir les fonctionnalités autorisées dans l'élément `<iframe>` qui contient le résultat de l'exemple interactif. Les valeurs disponibles proviennent de la [syntaxe de la politique d'autorisations pour les cadres](/fr/docs/Web/HTTP/Guides/Permissions_Policy#syntaxe_du_cadre_intégré).
 
 ```html
 <div id="fullscreen-content">
@@ -389,13 +389,13 @@ toggleBtn.addEventListener("click", () => {
 });
 ```
 
-Résultat de `\{{EmbedLiveSample("allowing_features", "", "60", "", "", "", "fullscreen")}}`&nbsp;:
+Résultat de `\{{EmbedLiveSample("allowing_features", "", 60, "", "", "", "fullscreen")}}`&nbsp;:
 
-{{EmbedLiveSample("allowing_features", "", "60", "", "", "", "fullscreen")}}
+{{EmbedLiveSample("allowing_features", "", 60, "", "", "", "fullscreen")}}
 
-Résultat de `\{{EmbedLiveSample("allowing_features", "", "60")}}`&nbsp;:
+Résultat de `\{{EmbedLiveSample("allowing_features", "", 60)}}`&nbsp;:
 
-{{EmbedLiveSample("allowing_features", "", "60")}}
+{{EmbedLiveSample("allowing_features", "", 60)}}
 
 ### Affichage d'un journal à entrée unique
 
@@ -409,39 +409,39 @@ En général, lors de l'implémentation de vos propres exemples, placez les él�
 
 #### HTML
 
-Créez un élément {{HTMLElement("pre")}} avec un `id` de `"log"` pour afficher la sortie du journal.
+Créez un élément {{HTMLElement("pre")}} avec un `id` de `"journal"` pour afficher la sortie du journal.
 
 ```html
-<pre id="log"></pre>
+<pre id="journal"></pre>
 ```
-
-#### JavaScript
-
-Définissez ensuite la fonction de journalisation `log()`.
-Elle prend le texte à journaliser en argument et l'utilise pour remplacer le journal existant.
-
-```js
-const logElement = document.querySelector("#log");
-function log(text) {
-  logElement.innerText = text;
-}
-```
-
-Notez que le contenu de l'élément de journal est défini en utilisant la propriété `innerText`, ce qui est plus sûr que d'utiliser `innerHTML` car le texte journalisé n'est pas interprété comme du HTML (ce qui pourrait potentiellement injecter du code malveillant).
 
 #### CSS
 
 Le CSS définit la hauteur de l'élément de journalisation.
 
 ```css
-#log {
+#journal {
   height: 20px;
 }
 ```
 
+#### JavaScript
+
+Définissez ensuite la fonction de journalisation `journaliser()`.
+Elle prend le texte à journaliser en argument et l'utilise pour remplacer le journal existant.
+
+```js
+const elementJournal = document.querySelector("#journal");
+function journaliser(text) {
+  elementJournal.innerText = text;
+}
+```
+
+Notez que le contenu de l'élément de journal est défini en utilisant la propriété `innerText`, ce qui est plus sûr que d'utiliser `innerHTML`, car le texte journalisé n'est pas interprété comme du HTML (ce qui peut potentiellement injecter du code malveillant).
+
 #### Code de test du journal
 
-Cet exemple est conçu pour montrer « comment journaliser », donc « ce qui est journalisé » n'a pas d'importance.
+Cet exemple est conçu pour montrer «&nbsp;comment journaliser&nbsp;», donc «&nbsp;ce qui est journalisé&nbsp;» n'a pas d'importance.
 C'est donc trivialement implémenté comme un bouton que l'utilisateur·ice peut cliquer pour incrémenter une valeur.
 
 ```html
@@ -449,11 +449,11 @@ C'est donc trivialement implémenté comme un bouton que l'utilisateur·ice peut
 ```
 
 ```js
-const incrementButton = document.querySelector("#increment");
-let incrementValue = 0;
-incrementButton.addEventListener("click", () => {
-  incrementValue++;
-  log(`Le bouton a été cliqué ${incrementValue} fois`);
+const boutonIncrementer = document.querySelector("#increment");
+let valeurIncrementee = 0;
+boutonIncrementer.addEventListener("click", () => {
+  valeurIncrementee++;
+  journaliser(`Le bouton a été cliqué ${valeurIncrementee} fois`);
 });
 ```
 
@@ -478,41 +478,41 @@ En général, lors de l'implémentation de vos propres exemples, placez les él�
 
 #### HTML
 
-Créez un élément {{HTMLElement("pre")}} avec un `id` de `"log"` pour afficher la sortie du journal.
+Créez un élément {{HTMLElement("pre")}} avec un `id` de `"journal"` pour afficher la sortie du journal.
 
 ```html
-<pre id="log"></pre>
+<pre id="journal"></pre>
 ```
-
-#### JavaScript
-
-Définissez ensuite la fonction de journalisation `log()`.
-Elle prend le texte à journaliser en argument et l'ajoute au contenu de l'élément de journal comme une nouvelle ligne.
-La fonction définit aussi la propriété `scrollTop` de l'élément à la valeur de `scrollHeight`, ce qui force la nouvelle ligne à défiler dans la vue.
-
-```js
-const logElement = document.querySelector("#log");
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
-}
-```
-
-Comme dans l'exemple précédent, nous utilisons la propriété `innerText` pour définir le contenu, car cela est moins susceptible d'introduire du code malveillant que d'utiliser `innerHTML`.
 
 #### CSS
 
 Le CSS ajoute des barres de défilement si le contenu de l'élément déborde, définit la hauteur de l'élément de journalisation et ajoute une bordure.
-Notez que le JavaScript ci-dessus garantit que si le contenu déborde, l'ajout d'une nouvelle ligne de journal fera défiler le texte dans la vue.
+Notez que le JavaScript ci-dessus garantit que si le contenu déborde, l'ajout d'une nouvelle ligne de journal fait défiler le texte dans la vue.
 
 ```css
-#log {
+#journal {
   height: 100px;
   overflow: scroll;
   padding: 0.5rem;
   border: 1px solid black;
 }
 ```
+
+#### JavaScript
+
+Définissez ensuite la fonction de journalisation `journaliser()`.
+Elle prend le texte à journaliser en argument et l'ajoute au contenu de l'élément de journal comme une nouvelle ligne.
+La fonction définit aussi la propriété `scrollTop` de l'élément à la valeur de `scrollHeight`, ce qui force la nouvelle ligne à défiler dans la vue.
+
+```js
+const elementJournal = document.querySelector("#journal");
+function journaliser(text) {
+  elementJournal.innerText = `${elementJournal.innerText}${text}\n`;
+  elementJournal.scrollTop = elementJournal.scrollHeight;
+}
+```
+
+Comme dans l'exemple précédent, nous utilisons la propriété `innerText` pour définir le contenu, car c'est moins susceptible d'introduire du code malveillant que d'utiliser `innerHTML`.
 
 #### Code de test du journal
 
@@ -524,11 +524,11 @@ C'est donc trivialement implémenté comme un bouton que l'utilisateur·ice peut
 ```
 
 ```js
-const incrementButton = document.querySelector("#increment");
-let incrementValue = 0;
-incrementButton.addEventListener("click", () => {
-  incrementValue++;
-  log(`Le bouton a été cliqué ${incrementValue} fois`);
+const boutonIncrementer = document.querySelector("#increment");
+let valeurIncrementee = 0;
+boutonIncrementer.addEventListener("click", () => {
+  valeurIncrementee++;
+  journaliser(`Le bouton a été cliqué ${valeurIncrementee} fois`);
 });
 ```
 
@@ -536,7 +536,7 @@ incrementButton.addEventListener("click", () => {
 
 Cliquez sur le bouton pour ajouter une nouvelle entrée au journal.
 
-{{EmbedLiveSample("Affichage d'un journal qui ajoute des éléments", "100%", "180px")}}
+{{EmbedLiveSample("Affichage d'un journal qui ajoute des éléments", "100%", 180)}}
 
 ### Affichage d'un bouton de réinitialisation
 
@@ -552,16 +552,16 @@ Le HTML de l'exemple inclut maintenant un bouton de réinitialisation.
 
 ```html
 <button id="increment" type="button">Cliquez-moi plusieurs fois</button>
-<button id="reset" type="button">Réinitialiser</button>
-<pre id="log"></pre>
+<button id="reinitialiser" type="button">Réinitialiser</button>
+<pre id="journal"></pre>
 ```
 
 #### JavaScript
 
-Le code du bouton ajoute un gestionnaire d'événement `click` qui recharge simplement le cadre contenant l'exemple courant.
+Le code du bouton ajoute un gestionnaire d'évènement `click` qui recharge simplement le cadre contenant l'exemple courant.
 
 ```js
-const reload = document.querySelector("#reset");
+const reload = document.querySelector("#reinitialiser");
 
 reload.addEventListener("click", () => {
   window.location.reload(true);
@@ -569,7 +569,7 @@ reload.addEventListener("click", () => {
 ```
 
 ```css hidden
-#log {
+#journal {
   height: 100px;
   overflow: scroll;
   padding: 0.5rem;
@@ -578,17 +578,17 @@ reload.addEventListener("click", () => {
 ```
 
 ```js hidden
-const logElement = document.querySelector("#log");
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
+const elementJournal = document.querySelector("#journal");
+function journaliser(text) {
+  elementJournal.innerText = `${elementJournal.innerText}${text}\n`;
+  elementJournal.scrollTop = elementJournal.scrollHeight;
 }
 
-const incrementButton = document.querySelector("#increment");
-let incrementValue = 0;
-incrementButton.addEventListener("click", () => {
-  incrementValue++;
-  log(`Le bouton a été cliqué ${incrementValue} fois`);
+const boutonIncrementer = document.querySelector("#increment");
+let valeurIncrementee = 0;
+boutonIncrementer.addEventListener("click", () => {
+  valeurIncrementee++;
+  journaliser(`Le bouton a été cliqué ${valeurIncrementee} fois`);
 });
 ```
 
@@ -597,7 +597,7 @@ incrementButton.addEventListener("click", () => {
 Cliquez sur le bouton «&nbsp;Cliquez-moi plusieurs fois&nbsp;» un certain nombre de fois.
 Réinitialisez l'exemple en appuyant sur le bouton «&nbsp;Réinitialiser&nbsp;».
 
-{{EmbedLiveSample("Affichage d'un bouton de réinitialisation", "100%", "180px")}}
+{{EmbedLiveSample("Affichage d'un bouton de réinitialisation", "100%", 180)}}
 
 ## Conventions concernant les exemples interactifs
 

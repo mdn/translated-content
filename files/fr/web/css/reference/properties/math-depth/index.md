@@ -3,7 +3,7 @@ title: Propriété CSS `math-depth`
 short-title: math-depth
 slug: Web/CSS/Reference/Properties/math-depth
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`math-depth`** décrit une notion de _profondeur_ pour chaque élément d'une formule mathématique, par rapport au conteneur de niveau supérieur de cette formule. C'est utilisé pour mettre à l'échelle la valeur calculée de la [taille de police](/fr/docs/Web/CSS/Reference/Properties/font-size) des éléments lorsque `font-size: math` est appliqué.

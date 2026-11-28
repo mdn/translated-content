@@ -3,7 +3,7 @@ title: Propriété CSS `scrollbar-color`
 short-title: scrollbar-color
 slug: Web/CSS/Reference/Properties/scrollbar-color
 l10n:
-  sourceCommit: 2e2dfb27a085911dd64aa4798d4a1071660c2397
+  sourceCommit: 7484d45816002fbf082a59c5d95c38a1eb2b2e4b
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`scrollbar-color`** définit la couleur de la piste et du curseur de la barre de défilement.
@@ -79,17 +79,6 @@ Lorsqu'on utilise `scrollbar-color` avec certains couleurs spécifiques, il est 
 
 ### Coloration des barres de défilement
 
-#### CSS
-
-```css
-.scroller {
-  width: 300px;
-  height: 100px;
-  overflow-y: scroll;
-  scrollbar-color: #000077 #bada55;
-}
-```
-
 #### HTML
 
 ```html
@@ -100,6 +89,17 @@ Lorsqu'on utilise `scrollbar-color` avec certains couleurs spécifiques, il est 
   fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
   earthnut pea peanut soko zucchini.
 </div>
+```
+
+#### CSS
+
+```css
+.scroller {
+  width: 300px;
+  height: 100px;
+  overflow-y: scroll;
+  scrollbar-color: #000077 #bada55;
+}
 ```
 
 #### Résultat

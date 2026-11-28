@@ -2,7 +2,7 @@
 title: Requêtes de tirage propositions et révisions
 slug: MDN/Community/Pull_requests
 l10n:
-  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
 
 Ce document explique comment les contributeur·ice·s apportent des modifications à MDN Web Docs, comment ces changements sont relus et publiés sur le site.
@@ -17,7 +17,7 @@ Les modifications de contenu sur MDN Web Docs incluent&nbsp;:
 Quelle que soit la façon dont les modifications sont apportées, elles sont envoyées sous forme de requêtes de tirage («&nbsp;<i lang="en">pull request</i>&nbsp;» en anglais) sur GitHub.
 Les changements suivent les étapes suivantes avant d'être publiés sur MDN Web Docs&nbsp;:
 
-1. **Proposition des modifications&nbsp;:** En tant qu'auteur·ice de la requête de tirage, vous soumettez vos changements en ouvrant une requête de tirage.
+1. **Proposition des modifications&nbsp;:** En tant qu'auteur·ice de la requête de tirage, vous envoyez vos changements en ouvrant une requête de tirage.
    Consultez les sections [Avant de commencer](#avant_de_commencer), [Ouvrir une requête de tirage](#ouvrir_une_requête_de_tirage) et [Après avoir ouvert une requête de tirage](#apres_avoir_ouvert_une_requête_de_tirage) pour en savoir plus sur nos processus.
 2. **Relecture des modifications&nbsp;:** Vos changements sont relus par des membres de MDN et des bénévoles.
    Voir la section [Processus de relecture des requêtes de tirage](#processus_de_relecture_des_requêtes_de_tirage) pour plus de détails.
@@ -56,9 +56,11 @@ Si vous ne savez pas par où commencer, contactez-nous sur [le serveur Discord](
 
 Lorsque vous êtes prêt·e à ouvrir une requête de tirage, suivez ces recommandations&nbsp;:
 
+- **Relisez vos modifications avant d'ouvrir une requête de tirage&nbsp;:** Un·e humain·e doit examiner chaque requête de tirage avant qu'elle ne soit ouverte, y compris les requêtes de tirage créées par des outils automatisés en votre nom.
+  Assurez-vous de comprendre chaque modification et d'avoir testé tout code.
 - **Les requêtes de tirage doivent être courtes et centrées sur un seul problème&nbsp;:** Si possible, regroupez les modifications liées en plusieurs petites requêtes de tirage.
   Si une requête devient trop volumineuse, le·la relecteur·ice peut la fermer et vous demander de proposer des requêtes distinctes pour chaque ensemble logique de changements.
-- **Ajoutez une description des modifications&nbsp;:** Fournissez autant de contexte et de justification que possible pour la requête de tirage.
+- **Ajoutez une description des modifications&nbsp;:** Expliquez ce que vous avez changé et pourquoi, avec vos propres mots.
 - **Ajoutez le lien vers le ticket que vous clôturez&nbsp;:** Dans la description de la requête, ajoutez «&nbsp;Fixes&nbsp;» si elle résout totalement le problème ou «&nbsp;Relates to&nbsp;» si c'est un problème connexe.
   Plus d'informations sur le lien entre requêtes et tickets sont disponibles dans la [documentation GitHub](https://docs.github.com/fr/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
 - **Ajoutez «&nbsp;depends on&nbsp;»** avec un lien vers une dépendance si d'autres requêtes doivent être fusionnées avant (ex.&nbsp;: exemples de code dans d'autres dépôts).
@@ -68,6 +70,8 @@ Lorsque vous êtes prêt·e à ouvrir une requête de tirage, suivez ces recomma
 - **N'apportez pas de modifications purement stylistiques&nbsp;:**
   MDN Web Docs est une documentation technique&nbsp;: n'apportez pas de changements de style sauf pour corriger une faute de grammaire.
 - **N'ajoutez ni ne supprimez de sauts de ligne inutilement** sur les pages qui suivent un style de formatage particulier.
+
+Nous nous réservons le droit de fermer les requêtes de tirage qui ne respectent pas ces directives.
 
 ### Après avoir ouvert une requête de tirage
 

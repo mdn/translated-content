@@ -10,7 +10,7 @@ l10n:
 
 La propriété **`valueAsDate`** de l'interface {{DOMxRef("HTMLInputElement")}} représente la valeur actuelle de l'élément HTML {{HTMLElement("input")}} sous forme de {{JSxRef("Date")}}, ou `null` si la conversion est impossible.
 
-Cette propriété peut également être définie directement, par exemple pour définir une date par défaut en fonction d'une condition. Si la valeur fournie n'est ni `null` ni un objet `Date`, une {{JSxRef("TypeError")}} est levée. Si la valeur fournie est `null` ou une [date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), la valeur de l'entrée est définie sur une chaîne de caractères vide.
+Cette propriété peut également être définie directement, par exemple pour définir une date par défaut en fonction d'une condition. Si la valeur fournie n'est ni `null` ni un objet `Date`, une {{JSxRef("TypeError")}} est levée. Si la valeur fournie est `null` ou une [date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide), la valeur de l'entrée est définie sur une chaîne de caractères vide.
 
 Cette propriété retourne toujours `null` lorsqu'elle est consultée sur une entrée de formulaire qui n'est pas basée sur la date ou l'heure. Lors de la définition de cette propriété sur une telle entrée de formulaire, une `InvalidStateError` {{DOMxRef("DOMException")}} est levée.
 

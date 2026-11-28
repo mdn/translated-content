@@ -1,21 +1,29 @@
 ---
-title: Window.scrollByPages()
+title: "Window: scrollByPages() メソッド"
+short-title: scrollByPages()
 slug: Web/API/Window/scrollByPages
+l10n:
+  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
-{{ ApiRef() }} {{Non-standard_header}}
+{{APIRef}} {{Non-standard_header}}
 
 **`Window.scrollByPages()`** メソッドは、現在の文書を指定されたページ数だけスクロールさせます。
 
-## 概要
+## 構文
 
-```js
-window.scrollByPages(pages);
+```js-nolint
+scrollByPages(pages)
 ```
 
 ### 引数
 
-- `pages` はスクロールさせるページ数です。正または負の整数を指定することができます。
+- `pages`
+  - : スクロールさせるページ数です。正または負の整数を指定できます。
+
+### 返値
+
+なし ({{jsxref("undefined")}}).
 
 ## 例
 
@@ -29,7 +37,7 @@ window.scrollByPages(-1);
 
 ## 仕様書
 
-DOM Level 0 です。仕様書にはありません。
+DOM レベル 0 です。仕様には含まれていません。
 
 ## ブラウザーの互換性
 

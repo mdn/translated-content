@@ -2,7 +2,7 @@
 title: Zstandard compression
 slug: Glossary/Zstandard_compression
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 2a563c927890794b513523649ccfbbe48d336465
 ---
 
 **Zstandard** est un algorithme de compression sans perte à usage général.
@@ -19,7 +19,7 @@ Pour la prise en charge par les navigateurs, voir [Compatibilité des navigateur
   - {{Glossary("Brotli compression", "Compression Brotli")}}
   - {{Glossary("Gzip compression", "Compression Gzip")}}
 - [RFC Zstandard <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/rfc8878)
-- [Page d'accueil Zstandard <sup>(angl.)</sup>](https://facebook.github.io/zstd/)
-- [Dépôt GitHub Zstandard <sup>(angl.)</sup>](https://github.com/facebook/zstd)
+- [Page d'accueil Zstandard <sup>(angl.)</sup>](https://meta.github.io/zstd/)
+- [Dépôt GitHub Zstandard <sup>(angl.)</sup>](https://github.com/meta/zstd)
 - [Zstandard sur Wikipédia](https://fr.wikipedia.org/wiki/Zstandard)
 - [Zstandard sur Caniuse <sup>(angl.)</sup>](https://caniuse.com/#feat=zstandard)

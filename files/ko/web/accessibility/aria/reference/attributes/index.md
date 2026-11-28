@@ -115,4 +115,4 @@ ARIA 상태와 속성에는 4가지 유형이 있습니다:
 
 ## 같이 보기
 
-- [Using ARIA: roles, states, and properties](/ko/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+- [Using ARIA: roles, states, and properties](/ko/docs/Web/Accessibility/ARIA/Guides/Techniques)

@@ -1,28 +1,28 @@
 ---
-title: MathML 初心者ガイド
+title: MathML ガイド
+short-title: ガイド
 slug: Web/MathML/Guides
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: d37026a4d0e1e3a5a2ab82d34566689aada039f7
 ---
 
-{{MathMLRef}}
+このページでは、ウェブページで MathML を記述する際に役立つガイドを紹介します。記述方法、エディター、フォントなどについて説明します。
 
-以下の各ガイドでは、 MathML の基本的な動作方法、構文、 HTML 内で使用する方法など、 MathML の習得に向けた穏やかな入門コースが指定されています。
+- [MathML の記述](/ja/docs/Web/MathML/Guides/Authoring)
+  - : このページでは、タグと属性をテキスト形式で記述する MathML 言語を使って、数学を記述する方法を説明します。
+- [MathML のためのフォント](/ja/docs/Web/MathML/Guides/Fonts)
+  - : 適切な範囲の Unicode 文字に対応し、Open Font Format の機能を備えたフォントが、数式を適切にレンダリングするために必要です。このページでは、ブラウザーで MathML を正しく表示するために、そのような数式フォントをユーザーがインストールする方法を説明します。
 
-## ガイド
+## 例
 
-- [MathML を始めよう](/ja/docs/Web/MathML/Tutorials/For_beginners/Getting_started)
-  - : この記事では、単純な HTML 文書を用意し、そこに MathML の数式を追加する方法を、いくつかの要素を紹介しながら見ていきます。
-- [テキストコンテナー](/ja/docs/Web/MathML/Tutorials/For_beginners/Text_containers)
-  - : MathML の概要を理解したところで、 MathML 数式の構成要素として使用するテキストコンテナー（変数、数値、演算子、...）に移動します。
-- [分数と根号](/ja/docs/Web/MathML/Tutorials/For_beginners/Fractions_and_roots)
-  - : この記事では、テキストコンテナーにおいて分数や根号を入れ子にして、より複雑な MathML 式を構築する方法を記述しています。
-- [添字](/ja/docs/Web/MathML/Tutorials/For_beginners/Scripts)
-  - : 基本的な数学記法の復習を続け、添字を使った MathML 要素の構築に焦点を当てます。
-- [表](/ja/docs/Web/MathML/Tutorials/For_beginners/Tables)
-  - : 基本的な数学表記がすべてわかったら、あとは行列のような式や他にも高度な数学レイアウトを使用することができる表形式レイアウトを考えることができます。
+ガイドを補う例として、次のページでは MathML を実際の導出や証明にどのように利用できるかを紹介します。
 
-## 評価試験
+- [ピタゴラスの定理の証明](/ja/docs/Web/MathML/Guides/Proving_the_Pythagorean_theorem)
+  - : [ピタゴラスの定理](https://en.wikipedia.org/wiki/Pythagorean_theorem)<sup>(英語)</sup>の証明を、MathML を使って各段階を視覚的に構成しながら概説します。
+- [二次方程式の解の公式を導く](/ja/docs/Web/MathML/Guides/Deriving_the_quadratic_formula)
+  - : MathML を使って各変形を示しながら、二次方程式の解の公式の導出を概説します。
 
-- [3 つの有名な数式](/ja/docs/Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas)
-  - : 前の記事で学んだことで、すでに比較的洗練された MathML 数式を書くことができるはずです。この評価試験ではそのための機会を提供します。
+## 関連情報
+
+- [MathML チュートリアル](/ja/docs/Web/MathML/Tutorials)
+- [MathML リファレンス](/ja/docs/Web/MathML/Reference)

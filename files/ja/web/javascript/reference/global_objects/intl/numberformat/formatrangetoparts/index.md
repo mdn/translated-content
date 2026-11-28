@@ -3,10 +3,10 @@ title: Intl.NumberFormat.prototype.formatRangeToParts()
 short-title: formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
-**`formatRangeToParts()`** は {{jsxref("Intl.NumberFormat")}} インスタンスのメソッドで、ロケール固有のトークンを含むオブジェクトの {{jsxref("Array")}} を返します。このトークンを使用して、ロケール固有の部分を保持したまま、独自の文字列を構築することができます。これにより、ロケールを認識する数値文字列の書式化範囲を指定することが可能になります。
+**`formatRangeToParts()`** は {{jsxref("Intl.NumberFormat")}} インスタンスのメソッドで、ロケール固有のトークンを含むオブジェクトの {{jsxref("Array")}} を返します。このトークンを使用して、ロケール固有の部分を保持したまま、独自の文字列を構築することができます。これにより、数値の範囲を表す文字列をロケールに応じた独自の書式で表せます。
 
 ## 構文
 
@@ -17,13 +17,13 @@ formatRangeToParts(startRange, endRange)
 ### 引数
 
 - `startRange`
-  - : 書式化する数値 ({{jsxref("Number")}})、長整数 ({{jsxref("BigInt")}})、文字列のいずれかです。文字列は、[数値への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)と同じ方法で解釈されますが、`formatRangeToParts()` は、文字列が表す正確な値を使用し、暗黙的に数値に変換する際に精度が失われることを避けます。
+  - : 書式化する数値 ({{jsxref("Number")}})、長整数 ({{jsxref("BigInt")}})、文字列のいずれかです。文字列は、[数値への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)と同じ方法で解釈されますが、`formatRangeToParts()` は、文字列が表す正確な値を使用し、暗黙的に数値へ強制変換する際に精度が失われることを避けます。
 - `endRange`
   - : 書式化する数値 ({{jsxref("Number")}})、長整数 ({{jsxref("BigInt")}})、文字列のいずれかです。
 
 ### 返値
 
-書式化された範囲を部分的に含むオブジェクトの {{jsxref("Array")}} です。各オブジェクトには、`type`、`value`、`source` の 3 つのプロパティがあり、それぞれ文字列が設定されています。指定された順序で `value` を連結すると、{{jsxref("Intl/NumberFormat/formatRange", "formatRange()")}} と同じ文字列になります。`type` は、{{jsxref("Intl/NumberFormat/formatToParts", "formatToParts()")}} と同じ値、または追加の値 `"approximatelySign"` （下記参照）とすることができます。 `source` は、次のいずれかになります。
+書式化された範囲を部品に分けて表すオブジェクトの {{jsxref("Array")}} です。各オブジェクトには、`type`、`value`、`source` の 3 つのプロパティがあり、それぞれ文字列が設定されています。指定された順序で `value` を連結すると、{{jsxref("Intl/NumberFormat/formatRange", "formatRange()")}} と同じ文字列になります。`type` は、{{jsxref("Intl/NumberFormat/formatToParts", "formatToParts()")}} と同じ値、または追加の値 `"approximatelySign"` （下記参照）とすることができます。 `source` は、次のいずれかになります。
 
 - `startRange`
   - : トークンは先頭の数値の部分です。
@@ -37,7 +37,7 @@ formatRangeToParts(startRange, endRange)
 ### 例外
 
 - {{jsxref("RangeError")}}
-  - : `startRange` または `endRange` が `NaN` または変換不可能な文字列の場合に発生します。
+  - : `startRange` または `endRange` が `NaN` または数値に強制変換できない文字列の場合に発生します。
 - {{jsxref("TypeError")}}
   - : `startRange` または `endRange` のいずれかが undefined の場合に発生します。
 

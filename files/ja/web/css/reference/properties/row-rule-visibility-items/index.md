@@ -1,9 +1,9 @@
 ---
-title: "`row-rule-visibility-items` プロパティ (CSS)"
+title: "`row-rule-visibility-items` プロパティ"
 short-title: row-rule-visibility-items
 slug: Web/CSS/Reference/Properties/row-rule-visibility-items
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 {{SeeCompatTable}}
@@ -57,7 +57,7 @@ cite {
 ## 構文
 
 ```css
-/* キーワード */
+/* キーワード値 */
 row-rule-visibility-items: all;
 row-rule-visibility-items: around;
 row-rule-visibility-items: between;
@@ -163,7 +163,7 @@ li {
 
 #### 結果
 
-{{EmbedLiveSample("Basic", "", "230")}}
+{{EmbedLiveSample("basic_example", "", "230")}}
 
 ## 仕様書
 

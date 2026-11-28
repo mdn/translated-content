@@ -2,7 +2,7 @@
 title: spreadMethod
 slug: Web/SVG/Reference/Attribute/spreadMethod
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`spreadMethod`** 属性は、グラデーションの定義された境界の外側で、図形がどのように塗りつぶされるかを決定します。
@@ -12,41 +12,11 @@ l10n:
 - {{SVGElement("linearGradient")}}
 - {{SVGElement("radialGradient")}}
 
-## 使用コンテキスト
+## 例
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td><code>pad</code> | <code>reflect</code> | <code>repeat</code></td>
-    </tr>
-    <tr>
-      <th scope="row">初期値</th>
-      <td><code>pad</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
+### spreadMethod と線形グラデーション
 
-- `pad`
-  - : この値は、グラデーションの最終色が、グラデーションの境界を越えて図形全体を塗りつぶすことを示します。
-- `reflect`
-  - : この値は、グラデーションが境界を越えて逆方向にも繰り返されることを示しています。
-- `repeat`
-  - : この値は、グラデーションが境界を越えて元通りの順序で繰り返されることを指定します。
-
-### グラデーションの境界の定義
-
-デフォルトでは、グラデーションは塗りつぶされる図形の境界まで達します。この属性の効果を確認するには、グラデーションのサイズを図形よりも小さく設定する必要があります。
-
-線形グラデーションの場合、境界は `x1`、`x2`、`y1`、`y2` の各属性によって矩形として定義されます。放射グラデーションの場合、境界は `cx`、`cy`、`r`（外側）および `fx`、`fy`、`fr`（内側）の各属性によって、外側の円と内側の円として定義されます。
-
-## spreadMethod と線形グラデーションの例
-
-### SVG
+#### SVG
 
 ```html
 <svg width="220" height="150" xmlns="http://www.w3.org/2000/svg">
@@ -75,15 +45,15 @@ l10n:
 </svg>
 ```
 
-### 結果
+#### 結果
 
-{{EmbedLiveSample('Examples_of_spreadMethod_with_linear_gradients')}}
+{{EmbedLiveSample('spreadMethod with linear gradients')}}
 
 それぞれのグラデーションの中央の 3 分の 1 の部分は同じであることに注目してください。外側の 3 分の 1 の部分には、3 つの展開方法の違いが示されています。
 
-## spreadMethod と放射グラデーションの例
+### spreadMethod と放射グラデーション
 
-### SVG
+#### SVG
 
 ```html
 <svg width="340" height="120" xmlns="http://www.w3.org/2000/svg">
@@ -141,9 +111,41 @@ l10n:
 </svg>
 ```
 
-### 結果
+#### 結果
 
-{{EmbedLiveSample('Examples_of_spreadMethod_with_radial_gradients')}}
+{{EmbedLiveSample('spreadMethod with radial gradients')}}
+
+## 使用上のメモ
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td><code>pad</code> | <code>reflect</code> | <code>repeat</code></td>
+    </tr>
+    <tr>
+      <th scope="row">初期値</th>
+      <td><code>pad</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
+    </tr>
+  </tbody>
+</table>
+
+- `pad`
+  - : グラデーションの最終色が、グラデーションの境界を越えて図形を塗りつぶすことを示します。
+- `reflect`
+  - : グラデーションが境界を越えて逆方向に繰り返されることを示します。
+- `repeat`
+  - : グラデーションが境界を越えて元の順序で繰り返されることを示します。
+
+### グラデーションの境界の定義
+
+デフォルトでは、グラデーションは塗りつぶされる図形の境界まで達します。この属性の効果を確認するには、グラデーションのサイズを図形より小さく設定する必要があります。
+
+線形グラデーションの場合、境界は `x1`、`x2`、`y1`、`y2` の各属性によって矩形として定義されます。放射グラデーションの場合、境界は `cx`、`cy`、`r`（外側）および `fx`、`fy`、`fr`（内側）の各属性によって、外側の円と内側の円として定義されます。
 
 ## 仕様書
 

@@ -2,7 +2,7 @@
 title: 遅延読み込み
 slug: Web/Performance/Guides/Lazy_loading
 l10n:
-  sourceCommit: 8db892b3e7ca294621898441e7db2481e0e6d939
+  sourceCommit: 7d467ece2b269b661f61e56c29e44291aaba3085
 ---
 
 **遅延読み込み** (Lazy loading) とは、リソースをノンブロッキング（クリティカルでない）ものとして識別し、必要なときだけこれらを読み込む戦略のことです。[クリティカルレンダリングパス](/ja/docs/Web/Performance/Guides/Critical_rendering_path)の長さを短縮する方法であり、ページのロード時間の短縮につながります。
@@ -68,7 +68,17 @@ JavaScript、CSS、HTML は小さな塊に分割して送信することがで�
 ```html
 <img loading="lazy" src="image.jpg" alt="..." />
 <iframe loading="lazy" src="video-player.html" title="..."></iframe>
+<video
+  loading="lazy"
+  src="video.mp4"
+  poster="poster.jpg"
+  width="640"
+  height="360"
+  controls></video>
+<audio loading="lazy" src="audio.mp3" controls></audio>
 ```
+
+遅延読み込みされる `<audio>` 要素には [`controls`](/ja/docs/Web/HTML/Reference/Elements/audio#controls) 属性が必要です。この属性がないと、要素が表示されずビューポートの近くに来ないため、音声は読み込まれません。
 
 `load` イベントは、積極的に読み込まれたコンテンツがすべて読み込まれたときに発行されます。このとき、{{Glossary("visual viewport", "視覚ビューポート")}}の範囲内にまだ読み込まれていない遅延読み込みされた画像、iframe、動画、音声があることは十分に考えられます（というか、あり得ます）。
 

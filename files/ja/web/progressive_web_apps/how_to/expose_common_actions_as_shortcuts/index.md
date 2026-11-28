@@ -2,10 +2,8 @@
 title: よくあるアプリ操作をショートカットとして表示する
 slug: Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts
 l10n:
-  sourceCommit: e03b13c7e157ec7b7bb02a6c7c4854b862195905
+  sourceCommit: 26f9fbee05fb92b584d44fba4359e86796484aa6
 ---
-
-{{PWASidebar}}
 
 多くのオペレーティングシステムには、ユーザーがアプリアイコンを右クリックまたは長押しした際に、ショートカットメニュー（またはジャンプリスト）を表示する機能があります。例えば Windows では、タスクバーにピン留めされたプログラムを右クリックすると、そのプログラム固有のアクションと最近開いたファイルのリストが表示されます。
 
@@ -17,7 +15,7 @@ Androidでは、アプリアイコンを長押しすると、そのアプリで�
 
 [プログレッシブウェブアプリ (PWA)](/ja/docs/Web/Progressive_web_apps) は、プラットフォームのネイティブアプリと同様に端末にインストールでき、ネイティブアプリと同様に、ユーザーが共通のアクションにアクセスできるようにアプリのショートカットメニューを定義することもできます。
 
-ショートカットは、アプリアイコンを右クリックまたは長押しした際にのみ表示されます。つまり、 PWA がユーザーのデバイスにインストールされている場合のみ利用可能です。 PWA をインストール可能にする方法については、「[PWA をインストール可能にする](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)」を参照してください。
+ショートカットは、アプリアイコンを右クリックまたは長押ししたときにのみ表示されます。つまり、PWA がユーザーの端末にインストールされている場合のみ利用できます。PWA をインストール可能にする方法については、「[PWA をインストール可能にする](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)」を参照してください。
 
 ## なぜショートカットを使うのか
 
@@ -57,7 +55,7 @@ PWA のショートカットを定義するには、 [`shortcuts`](/ja/docs/Web/
 - `name`
   - : ショートカットメニューに表示されるショートカットの名前です。ユーザーがショートカットの機能を理解できるように、短く簡潔ながら十分な説明を入れるようにしてください。
 - `url`
-  - : ユーザーがショートカットを選択した際に PWA を起動するための URL です。この URL は絶対パスである場合、ウェブアプリマニフェストの[スコープ](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/scope)内に存在する必要があります。 URL は相対パスとしても指定可能で、その場合は PWA の[開始 URL](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/start_url) を基準に解決されます。
+  - : ユーザーがショートカットを選択したときに PWA を起動する URL です。URL を絶対パスで指定する場合は、ウェブアプリマニフェストの[スコープ](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/scope)内にある必要があります。相対パスで指定することもでき、その場合は PWA の[開始 URL](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/start_url)を基準に解決されます。
 
 それ以外のショートカットオブジェクトのプロパティはすべてオプションですが、ショートカットをより有益なものにするために、これらのプロパティも指定することを検討してください。
 
@@ -72,4 +70,4 @@ PWA のショートカットを定義するには、 [`shortcuts`](/ja/docs/Web/
 
 - [`shortcuts` マニフェストメンバー](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/shortcuts)
 - [Get things done quickly with app shortcuts](https://web.dev/articles/app-shortcuts) (web.dev, 2022)
-- [アプリのショートカットを定義する](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps-chromium/how-to/shortcuts) (learn.microsoft.com, 2023)
+- [アプリのショートカットを定義する](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps/how-to/shortcuts) (learn.microsoft.com, 2023)

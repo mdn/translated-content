@@ -3,21 +3,23 @@ title: '`<input type="range">` 属性値'
 short-title: <input type="range">
 slug: Web/HTML/Reference/Elements/input/range
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 100cf25d92d3953f3c70ecaa2af637d5e42179d8
 ---
 
-{{HTMLElement("input")}} 要素の **`range`** 型は、指定された値より小さくなく、別に指定された値より大きくない値をユーザーに指定させるために使用します。しかし、厳密な値は重要とはされません。これは通常、 {{HTMLElement('input/number', 'number')}} 入力型のようなテキスト入力ボックスではなく、スライダーやダイアルコントロールを用いて表現されます。
+{{HTMLElement("input")}} 要素の **`range`** 型は、ある値以上で別の値以下の数値をユーザーに指定させるために使用します。ただし、厳密な値は重要ではありません。通常、{{HTMLElement('input/number', 'number')}} 入力型のようなテキスト入力欄ではなく、スライダーやダイアルコントロールで表現されます。
 
 この種のウィジェットは厳密なものではないので、コントロールの正確な値が重要でない限り、通常は使用するべきではありません。
+
+ユーザーのブラウザーが `range` 型に対応していない場合、`{{HTMLElement('input/text', 'text')}}` 入力として扱われます。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<p>Audio settings:</p>
+<p>オーディオ設定:</p>
 
 <div>
   <input type="range" id="volume" name="volume" min="0" max="11" />
-  <label for="volume">Volume</label>
+  <label for="volume">音量</label>
 </div>
 
 <div>
@@ -29,7 +31,7 @@ l10n:
     max="100"
     value="90"
     step="10" />
-  <label for="cowbell">Cowbell</label>
+  <label for="cowbell">カウベル</label>
 </div>
 ```
 
@@ -45,8 +47,6 @@ input {
   margin: 0.4rem;
 }
 ```
-
-ユーザーのブラウザーが `range` 型に対応していない場合は、 `{{HTMLElement('input/text', 'text')}}` 入力で代替されて扱われます。
 
 ### 値
 
@@ -72,7 +72,7 @@ defaultValue =
 
 ## 追加の属性
 
-すべての {{HTMLElement("input")}} 型で共通する属性に加え、 `range` 型の入力欄は次の属性にも対応しています。
+すべての {{HTMLElement("input")}} 型に共通する属性に加え、`range` 型の入力欄は次の属性にも対応しています。
 
 > [!NOTE]
 > range 型の入力欄に適用できない入力属性は、 `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src` です。これらの属性が指定されても、無視されます。
@@ -87,13 +87,13 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 この入力欄が受け付ける最大値です。要素に入力された [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。 [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) 属性の値が数値でない場合、要素は最大値を持ちません。
 
-この値は [`min`](/ja/docs/Web/HTML/Reference/Attributes/min) 属性の値より大きいか、等しくしなければなりません。HTML の [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) 属性を参照してください。
+この値は [`min`](/ja/docs/Web/HTML/Reference/Attributes/min) 属性の値以上でなければなりません。HTML の [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) 属性を参照してください。
 
 ### min
 
 許可されている値の範囲の最小値です。要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) がこれより小さい場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。 `min` 属性の値が数値でない場合、要素は最小値を持ちません。
 
-この値は [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) 属性の値以下でなければなりません。 HTML の [`min`](/ja/docs/Web/HTML/Reference/Attributes/min) 属性を参照してください。
+この値は [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) 属性の値以下でなければなりません。HTML の [`min`](/ja/docs/Web/HTML/Reference/Attributes/min) 属性を参照してください。
 
 > [!NOTE]
 > もし `min` と `max` の値が等しかったり、`max` の値が `min` の値より低かったりすると、ユーザーはその範囲を操作することができなくなります。
@@ -113,26 +113,26 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### orient
 
-CSS の標準外の -moz-orient non-standard プロパティと同様に {{htmlelement('progress')}} および {{htmlelement('meter')}} 要素に影響を与える `orient` 属性は、範囲スライダーの向きを定義する定義します。値は `horizontal` が範囲を水平方向に描画することを、 `vertical` が範囲を垂直に描画することを意味します。
+{{htmlelement('progress')}} 要素と {{htmlelement('meter')}} 要素にも影響する CSS の標準外プロパティ `-moz-orient` と同様に、`orient` 属性は範囲スライダーの向きを定義します。値 `horizontal` は範囲を水平方向に、`vertical` は垂直方向に描画することを示します。
 
 ## 例
 
-`number` 型がユーザーに数値を入力させ、任意で値を最小値と最大値の間に強制することができるものですので、具体的な値を入力する必要があります。 `range` 入力型は、どの値が選択されているかをユーザーが気にする、または知る必要がない場合に、ユーザーに値を尋ねることができます。
+`number` 型では、ユーザーが数値を入力し、その値を任意で最小値と最大値の範囲内に制限できますが、具体的な値の入力が必要です。一方、`range` 入力型は、選択した数値をユーザーが気にしない、または知る必要がない場合に使えます。
 
-range 入力欄がよく使用される場合の例をいくつか示します。
+`range` 入力欄がよく使われる場面の例をいくつか示します。
 
 - ボリュームやバランス、フィルター制御のようなオーディオの制御。
 - カラーチャネル、透過度、明るさなどの色の構成の制御。
 - 難易度、視点距離、ワールドサイズなどのゲームの構成の制御。
 - パスワードマネージャーが生成するパスワードの長さ。
 
-原則として、ユーザーが実際の数値自体よりも最大値と最小値の間のパーセント値に関心がある場合は、 range 入力が最有力候補になります。例えば、ホームステレオの音量制御では、ユーザーは通常「音量を 0.5 に設定する」ではなく、「音量を最大値の半分くらいに設定する」と考えます。
+原則として、ユーザーが実際の数値よりも最小値と最大値の間の割合に関心がある場合は、`range` 入力が適しています。例えば、家庭用ステレオの音量を調節するとき、ユーザーは通常「音量を 0.5 に設定する」ではなく、「音量を最大値の半分くらいに設定する」と考えます。
 
 ### 最小値と最大値の指定
 
-デフォルトでは、最小値は 0 で最大値は 100 です。これが望むものでないのであれば、 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) や [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性の値を変更することで、簡単に範囲を変更することができます。浮動小数点値にすることもできます。
+デフォルトでは、最小値は 0 で最大値は 100 です。これが意図した範囲でない場合は、[`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) 属性や [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性の値を変更して、範囲を簡単に指定できます。どちらにも浮動小数点数を指定できます。
 
-例えば、ユーザーに -10 から 10 までの値を尋ねるのであれば、次のようにすることができます。
+例えば、ユーザーに -10 から 10 までの値を指定してもらうには、次のようにします。
 
 ```html
 <input type="range" min="-10" max="10" />
@@ -142,7 +142,7 @@ range 入力欄がよく使用される場合の例をいくつか示します�
 
 ### 値の粒度の設定
 
-デフォルトでは、粒度は 1 であり、値は常に整数であることを意味します。粒度は、[`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を変更することで制御することができます。例えば、 5 から 10 の中間値が必要であれば、`step` の値を 0.5 に設定してください。
+デフォルトでは、粒度は 1 であり、値は常に整数になります。粒度は [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性で変更できます。例えば、5 から 10 までの範囲で中間の値も指定できるようにするには、`step` の値を 0.5 にします。
 
 #### step 属性の設定
 
@@ -160,7 +160,7 @@ range 入力欄がよく使用される場合の例をいくつか示します�
 
 ```html
 <input id="pi_input" type="range" min="0" max="3.14" step="any" />
-<p>Value: <output id="value"></output></p>
+<p>値: <output id="value"></output></p>
 ```
 
 ##### JavaScript
@@ -178,11 +178,11 @@ input.addEventListener("input", (event) => {
 
 {{EmbedLiveSample("Setting_step_to_any", 600, 75)}}
 
-この例では、 0 から π までの任意の値を選択することができ、選択された値の小数部は制限されません。JavaScript は、ユーザーが範囲と対話することによって値がどのように変化するかを示すために使用されます。
+この例では、0 から π までの任意の値を選択でき、小数部の桁数に制限はありません。JavaScript は、ユーザーが範囲入力を操作したときに値がどのように変化するかを示すために使用しています。
 
 ### 目盛の追加
 
-範囲コントロールに目盛を追加するには、`list` 属性を記載して、それにコントロール上の一連の目盛を定義する {{HTMLElement("datalist")}} 要素の `id` を指定します。各点は {{HTMLElement("option")}} 要素を使用して表現され、その [`value`](/ja/docs/Web/HTML/Reference/Elements/option#value) には、マークを描画すべき範囲の値が設定されます。
+範囲コントロールに目盛を追加するには、`list` 属性に、コントロール上の一連の目盛を定義する {{HTMLElement("datalist")}} 要素の `id` を指定します。それぞれの目盛は {{HTMLElement("option")}} 要素で表し、その [`value`](/ja/docs/Web/HTML/Reference/Elements/option#value) には目盛を描画する範囲の値を設定します。
 
 #### HTML
 
@@ -214,16 +214,16 @@ input.addEventListener("input", (event) => {
 
 ```html
 <p>
-  <label for="temp1">Temperature for room 1:</label>
+  <label for="temp1">部屋 1 の温度:</label>
   <input type="range" id="temp1" name="temp1" list="values" />
 </p>
 <p>
-  <label for="temp2">Temperature for room 2:</label>
+  <label for="temp2">部屋 2 の温度:</label>
   <input type="range" id="temp2" name="temp2" list="values" />
 </p>
 
 <p>
-  <label for="temp3">Temperature for room 3:</label>
+  <label for="temp3">部屋 3 の温度:</label>
   <input type="range" id="temp3" name="temp3" list="values" />
 </p>
 
@@ -242,20 +242,20 @@ input.addEventListener("input", (event) => {
 
 ### ラベルの追加
 
-目盛には `<option>` 要素に `label` 属性を与えることで、ラベル付けをすることができます。ただし、デフォルトでは、ラベルのコンテンツは表示されません。このラベルを表示したり、ラベルを正しい位置に配置するためには CSS を使用してください。以下はその方法の一つです。
+`<option>` 要素に `label` 属性を指定すると、目盛にラベルを付けられます。ただし、デフォルトではラベルの内容は表示されません。ラベルを表示し、正しい位置に配置するには CSS を使用します。以下にその方法の一つを示します。
 
 #### HTML
 
 ```html
-<label for="temp">快適な温度を選択してください。</label><br />
+<label for="tempB">快適な温度を選択してください。</label><br />
 <input type="range" id="tempB" name="temp" list="values" />
 
 <datalist id="values">
-  <option value="0" label="とても冷たい"></option>
-  <option value="25" label="冷たい"></option>
+  <option value="0" label="とても寒い"></option>
+  <option value="25" label="涼しい"></option>
   <option value="50" label="ふつう"></option>
   <option value="75" label="やや温かい"></option>
-  <option value="100" label="熱い"></option>
+  <option value="100" label="暑い"></option>
 </datalist>
 ```
 
@@ -286,9 +286,9 @@ input[type="range"] {
 
 ### 垂直の範囲コントロールの作成
 
-デフォルトでは、ブラウザーは範囲入力を、つまみが左右にスライドするスライダーとして描画します。
+デフォルトでは、ブラウザーは範囲入力を、つまみが左右に動くスライダーとして描画します。
 
-つまみが上下にスライドする垂直方向の範囲を作成するには、CSS の {{cssxref("writing-mode")}} プロパティを `vertical-rl` または `vertical-lr` に設定してください。
+つまみが上下に動く垂直方向の範囲コントロールを作成するには、CSS の {{cssxref("writing-mode")}} プロパティを `vertical-rl` または `vertical-lr` に設定します。
 
 ```html hidden
 <input type="range" min="0" max="10" value="8" />
@@ -304,7 +304,7 @@ input[type="range"] {
 
 {{EmbedLiveSample("Creating vertical range controls", 200, 200)}}
 
-CSS の {{cssxref('appearance')}} プロパティを標準外の `slider-vertical` 値に設定すると、 Chrome と Safari の古いバージョンに対応することもでき、標準外の `orient="vertical"` 属性を設定すると、 Firefox の古いバージョンに対応することもできます。
+CSS の {{cssxref('appearance')}} プロパティに標準外の値 `slider-vertical` を設定すると、古いバージョンの Chrome と Safari にも対応できます。また、標準外の `orient="vertical"` 属性を指定すると、古いバージョンの Firefox にも対応できます。
 
 例については[垂直フォームコントロールの作成](/ja/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)をご覧ください。
 
@@ -328,31 +328,24 @@ CSS の {{cssxref('appearance')}} プロパティを標準外の `slider-vertica
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Reference/Elements/input#max"><code>max</code></a>,
-        <a href="/ja/docs/Web/HTML/Reference/Elements/input#min"><code>min</code></a>, and
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>、
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>、
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#max"><code>max</code></a>、
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#min"><code>min</code></a>、
         <a href="/ja/docs/Web/HTML/Reference/Elements/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL 属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>、
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>、
         <code>valueAsNumber</code>
       </td>
     </tr>
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
-        および {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
@@ -379,4 +372,4 @@ CSS の {{cssxref('appearance')}} プロパティを標準外の `slider-vertica
 - {{domxref('validityState.rangeOverflow')}} および {{domxref('validityState.rangeUnderflow')}}
 - [ConstantSourceNode による複数の引数の制御](/ja/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [垂直フォームコントロールの作成](/ja/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
-- [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input/)
+- [範囲要素のスタイル設定](https://css-tricks.com/sliding-nightmare-understanding-range-input/)<sup>(英語)</sup>

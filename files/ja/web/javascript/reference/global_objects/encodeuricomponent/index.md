@@ -2,15 +2,15 @@
 title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 0c3c464abb1422b0534a5e3f5e81e9bbae13544c
 ---
 
-**`encodeURIComponent()`** 関数は {{Glossary("URI")}} を、特定の文字の各インスタンスを、その文字の {{Glossary("UTF-8")}} エンコード方式を表す 1 つから 4 つのエスケープシーケンスで置き換えることでエンコードします (2 つのサロゲート文字で構成される文字の場合は 4 つのエスケープシーケンスになります)。 {{jsxref("encodeURI()")}} と比較すると、この関数は URI 構文の一部を含むより多くの文字をエンコードします。
+**`encodeURIComponent()`** 関数は {{Glossary("URI")}} を、特定の文字の各インスタンスを、その文字の {{Glossary("UTF-8")}} エンコード方式を表す 1 つから 4 つのエスケープシーケンスで置き換えることでエンコードします（2 つのサロゲート文字で構成される文字の場合は 4 つのエスケープシーケンスになります）。 {{jsxref("encodeURI()")}} と比較すると、この関数は URI 構文の一部を含むより多くの文字をエンコードします。
 
 {{InteractiveExample("JavaScript デモ: encodeURIComponent()", "shorter")}}
 
 ```js interactive-example
-// Encodes characters such as ?,=,/,&,:
+// ?, =, /, &, : などの文字をエンコード
 console.log(`?x=${encodeURIComponent("test?")}`);
 // 予想される結果: "?x=test%3F"
 
@@ -27,7 +27,7 @@ encodeURIComponent(uriComponent)
 ### 引数
 
 - `uriComponent`
-  - : URI の部分（パス、クエリー文字列、フラグメントなど）としてエンコードされる文字列。他にも[文字列に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)される値があります。
+  - : URI の部分（パス、クエリー文字列、フラグメントなど）としてエンコードされる文字列。他にも[文字列に強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)される値があります。
 
 ### 返値
 
@@ -48,9 +48,9 @@ encodeURIComponent(uriComponent)
 A–Z a–z 0–9 - _ . ! ~ * ' ( )
 ```
 
-{{jsxref("encodeURI()")}} と比較すると、 `encodeURIComponent()` はより多くの文字セットをエスケープします。サーバーに送信されるフォームのユーザー入力フィールドには `encodeURIComponent()` を使用してください。これにより、{{glossary("character reference", "文字参照")}}のデータ入力中に不注意で生成される可能性のある `&` 記号や、エンコード/デコードが要求されるその他の文字がエンコードされます。例えば、ユーザーが `Jack & Jill` と入力した場合、`encodeURIComponent()` を使用しないと、アンパサンドはサーバー上で新しいフィールドの開始として解釈され、データの整合性が損なわれるおそれがあります。
+{{jsxref("encodeURI()")}} と比較すると、`encodeURIComponent()` はより多くの文字をエスケープします。サーバーに送信するフォームのユーザー入力フィールドには `encodeURIComponent()` を使用してください。これにより、{{glossary("character reference", "文字参照")}}などの入力時に意図せず生成されることがある `&` 記号や、エンコード/デコードが必要なその他の文字をエンコードできます。例えば、ユーザーが `Jack & Jill` と入力した場合、`encodeURIComponent()` を使用しないと、アンパサンドはサーバー上で新しいフィールドの開始として解釈され、データの整合性が損なわれるおそれがあります。
 
-[`application/x-www-form-urlencoded`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#application/x-www-form-urlencoded-encoding-algorithm) では、スペースは `+` に置換されます。そのため、`encodeURIComponent()` による置換に加えて `%20` を `+` に置き換えることが望まれるかもしれません。
+[`application/x-www-form-urlencoded`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#application/x-www-form-urlencoded-encoding-algorithm) では、スペースは `+` に置換されます。そのため、`encodeURIComponent()` の実行後に `%20` を `+` に置き換えることも検討できます。
 
 ## 例
 
@@ -70,16 +70,16 @@ console.log(header);
 function encodeRFC5987ValueChars(str) {
   return (
     encodeURIComponent(str)
-      // The following creates the sequences %27 %28 %29 %2A (Note that
-      // the valid encoding of "*" is %2A, which necessitates calling
-      // toUpperCase() to properly encode). Although RFC3986 reserves "!",
-      // RFC5987 does not, so we do not need to escape it.
+      // %27 %28 %29 %2A に変換
+      // "*" の正しいエンコードは %2A。大文字化のため toUpperCase() を使用
+      // "!" は RFC3986 では予約されるが
+      // RFC5987 では予約されないため、エスケープ不要
       .replace(
         /['()*]/g,
         (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
       )
-      // The following are not required for percent-encoding per RFC5987,
-      // so we can allow for a little better readability over the wire: |`^
+      // RFC5987 ではパーセントエンコード不要な文字。
+      // 読みやすさため |`^ をそのまま使用
       .replace(/%(7C|60|5E)/g, (str, hex) =>
         String.fromCharCode(parseInt(hex, 16)),
       )
@@ -89,7 +89,7 @@ function encodeRFC5987ValueChars(str) {
 
 ### RFC3986 のエンコーディング
 
-最新の [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) では、 `!`, `'`, `(`, `)`, `*` を、たとえこれらの文字が正式な URI 区切り文字として使用されていないとしても予約しています。 {{Glossary("IPv6")}} の URI 構文の一部である `[` と `]` もエンコードします。 RFC3986 に準拠した `encodeURI` の実装では、これらをエスケープすべきではありません。これは [encodeURI() の例](/ja/docs/Web/JavaScript/Reference/Global_Objects/encodeURI#encoding_for_rfc3986)で示されています。
+最新の [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) では、`!`、`'`、`(`、`)`、`*` を、これらの文字が正式な URI 区切り文字として使われていなくても予約しています。次の関数は、RFC3986 に準拠する URL 構成要素の形式で文字列をエンコードします。また、{{Glossary("IPv6")}} の URI 構文の一部である `[` と `]` もエンコードします。RFC3986 に準拠した `encodeURI` の実装では、これらをエスケープすべきではありません。これは [encodeURI() の例](/ja/docs/Web/JavaScript/Reference/Global_Objects/encodeURI#encoding_for_rfc3986)で示されています。
 
 ```js
 function encodeRFC3986URIComponent(str) {
@@ -102,20 +102,20 @@ function encodeRFC3986URIComponent(str) {
 
 ### 孤立サロゲートのエンコードによる例外
 
-上位・下位のペアでないサロゲート文字をエンコードしようとした場合 {{jsxref("URIError")}} が発生します。
+上位サロゲートと下位サロゲートのペアを形成していないサロゲートをエンコードしようとすると、{{jsxref("URIError")}} が発生します。例えば:
 
 ```js
-// 上位・下位の正しいペア
+// 上位サロゲートと下位サロゲートのペア
 encodeURIComponent("\uD800\uDFFF"); // "%F0%90%8F%BF"
 
-// 上位のみであり "URIError: malformed URI sequence" が発生
+// 上位サロゲートのみ。"URIError: malformed URI sequence" が発生
 encodeURIComponent("\uD800");
 
-// 下位のみであり "URIError: malformed URI sequence" が発生
+// 下位サロゲートのみ。"URIError: malformed URI sequence" が発生
 encodeURIComponent("\uDFFF");
 ```
 
-{{jsxref("String.prototype.toWellFormed()")}} を使用することができます。これは孤立サロゲートを Unicode 置換文字 (U+FFFD) に置き換えることで、このエラーを避けることができます。また、 {{jsxref("String.prototype.isWellFormed()")}} を使用することで、文字列を `encodeURIComponent()` に渡す前に、孤立サロゲートが含まれているかどうかを調べることができます。
+{{jsxref("String.prototype.toWellFormed()")}} を使用すると、孤立サロゲートを Unicode 置換文字 (U+FFFD) に置き換えてこのエラーを避けることができます。また、{{jsxref("String.prototype.isWellFormed()")}} を使うと、文字列を `encodeURIComponent()` に渡す前に孤立サロゲートが含まれているかどうかを調べられます。
 
 ## 仕様書
 

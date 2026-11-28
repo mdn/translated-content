@@ -3,14 +3,14 @@ title: "HTMLElement: hidePopover() メソッド"
 short-title: hidePopover()
 slug: Web/API/HTMLElement/hidePopover
 l10n:
-  sourceCommit: 27977f96015d1b74e743fa3762672894e087bd3d
+  sourceCommit: 88dc56f83da6cf7adf4a2ad8803a412141ed4989
 ---
 
 {{APIRef("Popover API")}}
 
 **`hidePopover()`** は {{domxref("HTMLElement")}} インターフェイスのメソッドで、[ポップオーバー](/ja/docs/Web/API/Popover_API)要素（すなわち有効な [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性がある要素）を{{glossary("top layer", "最上位レイヤー")}}から外し、`display: none` のスタイルを付けます。
 
-`hidePopover()` が [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性のついた表示中の要素に対して呼び出された場合、{{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} イベントが発行され、続いてポップオーバーが非表示になり、それから {{domxref("HTMLElement/toggle_event", "toggle")}} イベントが発行されます。要素が既に非表示であれば、エラーが発生します。
+`hidePopover()` が [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性のついた表示中の要素に対して呼び出された場合、{{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} イベントが発生し、続いてポップオーバーが非表示になり、それから {{domxref("HTMLElement/toggle_event", "toggle")}} イベントが発生します。
 
 ## 構文
 
@@ -29,7 +29,7 @@ hidePopover()
 ### 例外
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : このポップオーバーが既に表示である場合に発生します。
+  - : 別のポップオーバーの表示中または非表示中にこのメソッドが呼び出された場合に発生します（例: `beforetoggle` イベントリスナー内）。
 
 ## 例
 

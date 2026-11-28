@@ -3,7 +3,7 @@ title: Intl.NumberFormat.prototype.formatToParts()
 short-title: formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`formatToParts()`** は {{jsxref("Intl.NumberFormat")}} インスタンスのメソッドで、 {{jsxref("Intl/NumberFormat/format", "format()")}} によって返される、書式化された文字列のそれぞれの部分を表すオブジェクトの配列を返します。これは、ロケール固有のトークンから独自の文字列を構築するのに役立ちます。
@@ -19,7 +19,7 @@ const parts = numberFormat.formatToParts(amount);
 const partValues = parts.map((p) => p.value);
 
 console.log(partValues);
-// 予想される結果: "["$", "654", ",", "321", ".", "99"]"
+// 予想される結果: Array ["$", "654", ",", "321", ".", "99"]
 ```
 
 ## 構文
@@ -31,7 +31,7 @@ formatToParts(number)
 ### 引数
 
 - `number`
-  - : 書式化する数値 ({{jsxref("Number")}})、長整数 ({{jsxref("BigInt")}})、文字列のいずれかです。文字列は、[数値への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)と同じ方法で解釈されますが、`formatToParts()` は、文字列が表す正確な値を使用し、暗黙的に数値に変換する際に精度が失われることを避けます。
+  - : 書式化する数値 ({{jsxref("Number")}})、長整数 ({{jsxref("BigInt")}})、文字列のいずれかです。文字列は、[数値への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)と同じ方法で解釈されますが、`formatToParts()` は、文字列が表す正確な値を使用し、暗黙的に数値へ強制変換する際に精度が失われることを避けます。
 
 ### 返値
 
@@ -58,7 +58,7 @@ formatToParts(number)
 - `nan`
   - : {{jsxref("NaN")}} を表す文字列、たとえば `"NaN"` です。これは、数値が `NaN` の場合にその数値自体を表す唯一のトークンです。
 - `infinity`
-  - : {{jsxref("Infinity")}} または `-Infinity` を表す文字列。これには `「∞」` などがあります。これは、数値が `Infinity` または `-Infinity` の場合に、その数値自体を表す唯一のトークンです。
+  - : {{jsxref("Infinity")}} または `-Infinity` を表す文字列。例えば `"∞"` などがあります。これは、数値が `Infinity` または `-Infinity` の場合に、その数値自体を表す唯一のトークンです。
 - `plusSign`
   - : プラス記号（例: `"+"`）。
 - `minusSign`
@@ -90,7 +90,7 @@ formatter.format(number);
 // "3.500,00 €"
 ```
 
-しかし、多くのユーザーインターフェイスでは、この文字列の書式形式をカスタマイズしたいと要望があります。 `formatToParts()` メソッドは、同じ情報を複数の部分に分割して出力します。
+しかし、多くのユーザーインターフェイスでは、この文字列の書式をカスタマイズしたり、他のテキストの間に挿入したりしたい場合があります。`formatToParts()` メソッドは、同じ情報を複数の部分に分割して出力します。
 
 ```js
 formatter.formatToParts(number);

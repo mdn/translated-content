@@ -30,7 +30,7 @@ l10n:
 - {{CSSxRef("::before")}} et {{CSSxRef("::after")}} mis à jour vers CSS 2.1
   - : Les pseudo-éléments `::before` et `::after` ont été mis à jour pour une prise en charge complète de CSS 2.1, ajoutant la prise en charge des propriétés `position`, `float`, `list-style-*` et certaines propriétés `display`.
 - Unités `ch` pour les longueurs
-  - : L'unité `ch` peut désormais être utilisée partout où une [longueur](/fr/docs/Web/CSS/Reference/Values/length) est acceptée. `1ch` correspond à la largeur du caractère "0" (zéro).
+  - : L'unité `ch` peut désormais être utilisée partout où une [longueur](/fr/docs/Web/CSS/Reference/Values/length) est acceptée. `1ch` correspond à la largeur du caractère «&nbsp;0&nbsp;» (zéro).
 - {{CSSxRef("opacity")}}
   - : L'extension Mozilla `-moz-opacity` a été supprimée au profit de la propriété standard `opacity`.
 - {{CSSxRef("text-shadow")}}
@@ -57,7 +57,7 @@ l10n:
 - [localStorage](/fr/docs/Web/API/Window/localStorage)
   - : Firefox 3.5 ajoute la gestion de la propriété `localStorage` pour le stockage web, fournissant ainsi une manière pour les applications web de stocker des données localement sur l'ordinateur du client.
 - [Utilisation de web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
-  - : Firefox 3.5 gère les web workers afin de permettre une gestion multithreadée dans les applications web.
+  - : Firefox 3.5 gère les web workers afin de permettre une gestion multi-processus dans les applications web.
 - [Utilisation de la géolocalisation](/fr/docs/Web/API/Geolocation_API)
   - : Firefox 3.5 gère l'API Geolocation, qui permet aux applications web d'obtenir des informations concernant l'emplacement actuel de l'utilisateur·ice si cette information est fournie et activée dans le système.
 - [Identification d'éléments DOM à l'aide de sélecteurs](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
@@ -100,7 +100,7 @@ l10n:
 - [Effets d'ombre dans un `canvas`](/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#ombres)
   - : Les effets d'ombre dans un canvas sont désormais pris en charge.
 - [`createImageData()`](/fr/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas#créer_un_objet_imagedata)
-  - : La méthode `createImageData()` de canvas est désormais prise en charge, permettant au code de créer spécifiquement un objet `ImageData` au lieu de le faire automatiquement. Cela peut améliorer les performances des autres méthodes d'`ImageData` en évitant qu'elles aient à créer l'objet.
+  - : La méthode `createImageData()` de canvas est désormais prise en charge, permettant au code de créer spécifiquement un objet `ImageData` au lieu de le faire automatiquement. Cela peut améliorer les performances des autres méthodes de `ImageData` en évitant qu'elles aient à créer l'objet.
 - L'attribut `moz-opaque`
   - : Ajout de l'attribut [`moz-opaque`](/fr/docs/Web/HTML/Reference/Elements/canvas#moz-opaque), qui permet au canvas de savoir si la translucidité est un facteur. Si le canvas sait qu'il n'y a pas de translucidité, les performances de peinture peuvent être optimisées. Voir également {{DOMxRef("HTMLCanvasElement.mozOpaque")}}.
 
@@ -123,9 +123,9 @@ l10n:
 - L'API Element Traversal est à présent gérée par l'objet {{DOMxRef("Element")}} du DOM.
 - Les nœuds HTML document peuvent à présent être clonés à l'aide de {{DOMxRef("Node.cloneNode", "cloneNode()")}}.
 - La méthode DOM non-standard `getBoxObjectFor()` a été supprimée. Utilisez plutôt {{DOMxRef("Element.getBoundingClientRect", "getBoundingClientRect()")}}.
-- Les éléments DOM dispatchés peuvent être redispatchés. Ceci permet à Firefox 3.5 de passer le test 30 d'Acid 3.
+- Les éléments DOM diffusés peuvent être rediffusés. Ceci permet à Firefox 3.5 de passer le test 30 d'Acid 3.
 - Des améliorations ont été apportés à la gestion de DOM 2 Range.
-- Dans un contexte non-chrome, les objets catchés dans les exceptions sont à présent les objets rejetés tels quels plutôt qu'une enveloppe [XPConnect <sup>(angl.)</sup>](https://web.archive.org/web/20210423135742/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Language_bindings/XPConnect) contenant ces objets.
+- Dans un contexte non-chrome, les objets attrapés dans les exceptions sont à présent les objets rejetés tels quels plutôt qu'une enveloppe [XPConnect <sup>(angl.)</sup>](https://web.archive.org/web/20210423135742/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Language_bindings/XPConnect) contenant ces objets.
 - Les références ID dans SVG sont à présent directes.
 - Les filtres SVG fonctionnent à présent avec `foreignObject`.
 - La méthode `GetSVGDocument()` a été ajoutée aux éléments HTML {{HTMLElement("object")}} et {{HTMLElement("iframe")}} pour assurer une meilleure compatibilité.
@@ -152,7 +152,7 @@ Si vous développez des extensions, vous devriez tout d'abord lire [Mise à jour
 #### Changements et améliorations notables
 
 - Le composant XUL `textbox` offre à présent un type `search`, pour être utilisé en tant que champ de recherche.
-- Afin de gérer le glisser et déposer d'onglets entre les fenêtres, le widget `browser` dispose à présent d'une méthode `swapDocShells()`.
+- Afin de gérer le glisser et déposer d'onglets entre les fenêtres, le composant `browser` dispose à présent d'une méthode `swapDocShells()`.
 - Ajout de l'attribut `level` à l'élément `panel`&nbsp;; celui-ci indique si le panneau apparait par dessus les autres applications, ou uniquement au-dessus de la fenêtre contenant le panneau.
 - Les éléments XUL gèrent à présent les propriétés `clientHeight`, `clientWidth`, `scrollHeight` et `scrollWidth`.
 - Les éléments `keyset` disposent à présent d'un attribut `disabled`.

@@ -38,7 +38,7 @@ valueOf()
 
 ## 解説
 
-`valueOf()` メソッドは、[型変換プロトコル](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)の一部です。 `Date` には [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) メソッドがあるため、 `Date` オブジェクトが暗黙的に[文字列へ変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)される場合、このメソッドが常に `valueOf()` よりも優先されます。ただし、 `Date.prototype[Symbol.toPrimitive]()` は、内部では依然として `this.valueOf()` を呼び出します。
+`valueOf()` メソッドは、[強制型変換プロトコル](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)の一部です。`Date` には [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) メソッドがあるため、`Date` オブジェクトが暗黙的に[文字列に強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)される場合、このメソッドが常に `valueOf()` よりも優先されます。ただし、`Date.prototype[Symbol.toPrimitive]()` は、内部では依然として `this.valueOf()` を呼び出します。
 
 {{jsxref("Date")}} オブジェクトは、 {{jsxref("Object")}} の {{jsxref("Object/valueOf", "valueOf()")}} メソッドを上書きします。 `Date.prototype.valueOf()` は、日付のタイムスタンプを返します。これは、 {{jsxref("Date.prototype.getTime()")}} メソッドと機能的に同等です。
 

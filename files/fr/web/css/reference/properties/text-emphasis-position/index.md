@@ -3,7 +3,7 @@ title: Propriété CSS `text-emphasis-position`
 short-title: text-emphasis-position
 slug: Web/CSS/Reference/Properties/text-emphasis-position
 l10n:
-  sourceCommit: 26fb7eaa7b398a35c2463fa15ab6ccfa46a9e06d
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-emphasis-position`** définit l'emplacement des marques d'emphase. Similaire au texte rendu par l'élément HTML {{HTMLElement("ruby")}}, si l'espace disponible pour les marques d'emphase est insuffisant, la hauteur de ligne est augmentée.

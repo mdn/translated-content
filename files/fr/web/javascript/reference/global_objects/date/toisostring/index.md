@@ -37,7 +37,7 @@ Une chaîne de caractères représentant la date donnée au [format chaîne de d
 ### Exceptions
 
 - {{JSxRef("RangeError")}}
-  - : Levée si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) ou si elle correspond à une année qui ne peut pas être représentée dans le format de chaîne de date.
+  - : Levée si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_horodatages_et_la_date_invalide) ou si elle correspond à une année qui ne peut pas être représentée dans le format de chaîne de date.
 
 ## Exemples
 

@@ -2,7 +2,7 @@
 title: 剰余演算子 (%)
 slug: Web/JavaScript/Reference/Operators/Remainder
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **剰余演算子 (`%`)** は、1 つ目のオペランドが 2 つ目のオペランドで除算されたときの余りである剰余を返します。これは常に被除数の符号を取ります。
@@ -29,21 +29,40 @@ console.log(-4 % 2);
 x % y
 ```
 
+### 引数
+
+- `x`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 12 （乗算）以上の式です。その値は[数値または長整数](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)に強制変換されます。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 13 （べき乗）以上の式です。その値は[数値または長整数](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)に強制変換されます。
+
+### 返値
+
+`x` を `y` で除算した余りを表す数値または長整数です。
+
 ## 解説
 
-`%` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。まず[両オペランドを数値型に変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への変換)し、それらの型を検査します。両オペランドが長整数になった場合、長整数の剰余を実行します。そうでない場合は数値の剰余を実行します。一方のオペランドが長整数になり、もう一方が数値になった場合は、{{jsxref("TypeError")}} が発生します。
+`%` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。
+まず[両オペランドを数値に強制変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)し、それらの型を検査します。
+両オペランドが長整数になった場合、長整数の剰余を実行します。そうでない場合は数値の剰余を実行します。一方のオペランドが長整数になり、もう一方が数値になった場合は、{{jsxref("TypeError")}} が発生します。
 
-`n % d` の演算では、`n` を被除数、`d` を除数と呼びます。この演算処理は、オペランドのいずれかが `NaN` であるか、 `n` が ±無限大であるか、または `d` が ±0 である場合に `NaN` を返します。
+`n % d` の演算では、`n` を被除数、`d` を除数と呼びます。
+オペランドのいずれかが `NaN`、`n` が ±無限大、または `d` が ±0 の場合、この演算は `NaN` を返します。
+それ以外の場合で、`d` が ±無限大、または `n` が ±0 の場合は、被除数 `n` を返します。
 
-両方のオペランドが 0 ではなく有限であるとき、剰余 `r` は `r := n - d * q` として計算されます。ここで `q` は、 `r` ができるだけ 0 に近く、被除数 `n` と同じ符号を持つ整数です。
+両方のオペランドが 0 ではなく有限であるとき、剰余 `r` は `r := n - d * q` として計算されます。ここで `q` は、`r` ができるだけ 0 に近く、被除数 `n` と同じ符号を持つ整数です。
 
-なお、多くの言語では '%' はリマインダー演算子ですが、言語によっては（例えば [Python や Perl](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages) では）モジュロ演算子になります。モジュロは `k := n - d * q` と定義されます。ここで `q` は `k` が除数 `d` と同じ符号を持ち、かつ使用可能な限り 0 に近い整数です。 2 つのオペランドの符号が同じであれば、両者は等価になりますが、オペランドの符号が異なる場合、オペランドの符号が異なる場合、モジュロの結果は符号が常に _除数_ と同じになり、リマインダーは被除数と同じになります。 JavaScript でモジュロを得るには、 `n % d` の代わりに `((n % d) + d) % d` を使用してください。 JavaScript では、ビット単位のシフト演算子（[`<<`](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift)、[`>>`](/ja/docs/Web/JavaScript/Reference/Operators/Right_shift) など）の 2 つ目のオペランドを正規化するために、（専用の演算子のない）モジュロ演算が使用され、オフセットが常に正の値になります。
+多くの言語では `%` は剰余演算子ですが、[Python や Perl](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages)<sup>(英語)</sup> など、一部の言語ではモジュロ演算子です。
+モジュロは `k := n - d * q` と定義されます。ここで `q` は、`k` が除数 `d` と同じ符号を持ち、できるだけ 0 に近くなるような整数です。
+2 つのオペランドの符号が同じ場合、剰余とモジュロは等しくなりますが、符号が異なる場合は結果が異なることがあります。モジュロの結果は常に _除数_ と同じ符号になり、剰余の結果は _被除数_ と同じ符号になり、両者の差は `d` の 1 単位分になることがあります。
+JavaScript でモジュロを得るには、`n % d` の代わりに `((n % d) + d) % d` を使用してください。
+JavaScript では、専用の演算子がないモジュロ演算を使って、ビット単位のシフト演算子（[`<<`](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift)、[`>>`](/ja/docs/Web/JavaScript/Reference/Operators/Right_shift) など）の 2 つ目のオペランドを正規化し、オフセットが常に正の値になるようにします。
 
-長整数型の除算では、被除数 `y` が `0n` の場合に {{jsxref("RangeError")}} が発生します。これはゼロによる剰余は `NaN` を返しますが、長整数には `NaN` の概念がないからです。
+長整数の剰余では、除数 `y` が `0n` の場合に {{jsxref("RangeError")}} が発生します。数値の剰余は除数が 0 の場合に `NaN` を返しますが、長整数には `NaN` の概念がないためです。
 
 ## 例
 
-### 正の値の剰余
+### 正の被除数の剰余
 
 ```js
 13 % 5; // 3
@@ -55,7 +74,7 @@ x % y
 3n % 2n; // 1n
 ```
 
-### 負の値の剰余
+### 負の被除数の剰余
 
 ```js
 -13 % 5; // -3
@@ -100,4 +119,4 @@ Infinity % Infinity; // NaN
 - [デクリメント演算子 (`--`)](/ja/docs/Web/JavaScript/Reference/Operators/Decrement)
 - [単項マイナス演算子 (`-`)](/ja/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 - [単項プラス演算子 (`+`)](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus)
-- [Remainder operator vs. modulo operator](https://2ality.com/2019/08/remainder-vs-modulo.html) by Dr. Axel Rauschmayer (2019)
+- [剰余演算子とモジュロ演算子の違い](https://2ality.com/2019/08/remainder-vs-modulo.html)<sup>(英語)</sup> (2019 年、Axel Rauschmayer 博士)

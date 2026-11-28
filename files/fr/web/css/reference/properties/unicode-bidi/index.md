@@ -3,7 +3,7 @@ title: Propriété CSS `unicode-bidi`
 short-title: unicode-bidi
 slug: Web/CSS/Reference/Properties/unicode-bidi
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c4e64810ce10fb5cb1eebfcd8b6f526866fd0982
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`unicode-bidi`** utilisée conjointement avec la propriété {{CSSxRef("direction")}} détermine comment le texte bidirectionnel dans un document est géré. Par exemple, si un bloc de contenu contient à la fois du texte de gauche à droite et de droite à gauche, l'agent utilisateur utilise un algorithme Unicode complexe pour décider comment afficher le texte. La propriété `unicode-bidi` remplace cet algorithme et permet à un·e développeur·euse de contrôler l'intégration du texte.
@@ -53,6 +53,13 @@ unicode-bidi: unset;
 
 ## Exemples
 
+### HTML
+
+```html
+<div class="bible-quote">Une ligne de texte</div>
+<div>Une autre ligne de texte</div>
+```
+
 ### CSS
 
 ```css
@@ -60,13 +67,6 @@ unicode-bidi: unset;
   direction: rtl;
   unicode-bidi: embed;
 }
-```
-
-### HTML
-
-```html
-<div class="bible-quote">Une ligne de texte</div>
-<div>Une autre ligne de texte</div>
 ```
 
 ### Résultat

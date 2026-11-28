@@ -3,26 +3,27 @@ title: "HTMLElement: lang プロパティ"
 short-title: lang
 slug: Web/API/HTMLElement/lang
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement.lang`** プロパティは、要素の属性値とテキストコンテンツの基本言語を取得または設定します。
+**`lang`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、要素の属性値とテキストコンテンツの基本言語を {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}の形式で示します。
+このプロパティは要素の [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性を反映します。`xml:lang` 属性はこのプロパティに影響しません。
 
-このプロパティによって返される言語コードは、 {{RFC(5646, "Tags for Identifying Languages (BCP 47 とも呼ばれる)")}} で定義されています。 一般的な例には、英語の "en"、日本語の "ja"、スペイン語の "es" などがあります。 この属性の既定値は `unknown` です。 この属性は、ここで説明する個々の要素レベルで有効ですが、ほとんどの場合、文書のルート要素に対して指定されます。
-
-これも `lang` 属性でのみ機能し、`xml:lang` では機能しません。
+`lang` 属性が指定されていない場合でも、要素自体は親要素から言語を継承することがあります。
+ただし、この継承された言語は、このプロパティの値には反映されません。
 
 ## 値
 
-文字列です。
+文字列です。一般的な例として、英語は "en"、日本語は "ja"、スペイン語は "es" などがあります。
+属性が指定されていない場合、値は空文字列です。
 
 ## 例
 
 ```js
-// このスニペットは基本言語を比較し、
-// 言語に基づいて別の URL にリダイレクトするものです
+// 基本言語を比較
+// 言語に応じて別の URL にリダイレクト
 if (document.documentElement.lang === "en") {
   window.location.href = "Some_document.html.en";
 } else if (document.documentElement.lang === "ru") {

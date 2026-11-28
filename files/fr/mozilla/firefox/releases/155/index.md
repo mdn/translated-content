@@ -3,7 +3,7 @@ title: Firefox 155 note de version pour les développeurs
 short-title: Firefox 155
 slug: Mozilla/Firefox/Releases/155
 l10n:
-  sourceCommit: 79f0b295d759e9bb6e3c49197434a1d34c449731
+  sourceCommit: 0d8aa789fef46572ea27b9929625f298aff0416b
 ---
 
 Cet article présente les informations concernant les changements de Firefox 155 qui concernent les développeur·euse·s.
@@ -14,7 +14,7 @@ Firefox 155 est sorti le [1er septembre 2026 <sup>(angl.)</sup>](https://whattra
 ### Outils de développement
 
 - Les boutons d'émulation des fonctionnalités média dans la [vue Règles <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html) sont désormais regroupés dans un panneau d'émulation dédié, qui s'ouvre en utilisant le bouton `@`.
-  Le panneau ajoute également l'émulation de la fonctionnalité média {{CSSxRef("@media/prefers-reduced-motion", "prefers-reduced-motion")}}.
+  Le panneau ajoute également l'émulation de la caractéristique média {{CSSxRef("@media/prefers-reduced-motion", "prefers-reduced-motion")}}.
   ([bogue Firefox 1692434 <sup>(angl.)</sup>](https://bugzil.la/1692434) et [bogue Firefox 1477920 <sup>(angl.)</sup>](https://bugzil.la/1477920)).
 - [L'observateur JSON <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) ouvre désormais les documents [JSON Lines <sup>(angl.)</sup>](https://jsonlines.org/) (NDJSON), qui sont servis en tant que `application/jsonl`, `application/jsonlines`, `application/x-ndjson` ou `text/jsonl`, ou qui ont une extension de fichier `.jsonl`.
   Chaque ligne est analysée séparément dans sa propre entrée repliable, étiquetée avec le numéro de ligne dont elle provient, et une ligne qui échoue à être analysée est signalée en incise sans affecter le reste du document.
@@ -194,3 +194,9 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 - **Les noms de `timeline-scope` sont désormais globaux par défaut**&nbsp;: `layout.css.scroll-driven-animations.enabled`
 
   Le comportement par défaut de la portée des chronologies nommées a été mis à jour pour être global. Cela peut être limité à des éléments, et à leur sous-arbre, en utilisant la propriété CSS {{CSSxRef("timeline-scope")}} et la valeur de soit {{CSSxRef("scroll-timeline-name")}} soit {{CSSxRef("view-timeline-name")}} ([bogue Firefox 2024012 <sup>(angl.)</sup>](https://bugzil.la/2024012)).
+
+- **`<script type="speculationrules">`**&nbsp;: `dom.speculation_rules.enabled`
+
+  Activé uniquement dans Nightly, [l'API Speculation Rules](/fr/docs/Web/API/Speculation_Rules_API) fournit un mécanisme pour améliorer les performances des navigations futures en définissant quelles ressources doivent être préchargées ou pré-rendues en fonction de facteurs tels que le comportement de l'utilisateur·ice vis-à-vis des liens.
+
+  La prise en charge initiale incluait uniquement [`prefetch`](/fr/docs/Web/HTML/Reference/Elements/script/type/speculationrules#prefetch), avec des ressources identifiées par une liste [`urls`](/fr/docs/Web/HTML/Reference/Elements/script/type/speculationrules#urls) et la priorité [`immediate`](/fr/docs/Web/HTML/Reference/Elements/script/type/speculationrules#immediate). Cela inclut également la prise en charge de la valeur `navigational-prefetch` de la propriété {{DOMxRef("PerformanceResourceTiming.deliveryType")}}. ([bogue Firefox 2041381 <sup>(angl.)</sup>](https://bugzil.la/2041381)).

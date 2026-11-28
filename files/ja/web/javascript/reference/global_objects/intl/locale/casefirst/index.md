@@ -3,10 +3,10 @@ title: Intl.Locale.prototype.caseFirst
 short-title: caseFirst
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
-**`caseFirst`** は {{jsxref("Intl.Locale")}} インスタンスのアクセサープロパティで、ロケールの照合規則に大文字小文字を考慮するかどうかを返します。
+**`caseFirst`** は {{jsxref("Intl.Locale")}} インスタンスのアクセサープロパティで、ロケールの照合規則で大文字と小文字のどちらが先に並べられるかを返します。
 
 ## 解説
 

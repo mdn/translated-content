@@ -3,10 +3,12 @@ title: Propriété CSS `scroll-padding-block`
 short-title: scroll-padding-block
 slug: Web/CSS/Reference/Properties/scroll-padding-block
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`scroll-padding-block`** définit le padding de défilement d'un élément dans la dimension de bloc.
+
+Les propriétés `scroll-padding` définissent des décalages pour la _zone de visualisation optimale_ de la zone de défilement&nbsp;: la région utilisée comme zone cible pour placer des éléments à la vue de l'utilisateur·ice. Cela permet à l'auteur·ice d'exclure des régions de la zone de défilement qui sont masquées par d'autres contenus (comme des barres d'outils ou des barres latérales en position fixe) ou de laisser plus d'espace entre un élément ciblé et les bords de la zone de défilement.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: scroll-padding-block")}}
 
@@ -69,8 +71,6 @@ scroll-padding-block: 2em;
   color: rebeccapurple;
 }
 ```
-
-Les propriétés `scroll-padding` définissent des décalages pour la _zone de visualisation optimale_ de la zone de défilement&nbsp;: la région utilisée comme zone cible pour placer des éléments à la vue de l'utilisateur·ice. Cela permet à l'auteur·ice d'exclure des régions de la zone de défilement qui sont masquées par d'autres contenus (comme des barres d'outils ou des barres latérales en position fixe) ou de laisser plus d'espace entre un élément ciblé et les bords de la zone de défilement.
 
 ## Propriétés constitutives
 

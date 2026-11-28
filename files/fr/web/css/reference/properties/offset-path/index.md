@@ -3,7 +3,7 @@ title: Propriété CSS `offset-path`
 short-title: offset-path
 slug: Web/CSS/Reference/Properties/offset-path
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`offset-path`** définit un chemin qu'un élément doit suivre et détermine le positionnement de l'élément dans le conteneur parent du chemin ou dans le système de coordonnées SVG. Le chemin peut être une ligne, une courbe ou une forme géométrique le long de laquelle l'élément est positionné ou se déplace.

@@ -3,7 +3,7 @@ title: Intl.PluralRules() コンストラクター
 short-title: Intl.PluralRules()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules
 l10n:
-  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
+  sourceCommit: d6148909942b2cb6e43760db183c2b3815f4387a
 ---
 
 **`Intl.PluralRules()`** コンストラクターは {{jsxref("Intl.PluralRules")}} オブジェクトを生成します。
@@ -26,7 +26,7 @@ new Intl.PluralRules(locales, options)
 - `options` {{optional_inline}}
   - : 以下のプロパティ（取得順、すべてオプション）が含まれているオブジェクトです。
     - `localeMatcher`
-  - : 使用するロケール照合アルゴリズムです。使用可能な値は `"lookup"` および `"best fit"` です。既定値は `"best fit"` です。このオプションについての情報は、[ロケールの識別とネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)を参照してください。
+  - : 使用するロケール照合アルゴリズムです。使用可能な値は `"lookup"` および `"best fit"` です。デフォルト値は `"best fit"` です。このオプションについての情報は、[ロケールの識別とネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)を参照してください。
     - `type`
       - : 使用する種別です。指定可能な値は次の通りです。
         - `"cardinal"` （デフォルト）
@@ -43,6 +43,7 @@ new Intl.PluralRules(locales, options)
     - `roundingPriority`
     - `roundingIncrement`
     - `roundingMode`
+    - `trailingZeroDisplay`
 
     これらのオプションは、`Intl.NumberFormat` の `notation` オプションが `"standard"`、`style` が `"decimal"` であるかのように解釈されます。
 
@@ -50,12 +51,14 @@ new Intl.PluralRules(locales, options)
 
 - {{jsxref("RangeError")}}
   - : `locales` または `options` に無効な値が含まれている場合に発生します。
+- {{jsxref("TypeError")}}
+  - : `roundingIncrement` が `1` 以外で、有効桁数による丸め、または `"auto"` 以外の `roundingPriority` と併用されている場合に発生します。
 
 ## 例
 
 ### 基本的な使い方
 
-ロケールを指定しない基本的な使い方では、既定のロケールと既定のオプションで書式化された文字列が返されます。これは、例えば "dog" と "dogs" のように単数形と複数形を区別するのに便利です。
+ロケールを指定しない基本的な使い方では、`select()` はデフォルトのロケールとデフォルトのオプションに基づいて複数形のカテゴリーを返します。これは、例えば "dog" と "dogs" のように単数形と複数形を区別するのに便利です。
 
 ```js
 const pr = new Intl.PluralRules();

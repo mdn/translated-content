@@ -3,7 +3,7 @@ title: Firefox 15 note de version pour les développeurs
 short-title: Firefox 15
 slug: Mozilla/Firefox/Releases/15
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: c61fd478259d34aa4fd6ac4cbf9b7d64a78aff43
 ---
 
 Firefox 15 est sorti le 28 août 2012. Cet article répertorie les principaux changements qui sont utiles non seulement aux développeur·euse·s Web, mais aussi aux développeur·euse·s Firefox et Gecko ainsi qu'aux développeur·euse·s d'extensions.
