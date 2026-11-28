@@ -3,21 +3,25 @@ title: "PermissionStatus: change イベント"
 short-title: change
 slug: Web/API/PermissionStatus/change_event
 l10n:
-  sourceCommit: ee253ac58d71b2ed336b705ab97dbe93122b3e04
+  sourceCommit: 60898650ee472d10cc15cb91c982fede0d0c5e34
 ---
 
 {{APIRef("Permissions API")}}{{AvailableInWorkers}}
 
-**`change`** は {{domxref("PermissionStatus")}} インターフェイスイベントで、{{domxref("PermissionStatus.state")}} プロパティが変化するたびに発行されます。
+**`change`** は {{domxref("PermissionStatus")}} インターフェイスのイベントで、{{domxref("PermissionStatus.state")}} プロパティが変化するたびに発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxref("EventTarget/addEventListener", "addEventListener()")}} で使用してください。
 
-```js
-addEventListener("change", (event) => {});
+```js-nolint
+addEventListener("change", (event) => { })
+```
 
-onchange = (event) => {};
+または、このインターフェイスの[イベントハンドラープロパティ](/ja/docs/Web/API/Document_Object_Model/Events#onevent_プロパティの使用)に代入します。
+
+```js-nolint
+onchange = (event) => { }
 ```
 
 ## イベント型
