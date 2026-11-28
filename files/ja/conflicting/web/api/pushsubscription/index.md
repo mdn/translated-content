@@ -1,7 +1,8 @@
 ---
 title: "PushSubscription: subscriptionId プロパティ"
 short-title: subscriptionId
-slug: Web/API/PushSubscription/subscriptionId
+slug: conflicting/Web/API/PushSubscription
+original_slug: Web/API/PushSubscription/subscriptionId
 l10n:
   sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---

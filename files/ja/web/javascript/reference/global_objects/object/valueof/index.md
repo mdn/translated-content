@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-**`valueOf()`** は {{jsxref("Object")}} インスタンスのメソッドで、 `this` 値を[オブジェクトに](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#オブジェクト変換)変換します。このメソッドは、派生オブジェクトでは独自の[型変換](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)ロジックのためにオーバーライドされるためのものです。
+**`valueOf()`** は {{jsxref("Object")}} インスタンスのメソッドで、`this` 値を[オブジェクトに](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#オブジェクト変換)強制変換します。このメソッドは、派生オブジェクトでは独自の[型の強制変換](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)ロジックのためにオーバーライドされるためのものです。
 
 {{InteractiveExample("JavaScript デモ: Object.prototype.valueOf()")}}
 
@@ -40,21 +40,21 @@ valueOf()
 指定されたオブジェクトのプリミティブ値を返します。
 
 > [!NOTE]
-> 型変換の際に `valueOf` が有益であるためには、プリミティブを返す必要があります。すべてのプリミティブ型は自分自身で `valueOf()` メソッドを持っているので、一般的に `primitiveValue.valueOf()` を呼び出しても `Object.prototype.valueOf()` は呼び出されません。
+> 強制変換の際に `valueOf` が有益であるためには、プリミティブを返す必要があります。すべてのプリミティブ型は自分自身で `valueOf()` メソッドを持っているので、一般的に `primitiveValue.valueOf()` を呼び出しても `Object.prototype.valueOf()` は呼び出されません。
 
 ## 解説
 
-JavaScript は `valueOf` メソッドを、[オブジェクトをプリミティブな値に変換](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)するときに呼び出します。あなたが自分で `valueOf` メソッドを実行する必要はほとんどなく、プリミティブな値が期待される場面にオブジェクトが出くわしたとき JavaScript が自動的に実行します。
+JavaScript は `valueOf` メソッドを、[オブジェクトをプリミティブ値に強制変換](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)するときに呼び出します。自分で `valueOf` メソッドを実行する必要はほとんどなく、プリミティブ値が期待される場面でオブジェクトに遭遇すると、JavaScript が自動的に実行します。
 
-このメソッドは[数値変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値変換)と[プリミティブ変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ変換)で優先的に呼び出されますが、[文字列変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)では `toString()` が優先的に呼び出され、 `toString()` は文字列値を返す可能性がとても高いので（{{jsxref("Object.prototype.toString()")}} の基本実装でも）、この場合 `valueOf()` は通常呼び出されません。
+このメソッドは[数値への強制変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値変換)と[プリミティブへの強制変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ変換)で優先的に呼び出されますが、[文字列への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)では `toString()` が優先的に呼び出され、 `toString()` は文字列値を返す可能性がとても高いので（{{jsxref("Object.prototype.toString()")}} の基本実装でも）、この場合 `valueOf()` は通常呼び出されません。
 
-`Object.prototype` 継承するすべてのオブジェクト（つまり、 [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)を除くすべてのオブジェクト）は `toString()` メソッドを継承しています。 `Object.prototype.valueOf()` の基本実装は、意図的に有益なものになっていません。オブジェクトを返すことで、その返値はどのような[プリミティブ変換アルゴリズム](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)でも使用することはありません。多くの組み込みオブジェクトは、適切なプリミティブ値を返すためにこのメソッドを上書きします。独自オブジェクトを作成する場合は、 `valueOf()` を上書きして独自メソッドを呼び出すことで、独自オブジェクトをプリミティブ値に変換することができます。一般的に、 `valueOf()` はオブジェクトにとって最も意味のある値を返すために使用します。 `toString()` とは異なり、文字列である必要はありません。また、[`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) メソッドを追加することもできます。このメソッドでは、変換処理をさらに制御することができ、型変換の際には常に `valueOf` や `toString` よりも優先されます。
+`Object.prototype` を継承するすべてのオブジェクト（つまり、[`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)を除くすべてのオブジェクト）は `toString()` メソッドを継承しています。`Object.prototype.valueOf()` の基本実装は、意図的に有益なものになっていません。オブジェクトを返すことで、その返値はどのような[プリミティブへの強制変換アルゴリズム](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)でも使用することはありません。多くの組み込みオブジェクトは、適切なプリミティブ値を返すためにこのメソッドを上書きします。独自オブジェクトを作成する場合は、`valueOf()` を上書きして独自メソッドを呼び出すことで、独自オブジェクトをプリミティブ値に強制変換することができます。一般的に、`valueOf()` はオブジェクトにとって最も意味のある値を返すために使用します。`toString()` とは異なり、文字列である必要はありません。また、[`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) メソッドを追加することもできます。このメソッドでは、強制変換処理をさらに制御することができ、型の強制変換の際には常に `valueOf` や `toString` よりも優先されます。
 
 ## 例
 
 ### valueOf() の使用
 
-基本の `valueOf()` メソッドは、 `this` の値自身を返しますが、まだオブジェクトに変換されていない場合はオブジェクトに変換されます。そのため、その返り値はどのようなプリミティブ変換アルゴリズムでも使用されることはありません。
+基本の `valueOf()` メソッドは、`this` の値自身を返しますが、まだオブジェクトに強制変換されていない場合はオブジェクトに強制変換されます。そのため、その返値はどのようなプリミティブへの強制変換アルゴリズムでも使用されることはありません。
 
 ```js
 const obj = { foo: 1 };
@@ -66,7 +66,7 @@ console.log(Object.prototype.valueOf.call("primitive"));
 
 ### 独自オブジェクトにおける valueOf のオーバーライド
 
-既定の `valueOf` メソッドの代わりに呼び出される関数を作成することができます。型変換中に呼び出されるときには引数を渡されないので、関数は引数として取るべきではありません。
+既定の `valueOf` メソッドの代わりに呼び出される関数を作成することができます。強制変換中に呼び出されるときには引数を渡されないので、関数は引数として取るべきではありません。
 
 例えば、独自クラス `Box` に `valueOf` メソッドを追加するには次のようにします。
 
@@ -98,7 +98,7 @@ box.valueOf();
 
 ### 単項プラスの使用
 
-[単項プラス](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus)は、オペランドに対して[数値変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値変換)を行います。これは、 [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) を持たないほとんどのオブジェクトでは、 `valueOf()` を呼び出すことを意味しています。しかし、オブジェクトに独自の `valueOf()` メソッドがない場合、基本実装では `valueOf()` は無視され、代わりに `toString()` の返値が使用されます。
+[単項プラス](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus)は、オペランドに対して[数値への強制変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値変換)を行います。これは、 [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) を持たないほとんどのオブジェクトでは、`valueOf()` を呼び出すことを意味しています。しかし、オブジェクトに独自の `valueOf()` メソッドがない場合、基本実装では `valueOf()` は無視され、代わりに `toString()` の返値が使用されます。
 
 ```js
 +new Date(); // 現在のタイムスタンプ。 new Date().getTime() と同じ

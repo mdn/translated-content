@@ -2,7 +2,7 @@
 title: 条件（三項）演算子
 slug: Web/JavaScript/Reference/Operators/Conditional_operator
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **条件（三項）演算子**は JavaScript では唯一の、 3 つのオペランドをとる演算子です。
@@ -35,15 +35,15 @@ condition ? exprIfTrue : exprIfFalse
 ### 引数
 
 - `condition`
-  - : 値が条件として使用される式です。
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 3 （論理和またはヌル値合体）以上の式で、その値を条件として使用します。`false` のほか、`null`、`NaN`、`0`、`0n`、空文字列 (`""`)、`undefined` も偽値です。
 - `exprIfTrue`
-  - : `condition` が{{Glossary("truthy", "真値")}} (`true` と等しいか、 `true` に変換できる値) と評価された場合に評価される式です。
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 2 （代入）以上の式で、`condition` が{{Glossary("truthy", "真値")}}の場合にのみ評価されます。
 - `exprIfFalse`
-  - : `condition` が{{Glossary("falsy", "偽値")}} (`false` と等しいか、 `false` に変換できる値) と評価された場合に評価される式です。
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 2 （代入）以上の式で、`condition` が{{Glossary("falsy", "偽値")}}の場合にのみ評価されます。
 
-## 解説
+### 返値
 
-`false` についていえば、偽値になる可能性がある式は `null`, `NaN`, `0`, 空文字列 (`""`), `undefined` です。 `condition` がこのうちの何れかであれば、条件演算子の結果は `exprIfFalse` の式を実行した結果になります。
+`condition` が真値の場合は `exprIfTrue` の値、そうでない場合は `exprIfFalse` の値です。
 
 ## 例
 

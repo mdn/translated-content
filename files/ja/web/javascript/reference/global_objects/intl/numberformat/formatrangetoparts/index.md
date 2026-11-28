@@ -17,7 +17,7 @@ formatRangeToParts(startRange, endRange)
 ### 引数
 
 - `startRange`
-  - : 書式化する数値 ({{jsxref("Number")}})、長整数 ({{jsxref("BigInt")}})、文字列のいずれかです。文字列は、[数値への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)と同じ方法で解釈されますが、`formatRangeToParts()` は、文字列が表す正確な値を使用し、暗黙的に数値に変換する際に精度が失われることを避けます。
+  - : 書式化する数値 ({{jsxref("Number")}})、長整数 ({{jsxref("BigInt")}})、文字列のいずれかです。文字列は、[数値への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)と同じ方法で解釈されますが、`formatRangeToParts()` は、文字列が表す正確な値を使用し、暗黙的に数値へ強制変換する際に精度が失われることを避けます。
 - `endRange`
   - : 書式化する数値 ({{jsxref("Number")}})、長整数 ({{jsxref("BigInt")}})、文字列のいずれかです。
 
@@ -37,7 +37,7 @@ formatRangeToParts(startRange, endRange)
 ### 例外
 
 - {{jsxref("RangeError")}}
-  - : `startRange` または `endRange` が `NaN` または変換不可能な文字列の場合に発生します。
+  - : `startRange` または `endRange` が `NaN` または数値に強制変換できない文字列の場合に発生します。
 - {{jsxref("TypeError")}}
   - : `startRange` または `endRange` のいずれかが undefined の場合に発生します。
 

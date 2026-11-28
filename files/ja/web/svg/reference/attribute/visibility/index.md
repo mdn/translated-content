@@ -2,7 +2,7 @@
 title: visibility
 slug: Web/SVG/Reference/Attribute/visibility
 l10n:
-  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`visibility`** 属性は、グラフィック要素の表示/非表示を制御します。値を `hidden` または `collapse` に設定すると、現在のグラフィック要素は表示されなくなります。
@@ -37,34 +37,6 @@ l10n:
 - {{SVGElement("tspan")}}
 - `<video>`
 
-## 使用上のメモ
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        <code>visible</code> | <code>hidden</code> | <code>collapse</code>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">値</th>
-      <td><code>visible</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
-
-- `visible`
-  - : この値は、要素が描画されることを示します。
-- `hidden`
-  - : この値は、要素が描画されないことを示します。ただし、要素はレンダリングツリーに属しており、つまり、{{SVGAttr("pointer-events")}} 属性に応じてポインターイベントを受け取り、{{SVGAttr("tabindex")}} 属性に応じてフォーカスを受け取り、境界ボックスの計算やクリップパスに寄与し、テキストのレイアウトに影響を与えます。
-- `collapse`
-  - : この値は `hidden` と同じです。
-
 ## 例
 
 ### 例 1
@@ -86,7 +58,7 @@ svg {
     height="100"
     stroke="black"
     stroke-width="5"
-    fill="transparent" />
+    fill="none" />
   <g stroke="seagreen" stroke-width="5" fill="skyblue">
     <rect x="20" y="20" width="80" height="80" visibility="visible" />
     <rect x="120" y="20" width="80" height="80" visibility="hidden" />
@@ -116,7 +88,7 @@ svg {
       class="invisible" />
     <path d="M0 0h24v24H0z" fill="none" />
   </svg>
-  <span> クリックしてね </span>
+  <span> クリックしてください </span>
 </button>
 ```
 
@@ -154,6 +126,34 @@ button.addEventListener("click", (evt) => {
 #### 結果
 
 {{EmbedLiveSample("Example 2", "100%", "80")}}
+
+## 使用上のメモ
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <code>visible</code> | <code>hidden</code> | <code>collapse</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">デフォルト値</th>
+      <td><code>visible</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
+    </tr>
+  </tbody>
+</table>
+
+- `visible`
+  - : 要素が描画されることを示します。
+- `hidden`
+  - : 要素が描画されないことを示します。ただし、レンダリングツリーの一部として残るため、{{SVGAttr("pointer-events")}} 属性に応じてポインターイベントを受け取ることや、{{SVGAttr("tabindex")}} 属性に応じてフォーカスを受け取ることがあります。境界ボックスの計算やクリップパスにも寄与し、テキストレイアウトにも影響します。
+- `collapse`
+  - : `hidden` と同じです。
 
 ## 仕様書
 

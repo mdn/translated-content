@@ -34,7 +34,7 @@ toString()
 
 ## 解説
 
-`toString()` メソッドは、[型変換プロトコル](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)の一部です。 `Date` には [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) メソッドがあるため、 `Date` オブジェクトが暗黙的に[文字列へ変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)される場合、このメソッドが常に `toString()` よりも優先されます。ただし、 `Date.prototype[Symbol.toPrimitive]()` は、内部では依然として `this.toString()` を呼び出します。
+`toString()` メソッドは、[強制型変換プロトコル](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)の一部です。`Date` には [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) メソッドがあるため、`Date` オブジェクトが暗黙的に[文字列に強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)される場合、このメソッドが常に `toString()` よりも優先されます。ただし、`Date.prototype[Symbol.toPrimitive]()` は、内部では依然として `this.toString()` を呼び出します。
 
 {{jsxref("Date")}} オブジェクトは、 {{jsxref("Object")}} の {{jsxref("Object/toString", "toString()")}} メソッドを上書きします。この文字列は、日付と時刻の両方が含まれており、 {{jsxref("Date/toDateString", "toDateString()")}} と {{jsxref("Date/toTimeString", "toTimeString()")}} で指定された文字列表現が、間に空白を入れて結合されたものです。例えば、 "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)" のようになります。
 

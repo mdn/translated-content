@@ -1,8 +1,8 @@
 ---
-title: new 演算子
+title: new
 slug: Web/JavaScript/Reference/Operators/new
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **`new`** 演算子を使用すると、開発者はユーザー定義のオブジェクト型やコンストラクター関数を持つ組み込みオブジェクト型のインスタンスを作成することができます。
@@ -35,9 +35,13 @@ new constructor(arg1, arg2, /* …, */ argN)
 ### 引数
 
 - `constructor`
-  - : オブジェクトインスタンスの型を規定するクラスまたは関数。この式は、十分な[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#表)を持つものならば何でもよく、例えば識別し、[プロパティアクセス](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)、別の `new` 式でも構いませんが、[オプショナルチェーン](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining)は許可されません。
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#表)が 17 （アクセスと呼び出し）以上の式です。引数リストを省略する場合は、優先順位 16 （引数リストなしの `new`）の式も使用できます。結果はコンストラクターでなければなりません。通常は識別子、[プロパティアクセス](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)、または関数式やクラス式（{{glossary("IIFE")}} パターン）です。[オプショナルチェーン](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining)式や関数呼び出しをコンストラクターとしてそのまま指定することはできません。例えば、`new x?.y()` は構文エラーになりますが、`new x()()` は `(new x())()` と解釈されます。回避するには、それぞれ `new (x?.y)()`、`new (x())()` のように明示的に括弧で囲みます。
 - `arg1`, `arg2`, …, `argN`
-  - : `constructor` が呼び出される際の引数のリストです。`new Foo` は `new Foo()` と同等です。つまり、引数のリストが指定されていない場合、 `Foo` は引数なしで呼び出されます。
+  - : 各引数には、[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用するか、[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#表)が 2 （代入）以上の式を指定できます。`new Foo` は `new Foo()` と同等です。つまり、引数リストを指定しない場合、`Foo` は引数なしで呼び出されます。
+
+### 返値
+
+`constructor` がオブジェクトを返した場合はそのオブジェクト、そうでなければ新しく構築されたインスタンスです。
 
 ## 解説
 

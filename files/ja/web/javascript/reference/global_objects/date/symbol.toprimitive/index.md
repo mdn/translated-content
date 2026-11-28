@@ -36,9 +36,9 @@ date[Symbol.toPrimitive](hint)
 
 ### 返値
 
-`hint` が `"string"` または `"default"` の場合、このメソッドは、[`this` 値を文字列に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)して文字列を返します（最初に `toString()` を、次に `valueOf()` を試します）。
+`hint` が `"string"` または `"default"` の場合、このメソッドは、[`this` 値を文字列に強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)して文字列を返します（最初に `toString()` を、次に `valueOf()` を試します）。
 
-`hint` が `"number"` の場合、このメソッドは、[`this` 値を数値に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値返還)して数値を返します（最初に `valueOf()` を試み、次に `toString()` を試みます）。
+`hint` が `"number"` の場合、このメソッドは、[`this` 値を数値に強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)して数値を返します（最初に `valueOf()` を試み、次に `toString()` を試みます）。
 
 ### 例外
 
@@ -47,9 +47,9 @@ date[Symbol.toPrimitive](hint)
 
 ## 解説
 
-`[Symbol.toPrimitive]()` メソッドは、[型変換プロトコル](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)の一部です。JavaScript は、オブジェクトをプリミティブ値に変換する際に、常に `[Symbol.toPrimitive]()` メソッドを優先的に呼び出します。`[Symbol.toPrimitive]()` メソッドを自分で呼び出す必要があることはほとんどありません。JavaScript は、プリミティブ値が期待されるオブジェクトに遭遇した際に、自動的にこのメソッドを呼び出します。
+`[Symbol.toPrimitive]()` メソッドは、[強制型変換プロトコル](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)の一部です。JavaScript は、オブジェクトをプリミティブ値に強制変換する際に、常に `[Symbol.toPrimitive]()` メソッドを優先的に呼び出します。`[Symbol.toPrimitive]()` メソッドを自分で呼び出す必要があることはほとんどありません。JavaScript は、プリミティブ値が期待されるオブジェクトに遭遇した際に、自動的にこのメソッドを呼び出します。
 
-{{jsxref("Date")}} オブジェクトの `[Symbol.toPrimitive]()` メソッドは、{{jsxref("Date/valueOf", "this.valueOf()")}} を呼び出して数値を返すか、または {{jsxref("Date/toString", "this.toString()")}} を呼び出して文字列を返すことで、プリミティブ値を返します。これは、デフォルトの[プリミティブ変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ変換)処理を上書きして、数値ではなく文字列を返すために存在します。デフォルトでは、プリミティブ変換は {{jsxref("Date/valueOf", "valueOf()")}} を {{jsxref("Date/toString", "toString()")}} の前に呼び出します。独自の `[Symbol.toPrimitive]()` により、`new Date(0) + 1` は `1`（数値）ではなく `"Thu Jan 01 1970 09:00:00 GMT+0900 (日本標準時)1"`（文字列）を返します。
+{{jsxref("Date")}} オブジェクトの `[Symbol.toPrimitive]()` メソッドは、{{jsxref("Date/valueOf", "this.valueOf()")}} を呼び出して数値を返すか、または {{jsxref("Date/toString", "this.toString()")}} を呼び出して文字列を返すことで、プリミティブ値を返します。これは、デフォルトの[プリミティブへの強制変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ変換)処理を上書きして、数値ではなく文字列を返すために存在します。デフォルトでは、プリミティブへの強制変換は {{jsxref("Date/valueOf", "valueOf()")}} を {{jsxref("Date/toString", "toString()")}} の前に呼び出します。独自の `[Symbol.toPrimitive]()` により、`new Date(0) + 1` は `1`（数値）ではなく `"Thu Jan 01 1970 09:00:00 GMT+0900 (日本標準時)1"`（文字列）を返します。
 
 ## 例
 

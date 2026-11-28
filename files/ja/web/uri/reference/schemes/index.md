@@ -3,11 +3,12 @@ title: URI スキーム
 short-title: スキーム
 slug: Web/URI/Reference/Schemes
 l10n:
-  sourceCommit: 44373c3805ba65db7542af75b664dc6fdce2aec0
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 URI の**スキーム**は、URI の最初の部分で、`:` 文字の前の部分です。
-これは、ブラウザーがリソースを取得する際に使用するプロトコルを示します。スキームは、URI の残りの部分の構造や解釈に影響を与える可能性があります。
+これは、ブラウザーがリソースを取得する際に使用するプロトコルを示します。
+スキームは、URI の残りの部分の構造や解釈に影響を与える可能性があります。
 
 ## 構文
 
@@ -16,7 +17,8 @@ protocol:
 ```
 
 - `protocol`
-  - : 使用するプロトコルを識別する文字の並び。英数字と、`+`、`-`、`.` の文字のみで構成する必要があります。
+  - : 使用するプロトコルを識別する文字の並び。
+    英数字と、`+`、`-`、`.` の文字のみで構成する必要があります。
     一般的なスキームは次の通りです。
     - [`blob`](/ja/docs/Web/URI/Reference/Schemes/blob)
       - : 大規模なバイナリーオブジェクト (Binary Large Object)。メモリーに存在する大規模オブジェクトへのポインター
@@ -82,4 +84,4 @@ mailto:help@supercyberhelpdesk.info
 - [URI](/ja/docs/Web/URI)
 - [data URL](/ja/docs/Web/URI/Reference/Schemes/data)
 - [リソース URL](/ja/docs/Web/URI/Reference/Schemes/resource)
-- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
+- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes)<sup>(英語)</sup>

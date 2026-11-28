@@ -2,10 +2,10 @@
 title: 能力と制約と設定
 slug: Web/API/Media_Capture_and_Streams_API/Constraints
 l10n:
-  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
+  sourceCommit: b1bb1b27224e37b2045c6a16b5f9cfa817d0df89
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 この記事では、**制約** (constraints) と**能力** (capabilities) という 2 つの概念と、メディア設定について説明し、[制約エクササイザー](#例_制約エクササイザー)と呼ばれる例を挙げています。制約エクササイザーでは、コンピューターの A/V 入力機器（ウェブカメラやマイクなど）から入力される音声と映像のトラックに、異なる形の制約設定を 適用した場合の結果を使い勝手よく試すことができます。
 
@@ -103,14 +103,40 @@ if (
 
 ### 高度な制約
 
-`advanced` プロパティを制約セットに追加すると、いわゆる高度な制約が作成されます。 このプロパティの値は、オプションと見なされる追加の制約セットの配列です。 この機能のユースケースはほとんどなく、仕様から取り除くことに関心があるため、ここでは説明しません。 詳細については、[Media Capture and Streams 仕様書のセクション 11](https://www.w3.org/TR/mediacapture-streams/#idl-def-Constraints)、過去の例 2 を参照してください。
+`advanced` プロパティを制約セットに追加すると、いわゆる高度な制約が作成されます。 このプロパティの値は、オプションと見なされる追加の制約セットの配列です。 この機能のユースケースはほとんどなく、仕様から取り除くことに関心があるため、ここでは説明しません。 詳細については、[Media Capture and Streams 仕様書の第 11 章](https://w3c.github.io/mediacapture-main/#constrainable-interface)、過去の例 2 を参照してください。
 
 ## 能力の確認
 
 {{domxref("MediaStreamTrack.getCapabilities()")}} を呼び出して、対応しているすべての能力と、そのそれぞれが現在のプラットフォームとユーザーエージェントで受け入れられる値または値の範囲のリストを取得できます。 この関数は、ブラウザーが対応している各制約可能なプロパティと、それらのプロパティのそれぞれが対応している値または値の範囲を列挙するオブジェクトを返します。
 
-> [!NOTE]
-> `getCapabilities()` は、まだすべての主要なブラウザーで実装されていません。 とりあえず、あなたは必要なものを手に入れようとする必要があり、もしそれができなければ、その時点で何をすべきかを決定します。 例えば、 [Firefox バグ 1179084](https://bugzil.la/1179084) を参照してください。
+例えば、次のコードスニペットを実行すると、ローカルのカメラとマイクへのアクセス許可を求められます。許可が与えられると、それぞれの {{domxref("MediaStreamTrack")}} の能力を詳述する `MediaTrackCapabilities` オブジェクトがコンソールに記録されます。
+
+```js
+navigator.mediaDevices
+  .getUserMedia({ video: true, audio: true })
+  .then((stream) => {
+    const tracks = stream.getTracks();
+    tracks.map((t) => console.log(t.getCapabilities()));
+  });
+```
+
+能力オブジェクトの例は次のようになります。
+
+```json
+{
+  "autoGainControl": [true, false],
+  "channelCount": {
+    "max": 1,
+    "min": 1
+  },
+  "deviceId": "jjxEMqxIhGdryqbTjDrXPWrkjy55Vte70kWpMe3Lge8=",
+  "echoCancellation": [true, false],
+  "groupId": "o2tZiEj4MwOdG/LW3HwkjpLm1D8URat4C5kt742xrVQ=",
+  "noiseSuppression": [true, false]
+}
+```
+
+オブジェクトの正確な内容は、ブラウザーとメディアハードウェアによって異なります。
 
 ## 制約の適用
 
@@ -171,7 +197,7 @@ function switchCameras(track, camera) {
 
 ### トラックの現在の設定の取得
 
-厳密な制約のみを使用しない限り（これは非常に制限的ですので、それの意味することを確認してください！）、制約が適用された後に実際に何が得られるかを保証するものではありません。 結果のメディアに実際に存在する制約可能なプロパティの値は、設定と呼ばれます。 メディアの実際の形式やその他のプロパティを知る必要がある場合は、{{domxref("MediaStreamTrack.getSettings()")}} を呼び出してこれらの設定を取得できます。 これは、ディクショナリ {{domxref("MediaTrackSettings")}} に基づくオブジェクトを返します。 例えば次のようにです。
+厳密な制約のみを使用しない限り（これは非常に制限的ですので、それの意味することを確認してください！）、制約が適用された後に実際に何が得られるかを保証するものではありません。 結果のメディアに実際に存在する制約可能なプロパティの値は、設定と呼ばれます。 メディアの実際の形式やその他のプロパティを知る必要がある場合は、{{domxref("MediaStreamTrack.getSettings()")}} を呼び出してこれらの設定を取得できます。 例えば次のようにです。
 
 ```js
 function whichCamera(track) {
@@ -179,13 +205,13 @@ function whichCamera(track) {
 }
 ```
 
-この関数は、`getSettings()` を使用して、トラックの制約可能なプロパティの現在使用中の値を取得し、{{domxref("MediaTrackSettings.facingMode", "facingMode")}} の値を返します。
+この関数は、`getSettings()` を使用して、トラックの制約可能なプロパティの現在使用中の値を取得し、[`facingMode`](/ja/docs/Web/API/MediaStreamTrack/getSettings#facingmode) の値を返します。
 
 ## 例: 制約エクササイザー
 
 この例では、音声トラックと映像トラックの制約セットを記述するソースコードを編集して、メディアの制約を試すことができるエクササイザーを作成します。 その後、これらの変更を適用して、ストリームの外観や、新しい制約を適用した後の実際のメディア設定の両方を含む結果を確認できます。
 
-この例の HTML と CSS は非常に単純であり、ここには示されていません。 {{LiveSampleLink("Example_Constraint_exerciser", "ここをクリックする")}}と、完全な例を見ることができます。
+この例の HTML と CSS は非常に単純であり、ここには示されていません。"Play" をクリックすると、Playground で完全なコードを見ることができます。
 
 ```html hidden
 <p>
@@ -201,22 +227,22 @@ function whichCamera(track) {
 <ul id="supportedConstraints"></ul>
 <div id="startButton" class="button">開始</div>
 <div class="wrapper">
-  <div class="trackrow">
-    <div class="leftside">
+  <div class="track-row">
+    <div class="left-side">
       <h3>要求した動画の制約:</h3>
       <textarea id="videoConstraintEditor" cols="32" rows="8"></textarea>
     </div>
-    <div class="rightside">
+    <div class="right-side">
       <h3>実際の動画の設定:</h3>
       <textarea id="videoSettingsText" cols="32" rows="8" disabled></textarea>
     </div>
   </div>
-  <div class="trackrow">
-    <div class="leftside">
+  <div class="track-row">
+    <div class="left-side">
       <h3>要求した音声の制約:</h3>
       <textarea id="audioConstraintEditor" cols="32" rows="8"></textarea>
     </div>
-    <div class="rightside">
+    <div class="right-side">
       <h3>実際の音声の設定:</h3>
       <textarea id="audioSettingsText" cols="32" rows="8" disabled></textarea>
     </div>
@@ -224,7 +250,7 @@ function whichCamera(track) {
 
   <div class="button" id="applyButton">制約の適用</div>
 </div>
-<video id="video" autoplay></video>
+<video id="my-video" autoplay></video>
 
 <div class="button" id="stopButton">停止</div>
 
@@ -261,16 +287,16 @@ video {
   width: 600px;
 }
 
-.trackrow {
+.track-row {
   height: 200px;
 }
 
-.leftside {
+.left-side {
   float: left;
   width: calc(calc(100% / 2) - 10px);
 }
 
-.rightside {
+.right-side {
   float: right;
   width: calc(calc(100% / 2) - 10px);
 }
@@ -292,7 +318,7 @@ h3 {
 }
 ```
 
-### 既定値と変数
+### デフォルト値と変数
 
 最初に、文字列として既定の制約セットがあります。 これらの文字列は編集可能な {{HTMLElement("textarea")}} に表示されますが、これはストリームの初期構成です。
 
@@ -318,7 +344,7 @@ let videoTrack = null;
 そして、アクセスする必要のあるすべての要素への参照を取得します。
 
 ```js
-const videoElement = document.getElementById("video");
+const videoElement = document.getElementById("my-video");
 const logElement = document.getElementById("log");
 const supportedConstraintList = document.getElementById("supportedConstraints");
 const videoConstraintEditor = document.getElementById("videoConstraintEditor");
@@ -413,11 +439,12 @@ function startVideo() {
         videoTrack = videoTracks[0];
       }
     })
-    .then(() => {
-      return new Promise((resolve) => {
-        videoElement.onloadedmetadata = resolve;
-      });
-    })
+    .then(
+      () =>
+        new Promise((resolve) => {
+          videoElement.onloadedmetadata = resolve;
+        }),
+    )
     .then(() => {
       getCurrentSettings();
     })
@@ -437,13 +464,9 @@ function startVideo() {
 また、\[開始] ボタンがクリックされるのを監視するイベントリスナーを設定する必要があります。
 
 ```js
-document.getElementById("startButton").addEventListener(
-  "click",
-  () => {
-    startVideo();
-  },
-  false,
-);
+document.getElementById("startButton").addEventListener("click", () => {
+  startVideo();
+});
 ```
 
 ### 制約セットの更新の適用
@@ -456,37 +479,33 @@ document.getElementById("startButton").addEventListener(
 4. いずれかの制約セットを適用してエラーが発生した場合、`handleError()` を使用してメッセージをログに出力します。
 
 ```js
-document.getElementById("applyButton").addEventListener(
-  "click",
-  () => {
-    if (!videoTrack && !audioTrack) {
-      startVideo();
-    } else {
-      buildConstraints();
+document.getElementById("applyButton").addEventListener("click", () => {
+  if (!videoTrack && !audioTrack) {
+    startVideo();
+  } else {
+    buildConstraints();
 
-      const prettyJson = (obj) => JSON.stringify(obj, null, 2);
+    const prettyJson = (obj) => JSON.stringify(obj, null, 2);
 
-      if (videoTrack) {
-        videoTrack
-          .applyConstraints(videoConstraints)
-          .then(() => {
-            videoSettingsText.value = prettyJson(videoTrack.getSettings());
-          })
-          .catch(handleError);
-      }
-
-      if (audioTrack) {
-        audioTrack
-          .applyConstraints(audioConstraints)
-          .then(() => {
-            audioSettingsText.value = prettyJson(audioTrack.getSettings());
-          })
-          .catch(handleError);
-      }
+    if (videoTrack) {
+      videoTrack
+        .applyConstraints(videoConstraints)
+        .then(() => {
+          videoSettingsText.value = prettyJson(videoTrack.getSettings());
+        })
+        .catch(handleError);
     }
-  },
-  false,
-);
+
+    if (audioTrack) {
+      audioTrack
+        .applyConstraints(audioConstraints)
+        .then(() => {
+          audioSettingsText.value = prettyJson(audioTrack.getSettings());
+        })
+        .catch(handleError);
+    }
+  }
+});
 ```
 
 ### 停止ボタンの処理
@@ -530,8 +549,8 @@ function keyDownHandler(event) {
   }
 }
 
-videoConstraintEditor.addEventListener("keydown", keyDownHandler, false);
-audioConstraintEditor.addEventListener("keydown", keyDownHandler, false);
+videoConstraintEditor.addEventListener("keydown", keyDownHandler);
+audioConstraintEditor.addEventListener("keydown", keyDownHandler);
 ```
 
 ### ブラウザーがサポートする制約可能なプロパティの表示
@@ -547,7 +566,7 @@ for (const constraint in supportedConstraints) {
   if (Object.hasOwn(supportedConstraints, constraint)) {
     const elem = document.createElement("li");
 
-    elem.innerHTML = `<code><a href='https://developer.mozilla.org/docs/Web/API/MediaTrackSupportedConstraints/${constraint}' target='_blank'>${constraint}</a></code>`;
+    elem.innerHTML = `<code><a href='/ja/docs/Web/API/MediaDevices/getSupportedConstraints#${constraint.toLowerCase()}'>${constraint}</a></code>`;
     supportedConstraintList.appendChild(elem);
   }
 }
@@ -573,7 +592,7 @@ function handleError(reason) {
 
 ここで、実際の完全な例を見ることができます。
 
-{{EmbedLiveSample("Example_Constraint_exerciser", 650, 800)}}
+{{EmbedLiveSample("Example_Constraint_exerciser", 650, 1200, , , , "camera;microphone")}}
 
 ## 仕様書
 
@@ -587,7 +606,6 @@ function handleError(reason) {
 
 - [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaTrackConstraints")}}
-- {{domxref("MediaTrackSettings")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaStreamTrack.applyConstraints()")}}
 - {{domxref("MediaStreamTrack.getSettings()")}}

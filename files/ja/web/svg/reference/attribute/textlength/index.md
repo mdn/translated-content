@@ -2,7 +2,7 @@
 title: textLength
 slug: Web/SVG/Reference/Attribute/textLength
 l10n:
-  sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`textLength`** 属性は、 SVGの {{SVGElement("text")}} 要素と {{SVGElement("tspan")}} 要素で利用でき、テキストが描かれる空間の幅を指定することができます。 {{glossary("user agent", "ユーザーエージェント")}}は、 {{SVGAttr("lengthAdjust")}} 属性で指定された方法を使用して、テキストがその長さよりも広がらないようにします。既定では、文字間の間隔のみが調整されますが、 `lengthAdjust` を変更すると、文字サイズも調整できます。
@@ -65,17 +65,6 @@ svg {
 
 この例では、 {{HTMLElement("input")}} 要素の [`"range"`](/ja/docs/Web/HTML/Reference/Elements/input/range) 型を使用して、テキストの大きさを変えることができます。
 
-### CSS
-
-```css
-.controls {
-  font:
-    16px "Open Sans",
-    "Arial",
-    sans-serif;
-}
-```
-
 ### SVG
 
 では、 SVG から始めましょう。これはかなり基本的なもので、 1000 × 300 ピクセルの空間が 10 × 3 センチのボックスに割り当てられています。
@@ -121,6 +110,17 @@ svg {
 ```
 
 {{HTMLElement("input")}} 要素は、表示型が `"range"` であり、ユーザーがテキストの幅を変更するために操作するスライダーコントロールを作成するために使用されます。 ID が `"widthDisplay"` である {{HTMLElement("span")}} 要素は、現在の幅の値を表示するためにあります。
+
+### CSS
+
+```css
+.controls {
+  font:
+    16px "Open Sans",
+    "Arial",
+    sans-serif;
+}
+```
 
 ### JavaScript
 

@@ -2,7 +2,7 @@
 title: 加算演算子 (+)
 slug: Web/JavaScript/Reference/Operators/Addition
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **加算 (`+`)** 演算子は、数値オペランドの合計または文字列の連結を生成します。
@@ -29,13 +29,30 @@ console.log(2001 + ": A Space Odyssey");
 x + y
 ```
 
+### 引数
+
+- `x`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 11 （加算）以上の式です。その値は文字列、長整数、数値のいずれかに強制変換されます。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 12 （乗算）以上の式です。その値は文字列、長整数、数値のいずれかに強制変換されます。
+
+### 返値
+
+文字列、長整数、数値のいずれかで、`x` と `y` の文字列連結または数値の合計を表します。
+
 ## 解説
 
-演算子 `+` は数値の加算と文字列の連結という 2 つの異なる操作のためにオーバーロードされています。評価するとき、まず[両方のオペランドをプリミティブに変換します](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ変換)。その後、 2 つのオペランドの型がテストされます。
+演算子 `+` は数値の加算と文字列の連結という 2 つの異なる操作のためにオーバーロードされています。評価するとき、まず[両方のオペランドをプリミティブに変換します](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブへの強制変換)。その後、 2 つのオペランドの型がテストされます。
 
-- 一方が文字列の場合、もう一方のオペランドも[文字列に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)され、連結されます。
+- 一方が文字列の場合、もう一方のオペランドも[文字列に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)され、連結されます。
 - もし両方が[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)であれば、長整数同士の加算が行われます。一方が長整数で、もう一方が長整数でない場合、{{jsxref("TypeError")}} 例外が発生します。
-- そうでない場合は、両辺が[数値へ変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)され、数値同士の加算が行われます。
+- そうでない場合は、両辺が[数値へ変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)され、数値同士の加算が行われます。
+
+数値の加算では、丸め誤差を除き、結果は一般に数学上の計算と一致します。`Infinity` との計算も同様で、例えば `Infinity` に有限の数値を加算しても結果は `Infinity` です。次のような特殊なケースがあります。
+
+- どちらかのオペランドが `NaN` の場合、結果は `NaN` です。
+- `Infinity + -Infinity` の結果は `NaN` です。
+- 数学上の計算結果が 0 の場合、両方のオペランドが `-0` でない限り `0` が返されます。両方が `-0` の場合は `-0` が返されます。
 
 文字列の連結は[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)や [`String.prototype.concat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/concat) と等価だと思われがちですが、そうではありません。加算は [`valueOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) を優先的に呼び出して、式をプリミティブに変換します。一方、テンプレートリテラルと `concat()` は [`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)を優先的に呼び出し、式を文字列に変換します。式が [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) メソッドを持っている場合、文字列連結は `"default"` をヒントとしてそれを呼び出しますが、テンプレートリテラルは `"string"` を使用します。これは、文字列表現とプリミティブ表現が異なるオブジェクト、例えば、 {{jsxref("Temporal")}} のように `valueOf()` メソッドがすべて例外を発生するようなオブジェクトにとって重要です。
 
@@ -46,7 +63,7 @@ const t = Temporal.Now.instant();
 "".concat(t); // '2022-07-31T04:48:56.113918308Z'
 ```
 
-`"" + x` を使用して[文字列に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)を行わないことをお勧めします。
+`"" + x` を使用して[文字列に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)を行わないことをお勧めします。
 
 ## 例
 
@@ -98,6 +115,25 @@ Number(1n) + 2; // 3
 5 + "foo"; // "5foo"
 "foo" + false; // "foofalse"
 "2" + 2; // "22"
+```
+
+### 結合性が失われることがある
+
+計算の順序に注意してください。数学の場合とは異なり、JavaScript では、加算を行う順序によって結果が変わることがあります。計算の途中で数値が丸められるためです。例えば、`a + (b + c)` と `(a + b) + c` の結果が異なる場合があります。
+
+```js
+const a = 1e20;
+const b = -1e20;
+const c = 0.1;
+
+console.log(a + b + c); // 0.1
+console.log(a + (b + c)); // 0
+```
+
+この問題は {{jsxref("Math.sumPrecise()")}} で軽減できます。
+
+```js
+console.log(Math.sumPrecise([a, b, c])); // 0.1
 ```
 
 ## 仕様書

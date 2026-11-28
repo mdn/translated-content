@@ -2,7 +2,7 @@
 title: カンマ演算子 (,)
 slug: Web/JavaScript/Reference/Operators/Comma_operator
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **カンマ演算子 (`,`)** は、それぞれの演算対象を（左から右に）評価し、最後のオペランドの値を返します。これは、[`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) ループに複数の引数を提供する場合によく使用されます。
@@ -31,15 +31,21 @@ expr1, expr2, expr3/* , … */
 
 ### 引数
 
-- `expr1`, `expr2`, `expr3`, …
-  - : 1 つ以上の式で、複合式の値として最後の値を返します。
+- `expr1`
+  - : 任意の[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)を持つ式で、別のカンマ式も含みます。
+- `expr2`, `expr3`, …
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 2 （代入）以上の式が 1 つ以上で、左から右に評価されます。
+
+### 返値
+
+最後の式の値です。
 
 ## 解説
 
 単一の式を要求される場所に複数の式を記載したい場合、カンマ演算子を使用することができます。この演算子の最も一般的な用途は、 `for` ループ内で複数の更新子を提供することです。単一の式を要求される場所に複数の文を許可する慣用表現としては、 [IIFE](/ja/docs/Glossary/IIFE) を使用することもできます。
 
 最後の式を除くすべての式は評価された後で破棄されるため、これらの式が有用であるためには副次効果が必要です。副次効果を持つ一般的な式には、代入、関数呼び出し、[`++`](/ja/docs/Web/JavaScript/Reference/Operators/Increment) および [`--`](/ja/docs/Web/JavaScript/Reference/Operators/Decrement) 演算子があります。
-それ以外にも、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)を呼び出す場合や、[型変換](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)を引き起こす場合にも副次効果が発生する場合があります。
+それ以外にも、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)を呼び出す場合や、[型の強制変換](/ja/docs/Web/JavaScript/Guide/Data_structures#型の強制変換)を引き起こす場合にも副次効果が発生する場合があります。
 
 カンマ演算子は、すべての演算子の中で[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)が最も低いです。カンマで連結された式をより大きな式に組み込みたい場合は、括弧で囲む必要があります。
 
@@ -122,7 +128,9 @@ console.log(sum); // 15
 
 ### 参照バインディングの破棄
 
-カンマ演算子は最後の式を、常に参照ではなく値として返します。これにより、 [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) バインディングなどのコンテキスト情報が失われます。例えば、プロパティアクセスは関数への参照を返します。この関数はアクセス元のオブジェクトも記憶しているため、プロパティ呼び出しが正規に動作します。一方、カンマ式からメソッドが返された場合、関数はあたかも新しい関数値であるかのように呼び出され、 `this` は未定義になります。
+カンマ演算子は最後の式を、常に参照ではなく値として返します。これにより、 [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) バインディングなどのコンテキスト情報が失われます。例えば、プロパティアクセスは関数への参照を返します。この関数はアクセス元のオブジェクトも記憶しているため、プロパティ呼び出しが正規に動作します。一方、カンマ式からメソッドが返された場合、関数は新しい関数値であるかのように呼び出されます。このとき `this` は厳格モードでは `undefined` になり、厳格モードでない場合はグローバルオブジェクトになります。
+
+次の例は厳格モードでない場合に実行されます。
 
 ```js-nolint
 const obj = {

@@ -2,7 +2,7 @@
 title: ヌル値合体演算子 (??)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
 l10n:
-  sourceCommit: 0d97f6cee768cb4ec982839f690c832fab20f346
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **ヌル値合体演算子 (`??`)** は論理演算子の一種です。この演算子は左辺が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または {{jsxref("undefined")}} の場合に右辺のオペランドを返し、それ以外の場合に左辺のオペランドを返します。
@@ -22,12 +22,26 @@ console.log(baz);
 ## 構文
 
 ```js-nolint
-leftExpr ?? rightExpr
+x ?? y
 ```
+
+### 引数
+
+- `x`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 5 （ビット論理和）以上の式、または別のヌル値合体式です。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 5 （ビット論理和）以上の式です。`x` が `null` または `undefined` の場合にのみ評価されます。
+
+### 返値
+
+`x` が `null` または `undefined` の場合は `y` の値、そうでなければ `x` の値です。
 
 ## 解説
 
-ヌル値合体演算子は、[論理和演算子 (`||`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR) の特殊形と見なすことができます。後者は左辺の値が `null` や `undefined` だけでなく、何らかの{{Glossary("falsy", "偽値")}}であった場合に右辺値を返すものです。言い換えると、`||` を使って別の変数 `foo` に何らかの既定値を与える場合、一部の偽値（`''` や `0` など）を使用可能とみなすと、予想外の動作に遭遇することがあります。詳しい例は以下を参照してください。
+ヌル値合体演算子は、[論理和演算子 (`||`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR) の特殊な場合と見なせます。
+論理和演算子は、左辺の値が `null` や `undefined` だけでなく、何らかの{{Glossary("falsy", "偽値")}}であった場合に右辺値を返します。
+言い換えると、`||` を使って別の変数 `foo` にデフォルト値を与える場合、一部の偽値（`''` や `0` など）を使用可能な値とみなすと、予想外の動作が起きることがあります。
+詳しい例は以下を参照してください。
 
 ヌル値合体演算子は[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)が下から 5 番目で、 `||` のすぐ下、[条件（三項）演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator)のすぐ上です。
 
@@ -48,11 +62,11 @@ true && undefined ?? "foo"; // SyntaxError が発生
 
 ### ヌル値合体演算子の使用
 
-次の例では、既定値を設定していますが、`null` や `undefined` 以外の値は保持されます。
+次の例では、デフォルト値を設定していますが、`null` や `undefined` 以外の値は保持されます。
 
 ```js
 const nullValue = null;
-const emptyText = ""; // falsy
+const emptyText = ""; // 偽値
 const someNumber = 42;
 
 const valA = nullValue ?? "default for A";
@@ -64,9 +78,9 @@ console.log(valB); // "" （空文字列は null でも undefined でもない�
 console.log(valC); // 42
 ```
 
-### 変数に既定値を代入する
+### 変数にデフォルト値を代入する
 
-以前は、変数に既定値を代入したい場合の一般的なパターンは、論理 OR 演算子（[`||`](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR)）を使用することでした。
+以前は、変数にデフォルト値を代入したい場合、論理 OR 演算子（[`||`](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR)）を使用するのが一般的でした。
 
 ```js
 let foo;
@@ -75,7 +89,8 @@ let foo;
 const someDummyText = foo || "Hello!";
 ```
 
-しかし、`||` が論理演算子であるため、左辺の値は評価によって強制的に論理値になり、偽値（`0`、`''`、`NaN`、`false` など）が返されることはありません。この動作は、 `0`、`''`、`NaN` を有効な値と考えている場合、予期せぬ結果を引き起こす可能性があります。
+しかし、`||` は論理演算子であるため、左辺の値は評価時に論理値に強制変換され、偽値（`0`、`''`、`NaN`、`false` など）は返されません。
+この動作は、`0`、`''`、`NaN` を有効な値と考えている場合、予期しない結果を引き起こす可能性があります。
 
 ```js
 const count = 0;
@@ -87,7 +102,7 @@ console.log(qty); // 42 であり 0 ではない
 console.log(message); // "hi!" であり "" ではない
 ```
 
-ヌル値合体演算子は、左辺の値が `null` もしくは `undefined` のどちらか（その他の falsy な値は含みません）に評価された場合にのみ右辺の値を返すことで、この潜在的な危険を回避します。
+ヌル値合体演算子は、左辺の値が `null` または `undefined`（その他の偽値は含みません）に評価された場合にのみ右辺の値を返し、この問題を回避します。
 
 ```js
 const myText = ""; // 空文字列（すなわち偽値でもある）
@@ -105,31 +120,33 @@ console.log(preservingFalsy); // '' （myText は undefined でも null でも�
 
 ```js
 function a() {
-  console.log("a が呼び出されました");
+  console.log("a was called");
   return undefined;
 }
 function b() {
-  console.log("b が呼び出されました");
+  console.log("b was called");
   return false;
 }
 function c() {
-  console.log("c が呼び出されました");
+  console.log("c was called");
   return "foo";
 }
 
 console.log(a() ?? c());
-// "A が呼び出されました"、 "C が呼び出されました" のあと "foo" と出力
-// A() は undefined を返すため、両方の式が評価されるため
+// "a was called"、"c was called"、それから "foo" をログ出力します。
+// a() が undefined を返すため、両方の式が評価されます。
 
 console.log(b() ?? c());
-// "B が呼び出されました" のあと "false" と出力
-// B() は false を返すため（そして null も undefined も返さない）、
-// 右辺の式は評価されない
+// "b was called" のあとに "false" をログ出力します。
+// b() が false を返すため（null でも undefined でもないため）、
+// 右辺の式は評価されません。
 ```
 
 ### オプショナルチェーン演算子 (`?.`) との関係
 
-ヌル値合体演算子は、 `undefined` と `null` を特定の値として扱いますが、[オプショナルチェーン演算子 (`?.`)](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining) も同様の扱いをします。この演算子は、`null` または `undefined` である可能性のあるオブジェクトのプロパティにアクセスするのに便利です。
+ヌル値合体演算子は、`undefined` と `null` を特別な値として扱います。
+[オプショナルチェーン演算子 (`?.`)](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining) も同様で、`null` または `undefined` である可能性のあるオブジェクトのプロパティにアクセスするのに便利です。
+これらを組み合わせると、ヌル値の可能性があるオブジェクトのプロパティに安全にアクセスし、ヌル値の場合はデフォルト値を指定できます。
 
 ```js
 const foo = { someFooProp: "hi" };

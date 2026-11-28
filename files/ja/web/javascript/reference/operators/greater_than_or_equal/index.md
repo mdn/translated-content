@@ -2,7 +2,7 @@
 title: 大なりイコール演算子 (>=)
 slug: Web/JavaScript/Reference/Operators/Greater_than_or_equal
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **大なりイコール演算子 (`>=`)** は、左オペランドが右オペランド以上の場合は `true` を返し、それ以外の場合は `false` を返します。
@@ -16,7 +16,7 @@ console.log(5 >= 3);
 console.log(3 >= 3);
 // 予想される結果: true
 
-// Compare bigint to number
+// 長整数と数値との比較
 console.log(3n >= 5);
 // 予想される結果: false
 
@@ -30,6 +30,17 @@ console.log("ab" >= "aa");
 x >= y
 ```
 
+### 引数
+
+- `x`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 9 （関係演算子）以上の式です。その値は文字列、長整数、数値のいずれかに強制変換されます。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 10 （ビットシフト）以上の式です。その値は文字列、長整数、数値のいずれかに強制変換されます。
+
+### 返値
+
+`x` が `y` 以上の場合は `true`、それ以外の場合は `false` です。
+
 ## 解説
 
 オペランドは、[小なり](/ja/docs/Web/JavaScript/Reference/Operators/Less_than)演算子と同じアルゴリズムを使用して比較され、結果が反転されます。 `x >= y` は通常 `!(x < y)` と同等ですが、 `x >= y` と `x < y` の両方が `false` となる 2 つの例外があります。
@@ -39,7 +50,7 @@ x >= y
 
 `x >= y` は、一般的に `x > y || x == y` と同等ですが、次のいくつかの例外があります。
 
-- `x` または `y` のいずれかが `null` で、もう一方が `null` ではなく、[数値型への変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値変換)によって 0 になる値（`0`、`0n`、`false`、`""`、`"0"`、`new Date(0)` など）の場合、 `x >= y` は `true` と評価され、 `x > y || x == y` は `false` と評価されます。
+- `x` または `y` のいずれかが `null` で、もう一方が `null` ではなく、[数値型への変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)によって 0 になる値（`0`、`0n`、`false`、`""`、`"0"`、`new Date(0)` など）の場合、 `x >= y` は `true` と評価され、 `x > y || x == y` は `false` と評価されます。
 - `x` または `y` の一方が `undefined` で、もう一方が `null` または `undefined` である場合、 `x >= y` は `false` となる一方、`x == y` は `true` となります。
 - `x` と `y` が同じオブジェクトであり、[小なり](/ja/docs/Web/JavaScript/Reference/Operators/Less_than)演算の最初の段階の後で `NaN` になる場合（`new Date(NaN)` など）、 `x >= y` は `false` となる一方、 `x == y` は `true` となります。
 - `x` と `y` が異なるオブジェクトであり、[小なり](/ja/docs/Web/JavaScript/Reference/Operators/Less_than)演算の最初の段階の後、同じ値になる場合、 `x >= y` は `true` となる一方、 `x > y || x == y` は `false` となります。

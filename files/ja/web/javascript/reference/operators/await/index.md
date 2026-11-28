@@ -2,7 +2,7 @@
 title: await
 slug: Web/JavaScript/Reference/Operators/await
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **`await`** 演算子はプロミス ({{jsxref("Promise")}}) を待ち、履行値を取得するために使用します。[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)の中、または[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)の最上位でのみ使用することができます。
@@ -16,7 +16,7 @@ await expression
 ### 引数
 
 - `expression`
-  - : 待つ {{jsxref("Promise")}}、[thenable](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable)、または何らかの値です。
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 14 （前置演算子）以上の式です。その値は {{jsxref("Promise")}}、[thenable オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable)、またはそれ以外の任意の値です。
 
 ### 返値
 
@@ -154,16 +154,20 @@ function promisedFunction() {
 
 ### 最上位の await
 
-`await` キーワードは、[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)の最上位は単独で（非同期関数の外で）使用することができます。つまり、 `await` を使う子モジュールを持つモジュールは、子モジュールが実行されるのを待ってから、自分自身が実行されるようになります。他の子モジュールの読み込みをブロックすることなく、実行することができます。
+`await` キーワードは、[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)の最上位で、非同期関数の外でも単独で使用できます。つまり、`await` を使う子モジュールを持つモジュールは、その子モジュールの実行が完了するまで待ってから実行されます。一方、それらの子モジュールに依存しない兄弟モジュールの実行はブロックされません。
 
-以下は、 [Fetch API](/ja/docs/Web/API/Fetch_API) を使用し、 [`export`](/ja/docs/Web/JavaScript/Reference/Statements/export) 文の中で await を指定したモジュールの例です。これを含むすべてのモジュールは、コードを実行する前に読み取りが解決するのを待ちます。
+以下は、[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用し、[`export`](/ja/docs/Web/JavaScript/Reference/Statements/export) 文の中で `await` を指定したモジュールの例です。このモジュールをインポートする側は、取得リクエストが解決するまでコードの実行を待ちます。
 
 ```js
-// fetch request
-const colors = fetch("../data/colors.json").then((response) => response.json());
+// 取得リクエスト
+const colors = fetch(
+  "https://mdn.github.io/js-examples/module-examples/top-level-await/data/colors.json",
+).then((response) => response.json());
 
 export default await colors;
 ```
+
+最上位の `await` を使用すると、モジュールグラフに大きな影響が生じます。モジュールグラフの一部が非同期でしか評価できなくなるためです。詳しくは[モジュールグラフのガイド](/ja/docs/Web/JavaScript/Guide/Modules/Module_graph#最上位の_await_と非同期評価)を参照してください。
 
 ### await の制御フローの影響
 

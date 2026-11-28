@@ -2,7 +2,7 @@
 title: グループ化演算子 ( )
 slug: Web/JavaScript/Reference/Operators/Grouping
 l10n:
-  sourceCommit: 86976a4d11b508763609fca37994406dbd27bca5
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **グループ化演算子 `( )`** は、式での評価の優先順位を制御します。また、特定の構文構造において、曖昧性や構文エラーが発生する可能性がある場合に、任意の式を格納する役割も果たします。
@@ -13,7 +13,7 @@ l10n:
 console.log(1 + 2 * 3); // 1 + 6
 // 予想される結果: 7
 
-console.log(1 + 2 * 3); // 1 + 6
+console.log(1 + (2 * 3)); // 1 + 6
 // 予想される結果: 7
 
 console.log((1 + 2) * 3); // 3 * 3
@@ -32,7 +32,11 @@ console.log(1 * 3 + 2 * 3); // 3 + 6
 ### 引数
 
 - `expression`
-  - : 評価されるあらゆる[式](/ja/docs/Web/JavaScript/Reference/Operators)で、[カンマ区切り](/ja/docs/Web/JavaScript/Reference/Operators/Comma_operator)式も含まれます。
+  - : 任意の[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)を持つ[式](/ja/docs/Web/JavaScript/Reference/Operators)で、[カンマ区切り](/ja/docs/Web/JavaScript/Reference/Operators/Comma_operator)式も含まれます。
+
+### 返値
+
+`expression` の結果です。グループ化しても参照は保持されます。そのため、`(obj.method)()` でメソッドを呼び出すと、`this` 値は `obj` になります。
 
 ## 解説
 
@@ -105,7 +109,7 @@ const f = () => ({ a: 1 });
 
 ### グループ化演算子と自動セミコロン挿入
 
-グループ化演算子は、[自動セミコロン挿入](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) (ASI) による問題点を軽減することができます。例えば、`return` キーワードと返される式の間には改行が存在してはなりません。
+グループ化演算子は、[自動セミコロン挿入](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#自動セミコロン挿入) (ASI) による問題点を軽減することができます。例えば、`return` キーワードと返される式の間には改行が存在してはなりません。
 
 ```js-nolint example-bad
 function sum(a, b) {

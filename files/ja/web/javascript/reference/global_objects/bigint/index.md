@@ -2,7 +2,7 @@
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9f46f08d20b21498293cbf6b84f508103272ec6f
 ---
 
 **`BigInt`** は、[大きすぎて](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)または[小さすぎて](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER)数値 (`number`) {{Glossary("Primitive", "プリミティブ")}}で表すことができない数を表現します。
@@ -32,7 +32,7 @@ const hugeBin = BigInt(
 // 9007199254740991n
 ```
 
-長整数はいくつかの点で数値と似ていますが、重要ないくつかの点が異なります。組み込みの [`Math`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math) オブジェクト内のメソッドでは利用できず、演算で数値と混ぜることができません。同じ型に統一する必要があります。ただし、長整数を数値へ変換する際には精度が落ちることがあるので、相互に変換する場合には注意が必要です。
+長整数はいくつかの点で数値と似ていますが、重要ないくつかの点が異なります。組み込みの [`Math`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math) オブジェクト内のメソッドでは利用できず、演算で数値と混ぜることができません。同じ型にそろえるには、どちらか一方へ強制変換する必要があります。ただし、長整数と数値を相互に強制変換すると精度が失われることがあり、特に長整数を数値へ強制変換する場合は注意が必要です。
 
 ### 型情報
 
@@ -133,10 +133,10 @@ const o = Object(0n);
 o === o; // true
 ```
 
-数値と長整数の型変換は精度が落ちる可能性があるため、次のことを推奨します。
+数値と長整数の間の強制変換では精度が失われる可能性があるため、次のことを推奨します。
 
 - 長整数は、値が 2<sup>53</sup> を超えることが合理的に予想される場合にのみ使用する。
-- 長整数と数値の間で型変換を行わない。
+- 長整数と数値の間で強制変換しない。
 
 ### 条件式
 
@@ -226,21 +226,21 @@ console.log(parsed);
 
 実際、JSON では任意の長さの数値リテラルが許可されています。ただし、JavaScript では完全な精度で解析できないだけです。より長い整数（64 ビット整数など）に対応している言語で動作する別のプログラムと通信する場合、長整数を JSON 文字列ではなく JSON 数値として送信したい場合は、[損失のない数値のシリアライズ](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON#損失のない数値のシリアライズ)を参照してください。
 
-### 長整数の変換
+### 長整数への強制変換
 
-長整数を期待する多くの組み込み演算は、まず引数を長整数に変換します。[演算](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tobigint)は以下のように要約できます。
+長整数を期待する多くの組み込み演算は、まず引数を長整数に強制変換します。[演算](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tobigint)は以下のように要約できます。
 
 - 長整数はそのまま返される。
 - [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) と [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) は {{jsxref("TypeError")}} が発生する。
 - `true` は `1n` になり、 `false` は `0n` になる。
-- 文字列は整数リテラルを含むかのように解析され、変換される。解析に失敗すると {{jsxref("SyntaxError")}} が発生する。この構文は[文字列の数値リテラル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値変換)のサブセットであり、小数点や指数記号は許可されません。
-- [数値](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number)は {{jsxref("TypeError")}} を発生させ、精度の低下を引き起こす意図しない暗黙の変換を防ぐ。
+- 文字列は整数リテラルを含むかのように構文解析され、変換される。構文解析に失敗すると {{jsxref("SyntaxError")}} が発生する。この構文は[文字列の数値リテラル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)のサブセットであり、小数点や指数記号は許可されません。
+- [数値](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number)は {{jsxref("TypeError")}} を発生させ、精度の低下を引き起こす意図しない暗黙の強制変換を防ぐ。
 - [シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)は {{jsxref("TypeError")}} を発生させる。
-- オブジェクトはまず、[`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) （`"number"` をヒントに指定）、`valueOf()`、`toString()` の順にメソッドを呼び出して[プリミティブ変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ変換)される。その結果のプリミティブは長整数に変換される。
+- オブジェクトはまず、[`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) （`"number"` をヒントに指定）、`valueOf()`、`toString()` の順にメソッドを呼び出して[プリミティブに強制変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブへの強制変換)される。その結果のプリミティブは長整数に変換される。
 
 JavaScript でほぼ同じ効果を得る最良の方法は、[`BigInt()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 関数を使うことです。`BigInt(x)` は同じアルゴリズムを使って `x` を変換しますが、[数値](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number)が {{jsxref("TypeError")}} を発生させず、整数であれば長整数に変換される点が異なります。
 
-長整数を期待する組み込み演算は、変換後に長整数を固定幅に切り詰めることが多いことに注意してください。これは {{jsxref("BigInt.asIntN()")}} と {{jsxref("BigInt.asUintN()")}} 、および {{jsxref("BigInt64Array")}} と {{jsxref("BigUint64Array")}} のメソッドも含みます。
+長整数を期待する組み込み演算は、強制変換後に長整数を固定幅に切り詰めることが多いことに注意してください。これには {{jsxref("BigInt.asIntN()")}} と {{jsxref("BigInt.asUintN()")}}、および {{jsxref("BigInt64Array")}} と {{jsxref("BigUint64Array")}} のメソッドも含まれます。
 
 ## コンストラクター
 
@@ -250,9 +250,9 @@ JavaScript でほぼ同じ効果を得る最良の方法は、[`BigInt()`](/ja/d
 ## 静的メソッド
 
 - {{jsxref("BigInt.asIntN()")}}
-  - : 長整数値を符号付き整数値に丸め、その値を返します。
+  - : 長整数値を、最下位側の指定されたビット数だけを残して切り詰め、符号付き整数として返します。
 - {{jsxref("BigInt.asUintN()")}}
-  - : 長整数値を符号なし整数値に丸め、その値を返します。
+  - : 長整数値を、最下位側の指定されたビット数だけを残して切り詰め、符号なし整数として返します。
 
 ## インスタンスプロパティ
 
@@ -313,7 +313,7 @@ nthPrime(20n);
 ```
 
 > [!NOTE]
-> この`isPrime()`の実装はあくまでデモンストレーション用です。実際のアプリケーションでは、繰り返し計算を避けるため、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)のような高度なメモリーアルゴリズムを適用すべきです。
+> この `isPrime()` の実装はデモ用です。実際のアプリケーションでは、繰り返し計算を避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)のような{{Glossary("Memoization", "メモ化")}}を多用したアルゴリズムを使用することをお勧めします。
 
 ## 仕様書
 
