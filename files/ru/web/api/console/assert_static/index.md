@@ -41,7 +41,7 @@ const errorMsg = "# не чётное число";
 for (let number = 2; number <= 5; number += 1) {
   console.log("# равно " + number);
   console.assert(number % 2 === 0, { number: number, errorMsg: errorMsg });
-  // или, при использовании {{jsxref("Operators/Object_initializer", "сокращения имён свойств в ECMAScript 2015", "Новая_нотация_в_ECMAScript_2015")}}:
+  // или, при использовании {{jsxref("Operators/Object_initializer", "сокращения имён свойств в ECMAScript 2015", "#Новая_нотация_в_ECMAScript_2015")}}:
   // console.assert(number % 2 === 0, {number, errorMsg});
 }
 // output:
