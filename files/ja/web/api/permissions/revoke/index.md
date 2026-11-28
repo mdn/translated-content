@@ -1,50 +1,56 @@
 ---
-title: Permissions.revoke()
+title: "Permissions: revoke() メソッド"
+short-title: revoke()
 slug: Web/API/Permissions/revoke
 l10n:
-  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("Permissions API")}}
+{{APIRef("Permissions API")}}{{AvailableInWorkers}}
 
-**`Permissions.revoke()`** は {{domxref("Permissions")}} インターフェイスのメソッドで、現在設定されている権限を既定の状態（通常は `prompt`）に戻します。
+**`revoke()`** は {{domxref("Permissions")}} インターフェイスのメソッドで、現在設定されている権限をデフォルトの状態（通常は `prompt`）に戻します。
 このメソッドは、グローバルな {{domxref("Permissions")}} オブジェクトである {{domxref("navigator.permissions")}} に対して呼び出します。
+
+このメソッドは、用途が不明確なため、権限 API の仕様本体から削除されています。
+権限はブラウザーが管理します。現在の権限モデルでは、サイト開発者が明示的に権限を要求したり取り消したりできる仕組みにはなっていません。
+ブラウザーでは設定で有効化する形でこの API が提供されてきましたが、標準化される可能性は低いでしょう。
+詳しくは、[`permissions.revoke()` の削除に関する当初の議論](https://github.com/w3c/permissions/issues/46)<sup>(英語)</sup>を参照してください。
 
 ## 構文
 
 ```js-nolint
-revoke(descriptor)
+revoke(permissionDescriptor)
 ```
 
 ### 引数
 
-- `descriptor`
-  - : 名前と値のペアのカンマ区切りリストで構成される、操作のオプションを設定する `PermissionDescriptor` 辞書に基づくオブジェクト。 利用可能なオプションは次のとおりです。
+- `permissionDescriptor`
+  - : `revoke` 操作のオプションを設定するオブジェクトです。この記述子で利用できるオプションは、権限の種類によって異なります。
+
+    すべての権限には名前があります。
     - `name`
-      - : 権限を照会したい API の名前。 有効な値は、`'geolocation'`、`'midi'`、`'notifications'`、`'push'` です。
-    - `userVisibleOnly`
-      - : （Push のみ。 Firefox は対応していません。 下記の[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください）すべてのメッセージについて通知を表示するか、サイレントプッシュ通知を送信できるかを示します。 既定値は `false` です。
-    - `sysex` （MIDI のみ）
-      - : システムエクスクルーシブメッセージが必要か受信するかどうかを示します。 既定値は `false` です。
+      - : 権限を照会する API の名前を含む文字列です。ブラウザーがその権限名に対応していない場合、返される {{jsxref("Promise")}} は {{jsxref("TypeError")}} で拒否されます。
 
-> [!NOTE]
-> Firefox 44 以降、[通知](/ja/docs/Web/API/Notifications_API) と[プッシュ](/ja/docs/Web/API/Push_API)の権限は統合されました。 （例えば、ユーザーによって、関連する権限のダイアログにより）権限が与えられた場合、　`navigator.permissions.query()` は `notifications` と `push` の両方に対して `true` を返します。
+    `push` 権限では、次のオプションも指定できます。
+    - `userVisibleOnly` {{optional_inline}}
+      - : （Push のみ。Firefox は未対応です。下記の[ブラウザーの互換性](#ブラウザーの互換性)節を参照してください）すべてのメッセージについて通知を表示するか、サイレントプッシュ通知を送信できるかを示します。デフォルトは `false` です。
 
-> [!NOTE]
-> `persistent-storage` 権限は、[ストレージ API](https://storage.spec.whatwg.org/) のとおりに、オリジンがそのストレージとして永続的ボックス（すなわち永続的ストレージ（[persistent storage](https://storage.spec.whatwg.org/#persistence)））を使用することを許可します。
+    `midi` 権限では、次のオプションも指定できます。
+    - `sysex` {{optional_inline}}
+      - : システムエクスクルーシブメッセージが必要か、または受信するかどうかを示します。デフォルトは `false` です。
 
 ### 返値
 
-{{jsxref("Promise")}} で、要求の結果を示す {{domxref("PermissionStatus")}} オブジェクトで履行ハンドラーを呼び出します。
+要求の結果を示す {{domxref("PermissionStatus")}} オブジェクトで履行される {{jsxref("Promise")}} です。
 
 ### 例外
 
 - {{jsxref("TypeError")}}
-  - : `PermissionDescriptor` 情報の取得が何らかの理由で失敗したか、アクセス権が存在しないか現在サポートされていません（例えば、`midi`、または `userVisibleOnly` と一緒の `push` で）。
+  - : `PermissionDescriptor` 情報の取得が何らかの理由で失敗した場合、または権限が存在しないか、現在対応していない場合に発生します（例えば、`midi`、または `userVisibleOnly` を指定した `push`）。
 
 ## 例
 
-この関数をアプリで使用して、それが有する Geolocation API の権限を取り消すように要求できます。
+この関数は、アプリが自身の位置情報 API 権限の取り消しを要求するために使用できます。
 
 ```js
 function revokePermission() {
@@ -53,6 +59,10 @@ function revokePermission() {
   });
 }
 ```
+
+## 仕様書
+
+{{Specifications}}
 
 ## ブラウザーの互換性
 
