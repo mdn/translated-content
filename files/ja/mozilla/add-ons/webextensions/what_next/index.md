@@ -1,54 +1,64 @@
 ---
 title: 次にどうするのか？
 slug: Mozilla/Add-ons/WebExtensions/What_next
+l10n:
+  sourceCommit: ee33efab7300d7bf7319921a22f2eb2b60df91da
 ---
 
-{{AddonSidebar}}
+ブラウザー拡張機能のアイデアを形にする準備ができました。開発に取りかかる前に、作業をスムーズに進めるために知っておくとよいことがいくつかあります。
 
-ブラウザー拡張機能のアイデアを実現化していく準備ができているでしょう。開発の旅に出る前に、いくつかの注意点を意識することはスムーズに旅をする上で価値があります。
+このページで取り上げる多くの内容については、Firefox 用拡張機能の作成、テスト、公開、配布を支援するウェブサイト [Extension Workshop](https://extensionworkshop.com/)<sup>(英語)</sup> で詳しく学べます。
 
 ## 開発環境
 
-ブラウザー拡張機能を開発するためには、どんな特別な開発ツールや環境構築も必要ありません。テキストエディターだけで素晴らしいブラウザー拡張機能を作成することはいくらでも可能です。しかし、ウェブ用の開発で再利用したいツールと環境を持っている場合もあるでしょう。その場合は、いくつかのことを意識する必要があります。
+拡張機能の作成に、特別な開発ツールやビルド環境は必要ありません。テキストエディターだけでも優れた拡張機能を作れます。ただし、ウェブ開発で使っているツールや環境を再利用したい場合は、いくつか注意点があります。
 
-圧縮や難読化ツールを使用して最終コードを提出する場合には、[AMO レビュープロセス](#the_review_process)にソースコードを提供する必要があります。また、使用するツール (圧縮、難読化、ビルド用) は、オープンソース (または無期限の無料提供) かつレビュー担当者のコンピューター上 (Windows、Mac、Linux) で実行可能である必要があります。残念ながらレビュー担当者は有償ツール、またはウェブベースのツールでは作業することができません。
+最終コードを提供するために圧縮ツールや難読化ツールを使う場合は、[AMO の審査プロセス](#レビュープロセス)にソースコードを提出する必要があります。また、圧縮、難読化、ビルド処理に使うツールは、オープンソースであるか、無期限に無料で使用でき、審査担当者のコンピューター (Windows、Mac、Linux) で実行できる必要があります。審査担当者は有料ツールやウェブベースのツールを使えません。
 
-[ビルドツールに関する詳細](/ja/docs/Mozilla/Add-ons/Source_Code_Submission#about_build_tools)
+[Extension Workshop の開発ツールに関する詳細](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/)<sup>(英語)</sup>
 
 ## サードパーティライブラリー
 
-サードパーティライブラリーはブラウザー拡張機能に複雑な特徴や機能性を素早く追加するための優れた手段です。[AMO レビュープロセス](#the_review_process)に拡張機能を提出する時、どんなサードパーティライブラリーが使用されているかも検討されます。効率的なレビューのため、サードパーティライブラリーは常に公式ウェブサイトやリポジトリーからダウンロードし、ライブラリーが圧縮されている場合はソースコードへのリンクを提供してください。サードパーティライブラリーはいかなる方法でも変更できないことに注意してください。
+サードパーティライブラリーを使うと、複雑な機能を拡張機能にすばやく追加できます。拡張機能を [AMO の審査プロセス](#レビュープロセス)に提出すると、使用しているサードパーティライブラリーも審査されます。審査を円滑に進めるため、ライブラリーは必ず公式ウェブサイトまたはリポジトリーからダウンロードしてください。ライブラリーが圧縮されている場合は、ソースコードへのリンクを提供してください。また、サードパーティライブラリーを変更してはいけません。
 
-[ソースコードの提出に関する詳細](/ja/docs/Mozilla/Add-ons/Source_Code_Submission)
+[Extension Workshop のソースコード提出に関する詳細](https://extensionworkshop.com/documentation/publish/source-code-submission/)<sup>(英語)</sup>
 
 ## Firefox アドオン配布同意事項
 
-Firefox のリリース版、またはベータ版にインストールを行うために、拡張機能に署名する必要があります。署名は、addons.mozilla.org (AMO) で行われ、Firefox アドオン配布同意事項の条件に従います。この契約の目的は、Firefox ユーザーに対し、Firefox での体験を強化するような、十分にサポートされた高品質のアドオンを提供することにあります。
+Firefox のリリース版またはベータ版に拡張機能をインストールするには、署名が必要です。署名は addons.mozilla.org (AMO) で行われ、Firefox アドオン配布同意事項の条件に従います。この同意事項は、Firefox の利用体験を向上させる、十分なサポートと品質を備えたアドオンを Firefox ユーザーが利用できるようにすることを目的としています。
 
-[同意約内容を確認する](/docs/Mozilla/Add-ons/AMO/Policy/Agreement)
+[Extension Workshop で同意事項を読む](https://extensionworkshop.com/documentation/publish/firefox-add-on-distribution-agreement/)<sup>(英語)</sup>
 
-[署名に関する詳細](/ja/docs/Mozilla/Add-ons/WebExtensions/Distribution)
+[Extension Workshop の署名に関する詳細](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/)<sup>(英語)</sup>
 
 ## レビュープロセス
 
-署名のためにブラウザー拡張機能が提出されると、自動審査の対象となります。また、自動審査においてマニュアル審査が必要と判定された場合には、マニュアル審査の対象となる場合もあります。ブラウザー拡張機能は自動審査を通過するまで署名は行われず、マニュアル審査を通過しなかった場合に署名が取り消されることがあります。この審査の過程は厳密なガイドラインに従っているため、審査で問題になりそうな点を確認して回避することは簡単です。
+拡張機能の署名を申請すると、自動審査の対象になります。自動審査で必要と判断された場合は、手動審査も行われます。自動審査に合格するまでは AMO による署名は行われず、手動審査に不合格となると署名が取り消される場合があります。審査プロセスは厳格なガイドラインに従うため、審査で問題になりそうな点を確認し、回避しやすくなっています。
 
-[レビューポリシーとガイドラインに関する詳細](/ja/docs/Mozilla/Add-ons/AMO/Policy/Reviews)
+[Extension Workshop の審査ポリシーとガイドライン](https://extensionworkshop.com/documentation/publish/add-on-policies/)<sup>(英語)</sup>
 
 ## AMO のおすすめブラウザー拡張機能
 
-AMO にブラウザー拡張機能を掲載することを選んだ場合、拡張機能は AMO のウェブサイト、Firefox ブラウザーのアドオンマネージャー、または Mozilla のウェブサイト上のいずれかの場所に表示されます。拡張機能がどのようにおすすめとして選ばれるかを取り上げたガイドラインの一覧を作成しました。これらのガイドラインに従うことで、拡張機能をおすすめされるための最高の機会を得ることになります。
+拡張機能を AMO に掲載すると、AMO のウェブサイト、Firefox のアドオンマネージャー、または Mozilla のほかのウェブサイトで特集として紹介されることがあります。特集する拡張機能を選ぶためのガイドラインをまとめています。これらのガイドラインに従うと、拡張機能が特集される可能性を高められます。
 
-[アドオンのおすすめに関する詳細](/ja/docs/Mozilla/Add-ons/AMO/Policy/Featured)
+[Extension Workshop のおすすめ拡張機能に関する詳細](https://extensionworkshop.com/documentation/publish/recommended-extensions/)<sup>(英語)</sup>
 
 ## 学習体験を続ける
 
-これまでの内容を知ったところで、今度はブラウザー拡張機能の開発について詳しく説明します。以下のセクションを確認してください:
+これから先のことが分かったところで、拡張機能開発の詳細に進みましょう。次の内容を確認してください。
 
-- ブラウザー拡張機能の裏にある基本的なコンセプトについて、[JavaScript API](/ja/docs/Mozilla/Add-ons/WebExtensions/API) の使い方の詳細から説明します。
-- ブラウザー拡張機能で利用できる、[ユーザーインターフェイスコンポーネント](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface) のガイド。
-- 拡張機能の主な課題を達成する方法や、JavaScript API の使用方法に関するガイドのまとめ。
-- 他のブラウザー拡張機能を Firefox に移行する方法に関する情報。
-- ブラウザー拡張機能の開発で使用できる Firefox 特有のワークフローの詳細について。
-- JavaScript API に関するリファレンスガイド。
-- マニフェストキーに関するリファレンスガイド。
+- ブラウザー拡張機能の基本概念。まずは [JavaScript API](/ja/docs/Mozilla/Add-ons/WebExtensions/API) の使い方を学びます。
+- 拡張機能で利用できる[ユーザーインターフェイスコンポーネント](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface)のガイド。
+- 拡張機能で主要なタスクを実現する方法や、JavaScript API を使う方法を紹介するハウツーガイド集。
+- [JavaScript API のリファレンス](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)。
+- [マニフェストキーのリファレンス](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json)。
+
+また、Firefox 用拡張機能の作成について必要な情報を得られる Extension Workshop もご覧ください。
+
+- [Firefox 拡張機能の機能概要](https://extensionworkshop.com/#about)<sup>(英語)</sup>
+- [開発とテストに使うツールや手順の詳細](https://extensionworkshop.com/documentation/develop/)<sup>(英語)</sup>
+- [addons.mozilla.org で拡張機能を公開する方法、または自分で配布する方法](https://extensionworkshop.com/documentation/publish/)<sup>(英語)</sup>
+- [公開済みの拡張機能を管理する方法](https://extensionworkshop.com/documentation/manage/)<sup>(英語)</sup>
+- [拡張機能を開発、使用するためのエンタープライズ向けガイド](https://extensionworkshop.com/documentation/enterprise/)<sup>(英語)</sup>
+- [Firefox のテーマを開発する方法](https://extensionworkshop.com/documentation/themes/)<sup>(英語)</sup>
+- [Firefox 開発者コミュニティーの詳細](https://extensionworkshop.com/community/)<sup>(英語)</sup>
