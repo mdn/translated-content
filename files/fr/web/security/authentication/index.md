@@ -29,7 +29,7 @@ Dans cette série de guides, nous décrirons les systèmes d'authentification su
 - [Identité fédérée](/fr/docs/Web/Security/Authentication/Federated_identity)
   - : Dans la plupart des systèmes d'authentification, il y a deux parties&nbsp;: l'utilisateur·ice et le site web auquel il·elle essaie de se connecter. Dans un système fédéré, il existe une troisième partie, appelée _fournisseur d'identité_. Lorsque l'utilisateur·ice veut se connecter au site web, celui-ci demande au fournisseur d'identité d'identifier l'utilisateur·ice et, si l'identification réussit, le·la connecte.
 - [Clés d'accès](/fr/docs/Web/Security/Authentication/Passkeys)
-  - : Les clés d'accès permettent aux sites web d'authentifier les personnes sans qu'elles aient à saisir de mot de passe ni d'autre code secret sur le site lui-même.
+  - : Les clés d'accès permettent aux sites web d'authentifier les utilisateur·ice·s sans qu'elles aient à saisir de mot de passe ni d'autre code secret sur le site lui-même.
 
     Dans un système qui utilise des clés d'accès, l'appareil de l'utilisateur·ice stocke une {{Glossary("Public-key cryptography", "paire de clés cryptographiques")}} qui représente l'inscription de l'utilisateur·ice sur un site donné. Lorsque l'utilisateur·ice essaie de se connecter au site, celui-ci envoie un défi à l'appareil. L'appareil {{Glossary("digital signature", "signe")}} le défi avec la clé privée et envoie le résultat au site web, qui peut vérifier la signature et connecter l'utilisateur·ice.
 
