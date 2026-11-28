@@ -20,7 +20,7 @@ Dans cette série de guides, nous examinons les principales techniques disponibl
 
 ## Méthodes d'authentification
 
-Dans cette série de guides, nous décrirons les systèmes d'authentification suivants. Chaque système peut être déployé seul ou combiné à d'autres, soit pour laisser aux personnes le choix du système qu'elles veulent utiliser, soit pour mettre en place un système d'{{glossary("multi-factor authentication", "authentification multifacteur")}}.
+Dans cette série de guides, nous décrivons les systèmes d'authentification suivants. Chaque système peut être déployé seul ou combiné à d'autres, soit pour laisser aux utilisateur·ice·s le choix du système qu'ils·elles veulent utiliser, soit pour mettre en place un système {{Glossary("multi-factor authentication", "d'authentification à plusieurs facteurs")}}.
 
 - [Mots de passe](/fr/docs/Web/Security/Authentication/Passwords)
   - : Un mot de passe est un secret relativement durable que l'utilisateur·ice présente au site web lorsqu'il·elle doit se connecter. Le site web compare le mot de passe à une version transformée de celui-ci, stockée de manière sécurisée, et connecte l'utilisateur·ice s'ils correspondent. Les mots de passe présentent de nombreuses faiblesses de sécurité bien connues ; dans cet article, nous expliquerons les bonnes pratiques pour les réduire au minimum.
