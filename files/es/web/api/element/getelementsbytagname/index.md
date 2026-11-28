@@ -15,7 +15,7 @@ Devuelve una lista de elementos que tienen un [tag name](/es/docs/Web/API/Elemen
 elements = element.getElementsByTagName(tagName);
 ```
 
-- `elements` es un `NodeList` del elemento encontrado en el orden en que aparece en el árbol.
+- `elements` es una {{domxref("HTMLCollection")}} viva de elementos encontrados en el orden en que aparecen en el árbol.
 - `element` es el elemento a partir del cual debe empezar la búsqueda. Recuerda que sólo se buscan los elementos descendentes del elemento dado, sin incluir el propio elemento.
 - `tagName` es el nombre que se busca. La cadena especial `"*"` representa todos los elementos.
 

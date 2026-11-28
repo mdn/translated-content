@@ -15,7 +15,7 @@ Devuelve una lista de elementos cuyo nombre pertenece a un determinado 'namespac
 elements = document.getElementsByTagNameNS(namespace, name);
 ```
 
-- `elements` es una lista del tipo `NodeList` de los elementos encontrados, en el orden en el que aparecen en el árbol.
+- `elements` es una {{domxref("HTMLCollection")}} viva de elementos encontrados, en el orden en el que aparecen en el árbol.
 - `namespace` es el nombre URI en el que buscamos. (Véase [`element.namespaceURI`](/es/docs/Web/API/Element/namespaceURI)).
 - `name` es bien el nombre local por el que buscamos, o bien el valor especial `"*"`, que representa todos los elementos (véase [`element.localName`](/es/docs/Web/API/Element/localName)).
 
