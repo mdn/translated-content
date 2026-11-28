@@ -1,19 +1,22 @@
 ---
-title: <ol>
+title: "`<ol>` HTML 有序列表元素"
+short-title: <ol>
 slug: Web/HTML/Reference/Elements/ol
+l10n:
+  sourceCommit: 51c7af056884cf4b990052e492c21cc8508eef5c
 ---
 
-**HTML `<ol>` 元素**表示有序列表，通常渲染为一个带编号的列表。
+**`<ol>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示一系列有序的列表项，通常渲染为带编号的列表。
 
-{{InteractiveExample("HTML Demo: &lt;ol&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML 演示：&lt;ol&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <ol>
-  <li>Mix flour, baking powder, sugar, and salt.</li>
-  <li>In another bowl, mix eggs, milk, and oil.</li>
-  <li>Stir both mixtures together.</li>
-  <li>Fill muffin tray 3/4 full.</li>
-  <li>Bake for 20 minutes.</li>
+  <li>将面粉、泡打粉、糖和盐混合。</li>
+  <li>在另一个碗里，将鸡蛋、牛奶和油混合。</li>
+  <li>将两种混合物搅拌在一起。</li>
+  <li>将松饼烤盘装至 3/4 满。</li>
+  <li>烘烤 20 分钟。</li>
 </ol>
 ```
 
@@ -26,83 +29,46 @@ li {
 }
 ```
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容类别</a></th>
-   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">Flow content</a>, and if the <code>&lt;ol&gt;</code> element's children include at least one {{HTMLElement("li")}} element, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Palpable_content">palpable content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
-   <td>Zero or more {{ HTMLElement("li") }}, {{HTMLElement("script")}} and {{HTMLElement("template")}} elements.</td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
-   <td>不允许，开始标签和结束标签都不能省略。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父级</th>
-   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">隐含的 ARIA 角色</th>
-   <td><code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/list_role">list</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">允许的 ARIA 角色</th>
-   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role"><code>directory</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role"><code>menu</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role"><code>menubar</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role"><code>tablist</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role"><code>toolbar</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role"><code>tree</code></a></td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{DOMxRef("HTMLOListElement")}}</td>
-  </tr>
- </tbody>
-</table>
-
 ## 属性
 
-此元素支持[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+此元素还接受[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
+- `compact` {{Deprecated_inline}} {{non-standard_inline}}
+  - : 此布尔属性提示列表应以紧凑的样式渲染。浏览器对此属性的解释各不相同。请改用 [CSS](/zh-CN/docs/Web/CSS)：要获得与 `compact` 属性类似的效果，可以给 CSS 属性 {{cssxref("line-height")}} 设置 `80%` 的值。
 - `reversed`
-  - : 此布尔值属性指定列表中的条目是否是倒序排列的，即编号是否应从高到低反向标注。
+  - : 此布尔属性表示列表项按相反顺序排列。各项将从大到小依次编号。
 - `start`
-  - : 一个整数值属性，指定了列表编号的起始值。此属性的值应为阿拉伯数字，尽管列表条目的编号类型 `type` 属性可能指定为了罗马数字编号等其他类型的编号。比如说，想要让元素的编号从英文字母 "d" 或者罗马数字 "iv" 开始，都应当使用 `start="4"`。
-
-    > [!NOTE]
-    > 这个属性在 HTML4 中弃用，但是在 HTML5 中被重新引入。
-
+  - : 一个整数，指定列表项开始计数的数值。它始终是阿拉伯数字（1、2、3 等），即使编号的 `type` 是字母或罗马数字也一样。例如，要从字母“d”或罗马数字“iv”开始编号，请使用 `start="4"`。
 - `type`
   - : 设置编号的类型：
-    - `a` 表示小写英文字母编号
-    - `A` 表示大写英文字母编号
-    - `i` 表示小写罗马数字编号
-    - `I` 表示大写罗马数字编号
-    - `1` 表示数字编号（默认）编号类型适用于整个列表，除非在 `<ol>` 元素的 {{HTMLElement("li")}} 元素中使用不同的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/li#type) 属性。
+    - `a` 表示小写字母
+    - `A` 表示大写字母
+    - `i` 表示小写罗马数字
+    - `I` 表示大写罗马数字
+    - `1` 表示数字（默认）
+
+    整个列表都会使用指定的类型，除非包裹其中的 {{HTMLElement("li")}} 元素使用了不同的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/li#type) 属性。
 
     > [!NOTE]
-    > 这个属性在 HTML4 中弃用，但是在 HTML5 中被重新引入。除非列表中序号很重要（比如，在法律或者技术文件中条目通常被需要所引用），否则请使用 CSS {{cssxref("list-style-type")}} 属性替代。
+    > 除非列表编号的类型很重要（例如在法律或技术文档中，条目要靠编号或字母来引用），否则请改用 CSS 的 {{CSSxRef("list-style-type")}} 属性。
 
 ## 使用说明
 
-通常，有序列表的条目会和它前面的编号[标记](/zh-CN/docs/Web/CSS/Reference/Selectors/::marker)一起显示，编号标记可以是数字或者字母。
+通常，有序列表项前面会显示一个[标记](/zh-CN/docs/Web/CSS/Reference/Selectors/::marker)，例如数字或字母。
 
-`<ol>` 和 {{HTMLElement("ul")}} 元素两者可以无限嵌套，既可以同类嵌套，也可以互相嵌套。
+`<ol>` 和 {{HTMLElement("ul")}}（或同义词 {{HTMLElement("menu")}}）元素可以嵌套任意深度，并按需在 `<ol>`、`<ul>`（或 `<menu>`）之间交替。要嵌套列表，请把列表放在父列表的 {{HTMLElement("li")}} 元素内部；列表元素不能是另一个 `<ul>` 或 `<ol>` 的直接子元素。
 
-`<ol>` 和 {{HTMLElement("ul")}} 元素都表示列表。区别在于，`<ol>` 元素的有序列表的顺序是有意义的。举一些例子：
+`<ol>` 和 {{HTMLElement("ul")}} 元素都表示一组列表项。区别在于，对 `<ol>` 元素而言，顺序是有意义的。例如：
 
-- 烹饪食谱中的各个步骤
-- 指路时的各处转弯方向
-- 营养信息标签上 按含量排序的成分列表
+- 菜谱中的步骤
+- 逐向导航的指引
+- 营养成分标签上按含量递减排列的配料表
 
-至于如何确定该选择哪一个列表元素，可以尝试更改列表项的顺序，如果其含义会发生改变，那么就应当使用 {{HTMLElement("ol")}} 元素，否则使用 {{HTMLElement("ul")}} 更合适。
-
-> [!NOTE]
-> “更改顺序”时，不应当算上一些固定位于列表最前或最后的项，比如未完成的列表最后的占位项。
-> 如果只有一个元素，以至于根本不存在什么顺序可言，可能最好先考虑是否应当使用列表元素，以及是否要在列表最后增加一些占位的空项。
+要确定该用哪种列表，可以试着改变列表项的顺序；如果含义发生了变化，就使用 `<ol>` 元素——否则可以使用 {{HTMLElement("ul")}}；如果列表本身是菜单，则可以使用 {{HTMLElement("menu")}}。
 
 ## 示例
 
-### 简单示例
+### 基本示例
 
 ```html
 <ol>
@@ -113,37 +79,37 @@ li {
 </ol>
 ```
 
-以上 HTML 输出如下：
+#### 结果
 
-{{EmbedLiveSample("简单示例", 400, 100)}}
+{{EmbedLiveSample("基本示例", 400, 100)}}
 
-### 使用小写罗马数字编号
+### 使用罗马数字类型
 
 ```html
 <ol type="i">
-  <li>Introduction</li>
-  <li>List of Greivances</li>
-  <li>Conclusion</li>
+  <li>引言</li>
+  <li>申诉清单</li>
+  <li>结论</li>
 </ol>
 ```
 
-以上 HTML 输出如下：
+#### 结果
 
-{{EmbedLiveSample("使用小写罗马数字编号", 400, 100)}}
+{{EmbedLiveSample("使用罗马数字类型", 400, 100)}}
 
-### 使用 `start` 属性
+### 使用 start 属性
 
 ```html
-<p>Finishing places of contestants not in the winners' circle:</p>
+<p>未进入获胜者圈的参赛者的名次：</p>
 
 <ol start="4">
-  <li>Speedwalk Stu</li>
-  <li>Saunterin’ Sam</li>
-  <li>Slowpoke Rodriguez</li>
+  <li>竞走高手斯图</li>
+  <li>闲庭信步的山姆</li>
+  <li>慢吞吞的罗德里格斯</li>
 </ol>
 ```
 
-以上 HTML 输出如下：
+#### 结果
 
 {{EmbedLiveSample("使用 start 属性", 400, 100)}}
 
@@ -151,47 +117,112 @@ li {
 
 ```html
 <ol>
-  <li>first item</li>
+  <li>第一项</li>
   <li>
-    second item
-    <!-- closing </li> tag not here! -->
+    第二项
+    <!-- 结束标签 </li> 不在这里！ -->
     <ol>
-      <li>second item first subitem</li>
-      <li>second item second subitem</li>
-      <li>second item third subitem</li>
+      <li>第二项的第一子项</li>
+      <li>第二项的第二子项</li>
+      <li>第二项的第三子项</li>
     </ol>
   </li>
-  <!-- Here's the closing </li> tag -->
-  <li>third item</li>
+  <!-- 结束标签 </li> 在这里 -->
+  <li>第三项</li>
 </ol>
 ```
 
-以上 HTML 输出如下：
+#### 结果
 
 {{EmbedLiveSample("嵌套列表", 400, 150)}}
 
-### 嵌套有序列表和无序列表
+### 有序列表中的无序列表
 
 ```html
 <ol>
-  <li>first item</li>
+  <li>第一项</li>
   <li>
-    second item
-    <!-- closing </li> tag not here! -->
+    第二项
+    <!-- 结束标签 </li> 不在这里！ -->
     <ul>
-      <li>second item first subitem</li>
-      <li>second item second subitem</li>
-      <li>second item third subitem</li>
+      <li>第二项的第一子项</li>
+      <li>第二项的第二子项</li>
+      <li>第二项的第三子项</li>
     </ul>
   </li>
-  <!-- Here's the closing </li> tag -->
-  <li>third item</li>
+  <!-- 结束标签 </li> 在这里 -->
+  <li>第三项</li>
 </ol>
 ```
 
-以上 HTML 输出如下：
+#### 结果
 
-{{EmbedLiveSample("嵌套有序列表和无序列表", 400, 150)}}
+{{EmbedLiveSample("有序列表中的无序列表", 400, 150)}}
+
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
+          >内容分类</a
+        >
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+          >流式内容</a
+        >，如果 <code>&#x3C;ol></code> 元素的子元素包含至少一个 {{HTMLElement("li")}} 元素，则为<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可感知内容"
+          >可感知内容</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        零个或多个 {{HTMLElement("li")}}、{{HTMLElement("script")}} 和
+        {{HTMLElement("template")}} 元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+          >流式内容</a
+        >的元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐含的 ARIA 角色</th>
+      <td>
+        <code
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/list_role"
+            >list</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role"><code>directory</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>、
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role"><code>menu</code></a>、
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role"><code>menubar</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>、
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role"><code>radiogroup</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role"><code>tablist</code></a>、
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role"><code>toolbar</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role"><code>tree</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{DOMxRef("HTMLOListElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 
@@ -201,11 +232,11 @@ li {
 
 {{Compat}}
 
-## 相关
+## 参见
 
-- 其他列表相关的 HTML 元素：{{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} and the obsolete {{HTMLElement("dir")}};
-- 对 `<ol>` 元素常用的 CSS 属性：
-  - the {{cssxref("list-style")}} 属性，有用的选择序数的显示方式，
-  - [CSS 计数器](/zh-CN/docs/Web/CSS/Guides/Counter_styles/Using_counters), 用于处理复杂的嵌套列表，
-  - {{cssxref("line-height")}} 属性，可以模拟过时的 [`compact`](#compact) 属性；
-  - {{cssxref("margin")}} 属性，用来控制列表的缩进。
+- 其他与列表相关的 HTML 元素：{{HTMLElement("ul")}}、{{HTMLElement("li")}} 和 {{HTMLElement("menu")}}
+- 可能对 `<ol>` 元素的样式特别有用的 CSS 属性：
+  - {{CSSxRef("list-style")}} 属性，用于选择序号的显示方式
+  - [CSS 计数器](/zh-CN/docs/Web/CSS/Guides/Counter_styles/Using_counters)，用于处理复杂的嵌套列表
+  - {{CSSxRef("line-height")}} 属性，用于模拟已弃用的 `compact` 属性
+  - {{CSSxRef("margin")}} 属性，用于控制列表的缩进
