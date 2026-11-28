@@ -71,4 +71,4 @@ Run the application, open your browser to <http://localhost:3000/>, then select 
 ## Next steps
 
 - Return to [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [Date formatting using moment](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment).
+- Proceed to the next subarticle of part 5: [Date formatting using moment](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page).
