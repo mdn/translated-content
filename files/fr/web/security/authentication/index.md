@@ -16,7 +16,7 @@ Si des personnes peuvent se connecter à votre site web, il existe généralemen
 
 Toutes ces possibilités, et d'autres encore, font de l'accès aux comptes utilisateur·ice·s une cible importante pour les attaquant·e·s. Si un·e attaquant·e parvient à se connecter à votre site en se faisant passer pour un·e utilisateur·ice légitime, il·elle peut accéder, par exemple, aux données privées de cette personne, à ses identifiants bancaires ou à des secrets d'entreprise confidentiels, et les exploiter. Il·elle peut aussi usurper son identité sur votre site, ce qui risque de nuire à la réputation, voire de causer des dommages financiers.
 
-Dans cette série de guides, nous examinerons les principales techniques disponibles pour authentifier les utilisateur·ice·s sur le web ainsi que les bonnes pratiques associées.
+Dans cette série de guides, nous examinons les principales techniques disponibles pour authentifier les utilisateur·ice·s sur le web ainsi que les bonnes pratiques associées.
 
 ## Méthodes d'authentification
 
