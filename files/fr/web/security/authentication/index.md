@@ -5,7 +5,7 @@ l10n:
   sourceCommit: a516a9818e8cef06c626d436ee1d73fc6d87ec51
 ---
 
-L'authentification est le processus qui consiste à vérifier qu'une entité, par exemple une personne qui utilise un site web, est bien celle qu'elle prétend être. Vous devrez très probablement vous préoccuper de l'authentification si vous voulez que des personnes se connectent à votre site web.
+L'authentification est le processus qui consiste à vérifier qu'une entité — tel qu'un·e utilisateur·ice utilisant un site web — est bien celle qu'elle prétend être. Vous devez très probablement vous préoccuper de l'authentification si vous voulez que des utilisateur·ice·s se connectent à votre site web.
 
 Si des utilisateur·ice·s peuvent se connecter à votre site web, il existe généralement des actions qu'ils·elles peuvent effectuer une fois connectées, ou des données auxquelles ils·elles peuvent accéder, que vous ne voulez pas rendre accessibles à tout le monde. Par exemple, les personnes connectées peuvent avoir la possibilité de&nbsp;:
 
