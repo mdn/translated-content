@@ -2,10 +2,10 @@
 title: 不等価演算子 (!=)
 slug: Web/JavaScript/Reference/Operators/Inequality
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
-不等価演算子 (`!=`) は、2 つのオペランドが等しくないことを検査し、論理値で結果を返します。[厳密不等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_inequality)演算子とは異なり、異なる型のオペランドを変換して比較を行おうとします。
+不等価演算子 (`!=`) は、2 つのオペランドが等しくないことを検査し、論理値で結果を返します。[厳密不等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_inequality)演算子とは異なり、異なる型のオペランドを強制変換して比較しようとします。
 
 {{InteractiveExample("JavaScript デモ: 不等価演算子 (!=)")}}
 
@@ -29,6 +29,17 @@ console.log(0 != false);
 x != y
 ```
 
+### 引数
+
+- `x`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 8 （等価性演算子）以上の式です。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 9 （関係演算子）以上の式です。
+
+### 返値
+
+[緩い等価性](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#による緩い等価性)に従って `x` と `y` が等しくない場合は `true`、そうでなければ `false` です。
+
 ## 解説
 
 不等価演算子は、そのオペランドが等しくないことを検査します。これは[等価](/ja/docs/Web/JavaScript/Reference/Operators/Equality)演算子の逆に当たるので、以下の 2 行は常に同じ結果になります。
@@ -39,9 +50,9 @@ x != y;
 !(x == y);
 ```
 
-比較アルゴリズムの詳細については、[等価](/ja/docs/Web/JavaScript/Reference/Operators/Equality)演算子のページを参照して下さい。
+比較アルゴリズムの詳細については、[等価](/ja/docs/Web/JavaScript/Reference/Operators/Equality)演算子のページを参照してください。
 
-等価演算子と同様に、不等価演算子は異なる型のオペランドを変換して比較しようとします。
+等価演算子と同様に、不等価演算子は異なる型のオペランドを強制変換して比較しようとします。
 
 ```js
 3 != "3"; // false
@@ -55,7 +66,7 @@ x != y;
 
 ## 例
 
-### 型変換がない場合の比較
+### 強制変換を行わない場合の比較
 
 ```js
 1 != 2; // true
@@ -65,7 +76,7 @@ x != y;
 "hello" != "hello"; // false
 ```
 
-### 型変換がある場合の比較
+### 強制変換を行う場合の比較
 
 ```js
 "1" != 1; // false

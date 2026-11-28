@@ -2,7 +2,7 @@
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **`instanceof`** 演算子は、あるコンストラクターの `prototype` プロパティが、あるオブジェクトのプロトタイプチェーンの中のどこかに現れるかどうかを検査します。返値は論理値です。この動作は [`Symbol.hasInstance`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) でカスタマイズすることができます。
@@ -33,9 +33,13 @@ object instanceof constructor
 ### 引数
 
 - `object`
-  - : 検査するオブジェクトです。
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 9 （関係演算子）以上の式で、その値が検査されます。
 - `constructor`
-  - : 検査対象の関数です。
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 10 （ビットシフト）以上の式で、検査対象のコンストラクター、または [`[Symbol.hasInstance]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) メソッドを持つオブジェクトに評価されるものです。
+
+### 返値
+
+`constructor` が `object` をインスタンスとみなすかどうかを示す論理値です。デフォルトの動作をする通常のコンストラクターでは、`constructor.prototype` が `object` のプロトタイプチェーンに現れるかどうかを検査します。
 
 ### 例外
 
@@ -44,7 +48,7 @@ object instanceof constructor
 
 ## 解説
 
-`instanceof` 演算子は、 `object` のプロトタイプチェーンに `constructor.prototype` が存在することを検査します。これ通常（ただし[常にではない](#overriding_the_behavior_of_instanceof)）、`object`が`constructor`で構築されたということを意味しています。
+`instanceof` 演算子は、`object` のプロトタイプチェーンに `constructor.prototype` が存在することを検査します。これは通常（ただし[常にそうとは限りません](#instanceof_の動作のオーバーライド)）、`object` が `constructor` によって構築されたことを意味します。
 
 ```js
 // コンストラクターを定義
@@ -131,7 +135,7 @@ console.log(obj instanceof Forgeable); // true
 
 ### instanceof と複数の領域
 
-JavaScriptの実行環境（ウィンドウ、フレームなど）は、それぞれの独自の領域に属しています。つまり、組み込まれているものも変わります（別々なグローバルオブジェクト、別々なコンストラクター、など）。これにより予期せぬ結果になる場合があります。例えば、`[] instanceof window.frames[0].Array` は `false` を返します。 `Array.prototype !== window.frames[0].Array.prototype` であり、配列は前者を継承しているからです。
+JavaScript の実行環境（ウィンドウ、フレームなど）は、それぞれ独自の領域に属しています。つまり、組み込みのものも異なります（異なるグローバルオブジェクトやコンストラクターなど）。これにより予期しない結果になる場合があります。例えば、`[] instanceof window.frames[0].Array` は `false` を返します。`Array.prototype !== window.frames[0].Array.prototype` であり、配列は前者を継承しているからです。
 
 これは、始めはわかりにくいかもしれませんが、スクリプトで複数のフレームやウィンドウを扱い、オブジェクトをあるコンテキストから別のコンテキストへ関数を経由して渡すようになると、正当かつ重要な事項になります。例えば、 {{jsxref("Array.isArray()")}} を使用すると、与えられたオブジェクトが実際に配列であるかどうかを安全にチェックできます。
 
@@ -237,7 +241,7 @@ if (!myCar instanceof Car) {
 
 ### instanceof の動作のオーバーライド
 
-`instanceof` を使用する際のよくある落とし穴は、 `x instanceof C` が真の場合、 `x` が `C` をコンストラクターとして作成されたと信じることです。これは真ではありません。なぜなら、 `x` はプロトタイプとして `C.prototype` を直接割り当てられて作成される可能性があるからです。この場合、コードが `x` から `C` の[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を読み取ろうとしても失敗します。
+`instanceof` を使用する際によくある落とし穴は、`x instanceof C` が真なら `x` は `C` を使って生成されたと考えることです。これは正しくありません。`x` は `C.prototype` を自身のプロトタイプとして直接指定して作成される可能性があるからです。この場合、コードが `x` から `C` の[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を読み取ろうとしても失敗します。
 
 ```js
 class C {
@@ -254,7 +258,7 @@ if (x instanceof C) {
 }
 ```
 
-これ避けるために、 `C` に `Symbol.hasInstance` メソッドを追加して `instanceof` の動作を上書きすることができます。これにより、 [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) を使ったブランドチェックをすることができます。
+これを避けるために、`C` に `Symbol.hasInstance` メソッドを追加して `instanceof` の動作を上書きできます。これにより、[`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) を使ったブランドチェックができます。
 
 ```js
 class C {
@@ -277,14 +281,14 @@ if (x instanceof C) {
 }
 ```
 
-この動作を現在のクラスに制限 したいかもしれません。そうしないと、サブクラスで誤検知が発生する可能性があるからです。
+この動作を現在のクラスに制限したいかもしれません。そうしないと、サブクラスで誤検知が発生する可能性があるからです。
 
 ```js
 class D extends C {}
 console.log(new C() instanceof D); // true : D は C から [Symbol.hasInstance] を継承しているため
 ```
 
-これを行うには、`this`が現在のコンストラクターであるかどうかを調べることができます。
+これを行うには、`this` が現在のコンストラクターであるかどうかを調べます。
 
 ```js
 class C {

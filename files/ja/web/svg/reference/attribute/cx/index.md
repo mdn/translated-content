@@ -2,7 +2,7 @@
 title: cx
 slug: Web/SVG/Reference/Attribute/cx
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`cx`** 属性は中心点の X 座標を定義します。
@@ -16,7 +16,80 @@ l10n:
 > [!NOTE]
 > 幾何プロパティであるため、 {{cssxref("cx")}} は `<circle>` および `<ellipse>` の CSS プロパティとしても使用できます。
 
+## circle
+
+{{SVGElement('circle')}} に対して、 `cx` は図形の中心の X 座標を定義します。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>{{cssxref("length-percentage")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">デフォルト値</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
+    </tr>
+  </tbody>
+</table>
+
+> [!NOTE]
+> `<circle>` の中心の X 座標は幾何プロパティの {{cssxref("cx")}} でも定義できます。 CSS で設定した場合、 `cx` プロパティの値がこの `cx` 属性の値を上書きします。
+
+## ellipse
+
+{{SVGElement('ellipse')}} に対して、 `cx` は図形の中心の X 座標を定義します。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>{{cssxref("length-percentage")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">デフォルト値</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
+    </tr>
+  </tbody>
+</table>
+
+> [!NOTE]
+> `<ellipse>` の中心の X 座標は幾何プロパティの {{cssxref("cx")}} でも定義できます。 CSS で設定した場合、 `cx` プロパティの値がこの `cx` 属性の値を上書きします。
+
+## radialGradient
+
+{{SVGElement('radialGradient')}} に対して、 `cx` は、放射グラデーションの終端円の X 軸座標を定義します。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">デフォルト値</th>
+      <td><code>50%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
+    </tr>
+  </tbody>
+</table>
+
 ## 例
+
+### さまざまな要素での使用
 
 ```css hidden
 html,
@@ -39,80 +112,9 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", 100, 100)}}
+{{EmbedLiveSample("Usage with various elements", 100, 100)}}
 
-## circle
-
-{{SVGElement('circle')}} に対して、 `cx` は図形の中心の X 座標を定義します。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>{{cssxref("length-percentage")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
-
-> [!NOTE]
-> `<circle>` の中心の X 座標は {{cssxref("cx")}} 幾何プロパティでも定義できます。 CSS で設定した場合、 `cx` プロパティの値がこの `cx` 属性の値を上書きします。
-
-## ellipse
-
-{{SVGElement('ellipse')}} に対して、 `cx` は図形の中心の X 座標を定義します。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>{{cssxref("length-percentage")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
-
-> [!NOTE]
-> `<ellipse>` の中心の X 座標は {{cssxref("cx")}} 幾何プロパティでも定義できます。 CSS で設定した場合、 `cx` プロパティの値がこの `cx` 属性の値を上書きします。
-
-## radialGradient
-
-{{SVGElement('radialGradient')}} に対して、 `cx` は、放射グラデーションの終端円の X 軸座標を定義します。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        <strong><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>50%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
-
-### 例
+### radialGradient での使用
 
 ```css hidden
 html,
@@ -168,7 +170,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('radialGradient', 150, '100%')}}
+{{EmbedLiveSample('Usage with radialGradient', 150, '100%')}}
 
 ## 仕様書
 

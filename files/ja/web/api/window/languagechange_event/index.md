@@ -1,49 +1,55 @@
 ---
 title: "Window: languagechange イベント"
+short-title: languagechange
 slug: Web/API/Window/languagechange_event
+l10n:
+  sourceCommit: 023b9075df473020b3279afa031bb4a32e3b743b
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-**`languagechange`** イベントはグローバルスコープオブジェクトで、ユーザーの推奨言語が変更されたときに発生します。
+**`languagechange`** イベントは、ユーザーの推奨言語が変更されたときにグローバルスコープオブジェクトに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラー</th>
-      <td>
-        {{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## 構文
+
+このイベント名を {{domxref("EventTarget/addEventListener", "addEventListener()")}} で使用します。
+
+```js-nolint
+addEventListener("languagechange", (event) => { })
+```
+
+または、このインターフェイスの[イベントハンドラープロパティ](/ja/docs/Web/API/Document_Object_Model/Events#イベントハンドラープロパティの使用)に代入します。
+
+```js-nolint
+onlanguagechange = (event) => { }
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
+
+## イベントハンドラーの別名
+
+`Window` インターフェイスに加えて、イベントハンドラーのプロパティ `onlanguagechange` は次のターゲットでも利用できます。
+
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
+- {{domxref("SVGSVGElement")}}
 
 ## 例
 
-`languagechange` は {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドで使用することができます。
+`languagechange` イベントは、{{domxref("EventTarget/addEventListener", "addEventListener()")}} メソッドで使用できます。
 
 ```js
-window.addEventListener("languagechange", function () {
+window.addEventListener("languagechange", () => {
   console.log("languagechange event detected!");
 });
 ```
 
-または、 {{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}} イベントハンドラープロパティを使用することもできます。
+または、`onlanguagechange` イベントハンドラープロパティを使用できます（ただし、これにより、すでに `onlanguagechange` を使用して追加されたほかのイベントリスナーが置換されます）。
 
 ```js
-window.onlanguagechange = function (event) {
+window.onlanguagechange = (event) => {
   console.log("languagechange event detected!");
 };
 ```
@@ -58,7 +64,6 @@ window.onlanguagechange = function (event) {
 
 ## 関連情報
 
-- {{domxref("NavigatorLanguage.language", "navigator.language")}}
-- {{domxref("NavigatorLanguage.languages", "navigator.languages")}}
-- {{domxref("Navigator")}}
-- {{domxref("Window.onlanguagechange")}}
+- {{domxref("navigator.language")}}
+- {{domxref("navigator.languages")}}
+- {{domxref("navigator")}}

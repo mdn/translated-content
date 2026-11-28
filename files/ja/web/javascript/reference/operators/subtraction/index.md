@@ -2,7 +2,7 @@
 title: 減算演算子 (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **減算演算子 (`-`)** は 2 つのオペランドの間で減算し、それらの差を生成します。
@@ -29,9 +29,26 @@ console.log(5 - true);
 x - y
 ```
 
+### 引数
+
+- `x`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 11（加算）以上の式です。その値は[数値または長整数](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)に強制変換されます。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 12（乗算）以上の式です。その値は[数値または長整数](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)に強制変換されます。
+
+### 返値
+
+`x` と `y` の差を表す数値または長整数です。
+
 ## 解説
 
-`-` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。まず[両オペランドを数値型に変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への変換)し、それらの型を検査します。両オペランドが長整数になった場合、長整数の減算を実行します。そうでない場合は数値の減算を実行します。一方のオペランドが長整数になり、もう一方が数値になった場合は、{{jsxref("TypeError")}} が発生します。
+`-` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。まず[両オペランドを数値に強制変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)し、型を検査します。両オペランドが長整数になった場合、長整数の減算を実行します。そうでない場合は数値の減算を実行します。一方のオペランドが長整数になり、もう一方が数値になった場合は、{{jsxref("TypeError")}} が発生します。
+
+数値の減算を行う場合、`x - y` は `x + -y` と等価であると定義されているため、[加算](/ja/docs/Web/JavaScript/Reference/Operators/Addition)の規則が適用されます。
+
+- いずれかのオペランドが `NaN` の場合、結果は `NaN` です。
+- `Infinity - Infinity` の結果は `NaN` です。
+- 数学的な結果が 0 の場合、減算が `-0 - 0` でない限り `0` が返されます。`-0 - 0` の場合は `-0` が返されます。
 
 ## 例
 

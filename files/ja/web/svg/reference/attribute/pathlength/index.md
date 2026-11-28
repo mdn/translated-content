@@ -2,7 +2,7 @@
 title: pathLength
 slug: Web/SVG/Reference/Attribute/pathLength
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`pathLength`** 属性により、ユーザー単位でパスの全長を指定することができます。 この値は、距離の計算すべてを `pathLength` / (パスの長さの計算値) の比率で変倍することで、ブラウザーの距離計算と作成者の距離計算を調整するために使用されています。
@@ -19,45 +19,8 @@ l10n:
 - {{SVGElement('polyline')}}
 - {{SVGElement('rect')}}
 
-## 例
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    path {
-      fill: none;
-      stroke: black;
-      stroke-width: 2;
-      stroke-dasharray: 10;
-    }
-  </style>
-
-  <!-- pathLength は使用されておらず、パスの実際の長さが使用されている。その場合、 100 ユーザー単位 -->
-  <path d="M 0,10 h100" />
-
-  <!-- パス長が 90 ユーザー単位の長さであるかのようにすべてを計算する -->
-  <path d="M 0,20 h100" pathLength="90" />
-
-  <!-- パス長が 50 ユーザー単位の長さであるかのようにすべてを計算する -->
-  <path d="M 0,30 h100" pathLength="50" />
-
-  <!-- パス長が 30 ユーザー単位の長さであるかのようにすべてを計算する -->
-  <path d="M 0,40 h100" pathLength="30" />
-
-  <!-- パス長が 10 ユーザー単位の長さであるかのようにすべてを計算する -->
-  <path d="M 0,50 h100" pathLength="10" />
-</svg>
-```
-
-{{EmbedLiveSample("Example", '100%', 200)}}
+> [!NOTE]
+> `pathLength` 属性には、対応する CSS プロパティ [`path-length`](/ja/docs/Web/CSS/Reference/Properties/path-length) があります。両方が指定された場合、CSS プロパティが優先されます。
 
 ## circle
 
@@ -74,7 +37,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -99,7 +62,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -124,7 +87,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -149,7 +112,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -174,7 +137,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -199,7 +162,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -224,7 +187,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -234,6 +197,50 @@ svg {
   </tbody>
 </table>
 
+## 例
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    path {
+      fill: none;
+      stroke: black;
+      stroke-width: 2;
+      stroke-dasharray: 10;
+    }
+  </style>
+
+  <!-- pathLength がない場合、パスの実際の長さを使用します。ここでは 100 ユーザー単位です -->
+  <path d="M 0,10 h100" />
+
+  <!-- パス長が 90 ユーザー単位であるかのようにすべて計算します -->
+  <path d="M 0,20 h100" pathLength="90" />
+
+  <!-- パス長が 50 ユーザー単位であるかのようにすべて計算します -->
+  <path d="M 0,30 h100" pathLength="50" />
+
+  <!-- パス長が 30 ユーザー単位であるかのようにすべて計算します -->
+  <path d="M 0,40 h100" pathLength="30" />
+
+  <!-- パス長が 10 ユーザー単位であるかのようにすべて計算します -->
+  <path d="M 0,50 h100" pathLength="10" />
+</svg>
+```
+
+{{EmbedLiveSample("Example", '100%', 200)}}
+
 ## 仕様書
 
 {{Specifications}}
+
+## 関連情報
+
+- CSS の {{cssxref("path-length")}} プロパティ

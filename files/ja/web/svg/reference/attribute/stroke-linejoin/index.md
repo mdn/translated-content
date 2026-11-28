@@ -2,7 +2,7 @@
 title: stroke-linejoin
 slug: Web/SVG/Reference/Attribute/stroke-linejoin
 l10n:
-  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`stroke-linejoin`** 属性は、描線（線）が描かれたときにパスの角に使用する形状を定義する表示属性です。
@@ -106,7 +106,7 @@ svg {
 
 {{EmbedLiveSample("Example", '100%', 400)}}
 
-## 使用場面
+## 使用上のメモ
 
 <table class="properties">
   <tbody>

@@ -30,7 +30,7 @@ startsWith(searchString, position)
 ### 引数
 
 - `searchString`
-  - : `str` の先頭で検索される文字の集合です。[正規表現](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正規表現の特殊な扱い)にすることはできません。正規表現ではない値はすべて[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ので、省略したり `undefined` を渡したりすると、`startsWith()` は `"undefined"` という文字列を検索します。これはおそらく望むところではないでしょう。
+  - : `str` の先頭で検索される文字の集合です。[正規表現](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正規表現の特殊な扱い)にすることはできません。正規表現ではない値はすべて文字列に[強制変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)ので、省略したり `undefined` を渡したりすると、`startsWith()` は `"undefined"` という文字列を検索します。これはおそらく望むところではないでしょう。
 - `position` {{optional_inline}}
   - : `searchString` が見つかると期待される開始位置（`searchString` の先頭の文字のインデックス）です。既定値は `0` です。
 

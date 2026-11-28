@@ -2,7 +2,7 @@
 title: オプショナルチェーン演算子 (?.)
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **オプショナルチェーン演算子 (`?.`)** (optional chaining) は、オブジェクトのプロパティにアクセスしたり、関数を呼び出したりします。この演算子を使用してアクセスするオブジェクトまたは呼び出される関数が {{jsxref("undefined")}} または [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の場合、エラーが発生することなく、式が途中で終了し、{{jsxref("undefined")}} と評価されます。
@@ -32,6 +32,23 @@ obj?.prop
 obj?.[expr]
 func?.(args)
 ```
+
+### 引数
+
+- `obj`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 17 （アクセスと呼び出し）以上の式です。
+- `prop`
+  - : アクセスするプロパティの[識別子名](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)です。
+- `expr`
+  - : 任意の[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)の式です。`obj` が `null` でも `undefined` でもない場合にのみ評価されます。その値はプロパティキー（[文字列](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)またはシンボル）に強制変換されます。
+- `func`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 17 （アクセスと呼び出し）以上で、関数、`null`、または `undefined` に評価される式です。
+- `args`
+  - : `func` に渡す引数です。`func` が `null` でも `undefined` でもない場合にのみ評価されます。各引数には[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用するか、[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 2 （代入）以上の式を指定できます。
+
+### 返値
+
+`obj` または `func` が `null` または `undefined` の場合は `undefined` です。それ以外の場合は、プロパティアクセスまたは関数呼び出しの結果です。
 
 ## 解説
 
@@ -84,8 +101,7 @@ const result = someInterface.customMethod?.();
 しかし、そのような名前のプロパティが関数でない場合、`?.` を使用しても、{{jsxref("TypeError")}} 例外 "someInterface.customMethod is not a function" が発生します。
 
 > [!NOTE]
-> 関数ではない名前のプロパティがあった場合、 `?.` を使用すると {{jsxref("TypeError")}} 例外が発生します ("someInterface is null")。
-> もし `someInterface` 自体が `null` または `undefined` である可能性がある場合は、この位置にも `?.` を使用する必要があります。つまり、`someInterface?.customMethod?.()` のように指定します。
+> `someInterface` 自体が `null` または `undefined` の場合も、{{jsxref("TypeError")}} 例外が発生します（"someInterface is null"）。その可能性がある場合は、この位置にも `?.` を使用し、`someInterface?.customMethod?.()` のように指定します。
 
 `eval?.()` は[_間接的 eval_](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval#直接的または間接的な_eval) モードに入るための最短の方法です。
 
@@ -242,7 +258,7 @@ const customerName = customer.name?.getName?.(); // メソッドが存在しな�
 
 ### ヌル値合体演算子と共に使う
 
-[ヌル値合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)をオプショナルチェーンの後につけることで、値が存在しなかったときの既定値を指定することができます。
+[ヌル値合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)をオプショナルチェーンの後につけることで、値が存在しなかったときのデフォルト値を指定することができます。
 
 ```js
 function printCustomerCity(customer) {

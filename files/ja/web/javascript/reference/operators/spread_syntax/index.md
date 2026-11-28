@@ -2,12 +2,12 @@
 title: スプレッド構文 (...)
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
-**スプレッド構文 (`...`)** 構文を使うと、配列式や文字列などの反復可能オブジェクトを、0 個以上の引数（関数呼び出しの場合）や要素（配列リテラルの場合）を目的の場所に展開することができます。オブジェクトリテラルでは、スプレッド構文によりオブジェクトのプロパティを列挙し、作成するオブジェクトにキーと値の組を追加します。
+**スプレッド構文 (`...`)** を使うと、配列や文字列などの反復可能な値を、関数呼び出しでは 0 個以上の引数に、配列リテラルでは 0 個以上の要素に展開できます。オブジェクトリテラルでは、オブジェクトのプロパティを列挙し、作成中のオブジェクトにキーと値の組を追加します。
 
-スプレッド構文は、残余構文とまったく同じように見えますが、ある意味では、スプレッド構文は残余構文の反対です。スプレッド構文は配列を要素に「展開」しますが、リスト構文は複数の要素を集合し、単一の要素に「圧縮」します。[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)と[残余プロパティ](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#残余プロパティと残余要素)を参照してください。
+スプレッド構文は、残余構文とまったく同じように見えますが、ある意味ではその反対です。スプレッド構文は配列を要素に「展開」しますが、残余構文は複数の要素を集めて単一の要素に「まとめ」ます。[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)と[残余プロパティ](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#残余プロパティと残余要素)を参照してください。
 
 {{InteractiveExample("JavaScript デモ: スプレッド構文 (...)")}}
 
@@ -33,9 +33,20 @@ myFunction(a, ...iterableObj, b)
 { ...obj, key: 'value' }
 ```
 
+### 引数
+
+- `iterableObj`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 2（代入）以上の式で、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)に従う反復可能な値に評価されます。
+- `obj`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 2（代入）以上の式です。その値が持つ自身の列挙可能なプロパティは、オブジェクトリテラルにコピーされます。
+
+### 返値
+
+スプレッド構文自体に返値はありません。関数呼び出しや配列リテラルでは、`iterableObj` の各値が個別の引数または配列要素になります。オブジェクトリテラルでは、`obj` のプロパティキーと値がコピーされます。
+
 ## 解説
 
-スプレッド構文は、オブジェクトまたは配列の要素をすべて新しい配列またはオブジェクトに含める必要がある場合、または関数呼び出しの引数リストに1つずつ適用する必要がある場合に使用することができます。スプレッド構文を受け入れる場所は 3 つあります。
+スプレッド構文は、オブジェクトや配列の内容を新しい配列またはオブジェクトに含める場合や、関数呼び出しの引数リストに値を 1 つずつ渡す場合に使用できます。スプレッド構文を受け入れる場所は 3 つあります。
 
 - [関数の引数](#関数呼び出しでの展開)リスト (`myFunction(a, ...iterableObj, b)`)
 - [配列リテラル](#配列リテラルでの展開) (`[1, ...iterableObj, '4', 'five', 6]`)
@@ -57,7 +68,7 @@ const array = [1, 2, 3];
 const obj = { ...array }; // { 0: 1, 1: 2, 2: 3 }
 ```
 
-すべての[プリミティブ](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ値)はオブジェクトに展開できます。 文字列のみ自分自身で列挙可能なプロパティを持っており、それ以外は何らかのプロパティを新しいオブジェクトに作成することなく展開できます。
+すべての[プリミティブ](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ値)はオブジェクトに展開できます。文字列だけが自身の列挙可能なプロパティを持ち、それ以外のプリミティブを展開しても新しいオブジェクトにプロパティは作成されません。
 
 ```js
 const obj = { ...true, ..."test", ...10 };
@@ -96,9 +107,9 @@ const args = [0, 1];
 myFunction(-1, ...args, 2, ...[3]);
 ```
 
-#### new 演算子の適用
+#### new 演算子との併用
 
-コンストラクターを {{jsxref("new")}} で呼び出す場合、配列を**直接**使用して `apply()` を実行することはできません。なぜなら、`apply()` は対象関数を構築するのではなく呼び出すためです。つまり、[`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) は `undefined` になります。しかし、配列は `new` を使用すると、スプレッド構文のおかげで簡単に使用することができます。
+コンストラクターを {{jsxref("new")}} で呼び出す場合、配列と `apply()` を**直接**使うことはできません。`apply()` は対象の関数を構築するのではなく呼び出すためです。そのため、[`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) は `undefined` になります。しかし、スプレッド構文を使えば、配列の要素を `new` に渡してコンストラクターを呼び出せます。
 
 ```js
 const dateFields = [1970, 0, 1]; // 1 Jan 1970
@@ -109,7 +120,7 @@ const d = new Date(...dateFields);
 
 #### より強力な配列リテラル
 
-スプレッド構文を使用しない場合、既存の配列を一部として使用して新しい配列を作成するには、配列リテラル構文は十分ではなく、{{jsxref("Array/push", "push()")}}, {{jsxref("Array/splice", "splice()")}}, {{jsxref("Array/concat", "concat()")}} などを組み合わせて使う高圧的なコードを使用しなければなりません。
+スプレッド構文を使用しない場合、既存の配列を一部として含む新しい配列を作成するには、配列リテラルだけでは不十分で、{{jsxref("Array/push", "push()")}}、{{jsxref("Array/splice", "splice()")}}、{{jsxref("Array/concat", "concat()")}} などを組み合わせた命令型のコードを書く必要があります。
 
 ```js
 const parts = ["shoulders", "knees"];
@@ -125,14 +136,14 @@ const lyrics = ["head", ...parts, "and", "toes"];
 
 ```js
 const arr = [1, 2, 3];
-const arr2 = [...arr]; // like arr.slice()
+const arr2 = [...arr]; // arr.slice() と同様
 
 arr2.push(4);
 // arr2 は [1, 2, 3, 4] になります
 // arr は変更されません
 ```
 
-スプレッド構文は、配列をコピーする際に効果的に 1 レベル深くコピーします。したがって、多次元配列のコピーには適していない可能性があります。{{jsxref("Object.assign()")}} でも同様です。JavaScript では、ネイティブの操作でディープクローンを行うものはありません。Web API メソッドの {{DOMxRef("Window.structuredClone", "structuredClone()")}} では、特定の[対応している型](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types)の値をディープコピーすることができます。詳細は、[シャローコピー](/ja/docs/Glossary/Shallow_copy)を参照してください。
+配列をコピーするとき、スプレッド構文は実質的に 1 レベル分だけコピーします。そのため、多次元配列のコピーには適さない場合があります。{{jsxref("Object.assign()")}} でも同様です。JavaScript にはディープクローンを行うネイティブ操作はありません。Web API の {{DOMxRef("Window.structuredClone", "structuredClone()")}} メソッドを使うと、特定の[対応している型](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types)の値をディープコピーできます。詳細は[シャローコピー](/ja/docs/Glossary/Shallow_copy)を参照してください。
 
 ```js example-bad
 const a = [[1], [2], [3]];
@@ -141,7 +152,7 @@ const b = [...a];
 b.shift().shift();
 // 1
 
-// しまった。 'a' も影響を受けてしまった。
+// しまった。配列 a にも影響した。
 console.log(a);
 // [[], [2], [3]]
 ```
@@ -174,7 +185,7 @@ arr1 = [...arr1, ...arr2];
 const arr1 = [0, 1, 2];
 const arr2 = [3, 4, 5];
 
-//  arr2 のすべての要素を arr1 へ移植します
+// arr2 のすべての要素を arr1 の先頭に挿入
 Array.prototype.unshift.apply(arr1, arr2);
 console.log(arr1); // [3, 4, 5, 0, 1, 2]
 ```
@@ -209,7 +220,7 @@ const fruits = ["apple", "banana", isSummer ? "watermelon" : undefined];
 // ['apple', 'banana', undefined]
 ```
 
-この場合、追加の `undefined` の要素が `isSummer` が `false` のときに未定義の要素が追加され、この要素は {{jsxref("Array.prototype.map()")}} などのメソッドによって参照されます。
+この場合、`isSummer` が `false` のときに余分な `undefined` 要素が追加されます。この要素は {{jsxref("Array.prototype.map()")}} などのメソッドで処理されます。
 
 ### オブジェクトリテラルでの展開
 
@@ -245,7 +256,7 @@ const mergedObj = { x: 41, ...obj1, ...obj2, y: 9 }; // { x: 42, foo: "baz", y: 
 
 #### 条件付きでプロパティをオブジェクトへ追加
 
-条件に応じて、オブジェクトリテラルで要素を存在する、または存在しないようにすることができます。[条件演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator)を使用します。
+オブジェクトリテラルのプロパティを、条件に応じて追加するかどうかを切り替えるには、[条件演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator)を使用できます。
 
 ```js
 const isSummer = false;
@@ -270,7 +281,7 @@ const fruits = {
 
 この場合、`watermelon` プロパティは常に存在し、{{jsxref("Object.keys()")}} などのメソッドによって参照されます。
 
-プリミティブもオブジェクトに展開できること、そして、列挙値には{{Glossary("falsy","偽値")}}がないという観察結果から、単純に[論理 AND](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND) 演算子を使用することができます。
+プリミティブもオブジェクトに展開でき、{{Glossary("falsy","偽値")}}は列挙可能なプロパティを持たないため、単純に[論理 AND](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND) 演算子を使用できます。
 
 ```js
 const isSummer = false;
@@ -285,7 +296,7 @@ const fruits = {
 
 #### Object.assign() との比較
 
-オブジェクトを変更するには {{jsxref("Object.assign()")}} を使用することができますが、スプレッド構文は使用できないことに注意してください。
+オブジェクトを変更するには {{jsxref("Object.assign()")}} を使用できますが、スプレッド構文では変更できないことに注意してください。
 
 ```js
 const obj1 = { foo: "bar", x: 42 };
@@ -293,7 +304,7 @@ Object.assign(obj1, { x: 1337 });
 console.log(obj1); // { foo: "bar", x: 1337 }
 ```
 
-さらに、{{jsxref("Object.assign()")}} は対象とするオブジェクトのセッターを開始しますが、スプレッド構文では開始しません。
+さらに、{{jsxref("Object.assign()")}} は対象オブジェクトのセッターを呼び出しますが、スプレッド構文は呼び出しません。
 
 ```js
 const objectAssign = Object.assign(
@@ -304,7 +315,7 @@ const objectAssign = Object.assign(
   },
   { foo: 1 },
 );
-// "1" とログ出力。objectAssign.foo は元のセッター
+// "1" をログ出力。objectAssign.foo は元のセッターのまま
 
 const spread = {
   set foo(val) {
@@ -329,7 +340,7 @@ const mergedObj2 = merge({}, obj1, obj2);
 // { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }
 ```
 
-例えば、上記の例では、スプレッド構文は期待通りに動作しません。残余引数により、オブジェクトリテラルに引数の配列が展開されます。以下は、スプレッド構文を使用した `merge` の実装例です。この動作は {{jsxref("Object.assign()")}} に似ていますが、セッターを起動せず、オブジェクトを変更しないという点が異なります。
+上記の例では、残余引数によって引数の配列が作成されるため、スプレッド構文は期待どおりには動作しません。以下はスプレッド構文を使用した `merge` の実装例です。この動作は {{jsxref("Object.assign()")}} に似ていますが、セッターを呼び出さず、オブジェクトを変更しない点が異なります。
 
 ```js
 const obj1 = { foo: "bar", x: 42 };

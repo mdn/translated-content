@@ -2,7 +2,7 @@
 title: stroke-miterlimit
 slug: Web/SVG/Reference/Attribute/stroke-miterlimit
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`stroke-miterlimit`** 属性はプレゼンテーション属性で、制限長をマイター長とマイター接続に使用する {{ SVGAttr("stroke-width") }} の比率で定義します。制限長を超えると、接続はマイターからベベルへと変更されます。
@@ -18,7 +18,6 @@ l10n:
 - {{SVGElement('rect')}}
 - {{SVGElement('text')}}
 - {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
 ## 例
@@ -96,7 +95,7 @@ svg {
 
 例えば、マイター制限を 1.414 とすると、マイターが 90 度未満の場合にベベルに変換され、 4.0 とすると約 29 度未満、 10.0 とすると約 11.5 度未満の場合にベベルに変換されることになります。
 
-## 使用コンテキスト
+## 使用上のメモ
 
 <table class="properties">
   <tbody>
@@ -111,7 +110,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td>4</td>
     </tr>
     <tr>

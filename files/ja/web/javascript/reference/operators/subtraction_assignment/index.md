@@ -2,7 +2,7 @@
 title: 減算代入演算子 (-=)
 slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **減算代入演算子 (`-=`)** は、2 つのオペランドで[減算](/ja/docs/Web/JavaScript/Reference/Operators/Subtraction)を行い、結果を左オペランドに代入します。
@@ -24,6 +24,17 @@ console.log((a -= "Hello"));
 ```js-nolint
 x -= y
 ```
+
+### 引数
+
+- `x`
+  - : [識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)や[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)などの有効な代入対象です。現在の値は[数値または長整数](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)に強制変換されます。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 2（代入）以上の式です。その値は[数値または長整数](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)に強制変換されます。
+
+### 返値
+
+元の `x` の値を使って `x - y` を評価した結果の数値または長整数です。
 
 ## 解説
 

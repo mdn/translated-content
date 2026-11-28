@@ -34,7 +34,7 @@ charCodeAt(index)
 ### 引数
 
 - `index`
-  - : 返す文字の 0 基点のインデックスです。[整数に変換され](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)、`undefined` は 0 に変換されます。
+  - : 返す文字の 0 基点のインデックスです。整数に[強制変換され](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)、`undefined` は 0 として扱われます。
 
 ### 返値
 

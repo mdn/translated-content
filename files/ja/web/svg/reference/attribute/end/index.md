@@ -2,7 +2,7 @@
 title: end
 slug: Web/SVG/Reference/Attribute/end
 l10n:
-  sourceCommit: a9063bb88f28dc2a9b32e39f060ab6930663da52
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`end`** 属性は、アクティブな期間を制限できるアニメーションの終了値を定義します。
@@ -13,6 +13,174 @@ l10n:
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("set")}}
+
+## 例
+
+### オフセットの例
+
+```html
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg">
+  <!-- アニメーションする矩形 -->
+  <rect x="10" y="35" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      to="100"
+      begin="0s"
+      end="8s"
+      fill="freeze" />
+  </rect>
+
+  <rect x="10" y="60" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      to="75"
+      begin="0s"
+      end="6s"
+      fill="freeze" />
+  </rect>
+
+  <rect x="10" y="85" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      to="50"
+      begin="0s"
+      end="4s"
+      fill="freeze" />
+  </rect>
+
+  <!-- グリッド -->
+  <text x="10" y="20" text-anchor="middle">0s</text>
+  <line x1="10" y1="25" x2="10" y2="105" stroke="grey" stroke-width=".5" />
+  <text x="35" y="20" text-anchor="middle">2s</text>
+  <line x1="35" y1="25" x2="35" y2="105" stroke="grey" stroke-width=".5" />
+  <text x="60" y="20" text-anchor="middle">4s</text>
+  <line x1="60" y1="25" x2="60" y2="105" stroke="grey" stroke-width=".5" />
+  <text x="85" y="20" text-anchor="middle">6s</text>
+  <line x1="85" y1="25" x2="85" y2="105" stroke="grey" stroke-width=".5" />
+  <text x="110" y="20" text-anchor="middle">8s</text>
+  <line x1="110" y1="25" x2="110" y2="105" stroke="grey" stroke-width=".5" />
+
+  <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="105" x2="110" y2="105" stroke="grey" stroke-width=".5" />
+</svg>
+```
+
+{{EmbedLiveSample('Offset_example', '100%', 130)}}
+
+### イベントの例
+
+```html
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- アニメーションする矩形 -->
+  <rect x="10" y="35" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      from="0"
+      to="100"
+      begin="0s"
+      end="endButton.click"
+      dur="8s"
+      repeatCount="indefinite"
+      fill="freeze" />
+  </rect>
+
+  <!-- トリガー -->
+  <rect
+    id="endButton"
+    cursor="pointer"
+    x="19.5"
+    y="62.5"
+    rx="5"
+    height="25"
+    width="80"
+    fill="#EFEFEF"
+    stroke="black"
+    stroke-width="1" />
+
+  <text x="60" y="80" text-anchor="middle" pointer-events="none">
+    クリックしてください。
+  </text>
+
+  <!-- グリッド -->
+  <text x="10" y="20" text-anchor="middle">0s</text>
+  <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="35" y="20" text-anchor="middle">2s</text>
+  <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="60" y="20" text-anchor="middle">4s</text>
+  <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="85" y="20" text-anchor="middle">6s</text>
+  <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="110" y="20" text-anchor="middle">8s</text>
+  <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+
+  <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+</svg>
+```
+
+{{EmbedLiveSample('Event_example', '100%', 130)}}
+
+### アクセスキーの例
+
+```html
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- アニメーションする矩形 -->
+  <rect x="10" y="35" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      from="0"
+      to="100"
+      begin="0s"
+      end="accessKey(e)"
+      dur="8s"
+      repeatCount="indefinite"
+      fill="freeze" />
+  </rect>
+
+  <!-- トリガー -->
+  <text x="60" y="80" text-anchor="middle" pointer-events="none">
+    「s」キーを押してください
+  </text>
+
+  <!-- グリッド -->
+  <text x="10" y="20" text-anchor="middle">0s</text>
+  <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="35" y="20" text-anchor="middle">2s</text>
+  <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="60" y="20" text-anchor="middle">4s</text>
+  <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="85" y="20" text-anchor="middle">6s</text>
+  <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="110" y="20" text-anchor="middle">8s</text>
+  <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+
+  <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+</svg>
+```
+
+{{EmbedLiveSample('Accesskey_example', '100%', 130)}}
+
+_この例は iFrame に埋め込まれています。キーイベントを有効化したい場合は、まずクリックする必要があります。_
 
 ## 使用上のメモ
 
@@ -36,15 +204,16 @@ l10n:
 `<end-value-list>` は値のセミコロン区切りのリストです。それぞれの値は以下のうちの 1 つです。
 
 - `<offset-value>`
-  - : この値は時点を表す [clock-value](/ja/docs/Web/SVG/Guides/Content_type#clock-value) を、 SVG 文書の始まり (通常は {{domxref("SVGElement/load_event", "load")}} または {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベント) からの相対で定義します。負の数も有効です。
+  - : この値は時点を表す [clock-value](/ja/docs/Web/SVG/Guides/Content_type#clock-value) を、SVG 文書の始まり（通常は {{domxref("SVGElement/load_event", "load")}} または {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベント）からの相対で定義します。負の値も有効です。
 - `<syncbase-value>`
-  - : この値は _syncbase_ と、任意でその _syncbase_ からのオフセットを定義します。要素のアニメーションの終了時刻は、他のアニメーションの開始またはアクティブ状態の終了からの相対で定義します。
+  - : この値は _syncbase_ と、任意でその _syncbase_ からのオフセットを定義します。要素のアニメーション終了時刻は、ほかのアニメーションの開始またはアクティブな終了からの相対で定義します。
 
-    有効な syncbase-value は、他のアニメーション要素への ID による参照にドット、そして `begin` または `end` が続き、参照先のアニメーション要素の開始とアクティブ状態の終了のどちらと同期するかを識別します。 `<offset-value>` で定義される任意のオフセット値を追加することができます。
+    有効な syncbase-value は、ほかのアニメーション要素への ID による参照にドット、そして `begin` または `end` が続き、参照先のアニメーション要素の開始またはアクティブな終了のどちらと同期するかを識別します。`<offset-value>` で定義される任意のオフセット値を追加できます。
 
 - `<event-value>`
-  - : この値はイベントと任意のオフセットで定義し、要素のアニメーションが終了する時刻を特定します。アニメーションの終了時刻は、指定されたイベントが発生した時刻からの相対で定義します。
-    有効な event-value は、要素 ID の後にドットと、その要素の対応しているイベントのうちの一つが続きます。すべての有効なイベントは (すべての要素で対応しているとは限りません) DOM および HTML の仕様書で定義されており、次の通りです。
+  - : この値はイベントと任意のオフセットで、要素のアニメーションが終了する時刻を定義します。アニメーションの終了時刻は、指定されたイベントが発生した時刻からの相対で定義します。
+
+    有効な event-value は、要素 ID の後にドットと、その要素で対応しているイベントのうちの 1 つが続きます。すべての有効なイベントは（すべての要素で対応しているとは限りません）DOM および HTML の仕様書で定義されており、次のとおりです。
     - {{domxref("Element/focus_event", "focus")}}
     - {{domxref("Element/blur_event", "blur")}}
     - {{domxref("Element/focusin_event", "focusin")}}
@@ -79,196 +248,25 @@ l10n:
     - {{domxref("SVGAnimationElement/endEvent_event", "endEvent")}}
     - {{domxref("SVGAnimationElement/repeatEvent_event", "repeatEvent")}}
 
-`<offset-value>` で定義される任意のオフセット値を追加することができます。
+    `<offset-value>` で定義される任意のオフセット値を追加できます。
 
 - `<repeat-value>`
-  - : この値は修飾された repeat イベントを定義します。この要素のアニメーション終了時刻は指定された回数の repeat イベントが発生したときからの相対で定義されます。
+  - : この値は修飾された repeat イベントを定義します。要素のアニメーション終了時刻は、指定された反復回数で repeat イベントが発生した時刻からの相対で定義します。
 
-    有効な反復値は、要素 ID の後にドットと `repeat()` 関数に繰り返し回数を指定する整数値を引数として指定したものです。 `<offset-value>` で定義される任意のオフセット値を追加することができます。
+    有効な repeat 値は、要素 ID の後にドットと、引数として反復回数を指定する整数値を指定した `repeat()` 関数が続きます。`<offset-value>` で定義される任意のオフセット値を追加できます。
 
 - `<accessKey-value>`
-  - : この値はアニメーションの終了のきっかけとなるアクセスキーを定義します。要素のアニメーションはユーザーが指定されたキーを押したときに終了します。
+  - : この値は、アニメーションの終了をトリガーするアクセスキーを定義します。ユーザーが指定されたキーを押すと、要素のアニメーションが終了します。
 
-    有効な accessKey-value は、 `accessKey()` 関数に入力される文字を引数として渡したものです。 `<offset-value>` で定義される任意のオフセット値を追加することができます。
+    有効な accessKey-value は、入力する文字を引数として指定した `accessKey()` 関数です。`<offset-value>` で定義される任意のオフセット値を追加できます。
 
 - `<wallclock-sync-value>`
-  - : この値はアニメーションの終了時刻を現実世界の時刻で定義します。
+  - : この値は、アニメーションの終了時刻を現実世界の時刻で定義します。
 
-    有効な wallclock-sync-value は `wallclock()` 関数に時刻を引数として渡したものです。時刻の構文は [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) で定義された構文に基づいたものです。
+    有効な wallclock-sync-value は、時刻の値を引数として指定した `wallclock()` 関数です。時刻の構文は [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) で定義された構文に基づいています。
 
 - `indefinite`
-  - : アニメーションの終了は、 {{domxref("SVGAnimationElement.endElement()")}} メソッド呼び出しで指定されます。
-
-## 例
-
-### オフセットの例
-
-```html
-<svg
-  width="120"
-  height="120"
-  viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1">
-  <!-- animated rectangles -->
-  <rect x="10" y="35" height="15" width="0">
-    <animate
-      attributeType="XML"
-      attributeName="width"
-      to="100"
-      begin="0s"
-      end="8s"
-      fill="freeze" />
-  </rect>
-
-  <rect x="10" y="60" height="15" width="0">
-    <animate
-      attributeType="XML"
-      attributeName="width"
-      to="75"
-      begin="0s"
-      end="6s"
-      fill="freeze" />
-  </rect>
-
-  <rect x="10" y="85" height="15" width="0">
-    <animate
-      attributeType="XML"
-      attributeName="width"
-      to="50"
-      begin="0s"
-      end="4s"
-      fill="freeze" />
-  </rect>
-
-  <!-- grid -->
-  <text x="10" y="20" text-anchor="middle">0s</text>
-  <line x1="10" y1="25" x2="10" y2="105" stroke="grey" stroke-width=".5" />
-  <text x="35" y="20" text-anchor="middle">2s</text>
-  <line x1="35" y1="25" x2="35" y2="105" stroke="grey" stroke-width=".5" />
-  <text x="60" y="20" text-anchor="middle">4s</text>
-  <line x1="60" y1="25" x2="60" y2="105" stroke="grey" stroke-width=".5" />
-  <text x="85" y="20" text-anchor="middle">6s</text>
-  <line x1="85" y1="25" x2="85" y2="105" stroke="grey" stroke-width=".5" />
-  <text x="110" y="20" text-anchor="middle">8s</text>
-  <line x1="110" y1="25" x2="110" y2="105" stroke="grey" stroke-width=".5" />
-
-  <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
-  <line x1="10" y1="105" x2="110" y2="105" stroke="grey" stroke-width=".5" />
-</svg>
-```
-
-{{EmbedLiveSample('Offset_example', '100%', 130)}}
-
-### イベントの例
-
-```html
-<svg
-  width="120"
-  height="120"
-  viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- animated rectangle -->
-  <rect x="10" y="35" height="15" width="0">
-    <animate
-      attributeType="XML"
-      attributeName="width"
-      from="0"
-      to="100"
-      begin="0s"
-      end="endButton.click"
-      dur="8s"
-      repeatCount="indefinite"
-      fill="freeze" />
-  </rect>
-
-  <!-- trigger -->
-  <rect
-    id="endButton"
-    cursor="pointer"
-    x="19.5"
-    y="62.5"
-    rx="5"
-    height="25"
-    width="80"
-    fill="#EFEFEF"
-    stroke="black"
-    stroke-width="1" />
-
-  <text x="60" y="80" text-anchor="middle" pointer-events="none">
-    Click me.
-  </text>
-
-  <!-- grid -->
-  <text x="10" y="20" text-anchor="middle">0s</text>
-  <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
-  <text x="35" y="20" text-anchor="middle">2s</text>
-  <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
-  <text x="60" y="20" text-anchor="middle">4s</text>
-  <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
-  <text x="85" y="20" text-anchor="middle">6s</text>
-  <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
-  <text x="110" y="20" text-anchor="middle">8s</text>
-  <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
-
-  <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
-  <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
-</svg>
-```
-
-{{EmbedLiveSample('Event_example', '100%', 130)}}
-
-### アクセスキーの例
-
-```html
-<svg
-  width="120"
-  height="120"
-  viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- animated rectangles -->
-  <rect x="10" y="35" height="15" width="0">
-    <animate
-      attributeType="XML"
-      attributeName="width"
-      from="0"
-      to="100"
-      begin="0s"
-      end="accessKey(e)"
-      dur="8s"
-      repeatCount="indefinite"
-      fill="freeze" />
-  </rect>
-
-  <!-- trigger -->
-  <text x="60" y="80" text-anchor="middle" pointer-events="none">
-    Hit the "s" key
-  </text>
-
-  <!-- grid -->
-  <text x="10" y="20" text-anchor="middle">0s</text>
-  <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
-  <text x="35" y="20" text-anchor="middle">2s</text>
-  <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
-  <text x="60" y="20" text-anchor="middle">4s</text>
-  <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
-  <text x="85" y="20" text-anchor="middle">6s</text>
-  <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
-  <text x="110" y="20" text-anchor="middle">8s</text>
-  <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
-
-  <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
-  <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
-</svg>
-```
-
-{{EmbedLiveSample('Accesskey_example', '100%', 130)}}
-
-_この例は iFrame に埋め込まれています。キーイベントを有効化したい場合は、まずクリックする必要があります。_
+  - : アニメーションの終了は、{{domxref("SVGAnimationElement.endElement()")}} メソッドの呼び出しによって決定します。
 
 ## 仕様書
 

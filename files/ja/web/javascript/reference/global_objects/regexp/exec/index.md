@@ -31,7 +31,7 @@ exec(str)
 ### 引数
 
 - `str`
-  - : 正規表現の照合を実施する文字列。すべての値は[文字列に強制されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ので、省略したり `undefined` を渡したりすると `exec()` は文字列 `"undefined"` を検索するようになりますが、これは望むところではないでしょう。
+  - : 正規表現の照合を実施する文字列。すべての値は文字列に[強制変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)ので、省略したり `undefined` を渡したりすると `exec()` は文字列 `"undefined"` を検索するようになりますが、これは望むところではないでしょう。
 
 ### 返値
 

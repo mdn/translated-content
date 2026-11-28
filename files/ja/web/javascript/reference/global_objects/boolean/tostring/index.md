@@ -40,9 +40,9 @@ toString()
 
 {{jsxref("Boolean")}} オブジェクトは {{jsxref("Object")}} の `toString` メソッドを上書きしており、 {{jsxref("Object.prototype.toString()")}} を継承していません。`Boolean` 値の場合、`toString` メソッドは論理値の文字列表現を返します。この文字列は `"true"` または `"false"` のどちらかです。
 
-この `toString()` メソッドは、その `this` 値が `Boolean` プリミティブまたはラッパーオブジェクトであることが要求されます。 `this` 値がそれ以外の場合、論理値への変換を試みることなく {{jsxref("TypeError")}} が発生します。
+この `toString()` メソッドは、その `this` 値が `Boolean` プリミティブまたはラッパーオブジェクトであることが要求されます。 `this` 値がそれ以外の場合、論理値への強制変換を試みることなく {{jsxref("TypeError")}} が発生します。
 
-`Boolean` には [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) メソッドがないため、 JavaScript は文字列を期待するコンテキストで `Boolean` オブジェクトが使用された場合（例：[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals) など）、自動的に `toString()` メソッドを呼び出します。ただし、論理値のプリミティブは、[文字列への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)を行う際に `toString()` メソッドを参照しません。代わりに、元の `toString()` 実装と同じアルゴリズムを使用して直接変換されます。
+`Boolean` には [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) メソッドがないため、 JavaScript は文字列を期待するコンテキストで `Boolean` オブジェクトが使用された場合（例：[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals) など）、自動的に `toString()` メソッドを呼び出します。ただし、論理値のプリミティブは、[文字列への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)を行う際に `toString()` メソッドを参照しません。代わりに、元の `toString()` 実装と同じアルゴリズムを使用して直接変換されます。
 
 ```js
 Boolean.prototype.toString = () => "Overridden";

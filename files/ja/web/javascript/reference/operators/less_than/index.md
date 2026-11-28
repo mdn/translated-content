@@ -2,7 +2,7 @@
 title: 小なり演算子 (<)
 slug: Web/JavaScript/Reference/Operators/Less_than
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **小なり演算子 (`<`)** は、左オペランドが右オペランドより小さい場合は `true` を返し、それ以外の場合は `false` を返します。
@@ -30,17 +30,29 @@ console.log("aa" < "ab");
 x < y
 ```
 
+### 引数
+
+- `x`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 9 （関係演算子）以上の式です。その値は文字列、長整数、数値のいずれかに強制変換されます。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 10 （ビットシフト）以上の式です。その値は文字列、長整数、数値のいずれかに強制変換されます。
+
+### 返値
+
+`x` が `y` より小さい場合は `true`、それ以外の場合は `false` です。
+
 ## 解説
 
-オペランドは複数の型変換を経て比較されます。概要は以下の通りです。
+オペランドは複数回の強制変換を経て比較されます。概要は以下の通りです。
 
-- 最初に、オブジェクトは[プリミティブに変換](/ja/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion)されます。これはオブジェクトに対して [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) （`"number"` をヒントとして）、[`valueOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)、[`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) の各メソッドをこの順に呼び出すことで行われます。左オペランドは常に右辺よりも先に変換されます。 なお、 `[Symbol.toPrimitive]()` は `"number"` のヒント付きで呼び出されます（つまりオブジェクトの数値への変換の優先度が少し高いということです）。しかし、文字列はまだ特別に扱われるため、返値は[数値に変換されません](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)。
+- 最初に、オブジェクトは[プリミティブへの強制変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブへの強制変換)されます。これはオブジェクトに対して [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) （`"number"` をヒントとして）、[`valueOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)、[`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) の各メソッドをこの順に呼び出すことで行われます。左オペランドは常に右オペランドより先に強制変換されます。なお、`[Symbol.toPrimitive]()` は `"number"` のヒント付きで呼び出されます（つまりオブジェクトの数値への変換の優先度が少し高いということです）。しかし、文字列はまだ特別に扱われるため、返値は[数値に変換されません](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)。
 - 両方の値が文字列である場合、文字列として比較されます。比較は、それぞれに含まれている UTF-16 コード単位の値に基づいて行われます（Unicode コードポイントではない）。
-- それ以外の場合、 JavaScript は非数値型を数値に変換しようとします。
+- 一方の値が長整数で、もう一方が文字列の場合、文字列は長整数として構文解析されます。構文解析に失敗した場合、比較結果は `false` です。
+- それ以外の場合、JavaScript は数値以外の型を数値に強制変換しようとします。
   - 論理値 `true` および `false` は、それぞれ 1 および 0 に変換されます。
   - `null` は 0 に変換されます。
   - `undefined` は `NaN` に変換されます。
-  - 文字列は、含まれている値に基づいて変換され、数値が含まれていない場合は `NaN` として変換されます。
+  - 文字列は[数値に強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)されます。数値として構文解析できない文字列は `NaN` になります。
 - いずれかの値が [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) である場合、演算子は `false` を返します。
 - それ以外の場合は、値は数値として比較されます。長整数と数値は互いに比較することができます。
 
@@ -59,7 +71,7 @@ x >= y === y <= x;
 ```
 
 > [!NOTE]
-> `<` と `>` の間の観察可能な違いの一つは、型変換の順序です。特に、プリミティブ型への型変換に副作用が伴う場合に顕著です。比較演算子はすべて、左オペランドを右オペランドよりも先に型変換します。
+> `<` と `>` の間の観察可能な違いの一つは、強制変換の順序です。特に、プリミティブへの強制変換に副作用が伴う場合に顕著です。比較演算子はすべて、左オペランドを右オペランドよりも先に強制変換します。
 
 ## 例
 

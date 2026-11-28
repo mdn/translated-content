@@ -31,7 +31,7 @@ lastIndexOf(searchString, position)
 ### 引数
 
 - `searchString`
-  - : 検索する値を表す文字列です。すべての値は[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ので、省略したり `undefined` を渡したりすると、`lastIndexOf()` は `"undefined"` という文字列を検索します。これはおそらく望むところではないでしょう。
+  - : 検索する値を表す文字列です。すべての値は文字列に[強制変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)ので、省略したり `undefined` を渡したりすると、`lastIndexOf()` は `"undefined"` という文字列を検索します。これはおそらく望むところではないでしょう。
 
 - `position` {{optional_inline}}
   - : このメソッドは、`position`（既定値は `Infinity`）以下の位置で、指定した部分文字列が最後に現れるインデックスを返します。`position` が呼び出された文字列の長さよりも大きい場合、このメソッドは呼び出される文字列全体を検索します。`position` が `0` 未満の場合、このメソッドは `0` の場合と同じように動作します。すなわち、このメソッドは指定された文字列をインデックス `0` でのみ検索します。
