@@ -2,39 +2,38 @@
 title: 2 つめの拡張機能
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 3116241f515352d336d2edb460cebfe99d43aea7
 ---
 
-{{AddonSidebar}}
+「[初めての拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)」の記事では、拡張機能を作成する基本的な手順を紹介しました。この記事では、追加の API を紹介するため、少し複雑な拡張機能を作成します。
 
-[初めての拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)を一通り読んでいる場合、既に拡張機能の書き方を知っていることと思います。この記事では、API の使い方をより詳しく説明するため、前回よりも少し複雑なアドオンを書いてみます。
+作成する拡張機能では、WebExtensions API の次のような基本概念を学びます。
 
-この拡張機能では Firefox のツールバーにボタンを新しく追加します。ユーザーがこのボタンをクリックすると、動物を選択できるポップアップが表示されます。ユーザーが動物を選択すると、ウェブページのコンテンツが選択した動物の画像に置き換わります。
+- ツールバーにボタンを追加する
+- HTML、CSS、JavaScript を使ってポップアップパネルを定義する
+- ウェブページにコンテンツスクリプトを差し込む
+- コンテンツスクリプトと拡張機能のほかの部分との間で通信する
+- ウェブページから利用できるリソースを拡張機能にパッケージ化する
 
-これらの機能を以下のように実装していきます。
+この拡張機能は Firefox のツールバーにボタンを追加します。ユーザーがボタンをクリックすると、動物を選択できるポップアップが表示されます。動物を選択すると、アクティブなページのコンテンツがその動物の画像に置き換わります。
 
-- **[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)**（Firefox のツールバーに表示させるボタン）を定義
-  このボタン用に次のものを用意します。
-  - "beasts-32.png" というアイコン
-  - ボタン押下時に開くポップアップ（HTML / CSS / JavaScript で記述）
+実装する機能は次のとおりです。
 
-- **拡張機能のアイコンを定義**（ファイル名: "beasts-48.png"）。これはアドオンマネージャーに表示されます。
-- **ウェブページに読み込ませるコンテンツスクリプト "beastify.js" を作成**
-  このスクリプトによってウェブページが実際に変更されます。
-- **ウェブページを置き換える動物の画像をパッケージ化**
-  画像を "web-accessible なリソース" とし、ウェブページから参照できるようにします。
+- **Firefox のツールバーに表示される[ボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)を `action` として定義**
+  ボタンには次のものを指定します。
+  - デフォルトアイコンと、Firefox が明るい色または暗い色のテキストを表示するときに使うアイコン
+  - ツールチップ
+  - ボタンを押したときに開くポップアップ (HTML、CSS、JavaScript で記述)
+
+- **拡張機能のアイコンを定義**（ファイル名: "beasts-48.png"）。アドオンマネージャーでは、拡張機能の詳細とともにこのアイコンが表示されます。
+- **ウェブページに差し込むコンテンツスクリプト "beastify.js" を作成**
+  このコードでページに動物を追加したり、ページから動物を削除したりします。
+- **動物の画像をウェブアクセス可能なリソースとしてパッケージ化**
+  コンテンツスクリプトで更新したページは、これらの画像を参照して動物を表示します。
 
 拡張機能の全体的な構造は、このようにイメージしていただければと思います。
 
-![manifest.json ファイルには、アイコン、ポップアップを含むブラウザーアクション、ウェブアクセシビリティリソースが記載されています。選択された beast JavaScript のポップアップリソースは、 beastify スクリプトで呼び出されます。](untitled-1.png)
-
-この拡張機能はシンプルですが、WebExtensions API の基本的なコンセプトを多く含んでいます。
-
-- ツールバーにボタンを追加する
-- HTML / CSS / JavaScript を用いてポップアップのパネルを定義する
-- ウェブページにコンテンツスクリプトを差し込む
-- 拡張機能の中においてコンテンツスクリプトと他のスクリプトとを通信させる
-- ウェブページで用いるリソースを拡張機能にパッケージ化する
+![manifest.json ファイルには、アイコン、ポップアップを含むアクション、ウェブアクセス可能なリソースが記載されています。動物選択用の JavaScript ポップアップリソースは beastify スクリプトから呼び出されます。](untitled-1.png)
 
 [ソースコード一式は GitHub で参照できます](https://github.com/mdn/webextensions-examples/tree/main/beastify)。
 
@@ -49,56 +48,70 @@ cd beastify
 
 ### manifest.json
 
-それでは、"beastify" ディレクトリー配下に新しいファイル "manifest.json" を作成します。以下の内容を書き込んで保存してください。
+それでは、"manifest.json" というファイルを作成し、次の内容を書き込んでください。
 
 ```json
 {
-  "manifest_version": 2,
+  "description": "ツールバーにブラウザーアクションアイコンを追加します。ボタンをクリックして動物を選択します。アクティブなタブの本文は、選択した動物の画像に置き換わります。詳しくは https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Examples#beastify を参照してください。",
+  "manifest_version": 3,
   "name": "Beastify",
   "version": "1.0",
-
-  "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Examples#beastify",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/beastify",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
   "icons": {
     "48": "icons/beasts-48.png"
   },
-
-  "permissions": ["activeTab"],
-
-  "browser_action": {
+  "permissions": ["activeTab", "scripting"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "beastify@mozilla.org",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "action": {
     "default_icon": "icons/beasts-32.png",
+    "theme_icons": [
+      {
+        "light": "icons/beasts-32-light.png",
+        "dark": "icons/beasts-32.png",
+        "size": 32
+      }
+    ],
     "default_title": "Beastify",
     "default_popup": "popup/choose_beast.html"
   },
 
   "web_accessible_resources": [
-    "beasts/frog.jpg",
-    "beasts/turtle.jpg",
-    "beasts/snake.jpg"
+    {
+      "resources": ["beasts/*.jpg"],
+      "matches": ["*://*/*"]
+    }
   ]
 }
 ```
 
-- 最初の 3 つのキー [`manifest_version`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)、[`name`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)、[`version`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) は必須であり、拡張機能の基本的なメタデータを指定します
-- [`description`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) と [`homepage_url`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) は省略可能ですが、設定しておくことをお勧めします。これは拡張機能についての役立つ情報となります
-- [`icons`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) は省略可能ですが、設定しておくことをお勧めします。この値は拡張機能のアイコンを指定するものであり、アイコンはアドオンマネージャーに表示されます
-- [`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) は拡張機能に必要なパーミッションのリストです。ここでは [`activeTab` パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) を要請しています
-- [`browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) はツールバーのボタンを指定するものです。ここでは 3 つの情報を指定しています
-  - `default_icon` ではボタンのアイコンを指定します（必須項目）
-  - `default_title` ではツールチップの文字列を指定します（省略可）
-  - `default_popup` ではユーザーがボタンをクリックした際に表示されるポップアップを指定します。今回はポップアップを表示させたいので、拡張機能に含める HTML ファイルを `defualt_popup` キーで指定しています
+- 最初の 3 つのキー ([`manifest_version`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)、[`name`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)、[`version`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)) は必須で、拡張機能の基本的なメタデータを指定します。
+- [`description`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) は Safari では必須で、それ以外では省略可能です。ただし、ブラウザーの拡張機能マネージャー (Firefox の `about:addons` など) に表示されるため、設定しておくとよいでしょう。
+- [`homepage_url`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) は省略可能ですが、役立つ情報を提供するため設定しておくことをお勧めします。
+- [`icons`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) は省略可能ですが、拡張機能のアイコンを指定できるため、設定しておくことをお勧めします。
+- [`browser_specific_settings`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) は必須です。
+  - `gecko` プロパティは、addons.mozilla.org と Firefox に拡張機能の追加設定情報を提供します。
+  - [`id`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#id) は拡張機能の一意な識別子を定義します。addons.mozilla.org (AMO) で拡張機能を公開する前に、この ID が必要です。
+  - [`data_collection_permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#data_collection_permissions) は、拡張機能が個人を特定できる情報を収集して送信するかどうかを示します。この例では、データを収集も送信もしません。
+- [`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) は拡張機能に必要なパーミッションを列挙します。この例では、[`activeTab` パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission) を要求します。
+- [`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) はツールバーボタン、そのアイコン、ツールチップ、ポップアップを指定します。この例で使うプロパティの詳細は「[ツールバーのボタン](#ツールバーのボタン)」を参照してください。
+- [`web_accessible_resources`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) はウェブページからアクセスできるようにするファイルを列挙します。この拡張機能は、拡張機能にパッケージ化した画像でページのコンテンツを置き換えるため、ページから画像にアクセスできるようにする必要があります。
 
-- [`web_accessible_resources`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) はウェブページからアクセスしたいファイルのリストです。この拡張機能では、拡張機能に同梱した画像でウェブページを置き換えるため、画像をウェブページからアクセス可能にする必要があります
-
-パスはすべて manifest.json 自身からの相対パスで指定することに注意します。
+指定したパスはすべて manifest.json ファイルからの相対パスです。
 
 ### アイコン
 
-拡張機能にはアイコンを用意すると良いでしょう。このアイコンは、アドオンマネージャーで拡張機能のリスト横に表示されます（アドオンマネージャーは "about:addons" の URL から確認できます）。今回の manifest.json では "icons/beasts-48.png" を用意していると宣言しています。
+拡張機能にはアイコンを用意するとよいでしょう。アイコンはアドオンマネージャー ("about:addons") で拡張機能の一覧の横に表示されます。manifest.json では、拡張機能のアイコンが "icons/beasts-48.png" にあると指定しています。
 
-"icons" ディレクトリーを作成して、そこにアイコンを "beasts-48.png" という名前で 保存します。必要であれば [サンプルで使用しているアイコン](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-48.png)を利用しても構いません（このアイコンは [Aha-Soft's Free Retina iconset](http://www.aha-soft.com/free-icons/free-retina-icon-set/) から引用したものであり、該当するライセンスの下で使用しています）。
+"icons" ディレクトリーを作成し、"beasts-48.png" という名前でアイコンを保存します。[サンプルのアイコン](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-48.png)を使うこともできます。このアイコンは [Aha-Soft's Free Retina iconset](https://www.aha-soft.com/free-icons/free-retina-icon-set/) のもので、ライセンスに従って使用されています。
 
-アイコンを自分で用意する場合 48x48 ピクセルのサイズにする必要があります。高解像度のディスプレイに 96x96 ピクセルのアイコンを表示させたい場合は、manifest.json の `icons` オブジェクトに `96` というプロパティで設定してください。
+アイコンを用意する場合は 48x48 ピクセルにしてください。高解像度ディスプレイ向けに 96x96 ピクセルのアイコンも用意できます。その場合は manifest.json の `icons` オブジェクトに `96` プロパティとして指定します。
 
 ```json
 "icons": {
@@ -109,21 +122,36 @@ cd beastify
 
 ### ツールバーのボタン
 
-ツールバーのボタンにもアイコンが必要です。今回の manifest.json では "icons/beasts-32.png" を用意していると宣言しています。
+[`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) キーを使ってツールバーボタンを追加、カスタマイズします。このキーとすべてのプロパティは省略可能です。ただし、ツールバーボタンを使う場合は、ボタンをカスタマイズするプロパティを指定し、必要に応じてボタンをクリックしたときに表示するポップアップを追加します。この例では次のプロパティを使います。
 
-アイコンを "beasts-32.png" という名前で "icons" ディレクトリー内に保存します。必要であれば [サンプルで使用しているアイコン](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-32.png) を利用しても構いません（このアイコンは [IconBeast Lite のアイコン集](https://www.iconbeast.com/free/) から引用したものであり、該当する [ライセンス](https://www.iconbeast.com/faq/) の下で使用しています）。
+- `default_icon` はボタンのデフォルトアイコンを指定します。
+- `theme_icons` はテーマに応じた代替アイコンを指定します。
+  - `light` は明るい色のテキストを表示するとき（通常は暗いテーマが有効なとき）に使うアイコン (`icons/beasts-32-light.png`) を指定します。
+  - `dark` は暗い色のテキストを表示するとき（通常は明るいテーマが有効なとき）に使うアイコン (`icons/beasts-32.png`) を指定します。
+  - `size` はアイコンのサイズをピクセル単位で指定します。
+- `default_title` は、ユーザーがボタンにポインターを合わせたときに Firefox が表示するツールチップのテキストを指定します。
+- `default_popup` はポップアップの HTML ファイルを指定します。詳しくは「[ポップアップ](#ポップアップ)」を参照してください。
 
-ポップアップを使わない場合、ユーザーがボタンをクリックした際にはクリックイベントが拡張機能に向けて送出されます。ポップアップを使う場合にはクリックイベントは送出されず、代わりにポップアップが開きます。今回はポップアップが必要なので、次の項で作成しましょう。
+アイコンは "icons" ディレクトリーに保存するか、GitHub のサンプルソースコードにあるものを使います。
+
+- [beasts-32.png](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-32.png)
+- [beasts-32-light.png](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-32-light.png)
+
+どちらのアイコンも [IconBeast Lite のアイコン集](https://www.iconbeast.com/free/)のアイコンに基づいており、その[ライセンス](https://www.iconbeast.com/faq/)に従って使用されています。
 
 ### ポップアップ
 
-今回のポップアップでは、ユーザーが 3 つの動物から 1 つ選択できる機能を持つこととします。
+ツールバーボタンには、クリックしたときに開くポップアップを追加できます。
 
-拡張機能のルートディレクトリー配下に "popup" というディレクトリーを新しく作成します。ここにはポップアップ用のコードを保管します。ポップアップは次の 3 ファイルから構成されます。
+ポップアップを指定しない場合、ボタンをクリックすると {{WebExtAPIRef("action.onClicked")}} イベントが拡張機能に送出されます。拡張機能はこのイベントを使って、ボタンに関連付けられた機能を実行します。
 
-- **`choose_beast.html`** パネルのコンテンツを定義する
-- **`choose_beast.css`** コンテンツのスタイルを指定する
-- **`choose_beast.js`** アクティブなタブでコンテンツスクリプトを実行し、ユーザーの選択を処理する
+ここではポップアップを使い、ユーザーが 3 種類の動物から 1 つを選べるようにします。
+
+拡張機能のルートディレクトリーに "popup" ディレクトリーを作成します。このディレクトリーにポップアップのコードを作成します。ポップアップは次の 3 つのファイルで構成されます。
+
+- `choose_beast.html` はパネルのコンテンツを定義します。
+- `choose_beast.css` はコンテンツのスタイルを指定します。
+- `choose_beast.js` はアクティブなタブでコンテンツスクリプトを実行し、ユーザーの選択を処理します。
 
 ```bash
 mkdir popup
@@ -137,7 +165,7 @@ HTML ファイルは次のようになります。
 
 ```html
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="choose_beast.css" />
@@ -159,13 +187,13 @@ HTML ファイルは次のようになります。
 </html>
 ```
 
-`"popup-content"` という ID の [`<div>`](/ja/docs/Web/HTML/Reference/Elements/div) 要素があって、動物の選択をするボタンとリセットボタン入っています。`"error-content"` という ID の `<div>` 要素と `"hidden"` クラスもあります。それはポップアップの初期化に問題がある場合に使います。
+HTML には `"popup-content"` という ID の [`<div>`](/ja/docs/Web/HTML/Reference/Elements/div) 要素があります。この要素には動物を選択するボタンとリセットボタンが含まれます。別の `<div>` 要素には `"error-content"` という ID と `"hidden"` クラスがあります。ポップアップを初期化できない場合は、この 2 つ目の `<div>` 要素を使います。
 
-通常のウェブページと同じように CSS と JS ファイルを読み込んでいることに注意してください。
+通常のウェブページと同様に、HTML からディレクトリー内の CSS ファイルと JavaScript ファイルを読み込んでいます。
 
 #### choose_beast.css
 
-この CSS ではポップアップのサイズを固定し、3 つの選択肢がポップアップを埋めるようにし、基本的なスタイリングを施しています。また要素を `class="hidden"` で隠してもいます: つまり `<div id="error-content"...` は既定では隠れています。
+この CSS ではポップアップのサイズを固定し、3 つの選択肢が領域全体を埋めるようにして、基本的なスタイルを設定しています。また、`class="hidden"` の要素を隠すため、`<div id="error-content"...` 要素はデフォルトで非表示になります。
 
 ```css
 html,
@@ -208,10 +236,10 @@ button[type="reset"]:hover {
 ```js
 /**
  * ページのすべてを隠す CSS、ただし
- * "beastify-image" クラスを持つ要素は除く
+ * ".beastify-image" クラスを持つ要素は除く
  */
 const hidePage = `body > :not(.beastify-image) {
-                    display: none;
+                    display: none !important;
                   }`;
 
 /**
@@ -219,7 +247,7 @@ const hidePage = `body > :not(.beastify-image) {
  * 適切なメッセージを送る
  */
 function listenForClicks() {
-  document.addEventListener("click", (e) => {
+  document.addEventListener("click", async (e) => {
     /**
      * 動物の名前を受け取って、対応する画像の URL を取得する
      */
@@ -239,13 +267,15 @@ function listenForClicks() {
      * 動物の URL を取得し、
      * アクティブなタブのコンテンツスクリプトに "beastify" メッセージを送る
      */
-    function beastify(tabs) {
-      browser.tabs.insertCSS({ code: hidePage }).then(() => {
-        const url = beastNameToURL(e.target.textContent);
-        browser.tabs.sendMessage(tabs[0].id, {
-          command: "beastify",
-          beastURL: url,
-        });
+    async function beastify(tab) {
+      await browser.scripting.insertCSS({
+        target: { tabId: tab.id },
+        css: hidePage,
+      });
+      const url = beastNameToURL(e.target.textContent);
+      await browser.tabs.sendMessage(tab.id, {
+        command: "beastify",
+        beastURL: url,
       });
     }
 
@@ -253,12 +283,12 @@ function listenForClicks() {
      * アクティブなタブからページを隠す CSS を削除し、
      * アクティブなタブのコンテンツスクリプトに "reset" メッセージを送る
      */
-    function reset(tabs) {
-      browser.tabs.removeCSS({ code: hidePage }).then(() => {
-        browser.tabs.sendMessage(tabs[0].id, {
-          command: "reset",
-        });
+    async function reset(tab) {
+      await browser.scripting.removeCSS({
+        target: { tabId: tab.id },
+        css: hidePage,
       });
+      await browser.tabs.sendMessage(tab.id, { command: "reset" });
     }
 
     /**
@@ -276,16 +306,20 @@ function listenForClicks() {
       // <div id="popup-content"> 内のボタンがクリックされていない場合は無視。
       return;
     }
-    if (e.target.type === "reset") {
-      browser.tabs
-        .query({ active: true, currentWindow: true })
-        .then(reset)
-        .catch(reportError);
-    } else {
-      browser.tabs
-        .query({ active: true, currentWindow: true })
-        .then(beastify)
-        .catch(reportError);
+
+    try {
+      const [tab] = await browser.tabs.query({
+        active: true,
+        currentWindow: true,
+      });
+
+      if (e.target.type === "reset") {
+        await reset(tab);
+      } else {
+        await beastify(tab);
+      }
+    } catch (error) {
+      reportError(error);
     }
   });
 }
@@ -301,47 +335,59 @@ function reportExecuteScriptError(error) {
 }
 
 /**
- * ポップアップを読み込んだ時、コンテンツスクリプトをアクティブなタブに挿入し、
+ * ポップアップの読み込み時にコンテンツスクリプトをアクティブなタブに挿入し、
  * クリックハンドラーを追加する。
- * スクリプトの挿入ができない場合、エラー処理をする。
+ * 拡張機能がスクリプトを挿入できなかった場合はエラーを処理する。
  */
-browser.tabs
-  .executeScript({ file: "/content_scripts/beastify.js" })
-  .then(listenForClicks)
-  .catch(reportExecuteScriptError);
+(async function runOnPopupOpened() {
+  try {
+    const [tab] = await browser.tabs.query({
+      active: true,
+      currentWindow: true,
+    });
+
+    await browser.scripting.executeScript({
+      target: { tabId: tab.id },
+      files: ["/content_scripts/beastify.js"],
+    });
+    listenForClicks();
+  } catch (e) {
+    reportExecuteScriptError(e);
+  }
+})();
 ```
 
-開始するのは 99 行目です。ポップアップスクリプトはポップアップが読み込まれ次第、アクティブなタブのコンテンツスクリプトを実行し、その手段は [`browser.tabs.executeScript()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API です。コンテンツスクリプトの実行が成功したら、タブが閉じられるかユーザーが別のページに移動するまで、コンテンツスクリプトがページにロードされたままになります。
+ポップアップスクリプトは、ポップアップが読み込まれるとすぐにアクティブなタブで[コンテンツスクリプト](#コンテンツスクリプト)を実行します。そのために [`browser.scripting.executeScript()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/scripting/executeScript) API を使います。実行に成功すると、タブを閉じるか、ユーザーが別のページに移動するまでコンテンツスクリプトはページに読み込まれたままです。
 
-`browser.tabs.executeScript()` の呼び出しがよく失敗する理由は、コンテンツスクリプトをすべてのページでは実行できないことです。例えば、about:debugging のような権限のあるブラウザーページでは実行できませんし、[addons.mozilla.org](https://addons.mozilla.org/) ドメイン内のページでも実行できません。失敗した場合、`reportExecuteScriptError()` は `<div id="popup-content">` を隠して、`<div id="error-content"...` を表示し、エラーを [console](https://extensionworkshop.com/documentation/develop/debugging/) にログ出力します。
+`browser.scripting.executeScript()` の呼び出しは、アクティブなページでコンテンツスクリプトを実行できない場合に失敗します。例えば、`about:debugging` などの権限が必要なブラウザーページや、[addons.mozilla.org](https://addons.mozilla.org/) ドメイン内のページでは実行できません。呼び出しが失敗すると、`reportExecuteScriptError()` は `<div id="popup-content">` 要素を隠し、`<div id="error-content"...` 要素を表示して、エラーを [コンソール](https://extensionworkshop.com/documentation/develop/debugging/) に記録します。
 
-コンテンツスクリプトの実行が成功したら、`listenForClicks()` を呼び出します。これはポップアップのクリックを待ち受けします。
+コンテンツスクリプトが実行されると、コードは `listenForClicks()` を呼び出し、ポップアップのクリックを待ち受けます。
 
-- クリック先がポップアップ内のボタンでなければ、無視して何もしない
-- `type="reset"` の付いたボタンがクリックされたら、`reset()` を呼び出す
-- その他のボタン（つまり beast ボタン）がクリックされたら `beastify()` を呼び出す
+- クリック先がポップアップ内のボタンでなければ、無視して何もしません。
+- `type="reset"` のボタンがクリックされたら、`reset()` を呼び出します。
+- それ以外のボタン (動物ボタン) がクリックされたら、`beastify()` を呼び出します。
 
 `beastify()` 関数は次の 3 つを行います。
 
-- 特定の動物画像を指す URL をボタンクリックに割り当てる
-- CSS を挿入してページの全コンテンツを隠し、その手段は [`browser.tabs.insertCSS()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) API
-- コンテンツスクリプトに "beastify" 送り、その手段は [`browser.tabs.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) API。ページを動物化するか尋ねて、動物画像への URL を渡す
+- クリックされたボタンに対応する動物画像の URL を取得します。
+- [`browser.scripting.insertCSS()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/scripting/insertCSS) API を使って CSS を挿入し、ページのコンテンツを隠します。
+- [`browser.tabs.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) API を使ってコンテンツスクリプトに "beastify" メッセージを送り、動物画像の URL を渡してページを動物化するよう依頼します。
 
-`reset()` 関数は動物化を取り消します。
+`reset()` 関数は動物化を取り消します。次の処理を行います。
 
-- 追加した CSS を削除し、その手段は [`browser.tabs.removeCSS()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS) API
-- コンテンツスクリプトにページをリセットする "reset" メッセージを送る
+- [`browser.scripting.removeCSS()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/scripting/removeCSS) API を使って、追加した CSS を削除します。
+- コンテンツスクリプトにページをリセットするよう "reset" メッセージを送ります。
 
 ### コンテンツスクリプト
 
-拡張機能のルートディレクトリー配下に "content_scripts" というディレクトリーを新しく作成します。続いてそこに "beastify.js" という名前のファイルを作成し、下記のスクリプトを記述します。
+拡張機能のルートディレクトリーに "content_scripts" ディレクトリーを作成し、その中に "beastify.js" というファイルを作成して、次の内容を書き込みます。
 
 ```js
-(() => {
+(function () {
   /**
-   * グローバルなガード変数をチェック、設定する。
-   * コンテンツスクリプトが再び同じページに挿入された場合、
-   * 次は何もしない。
+   * グローバルなガード変数をチェックして設定し、
+   * コンテンツスクリプトがページに再度挿入されたときに
+   * リターンして何もしないようにする
    */
   if (window.hasRun) {
     return;
@@ -349,15 +395,18 @@ browser.tabs
   window.hasRun = true;
 
   /**
-   * 動物の画像の URL を受け取り、既存の動物をすべて削除し、次に
-   * 画像を指す IMG 要素の作成・スタイル適用を行い、
-   * 作成したノードをドキュメント内に挿入する
+   * 動物の画像 URL を受け取り、既存の動物をすべて削除してから
+   * 画像を指す IMG 要素を作成、スタイル設定し、
+   * ドキュメントに挿入する
    */
   function insertBeast(beastURL) {
     removeExistingBeasts();
-    const beastImage = document.createElement("img");
+    let beastImage = document.createElement("img");
     beastImage.setAttribute("src", beastURL);
-    beastImage.style.height = "100vh";
+    beastImage.style.objectFit = "contain";
+    beastImage.style.position = "fixed";
+    beastImage.style.height = "100%";
+    beastImage.style.width = "100%";
     beastImage.className = "beastify-image";
     document.body.appendChild(beastImage);
   }
@@ -366,15 +415,15 @@ browser.tabs
    * ページからすべての動物を削除する
    */
   function removeExistingBeasts() {
-    const existingBeasts = document.querySelectorAll(".beastify-image");
-    for (const beast of existingBeasts) {
+    let existingBeasts = document.querySelectorAll(".beastify-image");
+    for (let beast of existingBeasts) {
       beast.remove();
     }
   }
 
   /**
    * バックグラウンドスクリプトからのメッセージを待ち受けし、
-   * "beastify()" か "reset()" を呼び出す。
+   * メッセージに応じて "beastify()" か "reset()" を呼び出す。
    */
   browser.runtime.onMessage.addListener((message) => {
     if (message.command === "beastify") {
@@ -386,18 +435,18 @@ browser.tabs
 })();
 ```
 
-このコンテンツスクリプトが最初にすることは、グローバル変数の `window.hasRun` のチェックです: セットされていればスクリプトは早くリターンし、そうでなければ `window.hasRun` をセットして処理し続けます。こうする理由は、ユーザーがポップアップを開くたびに、ポップアップはアクティブなタブのコンテンツスクリプトを実行して、そのために 1 つのタブに複数の実行スクリプトのインスタンスができてしまいます。これが起きると、最初のインスタンスだけが処理するのを確かめる必要があります。
+コンテンツスクリプトは最初にグローバル変数 `window.hasRun` を確認します。設定済みならスクリプトはすぐにリターンし、未設定なら `window.hasRun` を設定して処理を続けます。ユーザーがポップアップを開くたびに、アクティブなタブでコンテンツスクリプトが実行されます。そのため、1 つのタブで複数のスクリプトインスタンスが実行されることがあります。その場合、最初のインスタンスだけが処理するようにします。
 
-その次に、始まる場所は 40 行で、ここでコンテンツスクリプトはポップアップからのメッセージを待ち受けし、その手段は [`browser.runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) API です。上で見たように、ポップアップスクリプトは 2 種類の異なるメッセージを送ります: "beastify" と "reset"
+次に、コンテンツスクリプトは [`browser.runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) API を使ってポップアップからのメッセージを待ち受けます。前述のとおり、ポップアップスクリプトは "beastify" と "reset" の 2 つのメッセージを送信します。
 
-- メッセージが "beastify" なら、動物画像を指す URL が含まれるはずです。以前の "beastify" 呼び出しで追加された動物をすべて削除して、[`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) 要素を作成、追加して、その `src` 属性に動物の URL をセットします。
-- メッセージが "reset" なら、ただ追加された動物をすべて削除します。
+- メッセージが "beastify" の場合、動物画像の URL が含まれていることを想定します。以前の "beastify" 呼び出しで追加された動物を削除してから、[`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) 要素を作成して追加し、その `src` 属性に動物の URL を設定します。
+- メッセージが "reset" の場合、追加された動物をすべて削除します。
 
 ### 動物
 
-最後に、動物の画像を用意しておく必要があります。
+最後に、動物の画像を用意します。
 
-拡張機能のルートディレクトリー配下に "beasts" という名前のディレクトリーを新しく作成し、その中に 3 つの画像を適切な名前で保存します。画像は [GitHub リポジトリー](https://github.com/mdn/webextensions-examples/tree/main/beastify/beasts) から、またはここからでも取得できます。
+拡張機能のルートディレクトリーに "beasts" ディレクトリーを作成し、適切な名前を付けた 3 つの画像をその中に保存します。画像は [GitHub リポジトリー](https://github.com/mdn/webextensions-examples/tree/main/beastify/beasts)または以下から取得できます。
 
 ![茶色いカエル](frog.jpg)
 
@@ -407,7 +456,7 @@ browser.tabs
 
 ## 動かしてみよう
 
-正しいファイルが正しい場所にあるかどうか、もう一度確認してください。
+必要なファイルが正しい場所にあることを確認します。
 
 ```plain
 beastify/
@@ -422,6 +471,7 @@ beastify/
 
     icons/
         beasts-32.png
+        beasts-32-light.png
         beasts-48.png
 
     popup/
@@ -432,17 +482,21 @@ beastify/
     manifest.json
 ```
 
-Firefox で "about:debugging" を開き、"一時的なアドオンを読み込む" をクリックし、自分で作成した manifest.json ファイルを選択してください。拡張機能のアイコンが Firefox のツールバーに表示されているはずです。
+Firefox で `about:debugging` を開き、**この Firefox**、**一時的なアドオンを読み込む**の順にクリックして、作成した manifest.json ファイルを選択します。
 
-![Firefox ツールバーの beastify アイコン](beastify_icon.png)
+Firefox は拡張機能のボタンを拡張機能パネルに追加するため、ツールバーに固定する必要があります。ツールバーの拡張機能ボタン (ジグソーパズルのアイコン) をクリックし、拡張機能を探します。拡張機能の 3 点メニューをクリックするか、拡張機能を右クリックして、**ツールバーに固定**を選択します。
 
-適当なウェブページを開き、拡張機能のアイコンをクリックし、動物を選択してください。するとウェブページが動物の画像に置き換わるはずです。
+![拡張機能パネルで Beastify のメニューが開き、「ツールバーに固定」が強調表示されています](beastify_icon.png)
 
-![亀の画像に置き換えたページ](beastify_page.png)
+これで拡張機能のアイコンが Firefox のツールバーに表示されます。
+
+ウェブページを開いてアイコンをクリックし、動物を選んでページが変化することを確認します。
+
+![Beastify ポップアップで Turtle が選択され、ページが亀の画像に置き換わっています](beastify_page.png)
 
 ## コマンドラインから開発する
 
-仮インストールを [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) ツールを用いて自動化できます。次を試してください。
+仮インストールは [`web-ext`](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) ツールを使って自動化できます。`web-ext` をインストールしてから、次を試してください。
 
 ```bash
 cd beastify
@@ -451,7 +505,7 @@ web-ext run
 
 ## 次は何？
 
-これで、より高度な Firefox 用 WebExtension を作成することができました。
+これで、より高度な Firefox 用拡張機能を作成できました。
 
 - [拡張機能の中身](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [拡張機能の例](/ja/docs/Mozilla/Add-ons/WebExtensions/Examples)

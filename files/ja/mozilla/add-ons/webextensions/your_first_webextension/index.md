@@ -2,7 +2,7 @@
 title: 初めての拡張機能
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 l10n:
-  sourceCommit: c09f7c12c1c39924c492b63e5c284f64c2380b4a
+  sourceCommit: 3116241f515352d336d2edb460cebfe99d43aea7
 ---
 
 この記事では、Firefox 用の拡張機能をどのように作ればよいのか、その初めから最後までを一通り説明します。この拡張機能は `mozilla.org` とそのサブドメインから読み込まれたページに赤い枠を付けるだけです。
@@ -24,7 +24,7 @@ cd borderify
 
 ### manifest.json
 
-適切な[エディター](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors)を使用して、"borderify" ディレクトリー内に "manifest.json" という名前のファイルを作成してください。そのファイルには、以下の内容を記述してください。
+適切な[コードエディター](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors)を使用して、"borderify" ディレクトリー内に "manifest.json" という名前のファイルを作成してください。そのファイルには、以下の内容を記述してください。
 
 ```json
 {
@@ -129,7 +129,7 @@ Firefox の場合、[about:debugging](https://firefox-source-docs.mozilla.org/de
 
 それでは `https://www.mozilla.org/ja/` 配下のページを開いてみましょう。ページが赤い枠で囲まれていることを確認できるはずです。
 
-![mozilla.org に表示される赤い枠](border_on_mozilla_org.png)
+![Firefox で表示した mozilla.org のページを囲む赤い枠](border_on_mozilla_org.png)
 
 > [!NOTE]
 > ただ `addons.mozilla.org` では試さないで! このドメインでは現在、コンテンツスクリプトがブロックされています。
