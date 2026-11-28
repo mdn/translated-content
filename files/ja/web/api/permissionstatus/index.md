@@ -18,10 +18,10 @@ l10n:
 - {{domxref("PermissionStatus.state")}} {{ReadOnlyInline}}
   - : 要求された権限の状態を返します。 `'granted'`（許可）、`'denied'`（拒否）、`'prompt'`（プロンプト）のいずれかです。
 
-### イベントハンドラー
+### イベント
 
 - {{domxref("PermissionStatus.change_event", "change")}}
-  - : `PermissionStatus.state` 変化するたびに発行されるイベントです。
+  - : `PermissionStatus.state` が変化するたびに発生するイベントです。
 
 ## 例
 
