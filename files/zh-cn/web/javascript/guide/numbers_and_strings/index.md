@@ -221,7 +221,7 @@ Math.sin(1.56);
       <td>
         {{jsxref("Math.floor", "floor()")}}、{{jsxref("Math.ceil", "ceil()")}}
       </td>
-      <td>返回给定参数的向下/向上取整。</td>  
+      <td>返回给定参数的向下/向上取整。</td>
     </tr>
     <tr>
       <td>{{jsxref("Math.min", "min()")}}、{{jsxref("Math.max", "max()")}}</td>
