@@ -7,7 +7,7 @@ l10n:
 
 {{QuickLinksWithSubpages("/ja/docs/Web/XML/EXSLT")}}
 
-`math:highest()` は、指定されたノードセットの最大値（[`math:max()`](/ja/docs/Web/XML/EXSLT/Reference/math/max) を使用して計算した最大値）を持つノードを返します。
+`math:highest()` は、指定されたノード集合の最大値（[`math:max()`](/ja/docs/Web/XML/EXSLT/Reference/math/max) を使用して計算した最大値）を持つノードを返します。
 
 ノードの文字列値を数値に変換した値が最大値と等しい場合、この最大値を持ちます。
 
@@ -20,7 +20,7 @@ math:highest(nodeSet)
 ### 引数
 
 - `nodeSet`
-  - : 最大値を持つノードが返されるノードセット
+  - : 最大値を持つノードが返されるノード集合
 
 ### 返値
 

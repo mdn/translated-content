@@ -7,7 +7,7 @@ l10n:
 
 {{QuickLinksWithSubpages("/ja/docs/Web/XML/EXSLT")}}
 
-`math:lowest()` は、指定されたノードセットの最小値（[`math:min()`](/ja/docs/Web/XML/EXSLT/Reference/math/min) を使用して計算した最小値）を持つノードを返します。
+`math:lowest()` は、指定されたノード集合の最小値（[`math:min()`](/ja/docs/Web/XML/EXSLT/Reference/math/min) を使用して計算した最小値）を持つノードを返します。
 
 ノードの文字列値を数値に変換した値が最小値と等しい場合、この最小値を持ちます。
 
@@ -20,7 +20,7 @@ math:lowest(nodeSet)
 ### 引数
 
 - `nodeSet`
-  - : 最小値を返すノードセット。
+  - : 最小値を返すノード集合。
 
 ### 返値
 
