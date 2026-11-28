@@ -191,7 +191,7 @@ p {
 
 Le contenu mis à jour ressemble à ceci&nbsp;:
 
-{{ EmbedLiveSample("css-js-ally-2-finish", "100%", 600) }}
+{{EmbedLiveSample("css-js-ally-2-finish", "100%", 600)}}
 
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
