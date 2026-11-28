@@ -537,8 +537,8 @@ var unusualPropertyNames = {
   '': 'Una cadena vacía',
   '!': '¡Bang!'
 }
-console.log(inusualPropertyNames.'');   // SyntaxError: Cadena inesperada
-console.log(inusualPropertyNames['']);  // Una cadena vacía
+console.log(unusualPropertyNames.'');   // SyntaxError: Cadena inesperada
+console.log(unusualPropertyNames['']);  // Una cadena vacía
 console.log(unusualPropertyNames.!);    // SyntaxError: símbolo inesperado !
 console.log(unusualPropertyNames['!']); // ¡Bang!
 ```
