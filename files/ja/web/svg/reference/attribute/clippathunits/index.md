@@ -2,7 +2,7 @@
 title: clipPathUnits
 slug: Web/SVG/Reference/Attribute/clipPathUnits
 l10n:
-  sourceCommit: d35e3fd4bc6b80049899b45d74ed71dc996adfc7
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`clipPathUnits`** 属性は、 {{ SVGElement("clipPath") }} 要素のコンテンツに使用する座標系を示します。
@@ -10,6 +10,32 @@ l10n:
 この属性は、次の SVG 要素で使用することができます。
 
 - {{SVGElement('clipPath')}}
+
+## clipPath
+
+{{SVGElement('clipPath')}} では、 `clipPathUnits` は要素のコンテンツに使用されている座標系を定義します。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td><code>userSpaceOnUse</code> | <code>objectBoundingBox</code></td>
+    </tr>
+    <tr>
+      <th scope="row">デフォルト値</th>
+      <td><code>userSpaceOnUse</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
+    </tr>
+  </tbody>
+</table>
+
+- userSpaceOnUse
+  - : この値は、{{SVGElement('clipPath')}} 要素内のすべての座標が、クリッピングパスが作成されたときに定義されたユーザー座標系を参照することを示します。
+- objectBoundingBox
+  - : この値は、{{SVGElement('clipPath')}} 要素内のすべての座標が、クリッピングパスが適用される要素の境界ボックスを基準としていることを示します。これは、座標系の原点がオブジェクトの境界ボックスの左上隅であり、オブジェクトの境界ボックスの幅と高さは 1 単位の長さを持つとみなされるということです。
 
 ## 例
 
@@ -48,32 +74,6 @@ svg {
 ```
 
 {{EmbedLiveSample("Example", '100%', 200)}}
-
-## clipPath
-
-{{SVGElement('clipPath')}} では、 `clipPathUnits` は要素のコンテンツに使用されている座標系を定義します。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td><code>userSpaceOnUse</code> | <code>objectBoundingBox</code></td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>userSpaceOnUse</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
-
-- userSpaceOnUse
-  - : この値は、{{SVGElement('clipPath')}} 要素内のすべての座標が、クリッピングパスが作成されたときに定義されたユーザー座標系を参照することを示します。
-- objectBoundingBox
-  - : この値は、{{SVGElement('clipPath')}} 要素内のすべての座標が、クリッピングパスが適用される要素の境界ボックスを基準としていることを示します。これは、座標系の原点がオブジェクトの境界ボックスの左上隅であり、オブジェクトの境界ボックスの幅と高さは 1 単位の長さを持つとみなされるということです。
 
 ## 仕様書
 

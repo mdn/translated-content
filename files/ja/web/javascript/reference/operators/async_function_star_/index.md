@@ -2,7 +2,7 @@
 title: async function* 式
 slug: Web/JavaScript/Reference/Operators/async_function*
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **`async function*`** キーワードは、式の内部で非同期ジェネレーター関数を定義するために使用できます。
@@ -63,6 +63,10 @@ async function* name(param0, param1, /* …, */ paramN) {
 - `statements` {{optional_inline}}
   - : 関数本体を構成する文です。
 
+### 返値
+
+{{jsxref("AsyncGeneratorFunction")}} オブジェクトです。
+
 ## 解説
 
 `async function*` 式は [`async function*` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function*) ととても似ており、ほとんど同じ構文を持っています。 `async function*` 式と `async function*` 宣言の主な違いは関数名で、 `async function*` 式では無名関数を作成するために省略することができます。 `async function*` 式は定義されるとすぐに実行される [IIFE](/ja/docs/Glossary/IIFE) (Immediately Invoked Function Expression) として使うことができ、アドホックな[非同期反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)を作成することができます。詳しくは[関数](/ja/docs/Web/JavaScript/Reference/Functions)の章も参照してください。
@@ -71,7 +75,7 @@ async function* name(param0, param1, /* …, */ paramN) {
 
 ### async function\* 式の使用
 
-次の例では、無名の非同期ジェネレーター関数を定義し、それを `x` に代入しています。この関数は引数の2乗を返します。
+次の例では、無名の非同期ジェネレーター関数を定義し、それを `x` に代入しています。この関数は引数の 2 乗の値を生成します。
 
 ```js
 const x = async function* (y) {

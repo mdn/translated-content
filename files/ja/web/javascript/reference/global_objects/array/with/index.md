@@ -17,7 +17,7 @@ arrayInstance.with(index, value)
 ### 引数
 
 - `index`
-  - : 配列を変更するゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)。
+  - : 配列を変更するゼロ基点のインデックスで、整数に[強制変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)。
     - インデックスが負の場合は、配列の末尾から逆に数えます。 `-array.length <= index < 0` の場合、 `index + array.length` が使用されます。
     - 正規化後のインデックスが範囲を超えていた場合は、 {{jsxref("RangeError")}} 例外が発生します。
 - `value`

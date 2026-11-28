@@ -2,7 +2,7 @@
 title: ビット排他的論理和 (^)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **ビット排他的論理和 (`^`)** 演算子は、両方のオペランドの対応するビットの片方のみが `1` であるビットの位置に `1` を、それ以外のビットの位置に `0` を設定した二進数表現を持つ数値または長整数を返します。
@@ -23,9 +23,20 @@ console.log(a ^ b); // 00000000000000000000000000000110
 x ^ y
 ```
 
+### 引数
+
+- `x`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 6 （ビット排他的論理和）以上の式です。その値は[符号付き 32 ビット整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#固定長数値への変換)または[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt#長整数への強制変換)に強制変換されます。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 7 （ビット論理積）以上の式です。その値は[符号付き 32 ビット整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#固定長数値への変換)または[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt#長整数への強制変換)に強制変換されます。
+
+### 返値
+
+一方のオペランドのビットが `1` で、もう一方が `1` でない位置に `1`、それ以外の位置に `0` を持つ、符号付き 32 ビット整数または長整数です。
+
 ## 解説
 
-`^` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。数値の場合、この演算子は 32 ビット整数を返します。長整数の場合、演算子は長整数を返します。最初のオペランドを[数値型に変換し](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への変換)、その型を検査します。オペランドが長整数になった場合、長整数の XOR を実行します。そうでない場合、オペランドを [32 ビット整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#固定長数値への変換)に変換し、数値のビット単位の XOR を実行します。もし一方のオペランドが長整数になり、もう一方が数値になる場合は、 {{jsxref("TypeError")}} が発生します。
+`^` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。数値の場合、この演算子は 32 ビット整数を返します。長整数の場合、演算子は長整数を返します。最初のオペランドを[数値型に変換し](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への強制変換)、その型を検査します。オペランドが長整数になった場合、長整数の XOR を実行します。そうでない場合、オペランドを [32 ビット整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#固定長数値への変換)に変換し、数値のビット単位の XOR を実行します。もし一方のオペランドが長整数になり、もう一方が数値になる場合は、 {{jsxref("TypeError")}} が発生します。
 
 この演算子は、オペランドのビット表現を [2 の補数](https://ja.wikipedia.org/wiki/2の補数)で操作します。最初のオペランドのそれぞれのビットは、対応する 2 つ目のオペランドのビットと、 1 番目のビット同士、 2 番目のビット同士というようにペアになります。演算はそれぞれのビットのペアに適用され、結果はビット単位で構築されます。
 

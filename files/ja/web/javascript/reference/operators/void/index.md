@@ -1,8 +1,8 @@
 ---
-title: void 演算子
+title: void
 slug: Web/JavaScript/Reference/Operators/void
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **`void` 演算子**は与えられた式 (`expression`) を評価し、{{jsxref("undefined")}} を返します。
@@ -39,6 +39,15 @@ try {
 void expression
 ```
 
+### 引数
+
+- `expression`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 14（前置演算子）以上の式です。
+
+### 返値
+
+{{jsxref("undefined")}} です。
+
 ## 解説
 
 この演算子により、何らかの値を生成する評価式を、式が {{jsxref("undefined")}} と評価されることが望ましい場面に置くことができます。
@@ -56,7 +65,7 @@ void (2 === "2"); // void (2 === '2'), undefined を返す
 
 ### 即時実行関数式
 
-[即時実行関数式](/ja/docs/Glossary/IIFE)が使用される場合、 `function` キーワードは[文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement)のすぐ先頭に置くことはできません。そうすると、 [関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function) と解釈され、呼び出しを表す括弧に達した時点で構文エラーが発生します。関数に名前が付けられていない場合、関数が宣言として構文解析されると即座に構文エラーとなります。
+[即時実行関数式](/ja/docs/Glossary/IIFE)を使用する場合、`function` キーワードを[文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement)の先頭に置くことはできません。そうすると[関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)として構文解析され、呼び出しを表す括弧に到達した時点で構文エラーになります。名前のない関数を宣言として構文解析すると、直ちに構文エラーになります。
 
 ```js-nolint example-bad
 function iife() {
@@ -96,7 +105,7 @@ void () => { console.log("iife!"); }(); // SyntaxError: Malformed arrow function
 
 ### JavaScript URI
 
-[`javascript:` URI](/ja/docs/Web/URI/Reference/Schemes/javascript) に対応しているブラウザーでは、 URI の中のコードを評価し、返値が {{jsxref("undefined")}} でない限り、返された値でページの内容を置き換えます。 `void` 演算子は、`undefined` を返すために使用することができます。
+[`javascript:` URI](/ja/docs/Web/URI/Reference/Schemes/javascript) に対応しているブラウザーでは、URI 内のコードを評価し、返値が文字列の場合、その返値でページの内容を置き換えます。`void` 演算子は、{{jsxref("undefined")}} を返すために使用できます。例えば、次のように使います。
 
 ```html
 <a href="javascript:void(0);">ここをクリックしても何もしません</a>

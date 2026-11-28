@@ -2,7 +2,7 @@
 title: メディアキャプチャとストリーム API (メディアストリーム)
 slug: Web/API/Media_Capture_and_Streams_API
 l10n:
-  sourceCommit: b70c84579e286a8faf5d2da15bd2978893d448c6
+  sourceCommit: b1bb1b27224e37b2045c6a16b5f9cfa817d0df89
 ---
 
 {{DefaultAPISidebar("Media Capture and Streams")}}
@@ -13,7 +13,7 @@ l10n:
 
 ## 基本概念
 
-この API は、音声または映像に関連づけられたデータの流れを表現するための {{domxref("MediaStream")}} オブジェクトの操作を基本としています。例として[メディアストリームの取得](/ja/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos#startup_関数)をご覧ください。
+この API は、音声または映像に関連づけられたデータの流れを表現するための {{domxref("MediaStream")}} オブジェクトの操作を基本としています。例として[メディアストリームの取得](/ja/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos#デモ)をご覧ください。
 
 `MediaStream` は 0 個以上の {{domxref("MediaStreamTrack")}} によって構成されます。これは様々な音声や映像の**トラック**を表現します。それぞれの `MediaStreamTrack` は、1 つ以上の**チャンネル**を持ちます。このチャンネルはメディアストリームの最小の単位を表現します。例えば、ステレオの音声トラックの*左*と*右*のチャンネルのそれぞれのように、与えられたスピーカーに関連づけられた音声信号です。
 
@@ -30,20 +30,16 @@ l10n:
 - {{domxref("MediaDeviceInfo")}}
 - {{domxref("MediaDevices")}}
 - {{domxref("MediaStream")}}
-- {{domxref("MediaStreamEvent")}}
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStreamTrackEvent")}}
 - {{domxref("MediaTrackConstraints")}}
-- {{domxref("MediaTrackSettings")}}
 - {{domxref("OverconstrainedError")}}
-- {{domxref("URL")}}
 
 ## イベント
 
 - {{domxref("MediaStream/addtrack_event", "addtrack")}}
 - {{domxref("MediaStreamTrack/ended_event", "ended")}}
 - {{domxref("MediaStreamTrack/mute_event", "mute")}}
-- {{domxref("MediaStreamTrack.overconstrained_event", "overconstrained")}}
 - {{domxref("MediaStream/removetrack_event", "removetrack")}}
 - {{domxref("MediaStreamTrack/unmute_event", "unmute")}}
 
@@ -53,6 +49,10 @@ l10n:
 
 [getUserMedia() による写真の撮影](/ja/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) の記事では、[`getUserMedia()`](/ja/docs/Web/API/MediaDevices/getUserMedia) を使用して、 `getUserMedia()` に対応しているコンピューターや携帯電話のカメラにアクセスし、それで写真を撮る方法を示しています。
 
+## 仕様書
+
+{{Specifications}}
+
 ## ブラウザーの互換性
 
 {{Compat}}
@@ -60,5 +60,4 @@ l10n:
 ## 関連情報
 
 - [WebRTC](/ja/docs/Web/API/WebRTC_API) - API の入門ページ
-- {{domxref("mediaDevices.getUserMedia()")}}
 - [WebRTC による写真の撮影](/ja/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos): `getUserMedia()` を用いたデモとチュートリアル

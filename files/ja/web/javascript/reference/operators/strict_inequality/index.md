@@ -2,10 +2,11 @@
 title: 厳密不等価演算子 (!==)
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
-**厳密不等価演算子 (`!==`)** は、2 つのオペランドが等しくないことを検査し、論理値で結果を返します。[不等価](/ja/docs/Web/JavaScript/Reference/Operators/Inequality)演算子とは異なり、厳密不等価演算子はオペランドの型が異なる場合、常に異なると判断します。
+**厳密不等価演算子 (`!==`)** は、2 つのオペランドが等しくないことを検査し、論理値で結果を返します。
+[不等価](/ja/docs/Web/JavaScript/Reference/Operators/Inequality)演算子とは異なり、厳密不等価演算子はオペランドの型が異なる場合、常に異なると判断します。
 
 {{InteractiveExample("JavaScript デモ: 厳密不等価演算子 (!==)")}}
 
@@ -29,6 +30,17 @@ console.log(0 !== false);
 x !== y
 ```
 
+### 引数
+
+- `x`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 8（等価性演算子）以上の式です。
+- `y`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 9（関係演算子）以上の式です。
+
+### 返値
+
+`x` と `y` が[厳密な等価性](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#による厳密な等価性)に基づく比較で等しくない場合は `true`、そうでない場合は `false` です。
+
 ## 解説
 
 厳密不等価演算子は、オペランドが等しくないことを検査します。これは[厳密等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)演算子の逆に当たるので、以下の 2 行は常に同じ結果になります。
@@ -39,7 +51,7 @@ x !== y;
 !(x === y);
 ```
 
-比較アルゴリズムの詳細については、[厳密等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)演算子のページを参照して下さい。
+比較アルゴリズムの詳細については、[厳密等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)演算子のページを参照してください。
 
 厳密等価演算子と同様に、厳密不等価演算子はオペランドの型が異なると、常に異なるものと見なします。
 

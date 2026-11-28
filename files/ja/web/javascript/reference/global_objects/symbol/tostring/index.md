@@ -44,7 +44,7 @@ toString()
 
 `toString()` メソッドは、`this` 値が `Symbol` プリミティブまたはラッパー・オブジェクトであることを要求されます。シンボル値への強制を試みずに、他の `this` 値に対して {{jsxref("TypeError")}} を発生します。
 
-`Symbol` には [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive) メソッドがあるので、`Symbol` オブジェクトが[文字列に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)されるときは、常にこのメソッドが `toString()` よりも優先されます。しかし、`Symbol.prototype[Symbol.toPrimitive]()` はシンボルプリミティブを返し、シンボルプリミティブは文字列に暗黙的に変換されると {{jsxref("TypeError")}} が発生するため、`toString()` メソッドが言語によって暗黙的に呼び出されることはありません。シンボルを文字列化するには、明示的に `toString()` メソッドを呼び出すか、[`String()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/String#string_を用いてシンボルを文字列化) 関数を使用する必要があります。
+`Symbol` には [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive) メソッドがあるので、`Symbol` オブジェクトが[文字列に強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)されるときは、常にこのメソッドが `toString()` よりも優先されます。しかし、`Symbol.prototype[Symbol.toPrimitive]()` はシンボルプリミティブを返し、シンボルプリミティブは文字列に暗黙的に強制変換されると {{jsxref("TypeError")}} が発生するため、`toString()` メソッドが言語によって暗黙的に呼び出されることはありません。シンボルを文字列化するには、明示的に `toString()` メソッドを呼び出すか、[`String()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/String#string_を用いてシンボルを文字列化) 関数を使用する必要があります。
 
 ## 例
 

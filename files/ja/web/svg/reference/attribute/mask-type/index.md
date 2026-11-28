@@ -2,7 +2,7 @@
 title: mask-type
 slug: Web/SVG/Reference/Attribute/mask-type
 l10n:
-  sourceCommit: b97dae0887fb02713db610eed4855545a9c81bcd
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`mask-type`** 属性は、マスク時に {{ SVGElement("mask") }} 要素のコンテンツに使用するマスクモード（_alpha_ または _luminance_）を示します。
@@ -12,7 +12,33 @@ l10n:
 - {{SVGElement('mask')}}
 
 > [!NOTE]
-> このプレゼンテーション属性には、 CSS プロパティで相当する {{cssxref("mask-type")}} があります。両方が指定されている場合、 CSS プロパティが優先されます。
+> このプレゼンテーション属性には、対応する CSS プロパティ {{cssxref("mask-type")}} があります。両方が指定されている場合、CSS プロパティが優先されます。
+
+## mask
+
+{{SVGElement("mask")}} の場合、`mask-type` はマスク要素のコンテンツを輝度マスクとして扱うかアルファマスクとして扱うかを定義します。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td><code>alpha</code> | <code>luminance</code></td>
+    </tr>
+    <tr>
+      <th scope="row">デフォルト値</th>
+      <td><code>luminance</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>離散</td>
+    </tr>
+  </tbody>
+</table>
+
+- `alpha`
+  - : この値は、{{SVGElement('mask')}} 要素のアルファ値を使用することを示します。マスクされたオブジェクトのピクセルは、マスクの色の輝度に関係なく、マスク領域の不透明度と一致します。
+- `luminance`
+  - : この値は、{{SVGElement('mask')}} 要素の輝度値を使用することを示します。マスクされたオブジェクトの不透明度は、マスクの不透明度と明度によって決まります。`luminance` マスクの不透明度は、マスクの `R`、`G`、`B`、`A` チャンネルと、式 `((0.2125 * R) + (0.7154 * G) + (0.0721 * B)) * A` を使用して決定されます。
 
 ## 例
 
@@ -26,7 +52,7 @@ svg {
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Two identical masks other than the id and mask-type values -->
+  <!-- ID と mask-type 値以外が同じマスク -->
   <mask id="myMask1" mask-type="alpha">
     <rect
       fill="rgb(10% 10% 10% / 0.4)"
@@ -47,41 +73,15 @@ svg {
     <circle fill="rgb(90% 90% 90% / 0.6)" cx="50" cy="50" r="35" />
   </mask>
 
-  <!-- The first rect is masked with an alpha mask -->
+  <!-- 最初の矩形はアルファマスクでマスクする -->
   <rect x="0" y="0" width="45" height="45" mask="url(#myMask1)" fill="red" />
 
-  <!-- The last rect is masked with a luminance mask -->
+  <!-- 最後の矩形は輝度マスクでマスクする -->
   <rect x="55" y="0" width="45" height="45" mask="url(#myMask2)" fill="red" />
 </svg>
 ```
 
 {{EmbedLiveSample("Example", '100%', 200)}}
-
-## mask
-
-{{SVGElement("mask")}} の場合、 `mask-type` は、マスク要素のコンテンツを輝度マスクとして扱うかアルファマスクとして扱うかを定義します。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td><code>alpha</code> | <code>luminance</code></td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>luminance</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>離散</td>
-    </tr>
-  </tbody>
-</table>
-
-- `alpha`
-  - : この値は、この {{SVGElement('mask')}} 要素のアルファ値を使用することを示します。マスクされたオブジェクトのピクセルは、マスクの色調の輝度に関係なく、マスク領域の不透明度と一致します。
-- `luminance`
-  - : この値は、この {{SVGElement('mask')}} 要素の輝度値を使用することを示します。マスクされたオブジェクトの不透明度は、マスクの不透明度と明度によって決まります。`luminance` マスクの不透明度は、マスクの `R`、`G`、`B`、および `A` チャンネルを使用して、 `((0.2125 * R) + (0.7154 * G) + (0.0721 * B)) * A` という算出式で決定されます。
 
 ## 仕様書
 
@@ -93,6 +93,6 @@ svg {
 
 ## 関連情報
 
-- CSS {{cssxref("mask-type")}} property
-- CSS {{cssxref("mask-mode")}} property
+- CSS の {{cssxref("mask-type")}} プロパティ
+- CSS の {{cssxref("mask-mode")}} プロパティ
 - [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)

@@ -3,7 +3,7 @@ title: "urn: URL"
 short-title: "urn:"
 slug: Web/URI/Reference/Schemes/urn
 l10n:
-  sourceCommit: 466ca1db767535c1aa9984b4e6c0db41b3a53475
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 Uniform Resource Name (URN) は、特定の名前空間で名前によってリソースを識別する URI です。
@@ -17,7 +17,7 @@ urn:<NID>:<NSS>
 
 - `<NID>`
   - : NID (Namespace Identifier) は、大文字と小文字を区別しない名前空間の識別子です（例えば、`ISBN` と `isbn` は同等です）。
-    NID は [IANA などのレジストリー](https://www.iana.org/assignments/urn-namespaces/urn-namespaces.xhtml)によって管理されており、その解決はそれぞれの名前空間によって異なります。
+    NID は [IANA などのレジストリー](https://www.iana.org/assignments/urn-namespaces)<sup>(英語)</sup>によって管理されており、その解決はそれぞれの名前空間によって異なります。
     例えば、`ISBN` の NID の解決は、[国際 ISBN エージェンシー](https://www.isbn-international.org/) システムによって処理されています。
 - `<NSS>`
   - : NSS (Namespace Specific String) は、URN 名前空間内で固有の文字列です。
@@ -49,4 +49,4 @@ urn:ietf:rfc:7230
 
 - [URI](/ja/docs/Web/URI)
 - [URL とは何か](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
-- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
+- [IANA リストの URI スキーム](https://www.iana.org/assignments/uri-schemes)<sup>(英語)</sup>

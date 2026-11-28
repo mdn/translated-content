@@ -3,7 +3,7 @@ title: "resource: URL"
 short-title: "resource:"
 slug: Web/URI/Reference/Schemes/resource
 l10n:
-  sourceCommit: 466ca1db767535c1aa9984b4e6c0db41b3a53475
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 {{non-standard_header}}
@@ -80,4 +80,4 @@ resource: は Firefox のみ対応しています。
 
 - [URI](/ja/docs/Web/URI)
 - [URL とは何か](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
-- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) （`resource:` は[ここで扱っています](https://www.iana.org/assignments/uri-schemes/prov/resource)）
+- [IANA リストの URI スキーム](https://www.iana.org/assignments/uri-schemes)<sup>(英語)</sup> （`resource:` は[ここで扱っています](https://www.iana.org/assignments/uri-schemes/prov/resource)<sup>(英語)</sup>）

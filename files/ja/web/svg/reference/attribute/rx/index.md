@@ -2,7 +2,7 @@
 title: rx
 slug: Web/SVG/Reference/Attribute/rx
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`rx`** 属性は、X 軸上の半径を定義します。
@@ -11,30 +11,6 @@ l10n:
 
 - {{SVGElement("ellipse")}}
 - {{SVGElement("rect")}}
-
-## 例
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="50" cy="50" rx="0" ry="25" />
-  <ellipse cx="150" cy="50" rx="25" ry="25" />
-  <ellipse cx="250" cy="50" rx="50" ry="25" />
-
-  <rect x="20" y="120" width="60" height="60" rx="0" ry="15" />
-  <rect x="120" y="120" width="60" height="60" rx="15" ry="15" />
-  <rect x="220" y="120" width="60" height="60" rx="150" ry="15" />
-</svg>
-```
-
-{{EmbedLiveSample("Example", '100%', 200)}}
 
 ## ellipse
 
@@ -71,7 +47,7 @@ svg {
 </table>
 
 > [!NOTE]
-> `<ellipse>` の X 半径は {{cssxref("rx")}} 幾何プロパティでも定義できます。CSS で設定された場合、`rx` プロパティの値は `rx` 属性の値よりも優先されます。
+> `<ellipse>` の X 半径は幾何プロパティの {{cssxref("rx")}} でも定義できます。CSS で設定された場合、`rx` プロパティの値は `rx` 属性の値よりも優先されます。
 
 ## rect
 
@@ -79,9 +55,9 @@ svg {
 
 `rx` 属性の値の解釈方法は、{{SVGAttr("ry")}} 属性と矩形の幅の両方に依存します。
 
-- `rx` に対して適切な値が指定されているものの、{{SVGAttr("ry")}} に対しては指定されていない場合（またはその逆の場合）、ブラウザーは、指定されていない値を定義された方の値と同じものとみなします。
+- `rx` に対して適切な値が指定されているものの、{{SVGAttr("ry")}} に対しては指定されていない場合（またはその逆の場合）、ブラウザーは指定されていない値を、定義された値と同じものとみなします。
 - `rx` にも {{SVGAttr("ry")}} にも適切な値が指定されていない場合、ブラウザーは角が直角の矩形を描画します。
-- `rx` が矩形の幅の半分より大きい場合、ブラウザーは `rx` の値を矩形の幅の半分として考えてみます。
+- `rx` が矩形の幅の半分より大きい場合、ブラウザーは `rx` の値を矩形の幅の半分とみなします。
 
 <table class="properties">
   <tbody>
@@ -114,7 +90,31 @@ svg {
 </table>
 
 > [!NOTE]
-> `<rect>` の角の水平方向の曲率は、{{cssxref("rx")}} 幾何プロパティでも定義できます。CSS で設定された場合、`rx` プロパティの値は `rx` 属性の値よりも優先されます。
+> `<rect>` の角の水平方向の曲率は、幾何プロパティの {{cssxref("rx")}} でも定義できます。CSS で設定された場合、`rx` プロパティの値は `rx` 属性の値よりも優先されます。
+
+## 例
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="50" cy="50" rx="0" ry="25" />
+  <ellipse cx="150" cy="50" rx="25" ry="25" />
+  <ellipse cx="250" cy="50" rx="50" ry="25" />
+
+  <rect x="20" y="120" width="60" height="60" rx="0" ry="15" />
+  <rect x="120" y="120" width="60" height="60" rx="15" ry="15" />
+  <rect x="220" y="120" width="60" height="60" rx="150" ry="15" />
+</svg>
+```
+
+{{EmbedLiveSample("Example", '100%', 200)}}
 
 ## 仕様書
 

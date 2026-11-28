@@ -2,7 +2,7 @@
 title: d
 slug: Web/SVG/Reference/Attribute/d
 l10n:
-  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
+  sourceCommit: 09ba70170e8962533f9566c7c6b6b047ed0eb090
 ---
 
 **`d`** 属性は描かれるパスを定義します。
@@ -13,31 +13,6 @@ l10n:
 この属性は SVG の [`<path>`](#path) 要素で使用されます。
 
 `d` はプレゼンテーション属性であるため、[CSS プロパティとして使用](#css_プロパティとして_d_を使用)することもできます。
-
-## 例
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path
-    fill="none"
-    stroke="red"
-    d="M 10,30
-       A 20,20 0,0,1 50,30
-       A 20,20 0,0,1 90,30
-       Q 90,60 50,90
-       Q 10,60 10,30 z" />
-</svg>
-```
-
-{{EmbedLiveSample('Example', '100%', 200)}}
 
 ## path
 
@@ -77,7 +52,7 @@ svg {
   height: 100%;
 }
 
-/* このパスはホバー時に表示されます */
+/* ホバー時に表示するパス */
 #svg_css_ex1:hover path {
   d: path(
     "M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 z M5,5 L90,90"
@@ -111,8 +86,8 @@ SVG では、6 種類のパスコマンドを定義しており、全部で 20 �
 
 - [MoveTo](#moveto_パスコマンド): `M`, `m`
 - [LineTo](#lineto_パスコマンド): `L`, `l`, `H`, `h`, `V`, `v`
-- [3 次ベジェ曲線](#3_次ベジェ曲線): `C`, `c`, `S`, `s`
-- [2 次ベジェ曲線](#2_次ベジェ曲線): `Q`, `q`, `T`, `t`
+- [三次ベジェ曲線](#三次ベジェ曲線): `C`, `c`, `S`, `s`
+- [二次ベジェ曲線](#二次ベジェ曲線): `Q`, `q`, `T`, `t`
 - [楕円円弧曲線](#楕円円弧曲線): `A`, `a`
 - [ClosePath](#closepath): `Z`, `z`
 
@@ -122,12 +97,12 @@ SVG では、6 種類のパスコマンドを定義しており、全部で 20 �
 コマンドへの引数として負の値を指定することは常に可能です。
 
 - 負の角度は反時計回りとなります。
-- 絶対座標での負の _x_ と _y_ の値は反転座標と解釈されます。
-- 相対座標での負の _x_ の値は左方向へ移動、相対値での負の _y_ の値は上方向へ移動します。
+- 絶対座標での負の _x_ と _y_ の値は負の座標として解釈されます。
+- 相対座標での負の _x_ の値は左方向へ、負の _y_ の値は上方向へ移動します。
 
 ### MoveTo パスコマンド
 
-_MoveTo_ での指定は、筆記用具を持ち上げ他の位置で下ろす動作と考えられます。言い換えると、_現在位置_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>_}) の移動です。_P<sub>o</sub>_ と新しい _現在位置_ (_P<sub>n</sub>_; {_x<sub>n</sub>_, _y<sub>n</sub>_}) との間には線は描かれません。
+_MoveTo_ 命令は、描画するペンを持ち上げ、別の位置に置く動作と考えることができます。言い換えると、現在位置 (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>_}) を移動する処理です。_P<sub>o</sub>_ と新しい現在位置 (_P<sub>n</sub>_; {_x<sub>n</sub>_, _y<sub>n</sub>_}) の間には線は描かれません。
 
 <table class="no-markdown">
   <tbody>
@@ -148,7 +123,8 @@ _MoveTo_ での指定は、筆記用具を持ち上げ他の位置で下ろす�
           <em>現在位置</em> を座標
           <code><var>x</var></code
           >,<code><var>y</var></code
-          > へ移動します。後続する任意数の座標の組は暗黙的に絶対座標での LineTo(<code>L</code>) コマンドと解釈されます(<em
+          > へ移動します。
+          後続する任意数の座標の組は暗黙的に絶対座標での LineTo(<code>L</code>) コマンドと解釈されます(<em
             >以下を参照</em
           >)。
         </p>
@@ -169,7 +145,8 @@ _MoveTo_ での指定は、筆記用具を持ち上げ他の位置で下ろす�
       </td>
       <td>
         <p>
-          <em>現在位置</em> を、最後に把握されたパス位置から X 軸方向に <code><var>dx</var></code>、Y 軸方向に <code><var>dy</var></code> だけずらします。後続する任意数の座標の組は暗黙的に相対座標での LineTo(<code>l</code>) コマンドとして解釈されます(<em>以下を参照</em>)。
+          <em>現在位置</em> を、最後に把握されたパス位置から X 軸方向に <code><var>dx</var></code>、Y 軸方向に <code><var>dy</var></code> だけずらします。
+          後続する任意数の座標の組は暗黙的に相対座標での LineTo(<code>l</code>) コマンドとして解釈されます（<em>以下を参照</em>）。
         </p>
         <p>
           <strong>式:</strong> <var>P<sub>n</sub></var> = {<var
@@ -231,7 +208,8 @@ _LineTo_ は、_現在位置_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>
       <td>(<code>x</code>, <code>y</code>)+</td>
       <td>
         <p>
-          <em>現在位置</em> から <code><var>x</var></code>,<code><var>y</var></code> で指定される <em>終了点</em> へ直線を描きます。後続する任意の数の座標の組は、暗黙的に絶対座標での LineTo (<code>L</code>) コマンドと解釈されます。
+          <em>現在位置</em> から <code><var>x</var></code>,<code><var>y</var></code> で指定される <em>終了点</em> へ直線を描きます。
+          後続する任意の数の座標の組は、暗黙的に絶対座標での LineTo (<code>L</code>) コマンドと解釈されます。
         </p>
         <p>
           <strong>式:</strong> <var>P<sub>o</sub>′</var> =
@@ -250,7 +228,8 @@ _LineTo_ は、_現在位置_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>
       </td>
       <td>
         <p>
-          <em>現在位置</em> から、<em>現在位置</em> を X 軸方向に <code><var>dx</var></code>、Y 軸方向に <code><var>dy</var></code> だけ移動した <em>終了点</em> への直線を描きます。後続する任意数の座標の組は、暗黙的に相対座標での LineTo (<code>l</code>) コマンドと解釈されます（<em>以下を参照</em>）。
+          <em>現在位置</em> から、<em>現在位置</em> を X 軸方向に <code><var>dx</var></code>、Y 軸方向に <code><var>dy</var></code> だけ移動した <em>終了点</em> への直線を描きます。
+          後続する任意数の座標の組は、暗黙的に相対座標での LineTo (<code>l</code>) コマンドと解釈されます（<em>以下を参照</em>）。
         </p>
         <p>
           <strong>式:</strong> <var>P<sub>o</sub>′</var> =
@@ -269,7 +248,8 @@ _LineTo_ は、_現在位置_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>
       </td>
       <td>
         <p>
-          <em>現在位置</em>から、引数 <code><var>x</var></code> と<em>現在位置</em>の <code><var>y</var></code> 座標で指定される<em>終了点</em>までの水平線を描きます。後続する任意数の値は、暗黙的に絶対座標での水平線用の LineTo (<code>H</code>) コマンドと解釈されます。
+          <em>現在位置</em>から、引数 <code><var>x</var></code> と<em>現在位置</em>の <code>y</code> 座標で指定される<em>終了点</em>までの水平線を描きます。
+          後続する任意数の値は、暗黙的に絶対座標での水平線用の LineTo (<code>H</code>) コマンドと解釈されます。
         </p>
         <p>
           <strong>式:</strong> <var>P<sub>o</sub>′</var> =
@@ -287,7 +267,8 @@ _LineTo_ は、_現在位置_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>
       </td>
       <td>
         <p>
-          現在位置から、X 軸方向へ <em>現在位置</em>から <code><var>dx</var></code> だけ移動し、<em>現在位置</em>の <code><var>y</var></code> 座標の位置まで移動した終了点までの水平線を描きます。後続する任意数の値は、暗黙的に相対座標での水平線用の LineTo (<code>h</code>) コマンドと解釈されます。
+          現在位置から、X 軸方向へ <em>現在位置</em>から <code><var>dx</var></code> だけ移動し、<em>現在位置</em>の <code><var>y</var></code> 座標の位置まで移動した終了点までの水平線を描きます。
+          後続する任意数の値は、暗黙的に相対座標での水平線用の LineTo (<code>h</code>) コマンドと解釈されます。
         </p>
         <p>
           <strong>式:</strong> <var>P<sub>o</sub>′</var> =
@@ -306,7 +287,8 @@ _LineTo_ は、_現在位置_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>
       </td>
       <td>
         <p>
-          <em>現在位置</em>から、引数 <code><var>y</var></code> と<em>現在位置</em>の <code><var>x</var></code> 座標で指定される<em>終了点</em>までの垂直線を描きます。後続する任意数の値は、暗黙的に絶対座標での垂直線用の LineTo (<code>V</code>) コマンドと解釈されます。
+          <em>現在位置</em>から、引数 <code><var>y</var></code> と<em>現在位置</em>の <code><var>x</var></code> 座標で指定される<em>終了点</em>までの垂直線を描きます。
+          後続する任意数の値は、暗黙的に絶対座標での垂直線用の LineTo (<code>V</code>) コマンドと解釈されます。
         </p>
         <p>
           <strong>式:</strong> <var>P<sub>o</sub>′</var> =
@@ -324,7 +306,8 @@ _LineTo_ は、_現在位置_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>
       </td>
       <td>
         <p>
-          <em>現在位置</em>から、<em>現在位置</em>からの Y 軸方向へ <code><var>dy</var></code> だけ移動し、<em>現在位置</em>の <code><var>x</var></code> 座標で指定される<em>終了点</em>までの垂直線を描きます。後続する任意数の値は、暗黙的に相対座標での垂直線用の LineTo (<code>v</code>) コマンドと解釈されます。
+          <em>現在位置</em>から、<em>現在位置</em>からの Y 軸方向へ <code><var>dy</var></code> だけ移動し、<em>現在位置</em>の <code><var>x</var></code> 座標で指定される<em>終了点</em>までの垂直線を描きます。
+          後続する任意数の値は、暗黙的に相対座標での垂直線用の LineTo (<code>v</code>) コマンドと解釈されます。
         </p>
         <p>
           <strong>式:</strong> <var>P<sub>o</sub>′</var> =
@@ -371,11 +354,11 @@ svg {
 
 {{EmbedLiveSample('LineTo_path_commands', '100%', 200)}}
 
-### 3 次ベジェ曲線
+### 三次ベジェ曲線
 
-_3 次[ベジェ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A7%E6%9B%B2%E7%B7%9A)_ は 4 点で定義される滑らかな曲線です。
+三次[ベジェ曲線](/ja/docs/Glossary/Bezier_curve)は、4 点で定義される滑らかな曲線です。
 
-- 開始点 (現在位置)
+- 開始点（現在位置）
   - : (_P<sub>o</sub>_ = {_x<sub>o</sub>_, _y<sub>o</sub>_})
 - 終了点
   - : (_P<sub>n</sub>_ = {_x<sub>n</sub>_, _y<sub>n</sub>_})
@@ -408,7 +391,9 @@ _3 次[ベジェ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
       </td>
       <td>
         <p>
-          開始点から <code><var>x</var></code>,<code><var>y</var></code> で指定した終了点までの 3 次ベジェ曲線を描画します。開始制御点は <code><var>x1</var></code>,<code><var>y1</var></code> で指定し、終端制御点は <code><var>x2</var></code>,<code><var>y2</var></code> で指定します。それに続く座標対の 3 つ組は、暗黙的な絶対 3 次ベジェ曲線 (<code>C</code>) コマンドの引数として解釈されます。
+          開始点から <code><var>x</var></code>,<code><var>y</var></code> で指定した終了点までの三次ベジェ曲線を描画します。
+          開始制御点は <code><var>x1</var></code>,<code><var>y1</var></code> で指定し、終端制御点は <code><var>x2</var></code>,<code><var>y2</var></code> で指定します。
+          それに続く 3 組の座標対は、暗黙的な絶対三次ベジェ曲線 (<code>C</code>) コマンドの引数として解釈されます。
         </p>
         <dl>
           <dt>式:</dt>
@@ -438,8 +423,10 @@ _3 次[ベジェ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
       </td>
       <td>
         <p>
-          <em>開始点</em
-          >から、<em>開始点</em>からの X 軸方向に <code><var>dx</var></code>, Y 軸方向に <code><var>dy</var></code> だけ移動した<em>終了点</em>までの 3 次ベジェ曲線を描きます。<em>開始制御点</em>は、<em>開始点</em>（曲線の開始点）を X 軸方向に <code><var>dx1</var></code>, Y 軸方向に <code><var>dy1</var></code> だけ移動した点です。<em>終端制御点</em>は<em>現在位置</em>（曲線の開始点）を、X 軸方向に <code><var>dx2</var></code>, Y 軸方向に <code><var>dy2</var></code> だけ移動した点です。後続する任意数の 3 つ組の座標は、暗黙的に相対座標での 3 次ベジェ曲線 (<code>c</code>) コマンドと解釈されます。
+          <em>開始点</em>から、<em>開始点</em>からの X 軸方向に <code><var>dx</var></code>、Y 軸方向に <code><var>dy</var></code> だけ移動した<em>終了点</em>までの三次ベジェ曲線を描きます。
+          <em>開始制御点</em>は、<em>開始点</em>（曲線の開始点）を X 軸方向に <code><var>dx1</var></code>, Y 軸方向に <code><var>dy1</var></code> だけ移動した点です。
+          <em>終端制御点</em>は<em>現在位置</em>（曲線の開始点）を、X 軸方向に <code><var>dx2</var></code>, Y 軸方向に <code><var>dy2</var></code> だけ移動した点です。
+          後続する任意数の 3 組の座標は、暗黙的に相対座標での三次ベジェ曲線 (<code>c</code>) コマンドと解釈されます。
         </p>
         <dl>
           <dt>式:</dt>
@@ -470,8 +457,11 @@ _3 次[ベジェ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
         >)+
       </td>
       <td>
-        <em>開始点</em
-        >から、<code><var>x</var></code>,<code><var>y</var></code> で指定される<em>終了点</em>までの滑らかな 3 次ベジェ曲線を描きます。<em>終端制御点</em>は、<code>x2</code>,<code>y2</code> で指定されます。<em>開始制御点</em>は、直前の曲線コマンドの<em>終端制御点</em>が鏡映されます。もし直前のコマンドが 3 次ベジェ曲線でない場合は、<em>開始制御点</em>は曲線の開始点(<em>現在座標</em>)と同一となります。後続する任意数の座標の組は、暗黙的に絶対座標での滑らかな 3 次ベジェ曲線 (<code>S</code>) コマンドへの引数と解釈されます。
+        <em>開始点</em>から、<code><var>x</var></code>,<code><var>y</var></code> で指定される<em>終了点</em>までの滑らかな三次ベジェ曲線を描きます。
+        <em>終端制御点</em>は、<code>x2</code>,<code>y2</code> で指定されます。
+        <em>開始制御点</em>は、<em>現在位置</em>を基準として直前の曲線コマンドの<em>終端制御点</em>を鏡像した点です。
+        直前のコマンドが三次ベジェ曲線でない場合は、<em>開始制御点</em>は曲線の開始点 (<em>現在座標</em>) と同一になります。
+        後続する任意数の座標の組は、暗黙的に絶対座標での滑らかな三次ベジェ曲線 (<code>S</code>) コマンドへの引数と解釈されます。
       </td>
     </tr>
     <tr>
@@ -484,7 +474,11 @@ _3 次[ベジェ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
         >)+
       </td>
       <td>
-        <em>開始点</em>から、<em>現在位置</em>からのX 軸方向への <code><var>dx</var></code>, Y 軸方向への <code><var>dy</var></code> だけ移動した<em>終了点</em>までの滑らかな 3 次ベジェ曲線を描きます。<em>終端制御点</em>は、<em>現在位置</em>(曲線の開始点)をX 軸方向への <code><var>dx2</var></code> と Y 軸方向への <code><var>dy2</var></code> だけ移動した点です。<em>開始制御点</em>は、直前の曲線コマンドの<em>終了点</em>が鏡映されます。もし直前のコマンドが 3 次ベジェ曲線でない場合は、<em>開始制御点</em>は曲線の開始点（<em>現在座標</em>）と同一となります。後続する任意数の座標の組は、暗黙的に相対座標での滑らかな 3 次ベジェ曲線 (<code>s</code>) コマンドと解釈されます。
+        <em>開始点</em>から、<em>現在位置</em>から X 軸方向に <code><var>dx</var></code>、Y 軸方向に <code><var>dy</var></code> だけ移動した<em>終了点</em>までの滑らかな三次ベジェ曲線を描きます。
+        <em>終端制御点</em>は、<em>現在位置</em>（曲線の開始点）を X 軸方向に <code><var>dx2</var></code>、Y 軸方向に <code><var>dy2</var></code> だけ移動した点です。
+        <em>開始制御点</em>は、<em>現在位置</em>を基準として直前の曲線コマンドの<em>終端制御点</em>を鏡像した点です。
+        直前のコマンドが三次ベジェ曲線でない場合は、<em>開始制御点</em>は曲線の開始点（<em>現在座標</em>）と同一になります。
+        後続する任意数の座標の組は、暗黙的に相対座標での滑らかな三次ベジェ曲線 (<code>s</code>) コマンドと解釈されます。
       </td>
     </tr>
   </tbody>
@@ -505,7 +499,7 @@ svg {
   viewBox="0 0 200 100"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- 絶対座標での 3 次ベジェ曲線 -->
+  <!-- 絶対座標での三次ベジェ曲線 -->
   <path
     fill="none"
     stroke="red"
@@ -513,7 +507,7 @@ svg {
            C 30,90 25,10 50,10
            S 70,90 90,90" />
 
-  <!-- 相対座標での 3 次ベジェ曲線 -->
+  <!-- 相対座標での三次ベジェ曲線 -->
   <path
     fill="none"
     stroke="red"
@@ -523,14 +517,14 @@ svg {
 
   <!-- 曲線の頂点と制御点の明示 -->
   <g id="ControlPoints">
-    <!-- 1 つ目の 3 次コマンドへの制御点 -->
+    <!-- 最初の三次コマンドへの制御点 -->
     <line x1="10" y1="90" x2="30" y2="90" stroke="lightgrey" />
     <circle cx="30" cy="90" r="1.5" />
 
     <line x1="50" y1="10" x2="25" y2="10" stroke="lightgrey" />
     <circle cx="25" cy="10" r="1.5" />
 
-    <!-- 2 つ目の円滑化制御点 (1 つ目は暗黙的) -->
+    <!-- 2 番目の円滑化制御点（最初の制御点は暗黙的） -->
     <line
       x1="50"
       y1="10"
@@ -554,9 +548,9 @@ svg {
 
 {{EmbedLiveSample('Cubic_Bézier_Curve', '100%', 200)}}
 
-### 2 次ベジェ曲線
+### 二次ベジェ曲線
 
-_2 次[ベジェ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A7%E6%9B%B2%E7%B7%9A)_ は 3 点で定義される滑らかな曲線です。
+二次[ベジェ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A7%E6%9B%B2%E7%B7%9A)は、3 点で定義される滑らかな曲線です。
 
 - 開始点（現在位置）
   - : _P<sub>o</sub>_ = {_x<sub>o</sub>_, _y<sub>o</sub>_}
@@ -566,7 +560,7 @@ _2 次[ベジェ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
   - : _P<sub>c</sub>_ = {_x<sub>c</sub>_, _y<sub>c</sub>_}
     (曲率を制御します)
 
-描画後に、終了点 (_P<sub>n</sub>_) ガ次のコマンドに対する現在位置 (_P<sub>o</sub>′_)となります。
+描画後に、終了点 (_P<sub>n</sub>_) は次のコマンドに対する現在位置 (_P<sub>o</sub>′_) になります。
 
 <table class="no-markdown">
   <tbody>
@@ -586,7 +580,9 @@ _2 次[ベジェ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
       </td>
       <td>
         <p>
-          <em>開始点</em>から <code><var>x</var></code>,<code><var>y</var></code> で指定される<em>終了点</em>までの 2 次ベジェ曲線を描きます。<em>制御点</em>は<code><var>x1</var></code>,<code><var>y1</var></code>で指定されます。後続する任意数の座標の組は、暗黙的に絶対座標での 2 次ベジェ曲線 (<code>Q</code>) コマンドへの引数と解釈されます。
+          <em>開始点</em>から <code><var>x</var></code>,<code><var>y</var></code> で指定される<em>終了点</em>までの二次ベジェ曲線を描きます。
+          <em>制御点</em>は <code><var>x1</var></code>,<code><var>y1</var></code> で指定されます。
+          後続する任意数の座標の組は、暗黙的に絶対座標での二次ベジェ曲線 (<code>Q</code>) コマンドへの引数と解釈されます。
         </p>
         <dl>
           <dt><strong>式:</strong></dt>
@@ -612,7 +608,9 @@ _2 次[ベジェ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
       </td>
       <td>
         <p>
-          <em>開始点</em>から、<em>開始点</em>からのX 軸方向に <code><var>dx</var></code>, Y 軸方向に <code><var>dy</var></code> だけ移動した<em>終了点</em>までの 2 次ベジェ曲線を描きます。<em>制御点</em>は、<em>開始点</em>（曲線の開始点）から X 軸方向に <code><var>dx1</var></code>, Y 軸方向に <code><var>dy1</var></code> だけ移動した点です。後続する任意数の座標は、暗黙的に相対座標での 2 次ベジェ曲線 (<code>q</code>) コマンドへの引数と解釈されます。
+          <em>開始点</em>から、<em>開始点</em>から X 軸方向に <code><var>dx</var></code>、Y 軸方向に <code><var>dy</var></code> だけ移動した<em>終了点</em>までの二次ベジェ曲線を描きます。
+          <em>制御点</em>は、<em>開始点</em>（曲線の開始点）から X 軸方向に <code><var>dx1</var></code>、Y 軸方向に <code><var>dy1</var></code> だけ移動した点です。
+          後続する任意数の座標は、暗黙的に相対座標での二次ベジェ曲線 (<code>q</code>) コマンドへの引数と解釈されます。
         </p>
         <dl>
           <dt>式:</dt>
@@ -639,7 +637,10 @@ _2 次[ベジェ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
       </td>
       <td>
         <p>
-          <em>開始点</em>から <code><var>x</var></code>,<code><var>y</var></code> で指定される<em>終了点</em>までの滑らかな 2 次ベジェ曲線を描きます。<em>制御点</em>は、直前の曲線コマンドの <em>制御点</em>が反映されます。もし直前のコマンドが 2 次ベジェ曲線でない場合は、<em>制御点</em>は曲線の開始点（<em>現在座標</em>）と同一となります。後続する任意数の座標の組は、暗黙的に絶対座標での滑らかな 2 次ベジェ曲線 (<code>T</code>) コマンドへの引数と解釈されます。
+          <em>開始点</em>から <code><var>x</var></code>,<code><var>y</var></code> で指定される<em>終了点</em>までの滑らかな二次ベジェ曲線を描きます。
+          <em>制御点</em>は、<em>現在位置</em>を基準として直前の曲線コマンドの<em>制御点</em>を鏡像した点です。
+          直前のコマンドが二次ベジェ曲線でない場合は、<em>制御点</em>は曲線の開始点（<em>現在座標</em>）と同一になります。
+          後続する任意数の座標の組は、暗黙的に絶対座標での滑らかな二次ベジェ曲線 (<code>T</code>) コマンドへの引数と解釈されます。
         </p>
         <dl>
           <dt>式:</dt>
@@ -661,7 +662,10 @@ _2 次[ベジェ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
       </td>
       <td>
         <p>
-          <em>現在位置</em>から、<em>現在位置</em>から X 軸方向へ <code><var>dx</var></code>, Y 軸方向へ の<code><var>dy</var></code> だけ移動した<em>終了点</em>までの滑らかな 2 次ベジェ曲線を描きます。<em>制御点</em>は、直前の曲線コマンドの<em>制御点</em>が反映されます。もし直前のコマンドが 2 次ベジェ曲線でない場合は、<em>制御点</em>は曲線の開始点 (<em>現在座標</em>)と同一となります。後続する任意数の座標の組は、暗黙的に相対座標での滑らかな 2 次ベジェ曲線 (<code>t</code>) コマンドへの引数と解釈されます。
+          <em>現在位置</em>から、X 軸方向に <code><var>dx</var></code>、Y 軸方向に <code><var>dy</var></code> だけ移動した<em>終了点</em>までの滑らかな二次ベジェ曲線を描きます。
+          <em>制御点</em>は、<em>現在位置</em>を基準として直前の曲線コマンドの<em>制御点</em>を鏡像した点です。
+          直前のコマンドが二次ベジェ曲線でない場合は、<em>制御点</em>は曲線の開始点 (<em>現在座標</em>) と同一になります。
+          後続する任意数の座標の組は、暗黙的に相対座標での滑らかな二次ベジェ曲線 (<code>t</code>) コマンドへの引数と解釈されます。
         </p>
         <dl>
           <dt>式:</dt>
@@ -694,7 +698,7 @@ svg {
   viewBox="0 0 200 100"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- 暗黙的な繰り返しによる 2 次ベジェ曲線 -->
+  <!-- 暗黙的な繰り返しによる二次ベジェ曲線 -->
   <path
     fill="none"
     stroke="red"
@@ -745,7 +749,7 @@ svg {
 
 ### 楕円円弧曲線
 
-_楕円円弧曲線_ は楕円の一部として定義される曲線です。ベジェ曲線よりも楕円円弧曲線を用いるほうが、高度な正則曲線の描画が容易になることが多くあります。
+楕円円弧曲線は、楕円の一部として定義される曲線です。ベジェ曲線よりも楕円円弧曲線を用いるほうが、滑らかな曲線を描画しやすいことがあります。
 
 <table class="no-markdown">
   <tbody>
@@ -765,7 +769,8 @@ _楕円円弧曲線_ は楕円の一部として定義される曲線です。�
       </td>
       <td>
         <p>
-          現在位置から <code><var>x</var></code>,<code><var>y</var></code> 座標へ円弧を描きます。楕円の中心はコマンドへの他の引数に基づいて自動的に決定されます。
+          現在位置から <code><var>x</var></code>,<code><var>y</var></code> 座標へ円弧を描きます。
+          楕円の中心はコマンドへの他の引数に基づいて自動的に決定されます。
         </p>
         <ul>
           <li>
@@ -775,14 +780,14 @@ _楕円円弧曲線_ は楕円の一部として定義される曲線です。�
             <code><var>angle</var></code> は X 軸に対する楕円の角度（度単位）です。
           </li>
           <li>
-            <code><var>large-arc-flag</var></code> と <code><var>sweep-flag</var></code> を使用すると、描画される円弧を選択することができます。他の引数を使用することで、4 種類の円弧を描画することが可能です。
+            <code><var>large-arc-flag</var></code> と <code><var>sweep-flag</var></code> を使用すると、描画される円弧を選択することができます。
+            他の引数を使用することで、4 種類の円弧を描画することが可能です。
             <ul>
               <li>
-                <code><var>large-arc-flag</var></code> では大きい円弧 (<code>1</code>)
-                か、小さい円弧 (<code>0</code>) かを選択し、
+                <code><var>large-arc-flag</var></code> では大きい円弧 (<code>1</code>) か、小さい円弧 (<code>0</code>) かを選択し、
               </li>
               <li>
-                <code><var>sweep-flag</var></code> では時計回りの円弧 (<code>1</code>) か、反時計周りの円弧 (<code>0</code>) かを選択します。
+                <code><var>sweep-flag</var></code> では時計回りの円弧 (<code>1</code>) か、反時計回りの円弧 (<code>0</code>) かを選択します。
               </li>
             </ul>
           </li>
@@ -801,7 +806,8 @@ _楕円円弧曲線_ は楕円の一部として定義される曲線です。�
       </td>
       <td>
         <p>
-          現在位置から、現在位置から X 軸方向へ <code><var>dx</var></code>、Y 軸方向への <code><var>dy</var></code> だけ移動した点へ円弧を描きます。楕円の中心はコマンドへの他の引数に基づいて自動的に決定されます。
+          現在位置から、現在位置から X 軸方向へ <code><var>dx</var></code>、Y 軸方向への <code><var>dy</var></code> だけ移動した点へ円弧を描きます。
+          楕円の中心はコマンドへの他の引数に基づいて自動的に決定されます。
         </p>
         <ul>
           <li>
@@ -811,18 +817,20 @@ _楕円円弧曲線_ は楕円の一部として定義される曲線です。�
             <code><var>angle</var></code> は X 軸に対する楕円の角度（度単位）です
           </li>
           <li>
-            <code><var>large-arc-flag</var></code> と <code><var>sweep-flag</var></code> を使用すると、描画される円弧を選択することができます。他の引数を使用することで、4 種類の円弧を描画することが可能です。
+            <code><var>large-arc-flag</var></code> と <code><var>sweep-flag</var></code> を使用すると、描画される円弧を選択することができます。
+            他の引数を使用することで、4 種類の円弧を描画することが可能です。
             <ul>
               <li>
                 <code><var>large-arc-flag</var></code> では大きい円弧 (<code>1</code>) を描くか、小さい円弧 (<code>0</code>) を描くかを選択し,
               </li>
               <li>
-                <code><var>sweep-flag</var></code>では時計回りの円弧 (<code>1</code>) を描くか、反時計周りの円弧 (<code>0</code>) を描くかを選択します。
+                <code><var>sweep-flag</var></code>では時計回りの円弧 (<code>1</code>) を描くか、反時計回りの円弧 (<code>0</code>) を描くかを選択します。
               </li>
             </ul>
           </li>
         </ul>
-        次のコマンドの現在位置を、X および Y 座標で表される位置を <code><var>dx</var></code> と <code><var>dy</var></code> だけずらした座標にします。それ以降のすべての引数の組は、暗黙的に相対座標での円弧曲線 (<code>a</code>) コマンドに対するものと解釈されます。
+        次のコマンドの現在位置を、X および Y 座標で表される位置を <code><var>dx</var></code> と <code><var>dy</var></code> だけずらした座標にします。
+        それ以降のすべての引数の組は、暗黙的に相対座標での円弧曲線 (<code>a</code>) コマンドに対するものと解釈されます。
       </td>
     </tr>
   </tbody>
@@ -840,7 +848,7 @@ svg {
 
 ```html
 <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-  <!-- 円弧への２つのフラグの効果により各円弧が描画される -->
+  <!-- 円弧フラグが円弧の描画に与える効果 -->
   <path
     fill="none"
     stroke="red"
@@ -871,7 +879,7 @@ svg {
 
 ### ClosePath
 
-_ClosePath_ は、_現在位置_ からパスの開始点までの直線描画を指定します。
+_ClosePath_ は、現在位置からパスの開始点までの直線描画を指定します。
 
 <table class="no-markdown">
   <tbody>
@@ -884,14 +892,14 @@ _ClosePath_ は、_現在位置_ からパスの開始点までの直線描画�
       <th scope="row">Z, z</th>
       <td></td>
       <td>
-        パスの最終位置とその初期位置とを接続することで、現在のサブパスを閉じます。もし、2 つの点が異なる座標の場合は、2 点間に直線が描かれます。
+        パスの最終位置とその初期位置とを接続することで、現在のサブパスを閉じます。2 つの点が異なる座標にある場合は、2 点間に直線が描かれます。
       </td>
     </tr>
   </tbody>
 </table>
 
 > [!NOTE]
-> _ClosePath_ によって生じる形状は、他のコマンドを用いて初期位置へ線を描いて閉じた場合とは異なる場合があります。これは、描線の終端が互いに接続されるためです（{{SVGAttr('stroke-linejoin')}} 設定）を参照のこと。 単に同じ座標に配置されるわけではありません。
+> _ClosePath_ によって閉じた形状は、ほかのコマンドを使用して直線を初期位置まで描くことによって閉じた形状と異なる場合があります。これは、描線の終端が（{{SVGAttr('stroke-linejoin')}} 設定に従って）接続されるためであり、単に同じ座標に配置されるわけではありません。
 
 #### 例
 
@@ -936,6 +944,31 @@ svg {
 ```
 
 {{EmbedLiveSample('ClosePath', '100%', 200)}}
+
+## 例
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path
+    fill="none"
+    stroke="red"
+    d="M 10,30
+       A 20,20 0,0,1 50,30
+       A 20,20 0,0,1 90,30
+       Q 90,60 50,90
+       Q 10,60 10,30 z" />
+</svg>
+```
+
+{{EmbedLiveSample('Example', '100%', 200)}}
 
 ## 仕様書
 

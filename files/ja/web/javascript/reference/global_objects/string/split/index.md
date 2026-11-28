@@ -36,7 +36,7 @@ split(separator, limit)
 ### 引数
 
 - `separator`
-  - : 各分割がどこで行われるかを表すパターンです。`undefined`、文字列、または [`Symbol.split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) メソッドを持つオブジェクトを指定することができます。典型的な例は{{jsxref("RegExp", "正規表現", "", 1)}}です。`separator` を省略したり `undefined` を渡したりすると、`split()` は呼び出し元の文字列を 1 つの要素とする配列を返します。`undefined` でない値、または `[Symbol.split]()` メソッドを持つオブジェクトはすべて[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)。
+  - : 各分割がどこで行われるかを表すパターンです。`undefined`、文字列、または [`Symbol.split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) メソッドを持つオブジェクトを指定することができます。典型的な例は{{jsxref("RegExp", "正規表現", "", 1)}}です。`separator` を省略したり `undefined` を渡したりすると、`split()` は呼び出し元の文字列を 1 つの要素とする配列を返します。`undefined` でない値、または `[Symbol.split]()` メソッドを持つオブジェクトはすべて文字列に[強制変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)。
 - `limit` {{optional_inline}}
   - : 配列に含める部分文字列の数の制限を指定する非負の整数。指定した場合は、指定した `separator` が出現するたびに文字列を分割しますが、`limit` 個の項目が配列に格納された時点で分割を終了します。残った文字列は配列に格納されません。
     - 制限数に達する以前に文字列の末尾に達した場合は、配列の要素が `limit` よりも少なくなることがあります。
@@ -73,7 +73,7 @@ split(separator, limit)
 
 区切り文字 `separator` が [`Symbol.split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) メソッドを持つオブジェクトの場合、そのメソッドは対象の文字列と `limit` を引数として呼び出され、`this` にはそのオブジェクトが設定されます。 その返値が `split` の返値になります。
 
-それ以外の値は、セパレーターとして使われる前に文字列に変換されます。
+それ以外の値は、セパレーターとして使われる前に文字列に強制変換されます。
 
 ## 例
 

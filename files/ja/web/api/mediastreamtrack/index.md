@@ -2,7 +2,7 @@
 title: MediaStreamTrack
 slug: Web/API/MediaStreamTrack
 l10n:
-  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
+  sourceCommit: b1bb1b27224e37b2045c6a16b5f9cfa817d0df89
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -49,11 +49,11 @@ l10n:
 - {{domxref("MediaStreamTrack.clone()")}}
   - : `MediaStreamTrack` の複製を返します。
 - {{domxref("MediaStreamTrack.getCapabilities()")}}
-  - : `MediaStreamTrack` で利用できる制約可能なプロパティの一覧を返します。
+  - : 関連付けられた `MediaStreamTrack` の制約可能なプロパティそれぞれについて、受け入れ可能な値または値の範囲を詳述するオブジェクトを返します。
 - {{domxref("MediaStreamTrack.getConstraints()")}}
   - : トラックに設定されている制約を含む {{domxref('MediaTrackConstraints')}} を返します。返値は、最後に {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} を用いて設定した制約に一致します。
 - {{domxref("MediaStreamTrack.getSettings()")}}
-  - : `MediaStreamTrack` の制約可能なプロパティの値を含む {{domxref("MediaTrackSettings")}} オブジェクトを返します。
+  - : `MediaStreamTrack` の制約可能なプロパティそれぞれの現在の値を含むオブジェクトを返します。
 - {{domxref("MediaStreamTrack.stop()")}}
   - : トラックに関連付けられたソースの再生を停止し、ソースとトラックの関連付けを解除します。トラックの状態は `ended` に設定されます。
 

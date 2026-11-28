@@ -29,7 +29,7 @@ console.log(new Date(8.64e15 + 1).toString()); // "Invalid Date"
 `Date` に格納されるタイムスタンプを操作するさまざまなメソッドがあります。
 
 - タイムスタンプ値を直接操作するには、{{jsxref("Date/getTime", "getTime()")}} および {{jsxref("Date/setTime", "setTime()")}} メソッドを使用します。
-- {{jsxref("Date/valueOf", "valueOf()")}} および [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) メソッド（「数値」を渡したとき）は、[数値変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値変換)において自動的に呼び出されますが、タイムスタンプを返すので、`Date` オブジェクトは数値のコンテキストで使用すると、タイムスタンプのように振る舞います。
+- {{jsxref("Date/valueOf", "valueOf()")}} および [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) メソッド（「数値」を渡したとき）は、[数値への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への強制変換)において自動的に呼び出されますが、タイムスタンプを返すので、`Date` オブジェクトは数値のコンテキストで使用すると、タイムスタンプのように振る舞います。
 - 静的メソッド（{{jsxref("Date.now()")}}、{{jsxref("Date.parse()")}}、{{jsxref("Date.UTC()")}}）はすべて、`Date` オブジェクトではなくタイムスタンプを返します。
 - {{jsxref("Date/Date", "Date()")}} コンストラクターは、タイムスタンプのみを引数として呼び出すことができます。
 
@@ -306,7 +306,7 @@ YYYY-MM-DDTHH:mm:ss.sssZ
 - {{jsxref("Date.prototype.valueOf()")}}
   - : `Date` オブジェクトのプリミティブ値を返します。{{jsxref("Object.prototype.valueOf()")}} メソッドを上書きします。
 - [`Date.prototype[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive)
-  - : `Date` オブジェクトをプリミティブ値に変換します。
+  - : `Date` オブジェクトをプリミティブ値に強制変換します。
 
 ## 例
 

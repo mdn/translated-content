@@ -73,7 +73,7 @@ RegExp(pattern, flags)
 - `pattern.constructor === RegExp` （ふつうはサブクラスではないという意味）
 - `flags` が `undefined` である
 
-その他のすべての場合においては、`RegExp()` を呼び出す際に `new` を使用しても使用しなくても、新しい `RegExp` オブジェクトが作成されます。`pattern` が正規表現の場合、新しいオブジェクトの[ソース](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/source)は `pattern.source` になります。それ以外の場合は、`pattern` は[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)。`flags` 引数が `undefined` でない場合、新しいオブジェクトの [`flags`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) は引数の値となり、そうでない場合、その `flags` は `pattern.flags` になります（`pattern` が正規表現の場合）。
+その他のすべての場合においては、`RegExp()` を呼び出す際に `new` を使用しても使用しなくても、新しい `RegExp` オブジェクトが作成されます。`pattern` が正規表現の場合、新しいオブジェクトの[ソース](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/source)は `pattern.source` になります。それ以外の場合は、`pattern` は文字列に[強制変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への強制変換)。`flags` 引数が `undefined` でない場合、新しいオブジェクトの [`flags`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) は引数の値となり、そうでない場合、その `flags` は `pattern.flags` になります（`pattern` が正規表現の場合）。
 
 ### 例外
 

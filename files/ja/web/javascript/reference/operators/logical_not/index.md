@@ -2,7 +2,7 @@
 title: 論理否定演算子 (!)
 slug: Web/JavaScript/Reference/Operators/Logical_NOT
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 20093e6d064fe1a7efd57e70b99b4af9bb5fa970
 ---
 
 **論理否定演算子 (`!`)** （論理反転、否定）は、真値を取ると偽値になり、その逆も同様です。これは通常論理型 (ブール型) の値に使用されます。論理型以外の値に使用した場合、単一のオペランドが `true` に変換できる場合は `false` を返し、それ以外は `true` を返します。
@@ -23,6 +23,15 @@ console.log(!(a > 0 || b > 0));
 !x
 ```
 
+### 引数
+
+- `x`
+  - : [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)が 14 （前置演算子）以上の式です。
+
+### 返値
+
+`x` が{{Glossary("falsy", "偽値")}}の場合は `true`、{{Glossary("truthy", "真値")}}の場合は `false` です。
+
 ## 解説
 
 単一のオペランドが `true` に変換できる場合は `false` を返し、それ以外は `true` を返します。
@@ -37,7 +46,7 @@ false に変換することができる式の例を示します。
 - 空文字列 (`""` または `''` または ` `` `)
 - `undefined`
 
-`!` 演算子は論理値以外のオペランドに対して使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Guide/Data_structures#論理型)に変換することが可能であるため、論理演算子と見なすことができます。返値 (または一般的な式) を対応する論理値に明示的に変換するには、二重の否定演算子 (`!!`) または {{jsxref("Boolean/Boolean", "Boolean")}} コンストラクターを使用してください。
+`!` 演算子は論理値以外のオペランドに対して使用することができますが、返値を常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Guide/Data_structures#論理型)に変換できるため、論理演算子と見なすことができます。返値 (または一般的な式) を対応する論理値に明示的に変換するには、二重の否定演算子 (`!!`) または {{jsxref("Boolean/Boolean", "Boolean")}} コンストラクターを使用してください。
 
 ## 例
 
