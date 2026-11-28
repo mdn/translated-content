@@ -54,7 +54,7 @@ JSON.parse(text, reviver)
 
 ## 解説
 
-`JSON.parse()` は、 [JSON の文法](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON#full_json_grammar)に従って JSON 文字列を構文解析し、 JavaScript 式であるかのように文字列を評価します。 JSON テキストの一部が、同じ JavaScript 式と異なる値を表す唯一の例は、 `"__proto__"` キーを扱う場合です。[オブジェクトリテラル構文 vs. JSON](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#オブジェクトリテラル表記法_vs_json) を参照してください。
+`JSON.parse()` は、 [JSON の文法](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON#full_json_grammar)に従って JSON 文字列を構文解析し、 JavaScript 式であるかのように文字列を評価します。 JSON テキストの一部が、同じ JavaScript 式と異なる値を表す唯一の例は、 `"__proto__"` キーを扱う場合です。[オブジェクトリテラル構文 vs. JSON](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#オブジェクトリテラル構文と_json) を参照してください。
 
 ### reviver 引数
 

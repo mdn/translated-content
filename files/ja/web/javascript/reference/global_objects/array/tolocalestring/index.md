@@ -47,7 +47,7 @@ toLocaleString(locales, options)
 
 要素が `undefined`、`null` の場合、文字列 `"null"` または `"undefined"` の代わりに空文字列に変換されます。
 
-[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#祖配列)で使用する場合、`toLocaleString()` メソッドは空のスロットを `undefined` という値があるかのように反復処理します。
+[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)で使用する場合、`toLocaleString()` メソッドは空のスロットを `undefined` という値があるかのように反復処理します。
 
 `toLocaleString()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。このメソッドは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 

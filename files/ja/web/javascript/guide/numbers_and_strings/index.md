@@ -319,7 +319,7 @@ const bigintDiv = 5n / 2n; // 2n。長整数には 2.5 がない
 
 長整数と数値のどちらかを選ぶかは、用途と入力の範囲によって決まります。数値の精度は、すでにほとんどの日常的な課題に対応できるはずです。また、長整数はバイナリーデータを処理するのに最も適しています。
 
-長整数値でできることについては、「[式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#bigint_演算子)」の章または [BigInt リファレンス](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)を参照してください。
+長整数値でできることについては、「[式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#長整数型の演算子)」の章または [BigInt リファレンス](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)を参照してください。
 
 ## 文字列
 

@@ -24,7 +24,7 @@ JSON は、オブジェクト、配列、数値、文字列、論理値、 [`nul
 
 他の違いとしては、二重引用符で囲まれた文字列のみを許可していることや、 {{jsxref("undefined")}} やコメントの規定がないことなどが挙げられます。 JSON に基づいたより人間に優しい設定フォーマットを使いたい場合、 Babel コンパイラーによって使われている [JSON5](https://json5.org/) や、より一般的に使われる [YAML](https://ja.wikipedia.org/wiki/YAML) があります。
 
-JavaScript のオブジェクトリテラルと JSON との間で、同じテキストが異なる値を表すことがあります。詳しくは、[オブジェクトリテラル構文と JSON](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#オブジェクトリテラル表記法_vs_json) を参照してください。
+JavaScript のオブジェクトリテラルと JSON との間で、同じテキストが異なる値を表すことがあります。詳しくは、[オブジェクトリテラル構文と JSON](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#オブジェクトリテラル構文と_json) を参照してください。
 
 ### JSON の完全な構文
 
